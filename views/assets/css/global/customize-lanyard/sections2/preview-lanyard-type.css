@@ -1,0 +1,14 @@
+.preview-lanyard-type{
+  position: relative;
+  width: 90%;
+  height: 80%;
+  padding: 15px 0;
+
+  background-color: rgba(0, 0, 0, .12);
+  box-shadow: 0px 0px 2px black;
+
+  display: none;
+  justify-content: center;
+  align-items: flex-start;      
+  flex-direction: column;
+}
