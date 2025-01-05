@@ -25,20 +25,7 @@
 </head>
 <body>
   <section>
-    <style media="screen">
-      .inicio_sesion{
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        height: 100vh;
-        width: 100vw;
-        background-color: rgba(0, 0, 0, 0.7);
-        z-index: 130;
-      }
-    </style>
-    <div class="inicio_sesion">
-
-    </div>
+    <?php include "../../views/global/test_alert.php" ?>
     <!-- Background section -->
     <div class="background">
 

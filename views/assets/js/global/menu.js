@@ -1,8 +1,41 @@
 class Menu {
   constructor() {
+    dadCustomizeLanyard.addEventListener('scroll', function() {
+      var seventyVH = window.innerHeight * 0.7;
+
+      container_logout.style.display = 'none';
+      var scrollTop = dadCustomizeLanyard.scrollTop;
+      if (scrollTop > seventyVH) {
+        menu.style.display = "none";
+      }
+      else {
+        menu.style.display = "block";
+      }
+
+    });
+
+    // Agrega un evento de clic al documento
+        document.addEventListener('click', function(event) {
+            // Si el clic no fue dentro del div, escóndelo
+            if (!container_logout.contains(event.target) && !showLogout.contains(event.target)) {
+                container_logout.style.display = 'none';
+            }
+        });
+
+    showLogout.addEventListener("click",function(){
+      ;
+      if (container_logout.style.display == "none") {
+        container_logout.style.display = "block";
+      }
+      else {
+        container_logout.style.display = "none";
+      }
+    });
+      this.activeSession = true;
+    this.loginOrLogout();
     // Loop through all 'openLogin' buttons and add a click event listener to each
-    for (let i = 0; i < openLoginButtons.length; i++) {
-      openLoginButtons[i].addEventListener("click", function() {
+    for (let i = 0; i < openLogin.length; i++) {
+      openLogin[i].addEventListener("click", function() {
         // Open the login modal
         loginClass.openLogin();
         // Open the registration modal
@@ -46,6 +79,38 @@ class Menu {
     document.addEventListener("click", this.handleClickOutside.bind(this)); // Handle clicks outside the mobile menu
   }
 
+ loginOrLogout(){
+   //openLogin
+   //openLogoutClass
+    var activeSession = this.getActiveSession(); // Asume que esta función devuelve true o false
+
+    if (activeSession) {
+        // Si la sesión está activa
+        openLogin.forEach(element => {
+            element.style.display = 'none'; // Ocultar botones de login
+        });
+        openLogoutClass.forEach(element => {
+            element.style.display = 'flex'; // Mostrar botones de logout
+        });
+    } else {
+        // Si no hay sesión activa
+        openLogin.forEach(element => {
+            element.style.display = 'flex'; // Mostrar botones de login
+        });
+        openLogoutClass.forEach(element => {
+            element.style.display = 'none'; // Ocultar botones de logout
+        });
+    }
+  }
+ // Getter
+     getActiveSession() {
+        return this.activeSession;
+    }
+
+    // Setter
+     setActiveSession(activeSession) {
+        this.activeSession = activeSession;
+    }
   // Function to make an AJAX request to fetch data only if the user is authenticated
   makeAjaxRequestUserAuthenticated(url, data) {
     // Make a fetch request to the given URL with the specified data
@@ -75,7 +140,7 @@ class Menu {
         data = JSON.parse(data);
 
         // Show or hide menu items based on login status
-        this.showItemsLoginMenu(data["message"]);
+        //this.showItemsLoginMenu(data["message"]);
       })
       .catch(error => {
         // Handle errors: If the user is not authenticated or another error occurs
@@ -173,7 +238,7 @@ class Menu {
       .then(data => {
         data = JSON.parse(data);
         // Show or hide menu items based on login status
-        this.showItemsLoginMenu(data["message"]);
+        //this.showItemsLoginMenu(data["message"]);
       })
       .catch(error => {
         console.error("Error:", error); // Log any errors
@@ -200,7 +265,7 @@ class Menu {
 
         // If logout is successful, hide login items and show logout items
         if (data["message"]) {
-          this.showItemsLoginMenu(!data["message"]);
+          //this.showItemsLoginMenu(!data["message"]);
           alert("Come back soon!"); // Show a message after logout
         } else {
           alert("Network error. Trying again"); // Show an error if the logout fails
@@ -236,12 +301,17 @@ class Menu {
 }
 
 // DOM elements related to login, logout, and menu functionality
-const openLoginButtons = document.querySelectorAll('.openLogin'); // All login buttons
+const openLogin = document.querySelectorAll('.openLogin'); // All login buttons
+const openLogoutClass = document.querySelectorAll(".openLogout"); // Mobile menu close button
+const openLogout = document.getElementById("openLogout"); // Mobile menu close button
 const logoutButtons = document.querySelectorAll('.logoutButtons'); // All logout buttons
 const openMenuMobileButton = document.getElementById("openMenuMobile"); // Mobile menu open button
 const closeMenuMobileButton = document.getElementById("closeMenuMobile"); // Mobile menu close button
-const openLogout = document.getElementById("openLogout"); // Mobile menu close button
 const menuMobile = document.getElementById("menuMobile"); // Mobile menu element
+const showLogout = document.getElementById("showLogout");
+const dadCustomizeLanyard = document.getElementById("openLogin");
+const menu = document.getElementById("menu");
+
 
 // Elements for showing or hiding based on login status
 const showItemsMenuLoginFalse = document.querySelectorAll(".showItemsMenuLoginFalse"); // Items shown when logged out

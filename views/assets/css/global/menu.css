@@ -7,24 +7,26 @@
   width: 100%;
   background-color: rgba(255,255,255,.4);
   z-index: 12;
-  box-shadow: 12px 0px 15px rgba(0,0,0,.3);
+  box-shadow: 7px 7px 5px rgba(0,0,0,.7);
   font-family: 'IBM Plex Sans Condensed', sans-serif;
 
 }
 .logo{
   position: absolute;
   height: 100%;
-  width: 25%;
+  width: 80px;
   left: 1vw;
+
+  display: flex;
+  justify-content:center;
+  align-items: center;
 }
 .logo img{
   position: relative;
-  left: 0px;
-  width: 70%;
-  height: auto;
-  top: 50%;
-  transform: translateY(-50%);
-  filter: drop-shadow(1px 1px 1px rgba(0,0,0,.9));
+  width: 80%;
+  height: 80%;
+  filter: drop-shadow(2px 2px 1px rgba(0,0,0,.9));
+
 }
 .containerItems{
   position: absolute;
@@ -65,9 +67,33 @@
 }
 .containerItems2 img{
   width: 40px;
+  height: 30px;
   padding: 0 10px;
   filter: drop-shadow(1px 1px rgba(0, 0, 0, 1));
   cursor: pointer;
+  transition: filter 0.3s;
+}
+.containerItems2 img:hover{
+  filter: drop-shadow(3px 3px rgba(0, 0, 0, 1));
+
+}
+.containerItems2 img:active{
+  filter: drop-shadow(1px 1px rgba(0, 0, 0, 1));
+}
+.container_logout{
+  position: absolute;
+  right: 0px;
+  top: 80px;
+  height: 65px;
+  width: 200px;
+  background-color: rgba(0, 0, 0, 0.5 );
+  box-shadow: 1px 1px 1px white, -1px 0px 1px white;
+  display: none;
+}
+.container_logout h3{
+  text-align: center;
+  color: white;
+  font-weight: 300;
 }
 .containerItems3{
   position: absolute;
@@ -153,4 +179,7 @@
 }
 .showItemsMenuLoginTrue{
   display: none;
+}
+.border_right_menu{
+  border-right: 2px solid black;
 }
