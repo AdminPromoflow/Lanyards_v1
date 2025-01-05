@@ -25,6 +25,19 @@
 </head>
 <body>
   <section>
+    <style media="screen">
+      .inicio_sesion{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.7);
+      }
+    </style>
+    <div class="inicio_sesion">
+
+    </div>
     <!-- Background section -->
     <div class="background">
 
