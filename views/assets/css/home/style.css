@@ -73,17 +73,3 @@ body{
 
   background-attachment: fixed;
 }
-
-
-h1{
-  position: relative;
-  text-align: center;
-  width: 70%;
-  color: white;
-  left: 50%;
-  transform: translateX(-50%);
-  text-shadow: 3px 3px 2px black;
-  font-size: calc(1.5em + 1.5vw);
-  font-weight: 400;
-  padding-top: calc(1.1em + 1.1vw);
-}
