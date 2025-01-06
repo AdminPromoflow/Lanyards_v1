@@ -58,17 +58,16 @@ class Slider {
 
   // Method to get the current slide
   getSlide() {
-    let isHovering = this.getIsHovering();
+    let isHovering = sliderClass.getIsHovering();
     const text = sliderLong.style.left;
     const numbers = text.match(/\d+/);
     const number = parseInt(numbers[0], 10) / 100;
-    if (isHovering) {
-      
-    }
+
     // Determine the current slide index and move to the next slide
     const currentSlide = (number < 3) ? number + 1 : 0;
-
-    //sliderClass.nextSlide(currentSlide);
+    if (!isHovering) {
+      sliderClass.nextSlide(currentSlide);
+    }
   }
 }
 

@@ -5,11 +5,11 @@
   height: 80px;
 
   width: 100%;
-  background-color: rgba(255,255,255,.4);
+  background: rgb(0,0,0);
+  background: linear-gradient(180deg, rgba(0,0,0,0.9) 0%, rgba(5,29,53,0.9) 66%);
   z-index: 12;
-  box-shadow: 7px 7px 5px rgba(0,0,0,.7);
+  box-shadow: 7px 7px 5px rgba(255, 255, 255, 0.04);
   font-family: 'IBM Plex Sans Condensed', sans-serif;
-
 }
 .logo{
   position: absolute;
@@ -25,7 +25,7 @@
   position: relative;
   width: 80%;
   height: 80%;
-  filter: drop-shadow(2px 2px 1px rgba(0,0,0,.9));
+  filter: drop-shadow(2px 2px 1px rgba(255, 255, 255, .2));
 
 }
 .containerItems{
@@ -46,9 +46,10 @@
   cursor: pointer;
   border-bottom: 2px solid transparent;
   padding: 0 8px;
-  border-left: 3px solid black;
+  border-left: 3px solid #FF3803;
   text-shadow: 1px 1px 2px rgba(34, 61, 67, .3);
   transition: .5s;
+  color: white;
 }
 .transparentLeftLine{
   border-left: 2px solid transparent!important;
@@ -181,5 +182,6 @@
   display: none;
 }
 .border_right_menu{
-  border-right: 2px solid black;
+  border-right: 2px solid #FF3803;
+
 }

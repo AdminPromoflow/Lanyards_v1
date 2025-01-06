@@ -31,7 +31,7 @@ class Menu {
         container_logout.style.display = "none";
       }
     });
-      this.activeSession = true;
+      this.activeSession = false;
     this.loginOrLogout();
     // Loop through all 'openLogin' buttons and add a click event listener to each
     for (let i = 0; i < openLogin.length; i++) {
@@ -309,7 +309,7 @@ const openMenuMobileButton = document.getElementById("openMenuMobile"); // Mobil
 const closeMenuMobileButton = document.getElementById("closeMenuMobile"); // Mobile menu close button
 const menuMobile = document.getElementById("menuMobile"); // Mobile menu element
 const showLogout = document.getElementById("showLogout");
-const dadCustomizeLanyard = document.getElementById("openLogin");
+const dadCustomizeLanyard = document.getElementById("dad-customize-lanyard");
 const menu = document.getElementById("menu");
 
 

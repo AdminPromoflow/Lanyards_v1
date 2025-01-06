@@ -104,19 +104,19 @@
   cursor: pointer;
 }
 .buttonColor1{
-  background-color: #7B3378;
+  background-color: #FF3803;
   color: white;
 }
 .buttonColor2{
-  background-color: #E66503;
+  background-color: #FF3803;
   color: white;
 }
 .buttonColor3{
-  background-color: #BC9B5A;
-  color: black;
+  background-color: #FF3803;
+  color: white;
 }
 .buttonColor4{
-  background-color: #4B6E33;
+  background-color: #FF3803;
   color: white;
 }
 .width500{
