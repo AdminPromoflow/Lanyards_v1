@@ -1,6 +1,17 @@
 // Define a class called "Slider"
 class Slider {
   constructor() {
+    this.isHovering = false;
+    // Detectar cuando el mouse está dentro del contenedor
+        sliderLong.addEventListener('mouseenter', () => {
+            sliderClass.setIsHovering(true);
+        });
+
+        // Detectar cuando el mouse sale del contenedor
+        sliderLong.addEventListener('mouseleave', () => {
+          sliderClass.setIsHovering(false);
+        });
+
     // Initialize the slider position and button colors
     sliderLong.style.left = "0%";
     buttonSlider[0].style.background = "#7B3378";
@@ -13,6 +24,12 @@ class Slider {
     }
   }
 
+  getIsHovering() {
+    return this.isHovering;
+  }
+  setIsHovering(isHovering) {
+    this.isHovering = isHovering;
+  }
   // Method to move to the next slide based on the current slide
   nextSlide(currentSlide) {
     if (currentSlide == 1) {
@@ -41,13 +58,17 @@ class Slider {
 
   // Method to get the current slide
   getSlide() {
+    let isHovering = this.getIsHovering();
     const text = sliderLong.style.left;
     const numbers = text.match(/\d+/);
     const number = parseInt(numbers[0], 10) / 100;
-
+    if (isHovering) {
+      
+    }
     // Determine the current slide index and move to the next slide
     const currentSlide = (number < 3) ? number + 1 : 0;
-    sliderClass.nextSlide(currentSlide);
+
+    //sliderClass.nextSlide(currentSlide);
   }
 }
 
