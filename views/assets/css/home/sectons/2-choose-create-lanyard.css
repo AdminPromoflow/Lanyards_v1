@@ -28,30 +28,22 @@
   justify-content: center;
   align-items: center;
 }
-.container_choose_material_information{
-  position: relative;
-  min-width: 300px;
-  height: 95%;
-  width: 45%;
-  margin: 10px;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 .container_choose_material_information{
   position: relative;
   min-width: 300px;
-  height: 520px;
   width: 45%;
+  height: 520px;
   margin: 10px;
-  background-color: blue;
+  background-color: rgba(25, 61, 116, 0.7);
+  overflow-x: scroll;
+  overflow-y: hidden;
 
   display: flex;
   flex-direction: column;
   justify-content:flex-start;
   align-items: center;
+
 }
 .box_material_information{
   position: relative;
@@ -61,6 +53,7 @@
   box-shadow: 2px 2px 1px rgba(255, 255, 255, 0.5),  -2px 0px 1px rgba(255, 255, 255, 0.5);
   cursor: pointer;
 }
+
 .box_material_information:hover{
   background-color: rgba(255, 255, 255, 0.7);
   color: black;
@@ -68,7 +61,7 @@
 .box_material_information:hover h3{
   color: black;
 }
-.box_material_information__top{
+.box_material_information_border_top{
   box-shadow: 0px 2px 1px rgba(255, 255, 255, 0.5), 0px -2px 1px rgba(255, 255, 255, 0.5) ;
 }
 
@@ -80,4 +73,80 @@
   font-size: 1.3em;
   font-weight: 300;
   color: white;
+}
+.box_container_information{
+  position: relative;
+  min-height: 100%;
+  min-width: 100%;
+  padding: 1px;
+
+}
+.box_information2{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 3vw 0;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+.box_information2 img{
+  position: relative;
+  width: 40%;
+  margin: 15px 0;
+}
+.box_information2 h3{
+  position: relative;
+  color: white;
+  font-size: calc(1.1em + 1.1vw);
+  font-weight: 300;
+  margin: 0;
+}
+.box_information2 p{
+  position: relative;
+  color: white;
+  width: 80%;
+  text-align: center;
+  font-size: calc(0.7em + 0.7vw);
+  font-weight: 200;
+  margin: 0px;
+  margin: 15px 0;
+}
+.box_information2 h1{
+  position: relative;
+  text-align: center;
+  color: white;
+  text-shadow: 3px 3px 2px black;
+  font-size: calc(1.5em + 1.5vw);
+  font-weight: 300;
+  margin: 0 0 0 0;
+  padding: 0px;
+}
+.arrows_container_information{
+  position: absolute;
+  width: 90%;
+  height: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.arrows_container_information img{
+  position: relative;
+  width: 25px;
+  cursor: pointer;
+  filter: drop-shadow( 1px 1px 0px black);
+}
+.arrows_container_information img:hover{
+  filter: drop-shadow( 2px 2px 1px black);
+}
+.arrows_container_information img:active{
+  filter: drop-shadow( 1px 1px 1px black);
 }

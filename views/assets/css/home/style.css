@@ -62,6 +62,7 @@ body{
 
 .container::-webkit-scrollbar-thumb:hover {
     background: #132735; /* Color más oscuro cuando el mouse está encima */
+
 }
 
 
