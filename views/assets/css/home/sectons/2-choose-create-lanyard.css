@@ -119,6 +119,7 @@
   height: 175px;
   width: auto;
   margin: 15px 0;
+  z-index: 10;
 }
 .box_information2 h3,
 .box_information2_lanyard_type h3,
@@ -256,4 +257,62 @@
 .arrows_container_information_text img:active,
 .arrows_container_information_image img:active{
   filter: drop-shadow( 1px 1px 1px black);
+}
+.box_information2_background_colours{
+  position: relative;
+  height: 175px;
+  width: 60%;
+  margin: 1px 0;
+  background-color: blue;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.box_information2_background_colours_black{
+  position: relative;
+  height: 180px;
+  width: 100px;
+  background-color: black;
+}
+.box_information2_background_colours_white{
+  position: relative;
+  height: 180px;
+  width: 100px;
+  background-color: white;
+}
+.box_information2_background_colours_red{
+  position: relative;
+  height: 180px;
+  width: 100px;
+  background-color: red;
+}
+.box_information2_background_colours_blue{
+  position: relative;
+  height:180px;
+  width: 100px;
+  background-color: blue;
+}
+.box_information2_background_colours_lime{
+  position: relative;
+  height: 180px;
+  width: 100px;
+  background-color: lime;
+}
+.color-picker-container {
+  margin: 25px auto;
+  max-width: 300px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.color-picker-container-information label {
+ font-size: 16px;
+ margin-bottom: 10px;
+ display: block;
+ color: #333;
 }

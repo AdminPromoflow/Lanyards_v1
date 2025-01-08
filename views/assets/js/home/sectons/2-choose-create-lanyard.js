@@ -143,6 +143,8 @@ class ChooseCreateLanyard {
   }
 }
 
+
+
 // Select DOM elements
 const box_information2 = document.querySelectorAll(".box_information2");
 const arros_material_information = document.querySelectorAll(".arros_material_information");

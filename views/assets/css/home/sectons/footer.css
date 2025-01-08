@@ -3,6 +3,7 @@
   padding: 20px;
   text-align: center;
   margin: 4px 0;
+  background-color: black
 }
 
 .box_footer {
@@ -10,7 +11,7 @@
   margin: 0 10px;
 
   display: flex;
-  justify-content: center;
+  justify-content:space-between;
   align-items: center;
   flex-direction: row;
 }
@@ -27,6 +28,10 @@
   position: relative;
   display: flex;
   justify-content: center;
+}
+.box_media {
+  position: relative;
+  margin: 0 7px;
 }
 .box_media img {
   position: relative;
@@ -46,4 +51,5 @@
 }
 .social_media_footer {
   position: relative;
+
 }

@@ -381,19 +381,21 @@
             <img class="arrows_information_background" src="../../views/assets/img/home/2-choose-create-lanyard/arrow_left.png" alt="">
             <img class="arrows_information_background" src="../../views/assets/img/home/2-choose-create-lanyard/arrow_right.png" alt="">
           </div>
+
           <div class="box_information2_background">
             <h1>BACKGROUND</h1>
-            <img src="../../views/assets/img/home/2-choose-create-lanyard/Material-1-Flat-Polyester.jpg" alt="">
-            <h3>Ribbed Polyester</h3>
-            <p>Durable, textured fabric known for its esilience and vivid color retention,
-              ideal for frequent use and detailed designs.</p>
+            <img src="../../views/assets/img/global/customize-lanyard/sections2/preview-artwork-manual/background-colour.png" alt="">
+            <h3>Colours</h3>
+            <p>You can choose our main colours for the background of the lanyard.</p>
           </div>
           <div class="box_information2_background">
             <h1>BACKGROUND</h1>
-            <img src="../../views/assets/img/home/2-choose-create-lanyard/Material-1-Flat-Polyester.jpg" alt="">
-            <h3>Ribbed Polyester2</h3>
-            <p>Durable, textured fabric known for its esilience and vivid color retention,
-              ideal for frequent use and detailed designs.</p>
+            <div class="color-picker-container-information">
+              <p>Choose a background colour:</p><br>
+              <input type="color" value="#ff5733">
+            </div>
+            <h3>Colours</h3>
+            <p>If your colour is not available, you can customise it to any colour you prefer.</p>
           </div>
         </div>
 
@@ -425,18 +427,19 @@
           </div>
           <div class="box_information2_image">
             <h1>IMAGE</h1>
-            <img src="../../views/assets/img/home/2-choose-create-lanyard/Material-1-Flat-Polyester.jpg" alt="">
-            <h3>Ribbed Polyester</h3>
+            <img src="../../views/assets/img/home/4_image/upload.png" alt="">
+            <h3>Please upload your logo image</h3>
             <p>Durable, textured fabric known for its esilience and vivid color retention,
               ideal for frequent use and detailed designs.</p>
           </div>
           <div class="box_information2_image">
             <h1>IMAGE</h1>
-            <img src="../../views/assets/img/home/2-choose-create-lanyard/Material-1-Flat-Polyester.jpg" alt="">
-            <h3>Ribbed Polyester2</h3>
+            <img src="../../views/assets/img/home/4_image/option_image.png" alt="">
+            <h3>Adjust the image size</h3>
             <p>Durable, textured fabric known for its esilience and vivid color retention,
               ideal for frequent use and detailed designs.</p>
           </div>
+          
         </div>
 
 
