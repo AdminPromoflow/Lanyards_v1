@@ -1,0 +1,49 @@
+.container_footer {
+  position: relative;
+  padding: 20px;
+  text-align: center;
+  margin: 4px 0;
+}
+
+.box_footer {
+  position: relative;
+  margin: 0 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.terms_conditions_footer p {
+  position: relative;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0 10px;
+  padding: 0;
+  color: white;
+}
+.social_media_footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.box_media img {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.box_media img:hover {
+  position: relative;
+  opacity: 0.8;
+}
+.terms_conditions_footer {
+  position: relative;
+  text-align: left;
+}
+.social_media_footer {
+  position: relative;
+}

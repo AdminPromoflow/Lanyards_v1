@@ -321,18 +321,16 @@
             <img class="arrows_information_color_quantity" src="../../views/assets/img/home/2-choose-create-lanyard/arrow_right.png" alt="">
           </div>
           <div class="box_information2_color_quantity">
-            <h1>COLOR QUANTITY</h1>
-            <img src="../../views/assets/img/home/2-choose-create-lanyard/Material-1-Flat-Polyester.jpg" alt="">
-            <h3>Ribbed Polyester</h3>
-            <p>Durable, textured fabric known for its esilience and vivid color retention,
-              ideal for frequent use and detailed designs.</p>
+            <h1>Colour Quantity</h1>
+            <img src="../../views/assets/img/home/2_colour_quantity/one-colour.png" alt="">
+            <h3>One colour</h3>
+            <p>A lanyard design featuring a single ink color for printing, providing a simple and elegant appearance.</p>
           </div>
           <div class="box_information2_color_quantity">
-            <h1>COLOR QUANTITY</h1>
-            <img src="../../views/assets/img/home/2-choose-create-lanyard/Material-1-Flat-Polyester.jpg" alt="">
-            <h3>Ribbed Polyester2</h3>
-            <p>Durable, textured fabric known for its esilience and vivid color retention,
-              ideal for frequent use and detailed designs.</p>
+            <h1>Two colour</h1>
+            <img src="../../views/assets/img/home/2_colour_quantity/two-colour.png" alt="">
+            <h3>Colour Quantity</h3>
+            <p>A lanyard design featuring two distinct ink colors for printing, adding more detail and visual contrast.</p>
           </div>
         </div>
 
