@@ -116,7 +116,8 @@
 .box_information2_text img,
 .box_information2_image img{
   position: relative;
-  width: 40%;
+  height: 175px;
+  width: auto;
   margin: 15px 0;
 }
 .box_information2 h3,
