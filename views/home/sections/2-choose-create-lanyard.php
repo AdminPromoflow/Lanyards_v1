@@ -1,7 +1,8 @@
 <section class="chooseCreateLanyard">
     <h1>Information About Our Customisation Options</h1>
 
-
+    <p>The information below corresponds to the lanyard customisation options.
+       To start customising your lanyard, click the "Start" button in this section.</p>
   <!-- Section for choosing or creating lanyards -->
     <div class="container_choose_lanyard_information">
       <div class="container_choose_material_information">
@@ -384,7 +385,7 @@
 
           <div class="box_information2_background">
             <h1>BACKGROUND</h1>
-            <img src="../../views/assets/img/global/customize-lanyard/sections2/preview-artwork-manual/background-colour.png" alt="">
+            <img src="../../views/assets/img/home/2_background/background-colour.png" alt="">
             <h3>Colours</h3>
             <p>You can choose our main colours for the background of the lanyard.</p>
           </div>
@@ -406,17 +407,21 @@
           </div>
           <div class="box_information2_text">
             <h1>TEXT</h1>
-            <img src="../../views/assets/img/home/2-choose-create-lanyard/Material-1-Flat-Polyester.jpg" alt="">
-            <h3>Ribbed Polyester</h3>
-            <p>Durable, textured fabric known for its esilience and vivid color retention,
-              ideal for frequent use and detailed designs.</p>
+            <img src="../../views/assets/img/home/2_text/option_repeat_text.png" alt="">
+            <h3>Type the text and repeat</h3>
+            <p>Add your personalised text, choosing whether you want it to be printed repeatedly on the lanyard.</p>
           </div>
           <div class="box_information2_text">
             <h1>TEXT</h1>
-            <img src="../../views/assets/img/home/2-choose-create-lanyard/Material-1-Flat-Polyester.jpg" alt="">
-            <h3>Ribbed Polyester2</h3>
-            <p>Durable, textured fabric known for its esilience and vivid color retention,
-              ideal for frequent use and detailed designs.</p>
+            <img src="../../views/assets/img/home/2_text/option_text.png" alt="">
+            <h3>Select the Pantone and font style</h3>
+            <p>Choose a specific Pantone colour and font style to customise your lanyard's text and design.</p>
+          </div>
+          <div class="box_information2_text">
+            <h1>TEXT</h1>
+            <img src="../../views/assets/img/home/2_text/option_text_size.png" alt="">
+            <h3>Style text and adjust</h3>
+            <p>Style the text and adjust: Customise the text style by adjusting its size, font, and position to fit your lanyard design.</p>
           </div>
         </div>
 
@@ -428,24 +433,22 @@
           <div class="box_information2_image">
             <h1>IMAGE</h1>
             <img src="../../views/assets/img/home/4_image/upload.png" alt="">
-            <h3>Please upload your logo image</h3>
-            <p>Durable, textured fabric known for its esilience and vivid color retention,
-              ideal for frequent use and detailed designs.</p>
+            <h3>Upload your logo image</h3>
+            <p>Add your custom logo by uploading an image to personalise and brand your lanyard design effectively.</p>
           </div>
           <div class="box_information2_image">
             <h1>IMAGE</h1>
             <img src="../../views/assets/img/home/4_image/option_image.png" alt="">
-            <h3>Adjust the image size</h3>
-            <p>Durable, textured fabric known for its esilience and vivid color retention,
-              ideal for frequent use and detailed designs.</p>
+            <h3>Adjust the image</h3>
+            <p>Resize, reposition, or modify your uploaded logo or design to fit perfectly on your customised lanyard.</p>
           </div>
-          
+
         </div>
 
 
 
       </div>
     </div>
-
+      <button type="button" name="button">Start</button>
   <!--  -->
 </section>

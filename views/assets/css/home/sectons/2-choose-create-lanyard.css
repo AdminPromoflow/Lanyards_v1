@@ -14,9 +14,31 @@
   text-shadow: 3px 3px 2px black;
   font-size: calc(1.8em + 1.8vw);
   font-weight: 200;
-  margin: 0 0 7vh 0;
+  margin: 0 0 3vh 0;
   padding: 0px;
-
+}
+.chooseCreateLanyard p{
+  position: relative;
+  color: white;
+  font-size: 1.25em;
+  font-weight: 300;
+  margin: 0 0 3vw 0;
+  width: 60%;
+  max-width: 585px;
+  text-align: justify;
+}
+.chooseCreateLanyard  button{
+  position: relative;
+  padding: calc(0.1vw + 0.1em) calc(3.3vw + 0.3em);
+  z-index: 10;
+  max-height: 50px;
+  font-size: calc(1vw + 1em);
+  font-weight: 200;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgba(136,19,47, 1);
+  color: white;
+  margin: 3vw 0 0 0;
 }
 .container_choose_lanyard_information{
   position: relative;
@@ -310,7 +332,7 @@
   z-index: 10;
 }
 
-.color-picker-container-information label {
+.color-picker-container-information label { //pendiente..............................centrar
  font-size: 16px;
  margin-bottom: 10px;
  display: block;

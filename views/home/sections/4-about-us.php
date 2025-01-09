@@ -32,14 +32,6 @@
 
 
 
-  <!-- Social media links -->
-  <div class="boxSocialMedia">
-    <div id="facebookLink" class="socialMedia"></div>
-    <div id="instagramLink" class="socialMedia"></div>
-    <div id="twiterLink" class="socialMedia"></div>
-    <div id="youTubeLink" class="socialMedia"></div>
-  </div>
-
 
 </section>
 

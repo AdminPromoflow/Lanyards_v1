@@ -1,4 +1,13 @@
-
+.materials h1{
+  position: relative;
+  text-align: center;
+  color: white;
+  text-shadow: 3px 3px 2px black;
+  font-size: calc(1.8em + 1.8vw);
+  font-weight: 200;
+  margin: 0 0 3vh 0;
+  padding: 0px;
+}
 .closeMaterial{
   position: absolute;
   height: calc(.7em + 1vw);
@@ -64,7 +73,7 @@
   font-weight: 300;
   border-radius: 5px;
   cursor: pointer;
-  background-color: #E66503;
+  background-color: rgba(0, 0, 0, .5);
   color: white;
   font-size: calc(0.8em + 0.8vw);
 }
@@ -90,8 +99,7 @@
 }
 .containerTextMaterialsBox img{
   position: absolute;
-  width: 90%;
-  box-shadow: 0px 0px 6px black, -0px -0px 6px black;
+  width: 60%;
   margin-left: calc(.5em + .5vw);
 }
 
@@ -103,6 +111,7 @@
   transition: .4s;
 }
 .itemMaterial img{
+  opacity: .5;
   filter: drop-shadow(7px 7px 3px rgba(50, 50, 50, .7));
 }
 .itemMaterial:hover{

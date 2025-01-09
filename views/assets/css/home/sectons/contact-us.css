@@ -16,9 +16,9 @@
   color: white;
   text-shadow: 3px 3px 2px black;
   font-size: calc(1.8em + 1.8vw);
-  font-weight: 400;
+  font-weight: 200;
+  margin: 0 0 3vw 0;
   padding: 0px;
-  margin: 0px;
 }
 .container_contact_us{
   position: relative;

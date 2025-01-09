@@ -9,7 +9,6 @@
   position: relative;
   width: calc(68vw + 20px);
   min-width: 620px;
-  background-color: rgba(0, 0, 0, 0.7);
   left: 50%;
   transform: translateX(-50%);
 }
@@ -19,7 +18,8 @@
   color: white;
   text-shadow: 3px 3px 2px black;
   font-size: calc(1.8em + 1.8vw);
-  font-weight: 400;
+  font-weight: 200;
+  margin: 0 0 3vw 0;
   padding: 0px;
 
 }
@@ -37,7 +37,7 @@
   height: 410px;
   min-width: 300px;
   min-height: 320px;
-  background-color: rgba(0, 0, 0, .4);
+  background-color: rgba( 25, 61, 116, 0.7);
   margin: 20px 15px;
   padding: 0px 10px;
 }

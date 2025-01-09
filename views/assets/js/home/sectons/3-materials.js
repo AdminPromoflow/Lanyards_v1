@@ -4,7 +4,7 @@ class MaterialHome {
     // Event listener to hide containerTextMaterials when closeMaterial is clicked
     for (let i = 0; i < closeMaterial.length; i++) {
       closeMaterial[i].addEventListener("click", function(){
-        containerTextMaterials[i].style.display = "none";
+      //  containerTextMaterials[i].style.display = "none";
       })
     }
 
@@ -41,17 +41,20 @@ class MaterialHome {
 
 
     // Event listener to display containerTextMaterials when itemMaterial is clicked
-   for (let i = 0; i < itemMaterial.length; i++) {
+    for (let i = 0; i < itemMaterial.length; i++) {
       containerTextMaterials[i].style.display = "none";
-      itemMaterial[i].addEventListener("mouseover", function(){
+    /*  itemMaterial[i].addEventListener("mouseover", function(){
         containerTextMaterials[i].style.display = "flex";
         containerTextMaterialsOn = i;
       materialHome.hideOtherContainerTextMaterials(i);
       //  alert("ahah");
-      })
-    }
+    })*/
+
+  }
+  containerTextMaterials[0].style.display = "flex";
+
     // Event listener to hide containerTextMaterials when clicking outside
-    document.addEventListener('click', this.outContainerTextMaterials);
+  //  document.addEventListener('click', this.outContainerTextMaterials);
   }
 
   // Method to hide other containerTextMaterials

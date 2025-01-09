@@ -1,18 +1,17 @@
 <section class="materials">
-  <h1>Choose your lanyard material bellow</h1>
-
+  <h1>Create your own lanyard from scratch.</h1>
 
   <div class="containerMaterials">
 
     <div class="containerTextMaterials">
-      <div class="closeMaterial">
+      <!--<div class="closeMaterial">
         <img src="../assets/img/home/3-materials/Close-Materials.png" alt="">
+      </div>-->
+      <div class="containerTextMaterialsBox">
+        <img src="../../views/assets/img/home/3-materials/icon_lanyard.png" alt="">
       </div>
       <div class="containerTextMaterialsBox">
-        <img src="../assets/img/home/3-materials/Material-1-Flat-Polyester.jpg" alt="">
-      </div>
-      <div class="containerTextMaterialsBox">
-        <h3 class="material-for-select">Ribbed Polyester</h3>
+        <h3 class="material-for-select">Create your our lanyard</h3>
       </div>
       <div class="buttonMaterialsBox">
         <button  class="openCustomizeLanyardFromMaterials" type="button" name="button">Select</button>
