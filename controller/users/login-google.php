@@ -3,7 +3,6 @@
 class ApiHandlerLoginGoogle
 {
     public function handleRequest() {
-      echo json_encode("string");exit;
 
 
         // Check if a GET request was received
@@ -120,6 +119,7 @@ class ApiHandlerLoginGoogle
     }
 }
 require_once '../../controller/assets/lib/vendor/autoload.php';
+echo json_encode("string");exit;
 
 //controller/assets/lib/vendor/autoload.php
 $apiHandlerLoginGoogle = new ApiHandlerLoginGoogle();
