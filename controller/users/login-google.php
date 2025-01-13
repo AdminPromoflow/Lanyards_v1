@@ -1,9 +1,10 @@
 <?php
-echo json_encode("string");exit;
 
 class ApiHandlerLoginGoogle
 {
     public function handleRequest() {
+      echo json_encode("string");exit;
+
 
         // Check if a GET request was received
         if ($_SERVER["REQUEST_METHOD"] == "GET") {
