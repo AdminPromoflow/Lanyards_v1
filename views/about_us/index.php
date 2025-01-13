@@ -27,7 +27,7 @@
     <div class="background">
 
       <!-- Container for content -->
-      <div class="container" id="dad-customize-lanyard_about_us">
+      <div class="container" id="dad-customize-lanyard">
 
         <!-- Content section -->
         <div class="content" >
@@ -41,7 +41,7 @@
           <!-- Include the slider component for the index page -->
 
             <?php include "../../views/about_us/sections/4-about-us.php" ?>
-            <?php include "../../views/home/sections/footer.php" ?>
+            <?php include "../../views/global/footer.php" ?>
 
           </div>
 

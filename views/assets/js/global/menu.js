@@ -313,7 +313,7 @@ const openMenuMobileButton = document.getElementById("openMenuMobile"); // Mobil
 const closeMenuMobileButton = document.getElementById("closeMenuMobile"); // Mobile menu close button
 const menuMobile = document.getElementById("menuMobile"); // Mobile menu element
 const showLogout = document.getElementById("showLogout");
-const dadCustomizeLanyard = document.getElementById("dad-customize-lanyard_about_us");
+const dadCustomizeLanyard = document.getElementById("dad-customize-lanyard");
 const menu = document.getElementById("menu");
 
 

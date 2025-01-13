@@ -50,7 +50,7 @@
             <?php include "../../views/home/sections/5-best-seller.php" ?>
             <?php include "../../views/home/sections/4-about-us.php" ?>
             <?php include "../../views/home/sections/contact-us.php" ?>
-            <?php include "../../views/home/sections/footer.php" ?>
+            <?php include "../../views/global/footer.php" ?>
 
           </div>
 

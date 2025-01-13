@@ -18,6 +18,6 @@
   </div>
 </div>
 </section>
-<script src="../../views/assets/js/home/sectons/footer.php" type="text/javascript">
+<script src="../../views/assets/js/global/footer.js" type="text/javascript">
 
 </script>

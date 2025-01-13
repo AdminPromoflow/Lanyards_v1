@@ -27,7 +27,7 @@
     <div class="background">
 
       <!-- Container for content -->
-      <div class="container" id="dad-customize-lanyard_contact_us">
+      <div class="container" id="dad-customize-lanyard">
 
         <!-- Content section -->
         <div class="content" >
@@ -42,7 +42,7 @@
 
 
             <?php include "../../views/contact_us/sections/contact-us.php" ?>
-            <?php include "../../views/home/sections/footer.php" ?>
+            <?php include "../../views/global/footer.php" ?>
 
           </div>
 
