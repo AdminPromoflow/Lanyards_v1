@@ -2,7 +2,6 @@
 class ApiHandlerLoginGoogle
 {
     public function handleRequest() {
-      echo json_encode("string");exit;
 
         // Check if a GET request was received
         if ($_SERVER["REQUEST_METHOD"] == "GET") {
@@ -16,6 +15,7 @@ class ApiHandlerLoginGoogle
                         $this->handleLoginGoogle();
                         break;
                     case "loginGoogleSecondPart":
+
                         $this->handleLoginGoogleSecondPart();
                         break;
                     default:
@@ -55,6 +55,8 @@ class ApiHandlerLoginGoogle
     }
 
     private function handleLoginGoogleSecondPart() {
+      echo json_encode("string");exit;
+
         // Configuración inicial de Google OAuth
         $clientID = '1022332881668-587bktseqso57k6m2dmpfao53vasg83b.apps.googleusercontent.com';
         $clientSecret = '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';
