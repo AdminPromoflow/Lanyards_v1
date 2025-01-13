@@ -112,7 +112,7 @@ class Login {
           throw new Error("Network error.");
         })
         .then(data => {
-          alert(data);
+        //  alert(data);
         })
         .catch(error => {
           console.error("Error:", error);

@@ -1,5 +1,8 @@
 class Menu {
   constructor() {
+    logo_img.addEventListener("click", function(){
+      window.location.href = "../../views/home/index.php";
+    });
     dadCustomizeLanyard.addEventListener('scroll', function() {
       var seventyVH = window.innerHeight * 0.7;
 
@@ -301,6 +304,7 @@ class Menu {
 }
 
 // DOM elements related to login, logout, and menu functionality
+const logo_img = document.getElementById("logo_img");
 const openLogin = document.querySelectorAll('.openLogin'); // All login buttons
 const openLogoutClass = document.querySelectorAll(".openLogout"); // Mobile menu close button
 const openLogout = document.getElementById("openLogout"); // Mobile menu close button
@@ -309,7 +313,7 @@ const openMenuMobileButton = document.getElementById("openMenuMobile"); // Mobil
 const closeMenuMobileButton = document.getElementById("closeMenuMobile"); // Mobile menu close button
 const menuMobile = document.getElementById("menuMobile"); // Mobile menu element
 const showLogout = document.getElementById("showLogout");
-const dadCustomizeLanyard = document.getElementById("dad-customize-lanyard");
+const dadCustomizeLanyard = document.getElementById("dad-customize-lanyard_about_us");
 const menu = document.getElementById("menu");
 
 

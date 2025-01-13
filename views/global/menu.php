@@ -5,15 +5,17 @@
 <section id="menu" class="menu">
 
   <!-- Logo container with an image -->
-  <div class="logo">
+  <div id="logo_img"class="logo">
     <img src="../assets/img/global/menu/Logo.png" alt=""> <!-- Displays the logo image -->
   </div>
 
   <!-- Container for the main menu items -->
   <div class="containerItems">
-    <h3 class="transparentLeftLine">Home </h3> <!-- Home menu item -->
-    <h3>About us</h3> <!-- About Us menu item -->
-    <h3>Contact us</h3> <!-- Contact Us menu item -->
+    <a href="../../views/home/index.php">  <h3 class="transparentLeftLine">Home </h3> </a>
+    <a href="../../views/about_us/index.php"><h3>About us</h3></a>
+      <a href="../../views/contact_us/index.php"><h3>Contact us</h3></a>
+
+     <!-- Contact Us menu item -->
   </div>
 
   <!-- Container for secondary menu items -->
