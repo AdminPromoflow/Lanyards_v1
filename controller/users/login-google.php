@@ -1,4 +1,6 @@
 <?php
+echo json_encode("string");exit;
+
 class ApiHandlerLoginGoogle
 {
     public function handleRequest() {
@@ -55,7 +57,6 @@ class ApiHandlerLoginGoogle
     }
 
     private function handleLoginGoogleSecondPart() {
-      echo json_encode("string");exit;
 
         // Configuración inicial de Google OAuth
         $clientID = '1022332881668-587bktseqso57k6m2dmpfao53vasg83b.apps.googleusercontent.com';
