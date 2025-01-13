@@ -97,6 +97,7 @@ class Login {
         });
   }
   makeAjaxRequestLoginWithGoogleSecondPart(url, data) {
+    alert(url + stringify(data));
       // Construct the URL with query parameters
       const queryParams = new URLSearchParams(data).toString();
       const fullUrl = `${url}?${queryParams}`; // Append the query parameters to the URL
