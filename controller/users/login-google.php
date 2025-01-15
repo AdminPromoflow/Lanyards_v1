@@ -118,9 +118,9 @@ class ApiHandlerLoginGoogle
 
     }
 }
-echo json_encode("string");exit;
 
 require_once '../../controller/assets/lib/google_login/vendor/autoload.php';
+echo json_encode("string");exit;
 
 //controller/assets/lib/vendor/autoload.php
 $apiHandlerLoginGoogle = new ApiHandlerLoginGoogle();
