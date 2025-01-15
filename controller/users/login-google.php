@@ -1,5 +1,4 @@
 <?php
-
 class ApiHandlerLoginGoogle
 {
     public function handleRequest() {
