@@ -382,6 +382,7 @@ class CustomizeLanyard {
     classPreviewLogin.showLoginPreview("none");
     previewCheckout.showPreviewCheckout("none");
     previewProvidedInformation.showProvidedInformationPreview('flex');
+    previewLanyardType.showTypeLanyardPreview("none");
     customizeLanyard.showCurrentSection(this.currentSectionOpen);
     this.showNext(true);
   }
@@ -390,8 +391,7 @@ class CustomizeLanyard {
     previewLanyardType.showTypeLanyardPreview("none");
     previewProvidedInformation.showProvidedInformationPreview('none');
     customizeLanyard.showCurrentSection(this.currentSectionOpen);
-    previewCheckout.showPreviewCheckout("flex");
-
+    previewLanyardType.showTypeLanyardPreview("flex");
   }
   setStateVisibilityPanelCustomeLanyard(value) {
     stateVisibilityPanelCustomeLanyard = value;
