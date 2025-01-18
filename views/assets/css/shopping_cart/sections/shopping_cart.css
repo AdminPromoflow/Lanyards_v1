@@ -1,0 +1,190 @@
+.section_shopping_cart{
+  position: relative;
+  padding: 5px;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+.section_shopping_car h1{
+  position: relative;
+  width: 100%;
+  background-color: orange;
+  color: white;
+}
+.container_shopping_cart{
+  position: relative;
+  background-color: rgba(0 ,0, 255, 1);
+  padding: 5px;
+  width: 90%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap:wrap;
+}
+/*.........Contenedor de la izquierda.................*/
+
+.boxes_shopping_cart{
+  position: relative;
+  background-color: yellow;
+  padding: 5px;
+  min-width: 280px;
+  margin: 15px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.boxes_shopping_cart:nth-child(1){
+  width: 60%;
+}
+.boxes_shopping_cart:nth-child(2){
+  width: 30%;
+}
+.items_shopping_cart{
+  position: relative;
+  background-color: brown;
+  padding: 5px;
+  margin: 15px 0;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.product_items_shopping_cart{
+  position: relative;
+  background-color: grey;
+  padding: 1px;
+  width: 100%;
+}
+.elements_product_items_shopping_cart{
+  position: relative;
+  background-color: darkblue;
+  width: 100%;
+  margin: 3px 0;
+
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.elements_product_items_shopping_cart img{
+  position: relative;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+.elements_product_items_shopping_cart h3{
+  position: relative;
+  color: white;
+  font-size: 1.1em;
+  font-weight: 400;
+}
+.descriptions_items_shopping_cart{
+  position: relative;
+  background-color: green;
+  padding: 1px;
+  width: 100%;
+}
+.elements_descriptions_items_shopping_cart{
+  position: relative;
+  background-color: pink;
+  width: 100%;
+  margin: 3px 0;
+
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.elements_descriptions_items_shopping_cart h3{
+  position: relative;
+  font-size: 1em;
+  margin: 0px;
+  padding: 0px;
+  padding-left: 10px;
+  min-width: 124px;
+}
+.elements_descriptions_items_shopping_cart h3:nth-child(1){
+  width: 30%;
+  font-weight: 500;
+}
+.elements_descriptions_items_shopping_cart h3:nth-child(2){
+  width: 40%;
+  font-weight: 300;
+}
+.elements_descriptions_items_shopping_cart h3:nth-child(3){
+  width: 20%;
+  font-weight: 300;
+}
+.summary_items_shopping_cart{
+  position: relative;
+  background-color: orange;
+  padding: 1px;
+  width: 100%;
+}
+.elements_summary_items_shopping_cart{
+  position: relative;
+  background-color: pink;
+  width: 100%;
+  margin: 3px 0;
+
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.elements_summary_items_shopping_cart h3{
+  position: relative;
+  font-size: 1em;
+  text-align:left;
+  margin: 0px;
+  padding: 0px;
+  padding-left: 10px;
+  min-width: 124px;
+}
+.elements_summary_items_shopping_cart h3:nth-child(1){
+  width: 30%;
+  font-weight: 600;
+}
+.elements_summary_items_shopping_cart h3:nth-child(2){
+  width: 40%;
+  font-weight: 500;
+}
+.elements_summary_items_shopping_cart h3:nth-child(3){
+  width: 20%;
+  font-weight: 500;
+}
+
+/*.............Contenedor de la derecha................*/
+.container_boxes_shopping_cart{
+  position: relative;
+  background-color: red;
+  padding: 1px;
+  width: 100%;
+  margin: 1px 0;
+}
+
+.items2_shopping_cart{
+  position: relative;
+  background-color: black;
+  padding: 1px;
+  margin: 1px 0;
+
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
