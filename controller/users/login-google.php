@@ -112,6 +112,9 @@ class ApiHandlerLoginGoogle
                 }
             }
         }
+        else {
+          exit;
+        }
 
 
 
