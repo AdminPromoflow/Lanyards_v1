@@ -3,7 +3,7 @@ class ApiHandlerLoginGoogle
 {
     public function handleRequest() {
 
-      echo "string4";exit;
+
         // Check if a GET request was received
         if ($_SERVER["REQUEST_METHOD"] == "GET") {
             // Check if "action" exists in the query parameters
@@ -16,8 +16,9 @@ class ApiHandlerLoginGoogle
                         $this->handleLoginGoogle();
                         break;
                     case "loginGoogleSecondPart":
-
+                    echo "string5";exit;
                         $this->handleLoginGoogleSecondPart();
+
                         break;
                     default:
                         // Unknown action
