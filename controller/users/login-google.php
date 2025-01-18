@@ -73,15 +73,7 @@ class ApiHandlerLoginGoogle
 
 
 
-        if (!isset($_GET['code'])) {
-                    // Si no existe 'code', manejar el caso según lo necesario
-                    // Opción 1: Redirigir al login
-                    //header("Location: " . $client->createAuthUrl());
-                    echo "string";
-                    exit;
 
-
-                }
 
 
         // Check if the HTTP_REFERER is set in the server variables
@@ -97,9 +89,11 @@ class ApiHandlerLoginGoogle
                 // Parse the query string into an associative array
                 parse_str($urlComponents['query'], $queryParams);
 
+                  if (!isset($queryParams['code'])) {
+                    exit;
+                  }
                 // Check if the 'code' parameter exists in the query string
                 if (isset($queryParams['code'])) {
-
                     // Fetch the access token using the authorization code
                     $token = $client->fetchAccessTokenWithAuthCode($queryParams['code']);
                     $client->setAccessToken($token['access_token']);
@@ -116,7 +110,6 @@ class ApiHandlerLoginGoogle
                         "name" => $name
                     ));
                 }
-                echo "string11";exit;
             }
         }
 
