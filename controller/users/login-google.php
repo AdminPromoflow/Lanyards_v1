@@ -74,10 +74,11 @@ class ApiHandlerLoginGoogle
 
 
 
-echo "string8";exit;
+
 
         // Check if the HTTP_REFERER is set in the server variables
         if (isset($_SERVER['HTTP_REFERER'])) {
+          echo "string9";exit;
             $refererUrl = $_SERVER['HTTP_REFERER'];
 
             // Parse the referer URL to get its components
