@@ -119,7 +119,7 @@ class ApiHandlerLoginGoogle
 }
 
 require_once '../../controller/assets/lib/composer/vendor/autoload.php';
-//echo "string2";exit;
+echo "string3";exit;
 
 //controller/assets/lib/vendor/autoload.php
 $apiHandlerLoginGoogle = new ApiHandlerLoginGoogle();
