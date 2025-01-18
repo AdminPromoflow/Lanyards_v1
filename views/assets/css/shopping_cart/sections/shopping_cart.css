@@ -168,23 +168,33 @@
 }
 
 /*.............Contenedor de la derecha................*/
-.container_boxes_shopping_cart{
+.boxes_shopping_cart h3:nth-child(2){
   position: relative;
-  background-color: red;
-  padding: 1px;
-  width: 100%;
-  margin: 1px 0;
+  font-size: 1em;
+  text-align:left;
+  margin: 0px;
+  padding: 0px;
+  padding-left: 10px;
+  min-width: 124px;
 }
-
-.items2_shopping_cart{
+.boxes_container_shopping_cart{
   position: relative;
-  background-color: black;
   padding: 1px;
-  margin: 1px 0;
+  background-color: blue;
+  width: 100%;
 
   display: flex;
   justify-content:space-around;
   align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
+}
+.items2_shopping_cart{
+  position: relative;
+  padding: 1px;
+  background-color: white;
+  width: 100%;
+  margin: 1px 0;
+}
+.items2_shopping_cart h3{
+
 }

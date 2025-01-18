@@ -218,27 +218,20 @@
     </div>
     <div class="boxes_shopping_cart">
       <h3>You Orden</h3>
-      <div class="container_boxes_shopping_cart">
+      <div class="boxes_container_shopping_cart">
         <div class="items2_shopping_cart">
-          <h3>Hola1</h3>
-          <h3>Hola2</h3>
+          <h3>hi1</h3>
+          <h3>hi1</h3>
         </div>
         <div class="items2_shopping_cart">
-          <div class="items2_shopping_cart">
-            <h3>Hola1</h3>
-            <h3>Hola2</h3>
-          </div>
+
         </div>
         <div class="items2_shopping_cart">
-          <div class="items2_shopping_cart">
-            <h3>Hola1</h3>
-            <h3>Hola2</h3>
-          </div>
+
         </div>
-      </div>
-      <div class="container_boxes_shopping_cart">
 
       </div>
+
     </div>
   </div>
 
