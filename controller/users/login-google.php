@@ -65,7 +65,6 @@ class ApiHandlerLoginGoogle
 
         // Crear cliente de Google
         $client = new Google_Client();
-        echo "string7";exit;
         $client->setClientId($clientID);
         $client->setClientSecret($clientSecret);
         $client->setRedirectUri($redirectUri);
@@ -75,7 +74,7 @@ class ApiHandlerLoginGoogle
 
 
 
-
+echo "string8";exit;
 
         // Check if the HTTP_REFERER is set in the server variables
         if (isset($_SERVER['HTTP_REFERER'])) {
