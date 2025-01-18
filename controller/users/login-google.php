@@ -118,7 +118,7 @@ class ApiHandlerLoginGoogle
     }
 }
 
-require_once '../../controller/assets/lib/google_login/vendor/autoload.php';
+require_once '../../controller/assets/lib/composer/vendor/autoload.php';
 
 //controller/assets/lib/vendor/autoload.php
 $apiHandlerLoginGoogle = new ApiHandlerLoginGoogle();
