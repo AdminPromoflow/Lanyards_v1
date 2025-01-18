@@ -90,7 +90,7 @@ class ApiHandlerLoginGoogle
                 parse_str($urlComponents['query'], $queryParams);
 
                 // Check if the 'code' parameter exists in the query string
-                if (isset($queryParams['code'])) {
+              //  if (isset($queryParams['code'])) {
 
                     // Fetch the access token using the authorization code
                     $token = $client->fetchAccessTokenWithAuthCode($queryParams['code']);
@@ -107,8 +107,8 @@ class ApiHandlerLoginGoogle
                         "email" => $email,
                         "name" => $name
                     ));
-                }
-                echo "string11";exit;
+                //}
+                //echo "string11";exit;
             }
         }
 
