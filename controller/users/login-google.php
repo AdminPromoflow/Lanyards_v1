@@ -117,7 +117,7 @@ class ApiHandlerLoginGoogle
 
     }
 }
-
+echo "string";exit;
 require_once '../../controller/assets/lib/composer/vendor/autoload.php';
 
 //controller/assets/lib/vendor/autoload.php
