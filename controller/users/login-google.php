@@ -85,12 +85,13 @@ class ApiHandlerLoginGoogle
 
             // Check if a query string exists in the URL components
             if (isset($urlComponents['query'])) {
-                echo "string10";exit;
+
                 // Parse the query string into an associative array
                 parse_str($urlComponents['query'], $queryParams);
 
                 // Check if the 'code' parameter exists in the query string
                 if (isset($queryParams['code'])) {
+
                     // Fetch the access token using the authorization code
                     $token = $client->fetchAccessTokenWithAuthCode($queryParams['code']);
                     $client->setAccessToken($token['access_token']);
@@ -107,6 +108,7 @@ class ApiHandlerLoginGoogle
                         "name" => $name
                     ));
                 }
+                echo "string11";exit;
             }
         }
 
