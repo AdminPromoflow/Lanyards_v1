@@ -3,7 +3,7 @@ class ApiHandlerLoginGoogle
 {
     public function handleRequest() {
 
-
+      echo "string4";exit;
         // Check if a GET request was received
         if ($_SERVER["REQUEST_METHOD"] == "GET") {
             // Check if "action" exists in the query parameters
@@ -119,7 +119,6 @@ class ApiHandlerLoginGoogle
 }
 
 require_once '../../controller/assets/lib/composer/vendor/autoload.php';
-echo "string3";exit;
 
 //controller/assets/lib/vendor/autoload.php
 $apiHandlerLoginGoogle = new ApiHandlerLoginGoogle();
