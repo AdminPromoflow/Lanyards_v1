@@ -78,38 +78,58 @@ class ApiHandlerLoginGoogle
 
         // Check if the HTTP_REFERER is set in the server variables
         if (isset($_SERVER['HTTP_REFERER'])) {
-            $refererUrl = $_SERVER['HTTP_REFERER'];
+          private function handleLoginGoogleSecondPart() {
+      try {
+          // Configuración inicial de Google OAuth
+          $clientID = '1022332881668-587bktseqso57k6m2dmpfao53vasg83b.apps.googleusercontent.com';
+          $clientSecret = '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';
+          $redirectUri = 'https://lanyardsforyou.com/views/home/index.php';
 
-            // Parse the referer URL to get its components
-            $urlComponents = parse_url($refererUrl);
+          // Crear cliente de Google
+          $client = new Google_Client();
+          $client->setClientId($clientID);
+          $client->setClientSecret($clientSecret);
+          $client->setRedirectUri($redirectUri);
+          $client->addScope("email");
+          $client->addScope("profile");
 
-            // Check if a query string exists in the URL components
-            if (isset($urlComponents['query'])) {
+          // Verificar si el parámetro 'code' está en la URL
+          if (!isset($_GET['code'])) {
+              throw new Exception("Authorization code is missing");
+          }
 
-                // Parse the query string into an associative array
-                parse_str($urlComponents['query'], $queryParams);
+          // Obtener el código de autorización de la URL
+          $code = $_GET['code'];
 
-                // Check if the 'code' parameter exists in the query string
-              //  if (isset($queryParams['code'])) {
+          // Intercambiar el código por un token de acceso
+          $token = $client->fetchAccessTokenWithAuthCode($code);
 
-                    // Fetch the access token using the authorization code
-                    $token = $client->fetchAccessTokenWithAuthCode($queryParams['code']);
-                    $client->setAccessToken($token['access_token']);
+          // Verificar si ocurrió un error al obtener el token
+          if (isset($token['error'])) {
+              throw new Exception("Error fetching access token: " . $token['error_description']);
+          }
 
-                    // Retrieve the user's profile information
-                    $google_oauth = new Google_Service_Oauth2($client);
-                    $google_account_info = $google_oauth->userinfo->get();
-                    $email = $google_account_info->email;
-                    $name = $google_account_info->name;
+          // Establecer el token de acceso en el cliente de Google
+          $client->setAccessToken($token['access_token']);
 
-                    // Return the user's email and name as a JSON response
-                    echo json_encode(array(
-                        "email" => $email,
-                        "name" => $name
-                    ));
-                //}
-                //echo "string11";exit;
-            }
+          // Obtener información del perfil del usuario
+          $google_oauth = new Google_Service_Oauth2($client);
+          $google_account_info = $google_oauth->userinfo->get();
+          $email = $google_account_info->email;
+          $name = $google_account_info->name;
+
+          // Devolver la información del usuario como respuesta JSON
+          echo json_encode(array(
+              "email" => $email,
+              "name" => $name
+          ));
+      } catch (Exception $e) {
+          // Manejar errores y enviar una respuesta de error JSON
+          http_response_code(400);
+          echo json_encode(array("error" => $e->getMessage()));
+      }
+  }
+
         }
 
 
