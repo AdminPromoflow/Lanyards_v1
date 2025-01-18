@@ -73,7 +73,15 @@ class ApiHandlerLoginGoogle
 
 
 
+        if (!isset($_GET['code'])) {
+                    // Si no existe 'code', manejar el caso según lo necesario
+                    // Opción 1: Redirigir al login
+                    //header("Location: " . $client->createAuthUrl());
+                    echo "string";
+                    exit;
 
+
+                }
 
 
         // Check if the HTTP_REFERER is set in the server variables
