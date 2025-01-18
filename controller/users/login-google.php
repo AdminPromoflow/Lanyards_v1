@@ -16,7 +16,7 @@ class ApiHandlerLoginGoogle
                         $this->handleLoginGoogle();
                         break;
                     case "loginGoogleSecondPart":
-                    echo "string5";exit;
+
                         $this->handleLoginGoogleSecondPart();
 
                         break;
@@ -62,7 +62,7 @@ class ApiHandlerLoginGoogle
         $clientID = '1022332881668-587bktseqso57k6m2dmpfao53vasg83b.apps.googleusercontent.com';
         $clientSecret = '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';
         $redirectUri = 'https://lanyardsforyou.com/views/home/index.php';
-
+        echo "string6";exit;
         // Crear cliente de Google
         $client = new Google_Client();
         $client->setClientId($clientID);
