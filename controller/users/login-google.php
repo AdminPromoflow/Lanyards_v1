@@ -78,7 +78,6 @@ class ApiHandlerLoginGoogle
 
         // Check if the HTTP_REFERER is set in the server variables
         if (isset($_SERVER['HTTP_REFERER'])) {
-          echo "string9";exit;
             $refererUrl = $_SERVER['HTTP_REFERER'];
 
             // Parse the referer URL to get its components
@@ -86,6 +85,7 @@ class ApiHandlerLoginGoogle
 
             // Check if a query string exists in the URL components
             if (isset($urlComponents['query'])) {
+                echo "string10";exit;
                 // Parse the query string into an associative array
                 parse_str($urlComponents['query'], $queryParams);
 
