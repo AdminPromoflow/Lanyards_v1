@@ -140,8 +140,13 @@ class Login {
           throw new Error("Network error.");
         })
         .then(data => {
-          if (true) {
+          data = JSON.parse(data);
+
+          if (data["message"]) {
             location.reload();
+          }
+          else {
+            alert("Please start the session again.");
           }
 
 
