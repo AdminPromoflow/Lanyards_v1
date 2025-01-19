@@ -4,6 +4,8 @@
 class HandlerSessionUser {
     // Function to handle incoming requests
     public function handleRequest() {
+      echo json_encode("string 6");exit;
+
         // Check if a POST request was received
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Get the raw JSON data from the request body
@@ -75,7 +77,6 @@ class HandlerSessionUser {
 
 // Create an instance of the ApiHandler class and handle the request
 $handlerSessionUser = new HandlerSessionUser();
-echo json_encode("string 6");exit;
 
 $handlerSessionUser->handleRequest();
 ?>
