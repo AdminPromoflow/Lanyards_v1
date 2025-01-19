@@ -7,11 +7,9 @@
     <div class="boxes_shopping_cart">
       <div class="items_shopping_cart">
         <div class="product_items_shopping_cart">
-          <div class="elements_product_items_shopping_cart">
             <h3>hola2</h3>
             <h3>hola3</h3>
-            <img src="../../views/assets/img/shopping_cart/sections/arrow_right.png" alt="">
-          </div>
+            <img class="arrow_products_shopping_cart" src="../../views/assets/img/shopping_cart/sections/arrow_right.png" alt="">
         </div>
         <div class="descriptions_items_shopping_cart">
           <div class="elements_descriptions_items_shopping_cart">
@@ -77,11 +75,9 @@
       </div>
       <div class="items_shopping_cart">
         <div class="product_items_shopping_cart">
-          <div class="elements_product_items_shopping_cart">
             <h3>hola2</h3>
             <h3>hola3</h3>
-            <img src="../../views/assets/img/shopping_cart/sections/arrow_right.png" alt="">
-          </div>
+            <img class="arrow_products_shopping_cart" src="../../views/assets/img/shopping_cart/sections/arrow_right.png" alt="">
         </div>
         <div class="descriptions_items_shopping_cart">
           <div class="elements_descriptions_items_shopping_cart">
@@ -147,11 +143,9 @@
       </div>
       <div class="items_shopping_cart">
         <div class="product_items_shopping_cart">
-          <div class="elements_product_items_shopping_cart">
             <h3>hola2</h3>
             <h3>hola3</h3>
-            <img src="../../views/assets/img/shopping_cart/sections/arrow_right.png" alt="">
-          </div>
+            <img class="arrow_products_shopping_cart" src="../../views/assets/img/shopping_cart/sections/arrow_right.png" alt="">
         </div>
         <div class="descriptions_items_shopping_cart">
           <div class="elements_descriptions_items_shopping_cart">
