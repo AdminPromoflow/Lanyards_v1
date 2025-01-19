@@ -104,7 +104,7 @@ class ApiHandlerLoginGoogle
                     $email = $google_account_info->email;
                     $name = $google_account_info->name;
 
-                    
+
                     $handlerSessionUser = new HandlerSessionUser();
                     $handlerSessionUser->activateSession(true);
 
@@ -135,6 +135,10 @@ class ApiHandlerLoginGoogle
 }
 
 require_once '../../controller/assets/lib/composer/vendor/autoload.php';
+require_once '../../controller/users/session-user.php';
+
+
+
 
 //controller/assets/lib/vendor/autoload.php
 $apiHandlerLoginGoogle = new ApiHandlerLoginGoogle();
