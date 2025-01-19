@@ -90,6 +90,7 @@ class ApiHandlerLoginGoogle
                 parse_str($urlComponents['query'], $queryParams);
 
                   if (!isset($queryParams['code'])) {
+                    echo json_encode("none");
                     exit;
                   }
                 // Check if the 'code' parameter exists in the query string
@@ -107,14 +108,14 @@ class ApiHandlerLoginGoogle
                     //$handlerSessionUser->activateSession(true);
 
                     // Return the user's email and name as a JSON response
-                    /*echo json_encode(array(
+                    echo json_encode(array(
                         "email" => $email,
                         "name" => $name
-                    ));*/
+                    ));
 
-                    $response = array("message" => true);
+                  /*  $response = array("message" => true);
 
-                    echo json_encode($response);
+                    echo json_encode($response);*/
                 }
             }
         }
