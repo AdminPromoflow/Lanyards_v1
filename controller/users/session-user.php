@@ -1,5 +1,4 @@
 <?php
-echo json_encode("string 6");exit;
 
 
 class HandlerSessionUser {
