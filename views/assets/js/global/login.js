@@ -2,13 +2,12 @@
 class Login {
   constructor() {
 
-
     // Define the URL and the JSON data you want to send
     const url = "../../controller/users/login-google.php";
     const data = {
-      action: "loginGoogleSecondPart"      };
+      action: "loginGoogleSecondPart"
+    };
 
-    // Make the AJAX request
     this.makeAjaxRequestLoginWithGoogleSecondPart(url, data);
 
 
@@ -72,6 +71,35 @@ class Login {
   }
 
 
+
+  // updateDashboardState: Updates the dashboard UI based on the user's authentication state (login/logout)
+/*  updateDashboardState(state){
+  //  alert("hah");
+    const openLogin = document.querySelectorAll(".openLogin");
+    const openLogout = document.querySelectorAll(".openLogout");
+
+    if (state) {
+      for (var i = 0; i < openLogin.length; i++) {
+      //  alert("Han hecho login a la página");
+        openLogin[i].style.display = "none";
+      }
+      for (var i = 0; i < openLogout.length; i++) {
+        openLogout[i].style.display = "block";
+      }
+
+    }
+    else {
+      for (var i = 0; i < openLogin.length; i++) {
+        openLogin[i].style.display = "block";
+      }
+      for (var i = 0; i < openLogout.length; i++) {
+        openLogout[i].style.display = "none";
+      }
+    }
+
+
+  }*/
+
   // Function to make the AJAX request
   makeAjaxRequestLoginWithGoogle(url, data) {
       // Construct the URL with query parameters
@@ -112,17 +140,14 @@ class Login {
           throw new Error("Network error.");
         })
         .then(data => {
-          alert(data);
+
+          location.reload();
+
         })
         .catch(error => {
           console.error("Error:", error);
         });
   }
-
-
-
-
-
   // Function to make the AJAX request
   makeAjaxRequestLogin(url, data) {
     // Make the request using the Fetch API
@@ -171,6 +196,10 @@ class Login {
         console.error("Error:", error);
       });*/
   }
+
+
+
+
 
 
   // Email validation function

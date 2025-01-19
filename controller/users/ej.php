@@ -1,5 +1,6 @@
 <?php
-class HandlerSessionLogin {
+echo json_encode("string");exit;
+class HandlerSessionUser {
     // Function to handle incoming requests
     public function handleRequest() {
         // Check if a POST request was received
@@ -16,7 +17,10 @@ class HandlerSessionLogin {
                 // Perform actions based on the request
                 switch ($action) {
                     case "checkSessionLogin":
-                        $this->handleSessionLogin();
+                        $this->handleCheckSessionLogin();
+                        break;
+                    case "checkSessionLogout":
+                        $this->handleSessionLogout();
                         break;
 
                     default:
@@ -40,10 +44,10 @@ class HandlerSessionLogin {
 
 
     // Function to handle user login
-    private function handleSessionLogin(){
+    private function handlecheckSessionLogin(){
 
       session_start();
-          if ($_SESSION['logged_in']) {
+          if (isset($_SESSION['logged_in'])) {
               $response = array("message" => true);
 
               echo json_encode($response);
@@ -52,12 +56,6 @@ class HandlerSessionLogin {
               echo json_encode($response);
           }
     }
+    
 }
-//echo json_encode("string3");exit;
-// Include required files
-
-//echo "string 6";exit;
-// Create an instance of the ApiHandler class and handle the request
-$handlerSessionLogin = new HandlerSessionLogin();
-$handlerSessionLogin->handleRequest();
-?>
+ ?>

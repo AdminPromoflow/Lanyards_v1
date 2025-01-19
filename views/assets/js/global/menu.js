@@ -1,11 +1,18 @@
 class Menu {
   constructor() {
+    this.getActiveUserSession();
+    // Prepare the URL and data to check session login status
+    //this.getActiveSession();
+  //  this.activeSession = true;
+    //this.loginOrLogout();
+
+
     logo_img.addEventListener("click", function(){
       window.location.href = "../../views/home/index.php";
     });
     dadCustomizeLanyard.addEventListener('scroll', function() {
       var seventyVH = window.innerHeight * 0.7;
-
+ 
       container_logout.style.display = 'none';
       var scrollTop = dadCustomizeLanyard.scrollTop;
       if (scrollTop > seventyVH) {
@@ -34,8 +41,7 @@ class Menu {
         container_logout.style.display = "none";
       }
     });
-      this.activeSession = false;
-    this.loginOrLogout();
+
     // Loop through all 'openLogin' buttons and add a click event listener to each
     for (let i = 0; i < openLogin.length; i++) {
       openLogin[i].addEventListener("click", function() {
@@ -68,23 +74,51 @@ class Menu {
       });
     }
 
-    // Prepare the URL and data to check session login status
-    const url = "../../controller/users/session-login.php";
-    const data = {
-      action: "checkSessionLogin" // Action to check if the session is active (login)
-    };
-    // Make an AJAX request to check if the user is authenticated
-    this.makeAjaxRequestUserAuthenticated(url, data);
+
 
     // Add event listeners to handle the mobile menu open/close buttons
     openMenuMobileButton.addEventListener("click", this.openMenuMobile.bind(this));
     closeMenuMobileButton.addEventListener("click", this.closeMenuMobile.bind(this));
     document.addEventListener("click", this.handleClickOutside.bind(this)); // Handle clicks outside the mobile menu
   }
+  getActiveUserSession() {
+    const url = "../../controller/users/session-user.php";
+    const data = {
+      action: "checkSessionLogin"
+    };
+    // Make a fetch request to the given URL with the specified data
+    fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+
+    })
+      .then(response => {
+
+        // Check if the response is okay, if so, return the response text
+        if (response.ok) {
+          return response.text();
+        }
+        // If the response is not okay, throw an error
+        throw new Error("Network error.");
+      })
+      .then(data => {
+        data = JSON.parse(data);
+
+        this.setActiveSession(data["message"]);
+        this.loginOrLogout();
+
+      })
+      .catch(error => {
+        // Log any errors to the console
+        console.error("Error:", error);
+      //  location.reload();
+      });
+  }
 
  loginOrLogout(){
-   //openLogin
-   //openLogoutClass
     var activeSession = this.getActiveSession(); // Asume que esta función devuelve true o false
 
     if (activeSession) {

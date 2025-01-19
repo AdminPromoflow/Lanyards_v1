@@ -1,5 +1,6 @@
 <?php
-class HandlerSessionLogout {
+
+class HandlerSessionUser {
     // Function to handle incoming requests
     public function handleRequest() {
         // Check if a POST request was received
@@ -15,6 +16,9 @@ class HandlerSessionLogout {
 
                 // Perform actions based on the request
                 switch ($action) {
+                    case "checkSessionLogin":
+                        $this->handleCheckSessionLogin();
+                        break;
                     case "checkSessionLogout":
                         $this->handleSessionLogout();
                         break;
@@ -40,7 +44,30 @@ class HandlerSessionLogout {
 
 
     // Function to handle user login
-    private function handleSessionLogout(){
+    private function handlecheckSessionLogin(){
+
+      session_start();
+          if (isset($_SESSION['logged_in'])) {
+              $response = array("message" => true);
+
+              echo json_encode($response);
+          } else {
+              $response = array("message" => false);
+              echo json_encode($response);
+          }
+    }
+    public function activateSession($action){
+      session_start();
+
+      if ($action) {
+        $_SESSION['logged_in'] = true;
+      }
+      else {
+        unset($_SESSION['logged_in']);
+      }
+
+    }
+  /*  private function handleCheckSessionLogin(){
 
       session_start();
       unset($_SESSION['logged_in']);
@@ -53,13 +80,13 @@ class HandlerSessionLogout {
               $response = array("message" => false);
               echo json_encode($response);
           }
-    }
+    }*/
 }
 //echo json_encode("string3");exit;
 // Include required files
 
-
+//echo "string 6";exit;
 // Create an instance of the ApiHandler class and handle the request
-$handlerSessionLogout = new HandlerSessionLogout();
-$handlerSessionLogout->handleRequest();
+$handlerSessionUser = new HandlerSessionUser();
+$handlerSessionUser->handleRequest();
 ?>

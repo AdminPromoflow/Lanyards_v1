@@ -17,7 +17,7 @@
       <div class="footerLoginOptionsContainer">
         <div id="loginWithGoogle1" class="footerLoginOptions">
           <img src="../../views/assets/img/global/login/google-icon.png" alt="">
-        </div>
+        </div> 
         <!-- The JS SDK Login Button -->
 
       <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
