@@ -4,7 +4,6 @@
 class HandlerSessionUser {
     // Function to handle incoming requests
     public function handleRequest() {
-      echo json_encode("string 6");exit;
 
         // Check if a POST request was received
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -16,10 +15,13 @@ class HandlerSessionUser {
             if ($data !== null && isset($data->action)) {
                 // Get the action from the JSON data
                 $action = $data->action;
+                echo json_encode("string 6");exit;
+
 
                 // Perform actions based on the request
                 switch ($action) {
                     case "checkSessionLogin":
+
                         $this->handleCheckSessionLogin();
                         break;
                     case "checkSessionLogout":
