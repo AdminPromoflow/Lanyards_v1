@@ -7,10 +7,11 @@ class HandlerSessionUser {
 
         // Check if a POST request was received
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
+          echo json_encode("string 6");exit;
+
             // Get the raw JSON data from the request body
             $rawData = file_get_contents("php://input");
             $data = json_decode($rawData);
-            echo json_encode("string 6");exit;
 
 
             // Check if JSON data is valid and contains an "action" field
