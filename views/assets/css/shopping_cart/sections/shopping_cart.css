@@ -2,6 +2,7 @@
   position: relative;
   padding: 5px;
   width: 100%;
+  color: white;
 
   display: flex;
   justify-content: center;
@@ -9,21 +10,34 @@
   flex-direction: column;
 
 }
-.section_shopping_car h1{
+.section_shopping_cart h1{
   position: relative;
-  width: 100%;
-  background-color: orange;
+  text-align: center;
   color: white;
+  text-shadow: 3px 3px 2px black;
+  font-size: calc(2.3em + 2.3vw);
+  font-weight: 200;
+  margin: 0 0 3vh 0;
+  padding: 0px;
+}
+.section_shopping_cart p{
+  position: relative;
+  text-align: center;
+  color: white;
+  text-shadow: 3px 3px 2px black;
+  font-size: calc(0.8em + 0.8vw);
+  font-weight: 200;
+  margin: 0 0 3vh 0;
+  padding: 0px;
 }
 .container_shopping_cart{
   position: relative;
-  background-color: rgba(0 ,0, 255, 1);
   padding: 5px;
   width: 90%;
 
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items:flex-start;
   flex-direction: row;
   flex-wrap:wrap;
 }
@@ -31,14 +45,12 @@
 
 .boxes_shopping_cart{
   position: relative;
-  background-color: yellow;
-  padding: 5px;
   min-width: 280px;
   margin: 15px;
 
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items:center;
   flex-direction: column;
 }
 .boxes_shopping_cart:nth-child(1){
@@ -46,13 +58,18 @@
 }
 .boxes_shopping_cart:nth-child(2){
   width: 30%;
+  border-top: 1px solid rgba(255, 255, 255, .9);
+  border-bottom: 1px solid rgba(255, 255, 255, .9);
+  background-color: rgba(0,28,111, .6);
 }
 .items_shopping_cart{
   position: relative;
-  background-color: brown;
   padding: 5px;
-  margin: 15px 0;
+  margin: 0px 0px 30px 0px;
   width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, .9);
+  border-bottom: 1px solid rgba(255, 255, 255, .9);
+  background-color: rgba(0, 0, 0, .8);
 
   display: flex;
   justify-content: space-between;
@@ -61,13 +78,13 @@
 }
 .product_items_shopping_cart{
   position: relative;
-  background-color: grey;
   padding: 1px;
   width: 100%;
+  border-bottom: 1px solid white;
+  background-color: rgba(0,28,111, .6);
 }
 .elements_product_items_shopping_cart{
   position: relative;
-  background-color: darkblue;
   width: 100%;
   margin: 3px 0;
 
@@ -86,26 +103,30 @@
 .elements_product_items_shopping_cart h3{
   position: relative;
   color: white;
-  font-size: 1.1em;
+  font-size: 1.6em;
   font-weight: 400;
 }
 .descriptions_items_shopping_cart{
   position: relative;
-  background-color: green;
   padding: 1px;
   width: 100%;
 }
 .elements_descriptions_items_shopping_cart{
   position: relative;
-  background-color: pink;
   width: 100%;
   margin: 3px 0;
+  padding: 5px;
 
   display: flex;
   justify-content:space-around;
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
+}
+.elements_descriptions_items_shopping_cart:nth-child(odd){
+}
+.elements_descriptions_items_shopping_cart:nth-child(even){
+  background-color: rgba(0, 0, 255, 0.1);
 }
 .elements_descriptions_items_shopping_cart h3{
   position: relative;
@@ -129,15 +150,17 @@
 }
 .summary_items_shopping_cart{
   position: relative;
-  background-color: orange;
   padding: 1px;
   width: 100%;
+  background-color: rgba(0,28,111, .6);
+  border-top: 1px solid white;
+
 }
 .elements_summary_items_shopping_cart{
   position: relative;
-  background-color: pink;
   width: 100%;
   margin: 3px 0;
+  padding: 7px 0;
 
   display: flex;
   justify-content:space-around;
@@ -168,19 +191,17 @@
 }
 
 /*.............Contenedor de la derecha................*/
-.boxes_shopping_cart h3:nth-child(2){
+.title_boxes_shopping_cart{
   position: relative;
-  font-size: 1em;
-  text-align:left;
-  margin: 0px;
+  margin: 15px 0;
   padding: 0px;
-  padding-left: 10px;
-  min-width: 124px;
+  color: white;
+  font-weight: 400;
+  font-size: calc(1.1em + 1.1vw);
 }
 .boxes_container_shopping_cart{
   position: relative;
   padding: 1px;
-  background-color: blue;
   width: 100%;
 
   display: flex;
@@ -190,11 +211,126 @@
 }
 .items2_shopping_cart{
   position: relative;
-  padding: 1px;
-  background-color: white;
-  width: 100%;
-  margin: 1px 0;
+  width: 90%;
+  padding: 25px 10px;
+
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-bottom: 3px solid white;
 }
 .items2_shopping_cart h3{
+  position: relative;
+  font-size: 1.5em;
+  font-weight: 600;
+  text-align:left;
+  margin: 0px;
+  padding: 0px;
+  color: white;
+}
+.items2_shopping_cart h3:nth-child(1){
+  width: 75%;
+}
+.items2_shopping_cart h3:nth-child(2){
+  width: 20%;
+}
+.elements_boxes_container_shopping_cart{
+  position: relative;
+  width: 90%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, .5);
+
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-bottom: 3px solid white;
+}
+.elements_boxes_container_shopping_cart:nth-child(odd){
+
+}
+.elements_boxes_container_shopping_cart:nth-child(even){
+}
+.elements_boxes_container_shopping_cart h3{
+  position: relative;
+  font-size: 1.1em;
+  font-weight: 300;
+  text-align:left;
+  margin: 0px;
+  padding: 7px 0;
+  color: white;
+}
+.elements_boxes_container_shopping_cart h3:nth-child(1){
+  width: 75%;
+}
+.elements_boxes_container_shopping_cart h3:nth-child(2){
+  width: 20%;
+}
+/*.............Contenedor derecha mitad................*/
+
+.boxes2_container_shopping_cart{
+  position: relative;
+  padding: 1px;
+  width: 100%;
+  margin: 20px 0;
+
+
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.elements_boxes2_container_shopping_cart{
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 90%;
+  padding: 10px;
+
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-bottom: 3px solid white;
+
+}
+.elements_boxes2_container_shopping_cart h3{
+  position: relative;
+  font-size: 1.1em;
+  font-weight: 300;
+  text-align:left;
+  margin: 0px;
+  padding: 7px 0;
+  color: white;
+}
+.elements_boxes2_container_shopping_cart h3:nth-child(1){
+  width: 75%;
+}
+.elements_boxes2_container_shopping_cart h3:nth-child(2){
+  width: 20%;
+}
+.boxes3_container_shopping_cart{
+  position: relative;
+  padding: 1px;
+  width: 100%;
+  margin: 10px 0;
+
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.boxes3_container_shopping_cart button{
+  position: relative;
+  background: rgba(255, 0, 0, .3);
+  color: white;
+  font-size: 1.2em;
+  margin: 15px 0px;
+  font-weight: 300;
+  padding: 5px 20px;
+  cursor: pointer;
 
 }
