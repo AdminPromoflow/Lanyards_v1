@@ -135,6 +135,7 @@ class ApiHandlerLoginGoogle
 }
 
 require_once '../../controller/assets/lib/composer/vendor/autoload.php';
+echo json_encode("test");exit;
 require_once '../../controller/users/session-user.php';
 
 
