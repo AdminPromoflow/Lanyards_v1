@@ -107,10 +107,14 @@ class ApiHandlerLoginGoogle
                     $handlerSessionUser->activateSession(true);
 
                     // Return the user's email and name as a JSON response
-                    echo json_encode(array(
+                    /*echo json_encode(array(
                         "email" => $email,
                         "name" => $name
-                    ));
+                    ));*/
+
+                    $response = array("message" => true);
+
+                    echo json_encode($response);
                 }
             }
         }
