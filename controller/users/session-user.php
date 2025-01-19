@@ -1,4 +1,6 @@
 <?php
+echo json_encode("string 6");exit;
+
 
 class HandlerSessionUser {
     // Function to handle incoming requests
@@ -56,7 +58,7 @@ class HandlerSessionUser {
               echo json_encode($response);
           }
     }
-    public function activateSession($action){
+  /*  public function activateSession($action){
       session_start();
 
       if ($action) {
@@ -66,26 +68,12 @@ class HandlerSessionUser {
         unset($_SESSION['logged_in']);
       }
 
-    }
-  /*  private function handleCheckSessionLogin(){
-
-      session_start();
-      unset($_SESSION['logged_in']);
-
-      if (!isset($_SESSION['logged_in'])) {
-              $response = array("message" => true);
-
-              echo json_encode($response);
-          } else {
-              $response = array("message" => false);
-              echo json_encode($response);
-          }
     }*/
+
 }
 //echo json_encode("string3");exit;
 // Include required files
 
-echo json_encode("string 6");exit;
 // Create an instance of the ApiHandler class and handle the request
 $handlerSessionUser = new HandlerSessionUser();
 $handlerSessionUser->handleRequest();
