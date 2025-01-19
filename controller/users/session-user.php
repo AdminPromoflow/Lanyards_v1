@@ -85,7 +85,7 @@ class HandlerSessionUser {
 //echo json_encode("string3");exit;
 // Include required files
 
-//echo "string 6";exit;
+echo json_encode("string 6");exit;
 // Create an instance of the ApiHandler class and handle the request
 $handlerSessionUser = new HandlerSessionUser();
 $handlerSessionUser->handleRequest();
