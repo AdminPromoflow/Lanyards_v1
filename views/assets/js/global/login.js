@@ -21,6 +21,7 @@ class Login {
 
 
     loginWithGoogle1.addEventListener("click", function(){
+      alert("hah");
 
       // Define the URL and the JSON data you want to send
       const url = "../../controller/users/login-google.php";
