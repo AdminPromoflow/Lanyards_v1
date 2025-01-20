@@ -51,9 +51,16 @@ class Menu {
         registerClass.openRegister();
       });
     }
-      openLogout.addEventListener("click", function(){
-        menuClass.processUserLogout();
-      })
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const openLogout = document.getElementById("openLogout");
+      if (openLogout) {
+        openLogout.addEventListener("click", function () {
+          menuClass.processUserLogout();
+        });
+      }
+    });
+
 
 
 
@@ -211,7 +218,6 @@ class Menu {
 const logo_img = document.getElementById("logo_img");
 const openLogin = document.querySelectorAll('.openLogin'); // All login buttons
 const openLogoutClass = document.querySelectorAll(".openLogout"); // Mobile menu close button
-const openLogout = document.getElementById("openLogout"); // Mobile menu close button
 const logoutButtons = document.querySelectorAll('.logoutButtons'); // All logout buttons
 const openMenuMobileButton = document.getElementById("openMenuMobile"); // Mobile menu open button
 const closeMenuMobileButton = document.getElementById("closeMenuMobile"); // Mobile menu close button
