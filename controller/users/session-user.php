@@ -43,7 +43,7 @@ class HandlerSessionUser {
                 echo json_encode(array("message" => "Incomplete JSON data or missing action"));
             }
         } else {
-          echo json_encode("string 7");exit;
+        //  echo json_encode("Estas utilizando un metodo que no es post");
 
             // The request is not a valid POST request
           /*  http_response_code(405); // Method Not Allowed
