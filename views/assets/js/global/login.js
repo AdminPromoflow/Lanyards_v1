@@ -291,7 +291,7 @@ class Login {
   checkLoginState() {
     alert("aux");
     FB.getLoginStatus(function(response) {
-      //statusChangeCallback(response);
+      statusChangeCallback(response);
     });
   }
 
