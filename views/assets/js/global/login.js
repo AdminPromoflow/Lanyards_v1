@@ -2,13 +2,9 @@
 class Login {
   constructor() {
 
-    // Define the URL and the JSON data you want to send
-    const url = "../../controller/users/login-google.php";
-    const data = {
-      action: "loginGoogleSecondPart"
-    };
 
-    this.makeAjaxRequestLoginWithGoogleSecondPart(url, data);
+
+    this.makeAjaxRequestLoginWithGoogleSecondPart();
 
 
     // Event listener to close the login form
@@ -124,7 +120,12 @@ class Login {
           console.error("Error:", error);
         });
   }
-  makeAjaxRequestLoginWithGoogleSecondPart(url, data) {
+  makeAjaxRequestLoginWithGoogleSecondPart() {
+    // Define the URL and the JSON data you want to send
+    const url = "../../controller/users/login-google.php";
+    const data = {
+      action: "loginGoogleSecondPart"
+    };
       // Construct the URL with query parameters
       const queryParams = new URLSearchParams(data).toString();
       const fullUrl = `${url}?${queryParams}`; // Append the query parameters to the URL
@@ -149,7 +150,6 @@ class Login {
           else {
             alert("Please start the session again.");
             location.reload();
-
           }
 
 
