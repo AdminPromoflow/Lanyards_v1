@@ -26,8 +26,8 @@ class HandlerSessionUser {
 
                         $this->handleCheckSessionLogin();
                         break;
-                    case "checkSessionLogout":
-                        $this->handleSessionLogout();
+                    case "processUserLogout":
+                        $this->processUserLogout();
                         break;
 
                     default:
@@ -75,6 +75,13 @@ class HandlerSessionUser {
         unset($_SESSION['logged_in']);
       }
 
+    }
+    public function processUserLogout(){
+        session_start();
+        session_unset();
+        session_destroy();
+
+        echo json_encode("works");exit;
     }
 
 }

@@ -130,11 +130,10 @@ class Menu {
     }
 
   processUserLogout() {
-    alert("hahah");
     // Prepare the URL and data to check session login status
     const url = "../../controller/users/session-user.php";
     const data = {
-      action: "logout" // Action to check if the session is active (login)
+      action: "processUserLogout" // Action to check if the session is active (login)
     };
     // Make a fetch request to the given URL with the specified data
     fetch(url, {
