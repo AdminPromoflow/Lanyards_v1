@@ -158,7 +158,9 @@ class Menu {
         throw new Error("Network error.");
       })
       .then(data => {
-        alert(data);
+        location.reload();
+
+        //alert(data);
         // Parse the response data as JSON
       //  data = JSON.parse(data);
 
