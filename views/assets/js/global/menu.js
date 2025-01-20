@@ -32,15 +32,7 @@ class Menu {
             }
         });
 
-    showLogout.addEventListener("click",function(){
-      ;
-      if (container_logout.style.display == "none") {
-        container_logout.style.display = "block";
-      }
-      else {
-        container_logout.style.display = "none";
-      }
-    });
+
 
     // Loop through all 'openLogin' buttons and add a click event listener to each
     for (let i = 0; i < openLogin.length; i++) {
@@ -53,13 +45,30 @@ class Menu {
     }
 
     document.addEventListener("DOMContentLoaded", () => {
+      // Lógica para el primer evento
+      const showLogout = document.getElementById("showLogout");
+      const container_logout = document.getElementById("container_logout");
+
+      if (showLogout && container_logout) {
+        showLogout.addEventListener("click", function () {
+          container_logout.style.display =
+            container_logout.style.display === "none" || container_logout.style.display === ""
+              ? "block"
+              : "none";
+        });
+      }
+
+      // Lógica para el segundo evento
       const openLogout = document.getElementById("openLogout");
       if (openLogout) {
         openLogout.addEventListener("click", function () {
           menuClass.processUserLogout();
         });
       }
+
+      // Agregar más lógica según sea necesario
     });
+
 
 
 
