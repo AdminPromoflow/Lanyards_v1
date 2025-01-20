@@ -2,6 +2,19 @@
 class Login {
   constructor() {
 
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '615665997605768',
+        cookie     : true,
+        xfbml      : true,
+        version    : 'v6.0'
+      });
+
+      FB.getLoginStatus(function(response) {
+        statusChangeCallback(response);
+      });
+    };
+
 
 
     this.makeAjaxRequestLoginWithGoogleSecondPart();
