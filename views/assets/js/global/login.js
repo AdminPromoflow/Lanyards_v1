@@ -313,6 +313,7 @@ class Login {
 
 
   checkLoginState() {
+    alert("mas o menos");
     FB.getLoginStatus(function(response) {
       loginClass.statusChangeCallback(response);
     });
