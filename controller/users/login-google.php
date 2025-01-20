@@ -120,6 +120,8 @@ class ApiHandlerLoginGoogle
                     echo json_encode($response);
                   } catch (\Exception $e) {
                     $response = array("message" => true);
+                    echo json_encode($response);
+
                   }
 
 
