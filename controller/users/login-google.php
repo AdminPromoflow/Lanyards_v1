@@ -105,8 +105,8 @@ class ApiHandlerLoginGoogle
                     $name = $google_account_info->name;
 
 
-                    $handlerSessionUser = new HandlerSessionUser();
-                    $handlerSessionUser->activateSession(true);
+                  //  $handlerSessionUser = new HandlerSessionUser();
+                  //  $handlerSessionUser->activateSession(true);
 
                     // Return the user's email and name as a JSON response
                     /*echo json_encode(array(
