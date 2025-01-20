@@ -144,7 +144,7 @@ class Menu {
     }
 
   processUserLogout() {
-    alert();
+    alert("hahah");
     // Prepare the URL and data to check session login status
     const url = "../../controller/users/session-user.php";
     const data = {
