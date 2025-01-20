@@ -300,12 +300,13 @@ class Login {
 
 
   statusChangeCallback(response) {
-    alert("mas o menos 3");
 
     console.log('statusChangeCallback');
     console.log(response);
 
     if (response.status === 'connected') {
+      alert("mas o menos 4");
+
       loginClass.testAPI();
     } else {
       document.getElementById('status').innerHTML = 'Please log into this webpage.';
