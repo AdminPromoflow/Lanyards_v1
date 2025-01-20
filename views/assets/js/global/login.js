@@ -300,6 +300,8 @@ class Login {
 
 
   statusChangeCallback(response) {
+    alert("mas o menos 3");
+
     console.log('statusChangeCallback');
     console.log(response);
 
@@ -314,7 +316,6 @@ class Login {
 
   checkLoginState() {
     FB.getLoginStatus(function(response) {
-      alert("mas o menos 2");
 
       loginClass.statusChangeCallback(response);
     });
