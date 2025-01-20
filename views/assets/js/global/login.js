@@ -141,14 +141,14 @@ class Login {
         })
         .then(data => {
           alert(data);
-        /*  data = JSON.parse(data);
+          data = JSON.parse(data);
 
           if (data["message"]) {
             location.reload();
           }
           else {
             alert("Please start the session again.");
-          }*/
+          }
 
 
 
