@@ -287,6 +287,39 @@ class Login {
     }, time);
   }
 
+
+  checkLoginState() {
+    alert("aux");
+    FB.getLoginStatus(function(response) {
+      //statusChangeCallback(response);
+    });
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 // Get DOM elements
