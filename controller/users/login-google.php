@@ -94,6 +94,7 @@ class ApiHandlerLoginGoogle
                   }
                 // Check if the 'code' parameter exists in the query string
                 if (isset($queryParams['code'])) {
+                  try {
                     // Fetch the access token using the authorization code
                     $token = $client->fetchAccessTokenWithAuthCode($queryParams['code']);
                     $client->setAccessToken($token['access_token']);
@@ -117,6 +118,12 @@ class ApiHandlerLoginGoogle
                     $response = array("message" => true);
 
                     echo json_encode($response);
+                  } catch (\Exception $e) {
+                    $response = array("message" => "The client has already been logged in.");
+
+                  }
+
+
                 }
             }
         }
