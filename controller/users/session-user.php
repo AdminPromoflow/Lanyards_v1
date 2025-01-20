@@ -4,10 +4,11 @@
 class HandlerSessionUser {
     // Function to handle incoming requests
     public function handleRequest() {
-      echo json_encode("string 6");exit;
 
         // Check if a POST request was received
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
+          echo json_encode("string 6");exit;
+
 
             // Get the raw JSON data from the request body
             $rawData = file_get_contents("php://input");
