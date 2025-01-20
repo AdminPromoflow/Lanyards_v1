@@ -90,7 +90,8 @@ class ApiHandlerLoginGoogle
                 parse_str($urlComponents['query'], $queryParams);
 
                   if (!isset($queryParams['code'])) {
-                    exit;
+                    $response = array("message" => false,
+                                      "google-login" => true);
                   }
                 // Check if the 'code' parameter exists in the query string
                 if (isset($queryParams['code'])) {
@@ -115,11 +116,13 @@ class ApiHandlerLoginGoogle
                         "name" => $name
                     ));*/
 
-                    $response = array("message" => true);
+                    $response = array("message" => true,
+                                      "google-login" => true);
 
                     echo json_encode($response);
                   } catch (\Exception $e) {
-                    $response = array("message" => true);
+                    $response = array("message" => true,
+                                      "google-login" => false);
                     echo json_encode($response);
 
                   }

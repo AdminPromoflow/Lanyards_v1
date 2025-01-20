@@ -141,15 +141,18 @@ class Login {
           throw new Error("Network error.");
         })
         .then(data => {
-          alert(data);
+          //alert(data);
           data = JSON.parse(data);
 
-          if (data["message"]) {
+          if (data["message"] && data["google-login"]) {
             location.reload();
           }
-          else {
-            alert("Please start the session again.");
-            location.reload();
+          else if (data["message"] && !data["google-login"]) {
+            //alert("Please start the session again.");
+          //  location.reload();
+          }
+          else if (!data["message"]) {
+
           }
 
 
