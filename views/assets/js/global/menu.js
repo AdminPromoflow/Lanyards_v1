@@ -53,13 +53,9 @@ class Menu {
     }
       openLogout.addEventListener("click", function(){
         alert("buenas");
-        // Prepare the URL and data to check session login status
-        const url = "../../controller/users/session-login.php";
-        const data = {
-          action: "logout" // Action to check if the session is active (login)
-        };
+
         // Make an AJAX request to check if the user is authenticated
-      //  this.makeAjaxRequestUserLogout(url, data);
+        menuClass.processUserLogout();
 
       })
 
@@ -74,8 +70,6 @@ class Menu {
         // menuClass.makeAjaxRequestCheckSessionLogout(url, data);
       });
     }
-
-
 
     // Add event listeners to handle the mobile menu open/close buttons
     openMenuMobileButton.addEventListener("click", this.openMenuMobile.bind(this));
@@ -119,7 +113,7 @@ class Menu {
       });
   }
 
- loginOrLogout(){
+  loginOrLogout(){
     var activeSession = this.getActiveSession(); // Asume que esta función devuelve true o false
 
     if (activeSession) {
@@ -140,57 +134,22 @@ class Menu {
         });
     }
   }
- // Getter
-     getActiveSession() {
+
+  getActiveSession() {
         return this.activeSession;
     }
 
-    // Setter
-     setActiveSession(activeSession) {
+  setActiveSession(activeSession) {
         this.activeSession = activeSession;
     }
-  // Function to make an AJAX request to fetch data only if the user is authenticated
-  makeAjaxRequestUserAuthenticated(url, data) {
-    // Make a fetch request to the given URL with the specified data
-    fetch(url, {
-      method: "POST", // Set the request method to POST
-      headers: {
-        "Content-Type": "application/json" // Set the request content type to JSON
-      },
-      body: JSON.stringify(data) // Send the data as a JSON string
-    })
-      .then(response => {
-        // Check if the response is okay (HTTP status 200-299), if so, return the response text
-        if (response.ok) {
-          return response.text();
-        }
 
-        // If the response status is 401 (Unauthorized), the user is not logged in
-        if (response.status === 401) {
-          throw new Error("User not authenticated.");
-        }
-
-        // If the response is not okay, throw a general network error
-        throw new Error("Network error.");
-      })
-      .then(data => {
-        // Parse the response data as JSON
-        data = JSON.parse(data);
-
-        // Show or hide menu items based on login status
-        //this.showItemsLoginMenu(data["message"]);
-      })
-      .catch(error => {
-        // Handle errors: If the user is not authenticated or another error occurs
-        if (error.message === "User not authenticated.") {
-          alert("Please log in to access this data."); // Inform the user to log in
-        } else {
-          console.error("Error:", error); // Log any other errors
-        }
-      });
-  }
-
-  makeAjaxRequestUserLogout(url, data) {
+  processUserLogout() {
+    alert();
+    // Prepare the URL and data to check session login status
+    const url = "../../controller/users/session-user.php";
+    const data = {
+      action: "logout" // Action to check if the session is active (login)
+    };
     // Make a fetch request to the given URL with the specified data
     fetch(url, {
       method: "POST", // Set the request method to POST
@@ -216,7 +175,7 @@ class Menu {
       .then(data => {
         alert(data);
         // Parse the response data as JSON
-        data = JSON.parse(data);
+      //  data = JSON.parse(data);
 
 
 
