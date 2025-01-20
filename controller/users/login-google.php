@@ -120,7 +120,6 @@ class ApiHandlerLoginGoogle
                     echo json_encode($response);
                   } catch (\Exception $e) {
                     $response = array("message" => "The client has already been logged in.");
-
                   }
 
 

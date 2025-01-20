@@ -12,7 +12,7 @@ class Menu {
     });
     dadCustomizeLanyard.addEventListener('scroll', function() {
       var seventyVH = window.innerHeight * 0.7;
- 
+
       container_logout.style.display = 'none';
       var scrollTop = dadCustomizeLanyard.scrollTop;
       if (scrollTop > seventyVH) {
@@ -52,13 +52,14 @@ class Menu {
       });
     }
       openLogout.addEventListener("click", function(){
+        alert("buenas");
         // Prepare the URL and data to check session login status
         const url = "../../controller/users/session-login.php";
         const data = {
           action: "logout" // Action to check if the session is active (login)
         };
         // Make an AJAX request to check if the user is authenticated
-        this.makeAjaxRequestUserLogout(url, data);
+      //  this.makeAjaxRequestUserLogout(url, data);
 
       })
 
