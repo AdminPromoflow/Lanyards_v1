@@ -7,7 +7,6 @@ class HandlerSessionUser {
 
         // Check if a POST request was received
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-          echo json_encode("string 6");exit;
 
 
             // Get the raw JSON data from the request body
@@ -44,9 +43,11 @@ class HandlerSessionUser {
                 echo json_encode(array("message" => "Incomplete JSON data or missing action"));
             }
         } else {
+          echo json_encode("string 7");exit;
+
             // The request is not a valid POST request
-            http_response_code(405); // Method Not Allowed
-            echo json_encode(array("message" => "Method not allowed"));
+          /*  http_response_code(405); // Method Not Allowed
+            echo json_encode(array("message" => "Method not allowed"));*/
         }
     }
 
@@ -64,7 +65,7 @@ class HandlerSessionUser {
               echo json_encode($response);
           }
     }
-  /*  public function activateSession($action){
+    public function activateSession($action){
       session_start();
 
       if ($action) {
@@ -74,7 +75,7 @@ class HandlerSessionUser {
         unset($_SESSION['logged_in']);
       }
 
-    }*/
+    }
 
 }
 //echo json_encode("string3");exit;
