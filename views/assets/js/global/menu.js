@@ -52,24 +52,10 @@ class Menu {
       });
     }
       openLogout.addEventListener("click", function(){
-        alert("buenas");
-
-        // Make an AJAX request to check if the user is authenticated
         menuClass.processUserLogout();
-
       })
 
-    // Loop through all 'logout' buttons and add a click event listener to each
-    for (let i = 0; i < logoutButtons.length; i++) {
-      logoutButtons[i].addEventListener("click", function() {
-        const url = "../../controller/users/session-logout.php"; // URL for logout request
-        const data = {
-          action: "checkSessionLogout" // Data to send with the request
-        };
-        // Trigger an AJAX request to check session and handle logout (uncomment the line to activate)
-        // menuClass.makeAjaxRequestCheckSessionLogout(url, data);
-      });
-    }
+
 
     // Add event listeners to handle the mobile menu open/close buttons
     openMenuMobileButton.addEventListener("click", this.openMenuMobile.bind(this));
@@ -217,84 +203,7 @@ class Menu {
     }
   }
 
-  // Function to make an AJAX request to check the session login status
-  makeAjaxRequestCheckSessionLogin(url, data) {
-    fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(data)
-    })
-      .then(response => {
-        if (response.ok) {
-          return response.text();
-        }
-        throw new Error("Network error.");
-      })
-      .then(data => {
-        data = JSON.parse(data);
-        // Show or hide menu items based on login status
-        //this.showItemsLoginMenu(data["message"]);
-      })
-      .catch(error => {
-        console.error("Error:", error); // Log any errors
-      });
-  }
 
-  // Function to make an AJAX request to check the session logout status
-  makeAjaxRequestCheckSessionLogout(url, data) {
-    fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(data)
-    })
-      .then(response => {
-        if (response.ok) {
-          return response.text();
-        }
-        throw new Error("Network error.");
-      })
-      .then(data => {
-        data = JSON.parse(data);
-
-        // If logout is successful, hide login items and show logout items
-        if (data["message"]) {
-          //this.showItemsLoginMenu(!data["message"]);
-          alert("Come back soon!"); // Show a message after logout
-        } else {
-          alert("Network error. Trying again"); // Show an error if the logout fails
-        }
-      })
-      .catch(error => {
-        console.error("Error:", error); // Log any errors
-      });
-  }
-
-  // Function to show or hide menu items based on login status
-  showItemsLoginMenu(action) {
-    if (action) {
-      // Hide elements with the class 'showItemsMenuLoginFalse' when the user is logged in
-      for (var i = 0; i < showItemsMenuLoginFalse.length; i++) {
-        showItemsMenuLoginFalse[i].style.display = "none";
-      }
-      // Show elements with the class 'showItemsMenuLoginTrue' when the user is logged in
-      for (var i = 0; i < showItemsMenuLoginTrue.length; i++) {
-        showItemsMenuLoginTrue[i].style.display = "block";
-      }
-    } else {
-      // Show elements with the class 'showItemsMenuLoginFalse' when the user is logged out
-      for (var i = 0; i < showItemsMenuLoginFalse.length; i++) {
-        showItemsMenuLoginFalse[i].style.display = "block";
-      }
-      // Hide elements with the class 'showItemsMenuLoginTrue' when the user is logged out
-      for (var i = 0; i < showItemsMenuLoginTrue.length; i++) {
-        showItemsMenuLoginTrue[i].style.display = "none";
-      }
-    }
-  }
 }
 
 // DOM elements related to login, logout, and menu functionality
@@ -309,11 +218,6 @@ const menuMobile = document.getElementById("menuMobile"); // Mobile menu element
 const showLogout = document.getElementById("showLogout");
 const dadCustomizeLanyard = document.getElementById("dad-customize-lanyard");
 const menu = document.getElementById("menu");
-
-
-// Elements for showing or hiding based on login status
-const showItemsMenuLoginFalse = document.querySelectorAll(".showItemsMenuLoginFalse"); // Items shown when logged out
-const showItemsMenuLoginTrue = document.querySelectorAll(".showItemsMenuLoginTrue"); // Items shown when logged in
 
 // Create an instance of the 'Menu' class to initialize the menu
 const menuClass = new Menu();
