@@ -11,7 +11,7 @@ class Login {
       });
 
       FB.getLoginStatus(function(response) {
-        statusChangeCallback(response);
+        loginClass.statusChangeCallback(response);
       });
     };
 
@@ -279,8 +279,6 @@ class Login {
       closeLoginSide = "left";
     }
     login.style.transform = "translateY(-50%)";
-
-
   }
 
   showLogin(time) {
@@ -301,12 +299,45 @@ class Login {
   }
 
 
+  statusChangeCallback(response) {
+    console.log('statusChangeCallback');
+    console.log(response);
+
+    if (response.status === 'connected') {
+      loginClass.testAPI();
+    } else {
+      document.getElementById('status').innerHTML = 'Please log into this webpage.';
+    }
+  }
+
+
+
   checkLoginState() {
-    alert("aux");
     FB.getLoginStatus(function(response) {
-      statusChangeCallback(response);
+      loginClass.statusChangeCallback(response);
     });
   }
+
+
+  testAPI() {
+    console.log('Welcome! Fetching your information.... ');
+    FB.api('/me', function(response) {
+      console.log('Successful login for: ' + response.name);
+      document.getElementById('status').innerHTML =
+        'Thanks for logging in, ' + response.name + '!';
+    });
+  }
+  logout() {
+    FB.logout(function(response) {
+      // Maneja la respuesta del logout
+      console.log('User logged out.');
+      document.getElementById('status').innerHTML = 'You have logged out.';
+    });
+  }
+
+
+
+
 
 
 
