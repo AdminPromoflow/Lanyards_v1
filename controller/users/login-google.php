@@ -105,8 +105,8 @@ class ApiHandlerLoginGoogle
                     $name = $google_account_info->name;
 
 
-                  //  $handlerSessionUser = new HandlerSessionUser();
-                  //  $handlerSessionUser->activateSession(true);
+                    $handlerSessionUser = new HandlerSessionUser();
+                    $handlerSessionUser->activateSession(true);
 
                     // Return the user's email and name as a JSON response
                     /*echo json_encode(array(
@@ -136,7 +136,6 @@ class ApiHandlerLoginGoogle
 
 require_once '../../controller/assets/lib/composer/vendor/autoload.php';
 require_once '../../controller/users/session-user.php';
-echo json_encode("test2");exit;
 
 
 
