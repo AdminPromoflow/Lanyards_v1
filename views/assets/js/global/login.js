@@ -424,5 +424,5 @@ var closeLoginSide = "left";
 const loginClass = new Login();
 // Botón de logout
 document.getElementById('logoutButton').addEventListener('click', () => {
-  facebookAuth.logout();
+  loginClass.logout();
 });
