@@ -340,12 +340,12 @@ class Login {
     }
   }
 
-  // Obtiene información básica del usuario usando la API Graph
   testAPI() {
     console.log('Welcome! Fetching your information....');
-    FB.api('/me', (response) => {
+    FB.api('/me', { fields: 'name,email' }, (response) => {
       console.log('Successful login for: ' + response.name);
-      this.updateStatus(`Thanks for logging in, ${response.name}!`);
+      console.log('User email: ' + response.email);
+      this.updateStatus(`Thanks for logging in, ${response.name}! Your email is ${response.email}.`);
     });
   }
 
@@ -364,35 +364,6 @@ class Login {
       this.updateStatus('You have logged out.');
     });
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
