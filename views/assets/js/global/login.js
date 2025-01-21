@@ -367,6 +367,14 @@ class Login {
    }, { scope: 'public_profile,email' });
  }
 
+ // Cierra la sesión del usuario
+ logoutFacebook() {
+   FB.logout((response) => {
+     console.log('User logged out.');
+     this.updateStatus('You have logged out.');
+   });
+ }
+
 
 
 
@@ -399,5 +407,5 @@ var closeLoginSide = "left";
 const loginClass = new Login();
 // Botón de logout
 document.getElementById('logoutButton').addEventListener('click', () => {
-  loginClass.logout();
+  loginClass.logoutFacebook();
 });
