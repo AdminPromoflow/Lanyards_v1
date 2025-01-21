@@ -19,10 +19,6 @@
           <img src="../../views/assets/img/global/login/google-icon.png" alt="">
         </div>
 
-
-
-      <div id="status">
-      </div>
       <button id="logoutButton">Logout</button>
 
 

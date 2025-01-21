@@ -335,7 +335,7 @@ class Login {
     if (response.status === 'connected') {
       this.testAPI();
     } else {
-      this.updateStatus('Please log into this webpage.');
+      alert('Please log into this webpage.');
     }
   }
 
@@ -344,18 +344,9 @@ class Login {
     FB.api('/me', { fields: 'name,email' }, (response) => {
       console.log('Successful login for: ' + response.name);
       console.log('User email: ' + response.email);
-      this.updateStatus(`Thanks for logging in, ${response.name}! Your email is ${response.email}.`);
+      alert(`Thanks for logging in, ${response.name}! Your email is ${response.email}.`);
     });
   }
-
-  updateStatus(message) {
-    const statusElement = document.getElementById('status');
-    if (statusElement) {
-      statusElement.innerHTML = message;
-    }
-  }
-
-
 
   customLogin() {
    FB.login((response) => {
