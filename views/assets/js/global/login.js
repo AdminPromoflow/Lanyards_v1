@@ -397,6 +397,6 @@ var closeLoginSide = "left";
 // Create an instance of the Login class
 const loginClass = new Login();
 // Botón de logout
-document.getElementById('logoutButton').addEventListener('click', () => {
+/*document.getElementById('logoutButton').addEventListener('click', () => {
   loginClass.logoutFacebook();
-});
+});*/

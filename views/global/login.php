@@ -19,7 +19,7 @@
           <img src="../../views/assets/img/global/login/google-icon.png" alt="">
         </div>
 
-      <button id="logoutButton">Logout</button>
+    <!--  <button id="logoutButton">Logout</button> -->
 
 
       <!-- Load the JS SDK asynchronously -->
