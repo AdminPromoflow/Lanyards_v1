@@ -20,8 +20,6 @@
         </div>
 
 
-      <fb:login-button scope="public_profile,email" onlogin="loginClass.checkLoginState();">
-      </fb:login-button>
 
       <div id="status">
       </div>
