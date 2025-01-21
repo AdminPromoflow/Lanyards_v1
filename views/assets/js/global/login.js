@@ -2,18 +2,8 @@
 class Login {
   constructor() {
 
-    window.fbAsyncInit = function() {
-      FB.init({
-        appId      : '615665997605768',
-        cookie     : true,
-        xfbml      : true,
-        version    : 'v6.0'
-      });
-
-      FB.getLoginStatus(function(response) {
-        loginClass.statusChangeCallback(response);
-      });
-    };
+    this.appId = '615665997605768';
+    this.initFacebookSDK();
 
 
 
@@ -299,45 +289,83 @@ class Login {
   }
 
 
-  statusChangeCallback(response) {
 
-    console.log('statusChangeCallback');
-    console.log(response);
+
+
+
+
+
+
+
+  // Inicializa el SDK de Facebook
+   initFacebookSDK() {
+     window.fbAsyncInit = () => {
+       FB.init({
+         appId: this.appId,
+         cookie: true,
+         xfbml: true,
+         version: 'v6.0',
+       });
+
+       // Comprueba el estado de inicio de sesión al cargar
+       this.checkLoginState();
+     };
+
+     // Carga el SDK de Facebook
+    this.loadFacebookSDK();
+  }
+
+  // Carga el SDK de Facebook dinámicamente
+  loadFacebookSDK() {
+    const script = document.createElement('script');
+    script.src = 'https://connect.facebook.net/en_US/sdk.js';
+    script.async = true;
+    script.defer = true;
+    document.body.appendChild(script);
+  }
+
+  // Comprueba el estado de inicio de sesión
+  checkLoginState() {
+    FB.getLoginStatus((response) => this.statusChangeCallback(response));
+  }
+
+  // Maneja cambios en el estado de inicio de sesión
+  statusChangeCallback(response) {
+    console.log('statusChangeCallback', response);
 
     if (response.status === 'connected') {
-      alert("mas o menos 4");
-
-      loginClass.testAPI();
+      this.testAPI();
     } else {
-      document.getElementById('status').innerHTML = 'Please log into this webpage.';
+      this.updateStatus('Please log into this webpage.');
     }
   }
 
-
-
-  checkLoginState() {
-    FB.getLoginStatus(function(response) {
-
-      loginClass.statusChangeCallback(response);
-    });
-  }
-
-
+  // Obtiene información básica del usuario usando la API Graph
   testAPI() {
-    console.log('Welcome! Fetching your information.... ');
-    FB.api('/me', function(response) {
+    console.log('Welcome! Fetching your information....');
+    FB.api('/me', (response) => {
       console.log('Successful login for: ' + response.name);
-      document.getElementById('status').innerHTML =
-        'Thanks for logging in, ' + response.name + '!';
+      this.updateStatus(`Thanks for logging in, ${response.name}!`);
     });
   }
+
+  // Actualiza el mensaje de estado en la página
+  updateStatus(message) {
+    const statusElement = document.getElementById('status');
+    if (statusElement) {
+      statusElement.innerHTML = message;
+    }
+  }
+
+  // Cierra la sesión del usuario
   logout() {
-    FB.logout(function(response) {
-      // Maneja la respuesta del logout
+    FB.logout((response) => {
       console.log('User logged out.');
-      document.getElementById('status').innerHTML = 'You have logged out.';
+      this.updateStatus('You have logged out.');
     });
   }
+
+
 
 
 
@@ -394,3 +422,7 @@ var closeLoginSide = "left";
 
 // Create an instance of the Login class
 const loginClass = new Login();
+// Botón de logout
+document.getElementById('logoutButton').addEventListener('click', () => {
+  facebookAuth.logout();
+});
