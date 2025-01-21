@@ -33,9 +33,6 @@
         <div id="loginWithFacebook1" class="footerLoginOptions">
           <img src="../../views/assets/img/global/login/facebook-icon.png" alt="">
         </div>
-        <div id="loginWithApple1" class="footerLoginOptions">
-          <img src="../../views/assets/img/global/login/apple-icon.png" alt="">
-        </div>
       </div>
       <h4 id="openRegisterFromLogin">No account yet? Register here.</h4>
     </div>

@@ -7,6 +7,12 @@ class Login {
 
 
 
+
+    loginWithFacebook1.addEventListener("click", function(){
+      loginClass.customLogin();
+
+    });
+
     this.makeAjaxRequestLoginWithGoogleSecondPart();
 
 
@@ -37,8 +43,7 @@ class Login {
     loginWithFacebook1.addEventListener("click", function(){
     })
 
-    loginWithApple1.addEventListener("click", function(){
-    })
+
 
 
     // Event listener to open the login form from the register screen
@@ -297,25 +302,21 @@ class Login {
 
 
 
-  // Inicializa el SDK de Facebook
-   initFacebookSDK() {
-     window.fbAsyncInit = () => {
-       FB.init({
-         appId: this.appId,
-         cookie: true,
-         xfbml: true,
-         version: 'v6.0',
-       });
+  initFacebookSDK() {
+    window.fbAsyncInit = () => {
+      FB.init({
+        appId: this.appId,
+        cookie: true,
+        xfbml: true,
+        version: 'v6.0',
+      });
 
-       // Comprueba el estado de inicio de sesión al cargar
-       this.checkLoginState();
-     };
+      this.checkLoginState();
+    };
 
-     // Carga el SDK de Facebook
     this.loadFacebookSDK();
   }
 
-  // Carga el SDK de Facebook dinámicamente
   loadFacebookSDK() {
     const script = document.createElement('script');
     script.src = 'https://connect.facebook.net/en_US/sdk.js';
@@ -324,12 +325,10 @@ class Login {
     document.body.appendChild(script);
   }
 
-  // Comprueba el estado de inicio de sesión
   checkLoginState() {
     FB.getLoginStatus((response) => this.statusChangeCallback(response));
   }
 
-  // Maneja cambios en el estado de inicio de sesión
   statusChangeCallback(response) {
     console.log('statusChangeCallback', response);
 
@@ -349,7 +348,6 @@ class Login {
     });
   }
 
-  // Actualiza el mensaje de estado en la página
   updateStatus(message) {
     const statusElement = document.getElementById('status');
     if (statusElement) {
@@ -357,13 +355,20 @@ class Login {
     }
   }
 
-  // Cierra la sesión del usuario
-  logout() {
-    FB.logout((response) => {
-      console.log('User logged out.');
-      this.updateStatus('You have logged out.');
-    });
-  }
+
+
+  customLogin() {
+   FB.login((response) => {
+     if (response.authResponse) {
+       this.statusChangeCallback(response);
+     } else {
+       console.log('User cancelled login or did not fully authorize.');
+     }
+   }, { scope: 'public_profile,email' });
+ }
+
+
+
 
 
 
@@ -372,7 +377,6 @@ class Login {
 // Get DOM elements
 const loginWithGoogle1 = document.getElementById("loginWithGoogle1");
 const loginWithFacebook1 = document.getElementById("loginWithFacebook1");
-const loginWithApple1 = document.getElementById("loginWithApple1");
 
 const openLoginFromRegister = document.getElementById("openLoginFromRegister");
 const login = document.getElementById("login");
