@@ -24,13 +24,13 @@ class Slider {
     }
 
     arrow_slider.addEventListener("click", function () {
-      const section_most_popular = document.getElementById('arrow_slider');
+      const arrow_slider = document.getElementById('arrow_slider');
       const dad_customizelanyard = document.getElementById('dad-customize-lanyard');
 
 
 
 
-    const targetPosition = section_most_popular.offsetTop - dad_customizelanyard.offsetTop;
+    const targetPosition = arrow_slider.offsetTop - dad_customizelanyard.offsetTop;
 
    dad_customizelanyard.scrollTo({
        top: targetPosition,
