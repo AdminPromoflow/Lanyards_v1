@@ -15,13 +15,30 @@ class Slider {
     // Initialize the slider position and button colors
     sliderLong.style.left = "0%";
     buttonSlider[0].style.background = "#7B3378";
- 
+
     // Add click event listeners to the slider buttons
     for (let i = 0; i < buttonSlider.length; i++) {
       buttonSlider[i].addEventListener("click", function () {
         sliderClass.nextSlide(i);
       });
     }
+
+    arrow_slider.addEventListener("click", function () {
+      const section_most_popular = document.getElementById('section_most_popular');
+      const dad_customizelanyard = document.getElementById('dad-customize-lanyard');
+
+
+
+
+    const targetPosition = section_most_popular.offsetTop - dad_customizelanyard.offsetTop;
+
+   dad_customizelanyard.scrollTo({
+       top: targetPosition,
+       behavior: 'smooth',
+   });
+    });
+
+
   }
 
   getIsHovering() {
@@ -74,6 +91,7 @@ class Slider {
 // Initialize variables and DOM elements
 var currentSlide = 0;
 var sliderLong = document.getElementById("sliderLong");
+var arrow_slider = document.getElementById("arrow_slider");
 const buttonSlider = document.querySelectorAll('.buttonSlider');
 
 // Create an instance of the Slider class

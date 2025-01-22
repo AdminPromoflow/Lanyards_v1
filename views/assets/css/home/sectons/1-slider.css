@@ -131,7 +131,7 @@
 }
 .arrow_slider{
   position: relative;
-
+  margin-top: 15px;
   cursor: pointer;
   left: 50%;
   transform: translateX(-50%);

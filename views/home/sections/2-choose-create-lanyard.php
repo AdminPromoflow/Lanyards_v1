@@ -1,4 +1,4 @@
-<section class="chooseCreateLanyard">
+<section id="section_most_popular" class="chooseCreateLanyard">
     <h1>Information About Our Customisation Options</h1>
 
     <p>The information below corresponds to the lanyard customisation options.

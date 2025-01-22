@@ -57,6 +57,6 @@
 
 
 </section>
-<div class="arrow_slider">
+<div id="arrow_slider" class="arrow_slider">
   <img src="../../views/assets/img/home/1-slider/arrow_top.png" alt="">
 </div>
