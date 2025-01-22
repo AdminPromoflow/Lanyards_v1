@@ -60,16 +60,9 @@ class Login {
       // Call validation functions and display error or success messages
       if (loginClass.validateEmail() && loginClass.validatePassword()) {
 
-        // Define the URL and the JSON data you want to send
-        const url = "../../controller/users/login.php"; // Replace with your API endpoint URL
-        const data = {
-          action: "login",
-          emailLogin: emailLogin.value,
-          passwordLogin: passwordLogin.value
-        };
 
         // Make the AJAX request
-        loginClass.makeAjaxRequestLogin(url, data);
+        loginClass.makeAjaxRequestLogin();
       }
     });
   }
@@ -171,11 +164,16 @@ class Login {
         });
   }
   // Function to make the AJAX request
-  makeAjaxRequestLogin(url, data) {
-    // Make the request using the Fetch API
-    customizeLanyard.handleNextClick();
+  makeAjaxRequestLogin() {
+    // Define the URL and the JSON data you want to send
+    const url = "../../controller/users/login.php"; // Replace with your API endpoint URL
+    const data = {
+      action: "login",
+      emailLogin: emailLogin.value,
+      passwordLogin: passwordLogin.value
+    };
 
-  /*  fetch(url, {
+   fetch(url, {
       method: "POST", // HTTP POST method to send data
       headers: {
         "Content-Type": "application/json" // Indicate that you're sending JSON
@@ -194,7 +192,7 @@ class Login {
 
         if (data["message"]) {
 
-          alert("Login successful");
+        /*  alert("Login successful");
           // Call the closeLogin method of the Login class
           loginClass.closeLogin();
           // Call the closeRegister method of the Register class
@@ -204,7 +202,7 @@ class Login {
           // Hide the register form with a sliding animation
           registerClass.hideRegister(700);
 
-          menuClass.showItemsLoginMenu(true);
+          menuClass.showItemsLoginMenu(true);*/
 
         }
         else {
@@ -216,7 +214,7 @@ class Login {
       })
       .catch(error => {
         console.error("Error:", error);
-      });*/
+      });
   }
 
 
