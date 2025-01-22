@@ -335,14 +335,14 @@ class Login {
     if (response.status === 'connected') {
       this.testAPI();
     } else {
-      alert('Please log into this webpage.');
+    //  alert('Please log into this webpage.');
     }
   }
 
   testAPI() {
     console.log('Welcome! Fetching your information....');
     FB.api('/me', { fields: 'name,email' }, (response) => {
-      
+
     //  alert(`Thanks for logging in, ${response.name}! Your email is ${response.email}.`);
     });
   }

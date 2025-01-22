@@ -59,6 +59,8 @@
   left: 0px;
   width: 100%;
   height: 10%;
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,56,3,.6) 100%);
 
   display: flex;
   justify-content: center;
@@ -126,6 +128,16 @@
 .width300{
   font-weight: 300;
   text-shadow: 2px 2px 0px black;
+}
+.arrow_slider{
+  position: relative;
+
+  cursor: pointer;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 50px;
+  width: 50px;
+  z-index: 800;
 }
 @media only screen and (max-width: 800px)  and (orientation: portrait) {
   .slider{

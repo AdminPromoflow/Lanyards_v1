@@ -15,7 +15,7 @@ class Slider {
     // Initialize the slider position and button colors
     sliderLong.style.left = "0%";
     buttonSlider[0].style.background = "#7B3378";
-
+ 
     // Add click event listeners to the slider buttons
     for (let i = 0; i < buttonSlider.length; i++) {
       buttonSlider[i].addEventListener("click", function () {

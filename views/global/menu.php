@@ -13,6 +13,8 @@
   <div class="containerItems">
     <a href="../../views/home/index.php">  <h3 class="transparentLeftLine">Home </h3> </a>
     <a href="../../views/about_us/index.php"><h3>About us</h3></a>
+    <a href="../../views/about_us/index.php"><h3>Lanyards</h3></a>
+
       <a href="../../views/contact_us/index.php"><h3>Contact us</h3></a>
 
      <!-- Contact Us menu item -->
