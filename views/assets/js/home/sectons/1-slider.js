@@ -24,7 +24,7 @@ class Slider {
     }
 
     arrow_slider.addEventListener("click", function () {
-      const section_most_popular = document.getElementById('section_most_popular');
+      const section_most_popular = document.getElementById('arrow_slider');
       const dad_customizelanyard = document.getElementById('dad-customize-lanyard');
 
 
