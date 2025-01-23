@@ -1,26 +1,30 @@
 <?php
 
-
 class HandlerSessionUser {
+
     // Function to handle incoming requests
     public function handleRequest() {
 
-        // Check if a POST request was received
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Check if the request is GET or POST
+        if ($_SERVER["REQUEST_METHOD"] == "GET" || $_SERVER["REQUEST_METHOD"] == "POST") {
 
+            // For GET request, the data comes from the query parameters
+            if ($_SERVER["REQUEST_METHOD"] == "GET") {
+                $data = $_GET; // Get data from URL query parameters
+            }
 
-            // Get the raw JSON data from the request body
-            $rawData = file_get_contents("php://input");
-            $data = json_decode($rawData);
+            // For POST request, the data comes from the request body
+            elseif ($_SERVER["REQUEST_METHOD"] == "POST") {
+                $rawData = file_get_contents("php://input");
+                $data = json_decode($rawData, true); // Decode JSON data
+            }
 
+            // Check if data contains an "action" field
+            if ($data !== null && isset($data['action'])) {
 
-            // Check if JSON data is valid and contains an "action" field
-            if ($data !== null && isset($data->action)) {
-                // Get the action from the JSON data
-                $action = $data->action;
+                $action = $data['action']; // Get the action from the data
 
-
-                // Perform actions based on the request
+                // Perform actions based on the action field
                 switch ($action) {
                     case "checkSessionLogin":
 
@@ -29,67 +33,49 @@ class HandlerSessionUser {
                     case "processUserLogout":
                         $this->processUserLogout();
                         break;
+                    default
+                    echo json_encode("string");exit;
 
-                    default:
-                        // Unknown action
-                        http_response_code(400); // Bad Request
-                        $response = array("message" => "Unknown action");
-                        echo json_encode($response);
-                        break;
+
                 }
-            } else {
-                // Incomplete JSON data or missing action
-                http_response_code(400); // Bad Request
-                echo json_encode(array("message" => "Incomplete JSON data or missing action"));
             }
         } else {
-        //  echo json_encode("Estas utilizando un metodo que no es post");
+            // Handle requests that are neither GET nor POST
+            http_response_code(405); // Method Not Allowed
+            echo json_encode(array("message" => "Method not allowed. Use GET or POST."));
+        }
 
-            // The request is not a valid POST request
-          /*  http_response_code(405); // Method Not Allowed
-            echo json_encode(array("message" => "Method not allowed"));*/
+
+    }
+
+    // Function to handle check session login
+    public function handleCheckSessionLogin() {
+
+        session_start();
+        if (isset($_SESSION['logged_in'])) {
+            $response = array("message" => true);
+            echo json_encode($response);
+        } else {
+            $response = array("message" => false);
+            echo json_encode($response);
         }
     }
 
+    // Function to handle user logout
+    public function processUserLogout() {
 
-    // Function to handle user login
-    private function handlecheckSessionLogin(){
-
-      session_start();
-          if (isset($_SESSION['logged_in'])) {
-              $response = array("message" => true);
-
-              echo json_encode($response);
-          } else {
-              $response = array("message" => false);
-              echo json_encode($response);
-          }
-    }
-    public function activateSession($action){
-      session_start();
-
-      if ($action) {
-        $_SESSION['logged_in'] = true;
-      }
-      else {
-        unset($_SESSION['logged_in']);
-      }
-
-    }
-    public function processUserLogout(){
         session_start();
         session_unset();
         session_destroy();
 
-        echo json_encode("works");exit;
+        echo json_encode(array("message" => "works"));
+
+        exit;
     }
 
 }
-//echo json_encode("string3");exit;
-// Include required files
-
-// Create an instance of the ApiHandler class and handle the request
+// Create an instance of the HandlerSessionUser class and handle the request
 $handlerSessionUser = new HandlerSessionUser();
-
 $handlerSessionUser->handleRequest();
+
 ?>

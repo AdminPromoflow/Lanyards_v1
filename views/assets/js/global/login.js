@@ -173,48 +173,37 @@ class Login {
       passwordLogin: passwordLogin.value
     };
 
-   fetch(url, {
-      method: "POST", // HTTP POST method to send data
-      headers: {
-        "Content-Type": "application/json" // Indicate that you're sending JSON
-      },
-      body: JSON.stringify(data) // Convert the JSON object to a JSON string and send it
+    fetch(url, {
+    method: "POST", // HTTP POST method to send data
+    headers: {
+      "Content-Type": "application/json" // Indicate that you're sending JSON
+    },
+    body: JSON.stringify(data) // Convert the JSON object to a JSON string and send it
+  })
+    .then(response => {
+      // Check if the response status is OK (2xx range)
+      if (response.ok) {
+        return response.json(); // Parse the response as JSON
+      }
+      // For other errors, throw a general network error
+      throw new Error("Network error.");
     })
-      .then(response => {
-        if (response.ok) {
-          return response.text(); // or response.json() if you expect a JSON response
-        }
-        throw new Error("Network error.");
-      })
-      .then(data => {
-        alert(data);
-        data = JSON.parse(data);
+    .then(data => {
+      // Process the response data
 
-        if (data["message"]) {
+      if (data.message) {
+        location.reload();
+      }
+      else{
+        alert("The email address or password you entered is incorrect.");
+      }
+    })
+    .catch(error => {
+      // Handle specific errors (from throw in the .then block)
+      console.error("Error:", error.message);
+      alert(error.message); // Show the error message in an alert
+    });
 
-        /*  alert("Login successful");
-          // Call the closeLogin method of the Login class
-          loginClass.closeLogin();
-          // Call the closeRegister method of the Register class
-          registerClass.closeRegister();
-          // Show the login form with a sliding animation
-          loginClass.showLogin(700);
-          // Hide the register form with a sliding animation
-          registerClass.hideRegister(700);
-
-          menuClass.showItemsLoginMenu(true);*/
-
-        }
-        else {
-          alert("Login unsuccessful, please check your credentials.");
-          menuClass.showItemsLoginMenu(false);
-
-        }
-
-      })
-      .catch(error => {
-        console.error("Error:", error);
-      });
   }
 
 
