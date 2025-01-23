@@ -5,6 +5,7 @@ class Login {
     this.appId = '615665997605768';
     this.initFacebookSDK();
 
+  //  login.style.display = "none";
 
 
 
@@ -49,7 +50,9 @@ class Login {
     // Event listener to open the login form from the register screen
     openLoginFromRegister.addEventListener("click", function () {
       // Show the login form with a sliding animation
+      loginClass.openLogin();
       loginClass.showLogin(0);
+
       // Hide the register form with a sliding animation
       registerClass.hideRegister(0);
     });
@@ -249,7 +252,7 @@ class Login {
     // Set the position and transformation of the "login" element
     login.style.left = "50%";
     login.style.transform = "translate(-50%, -50%)";
-    // registerClass.openRegister();
+    login.style.display = "flex";
   }
 
   closeLogin() {

@@ -21,7 +21,6 @@ class Menu {
       else {
         menu.style.display = "block";
       }
-
     });
 
     // Agrega un evento de clic al documento
@@ -43,6 +42,18 @@ class Menu {
         registerClass.openRegister();
       });
     }
+
+    for (let i = 0; i < openSignup.length; i++) {
+      openSignup[i].addEventListener("click", function() {
+
+        registerClass.openRegister();
+        registerClass.showRegister(0);
+
+      });
+    }
+
+
+
 
     document.addEventListener("DOMContentLoaded", () => {
       // Lógica para el primer evento
@@ -226,6 +237,9 @@ class Menu {
 // DOM elements related to login, logout, and menu functionality
 const logo_img = document.getElementById("logo_img");
 const openLogin = document.querySelectorAll('.openLogin'); // All login buttons
+const openSignup = document.querySelectorAll('.openSignup'); // All login buttons
+
+
 const openLogoutClass = document.querySelectorAll(".openLogout"); // Mobile menu close button
 const logoutButtons = document.querySelectorAll('.logoutButtons'); // All logout buttons
 const openMenuMobileButton = document.getElementById("openMenuMobile"); // Mobile menu open button
