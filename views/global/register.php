@@ -8,9 +8,9 @@
     </div>
     <div class="bodyRegister">
       <label for="nameRegister">Please provide your registration information:</label>
-      <input type="text"  id="nameRegister" name="" value="" placeholder="Please provide your name">
-      <input type="text" id="emailRegister" name="" value="" placeholder="Please provide your email">
-      <input type="password" id="passwordRegister" name="" value="" placeholder="and your password">
+      <input type="text"  id="nameRegister" name="" value="" placeholder="Name">
+      <input type="text" id="emailRegister" name="" value="" placeholder="Email">
+      <input type="password" id="passwordRegister" name="" value="" placeholder="Password">
       <button type="button" id="submitBtnRegister" name="button"><strong class="fontWeightButtonRegister">Register</strong></button>
     </div>
     <div class="footerRegister">

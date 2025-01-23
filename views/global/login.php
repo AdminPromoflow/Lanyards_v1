@@ -8,8 +8,9 @@
     </div>
     <div class="bodyLogin">
       <label for="emailLogin">Please enter your login details:</label>
-      <input id="emailLogin" type="text" name="" value="" placeholder="Please provide your email">
-      <input id="passwordLogin" type="password" name="" value="" placeholder="and your password">
+      <input id="emailLogin" type="text" name="" value="" placeholder="Email">
+      <input id="passwordLogin" type="password" name="" value="" placeholder="Password">
+      <h3>or login with:</h3>
       <button id="loginButton" type="button" name="button"><strong class="fontWeightButtonLogin">Login</strong></button>
     </div>
     <div class="footerLogin">

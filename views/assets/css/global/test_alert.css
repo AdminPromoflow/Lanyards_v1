@@ -7,7 +7,7 @@
   z-index: 130;
   background-color: rgba(0, 0, 0, 0.7);
 
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
