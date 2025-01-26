@@ -42,11 +42,7 @@ class PasswordForgotten {
         return response.json(); // Parse the response as JSON
       })
       .then((data) => {
-
-        data = JSON.parse(data);
-
-        alert(data);
-      //  alert(data);
+        
         // Process the successful response
         if (data.success) { // Assuming your API returns a `success` property
           alert("Password recovery email sent successfully!");

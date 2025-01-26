@@ -25,10 +25,13 @@ class ApiHandlerLogin {
                 case "verify_password_forgotten":
                     $this->verifyPasswordForgotten($data);
                     break;
-                default:
-                    http_response_code(400);
-                    echo json_encode(array("success" => false, "message" => "Unknown action"));
+            case "updatePassword":
+                $verificationResult = $this->verifyParametersPasswordEmailToken($data);
                     break;
+            default:
+                http_response_code(400);
+                echo json_encode(array("success" => false, "message" => "Unknown action"));
+                break;
             }
         } else {
             http_response_code(405);
@@ -67,7 +70,6 @@ class ApiHandlerLogin {
 
           $emailAnswer = $emailSender->sendEmailRecoveryPassword($recoveryToken);
 
-
             if ($emailAnswer) {
                 echo json_encode(array(
                     "success" => true,
@@ -82,6 +84,33 @@ class ApiHandlerLogin {
             echo json_encode(array("success" => false, "message" => "User not found"));
         }
     }
+
+    private function verifyParametersPasswordEmailToken($data) {
+
+        // Verificar si el token está presente
+        if (empty($data['token'])) {
+            echo json_encode(['success' => false, 'message' => 'Token is missing.']);
+            return;
+        }
+
+        // Verificar si el email está presente y es válido
+        if (empty($data['email']) || !filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
+            echo json_encode(['success' => false, 'message' => 'Invalid or missing email.']);
+            return;
+        }
+
+        // Verificar si la nueva contraseña está presente y es válida
+        if (empty($data['password']) || strlen($data['password']) < 6) {
+            echo json_encode(['success' => false, 'message' => 'Password must be at least 6 characters long.']);
+            return;
+        }
+
+        // Si todo está correcto, retornar éxito
+        echo json_encode(['success' => true, 'message' => 'Parameters are valid.']);
+
+    }
+
+
 }
 
 require_once '../../controller/config/database.php';

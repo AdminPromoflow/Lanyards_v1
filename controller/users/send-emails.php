@@ -157,7 +157,7 @@ class EmailSender {
         $mail->isSMTP();
 
         // Enable SMTP debugging (set to 0 in production)
-        $mail->SMTPDebug = 2;
+        $mail->SMTPDebug = 0;
 
         // Set the Hostinger SMTP server
         $mail->Host = 'smtp.hostinger.com';
@@ -221,7 +221,7 @@ class EmailSender {
                 <!-- User Info Section -->
                 <h4 style='font-family: Oswald, sans-serif; color: rgb(232,232,232); font-weight: 400; font-size: calc(0.8vw + 0.8em); position: relative; margin: 0 auto; letter-spacing: 0px;  text-align: center; margin-top: calc(0.2vw + 0.2em);'>
                   <!-- Updated link with recovery token -->
-                   <a href='https://lanyardsforyou.com/recover-password?token=$recoveryToken' style='color: rgb(0,123,255); text-decoration: none;'>Click here to recover your password.</a>
+                  <a href='https://lanyardsforyou.com/views/recovery_password/index.php?token=$recoveryToken&email=$this->recipientEmail' style='color: rgb(0,123,255); text-decoration: none;'>Recover Your Password</a>
                 </h4>
                 <br>
                 <h4 style='font-family: Oswald, sans-serif; color: rgb(185,185,185); font-weight: 200; font-size: calc(0.6vw + 0.6em); position: relative; margin: 0 auto; letter-spacing: 0px;  text-align: justify; width: 100%;'>
@@ -245,14 +245,14 @@ class EmailSender {
         $mail->Body = $recipientMessage;
 
         // Set a plain text backup if HTML content cannot be displayed
-        $mail->AltBody = 'If you cannot view the HTML, here is the plain text message.';
+        $mail->AltBody = 'The following link is for password recovery:  ' .'https://lanyardsforyou.com/recover-password?token=$recoveryToken' ;
+
         $mail->send();
+
         return true;
       } catch (\Exception $e) {
         return false;
       }
-
-
     }
 
 
