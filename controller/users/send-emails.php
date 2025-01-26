@@ -193,9 +193,9 @@ class EmailSender {
             <div class='background2' style='width: 70%; overflow-x: hidden; min-width: 300px; margin: 0 auto; position: relative; background: linear-gradient(360deg, rgba(7,12,21,1) 1%, rgba(19,54,84,1) 100%); margin-top: 4vw; margin-bottom: 4vw;'>
               <!-- Secondary background container -->
 
-              <div class='header' style='position: relative; height: calc(3em + 3vw); background: rgba(255,255,255, .4);'>
+              <div class='header' style='position: relative; padding: calc(0.3vw + 0.3em); background: rgba(255,255,255, .4);'>
                 <!-- Header with a background image -->
-                <img  alt='Image' style='display: block; height: 100%; width: auto; margin-left: 2vw;' src='https://lanyardsforyou.com/controller/assets/img/send-emails/password-recovery/logo.png'>
+                <img  alt='Image' style='display: block; height: calc(2vw + 2em); width: auto; margin-left: 2vw;' src='https://lanyardsforyou.com/controller/assets/img/send-emails/password-recovery/logo.png'>
                 <!-- Image in the header -->
               </div>
               <div class='titleContainer' style='position: relative; width: 85%; margin: 0 auto; margin-top: calc(2.0vw + 1.0em);'>
@@ -208,7 +208,7 @@ class EmailSender {
               </div>
               <div class='imgEmail' style='position: relative; width: 85%; margin: 0 auto; margin-top: calc(0.8vw + 0.8em);'>
                 <!-- Image container -->
-                <img style='position: relative; width: 100%;' alt='' src='https://lanyardsforyou.com/Lanyards/Slide2.png'>
+                <img style='position: relative; width: 100%;' alt='' src='https://lanyardsforyou.com/controller/assets/img/send-emails/password-recovery/main.png'>
                 <!-- Image in the email -->
               </div>
               <div class='titleContainer' style='position: relative; width: 85%; margin: 0 auto; margin-top: calc(1.4vw + 0.4em);'>
