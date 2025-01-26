@@ -2,6 +2,7 @@
 class Security {
 
     public static function validateUserData($username, $email, $password) {
+
         // Check if fields are not empty
         if (empty($username) || empty($email) || empty($password)) {
             return false;
@@ -30,18 +31,13 @@ class Security {
     }
 
     private static function usernameExistsInDatabase($email) {
+        $connection = new Database();
+        $user = new Users($connection);
+        $user->setEmail($email);
 
-      $connection = new Database();
-      $user = new Users($connection);
-      $user->setEmail($email);
-
-      $var = $user->checkIfUserExistsByEmail()['COUNT(*)'];
-
-      if ($var == "0") {
-        return false;
-      }
-      return true;
+        return $user->checkIfUserExistsByEmail(); // Returns true or false directly
     }
+
 }
 
 require_once '../../models/users.php';

@@ -75,10 +75,10 @@ CREATE TABLE `Artwork`
 CREATE TABLE `Clips`
 (
 	`idClip` INT NOT NULL AUTO_INCREMENT,
-	`name` VARCHAR(50) NULL,
-	`imgLinkOneEnd` TEXT NOT NULL,
-	`imgLinkTwoEnd` TEXT NOT NULL,
+	`name` VARCHAR(50) NOT NULL,
 	`price` FLOAT(5,2) NOT NULL,
+	`imgLinkOneEnd` TEXT NULL,
+	`imgLinkTwoEnd` TEXT NULL,
 	`idWidth` INT NULL,
 	CONSTRAINT `PK_Clips` PRIMARY KEY (`idClip` ASC)
 )
@@ -91,7 +91,6 @@ CREATE TABLE `Extras`
 	`group` VARCHAR(50) NOT NULL,
 	`type` VARCHAR(50) NOT NULL,
 	`price` FLOAT(5,2) NOT NULL,
-	`imgLink` TEXT NULL,
 	`idLanyard` INT NULL,
 	CONSTRAINT `PK_extras` PRIMARY KEY (`idExtras` ASC)
 )
@@ -158,6 +157,20 @@ CREATE TABLE `Orders_Users`
 
 ;
 
+CREATE TABLE `Password_Recovery_Tokens`
+(
+	`id` INT NOT NULL AUTO_INCREMENT,
+	`user_id` INT NOT NULL,
+	`token` VARCHAR(64) NOT NULL,
+	`creation_date` DATETIME NOT NULL,
+	`expiration_date` DATETIME NOT NULL,
+	`used` BOOL NOT NULL DEFAULT 0,
+	`idUser` INT NULL,
+	CONSTRAINT `PK_Password_Recovery_Tokens` PRIMARY KEY (`id` ASC)
+)
+
+;
+
 CREATE TABLE `SidePrinted`
 (
 	`idSidePrinted` INT NOT NULL AUTO_INCREMENT,
@@ -170,10 +183,10 @@ CREATE TABLE `SidePrinted`
 
 CREATE TABLE `Users`
 (
-	`idUser` INT NOT NULL,
+	`idUser` INT NOT NULL AUTO_INCREMENT,
 	`name` VARCHAR(50) NOT NULL,
 	`email` VARCHAR(80) NOT NULL,
-	`user` VARCHAR(50) NOT NULL,
+	`password` TEXT NULL,
 	CONSTRAINT `PK_Users` PRIMARY KEY (`idUser` ASC)
 )
 
@@ -188,6 +201,12 @@ CREATE TABLE `Width`
 	CONSTRAINT `PK_Width` PRIMARY KEY (`idWidth` ASC)
 )
 
+;
+
+/* Create Primary Keys, Indexes, Uniques, Checks */
+
+ALTER TABLE `Password_Recovery_Tokens`
+ ADD INDEX `IXFK_Password_Recovery_Tokens_Users` (`idUser` ASC)
 ;
 
 /* Create Foreign Key Constraints */
@@ -234,6 +253,11 @@ ALTER TABLE `Orders_Users`
 
 ALTER TABLE `Orders_Users`
  ADD CONSTRAINT `FK_Orders_Users_Users`
+	FOREIGN KEY (`idUser`) REFERENCES `Users` (`idUser`) ON DELETE Restrict ON UPDATE Restrict
+;
+
+ALTER TABLE `Password_Recovery_Tokens`
+ ADD CONSTRAINT `FK_Password_Recovery_Tokens_Users`
 	FOREIGN KEY (`idUser`) REFERENCES `Users` (`idUser`) ON DELETE Restrict ON UPDATE Restrict
 ;
 

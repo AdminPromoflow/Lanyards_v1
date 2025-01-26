@@ -7,7 +7,19 @@ class Login {
 
   //  login.style.display = "none";
 
+  password_forgotten.addEventListener("click", function(){
+    // Call the closeLogin method of the Login class
+    loginClass.closeLogin();
+    // Call the closeRegister method of the Register class
+    registerClass.closeRegister();
+    // Show the login form with a sliding animation
+    loginClass.showLogin(700);
+    // Hide the register form with a sliding animation
+    registerClass.hideRegister(700);
 
+    passwordForgotten.showPasswordForgotten(true);
+
+  });
 
     loginWithFacebook1.addEventListener("click", function(){
       loginClass.customLogin();
@@ -27,6 +39,7 @@ class Login {
       loginClass.showLogin(700);
       // Hide the register form with a sliding animation
       registerClass.hideRegister(700);
+
     });
 
 
@@ -55,6 +68,8 @@ class Login {
 
       // Hide the register form with a sliding animation
       registerClass.hideRegister(0);
+
+
     });
 
 
@@ -253,6 +268,7 @@ class Login {
     login.style.left = "50%";
     login.style.transform = "translate(-50%, -50%)";
     login.style.display = "flex";
+
   }
 
   closeLogin() {
@@ -264,6 +280,7 @@ class Login {
       closeLoginSide = "left";
     }
     login.style.transform = "translateY(-50%)";
+
   }
 
   showLogin(time) {
@@ -369,6 +386,9 @@ const loginWithFacebook1 = document.getElementById("loginWithFacebook1");
 const openLoginFromRegister = document.getElementById("openLoginFromRegister");
 const login = document.getElementById("login");
 const closeLogin = document.getElementById("closeLogin"); // Button to close the login form
+const password_forgotten = document.getElementById("password_forgotten");
+
+
 var containerLogin = document.getElementById("containerLogin");
 
 

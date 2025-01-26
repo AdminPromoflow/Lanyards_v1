@@ -148,8 +148,116 @@ class EmailSender {
         }
     }
 
+    public function sendEmailRecoveryPassword($recoveryToken) {
+      try {
+        // Create an instance of PHPMailer
+        $mail = new PHPMailer;
+
+        // Configure PHPMailer to use SMTP
+        $mail->isSMTP();
+
+        // Enable SMTP debugging (set to 0 in production)
+        $mail->SMTPDebug = 2;
+
+        // Set the Hostinger SMTP server
+        $mail->Host = 'smtp.hostinger.com';
+
+        // Configure the SMTP port (587 for STARTTLS, 465 for SSL)
+        $mail->Port = 587;
+
+        // Enable SMTP authentication
+        $mail->SMTPAuth = true;
+        // Set your SMTP username and password
+        $mail->Username = 'admin@lanyardsforyou.com';
+        $mail->Password = '32skiff32!CI';
+
+        // Set the sender's email address and name
+        $mail->setFrom('admin@lanyardsforyou.com', 'Ian Southworth');
+
+        // Add a reply-to address
+        $mail->addReplyTo('admin@lanyardsforyou.com', 'Ian Southworth');
+
+        // Add recipient's email address and name
+        $mail->addAddress($this->recipientEmail, $this->recipientName);
+
+        // Set the email subject
+        $mail->Subject = 'Password recovery for Lanyards For You.';
+
+        // Define the email body in HTML format
+        $mail->isHTML(true); // Specify that the content is HTML
+
+        $recipientMessage = "
+         <div class='background' style='position: relative; width: 100%;     background: rgb(52,74,98); padding: 2vw 0;'>
+            <!-- Background container -->
+
+            <div class='background2' style='width: 70%; overflow-x: hidden; min-width: 300px; margin: 0 auto; position: relative; background: linear-gradient(360deg, rgba(7,12,21,1) 1%, rgba(19,54,84,1) 100%); margin-top: 4vw; margin-bottom: 4vw;'>
+              <!-- Secondary background container -->
+
+              <div class='header' style='position: relative; height: calc(3em + 3vw); background: rgba(255,255,255, .4);'>
+                <!-- Header with a background image -->
+                <img  alt='Image' style='display: block; height: 100%; width: auto; margin-left: 2vw;' src='https://lanyardsforyou.com/controller/assets/img/send-emails/password-recovery/logo.png'>
+                <!-- Image in the header -->
+              </div>
+              <div class='titleContainer' style='position: relative; width: 85%; margin: 0 auto; margin-top: calc(2.0vw + 1.0em);'>
+                <!-- Container for titles -->
+                <h1 style='font-family: Oswald, sans-serif; font-size: calc(1vw + 1em); position: relative; margin: 0 auto; letter-spacing: 0px; color: rgb(240,240,240); text-align: center;'>
+                  <!-- Main title -->
+                  PASSWORD RECOVERY FOR LANYARDS FOR YOU.
+                </h1>
+
+              </div>
+              <div class='imgEmail' style='position: relative; width: 85%; margin: 0 auto; margin-top: calc(0.8vw + 0.8em);'>
+                <!-- Image container -->
+                <img style='position: relative; width: 100%;' alt='' src='https://lanyardsforyou.com/Lanyards/Slide2.png'>
+                <!-- Image in the email -->
+              </div>
+              <div class='titleContainer' style='position: relative; width: 85%; margin: 0 auto; margin-top: calc(1.4vw + 0.4em);'>
+
+                <h4 style='font-family: Oswald, sans-serif; color: rgb(185,185,185); font-weight: 200; font-size: calc(0.7vw + 0.7em); position: relative; margin: 0 auto; letter-spacing: 0px;  text-align: center; width: 60%;'>
+                  <!-- Subtitle about account info -->
+                  The following link is for password recovery:
+                </h4>
+                <br>
+                <!-- User Info Section -->
+                <h4 style='font-family: Oswald, sans-serif; color: rgb(232,232,232); font-weight: 400; font-size: calc(0.8vw + 0.8em); position: relative; margin: 0 auto; letter-spacing: 0px;  text-align: center; margin-top: calc(0.2vw + 0.2em);'>
+                  <!-- Updated link with recovery token -->
+                   <a href='https://lanyardsforyou.com/recover-password?token=$recoveryToken' style='color: rgb(0,123,255); text-decoration: none;'>Click here to recover your password.</a>
+                </h4>
+                <br>
+                <h4 style='font-family: Oswald, sans-serif; color: rgb(185,185,185); font-weight: 200; font-size: calc(0.6vw + 0.6em); position: relative; margin: 0 auto; letter-spacing: 0px;  text-align: justify; width: 100%;'>
+                  <!-- Subtitle about account info -->
+                  If you have not requested a password recovery, please let us know by contacting us at admin@lanyardsforyou.com.
+                </h4>
+              </div>
+              <!-- Footer Section -->
+              <div class='footer' style='position: relative; background: rgba(106, 123, 141, 1); width: 100%; margin-top: calc(1.8vw + 0.8em); padding: calc(1.2vw + 1.2em) 0;'>
+                <!-- Footer container -->
+                <h2 style='position: relative; font-family: Oswald, sans-serif; color: rgb(250,250,250); font-weight: 600; font-size: calc(0.8vw + 0.8em); position: relative; margin: 0 auto; letter-spacing: 0px;   text-align: center; width: 90%;'>
+                Thank you for being part of our online community.
+                </h2>
+
+              </div>
+            </div>
+        </div>
+        ";
+
+        // Set the email body
+        $mail->Body = $recipientMessage;
+
+        // Set a plain text backup if HTML content cannot be displayed
+        $mail->AltBody = 'If you cannot view the HTML, here is the plain text message.';
+        $mail->send();
+        return true;
+      } catch (\Exception $e) {
+        return false;
+      }
+
+
+    }
+
+
     // Method to send a registration email
-   public function sendEmailRegistrationToAdmin() {
+    public function sendEmailRegistrationToAdmin() {
         // Create an instance of PHPMailer
         $mail = new PHPMailer;
 

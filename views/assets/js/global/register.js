@@ -159,7 +159,7 @@ class Register {
         throw new Error("Network error.");
       })
       .then(data => {
-        alert(data);
+    //    alert(data);
        data = JSON.parse(data);
 
         if (data["message"] == 1) {
@@ -173,7 +173,7 @@ class Register {
           registerClass.hideRegister(0);
         }
         else if  (data["message"] == 0) {
-        //  alert('No successful registration. The user already exists');
+          alert('No successful registration. The user already exists');
         }
         else {
           alert('An error has occurred. Please try again');

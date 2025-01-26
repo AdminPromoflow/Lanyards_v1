@@ -33,27 +33,29 @@ class Users {
   /*
    * Check if a user with the given email already exists in the database.
    */
-  public function checkIfUserExistsByEmail() {
-    try {
-      // Prepare the SQL query with placeholders
-      $sql = $this->connection->getConnection()->prepare("SELECT COUNT(*) FROM `Users` WHERE `email` = :email");
+   public function checkIfUserExistsByEmail() {
+       try {
+           // Prepare the SQL query with placeholders
+           $sql = $this->connection->getConnection()->prepare("SELECT COUNT(*) as userCount FROM `Users` WHERE `email` = :email");
 
-      // Bind the email parameter
-      $sql->bindParam(':email', $this->email, PDO::PARAM_STR);
+           // Bind the email parameter
+           $sql->bindParam(':email', $this->email, PDO::PARAM_STR);
 
-      // Execute the query
-      $sql->execute();
+           // Execute the query
+           $sql->execute();
 
-      // Fetch the user count
-      $userCount = $sql->fetch(PDO::FETCH_ASSOC);
+           // Fetch the user count
+           $result = $sql->fetch(PDO::FETCH_ASSOC);
 
-      return $userCount;
-    } catch(PDOException $e) {
-      // Handle any exceptions and provide an error message
-      echo "Error in the query: " . $e->getMessage();
-      throw new Exception("Error in the user verification query.");
-    }
-  }
+           // Check if the count is greater than 0
+           return isset($result['userCount']) && $result['userCount'] > 0;
+       } catch (PDOException $e) {
+           // Handle any exceptions and provide an error message
+           error_log("Database query error: " . $e->getMessage());
+           throw new Exception("Error in the user verification query.");
+       }
+   }
+
   /*
    * Check if a user with the given email already exists in the database.
    */

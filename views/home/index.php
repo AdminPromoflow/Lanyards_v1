@@ -26,7 +26,7 @@
 </head>
 <body>
   <section>
-    <?php include "../../views/global/test_alert.php" ?>
+    <?php  include "../../views/global/test_alert.php" ?>
     <!-- Background section -->
     <div class="background">
 
@@ -54,17 +54,17 @@
             <?php include "../../views/global/footer.php" ?>
 
           </div>
-
-
-
-
         </div>
 
-        <!-- Include the login component -->
-        <?php include "../../views/global/login.php" ?>
+          <!-- Include the login component -->
+          <?php include "../../views/global/login.php" ?>
 
-        <!-- Include the register component -->
-        <?php include "../../views/global/register.php" ?>
+          <?php include "../../views/global/password_forgotten.php" ?>
+
+          <!-- Include the register component -->
+          <?php include "../../views/global/register.php" ?>
+
+
 
       </div>
     </div>

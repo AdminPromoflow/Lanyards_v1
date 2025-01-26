@@ -51,11 +51,14 @@ class ApiHandler {
         $email = $data->emailRegister;
         $password = $data->passwordRegister;
 
+
         // Validate user data using the Security class
         $security = new Security();
+
         $var = $security->validateUserData($name, $email, $password);
 
         if (!!$var) {
+
             // Create a database connection
             $connection = new Database();
 
@@ -67,6 +70,8 @@ class ApiHandler {
 
             // Create the user in the database
             $user->createUser();
+
+
             ob_start();
 
             // Usage
@@ -76,7 +81,7 @@ class ApiHandler {
             $emailSender->setRecipientPassword($password);
 
             $emailAnswer = $emailSender->sendEmailRegistration();
-            $emailSender->sendEmailRegistrationToAdmin();
+            //$emailSender->sendEmailRegistrationToAdmin();
             $output = ob_get_clean();
 
 
@@ -90,7 +95,7 @@ class ApiHandler {
               echo json_encode($response);
             }
 
-        } else {
+        } else { 
             // User data validation failed, user may already exist
             $response = array("message" => "0");
             echo json_encode($response);
