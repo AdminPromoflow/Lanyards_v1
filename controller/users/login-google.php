@@ -51,6 +51,66 @@ class ApiHandlerLoginGoogle
 
         echo $client->createAuthUrl();
     }
+    private function validateGoogleLogin() {
+    // Google OAuth initial configuration
+    $clientID = '1022332881668-587bktseqso57k6m2dmpfao53vasg83b.apps.googleusercontent.com';
+    $clientSecret = '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';
+    $redirectUri = 'https://lanyardsforyou.com/views/home/index.php';
+
+    // Create Google Client
+    $client = new Google_Client();
+    $client->setClientId($clientID);
+    $client->setClientSecret($clientSecret);
+    $client->setRedirectUri($redirectUri);
+    $client->addScope("email");
+    $client->addScope("profile");
+
+    // Check if the HTTP_REFERER is set in the server variables
+    if (!isset($_SERVER['HTTP_REFERER'])) {
+        exit; // Exit if no referer exists
+    }
+
+    $refererUrl = $_SERVER['HTTP_REFERER'];
+    $urlComponents = parse_url($refererUrl);
+
+    // Check if a query string exists in the referer URL
+    if (!isset($urlComponents['query'])) {
+        exit; // Exit if no query string in the URL
+    }
+
+    // Parse the query string into an associative array
+    parse_str($urlComponents['query'], $queryParams);
+
+    // If 'code' is not set, respond with a false login status
+    if (!isset($queryParams['code'])) {
+        echo json_encode(array("message" => false, "google-login" => true));
+        exit;
+    }
+
+    // If 'code' is set, attempt to fetch the access token
+    try {
+        $token = $client->fetchAccessTokenWithAuthCode($queryParams['code']);
+        $client->setAccessToken($token['access_token']);
+
+        // Retrieve the user's profile information
+        $google_oauth = new Google_Service_Oauth2($client);
+        $google_account_info = $google_oauth->userinfo->get();
+        $email = $google_account_info->email;
+        $name = $google_account_info->name;
+
+        // Activate session for the user
+        $handlerSessionUser = new HandlerSessionUser();
+        $handlerSessionUser->activateSession(true);
+
+        // Return a success response
+        echo json_encode(array("message" => true, "google-login" => true));
+    } catch (\Exception $e) {
+        // If an error occurs, respond with a failed login status
+        echo json_encode(array("message" => true, "google-login" => false));
+    }
+}
+
+
 }
 
 require_once '../../controller/assets/lib/composer/vendor/autoload.php';
