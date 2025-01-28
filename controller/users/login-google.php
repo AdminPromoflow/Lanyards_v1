@@ -9,6 +9,7 @@ class ApiHandlerLoginGoogle
 
         // Check if a GET request was received
         if ($_SERVER["REQUEST_METHOD"] == "GET") {
+
             // Check if "action" exists in the query parameters
             if (isset($_GET['action'])) {
                 $action = $_GET['action'];
