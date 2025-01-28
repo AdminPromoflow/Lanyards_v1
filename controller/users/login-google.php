@@ -1,10 +1,10 @@
 <?php
-echo json_encode(array("authUrl" => "hola"));
+echo json_encode(array("authUrl" => "hola"));exit;
+
 
 require_once '../../controller/assets/lib/composer/vendor/autoload.php'; // Load Google API dependencies
 require_once '../../controller/users/session-user.php'; // Load session controller
 
-exit;
 class ApiHandlerLoginGoogle
 {
     // Function to handle incoming requests
