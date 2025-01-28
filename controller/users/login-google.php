@@ -86,7 +86,7 @@ class ApiHandlerLoginGoogle
 
     // If 'code' is not set, respond with a false login status
     if (!isset($queryParams['code'])) {
-        echo json_encode(array("message" => false, "google-login" => true));
+        echo json_encode(array("message" => false, "google_login" => true));
         exit;
     }
 
@@ -114,10 +114,10 @@ class ApiHandlerLoginGoogle
       //  $handlerSessionUser->activateSession(true);
 
         // Return a success response
-        echo json_encode(array("message" => true, "google-login" => true));
+        echo json_encode(array("message" => true, "google_login" => true));
     } catch (\Exception $e) {
         // If an error occurs, respond with a failed login status
-        echo json_encode(array("message" => true, "google-login" => false));
+        echo json_encode(array("message" => true, "google_login" => false));
     }
 }
 

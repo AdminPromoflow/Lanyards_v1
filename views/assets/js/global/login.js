@@ -79,7 +79,7 @@ class Login {
 
 
     this.makeAjaxRequestValidateGoogleLogin();
-    
+
   }
 
 
@@ -170,6 +170,11 @@ class Login {
           alert(data); // Display the data from the response
           // Optionally, redirect based on the data received
           // window.location.href = data;
+          if (data.google_login) {
+            menuClass.setActiveSession(parsedData.message);
+            menuClass.loginOrLogout();
+          }
+
       })
       .catch(error => {
           console.error("Error:", error); // Log any errors to the console
