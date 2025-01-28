@@ -43,14 +43,8 @@ class Login {
 
 
     loginWithGoogle1.addEventListener("click", function(){
-
-      // Define the URL and the JSON data you want to send
-      const url = "../../controller/users/login-google.php";
-      const data = {
-        action: "loginGoogle"      };
-
       // Make the AJAX request
-      loginClass.makeAjaxRequestLoginWithGoogle(url, data);
+      loginClass.makeAjaxRequestLoginWithGoogle();
     })
 
     loginWithFacebook1.addEventListener("click", function(){
@@ -115,7 +109,13 @@ class Login {
   }*/
 
   // Function to make the AJAX request
-  makeAjaxRequestLoginWithGoogle(url, data) {
+  makeAjaxRequestLoginWithGoogle() {
+
+          // Define the URL and the JSON data you want to send
+          const url = "../../controller/users/login-google.php";
+          const data = {
+            action: "loginGoogle"
+          };
       // Construct the URL with query parameters
       const queryParams = new URLSearchParams(data).toString();
       const fullUrl = `${url}?${queryParams}`; // Append the query parameters to the URL
@@ -131,8 +131,8 @@ class Login {
           throw new Error("Network error.");
         })
         .then(data => {
-          //alert(data);
-          window.location.href = data;
+          alert(data);
+        //  window.location.href = data;
         })
         .catch(error => {
           console.error("Error:", error);

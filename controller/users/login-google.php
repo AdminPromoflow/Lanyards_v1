@@ -2,7 +2,7 @@
 class ApiHandlerLoginGoogle
 {
     public function handleRequest() {
-
+ 
 
         // Check if a GET request was received
         if ($_SERVER["REQUEST_METHOD"] == "GET") {
