@@ -93,37 +93,37 @@ class Menu {
     const data = {
       action: "checkSessionLogin"
     };
-    // Make a fetch request to the given URL with the specified data
+
+    // Make the fetch request
     fetch(url, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
       body: JSON.stringify(data)
-
     })
       .then(response => {
-
-        // Check if the response is okay, if so, return the response text
-        if (response.ok) {
-          return response.text();
+        // Check if the response status is OK
+        if (!response.ok) {
+          throw new Error(`Network error: ${response.status} ${response.statusText}`);
         }
-        // If the response is not okay, throw an error
-        throw new Error("Network error.");
+        return response.json(); // Parse the response as JSON
       })
-      .then(data => {
-        alert(data);
+      .then(parsedData => {
+        // Validate if the response contains the expected 'message' key
+        if (typeof parsedData.message === "undefined") {
+          throw new Error("Invalid response format: 'message' key missing.");
+        }
 
-        data = JSON.parse(data);
-
-        this.setActiveSession(data["message"]);
+        // Update the active session and handle login/logout logic
+        this.setActiveSession(parsedData.message);
         this.loginOrLogout();
-
       })
       .catch(error => {
-        // Log any errors to the console
-        console.error("Error:", error);
-      //  location.reload();
+        // Handle any errors during the request or processing
+        console.error("Error:", error.message);
+        // Optionally, reload the page if needed
+        // location.reload();
       });
   }
 
