@@ -73,6 +73,8 @@ class Menu {
       const openLogout = document.getElementById("openLogout");
       if (openLogout) {
         openLogout.addEventListener("click", function () {
+          chargingClass.hideShowchargin(true);
+
           menuClass.processUserLogout();
         });
       }
@@ -188,6 +190,8 @@ class Menu {
         })
         .then(data => {
           // If logout is successful, reload the page
+          chargingClass.hideShowchargin(false);
+
           alert("Successfully logged out.");
           window.location.href = "https://lanyardsforyou.com/views/home/index.php";
         })
