@@ -189,7 +189,7 @@ class Menu {
         .then(data => {
           // If logout is successful, reload the page
           alert("Successfully logged out.");
-          location.reload();
+          window.location.href = "https://lanyardsforyou.com/views/home/index.php";
         })
         .catch(error => {
           // Handle errors: If the user is not authenticated or any other errors
