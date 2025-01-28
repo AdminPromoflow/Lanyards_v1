@@ -22,7 +22,7 @@ enter_text_website.addEventListener("click", function(){
 
     // Mostrar alert de acuerdo al resultado
     if (userExists) {
-      alert("Welcome");
+    //  alert("Welcome");
       inicio_sesion.style.display = "none";
     } else {
       alert("Unsatisfactory: Username or password incorrect.");
