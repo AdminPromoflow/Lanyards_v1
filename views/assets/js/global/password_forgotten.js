@@ -42,12 +42,12 @@ class PasswordForgotten {
         return response.json(); // Parse the response as JSON
       })
       .then((data) => {
-        
+
         // Process the successful response
         if (data.success) { // Assuming your API returns a `success` property
           alert("Password recovery email sent successfully!");
           // Optionally reload the page
-          // location.reload();
+           window.location.href = '../../views/home/index.php';
         } else {
           alert("The provided email is not registered.");
         }
