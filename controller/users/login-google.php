@@ -74,9 +74,6 @@ class ApiHandlerLoginGoogle
 
 
 
-
-
-
         // Check if the HTTP_REFERER is set in the server variables
         if (isset($_SERVER['HTTP_REFERER'])) {
             $refererUrl = $_SERVER['HTTP_REFERER'];
@@ -107,15 +104,6 @@ class ApiHandlerLoginGoogle
                     $google_account_info = $google_oauth->userinfo->get();
                     $email = $google_account_info->email;
                     $name = $google_account_info->name;
-
-
-
-
-                    // Return the user's email and name as a JSON response
-                    /*echo json_encode(array(
-                        "email" => $email,
-                        "name" => $name
-                    ));*/
 
                     header('Content-Type: application/json');
                     echo json_encode(array("message" => true, "google_login" => true));
