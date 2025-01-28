@@ -2,9 +2,9 @@
 
 
 require_once '../../controller/assets/lib/composer/vendor/autoload.php'; // Load Google API dependencies
-echo json_encode(array("authUrl" => "hola"));exit;
+//echo json_encode(array("authUrl" => "hola"));exit;
 
-require_once '../../controller/users/session-user.php'; // Load session controller
+///require_once '../../controller/users/session-user.php'; // Load session controller
 
 class ApiHandlerLoginGoogle
 {

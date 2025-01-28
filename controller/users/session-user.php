@@ -1,5 +1,4 @@
 <?php
-
 class HandlerSessionUser {
 
     // Function to handle incoming requests
