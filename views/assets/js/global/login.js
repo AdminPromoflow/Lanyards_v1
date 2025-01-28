@@ -79,7 +79,6 @@ class Login {
 
 
     this.makeAjaxRequestValidateGoogleLogin();
-    menuClass.getActiveUserSession();
 
 
   }
