@@ -141,6 +141,36 @@ class Login {
       });
   }
 
+  makeAjaxRequestValidateGoogleLogin() {
+      // Define the URL and the data to be sent
+      const url = "../../controller/users/login-google.php";
+      const data = {
+          action: "validationLoginGoogle"
+      };
+
+      // Construct the query parameters and full URL
+      const queryParams = new URLSearchParams(data).toString(); // Generate query parameters
+      const fullUrl = `${url}?${queryParams}`; // Append query parameters to the URL
+
+      // Make the request using the Fetch API with GET method
+      fetch(fullUrl, {
+          method: "GET" // Use GET method
+      })
+      .then(response => {
+          if (!response.ok) {
+              throw new Error("Network error.");
+          }
+          return response.text(); // You can use .json() if expecting a JSON response
+      })
+      .then(data => {
+          alert(data); // Display the data from the response
+          // Optionally, redirect based on the data received
+          // window.location.href = data;
+      })
+      .catch(error => {
+          console.error("Error:", error); // Log any errors to the console
+      });
+  }
 
   // Function to make the AJAX request
   makeAjaxRequestLogin() {

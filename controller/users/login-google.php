@@ -15,6 +15,9 @@ class ApiHandlerLoginGoogle
                     case "loginGoogle":
                         $this->handleLoginGoogle();
                         break;
+                    case "validationLoginGoogle":
+                        $this->validateGoogleLogin();
+                        break;
 
                     default:
                         // Unknown action
@@ -99,8 +102,8 @@ class ApiHandlerLoginGoogle
         $name = $google_account_info->name;
 
         // Activate session for the user
-        $handlerSessionUser = new HandlerSessionUser();
-        $handlerSessionUser->activateSession(true);
+      //  $handlerSessionUser = new HandlerSessionUser();
+      //  $handlerSessionUser->activateSession(true);
 
         // Return a success response
         echo json_encode(array("message" => true, "google-login" => true));
