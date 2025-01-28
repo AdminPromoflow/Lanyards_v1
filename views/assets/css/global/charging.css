@@ -10,10 +10,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 .charging_background p {
   position: relative;
   color: white;
   font-size: 1.2em;
   font-weight: 300;
+  margin: 15px 0;
 }
