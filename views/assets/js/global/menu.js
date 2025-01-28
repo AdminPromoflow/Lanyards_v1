@@ -156,54 +156,50 @@ class Menu {
         this.activeSession = activeSession;
     }
 
-  processUserLogout() {
-    // Prepare the URL and data to check session login status
-    const url = "../../controller/users/session-user.php";
-    const data = {
-      action: "processUserLogout" // Action to check if the session is active (login)
-    };
-    // Make a fetch request to the given URL with the specified data
-    fetch(url, {
-      method: "POST", // Set the request method to POST
-      headers: {
-        "Content-Type": "application/json" // Set the request content type to JSON
-      },
-      body: JSON.stringify(data) // Send the data as a JSON string
-    })
-      .then(response => {
-        // Check if the response is okay (HTTP status 200-299), if so, return the response text
-        if (response.ok) {
-          return response.text();
-        }
+    processUserLogout() {
+      // Prepare the URL and data to process the logout action
+      const url = "../../controller/users/session-user.php";
+      const data = {
+        action: "processUserLogout" // Action to process logout
+      };
 
-        // If the response status is 401 (Unauthorized), the user is not logged in
-        if (response.status === 401) {
-          throw new Error("User not authenticated.");
-        }
-
-        // If the response is not okay, throw a general network error
-        throw new Error("Network error.");
+      // Make a fetch request to the given URL with the specified data
+      fetch(url, {
+        method: "POST", // Set the request method to POST
+        headers: {
+          "Content-Type": "application/json" // Set the request content type to JSON
+        },
+        body: JSON.stringify(data) // Send the data as a JSON string
       })
-      .then(data => {
-        location.reload();
+        .then(response => {
+          // Check if the response is okay (HTTP status 200-299)
+          if (response.ok) {
+            return response.json(); // Parse the response as JSON
+          }
 
-        //alert(data);
-        // Parse the response data as JSON
-      //  data = JSON.parse(data);
+          // If the response status is 401 (Unauthorized), the user is not logged in
+          if (response.status === 401) {
+            throw new Error("User not authenticated.");
+          }
 
+          // For other responses, throw a general network error
+          throw new Error("Network error.");
+        })
+        .then(data => {
+          // If logout is successful, reload the page
+          alert("Successfully logged out.");
+          location.reload();
+        })
+        .catch(error => {
+          // Handle errors: If the user is not authenticated or any other errors
+          if (error.message === "User not authenticated.") {
+            alert("Please log in to access this data."); // Inform the user to log in
+          } else {
+            console.error("Error:", error.message); // Log any other errors
+          }
+        });
+    }
 
-
-
-      })
-      .catch(error => {
-        // Handle errors: If the user is not authenticated or another error occurs
-        if (error.message === "User not authenticated.") {
-          alert("Please log in to access this data."); // Inform the user to log in
-        } else {
-          console.error("Error:", error); // Log any other errors
-        }
-      });
-  }
 
 
 
