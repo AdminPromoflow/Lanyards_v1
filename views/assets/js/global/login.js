@@ -71,6 +71,7 @@ class Login {
       // Call validation functions and display error or success messages
       if (loginClass.validateEmail() && loginClass.validatePassword()) {
 
+        chargingClass.hideShowchargin(true);
 
         // Make the AJAX request
         loginClass.makeAjaxRequestLogin();
