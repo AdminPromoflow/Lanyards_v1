@@ -78,7 +78,7 @@ class Login {
     });
 
 
-    loginClass.makeAjaxRequestValidateGoogleLogin();
+    this.makeAjaxRequestValidateGoogleLogin();
 
   }
 
