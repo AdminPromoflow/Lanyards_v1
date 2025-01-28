@@ -101,6 +101,13 @@ class ApiHandlerLoginGoogle
         $email = $google_account_info->email;
         $name = $google_account_info->name;
 
+
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
+        $isLoggedIn = isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true;
+
+
         // Activate session for the user
       //  $handlerSessionUser = new HandlerSessionUser();
       //  $handlerSessionUser->activateSession(true);
