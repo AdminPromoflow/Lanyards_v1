@@ -27,6 +27,8 @@
 <body>
   <section>
     <?php  include "../../views/global/test_alert.php" ?>
+    <?php  include "../../views/global/charging.php" ?>
+
     <!-- Background section -->
     <div class="background">
 
