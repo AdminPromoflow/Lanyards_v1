@@ -134,7 +134,7 @@ class Login {
       .then(data => {
         //  alert(data); // Display the data from the response
           // Optionally, redirect based on the data received
-          // window.location.href = data;
+           window.location.href = data;
       })
       .catch(error => {
           console.error("Error:", error); // Log any errors to the console
