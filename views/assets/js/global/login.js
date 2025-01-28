@@ -167,10 +167,11 @@ class Login {
           return response.text(); // You can use .json() if expecting a JSON response
       })
       .then(data => {
-          alert(data); // Display the data from the response
           // Optionally, redirect based on the data received
           // window.location.href = data;
           if (data.google_login) {
+            alert(data); // Display the data from the response
+
             menuClass.setActiveSession(parsedData.message);
             menuClass.loginOrLogout();
           }
