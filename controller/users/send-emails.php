@@ -77,7 +77,7 @@ class EmailSender {
 
               <div class='header' style='position: relative; height: calc(3em + 3vw); background: rgba(255,255,255, .4);'>
                 <!-- Header with a background image -->
-                <img  alt='Image' style='display: block; height: 100%; width: auto; margin-left: 2vw;' src='https://lanyardsforyou.com/Test3.png'>
+                <img  alt='Image' style='display: block; height: 100%; width: auto; margin-left: 2vw;' src='https://lanyardsforyou.com/controller/assets/img/send-emails/password-recovery/logo.png'>
                 <!-- Image in the header -->
               </div>
               <div class='titleContainer' style='position: relative; width: 85%; margin: 0 auto; margin-top: calc(2.0vw + 1.0em);'>
@@ -93,7 +93,7 @@ class EmailSender {
               </div>
               <div class='imgEmail' style='position: relative; width: 85%; margin: 0 auto; margin-top: calc(0.8vw + 0.8em);'>
                 <!-- Image container -->
-                <img style='position: relative; width: 100%;' alt='' src='https://lanyardsforyou.com/Lanyards/Slide2.png'>
+                <img style='position: relative; width: 100%;' alt='' src='https://lanyardsforyou.com/controller/assets/img/send-emails/register/register_image.jpg'>
                 <!-- Image in the email -->
               </div>
               <div class='titleContainer' style='position: relative; width: 85%; margin: 0 auto; margin-top: calc(1.4vw + 0.4em);'>
@@ -121,13 +121,11 @@ class EmailSender {
                 </h3>
               </div>
               <!-- Footer Section -->
-              <div class='footer' style='position: relative; background: rgba(106, 123, 141, 1); width: 100%; margin-top: calc(1.8vw + 0.8em); height: calc(7.8vw + 5.9em);'>
+              <div class='footer' style='position: relative; background: rgba(106, 123, 141, 1); width: 100%; margin-top: calc(1.8vw + 0.8em); padding: calc(1vw + 1em) 0;'>
                 <!-- Footer container -->
                 <h2 style='position: relative; font-family: Oswald, sans-serif; color: rgb(250,250,250); font-weight: 600; font-size: calc(0.8vw + 0.8em); position: relative; margin: 0 auto; letter-spacing: 0px;  padding-top: calc(1vw + 1em);  text-align: center;'>
                 Thanks for joining our online community!
                 </h2>
-                <img alt='Image' style='display: block; width: calc(7vw + 7em);  left: 1vw; padding: 1vw 0; margin: 0 auto;' src='https://lanyardsforyou.com/Test3.png'>
-                <!-- Image in the footer -->
               </div>
             </div>
         </div>
@@ -307,7 +305,7 @@ class EmailSender {
 
               <div class='header' style='position: relative; height: calc(3em + 3vw); background: rgba(255,255,255, .4);'>
                 <!-- Header with a background image -->
-                <img  alt='Image' style='display: block; height: 100%; width: auto; margin-left: 2vw;' src='https://lanyardsforyou.com/Test3.png'>
+                <img  alt='Image' style='display: block; height: 100%; width: auto; margin-left: 2vw;' src='https://lanyardsforyou.com/controller/assets/img/send-emails/password-recovery/logo.png'>
                 <!-- Image in the header -->
               </div>
               <div class='titleContainer' style='position: relative; width: 85%; margin: 0 auto; margin-top: calc(2.0vw + 1.0em);'>
@@ -323,7 +321,7 @@ class EmailSender {
               </div>
               <div class='imgEmail' style='position: relative; width: 85%; margin: 0 auto; margin-top: calc(0.8vw + 0.8em);'>
                 <!-- Image container -->
-                <img style='position: relative; width: 100%;' alt='' src='https://lanyardsforyou.com/Test1.jpg'>
+                <img style='position: relative; width: 100%;' alt='' src='https://lanyardsforyou.com/controller/assets/img/send-emails/register/register_image.jpg'>
                 <!-- Image in the email -->
               </div>
               <div class='titleContainer' style='position: relative; width: 85%; margin: 0 auto; margin-top: calc(1.4vw + 0.4em);'>
@@ -351,13 +349,11 @@ class EmailSender {
                 </h3>
               </div>
               <!-- Footer Section -->
-              <div class='footer' style='position: relative; background: rgba(106, 123, 141, 1); width: 100%; margin-top: calc(1.8vw + 0.8em); height: calc(7.8vw + 5.9em);'>
+              <div class='footer' style='position: relative; background: rgba(106, 123, 141, 1); width: 100%; margin-top: calc(1.8vw + 0.8em); padding: calc(1vw + 1em) 0;'>
                 <!-- Footer container -->
                 <h2 style='position: relative; font-family: Oswald, sans-serif; color: rgb(250,250,250); font-weight: 600; font-size: calc(0.8vw + 0.8em); position: relative; margin: 0 auto; letter-spacing: 0px;  padding-top: calc(1vw + 1em);  text-align: center;'>
                 One more user joining our online community!
                 </h2>
-                <img alt='Image' style='display: block; width: calc(7vw + 7em);  left: 1vw; padding: 1vw 0; margin: 0 auto;' src='https://lanyardsforyou.com/Test3.png'>
-                <!-- Image in the footer -->
               </div>
             </div>
         </div>
