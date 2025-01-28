@@ -19,8 +19,7 @@ class Register {
     })
     registerWithFacebook1.addEventListener("click", function(){
     })
-    registerWithapple1.addEventListener("click", function(){
-    })
+
 
     // Event listener to open the register form from the login screen
     openRegisterFromLogin.addEventListener("click", function () {
@@ -198,7 +197,6 @@ const passwordRegister = document.getElementById("passwordRegister");
 
 const registerWithGoogle1 = document.getElementById("registerWithGoogle1");
 const registerWithFacebook1 = document.getElementById("registerWithFacebook1");
-const registerWithapple1 = document.getElementById("registerWithapple1");
 
 
 
