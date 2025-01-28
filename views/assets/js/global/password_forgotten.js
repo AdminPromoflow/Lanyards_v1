@@ -10,6 +10,8 @@ class PasswordForgotten {
 
     password_forgotten_button.addEventListener("click", function(){
       if (passwordForgotten.validateEmail()) {
+        chargingClass.hideShowchargin(true);
+
         passwordForgotten.makeAjaxRequestPasswordForgotten();
       }
 
@@ -42,6 +44,7 @@ class PasswordForgotten {
         return response.json(); // Parse the response as JSON
       })
       .then((data) => {
+        chargingClass.hideShowchargin(false);
 
         // Process the successful response
         if (data.success) { // Assuming your API returns a `success` property

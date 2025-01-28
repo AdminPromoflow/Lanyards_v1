@@ -34,6 +34,8 @@ class Register {
     submitBtnRegister.addEventListener("click", function () {
       // Call validation functions and display error or success messages
       if (registerClass.validateName() && registerClass.validateEmail() && registerClass.validatePassword()) {
+        chargingClass.hideShowchargin(true);
+
         // Define the URL and the JSON data you want to send
         const url = "../../controller/users/register.php"; // Replace with your API endpoint URL
         const data = {
@@ -161,6 +163,7 @@ class Register {
       .then(data => {
     //    alert(data);
        data = JSON.parse(data);
+       chargingClass.hideShowchargin(false);
 
         if (data["message"] == 1) {
           alert('Successful registration. We welcome you to our community');
