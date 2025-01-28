@@ -1,5 +1,6 @@
 class Menu {
   constructor() {
+    loginClass.makeAjaxRequestValidateGoogleLogin();
 
     this.getActiveUserSession();
     // Prepare the URL and data to check session login status
