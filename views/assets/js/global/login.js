@@ -169,6 +169,7 @@ class Login {
       .then(data => {
           // Optionally, redirect based on the data received
           // window.location.href = data;
+          alert(data.google_login);
           if (data.google_login) {
             alert(data); // Display the data from the response
 
