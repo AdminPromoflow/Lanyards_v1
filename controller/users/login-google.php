@@ -108,6 +108,8 @@ class ApiHandlerLoginGoogle
         $_SESSION['logged_in'] = true;
         $_SESSION['name'] = $name;
         $_SESSION['email'] = $email;
+        $_SESSION['session_type'] = "google";
+
 
         // Activate session for the user
       //  $handlerSessionUser = new HandlerSessionUser();
