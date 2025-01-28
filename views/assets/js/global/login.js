@@ -210,6 +210,7 @@ class Login {
     })
     .then(data => {
       // Process the response data
+      chargingClass.hideShowchargin(false);
 
       if (data.message) {
         location.reload();

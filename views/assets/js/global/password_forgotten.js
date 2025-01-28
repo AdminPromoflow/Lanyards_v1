@@ -78,6 +78,7 @@ class PasswordForgotten {
     password_forgotten_email.style.border = "3px solid transparent";
     return true; // Validation passes
   }
+
   showPasswordForgotten(action){
     if (action) {
       password_forgotten_background.style.display = "flex";
@@ -87,6 +88,7 @@ class PasswordForgotten {
 
     }
   }
+  
 }
 const password_forgotten_background = document.getElementById("password_forgotten_background");
 const password_forgotten_close = document.getElementById("password_forgotten_close");
