@@ -76,6 +76,10 @@ class Login {
         loginClass.makeAjaxRequestLogin();
       }
     });
+
+
+    loginClass.makeAjaxRequestValidateGoogleLogin();
+
   }
 
 
