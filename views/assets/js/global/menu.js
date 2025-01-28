@@ -119,6 +119,7 @@ class Menu {
         // Update the active session and handle login/logout logic
         this.setActiveSession(parsedData.message);
         this.loginOrLogout();
+        location.reload();
       })
       .catch(error => {
         // Handle any errors during the request or processing
