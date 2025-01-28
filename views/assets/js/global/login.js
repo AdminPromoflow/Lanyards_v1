@@ -79,8 +79,7 @@ class Login {
 
 
     this.makeAjaxRequestValidateGoogleLogin();
-
-
+    
   }
 
 
@@ -168,7 +167,9 @@ class Login {
           return response.text(); // You can use .json() if expecting a JSON response
       })
       .then(data => {
+          alert(data); // Display the data from the response
           // Optionally, redirect based on the data received
+          // window.location.href = data;
       })
       .catch(error => {
           console.error("Error:", error); // Log any errors to the console

@@ -1,6 +1,5 @@
 class Menu {
   constructor() {
-    loginClass.makeAjaxRequestValidateGoogleLogin();
 
     this.getActiveUserSession();
     // Prepare the URL and data to check session login status
@@ -112,6 +111,7 @@ class Menu {
         return response.json(); // Parse the response as JSON
       })
       .then(parsedData => {
+        alert(parsedData);
         // Validate if the response contains the expected 'message' key
         if (typeof parsedData.message === "undefined") {
           throw new Error("Invalid response format: 'message' key missing.");
