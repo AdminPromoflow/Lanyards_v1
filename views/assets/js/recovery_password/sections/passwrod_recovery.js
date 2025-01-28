@@ -30,7 +30,7 @@ class RecoveryPassword {
           action: 'updatePassword' // Añadir el campo 'action' con valor 'updatePassword'
       };
 
-        // Realizar la solicitud AJAX utilizando fetch
+      // Realizar la solicitud AJAX utilizando fetch
         fetch('../../controller/users/password-forgotten.php', {
             method: 'POST',
             headers: {
@@ -40,11 +40,13 @@ class RecoveryPassword {
         })
         .then(response => response.json())  // Analizar la respuesta como JSON
         .then(data => {
-          alert("data.success");
+            console.log(data); // Muestra la respuesta de la solicitud en consola
+
+            // Verificar el resultado y mostrar el mensaje correspondiente
             if (data.success) {
                 alert('Password recovery successful!');
                 // Redirigir o realizar alguna acción después de la recuperación exitosa
-              //  window.location.href = 'https://lanyardsforyou.com/success-page';
+                // window.location.href = 'https://lanyardsforyou.com/success-page';
             } else {
                 alert('Error: ' + data.message);
             }
@@ -53,6 +55,7 @@ class RecoveryPassword {
             console.error('Error during the request:', error);
             alert('An error occurred during the request.');
         });
+
     }
 
     validatePasswords() {

@@ -5,11 +5,18 @@ class Users {
   private $name;      // User's name
   private $email;     // User's email
   private $password;  // User's password
+  private $recovery_token;  // User's password
 
   // Constructor that initializes the connection.
   function __construct($connection) {
     $this->connection = $connection;
   }
+
+  public function setRecoveryToken($recovery_token) {
+      $this->recovery_token = $recovery_token;
+  }
+
+
 
   // Set the user's name
   public function setName($name) {
@@ -108,6 +115,82 @@ class Users {
       echo "Error in the query: " . $e->getMessage();
     }
   }
+
+    public function insertRecoveryToken() {
+      try {
+          // Prepare the SQL query with placeholders.
+          $sql = $this->connection->getConnection()->prepare(
+              "INSERT INTO Password_Recovery_Tokens (token, creation_date, expiration_date, idUser)
+               VALUES (:token, NOW(), DATE_ADD(NOW(), INTERVAL 15 MINUTE),
+                       (SELECT idUser FROM Users WHERE email = :email))"
+          );
+
+          // Bind parameters.
+          $sql->bindParam(':token', $this->recovery_token, PDO::PARAM_STR);
+          $sql->bindParam(':email', $this->email, PDO::PARAM_STR);
+
+          // Execute the query
+          $sql->execute();
+
+          // Close the database connection
+          $this->connection->closeConnection();
+
+          // Return true if the operation was successful
+          return true;
+      } catch(PDOException $e) {
+          // Handle any exceptions and provide an error message
+          echo "Error in the query: " . $e->getMessage();
+
+          // Return false if there was an error
+          return false;
+      }
+  }
+
+  public function updateUserPasswordWithTokenCheck() {
+
+      try {
+          // Prepare the SQL query with placeholders
+          $sql = $this->connection->getConnection()->prepare(
+              "UPDATE Users
+                INNER JOIN Password_Recovery_Tokens
+                ON Password_Recovery_Tokens.idUser = Users.idUser
+                SET Users.password = :password,
+                    Password_Recovery_Tokens.used = 1
+                WHERE Users.email = :email
+                AND Password_Recovery_Tokens.token = :token
+                AND TIMESTAMPDIFF(SECOND, Password_Recovery_Tokens.creation_date, Password_Recovery_Tokens.expiration_date) < 3600;"
+          );
+
+          // Bind parameters
+          $sql->bindParam(':password', $this->password, PDO::PARAM_STR);
+          $sql->bindParam(':email', $this->email, PDO::PARAM_STR);
+          $sql->bindParam(':token', $this->recovery_token, PDO::PARAM_STR);
+
+          // Execute the query
+          $sql->execute();
+
+          // Check if any rows were affected
+          if ($sql->rowCount() > 0) {
+              // Close the database connection
+              $this->connection->closeConnection();
+              // Return true if the operation was successful
+              return true;
+          } else {
+              // Close the database connection
+              $this->connection->closeConnection();
+              // Return false if no rows were updated
+              return false;
+          }
+      } catch (PDOException $e) {
+          // Handle any exceptions and provide an error message
+          echo "Error in the query: " . $e->getMessage();
+          // Return false if there was an error
+          return false;
+      }
+  }
+
+
+
 
     /*
    * Get a list of all customers from the database.

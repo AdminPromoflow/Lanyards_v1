@@ -95,7 +95,7 @@ class ApiHandler {
               echo json_encode($response);
             }
 
-        } else { 
+        } else {
             // User data validation failed, user may already exist
             $response = array("message" => "0");
             echo json_encode($response);

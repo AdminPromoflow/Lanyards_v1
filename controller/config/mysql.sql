@@ -27,6 +27,9 @@ DROP TABLE IF EXISTS `Orders_Users`
 DROP TABLE IF EXISTS `Amount`
 ;
 
+DROP TABLE IF EXISTS `Password_Recovery_Tokens` CASCADE
+;
+
 DROP TABLE IF EXISTS `Users`
 ;
 
@@ -160,7 +163,6 @@ CREATE TABLE `Orders_Users`
 CREATE TABLE `Password_Recovery_Tokens`
 (
 	`id` INT NOT NULL AUTO_INCREMENT,
-	`user_id` INT NOT NULL,
 	`token` VARCHAR(64) NOT NULL,
 	`creation_date` DATETIME NOT NULL,
 	`expiration_date` DATETIME NOT NULL,
