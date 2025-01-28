@@ -89,7 +89,6 @@ class Menu {
     document.addEventListener("click", this.handleClickOutside.bind(this)); // Handle clicks outside the mobile menu
   }
   getActiveUserSession() {
-    alert("estamos entrando");
     const url = "../../controller/users/session-user.php";
     const data = {
       action: "checkSessionLogin"
@@ -113,6 +112,8 @@ class Menu {
         throw new Error("Network error.");
       })
       .then(data => {
+        alert(data);
+
         data = JSON.parse(data);
 
         this.setActiveSession(data["message"]);

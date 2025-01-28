@@ -50,15 +50,17 @@ class HandlerSessionUser {
 
     // Function to handle check session login
     public function handleCheckSessionLogin() {
-
-        session_start();
-        if (isset($_SESSION['logged_in'])) {
-            $response = array("message" => true);
-            echo json_encode($response);
-        } else {
-            $response = array("message" => false);
-            echo json_encode($response);
+        // Verificar si la sesión ya está iniciada antes de llamar a session_start
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
         }
+
+        // Determinar si el usuario está logueado
+        $isLoggedIn = isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true;
+
+        // Enviar una respuesta JSON
+        header('Content-Type: application/json');
+        echo json_encode(["message" => $isLoggedIn]);
     }
 
     // Function to handle user logout
