@@ -96,10 +96,10 @@ class ApiHandlerLoginGoogle
           session_start();
       }
       $_SESSION['logged_in'] = true;
-      $_SESSION['name'] = $name;
-      $_SESSION['email'] = $email;
+    //  $_SESSION['name'] = $name;
+    //  $_SESSION['email'] = $email;
       $_SESSION['session_type'] = "google";
-      
+
       header('Content-Type: application/json');
       echo json_encode(array("message" => true, "google_login" => true));
       exit;

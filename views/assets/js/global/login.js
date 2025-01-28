@@ -169,13 +169,13 @@ class Login {
       .then(data => {
           // Check if 'google_login' is true
           if (data.google_login) {
-              alert("Google login successful: " + JSON.stringify(data));
+              //alert("Google login successful: " + JSON.stringify(data));
 
               // Handle successful login
               menuClass.setActiveSession(data.message);
               menuClass.loginOrLogout();
           } else {
-              alert("Google login failed.");
+              //alert("Google login failed.");
           }
       })
       .catch(error => {
