@@ -65,10 +65,11 @@ class ApiHandlerLoginGoogle
         // Generate the Google OAuth URL
         $authUrl = $client->createAuthUrl();
 
-        // Return the URL for Google login
-        echo json_encode(array("authUrl" => $authUrl));
-        exit; // Exit after sending the response
+        // Redirect the user to the Google OAuth login page
+        header("Location: " . $authUrl);
+        exit; // Exit after the redirect to prevent further code execution
     }
+
 }
 
 // Create an instance of the API handler and process the request
