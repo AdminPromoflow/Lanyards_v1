@@ -2,7 +2,6 @@ class Menu {
   constructor() {
     this.getActiveUserSession();
     // Prepare the URL and data to check session login status
-    //this.getActiveSession();
   //  this.activeSession = true;
     //this.loginOrLogout();
 
@@ -90,6 +89,7 @@ class Menu {
     document.addEventListener("click", this.handleClickOutside.bind(this)); // Handle clicks outside the mobile menu
   }
   getActiveUserSession() {
+    alert("estamos entrando");
     const url = "../../controller/users/session-user.php";
     const data = {
       action: "checkSessionLogin"
