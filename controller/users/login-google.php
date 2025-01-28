@@ -15,11 +15,7 @@ class ApiHandlerLoginGoogle
                     case "loginGoogle":
                         $this->handleLoginGoogle();
                         break;
-                    case "loginGoogleSecondPart":
 
-                        $this->handleLoginGoogleSecondPart();
-
-                        break;
                     default:
                         // Unknown action
                         http_response_code(400); // Bad Request
@@ -56,93 +52,7 @@ class ApiHandlerLoginGoogle
         echo $client->createAuthUrl();
     }
 
-    private function handleLoginGoogleSecondPart() {
 
-        // Configuración inicial de Google OAuth
-        $clientID = '1022332881668-587bktseqso57k6m2dmpfao53vasg83b.apps.googleusercontent.com';
-        $clientSecret = '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';
-        $redirectUri = 'https://lanyardsforyou.com/views/home/index.php';
-
-        // Crear cliente de Google
-        $client = new Google_Client();
-        $client->setClientId($clientID);
-        $client->setClientSecret($clientSecret);
-        $client->setRedirectUri($redirectUri);
-        $client->addScope("email");
-        $client->addScope("profile");
-
-
-
-
-
-
-        // Check if the HTTP_REFERER is set in the server variables
-        if (isset($_SERVER['HTTP_REFERER'])) {
-            $refererUrl = $_SERVER['HTTP_REFERER'];
-
-            // Parse the referer URL to get its components
-            $urlComponents = parse_url($refererUrl);
-
-            // Check if a query string exists in the URL components
-            if (isset($urlComponents['query'])) {
-
-                // Parse the query string into an associative array
-                parse_str($urlComponents['query'], $queryParams);
-
-                  if (!isset($queryParams['code'])) {
-                    $response = array("message" => false,
-                                      "google-login" => true);
-                  }
-                // Check if the 'code' parameter exists in the query string
-                if (isset($queryParams['code'])) {
-                  try {
-                    // Fetch the access token using the authorization code
-                    $token = $client->fetchAccessTokenWithAuthCode($queryParams['code']);
-                    $client->setAccessToken($token['access_token']);
-
-                    // Retrieve the user's profile information
-                    $google_oauth = new Google_Service_Oauth2($client);
-                    $google_account_info = $google_oauth->userinfo->get();
-                    $email = $google_account_info->email;
-                    $name = $google_account_info->name;
-
-
-                    $handlerSessionUser = new HandlerSessionUser();
-                    $handlerSessionUser->activateSession(true);
-
-                    // Return the user's email and name as a JSON response
-                    /*echo json_encode(array(
-                        "email" => $email,
-                        "name" => $name
-                    ));*/
-
-                    $response = array("message" => true,
-                                      "google-login" => true);
-
-                    echo json_encode($response);
-                  } catch (\Exception $e) {
-                    $response = array("message" => true,
-                                      "google-login" => false);
-                    echo json_encode($response);
-
-                  }
-
-
-                }
-            }
-        }
-        else {
-          exit;
-        }
-
-
-
-
-
-
-
-
-    }
 }
 
 require_once '../../controller/assets/lib/composer/vendor/autoload.php';

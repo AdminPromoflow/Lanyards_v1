@@ -26,7 +26,6 @@ class Login {
 
     });
 
-    this.makeAjaxRequestLoginWithGoogleSecondPart();
 
 
     // Event listener to close the login form
@@ -134,48 +133,6 @@ class Login {
         .then(data => {
           //alert(data);
           window.location.href = data;
-        })
-        .catch(error => {
-          console.error("Error:", error);
-        });
-  }
-  makeAjaxRequestLoginWithGoogleSecondPart() {
-    // Define the URL and the JSON data you want to send
-    const url = "../../controller/users/login-google.php";
-    const data = {
-      action: "loginGoogleSecondPart"
-    };
-      // Construct the URL with query parameters
-      const queryParams = new URLSearchParams(data).toString();
-      const fullUrl = `${url}?${queryParams}`; // Append the query parameters to the URL
-
-      // Make the request using the Fetch API
-      fetch(fullUrl, {
-        method: "GET" // HTTP GET method to send data in the URL
-      })
-        .then(response => {
-          if (response.ok) {
-            return response.text(); // or response.json() if you expect a JSON response
-          }
-          throw new Error("Network error.");
-        })
-        .then(data => {
-          //alert(data);
-          data = JSON.parse(data);
-
-          if (data["message"] && data["google-login"]) {
-            location.reload();
-          }
-          else if (data["message"] && !data["google-login"]) {
-            //alert("Please start the session again.");
-          //  location.reload();
-          }
-          else if (!data["message"]) {
-
-          }
-
-
-
         })
         .catch(error => {
           console.error("Error:", error);
