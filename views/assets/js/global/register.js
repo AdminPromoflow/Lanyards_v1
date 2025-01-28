@@ -16,6 +16,7 @@ class Register {
     });
 
     registerWithGoogle1.addEventListener("click", function(){
+      loginClass.makeAjaxRequestRegisterWithGoogle();
     })
     registerWithFacebook1.addEventListener("click", function(){
     })
@@ -182,6 +183,37 @@ class Register {
       })
       .catch(error => {
         console.error("Error:", error);
+      });
+  }
+  makeAjaxRequestRegisterWithGoogle() {
+      // Define the URL and the data to be sent
+      const url = "../../controller/users/register-google.php";
+      const data = {
+          action: "registerGoogle"
+      };
+
+      // Construct the query parameters and full URL
+      const queryParams = new URLSearchParams(data).toString(); // Generate query parameters
+      const fullUrl = `${url}?${queryParams}`; // Append query parameters to the URL
+
+      // Make the request using the Fetch API with GET method
+      fetch(fullUrl, {
+          method: "GET" // Use GET method
+      })
+      .then(response => {
+          if (!response.ok) {
+              throw new Error("Network error.");
+          }
+          return response.text(); // You can use .json() if expecting a JSON response
+      })
+      .then(data => {
+        alert(data);
+        //  alert("The registration has been successful. Now you can log in."); // Display the data from the response
+          // Optionally, redirect based on the data received
+        //  location.reload();
+      })
+      .catch(error => {
+          console.error("Error:", error); // Log any errors to the console
       });
   }
 }
