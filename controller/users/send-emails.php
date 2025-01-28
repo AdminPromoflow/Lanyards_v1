@@ -123,7 +123,7 @@ class EmailSender {
               <!-- Footer Section -->
               <div class='footer' style='position: relative; background: rgba(106, 123, 141, 1); width: 100%; margin-top: calc(1.8vw + 0.8em); padding: calc(1vw + 1em) 0;'>
                 <!-- Footer container -->
-                <h2 style='position: relative; font-family: Oswald, sans-serif; color: rgb(250,250,250); font-weight: 600; font-size: calc(0.8vw + 0.8em); position: relative; margin: 0 auto; letter-spacing: 0px;  padding-top: calc(1vw + 1em);  text-align: center;'>
+                <h2 style='position: relative; font-family: Oswald, sans-serif; color: rgb(250,250,250); font-weight: 600; font-size: calc(0.8vw + 0.8em); position: relative; margin: 0 auto; letter-spacing: 0px; text-align: center;'>
                 Thanks for joining our online community!
                 </h2>
               </div>
@@ -351,7 +351,7 @@ class EmailSender {
               <!-- Footer Section -->
               <div class='footer' style='position: relative; background: rgba(106, 123, 141, 1); width: 100%; margin-top: calc(1.8vw + 0.8em); padding: calc(1vw + 1em) 0;'>
                 <!-- Footer container -->
-                <h2 style='position: relative; font-family: Oswald, sans-serif; color: rgb(250,250,250); font-weight: 600; font-size: calc(0.8vw + 0.8em); position: relative; margin: 0 auto; letter-spacing: 0px;  padding-top: calc(1vw + 1em);  text-align: center;'>
+                <h2 style='position: relative; font-family: Oswald, sans-serif; color: rgb(250,250,250); font-weight: 600; font-size: calc(0.8vw + 0.8em); position: relative; margin: 0 auto; letter-spacing: 0px;  text-align: center;'>
                 One more user joining our online community!
                 </h2>
               </div>
