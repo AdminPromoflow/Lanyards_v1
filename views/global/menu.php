@@ -22,7 +22,7 @@
 
   <!-- Container for secondary menu items -->
   <div class="containerItems2">
-    <h3 class="openSignup showItemsMenuLoginFalse">Sign up</h3> <!-- Register, visible when logged out -->
+    <h3 class="openSignup openLogin showItemsMenuLoginFalse">Sign up</h3> <!-- Register, visible when logged out -->
     <h3 class="openLogin showItemsMenuLoginFalse">Login</h3> <!-- Login button, visible when logged out -->
     <img class="showItemsMenuLoginTrue openLogout border_right_menu" src="../assets/img/global/menu/checkout.png" alt=""> <!-- Checkout icon, visible when logged in -->
     <img  id="showLogout"class="showItemsMenuLoginTrue openLogout logoutButtons" src="../../views/assets/img/global/menu/user_icon.png" alt=""> <!-- Checkout icon, visible when logged in -->
