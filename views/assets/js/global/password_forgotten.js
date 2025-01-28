@@ -48,7 +48,7 @@ class PasswordForgotten {
 
         // Process the successful response
         if (data.success) { // Assuming your API returns a `success` property
-          alert("Password recovery email sent successfully!");
+          alert("Recovery email sent successfully. Please check your inbox.");
           // Optionally reload the page
         } else {
           alert("The provided email is not registered.");
