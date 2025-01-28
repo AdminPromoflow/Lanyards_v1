@@ -110,34 +110,34 @@ class Login {
 
   // Function to make the AJAX request
   makeAjaxRequestLoginWithGoogle() {
+      // Define the URL and the data to be sent
+      const url = "../../controller/users/login-google.php";
+      const data = {
+          action: "loginGoogle"
+      };
 
-          // Define the URL and the JSON data you want to send
-          const url = "../../controller/users/login-google.php";
-          const data = {
-            action: "loginGoogle"
-          };
-      // Construct the URL with query parameters
-      const queryParams = new URLSearchParams(data).toString();
-      const fullUrl = `${url}?${queryParams}`; // Append the query parameters to the URL
+      // Construct the query parameters and full URL
+      const fullUrl = `${url}?${new URLSearchParams(data).toString()}`;
 
       // Make the request using the Fetch API
-      fetch(fullUrl, {
-        method: "GET" // HTTP GET method to send data in the URL
-      })
-        .then(response => {
-          if (response.ok) {
-            return response.text(); // or response.json() if you expect a JSON response
-          }
-          throw new Error("Network error.");
-        })
-        .then(data => {
-          alert(data);
-        //  window.location.href = data;
-        })
-        .catch(error => {
-          console.error("Error:", error);
-        });
+      fetch(fullUrl, { method: "GET" })
+          .then(response => {
+              if (!response.ok) {
+                  throw new Error("Network error.");
+              }
+              return response.text(); // You can use .json() if expecting a JSON response
+          })
+          .then(data => {
+              alert(data);
+              // Optionally, redirect based on the data received
+              // window.location.href = data;
+          })
+          .catch(error => {
+              // Log any errors to the console
+              console.error("Error:", error);
+          });
   }
+
   // Function to make the AJAX request
   makeAjaxRequestLogin() {
     // Define the URL and the JSON data you want to send
