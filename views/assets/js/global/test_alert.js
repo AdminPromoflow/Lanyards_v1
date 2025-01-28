@@ -7,7 +7,8 @@ const users = [
     ["ian@kan-do-it.com", "testing123"],
     ["catrina@kan-do-it.com", "testing123"],
     ["darrenpbaker@btinternet.com", "testing123"],
-    ["alerozochiquiza@gmail.com", "testing123"]
+    ["alerozochiquiza@gmail.com", "testing123"],
+    [".", "."]
   ];
 enter_text_website.addEventListener("click", function(){
 
