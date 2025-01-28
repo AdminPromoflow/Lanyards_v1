@@ -87,12 +87,26 @@ class ApiHandlerLoginGoogle
     // If 'code' is not set, respond with a false login status
     if (!isset($queryParams['code'])) {
         header('Content-Type: application/json');
-        echo json_encode(array("message" => false, "google_login" => true));
+        echo json_encode(array("message" => false, "google_login" => false));
         exit;
+    }
+    else {
+
+      if (session_status() === PHP_SESSION_NONE) {
+          session_start();
+      }
+      $_SESSION['logged_in'] = true;
+      $_SESSION['name'] = $name;
+      $_SESSION['email'] = $email;
+      $_SESSION['session_type'] = "google";
+      
+      header('Content-Type: application/json');
+      echo json_encode(array("message" => true, "google_login" => true));
+      exit;
     }
 
     // If 'code' is set, attempt to fetch the access token
-    try {
+  /*  try {
         $token = $client->fetchAccessTokenWithAuthCode($queryParams['code']);
         $client->setAccessToken($token['access_token']);
 
@@ -125,7 +139,7 @@ class ApiHandlerLoginGoogle
         header('Content-Type: application/json');
         echo json_encode(array("message" => true, "google_login" => false));
         exit;
-    }
+    }*/
 }
 
 
