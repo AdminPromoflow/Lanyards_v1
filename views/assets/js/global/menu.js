@@ -192,7 +192,7 @@ class Menu {
           // If logout is successful, reload the page
           chargingClass.hideShowchargin(false);
 
-          alert("Successfully logged out.");
+        //  alert("Successfully logged out.");
           window.location.href = "https://lanyardsforyou.com/views/home/index.php";
         })
         .catch(error => {
