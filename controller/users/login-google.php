@@ -1,19 +1,11 @@
 <?php
-
-
-require_once '../../controller/assets/lib/composer/vendor/autoload.php'; // Load Google API dependencies
-//echo json_encode(array("authUrl" => "hola"));exit;
-
-///require_once '../../controller/users/session-user.php'; // Load session controller
-
 class ApiHandlerLoginGoogle
 {
-    // Function to handle incoming requests
     public function handleRequest() {
+
 
         // Check if a GET request was received
         if ($_SERVER["REQUEST_METHOD"] == "GET") {
-
             // Check if "action" exists in the query parameters
             if (isset($_GET['action'])) {
                 $action = $_GET['action'];
@@ -21,40 +13,35 @@ class ApiHandlerLoginGoogle
                 // Perform actions based on the request
                 switch ($action) {
                     case "loginGoogle":
-                        $this->handleLoginGoogle(); // Handle Google login
+                        $this->handleLoginGoogle();
                         break;
 
                     default:
-                        // Unknown action, respond with a bad request
+                        // Unknown action
                         http_response_code(400); // Bad Request
                         $response = array("message" => "Unknown action");
                         echo json_encode($response);
-                        exit; // Exit after sending the response
+                        break;
                 }
             } else {
-                // Missing "action" parameter, respond with a bad request
+                // Missing "action" parameter
                 http_response_code(400); // Bad Request
-                $response = array("message" => "Missing 'action' parameter");
-                echo json_encode($response);
-                exit; // Exit after sending the response
+                echo json_encode(array("message" => "Missing 'action' parameter"));
             }
         } else {
             // The request is not a valid GET request
             http_response_code(405); // Method Not Allowed
-            $response = array("message" => "Method not allowed");
-            echo json_encode($response);
-            exit; // Exit after sending the response
+            echo json_encode(array("message" => "Method not allowed"));
         }
     }
 
-    // Function to handle Google login
     private function handleLoginGoogle() {
-        // Initial Google OAuth configuration
+        // Configuración inicial de Google OAuth
         $clientID = '1022332881668-587bktseqso57k6m2dmpfao53vasg83b.apps.googleusercontent.com';
         $clientSecret = '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';
         $redirectUri = 'https://lanyardsforyou.com/views/home/index.php';
 
-        // Create Google client
+        // Crear cliente de Google
         $client = new Google_Client();
         $client->setClientId($clientID);
         $client->setClientSecret($clientSecret);
@@ -62,17 +49,19 @@ class ApiHandlerLoginGoogle
         $client->addScope("email");
         $client->addScope("profile");
 
-        // Generate the Google OAuth URL
-        $authUrl = $client->createAuthUrl();
-
-        // Redirect the user to the Google OAuth login page
-        header("Location: " . $authUrl);
-        exit; // Exit after the redirect to prevent further code execution
+        echo $client->createAuthUrl();
     }
+
 
 }
 
-// Create an instance of the API handler and process the request
+require_once '../../controller/assets/lib/composer/vendor/autoload.php';
+require_once '../../controller/users/session-user.php';
+
+
+
+
+//controller/assets/lib/vendor/autoload.php
 $apiHandlerLoginGoogle = new ApiHandlerLoginGoogle();
 $apiHandlerLoginGoogle->handleRequest();
 ?>
