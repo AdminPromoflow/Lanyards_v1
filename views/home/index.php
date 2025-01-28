@@ -48,7 +48,6 @@
             <?php include "../../views/home/sections/2-choose-create-lanyard.php" ?>
 
             <?php include "../../views/home/sections/3-materials.php" ?>
-            <?php include "../../views/home/sections/5-best-seller.php" ?>
             <?php include "../../views/home/sections/4-about-us.php" ?>
             <?php include "../../views/home/sections/contact-us.php" ?>
             <?php include "../../views/global/footer.php" ?>

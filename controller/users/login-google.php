@@ -51,8 +51,6 @@ class ApiHandlerLoginGoogle
 
         echo $client->createAuthUrl();
     }
-
-
 }
 
 require_once '../../controller/assets/lib/composer/vendor/autoload.php';
