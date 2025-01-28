@@ -47,7 +47,6 @@ class PasswordForgotten {
         if (data.success) { // Assuming your API returns a `success` property
           alert("Password recovery email sent successfully!");
           // Optionally reload the page
-           window.location.href = '../../views/home/index.php';
         } else {
           alert("The provided email is not registered.");
         }

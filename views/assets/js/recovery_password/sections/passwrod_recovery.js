@@ -45,8 +45,7 @@ class RecoveryPassword {
             // Verificar el resultado y mostrar el mensaje correspondiente
             if (data.success) {
                 alert('Password recovery successful!');
-                // Redirigir o realizar alguna acción después de la recuperación exitosa
-                // window.location.href = 'https://lanyardsforyou.com/success-page';
+                window.location.href = '../../views/home/index.php';
             } else {
                 alert('Error: ' + data.message);
             }
