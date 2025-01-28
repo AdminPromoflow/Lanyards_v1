@@ -133,6 +133,8 @@ class ApiHandlerLoginGoogle
             }
         }
         else {
+          header('Content-Type: application/json');
+          echo json_encode(array("message" => false, "google_login" => false));
           exit;
         }
 
