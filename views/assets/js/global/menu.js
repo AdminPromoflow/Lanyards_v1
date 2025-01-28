@@ -127,27 +127,26 @@ class Menu {
       });
   }
 
-  loginOrLogout(){
-    var activeSession = this.getActiveSession(); // Asume que esta función devuelve true o false
+  loginOrLogout() {
+    // Assume that this.getActiveSession() returns true (active session) or false (no session)
+    const activeSession = this.getActiveSession();
 
-    if (activeSession) {
-        // Si la sesión está activa
-        openLogin.forEach(element => {
-            element.style.display = 'none'; // Ocultar botones de login
-        });
-        openLogoutClass.forEach(element => {
-            element.style.display = 'flex'; // Mostrar botones de logout
-        });
-    } else {
-        // Si no hay sesión activa
-        openLogin.forEach(element => {
-            element.style.display = 'flex'; // Mostrar botones de login
-        });
-        openLogoutClass.forEach(element => {
-            element.style.display = 'none'; // Ocultar botones de logout
-        });
+    // Ensure openLogin and openLogoutClass are defined
+    if (!openLogin || !openLogoutClass) {
+      console.error("Error: 'openLogin' or 'openLogoutClass' elements are not defined.");
+      return;
     }
+
+    // Toggle display based on the session state
+    openLogin.forEach(element => {
+      element.style.display = activeSession ? 'none' : 'flex'; // Show or hide login buttons
+    });
+
+    openLogoutClass.forEach(element => {
+      element.style.display = activeSession ? 'flex' : 'none'; // Show or hide logout buttons
+    });
   }
+
 
   getActiveSession() {
         return this.activeSession;
