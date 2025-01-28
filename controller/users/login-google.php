@@ -54,7 +54,7 @@ class ApiHandlerLoginGoogle
 
         echo $client->createAuthUrl();
     }
-    private function validateGoogleLogin() {
+  private function validateGoogleLogin() {
     // Google OAuth initial configuration
     $clientID = '1022332881668-587bktseqso57k6m2dmpfao53vasg83b.apps.googleusercontent.com';
     $clientSecret = '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';
@@ -86,6 +86,7 @@ class ApiHandlerLoginGoogle
 
     // If 'code' is not set, respond with a false login status
     if (!isset($queryParams['code'])) {
+        header('Content-Type: application/json');
         echo json_encode(array("message" => false, "google_login" => true));
         exit;
     }
@@ -116,10 +117,14 @@ class ApiHandlerLoginGoogle
       //  $handlerSessionUser->activateSession(true);
 
         // Return a success response
+        header('Content-Type: application/json');
         echo json_encode(array("message" => true, "google_login" => true));
+        exit;
     } catch (\Exception $e) {
         // If an error occurs, respond with a failed login status
+        header('Content-Type: application/json');
         echo json_encode(array("message" => true, "google_login" => false));
+        exit;
     }
 }
 

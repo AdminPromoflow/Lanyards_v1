@@ -164,24 +164,25 @@ class Login {
           if (!response.ok) {
               throw new Error("Network error.");
           }
-          return response.text(); // You can use .json() if expecting a JSON response
+          return response.json(); // Parse the response as JSON
       })
       .then(data => {
-          // Optionally, redirect based on the data received
-          // window.location.href = data;
-          alert(data.google_login);
+          // Check if 'google_login' is true
           if (data.google_login) {
-            alert(data); // Display the data from the response
+              alert("Google login successful: " + JSON.stringify(data));
 
-            menuClass.setActiveSession(parsedData.message);
-            menuClass.loginOrLogout();
+              // Handle successful login
+              menuClass.setActiveSession(data.message);
+              menuClass.loginOrLogout();
+          } else {
+              alert("Google login failed.");
           }
-
       })
       .catch(error => {
           console.error("Error:", error); // Log any errors to the console
       });
   }
+
 
   // Function to make the AJAX request
   makeAjaxRequestLogin() {
