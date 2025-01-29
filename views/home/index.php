@@ -34,7 +34,7 @@
 
         <!-- Content section -->
         <div class="content">
-          <?php // include "../../views/global/customize-lanyard/customize-lanyard.php" ?>
+          <?php  include "../../views/global/customize-lanyard/customize-lanyard.php" ?>
 
           <!-- Include the menu component -->
           <?php include "../../views/global/menu.php"; ?>
