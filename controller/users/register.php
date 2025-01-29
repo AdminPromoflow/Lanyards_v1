@@ -44,63 +44,45 @@ class ApiHandler {
 
     // Function to handle user registration
     private function handleRegistration($data) {
-        // Extract user registration data from JSON
-        $name = $data->nameRegister;
-        $email = $data->emailRegister;
-        $password = $data->passwordRegister;
-        $signupCategory = $data->signupCategory;
+        try {
+            // Extract and validate user data
+            $security = new Security();
+            $validatedData = $security->validateUserData(
+                $data->nameRegister,
+                $data->emailRegister,
+                $data->passwordRegister
+            );
 
+            if (!$validatedData) {
+                echo json_encode(["message" => "0"]); // Validation failed (user may exist)
+                return;
+            }
 
-        // Validate user data using the Security class
-        $security = new Security();
-
-        $var = $security->validateUserData($name, $email, $password);
-
-        if (!!$var) {
-
-            // Create a database connection
+            // Create a database connection and user instance
             $connection = new Database();
-
-            // Create a new Users instance and set user data
             $user = new Users($connection);
-            $user->setName($var['username']);
-            $user->setEmail($var['email']);
-            $user->setPassword($var['password']);
-            $user->setSignupCategory($signupCategory);
+            $user->setName($validatedData['username']);
+            $user->setEmail($validatedData['email']);
+            $user->setPassword($validatedData['password']);
+            $user->setSignupCategory($data->signupCategory);
+            $user->createUser(); // Insert user into the database
 
-            // Create the user in the database
-            $user->createUser();
-
-
-            ob_start();
-
-            // Usage
+            // Send registration email
             $emailSender = new EmailSender();
-            $emailSender->setRecipientEmail($var['email']);
-            $emailSender->setRecipientName($var['username']);
-            $emailSender->setRecipientPassword($password);
+            $emailSender->setRecipientEmail($validatedData['email']);
+            $emailSender->setRecipientName($validatedData['username']);
+            $emailSender->setRecipientPassword($data->passwordRegister);
 
-            $emailAnswer = $emailSender->sendEmailRegistration();
-            //$emailSender->sendEmailRegistrationToAdmin();
-            $output = ob_get_clean();
+            $emailSent = $emailSender->sendEmailRegistration();
 
+            // Send response based on email status
+            echo json_encode(["message" => $emailSent == '1' ? "1" : "-1"]);
 
-            if ($emailAnswer ==  '1') {
-              // Send a success response
-              $response = array("message" => "1");
-              echo json_encode($response);
-            }
-            else {
-              $response = array("message" => "-1");
-              echo json_encode($response);
-            }
-
-        } else {
-            // User data validation failed, user may already exist
-            $response = array("message" => "0");
-            echo json_encode($response);
+        } catch (Exception $e) {
+            echo json_encode(["message" => "-1", "error" => $e->getMessage()]);
         }
     }
+
 
 }
 // Include required files
