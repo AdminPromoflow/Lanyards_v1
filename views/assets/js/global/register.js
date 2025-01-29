@@ -136,58 +136,58 @@ class Register {
 
   // Function to make the AJAX request
   makeAjaxRequestRegister() {
-    // Define the URL and the JSON data you want to send
-    const url = "../../controller/users/register.php"; // Replace with your API endpoint URL
+    const url = "../../controller/users/register.php"; // API endpoint
     const data = {
       action: "register",
-      nameRegister: nameRegister.value,
-      emailRegister: emailRegister.value,
-      passwordRegister: passwordRegister.value,
+      nameRegister: nameRegister.value.trim(),
+      emailRegister: emailRegister.value.trim(),
+      passwordRegister: passwordRegister.value.trim(),
       signupCategory: "normal"
     };
-    // Make the request using the Fetch API
-    fetch(url, {
-      method: "POST", // HTTP POST method to send data
-      headers: {
-        "Content-Type": "application/json" // Indicate that you're sending JSON
-      },
-      body: JSON.stringify(data) // Convert the JSON object to a JSON string and send it
-    })
-      .then(response => {
-        if (response.ok) {
-          return response.text(); // or response.json() if you expect a JSON response
-        }
-        throw new Error("Network error.");
-      })
-      .then(data => {
-    //    alert(data);
-       data = JSON.parse(data);
-       chargingClass.hideShowchargin(false);
 
-        if (data["message"] == 1) {
-          alert('Successful registration. We welcome you to our community');
+    // Show loading indicator
+    chargingClass.hideShowchargin(true);
+
+    fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Network error: ${response.status}`);
+      }
+      return response.json(); // Expecting JSON response
+    })
+    .then(data => {
+      chargingClass.hideShowchargin(false); // Hide loading indicator
+
+      switch (data.message) {
+        case "1":
+          alert("Successful registration. Welcome to our community!");
           loginClass.showLogin(700);
           registerClass.hideRegister(700);
-        }
-        else if  (data["message"] == -1) {
-          alert('Successful registration. We welcome you to our community');
+          break;
+        case "-1":
+          alert("An error occurred while sending the confirmation email.");
           loginClass.showLogin(0);
           registerClass.hideRegister(0);
-        }
-        else if  (data["message"] == 0) {
-          alert('No successful registration. The user already exists');
-        }
-        else {
-          alert('An error has occurred. Please try again');
-        }
-        // The code inside this function will run when the request is complete
-        // Hide the register form with a sliding animation
-      })
-      .catch(error => {
-        console.log("Error:", error);
-        location.reload();
-      });
+          break;
+        case "0":
+          alert("Registration unsuccessful. The user already exists.");
+          break;
+        default:
+          alert("An unexpected error occurred. Please try again.");
+          break;
+      }
+    })
+    .catch(error => {
+      console.error("Error:", error);
+      alert("A network error occurred. Please check your connection.");
+      location.reload();
+    });
   }
+
   makeAjaxRequestRegisterWithGoogle() {
       // Define the URL and the data to be sent
       const url = "../../controller/users/register-google.php";
