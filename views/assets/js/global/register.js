@@ -184,7 +184,8 @@ class Register {
         // Hide the register form with a sliding animation
       })
       .catch(error => {
-        console.error("Error:", error);
+        alert("Error:", error);
+        location.reload();
       });
   }
   makeAjaxRequestRegisterWithGoogle() {
