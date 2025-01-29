@@ -44,13 +44,16 @@ class PasswordForgotten {
         return response.json(); // Parse the response as JSON
       })
       .then((data) => {
-        chargingClass.hideShowchargin(false);
 
         // Process the successful response
         if (data.success) { // Assuming your API returns a `success` property
+          chargingClass.hideShowchargin(false);
+
           alert("Recovery email sent successfully. Please check your inbox.");
           // Optionally reload the page
         } else {
+          chargingClass.hideShowchargin(false);
+
           alert("The provided email is not registered.");
         }
       })
@@ -88,7 +91,7 @@ class PasswordForgotten {
 
     }
   }
-  
+
 }
 const password_forgotten_background = document.getElementById("password_forgotten_background");
 const password_forgotten_close = document.getElementById("password_forgotten_close");
