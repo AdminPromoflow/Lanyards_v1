@@ -53,9 +53,8 @@ class PasswordForgotten {
           // Optionally reload the page
         } else {
           chargingClass.hideShowchargin(false);
-
-          alert("The provided email is not registered.");
         }
+        location.reload();
       })
       .catch((error) => {
         // Handle errors
