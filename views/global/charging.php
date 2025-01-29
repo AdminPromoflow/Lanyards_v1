@@ -1,8 +1,8 @@
-<link rel="stylesheet" href="../../views/assets/css/global/charging.css">
+<link rel="stylesheet" href="../../views/assets/css/global/charging.css?v=<?php echo filemtime('../../views/assets/css/global/charging.css'); ?>">
+
 <div class="charging_background" id="charging_background">
-  <img src="../../views/assets/img/charging/charge.gif" alt="">
+  <img src="../../views/assets/img/charging/charge.gif?v=<?php echo filemtime('../../views/assets/img/charging/charge.gif'); ?>" alt="">
   <p>Please wait, we are loading the data.</p>
 </div>
-<script src="../../views/assets/js/global/charging.js" type="text/javascript">
 
-</script>
+<script src="../../views/assets/js/global/charging.js?v=<?php echo filemtime('../../views/assets/js/global/charging.js'); ?>" type="text/javascript"></script>
