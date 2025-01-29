@@ -12,22 +12,19 @@
 
   <title>Lanyards for you</title>
 
-  <!-- Add the CSS file -->
-  <link rel="stylesheet" type="text/css" href="../assets/css/home/style.css">
-  <link rel="stylesheet" href="../assets/css/home/sectons/1-slider.css">
-  <link rel="stylesheet" href="../assets/css/home/sectons/2-choose-create-lanyard.css">
-  <link rel="stylesheet" href="../assets/css/home/sectons/3-materials.css">
-
-
-  <link rel="stylesheet" href="../assets/css/global/login.css">
-  <link rel="stylesheet" href="../assets/css/global/register.css">
-
+  <!-- Add the CSS files with versioning -->
+  <link rel="stylesheet" type="text/css" href="../assets/css/home/style.css?v=<?php echo filemtime('../assets/css/home/style.css'); ?>">
+  <link rel="stylesheet" href="../assets/css/home/sectons/1-slider.css?v=<?php echo filemtime('../assets/css/home/sectons/1-slider.css'); ?>">
+  <link rel="stylesheet" href="../assets/css/home/sectons/2-choose-create-lanyard.css?v=<?php echo filemtime('../assets/css/home/sectons/2-choose-create-lanyard.css'); ?>">
+  <link rel="stylesheet" href="../assets/css/home/sectons/3-materials.css?v=<?php echo filemtime('../assets/css/home/sectons/3-materials.css'); ?>">
+  <link rel="stylesheet" href="../assets/css/global/login.css?v=<?php echo filemtime('../assets/css/global/login.css'); ?>">
+  <link rel="stylesheet" href="../assets/css/global/register.css?v=<?php echo filemtime('../assets/css/global/register.css'); ?>">
 
 </head>
 <body>
   <section>
-    <?php  include "../../views/global/test_alert.php" ?>
-    <?php  include "../../views/global/charging.php" ?>
+    <?php include "../../views/global/test_alert.php"; ?>
+    <?php include "../../views/global/charging.php"; ?>
 
     <!-- Background section -->
     <div class="background">
@@ -36,46 +33,41 @@
       <div class="container" id="dad-customize-lanyard">
 
         <!-- Content section -->
-        <div class="content" >
+        <div class="content">
           <?php // include "../../views/global/customize-lanyard/customize-lanyard.php" ?>
 
-
           <!-- Include the menu component -->
-          <?php include "../../views/global/menu.php" ?>
+          <?php include "../../views/global/menu.php"; ?>
           <div class="bgLanyards">
 
-          <!-- Include the slider component for the index page -->
-          <?php include "../../views/home/sections/1-slider.php" ?>
-
-            <?php include "../../views/home/sections/2-choose-create-lanyard.php" ?>
-
-            <?php include "../../views/home/sections/3-materials.php" ?>
-            <?php include "../../views/home/sections/4-about-us.php" ?>
-            <?php include "../../views/home/sections/contact-us.php" ?>
-            <?php include "../../views/global/footer.php" ?>
+            <!-- Include the slider component for the index page -->
+            <?php include "../../views/home/sections/1-slider.php"; ?>
+            <?php include "../../views/home/sections/2-choose-create-lanyard.php"; ?>
+            <?php include "../../views/home/sections/3-materials.php"; ?>
+            <?php include "../../views/home/sections/4-about-us.php"; ?>
+            <?php include "../../views/home/sections/contact-us.php"; ?>
+            <?php include "../../views/global/footer.php"; ?>
 
           </div>
         </div>
 
-          <!-- Include the login component -->
-          <?php include "../../views/global/login.php" ?>
+        <!-- Include the login component -->
+        <?php include "../../views/global/login.php"; ?>
+        <?php include "../../views/global/password_forgotten.php"; ?>
 
-          <?php include "../../views/global/password_forgotten.php" ?>
-
-          <!-- Include the register component -->
-          <?php include "../../views/global/register.php" ?>
-
-
+        <!-- Include the register component -->
+        <?php include "../../views/global/register.php"; ?>
 
       </div>
     </div>
   </section>
 
-  <!-- Add the JS file -->
-  <script src="../assets/js/global/login.js"></script>
-  <script src="../assets/js/home/app.js"></script>
-  <script src="../assets/js/home/sectons/1-slider.js"></script>
-  <script src="../assets/js/home/sectons/2-choose-create-lanyard.js"></script>
-  <script src="../assets/js/home/sectons/3-materials.js"></script>
+  <!-- Add the JS files with versioning -->
+  <script src="../assets/js/global/login.js?v=<?php echo filemtime('../assets/js/global/login.js'); ?>"></script>
+  <script src="../assets/js/home/app.js?v=<?php echo filemtime('../assets/js/home/app.js'); ?>"></script>
+  <script src="../assets/js/home/sectons/1-slider.js?v=<?php echo filemtime('../assets/js/home/sectons/1-slider.js'); ?>"></script>
+  <script src="../assets/js/home/sectons/2-choose-create-lanyard.js?v=<?php echo filemtime('../assets/js/home/sectons/2-choose-create-lanyard.js'); ?>"></script>
+  <script src="../assets/js/home/sectons/3-materials.js?v=<?php echo filemtime('../assets/js/home/sectons/3-materials.js'); ?>"></script>
+
 </body>
 </html>
