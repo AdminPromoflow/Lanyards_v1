@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="../assets/css/home/sectons/1-slider.css?v=<?php echo filemtime('../assets/css/home/sectons/1-slider.css'); ?>">
 <section class="sliderContainer">
 
   <div id="sliderLong" class="sliderLong">
@@ -147,3 +148,4 @@ for (let i = 0; i < open_choose_options_lanyards.length; i++) {
 <div id="arrow_slider" class="arrow_slider">
   <img src="../../views/assets/img/home/1-slider/arrow_top.png" alt="">
 </div>
+<script src="../assets/js/home/sectons/1-slider.js?v=<?php echo filemtime('../assets/js/home/sectons/1-slider.js'); ?>"></script>

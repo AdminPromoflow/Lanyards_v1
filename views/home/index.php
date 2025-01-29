@@ -14,11 +14,6 @@
 
   <!-- Add the CSS files with versioning -->
   <link rel="stylesheet" type="text/css" href="../assets/css/home/style.css?v=<?php echo filemtime('../assets/css/home/style.css'); ?>">
-  <link rel="stylesheet" href="../assets/css/home/sectons/1-slider.css?v=<?php echo filemtime('../assets/css/home/sectons/1-slider.css'); ?>">
-  <link rel="stylesheet" href="../assets/css/home/sectons/2-choose-create-lanyard.css?v=<?php echo filemtime('../assets/css/home/sectons/2-choose-create-lanyard.css'); ?>">
-  <link rel="stylesheet" href="../assets/css/home/sectons/3-materials.css?v=<?php echo filemtime('../assets/css/home/sectons/3-materials.css'); ?>">
-  <link rel="stylesheet" href="../assets/css/global/login.css?v=<?php echo filemtime('../assets/css/global/login.css'); ?>">
-  <link rel="stylesheet" href="../assets/css/global/register.css?v=<?php echo filemtime('../assets/css/global/register.css'); ?>">
 
 </head>
 <body>
@@ -63,11 +58,7 @@
   </section>
 
   <!-- Add the JS files with versioning -->
-  <script src="../assets/js/global/login.js?v=<?php echo filemtime('../assets/js/global/login.js'); ?>"></script>
   <script src="../assets/js/home/app.js?v=<?php echo filemtime('../assets/js/home/app.js'); ?>"></script>
-  <script src="../assets/js/home/sectons/1-slider.js?v=<?php echo filemtime('../assets/js/home/sectons/1-slider.js'); ?>"></script>
-  <script src="../assets/js/home/sectons/2-choose-create-lanyard.js?v=<?php echo filemtime('../assets/js/home/sectons/2-choose-create-lanyard.js'); ?>"></script>
-  <script src="../assets/js/home/sectons/3-materials.js?v=<?php echo filemtime('../assets/js/home/sectons/3-materials.js'); ?>"></script>
 
 </body>
 </html>

@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="../assets/css/global/register.css?v=<?php echo filemtime('../assets/css/global/register.css'); ?>">
+
 <section id="register" class="register">
   <div id="containerRegister" class="containerRegister">
     <div class="headRegister">

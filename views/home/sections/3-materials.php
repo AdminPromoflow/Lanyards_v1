@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="../assets/css/home/sectons/3-materials.css?v=<?php echo filemtime('../assets/css/home/sectons/3-materials.css'); ?>">
 <section class="materials">
   <h1>Create your own lanyard from scratch.</h1>
 
@@ -92,3 +93,4 @@
     </div>
   </div>
 </section>
+<script src="../assets/js/home/sectons/3-materials.js?v=<?php echo filemtime('../assets/js/home/sectons/3-materials.js'); ?>"></script>

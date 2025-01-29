@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="../assets/css/home/sectons/2-choose-create-lanyard.css?v=<?php echo filemtime('../assets/css/home/sectons/2-choose-create-lanyard.css'); ?>">
 <section id="section_most_popular" class="chooseCreateLanyard">
     <h1>Information About Our Customisation Options</h1>
 
@@ -452,3 +453,4 @@
       <button type="button" name="button">Start</button>
   <!--  -->
 </section>
+<script src="../assets/js/home/sectons/2-choose-create-lanyard.js?v=<?php echo filemtime('../assets/js/home/sectons/2-choose-create-lanyard.js'); ?>"></script>

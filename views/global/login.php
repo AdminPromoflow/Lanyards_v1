@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="../assets/css/global/login.css?v=<?php echo filemtime('../assets/css/global/login.css'); ?>">
+
 <section id="login" class="login">
 
   <div id="containerLogin"  class="containerLogin">
@@ -12,7 +14,7 @@
       <input id="emailLogin" type="text" name="" value="" placeholder="Email">
       <input id="passwordLogin" type="password" name="" value="" placeholder="Password">
       <h3 id="password_forgotten">Have you forgotten your password?</h3>
- 
+
       <button id="loginButton" type="button" name="button"><strong class="fontWeightButtonLogin">Login</strong></button>
     </div>
     <div class="footerLogin">
@@ -39,14 +41,4 @@
 
 
 </section>
-<style media="screen">
-
-</style>
-
-
-
-
-
-<script type="text/javascript">
-
-</script>
+<script src="../assets/js/global/login.js?v=<?php echo filemtime('../assets/js/global/login.js'); ?>"></script>
