@@ -41,4 +41,3 @@
 
 
 </section>
-<script src="../assets/js/global/login.js?v=<?php echo filemtime('../assets/js/global/login.js'); ?>"></script>

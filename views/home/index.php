@@ -59,6 +59,7 @@
 
   <!-- Add the JS files with versioning -->
   <script src="../assets/js/home/app.js?v=<?php echo filemtime('../assets/js/home/app.js'); ?>"></script>
+  <script src="../assets/js/global/login.js?v=<?php echo filemtime('../assets/js/global/login.js'); ?>"></script>
 
 </body>
 </html>
