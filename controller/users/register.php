@@ -21,9 +21,7 @@ class ApiHandler {
                         $this->handleRegistration($data);
                         break;
 
-                    case "login":
-                        $this->handleLogin();
-                        break;
+
 
                     default:
                         // Unknown action
@@ -50,6 +48,7 @@ class ApiHandler {
         $name = $data->nameRegister;
         $email = $data->emailRegister;
         $password = $data->passwordRegister;
+        $signupCategory = $data->signupCategory;
 
 
         // Validate user data using the Security class
@@ -67,6 +66,7 @@ class ApiHandler {
             $user->setName($var['username']);
             $user->setEmail($var['email']);
             $user->setPassword($var['password']);
+            $user->setSignupCategory($signupCategory);
 
             // Create the user in the database
             $user->createUser();
@@ -102,13 +102,6 @@ class ApiHandler {
         }
     }
 
-    // Function to handle user login
-    private function handleLogin() {
-        // Logic to process user login
-        // Implement your login logic here and handle any errors appropriately.
-        $response = array("message" => "Login successful");
-        echo json_encode($response);
-    }
 }
 // Include required files
 
@@ -117,7 +110,6 @@ require_once '../../models/users.php';
 require_once '../../controller/users/send-emails.php';
 
 require_once '../../controller/config/database.php';
-
 
 require_once '../../controller/config/security.php';
 

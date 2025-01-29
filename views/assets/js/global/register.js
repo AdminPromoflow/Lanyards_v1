@@ -35,16 +35,6 @@ class Register {
       // Call validation functions and display error or success messages
       if (registerClass.validateName() && registerClass.validateEmail() && registerClass.validatePassword()) {
         chargingClass.hideShowchargin(true);
-
-        // Define the URL and the JSON data you want to send
-        const url = "../../controller/users/register.php"; // Replace with your API endpoint URL
-        const data = {
-          action: "register",
-          nameRegister: nameRegister.value,
-          emailRegister: emailRegister.value,
-          passwordRegister: passwordRegister.value
-        };
-
         // Make the AJAX request
         registerClass.makeAjaxRequestRegister(url, data);
       }
@@ -145,7 +135,16 @@ class Register {
   }
 
   // Function to make the AJAX request
-  makeAjaxRequestRegister(url, data) {
+  makeAjaxRequestRegister() {
+    // Define the URL and the JSON data you want to send
+    const url = "../../controller/users/register.php"; // Replace with your API endpoint URL
+    const data = {
+      action: "register",
+      nameRegister: nameRegister.value,
+      emailRegister: emailRegister.value,
+      passwordRegister: passwordRegister.value,
+      signupCategory: "normal"
+    };
     // Make the request using the Fetch API
     fetch(url, {
       method: "POST", // HTTP POST method to send data

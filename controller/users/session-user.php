@@ -56,17 +56,7 @@ class HandlerSessionUser {
         $this->sendResponse(200, ["message" => $isLoggedIn]);
     }
 
-    // Function to handle user logout
-    public function processUserLogout() {
-        $this->ensureSessionStarted();
 
-        // Destroy the session
-        session_unset();
-        session_destroy();
-
-        // Send a JSON response
-        $this->sendResponse(200, ["message" => "Logout successful."]);
-    }
 
     // Utility function to start the session safely
     private function ensureSessionStarted() {
@@ -81,6 +71,17 @@ class HandlerSessionUser {
         http_response_code($statusCode);
         echo json_encode($data);
         exit; // Ensure no further code is executed
+    }
+    // Function to handle user logout
+    public function processUserLogout(){
+        $this->ensureSessionStarted();
+
+        // Destroy the session
+        session_unset();
+        session_destroy();
+
+        // Send a JSON response
+        $this->sendResponse(200, ["message" => "Logout successful."]);
     }
 }
 

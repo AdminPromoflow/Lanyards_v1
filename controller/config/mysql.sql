@@ -189,6 +189,7 @@ CREATE TABLE `Users`
 	`name` VARCHAR(50) NOT NULL,
 	`email` VARCHAR(80) NOT NULL,
 	`password` TEXT NULL,
+	`signup_category` VARCHAR(50) NULL,
 	CONSTRAINT `PK_Users` PRIMARY KEY (`idUser` ASC)
 )
 

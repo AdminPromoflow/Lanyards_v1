@@ -6,6 +6,7 @@ class Users {
   private $email;     // User's email
   private $password;  // User's password
   private $recovery_token;  // User's password
+  private $signup_category;  // User's password
 
   // Constructor that initializes the connection.
   function __construct($connection) {
@@ -16,7 +17,9 @@ class Users {
       $this->recovery_token = $recovery_token;
   }
 
-
+  public function setSignupCategory($signup_category) {
+      $this->signup_category = $signup_category;
+  }
 
   // Set the user's name
   public function setName($name) {
@@ -98,12 +101,13 @@ class Users {
   public function createUser() {
     try {
       // Prepare the SQL query with placeholders.
-      $sql = $this->connection->getConnection()->prepare("INSERT INTO `Users` (`name`, `email`, `password`) VALUES (:name, :email, :password)");
+      $sql = $this->connection->getConnection()->prepare("INSERT INTO `Users` (`name`, `email`, `password`, `signup_category	`) VALUES (:name, :email, :password, :signup_category)");
 
       // Bind parameters.
       $sql->bindParam(':name', $this->name, PDO::PARAM_STR);
       $sql->bindParam(':email', $this->email, PDO::PARAM_STR);
       $sql->bindParam(':password', $this->password, PDO::PARAM_STR);
+      $sql->bindParam(':signup_category', $this->signup_category, PDO::PARAM_STR);
 
       // Execute the query
       $sql->execute();
