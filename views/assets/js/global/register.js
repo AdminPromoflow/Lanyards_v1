@@ -184,7 +184,7 @@ class Register {
         // Hide the register form with a sliding animation
       })
       .catch(error => {
-        alert("Error:", error);
+        consolo.log("Error:", error);
         location.reload();
       });
   }
