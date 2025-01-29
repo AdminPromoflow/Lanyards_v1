@@ -30,4 +30,3 @@
     </div>
   </div>
 </section>
-<script src="../assets/js/global/register.js"></script>

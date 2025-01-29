@@ -36,7 +36,7 @@ class Register {
       if (registerClass.validateName() && registerClass.validateEmail() && registerClass.validatePassword()) {
         chargingClass.hideShowchargin(true);
         // Make the AJAX request
-        registerClass.makeAjaxRequestRegister(url, data);
+        registerClass.makeAjaxRequestRegister();
       }
     });
   }
