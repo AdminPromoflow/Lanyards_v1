@@ -60,6 +60,8 @@ class PasswordForgotten {
         // Handle errors
         console.error("Error:", error.message);
         alert(error.message); // Show the error message in an alert
+        location.reload();
+
       });
   }
 
