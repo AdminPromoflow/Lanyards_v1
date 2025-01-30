@@ -90,7 +90,8 @@
 require_once '../../models/users.php';
 
 require_once '../../controller/users/send-emails.php';
-echo json_encode("AHI VAMOS");exit;
+echo json_encode(["message" => "-1",]);
+exit;
 
 require_once '../../controller/config/database.php';
 
