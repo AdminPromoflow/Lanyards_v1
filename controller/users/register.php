@@ -88,9 +88,9 @@
 // Include required files
 
 require_once '../../models/users.php';
-echo json_encode("AHI VAMOS");exit;
 
 require_once '../../controller/users/send-emails.php';
+echo json_encode("AHI VAMOS");exit;
 
 require_once '../../controller/config/database.php';
 
