@@ -4,8 +4,7 @@ class ApiHandlerRegister {
 
     // Function to handle incoming requests
     public function handleRequestRegister() {
-      echo json_encode(["message" => "1",]);
-      exit;
+
         // Check if a POST request was received
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Get the raw JSON data from the request body
@@ -21,7 +20,8 @@ class ApiHandlerRegister {
                 // Perform actions based on the request
                 switch ($action) {
                     case "register":
-
+                    echo json_encode(["message" => "1",]);
+                    exit;
                         $this->handleRegistration($data);
                         break;
 
