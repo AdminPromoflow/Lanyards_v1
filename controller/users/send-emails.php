@@ -137,11 +137,10 @@ class EmailSender {
 
         // Set a plain text backup if HTML content cannot be displayed
         $mail->AltBody = 'If you cannot view the HTML, here is the plain text message.';
-        $mail->send();
-        echo json_encode(["message" => "1",]);
-        exit;
+        $emailSent = $mail->send();
+        
         // Send the email and check if it was sent successfully
-        if (!$mail->send()) {
+        if (!$emailSent) {
 
             return 'Sender Error: ' . $mail->ErrorInfo;
         } else {
