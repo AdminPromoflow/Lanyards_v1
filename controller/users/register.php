@@ -57,7 +57,7 @@ class ApiHandler {
                 echo json_encode(["message" => "0"]); // Validation failed (user may exist)
                 return;
             }
-
+            echo json_encode(["message" => "AHI VAMOS");exit;
             // Create a database connection and user instance
             $connection = new Database();
             $user = new Users($connection);
