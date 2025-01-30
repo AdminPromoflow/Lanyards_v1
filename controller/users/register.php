@@ -3,7 +3,7 @@
 class ApiHandlerRegister {
 
     // Function to handle incoming requests
-    public function handleRequest() {
+    public function handleRequestRegister() {
       echo json_encode(["message" => "1",]);
       exit;
         // Check if a POST request was received
