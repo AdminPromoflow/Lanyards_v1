@@ -86,7 +86,7 @@
 
 }*/
 // Include required files
-echo json_encode(["message" => "AHI VAMOS");exit;
+echo json_encode("AHI VAMOS");exit;
 
 require_once '../../models/users.php';
 
