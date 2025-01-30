@@ -56,13 +56,14 @@ class ApiHandlerRegister {
                 $data->emailRegister,
                 $data->passwordRegister
             );
-            echo json_encode(["message" => "1",]);
-            exit;
+
 
             if (!$validatedData) {
                 echo json_encode(["message" => "0"]); // Validation failed (user may exist)
                 return;
             }
+            echo json_encode(["message" => "1",]);
+            exit;
             // Create a database connection and user instance
             $connection = new Database();
             $user = new Users($connection);
