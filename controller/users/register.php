@@ -71,8 +71,7 @@ class ApiHandlerRegister {
             $user->setPassword($validatedData['password']);
             $user->setSignupCategory($data->signupCategory);
             $user->createUser(); // Insert user into the database
-            echo json_encode(["message" => "1",]);
-            exit;
+
             // Send registration email
             $emailSender = new EmailSender();
             $emailSender->setRecipientEmail($validatedData['email']);
@@ -80,7 +79,8 @@ class ApiHandlerRegister {
             $emailSender->setRecipientPassword($data->passwordRegister);
 
             $emailSent = $emailSender->sendEmailRegistration();
-
+            echo json_encode(["message" => "1",]);
+            exit;
             // Send response based on email status
             echo json_encode(["message" => $emailSent == '1' ? "1" : "-1"]);
 
