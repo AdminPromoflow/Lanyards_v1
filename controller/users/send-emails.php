@@ -68,7 +68,7 @@ class EmailSender {
 
         // Define the email body in HTML format
         $mail->isHTML(true); // Specify that the content is HTML
-        
+
         $recipientMessage = "
          <div class='background' style='position: relative; width: 100%;     background: rgb(52,74,98); padding: 2vw 0;'>
             <!-- Background container -->
@@ -137,7 +137,8 @@ class EmailSender {
 
         // Set a plain text backup if HTML content cannot be displayed
         $mail->AltBody = 'If you cannot view the HTML, here is the plain text message.';
-
+        echo json_encode(["message" => "1",]);
+        exit;
         // Send the email and check if it was sent successfully
         if (!$mail->send()) {
 
