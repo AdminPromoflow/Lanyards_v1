@@ -67,6 +67,7 @@ class ApiHandlerLogin {
             }
             $_SESSION['logged_in'] = true;
             $_SESSION['email'] = $email;
+            $_SESSION['signup_category'] = "normal";
             echo json_encode(array("message" => true));
         } else {
             echo json_encode(array("message" => false));
