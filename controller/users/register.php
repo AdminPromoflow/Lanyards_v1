@@ -79,8 +79,7 @@ class ApiHandlerRegister {
             $emailSender->setRecipientPassword($data->passwordRegister);
 
             $emailSent = $emailSender->sendEmailRegistration();
-            echo json_encode(["message" => "1",]);
-            exit;
+            
             // Send response based on email status
             echo json_encode(["message" => $emailSent == '1' ? "1" : "-1"]);
 

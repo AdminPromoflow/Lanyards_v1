@@ -32,6 +32,8 @@ class EmailSender {
 
     // Method to send a registration email
     public function sendEmailRegistration() {
+      echo json_encode(["message" => "1",]);
+      exit;
         // Create an instance of PHPMailer
         $mail = new PHPMailer;
 
