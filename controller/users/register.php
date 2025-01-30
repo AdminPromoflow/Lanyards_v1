@@ -81,7 +81,6 @@ class ApiHandlerRegister {
 
               // Send response based on email status
               echo json_encode(["message" => "1"]);
-
             }
             else {
               echo json_encode(["message" => "0"]);
