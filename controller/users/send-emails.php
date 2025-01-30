@@ -32,8 +32,7 @@ class EmailSender {
 
     // Method to send a registration email
     public function sendEmailRegistration() {
-      echo json_encode(["message" => "1",]);
-      exit;
+
         // Create an instance of PHPMailer
         $mail = new PHPMailer;
 
@@ -41,7 +40,7 @@ class EmailSender {
         $mail->isSMTP();
 
         // Enable SMTP debugging (set to 0 in production)
-        $mail->SMTPDebug = 2;
+        $mail->SMTPDebug = 0;
 
         // Set the Hostinger SMTP server
         $mail->Host = 'smtp.hostinger.com';
@@ -69,7 +68,7 @@ class EmailSender {
 
         // Define the email body in HTML format
         $mail->isHTML(true); // Specify that the content is HTML
-
+        
         $recipientMessage = "
          <div class='background' style='position: relative; width: 100%;     background: rgb(52,74,98); padding: 2vw 0;'>
             <!-- Background container -->
