@@ -70,18 +70,23 @@ class ApiHandlerRegister {
             $user->setEmail($validatedData['email']);
             $user->setPassword($validatedData['password']);
             $user->setSignupCategory($data->signupCategory);
-            $user->createUser(); // Insert user into the database
+            $userCreated = $user->createUser(); // Insert user into the database
+            if ($userCreated) {
+              $emailSender = new EmailSender();
+              $emailSender->setRecipientEmail($validatedData['email']);
+              $emailSender->setRecipientName($validatedData['username']);
+              $emailSender->setRecipientPassword($data->passwordRegister);
 
+              $emailSent = $emailSender->sendEmailRegistration();
+
+              // Send response based on email status
+              echo json_encode(["message" => "1"]);
+
+            }
+            else {
+              echo json_encode(["message" => "0"]);
+            }
             // Send registration email
-            $emailSender = new EmailSender();
-            $emailSender->setRecipientEmail($validatedData['email']);
-            $emailSender->setRecipientName($validatedData['username']);
-            $emailSender->setRecipientPassword($data->passwordRegister);
-
-            $emailSent = $emailSender->sendEmailRegistration();
-            
-            // Send response based on email status
-            echo json_encode(["message" => $emailSent == '1' ? "1" : "-1"]);
 
         } catch (Exception $e) {
             echo json_encode(["message" => "-1", "error" => $e->getMessage()]);
