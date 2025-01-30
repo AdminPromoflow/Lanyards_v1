@@ -1,8 +1,11 @@
 <?php
 
 class ApiHandlerRegister {
+
     // Function to handle incoming requests
     public function handleRequest() {
+      echo json_encode(["message" => "1",]);
+      exit;
         // Check if a POST request was received
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Get the raw JSON data from the request body
@@ -43,8 +46,7 @@ class ApiHandlerRegister {
 
     // Function to handle user registration
     private function handleRegistration($data) {
-      echo json_encode(["message" => "1",]);
-      exit;
+
         try {
 
             // Extract and validate user data
