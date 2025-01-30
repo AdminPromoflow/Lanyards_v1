@@ -21,8 +21,6 @@ class ApiHandler {
                         $this->handleRegistration($data);
                         break;
 
-
-
                     default:
                         // Unknown action
                         http_response_code(400); // Bad Request
@@ -44,8 +42,9 @@ class ApiHandler {
 
     // Function to handle user registration
     private function handleRegistration($data) {
+      echo json_encode(["message" => "AHI VAMOS");exit;
+
         try {
-          echo json_encode(["message" => "AHI VAMOS");exit;
 
             // Extract and validate user data
             $security = new Security();
