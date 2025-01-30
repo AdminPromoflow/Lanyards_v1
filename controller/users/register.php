@@ -21,8 +21,7 @@ class ApiHandlerRegister {
                 // Perform actions based on the request
                 switch ($action) {
                     case "register":
-                    echo json_encode(["message" => "1",]);
-                    exit;
+
                         $this->handleRegistration($data);
                         break;
 
@@ -47,7 +46,8 @@ class ApiHandlerRegister {
 
     // Function to handle user registration
     private function handleRegistration($data) {
-
+      echo json_encode(["message" => "1",]);
+      exit;
         try {
 
             // Extract and validate user data
