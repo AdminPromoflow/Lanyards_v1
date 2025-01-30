@@ -62,8 +62,7 @@ class ApiHandlerRegister {
                 echo json_encode(["message" => "0"]); // Validation failed (user may exist)
                 return;
             }
-            echo json_encode(["message" => "1",]);
-            exit;
+
             // Create a database connection and user instance
             $connection = new Database();
             $user = new Users($connection);
@@ -72,7 +71,8 @@ class ApiHandlerRegister {
             $user->setPassword($validatedData['password']);
             $user->setSignupCategory($data->signupCategory);
             $user->createUser(); // Insert user into the database
-
+            echo json_encode(["message" => "1",]);
+            exit;
             // Send registration email
             $emailSender = new EmailSender();
             $emailSender->setRecipientEmail($validatedData['email']);
