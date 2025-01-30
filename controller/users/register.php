@@ -7,11 +7,13 @@ class ApiHandlerRegister {
 
         // Check if a POST request was received
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
             // Get the raw JSON data from the request body
             $rawData = file_get_contents("php://input");
             $data = json_decode($rawData);
 
-
+            echo json_encode(["message" => "1",]);
+            exit;
             // Check if JSON data is valid and contains an "action" field
             if ($data !== null && isset($data->action)) {
                 // Get the action from the JSON data
@@ -20,8 +22,7 @@ class ApiHandlerRegister {
                 // Perform actions based on the request
                 switch ($action) {
                     case "register":
-                    echo json_encode(["message" => "1",]);
-                    exit;
+
                         $this->handleRegistration($data);
                         break;
 
