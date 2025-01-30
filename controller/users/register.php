@@ -1,5 +1,4 @@
 <?php
-echo json_encode(["message" => "AHI VAMOS");exit;
 
 /*class ApiHandlerRegister {
     // Function to handle incoming requests
@@ -89,6 +88,7 @@ echo json_encode(["message" => "AHI VAMOS");exit;
 // Include required files
 
 require_once '../../models/users.php';
+echo json_encode(["message" => "AHI VAMOS");exit;
 
 require_once '../../controller/users/send-emails.php';
 
