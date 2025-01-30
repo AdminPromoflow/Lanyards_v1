@@ -98,27 +98,24 @@ class Users {
   /*
    * Create a new user with the provided name, email, and password.
    */
-  public function createUser() {
-    try {
-      // Prepare the SQL query with placeholders.
-      $sql = $this->connection->getConnection()->prepare("INSERT INTO `Users` (`name`, `email`, `password`, `signup_category`) VALUES (:name, :email, :password, :signup_category)");
+   public function createUser() {
+       try {
+           $sql = $this->connection->getConnection()->prepare("INSERT INTO `Users` (`name`, `email`, `password`, `signup_category`) VALUES (:name, :email, :password, :signup_category)");
 
-      // Bind parameters.
-      $sql->bindParam(':name', $this->name, PDO::PARAM_STR);
-      $sql->bindParam(':email', $this->email, PDO::PARAM_STR);
-      $sql->bindParam(':password', $this->password, PDO::PARAM_STR);
-      $sql->bindParam(':signup_category', $this->signup_category, PDO::PARAM_STR);
+           $sql->bindParam(':name', $this->name, PDO::PARAM_STR);
+           $sql->bindParam(':email', $this->email, PDO::PARAM_STR);
+           $sql->bindParam(':password', $this->password, PDO::PARAM_STR);
+           $sql->bindParam(':signup_category', $this->signup_category, PDO::PARAM_STR);
 
-      // Execute the query
-      $sql->execute();
+           $sql->execute();
 
-      // Close the database connection
-      $this->connection->closeConnection();
-    } catch(PDOException $e) {
-      // Handle any exceptions and provide an error message
-      echo "Error in the query: " . $e->getMessage();
-    }
-  }
+           $this->connection->closeConnection();
+           return true;
+       } catch (PDOException $e) {
+           return false;
+       }
+   }
+
 
     public function insertRecoveryToken() {
       try {
