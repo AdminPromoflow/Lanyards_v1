@@ -1,8 +1,11 @@
 <link rel="stylesheet" href="../../views/assets/css/recovery_password/sections/passwrod_recovery.css">
 <section class="section_passwrod_recovery">
-  <div class="logo_continer_password_recovery">
-    <img src="../../views/assets/img/recovery_password/sections/logo.png" alt="">
+  <div class="menu_password_recovery">
+    <div class="logo_continer_password_recovery">
+      <img src="../../views/assets/img/recovery_password/sections/logo.png" alt="">
+    </div>
   </div>
+
   <div class="container_passwrod_recovery">
     <div class="title_passwrod_recovery">
       <h3>Account Password Recovery</h3>

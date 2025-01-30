@@ -7,10 +7,42 @@
   margin: 0 auto;
 
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
+
+}
+.menu_password_recovery{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 80px;
+
+  width: 100%;
+  background: rgb(0,0,0);
+  background: linear-gradient(180deg, rgba(0,0,0,0.9) 0%, rgba(5,29,53,0.9) 66%);
+
+
+  z-index: 12;
+  box-shadow: 7px 7px 5px rgba(255, 255, 255, 0.04);
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
+
+}
+.logo_continer_password_recovery{
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+}
+.logo_continer_password_recovery img{
+  position: relative;
+  height: 100%;
+  width: 100%;
 }
 .container_passwrod_recovery{
+  margin-top: 5vw;
   position: relative;
   width: 60%;
 }
@@ -95,16 +127,4 @@
 .button_passwrod_recovery:active {
   background-color: rgba(179,199,191, .9);
   color: black;
-}
-.logo_continer_password_recovery{
-  position: absolute;
-  height: 50px;
-  width: 50px;
-  top: 10px;
-  left: 10px;
-}
-.logo_continer_password_recovery img{
-  position: relative;
-  height: 100%;
-  width: 100%;
 }
