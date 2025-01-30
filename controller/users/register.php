@@ -1,5 +1,7 @@
 <?php
-class ApiHandler {
+echo json_encode(["message" => "AHI VAMOS");exit;
+
+class ApiHandlerRegister {
     // Function to handle incoming requests
     public function handleRequest() {
         // Check if a POST request was received
@@ -42,7 +44,6 @@ class ApiHandler {
 
     // Function to handle user registration
     private function handleRegistration($data) {
-      echo json_encode(["message" => "AHI VAMOS");exit;
 
         try {
 
@@ -97,6 +98,6 @@ require_once '../../controller/config/security.php';
 
 
 // Create an instance of the ApiHandler class and handle the request
-$apiHandler = new ApiHandler();
-$apiHandler->handleRequest();
+$apiHandler = new ApiHandlerRegister();
+$apiHandler->handleRequestRegister();
 ?>
