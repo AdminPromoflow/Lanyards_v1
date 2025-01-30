@@ -19,3 +19,8 @@
   font-weight: 300;
   margin: 15px 0;
 }
+.charging_background img {
+  position: relative;
+  height: 90px;
+  width: 90px;
+}
