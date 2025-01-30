@@ -12,13 +12,13 @@ class ApiHandlerRegister {
             $rawData = file_get_contents("php://input");
             $data = json_decode($rawData);
 
-            echo json_encode(["message" => "1",]);
-            exit;
+
             // Check if JSON data is valid and contains an "action" field
             if ($data !== null && isset($data->action)) {
                 // Get the action from the JSON data
                 $action = $data->action;
-
+                echo json_encode(["message" => "1",]);
+                exit;
                 // Perform actions based on the request
                 switch ($action) {
                     case "register":
