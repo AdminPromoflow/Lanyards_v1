@@ -101,7 +101,7 @@ class Users {
   public function createUser() {
     try {
       // Prepare the SQL query with placeholders.
-      $sql = $this->connection->getConnection()->prepare("INSERT INTO `Users` (`name`, `email`, `password`, `signup_category	`) VALUES (:name, :email, :password, :signup_category)");
+      $sql = $this->connection->getConnection()->prepare("INSERT INTO `Users` (`name`, `email`, `password`, `signup_category`) VALUES (:name, :email, :password, :signup_category)");
 
       // Bind parameters.
       $sql->bindParam(':name', $this->name, PDO::PARAM_STR);
