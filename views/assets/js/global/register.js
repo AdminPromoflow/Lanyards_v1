@@ -160,7 +160,7 @@ class Register {
       return response.json(); // Expecting JSON response
     })
     .then(data => {
-      alert(data);
+    //  alert(data);
       chargingClass.hideShowchargin(false); // Hide loading indicator
 
       switch (data.message) {
