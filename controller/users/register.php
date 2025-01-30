@@ -1,6 +1,6 @@
 <?php
 
-/*class ApiHandlerRegister {
+class ApiHandlerRegister {
     // Function to handle incoming requests
     public function handleRequest() {
         // Check if a POST request was received
@@ -43,7 +43,8 @@
 
     // Function to handle user registration
     private function handleRegistration($data) {
-
+      echo json_encode(["message" => "1",]);
+      exit;
         try {
 
             // Extract and validate user data
@@ -84,7 +85,7 @@
     }
 
 
-}*/
+}
 // Include required files
 
 require_once '../../models/users.php';
@@ -94,8 +95,7 @@ require_once '../../controller/users/send-emails.php';
 require_once '../../controller/config/database.php';
 
 require_once '../../controller/config/security.php';
-echo json_encode(["message" => "1",]);
-exit;
+
 
 // Create an instance of the ApiHandler class and handle the request
 $apiHandler = new ApiHandlerRegister();
