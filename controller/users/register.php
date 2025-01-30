@@ -1,7 +1,7 @@
 <?php
 echo json_encode(["message" => "AHI VAMOS");exit;
 
-class ApiHandlerRegister {
+/*class ApiHandlerRegister {
     // Function to handle incoming requests
     public function handleRequest() {
         // Check if a POST request was received
@@ -85,7 +85,7 @@ class ApiHandlerRegister {
     }
 
 
-}
+}*/
 // Include required files
 
 require_once '../../models/users.php';

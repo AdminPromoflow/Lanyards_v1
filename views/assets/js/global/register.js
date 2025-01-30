@@ -185,7 +185,7 @@ class Register {
     .catch(error => {
       console.error("Error:", error);
       alert("A network error occurred. Please check your connection.");
-      location.reload();
+      //location.reload();
     });
   }
 
