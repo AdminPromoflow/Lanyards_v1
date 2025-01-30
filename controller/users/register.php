@@ -46,8 +46,7 @@ class ApiHandlerRegister {
 
     // Function to handle user registration
     private function handleRegistration($data) {
-      echo json_encode(["message" => "1",]);
-      exit;
+
         try {
 
             // Extract and validate user data
@@ -57,6 +56,8 @@ class ApiHandlerRegister {
                 $data->emailRegister,
                 $data->passwordRegister
             );
+            echo json_encode(["message" => "1",]);
+            exit;
 
             if (!$validatedData) {
                 echo json_encode(["message" => "0"]); // Validation failed (user may exist)
