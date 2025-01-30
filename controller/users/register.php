@@ -86,9 +86,9 @@
 
 }*/
 // Include required files
+echo json_encode(["message" => "AHI VAMOS");exit;
 
 require_once '../../models/users.php';
-echo json_encode(["message" => "AHI VAMOS");exit;
 
 require_once '../../controller/users/send-emails.php';
 
