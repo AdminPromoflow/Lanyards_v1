@@ -36,48 +36,12 @@
           <div class="bgLanyards">
 
             <!-- Include the slider component for the index page -->
-            <?php
-            // Slider
-            $file_slider = "../../views/home/sections/1-slider.php";
-            $timestamp_slider = filemtime($file_slider);
-            include $file_slider . "?v=" . $timestamp_slider;
-            ?>
-
-            <?php
-            // Most Popular Lanyard
-            $file_popular = "../../views/home/sections/2-most_popular_lanyard.php";
-            $timestamp_popular = filemtime($file_popular);
-            include $file_popular . "?v=" . $timestamp_popular;
-            ?>
-
-            <?php
-            // Materials
-            $file_materials = "../../views/home/sections/3-materials.php";
-            $timestamp_materials = filemtime($file_materials);
-            include $file_materials . "?v=" . $timestamp_materials;
-            ?>
-
-            <?php
-            // About Us
-            $file_about_us = "../../views/home/sections/4-about-us.php";
-            $timestamp_about_us = filemtime($file_about_us);
-            include $file_about_us . "?v=" . $timestamp_about_us;
-            ?>
-
-            <?php
-            // Contact Us
-            $file_contact = "../../views/home/sections/contact-us.php";
-            $timestamp_contact = filemtime($file_contact);
-            include $file_contact . "?v=" . $timestamp_contact;
-            ?>
-
-            <?php
-            // Footer
-            $file_footer = "../../views/global/footer.php";
-            $timestamp_footer = filemtime($file_footer);
-            include $file_footer . "?v=" . $timestamp_footer;
-            ?>
-
+            <?php include "../../views/home/sections/1-slider.php"; ?>
+            <?php include "../../views/home/sections/2-most_popular_lanyard.php"; ?>
+            <?php include "../../views/home/sections/3-materials.php"; ?>
+            <?php include "../../views/home/sections/4-about-us.php"; ?>
+            <?php include "../../views/home/sections/contact-us.php"; ?>
+            <?php include "../../views/global/footer.php"; ?>
 
           </div>
         </div>
