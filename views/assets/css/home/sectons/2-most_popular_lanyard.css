@@ -66,10 +66,10 @@
   padding: 0;
 }
 .subcontainer_most_popular_lanyard button{
-  padding: calc(0.3vw + 0.3em) calc(0.6vw + 0.6em);
+  padding: calc(0.1vw + 0.1em) calc(0.6vw + 0.6em);
   z-index: 10;
-  max-height: 50px;
-  font-size: calc(0.7vw + 0.7em);
+  max-height: 70px;
+  font-size: calc(0.8vw + 0.8em);
   border-radius: 5px;
   cursor: pointer;
   background-color: rgba(141, 67, 68, .9);
