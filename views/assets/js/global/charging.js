@@ -12,5 +12,9 @@ class Charging {
     }
   }
 }
+
 const charging_background = document.getElementById("charging_background");
 const chargingClass = new Charging();
+window.addEventListener('load', function() {
+  chargingClass.hideShowchargin(false);
+});

@@ -2,6 +2,10 @@
 
 <section class="materials">
   <h1>Create your own lanyard from scratch.</h1>
+  <p>Create your own custom lanyard from scratch! Tailor it to your style, needs,
+    and preferences for a unique accessory. Perfect for events, work, or personal use,
+    design a lanyard that stands out. Start creating yours today and enjoy a
+    one-of-a-kind design that's all your own!</p>
 
   <div class="containerMaterials">
 

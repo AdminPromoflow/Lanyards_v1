@@ -22,8 +22,3 @@
           });
         }
         }
-
-window.addEventListener('load', function() {
-  chargingClass.hideShowchargin(false);
-  // Aquí puedes agregar tu lógica que dependa de que todo esté cargado
-});
