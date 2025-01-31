@@ -16,8 +16,6 @@ class CustomizeLanyard {
   };
   // Make an AJAX request to fetch all materials.
   material.makeAjaxRequestGetAllMaterials(url, data);
-  chargingClass.hideShowchargin(false);
-
   }
 
   getLanyardsActive(){
