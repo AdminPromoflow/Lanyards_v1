@@ -144,7 +144,7 @@
   color: white;
   text-align: center;
   width: 90%;
-  font-size: calc(5em + 1.2vw);
+  font-size: calc(1.1em + 1.1vw);
   font-weight: 300;
   margin: 0;
 }
@@ -153,7 +153,7 @@
   color: white;
   width: 80%;
   text-align: center;
-  font-size: calc(0.7em + 0.7vw);
+  font-size: calc(1em + 1vw);
   font-weight: 200;
   margin: 0px;
   margin: 15px 0;
