@@ -24,7 +24,6 @@
         }
 
 window.addEventListener('load', function() {
-  alert("algo paso");
-  this.hideShowchargin(false);
+  chargingClass.hideShowchargin(false);
   // Aquí puedes agregar tu lógica que dependa de que todo esté cargado
 });
