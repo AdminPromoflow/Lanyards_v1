@@ -16,7 +16,6 @@ class CustomizeLanyard {
   };
   // Make an AJAX request to fetch all materials.
   material.makeAjaxRequestGetAllMaterials(url, data);
-  alert("que raro");
   chargingClass.hideShowchargin(false);
 
   }
