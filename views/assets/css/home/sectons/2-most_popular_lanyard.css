@@ -144,7 +144,7 @@
   color: white;
   text-align: center;
   width: 90%;
-  font-size: calc(1.1em + 1.1vw);
+  font-size: 1.25em;
   font-weight: 300;
   margin: 0;
 }
