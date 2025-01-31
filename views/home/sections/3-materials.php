@@ -22,9 +22,7 @@
     </div>
 
     <div class="containerTextMaterials">
-      <div class="closeMaterial">
-        <img src="../assets/img/home/3-materials/Close-Materials.png?v=<?php echo filemtime('../assets/img/home/3-materials/Close-Materials.png'); ?>" alt="">
-      </div>
+
       <div class="containerTextMaterialsBox">
         <img src="../assets/img/home/3-materials/Material-2-Tabular.jpg?v=<?php echo filemtime('../assets/img/home/3-materials/Material-2-Tabular.jpg'); ?>" alt="">
       </div>
@@ -37,9 +35,7 @@
     </div>
 
     <div class="containerTextMaterials">
-      <div class="closeMaterial">
-        <img src="../assets/img/home/3-materials/Close-Materials.png?v=<?php echo filemtime('../assets/img/home/3-materials/Close-Materials.png'); ?>" alt="">
-      </div>
+
       <div class="containerTextMaterialsBox">
         <img src="../assets/img/home/3-materials/Material-3-Natural-Bamboo.jpg?v=<?php echo filemtime('../assets/img/home/3-materials/Material-3-Natural-Bamboo.jpg'); ?>" alt="">
       </div>
@@ -52,9 +48,7 @@
     </div>
 
     <div class="containerTextMaterials">
-      <div class="closeMaterial">
-        <img src="../assets/img/home/3-materials/Close-Materials.png?v=<?php echo filemtime('../assets/img/home/3-materials/Close-Materials.png'); ?>" alt="">
-      </div>
+
       <div class="containerTextMaterialsBox">
         <img src="../assets/img/home/3-materials/Material-4-Dye-sublimation.jpg?v=<?php echo filemtime('../assets/img/home/3-materials/Material-4-Dye-sublimation.jpg'); ?>" alt="">
       </div>
@@ -67,9 +61,7 @@
     </div>
 
     <div class="containerTextMaterials">
-      <div class="closeMaterial">
-        <img src="../assets/img/home/3-materials/Close-Materials.png?v=<?php echo filemtime('../assets/img/home/3-materials/Close-Materials.png'); ?>" alt="">
-      </div>
+      
       <div class="containerTextMaterialsBox">
         <img src="../assets/img/home/3-materials/Material-5-Dye-sub-Recycled-PET.jpg?v=<?php echo filemtime('../assets/img/home/3-materials/Material-5-Dye-sub-Recycled-PET.jpg'); ?>" alt="">
       </div>

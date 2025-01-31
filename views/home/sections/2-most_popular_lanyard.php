@@ -73,7 +73,7 @@
       </div>
       <div class="box_display_most_popular_lanyard">
         <h2>Colour</h2>
-        <img src="../../views/assets/img/home/2-most_popular_lanyard/full-colour.png" alt="">
+        <img src="../../views/assets/img/home/2-most_popular_lanyard/colour-coverage.png" alt="">
         <h3>Full colour</h3>
         <p>Colorful, vibrant lanyard ideal for promotional events, showcasing logos, and ensuring high visibility with a creative, attention-grabbing design.</p>
       </div>
@@ -97,7 +97,7 @@
       </div>
       <div class="box_display_most_popular_lanyard">
         <h2>Design options</h2>
-        <img src="../../views/assets/img/home/2-most_popular_lanyard/none.png" alt="">
+        <img src="../../views/assets/img/home/2-most_popular_lanyard/design-options.png" alt="">
         <h3>Artwork or background, text, and logo.</h3>
         <p>You can choose between these two options to add your design to the lanyard: artwork or background, text, and logo.</p>
       </div>

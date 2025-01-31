@@ -2,11 +2,11 @@
 class MaterialHome {
   constructor() {
     // Event listener to hide containerTextMaterials when closeMaterial is clicked
-    for (let i = 0; i < closeMaterial.length; i++) {
+  /*  for (let i = 0; i < closeMaterial.length; i++) {
       closeMaterial[i].addEventListener("click", function(){
       //  containerTextMaterials[i].style.display = "none";
       })
-    }
+    }*/
 
     for (let i = 0; i < openCustomizeLanyardFromMaterials.length; i++) {
       openCustomizeLanyardFromMaterials[i].addEventListener("click", function(){
@@ -42,18 +42,31 @@ class MaterialHome {
 
     // Event listener to display containerTextMaterials when itemMaterial is clicked
     for (let i = 0; i < itemMaterial.length; i++) {
-      containerTextMaterials[i].style.display = "none";
-      itemMaterial[i].addEventListener("mouseover", function(){
+      containerTextMaterials[i].style.display = "none"; // Oculta todos los divs inicialmente
+      itemMaterial[i].addEventListener("mouseover", function () {
         containerTextMaterials[i].style.display = "flex";
         containerTextMaterialsOn = i;
-      materialHome.hideOtherContainerTextMaterials(i);
-      //  alert("ahah");
-    })
+        materialHome.hideOtherContainerTextMaterials(i);
+      });
+    }
+    for (let i = 0; i < itemMaterial.length; i++) {
+      containerTextMaterials[i].style.display = "none"; // Oculta todos los divs inicialmente
+      itemMaterial[i].addEventListener("click", function () {
+        containerTextMaterials[i].style.display = "flex";
+        containerTextMaterialsOn = i;
+        materialHome.hideOtherContainerTextMaterials(i);
+      });
+    }
 
-  }
+    // Activa el div en la posición 0 al inicio
+    if (containerTextMaterials.length > 0) {
+      containerTextMaterials[0].style.display = "flex";
+      containerTextMaterialsOn = 0;
+    }
+
 
     // Event listener to hide containerTextMaterials when clicking outside
-    document.addEventListener('click', this.outContainerTextMaterials);
+  //  document.addEventListener('click', this.outContainerTextMaterials);
   }
 
   // Method to hide other containerTextMaterials
@@ -64,20 +77,13 @@ class MaterialHome {
       }
     }
   }
-
-  // Method to hide containerTextMaterials when clicking outside
-  outContainerTextMaterials(event) {
-    if (event.target === containerTextMaterials[containerTextMaterialsOn]) {
-    } else {
-      containerTextMaterials[containerTextMaterialsOn].style.display = "none";
-    }
-  }
+  
 }
 
 // Selecting elements from the DOM
 const itemMaterial = document.querySelectorAll(".itemMaterial");
 const containerTextMaterials = document.querySelectorAll(".containerTextMaterials");
-const closeMaterial = document.querySelectorAll(".closeMaterial");
+//const closeMaterial = document.querySelectorAll(".closeMaterial");
 const buttonMaterialsBox = document.querySelectorAll(".buttonMaterialsBox");
 const openCustomizeLanyardFromMaterials = document.querySelectorAll(".openCustomizeLanyardFromMaterials");
 const materialForSelect = document.querySelectorAll(".material-for-select");
