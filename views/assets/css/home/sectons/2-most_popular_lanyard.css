@@ -33,6 +33,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  flex-wrap: wrap-reverse;
   align-items: center;
 }
 .subcontainer_most_popular_lanyard {
