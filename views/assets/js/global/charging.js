@@ -1,6 +1,6 @@
 class Charging {
   constructor() {
-    this.hideShowchargin(false);
+    this.hideShowchargin(true);
   }
   hideShowchargin(action){
     if (action) {

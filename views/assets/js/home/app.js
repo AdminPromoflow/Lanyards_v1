@@ -22,3 +22,4 @@
           });
         }
         }
+        chargingClass.hideShowchargin(false);
