@@ -38,6 +38,9 @@
             <!-- Include the slider component for the index page -->
             <?php include "../../views/home/sections/1-slider.php"; ?>
             <?php include "../../views/home/sections/2-most_popular_lanyard.php"; ?>
+            <?php include "../../views/home/sections/2-choose-create-lanyard.php"; ?>
+
+
             <?php include "../../views/home/sections/3-materials.php"; ?>
             <?php include "../../views/home/sections/4-about-us.php"; ?>
             <?php include "../../views/home/sections/contact-us.php"; ?>

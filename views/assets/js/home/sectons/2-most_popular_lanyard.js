@@ -14,6 +14,12 @@ class MostPopularLanyard {
         this.highlightBox(box);
       });
     });
+
+    // Make the first box selected and displayed by default
+    if (this.infoBoxes.length > 0) {
+      this.showDisplayBox(0); // Show the first display box
+      this.highlightBox(this.infoBoxes[0]); // Highlight the first info box
+    }
   }
 
   showDisplayBox(index) {
@@ -27,14 +33,18 @@ class MostPopularLanyard {
     // Reset styles for all boxes
     this.infoBoxes.forEach((box) => {
       box.style.backgroundColor = 'rgba(0, 0, 0, 0.5)'; // Original background
-      const h3 = box.querySelector('h3');
-      if (h3) h3.style.color = 'white'; // Reset h3 color
+      const h3Elements = box.querySelectorAll('h3'); // Select all h3 elements
+      h3Elements.forEach(h3 => {
+        h3.style.color = 'white'; // Reset h3 color
+      });
     });
 
     // Apply new styles to the selected box
     selectedBox.style.backgroundColor = 'rgba(240, 240, 240, 0.7)';
-    const selectedH3 = selectedBox.querySelector('h3');
-    if (selectedH3) selectedH3.style.color = 'black';
+    const selectedH3Elements = selectedBox.querySelectorAll('h3'); // Select all h3 elements
+    selectedH3Elements.forEach(h3 => {
+      h3.style.color = 'black'; // Change color of all h3 elements in selectedBox
+    });
   }
 }
 

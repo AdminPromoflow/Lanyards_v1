@@ -39,34 +39,79 @@
   position: relative;
   min-width: 300px;
   width: 45%;
+  max-width: 400px;
+  min-width: 312px;
   height: 520px;
   margin: 10px;
+  padding: 20px 0;
   background-color: rgba(25, 61, 116, 0.7);
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
 
+.subcontainer_most_popular_lanyard h2{
+  position: relative;
+  text-align: center;
+  width: 80%;
+  color: white;
+  font-weight: 400;
+  text-shadow: 2px 2px 1px black;
+  font-size: calc(1.1vw + 1.1em);
+  margin: 20px 0;
+  padding: 0;
+}
+.subcontainer_most_popular_lanyard button{
+  padding: calc(0.3vw + 0.3em) calc(0.6vw + 0.6em);
+  z-index: 10;
+  max-height: 50px;
+  font-size: calc(0.7vw + 0.7em);
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgba(141, 67, 68, .9);
+  color: white;
+  font-weight: 300;
+  text-shadow: 2px 2px 0px black;
+  cursor: pointer;
+}
+
+.subcontainer_box_information_most_popular_lanyard{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
 .box_information_most_popular_lanyard {
   position: relative;
   background-color: rgba(0, 0, 0, 0.5);
-  width: 100%;
+  width: 90%;
   margin: 3px 0px;
   box-shadow: 2px 2px 1px rgba(255, 255, 255, 0.5),  -2px 0px 1px rgba(255, 255, 255, 0.5);
   cursor: pointer;
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
 }
 .box_information_most_popular_lanyard h3 {
   position: relative;
-  text-align: center;
+  width: 45%;
+  text-align: left;
   padding: 3px 0px;
-  margin: 0px;
   font-size: 1.3em;
   font-weight: 300;
   color: white;
+  margin: 0 0px;
 }
+.box_information_most_popular_lanyard h3:nth-child(1) {
+  margin-left: 20px;
+}
+
 .box_display_most_popular_lanyard{
   position: relative;
   width: 100%;
@@ -97,6 +142,8 @@
 .box_display_most_popular_lanyard h3{
   position: relative;
   color: white;
+  text-align: center;
+  width: 90%;
   font-size: calc(1.1em + 1.1vw);
   font-weight: 300;
   margin: 0;
