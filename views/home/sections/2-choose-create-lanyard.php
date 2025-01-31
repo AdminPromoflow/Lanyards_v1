@@ -22,7 +22,7 @@
         <div class="box_material_information">
           <h3>Clips</h3>
         </div>
-        <div class="box_material_information">
+      <!--  <div class="box_material_information">
           <h3>Attachment </h3>
         </div>
         <div class="box_material_information">
@@ -45,7 +45,7 @@
         </div>
         <div class="box_material_information">
           <h3>Image</h3>
-        </div>
+        </div>-->
       </div>
       <div class="container_choose_material_information">
         <div class="box_container_information">
