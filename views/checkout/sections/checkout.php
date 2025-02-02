@@ -6,7 +6,114 @@
   <div class="container_checkout">
 
     <div class="boxes_checkout">
-      
+      <div class="form_boxes_checkout">
+        <div class="items_form_boxes_checkout ">
+          <label for="">First name *</label>
+          <input type="text" name="" value="">
+        </div>
+        <div class="items_form_boxes_checkout ">
+          <label for="">Last name *</label>
+          <input type="text" name="" value="">
+        </div>
+        <div class="items_form_boxes_checkout">
+          <label for="">Company name (optional)</label>
+          <input type="text" name="" value="">
+        </div>
+        <div class="items_form_boxes_checkout">
+          <label for="">Phone *</label>
+          <input type="text" name="" value="">
+        </div>
+        <div class="items_form_boxes_checkout">
+          <label for="">Country/Region *</label>
+          <input type="text" name="" value="United Kingdom (UK)">
+        </div>
+        <div class="items_form_boxes_checkout">
+          <label for="">Street address *</label>
+          <input type="text" name="" value="">
+          <input type="text" name="" value="">
+        </div>
+        <div class="items_form_boxes_checkout">
+          <label for="">Town / City *</label>
+          <input type="text" name="" value="">
+        </div>
+        <div class="items_form_boxes_checkout">
+          <label for="">County (optional)</label>
+          <input type="text" name="" value="">
+        </div>
+        <div class="items_form_boxes_checkout">
+          <label for="">Postcode *</label>
+          <input type="text" name="" value="">
+        </div>
+        <div class="items_form_boxes_checkout">
+          <label for="">Email address *</label>
+          <input type="text" name="" value="">
+        </div>
+        <div class="items_form_boxes_checkout">
+          <label for="">Where did you find us? (optional)</label>
+          <input type="text" name="" value="">
+        </div>
+        <div class="items_form_boxes_checkout">
+          <label for="">Order notes (optional)</label>
+          <input type="text" name="" value="">
+        </div>
+        <div class="items_form_boxes_checkout_checkbox">
+          <label>
+              <input type="checkbox" id="button_deliver_different_address">
+              Deliver to a different address?
+          </label>
+        </div>
+      </div>
+      <div id="form_boxes_checkout_2" class="form_boxes_checkout active_form_boxes_checkout">
+        <div class="items_form_boxes_checkout ">
+          <label for="">First name *</label>
+          <input type="text" name="" value="">
+        </div>
+        <div class="items_form_boxes_checkout ">
+          <label for="">Last name *</label>
+          <input type="text" name="" value="">
+        </div>
+        <div class="items_form_boxes_checkout">
+          <label for="">Company name (optional)</label>
+          <input type="text" name="" value="">
+        </div>
+        <div class="items_form_boxes_checkout">
+          <label for="">Phone *</label>
+          <input type="text" name="" value="">
+        </div>
+        <div class="items_form_boxes_checkout">
+          <label for="">Country/Region *</label>
+          <input type="text" name="" value="United Kingdom (UK)">
+        </div>
+        <div class="items_form_boxes_checkout">
+          <label for="">Street address *</label>
+          <input type="text" name="" value="">
+          <input type="text" name="" value="">
+        </div>
+        <div class="items_form_boxes_checkout">
+          <label for="">Town / City *</label>
+          <input type="text" name="" value="">
+        </div>
+        <div class="items_form_boxes_checkout">
+          <label for="">County (optional)</label>
+          <input type="text" name="" value="">
+        </div>
+        <div class="items_form_boxes_checkout">
+          <label for="">Postcode *</label>
+          <input type="text" name="" value="">
+        </div>
+        <div class="items_form_boxes_checkout">
+          <label for="">Email address *</label>
+          <input type="text" name="" value="">
+        </div>
+        <div class="items_form_boxes_checkout">
+          <label for="">Where did you find us? (optional)</label>
+          <input type="text" name="" value="">
+        </div>
+        <div class="items_form_boxes_checkout">
+          <label for="">Order notes (optional)</label>
+          <input type="text" name="" value="">
+        </div>
+      </div>
     </div>
     <div class="boxes_checkout">
       <h3 class="title_boxes_checkout">You Orden</h3>

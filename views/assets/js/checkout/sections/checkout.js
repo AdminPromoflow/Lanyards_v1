@@ -7,12 +7,39 @@ class Checkout {
         this.toggleDescriptionItemCheckout(i);
       });
     }
-    open_checkout.addEventListener("click", function(){
+  /*  open_checkout.addEventListener("click", function(){
       window.open("../../views/checkout/index.php", "_self");
-    })
+    })*/
 
     // Obtener los estilos iniciales de todos los elementos
     this.initializeStyles();
+
+    this.checkSizeItemsFormBoxesCheckout();
+    // Check size on load and resize
+  window.addEventListener("resize", this.checkSizeItemsFormBoxesCheckout);
+
+  button_deliver_different_address.addEventListener("change", function() {
+    if (this.checked) {
+      form_boxes_checkout_2.classList.remove("active_form_boxes_checkout");
+
+    } else {
+      form_boxes_checkout_2.classList.add("active_form_boxes_checkout");
+
+    }
+});
+
+  }
+   checkSizeItemsFormBoxesCheckout() {
+     const items = document.querySelectorAll(".items_form_boxes_checkout:nth-child(-n+2)");
+
+     items.forEach(item => {
+       if (item.offsetWidth > 180) {
+           item.classList.add("items_form_boxes_checkout_half"); // Example: Expanding width if smaller than 180px
+
+       } else {
+         item.classList.remove("items_form_boxes_checkout_half"); // Example: Expanding width if smaller than 180px
+       }
+   });
   }
 
   // Inicializa los estilos actuales de todos los elementos
@@ -63,9 +90,13 @@ class Checkout {
 
 // Obtener los elementos del DOM
 const product_items_checkout = document.querySelectorAll(".product_items_checkout");
-const open_checkout = document.getElementById("open_checkout");
 const descriptions_items_checkout = document.querySelectorAll(".descriptions_items_checkout");
 const arrow_products_checkout = document.querySelectorAll(".arrow_products_checkout");
 
+
+
+
+const button_deliver_different_address = document.getElementById("button_deliver_different_address");
+const form_boxes_checkout_2 = document.getElementById("form_boxes_checkout_2");
 // Crear una instancia del carrito de compras
 const shoppingCart = new Checkout();
