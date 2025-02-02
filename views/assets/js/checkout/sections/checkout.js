@@ -1,10 +1,10 @@
-class ShoppingCart {
+class Checkout {
   constructor() {
     // Iterar sobre cada elemento del carrito y agregar un evento
-    for (let i = 0; i < product_items_shopping_cart.length; i++) {
-      product_items_shopping_cart[i].addEventListener("click", () => {
+    for (let i = 0; i < product_items_checkout.length; i++) {
+      product_items_checkout[i].addEventListener("click", () => {
         // Alternar la visibilidad del div correspondiente
-        this.toggleDescriptionItemShoppingCart(i);
+        this.toggleDescriptionItemCheckout(i);
       });
     }
     open_checkout.addEventListener("click", function(){
@@ -20,9 +20,9 @@ class ShoppingCart {
     this.descriptionsStyles = [];
     this.arrowsStyles = [];
 
-    for (let i = 0; i < descriptions_items_shopping_cart.length; i++) {
-      const item = descriptions_items_shopping_cart[i];
-      const arrow = arrow_products_shopping_cart[i];
+    for (let i = 0; i < descriptions_items_checkout.length; i++) {
+      const item = descriptions_items_checkout[i];
+      const arrow = arrow_products_checkout[i];
 
       // Verificar que los elementos sean válidos antes de obtener estilos
       if (item instanceof Element && arrow instanceof Element) {
@@ -38,7 +38,7 @@ class ShoppingCart {
   }
 
   // Alterna la visibilidad de una descripción específica
-  toggleDescriptionItemShoppingCart(index) {
+  toggleDescriptionItemCheckout(index) {
     const item = this.descriptionsStyles[index]?.element;
     const arrow = this.arrowsStyles[index]?.element;
 
@@ -62,10 +62,10 @@ class ShoppingCart {
 }
 
 // Obtener los elementos del DOM
-const product_items_shopping_cart = document.querySelectorAll(".product_items_shopping_cart");
+const product_items_checkout = document.querySelectorAll(".product_items_checkout");
 const open_checkout = document.getElementById("open_checkout");
-const descriptions_items_shopping_cart = document.querySelectorAll(".descriptions_items_shopping_cart");
-const arrow_products_shopping_cart = document.querySelectorAll(".arrow_products_shopping_cart");
+const descriptions_items_checkout = document.querySelectorAll(".descriptions_items_checkout");
+const arrow_products_checkout = document.querySelectorAll(".arrow_products_checkout");
 
 // Crear una instancia del carrito de compras
-const shoppingCart = new ShoppingCart();
+const shoppingCart = new Checkout();
