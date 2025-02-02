@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="../../views/assets/css/shopping_cart/sections/shopping_cart.css">
 <section class="section_shopping_cart">
-  <h1>Shopping Cart</h1>
+  <h1>Checkout</h1>
   <p>Hello, these are the products that you have added to your shopping cart.</p>
   <div class="container_shopping_cart">
 
@@ -10,7 +10,7 @@
             <h3>hola2</h3>
             <h3>hola3</h3>
             <img class="arrow_products_shopping_cart" src="../../views/assets/img/shopping_cart/sections/arrow_right.png" alt="">
-        </div> 
+        </div>
         <div class="descriptions_items_shopping_cart">
           <div class="elements_descriptions_items_shopping_cart">
             <h3>Material</h3>
