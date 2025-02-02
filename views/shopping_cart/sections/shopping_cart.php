@@ -1,12 +1,12 @@
 <?php
-// Function to add file modification timestamp to assets to prevent browser caching issues
+// Function to append file modification timestamp to asset files to prevent browser caching
 function assetShoppingCartSection($path) {
     $fullPath = $_SERVER['DOCUMENT_ROOT'] . '/' . $path;
     return file_exists($fullPath) ? $path . '?v=' . filemtime($fullPath) : $path;
 }
 ?>
 
-<!-- Link to the shopping cart section stylesheet with file modification timestamp -->
+<!-- Link to the shopping cart section stylesheet with a timestamp to force cache refresh -->
 <link rel="stylesheet" href="<?php echo assetShoppingCartSection('../../views/assets/css/shopping_cart/sections/shopping_cart.css'); ?>">
 
 <section class="section_shopping_cart">
@@ -19,11 +19,11 @@ function assetShoppingCartSection($path) {
         <div class="product_items_shopping_cart">
             <h3>hola2</h3>
             <h3>hola3</h3>
-            <!-- Product arrow image with timestamp to avoid caching issues -->
+            <!-- Product arrow image with timestamp to prevent caching issues -->
             <img class="arrow_products_shopping_cart" src="<?php echo assetShoppingCartSection('../../views/assets/img/shopping_cart/sections/arrow_right.png'); ?>" alt="">
         </div>
         <div class="descriptions_items_shopping_cart">
-          <!-- Product details section -->
+          <!-- Product description details -->
           <div class="elements_descriptions_items_shopping_cart">
             <h3>Material</h3>
             <h3>hola2</h3>
@@ -36,11 +36,6 @@ function assetShoppingCartSection($path) {
           </div>
           <div class="elements_descriptions_items_shopping_cart">
             <h3>Width</h3>
-            <h3>hola2</h3>
-            <h3>hola3</h3>
-          </div>
-          <div class="elements_descriptions_items_shopping_cart">
-            <h3>Side printed</h3>
             <h3>hola2</h3>
             <h3>hola3</h3>
           </div>
@@ -72,5 +67,5 @@ function assetShoppingCartSection($path) {
   </div>
 </section>
 
-<!-- JavaScript file with file modification timestamp to ensure latest updates load -->
+<!-- JavaScript file with timestamp to ensure the latest version is always loaded -->
 <script src="<?php echo assetShoppingCartSection('../../views/assets/js/shopping_cart/sections/shopping_cart.js'); ?>" type="text/javascript"></script>
