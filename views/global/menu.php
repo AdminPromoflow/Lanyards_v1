@@ -21,7 +21,8 @@
   <div class="containerItems2">
     <h3 class="openSignup openLogin showItemsMenuLoginFalse">Sign up</h3> <!-- Register, visible when logged out -->
     <h3 class="openLogin showItemsMenuLoginFalse">Login</h3> <!-- Login button, visible when logged out -->
-    <img class="showItemsMenuLoginTrue openLogout border_right_menu" src="../assets/img/global/menu/checkout.png" alt=""> <!-- Checkout icon, visible when logged in -->
+     <!-- Checkout icon, visible when logged in -->
+    <a href="../../views/shopping_cart/index.php"><img class="showItemsMenuLoginTrue openLogout border_right_menu" src="../assets/img/global/menu/checkout.png" alt=""></a>
     <img id="showLogout" class="showItemsMenuLoginTrue openLogout logoutButtons" src="../../views/assets/img/global/menu/user_icon.png" alt=""> <!-- User icon, visible when logged in -->
   </div>
 
@@ -42,7 +43,7 @@
     <h3>Contact us</h3>
     <h3 class="openLogin showItemsMenuLoginFalse">Login</h3>
     <h3 class="openSignup showItemsMenuLoginFalse">Sign up</h3>
-    <h3 class="openLogout transparentBottonLine showItemsMenuLoginTrue">Checkout</h3>
+    <h3 class="openLogout transparentBottonLine showItemsMenuLoginTrue">Shopping cart</h3>
     <h3 class="openLogout showItemsMenuLoginTrue">Logout</h3>
   </section>
 
