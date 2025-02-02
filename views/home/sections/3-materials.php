@@ -11,7 +11,7 @@
 
     <div class="containerTextMaterials">
       <div class="containerTextMaterialsBox">
-        <img src="../../views/assets/img/home/3-materials/icon_lanyard.png?v=<?php echo filemtime('../../views/assets/img/home/3-materials/icon_lanyard.png'); ?>" alt="">
+        <img src="../../views/assets/img/home/3-materials/Material-1-Flat-Polyester.jpg?v=<?php echo filemtime('../../views/assets/img/home/3-materials/Material-1-Flat-Polyester.jpg'); ?>" alt="">
       </div>
       <div class="containerTextMaterialsBox">
         <h3 class="material-for-select">Create your own lanyard</h3>
@@ -61,7 +61,7 @@
     </div>
 
     <div class="containerTextMaterials">
-      
+
       <div class="containerTextMaterialsBox">
         <img src="../assets/img/home/3-materials/Material-5-Dye-sub-Recycled-PET.jpg?v=<?php echo filemtime('../assets/img/home/3-materials/Material-5-Dye-sub-Recycled-PET.jpg'); ?>" alt="">
       </div>
