@@ -7,7 +7,7 @@ function assetShoppingCartSection($path) {
 ?>
 
 <!-- Link to the shopping cart section stylesheet with file modification timestamp -->
-<link rel="stylesheet" href="<?php echo assetShoppingCartSection('views/assets/css/shopping_cart/sections/shopping_cart.css'); ?>">
+<link rel="stylesheet" href="<?php echo assetShoppingCartSection('../../views/assets/css/shopping_cart/sections/shopping_cart.css'); ?>">
 
 <section class="section_shopping_cart">
   <h1>Shopping Cart</h1>
@@ -20,7 +20,7 @@ function assetShoppingCartSection($path) {
             <h3>hola2</h3>
             <h3>hola3</h3>
             <!-- Product arrow image with timestamp to avoid caching issues -->
-            <img class="arrow_products_shopping_cart" src="<?php echo assetShoppingCartSection('views/assets/img/shopping_cart/sections/arrow_right.png'); ?>" alt="">
+            <img class="arrow_products_shopping_cart" src="<?php echo assetShoppingCartSection('../../views/assets/img/shopping_cart/sections/arrow_right.png'); ?>" alt="">
         </div>
         <div class="descriptions_items_shopping_cart">
           <!-- Product details section -->
@@ -73,4 +73,4 @@ function assetShoppingCartSection($path) {
 </section>
 
 <!-- JavaScript file with file modification timestamp to ensure latest updates load -->
-<script src="<?php echo assetShoppingCartSection('views/assets/js/shopping_cart/sections/shopping_cart.js'); ?>" type="text/javascript"></script>
+<script src="<?php echo assetShoppingCartSection('../../views/assets/js/shopping_cart/sections/shopping_cart.js'); ?>" type="text/javascript"></script>
