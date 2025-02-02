@@ -43,7 +43,7 @@
     <h3>Contact us</h3>
     <h3 class="openLogin showItemsMenuLoginFalse">Login</h3>
     <h3 class="openSignup showItemsMenuLoginFalse">Sign up</h3>
-    <h3 class="openLogout transparentBottonLine showItemsMenuLoginTrue">Shopping cart</h3>
+    <a href="../../views/shopping_cart/index.php"><h3 class="openLogout transparentBottonLine showItemsMenuLoginTrue">Shopping cart</h3></a>
     <h3 class="openLogout showItemsMenuLoginTrue">Logout</h3>
   </section>
 
