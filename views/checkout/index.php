@@ -34,7 +34,7 @@
           <div class="bgLanyards">
 
           <!-- Include the slider component for the index page -->
-            <?php include "../../views/shopping_cart/sections/shopping_cart.php" ?>
+            <?php include "../../views/checkout/sections/checkout.php" ?>
             <?php include "../../views/global/footer.php" ?>
 
           </div>
