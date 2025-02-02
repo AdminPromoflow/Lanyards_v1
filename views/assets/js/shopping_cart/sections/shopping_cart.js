@@ -7,6 +7,9 @@ class ShoppingCart {
         this.toggleDescriptionItemShoppingCart(i);
       });
     }
+    open_checkout.addEventListener("click", function(){
+      window.open("../../views/checkout/index.php");
+    })
 
     // Obtener los estilos iniciales de todos los elementos
     this.initializeStyles();
@@ -60,6 +63,7 @@ class ShoppingCart {
 
 // Obtener los elementos del DOM
 const product_items_shopping_cart = document.querySelectorAll(".product_items_shopping_cart");
+const open_checkout = document.getElementById("open_checkout");
 const descriptions_items_shopping_cart = document.querySelectorAll(".descriptions_items_shopping_cart");
 const arrow_products_shopping_cart = document.querySelectorAll(".arrow_products_shopping_cart");
 

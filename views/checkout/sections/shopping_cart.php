@@ -10,7 +10,7 @@
             <h3>hola2</h3>
             <h3>hola3</h3>
             <img class="arrow_products_shopping_cart" src="../../views/assets/img/shopping_cart/sections/arrow_right.png" alt="">
-        </div>
+        </div> 
         <div class="descriptions_items_shopping_cart">
           <div class="elements_descriptions_items_shopping_cart">
             <h3>Material</h3>
@@ -251,7 +251,7 @@
             <input type="checkbox" name="option3" value="Option3">
             By clicking 'Place Order,' I confirm that I have read and agree to the website's terms and conditions.
         </label>
-        <button id="open_checkout"  type="button" name="button">Proceed to checkout</button>
+        <button type="button" name="button">Place Order</button>
       </div>
 
     </div>
