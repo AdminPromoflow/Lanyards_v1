@@ -187,6 +187,87 @@
 .elements_boxes2_container_checkout h3:nth-child(2){
   width: 20%;
 }
+/*.............Contenedor card................*/
+
+.boxes_card_container_checkout{
+  position: relative;
+  width: 100%;
+  padding-left: 15px;
+
+  display: flex;
+  justify-content:flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.boxes_card_container_checkout label{
+  position: relative;
+  margin: 10px 0;
+
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  flex-direction: row;
+
+}
+.boxes_card_container_checkout img{
+  width: 35px;
+  height: auto;
+  margin: 0 3px;
+}
+.boxes_card_container_checkout input{
+  margin: 0 10px;
+}
+.boxes_card_container_checkout h4{
+  font-weight: 300;
+  margin:  5px;
+}
+.form_card_container_checkout{
+  position: relative;
+  width: 90%;
+
+  display: none;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.form_card_container_checkout input{
+  position: relative;
+  width: 80%;
+
+  padding-left: 4px;
+  font-size: 1em;
+  min-height: 20px;
+}
+.form_card_container_checkout label{
+  position: relative;
+  padding-left: 10px;
+  font-weight: 100;
+}
+
+.form_card_container_checkout p{
+  position: relative;
+  text-align: left;
+  font-size: 1em;
+  color: rgba(240, 240, 240, .6);
+  margin: 0;
+  padding-left: 10px;
+  text-shadow: 0px 0px 0px transparent;
+}
+.button_checkout_paypal{
+  position: relative;
+  width: 70%;
+  background:  rgb(255, 196, 57)!important;
+  padding: 8px 0 3px 0 !important;
+  display: none;
+}
+.button_checkout_paypal img{
+  position: relative;
+  width: 60px;
+
+}
+
+/*.............Contenedor derecha abajo................*/
+
 .boxes3_container_checkout{
   position: relative;
   padding: 1px;
@@ -199,7 +280,7 @@
   flex-direction: column;
 }
 .boxes3_container_checkout label{
-  width: 80%;
+  width: 90%;
   cursor: pointer;
 }
 .boxes3_container_checkout input[type="checkbox"]{

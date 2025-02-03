@@ -28,7 +28,38 @@ class Checkout {
     }
 });
 
+
+    document.querySelectorAll('input[name="options_card_checkout"]').forEach(radio => {
+        radio.addEventListener("change", this.getSelectedOption);
+    });
+
   }
+      getSelectedOption() {
+        // Selecciona todos los radio buttons del grupo "options"
+        const radios = document.querySelectorAll('input[name="options_card_checkout"]');
+
+        // Recorre los radio buttons para encontrar el seleccionado
+        radios.forEach(radio => {
+            if (radio.checked ) {
+              if ( radio.value == "Stripe") {
+                  form_card_container_checkout.style.display = "flex";
+                  button_checkout_paypal.style.display = "none";
+                  button_place_order.style.display = "block";
+
+              }
+              else {
+                form_card_container_checkout.style.display = "none";
+                button_checkout_paypal.style.display = "block";
+                button_place_order.style.display = "none";
+
+
+              }
+              //  alert( radio.value);
+            }
+        });
+
+        // Muestra el resultado en el párrafo con id "result"
+        }
    checkSizeItemsFormBoxesCheckout() {
      const items = document.querySelectorAll(".items_form_boxes_checkout:nth-child(-n+2)");
 
@@ -96,6 +127,10 @@ const arrow_products_checkout = document.querySelectorAll(".arrow_products_check
 
 
 
+
+const form_card_container_checkout = document.getElementById("form_card_container_checkout");
+const button_checkout_paypal = document.getElementById("button_checkout_paypal");
+const button_place_order = document.getElementById("button_place_order");
 const button_deliver_different_address = document.getElementById("button_deliver_different_address");
 const form_boxes_checkout_2 = document.getElementById("form_boxes_checkout_2");
 // Crear una instancia del carrito de compras
