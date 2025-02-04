@@ -29,6 +29,13 @@
     </div>
 
   </div>
+  <p>Throughout history, branding has played a vital role in shaping identities
+    and creating lasting impressions. From Babylonian stamped bricks in 300 BC
+    to Roman Emperor Constantine’s use of coins marked with Christian symbols in
+    312 AD, and from George Washington’s commemorative buttons in the 18th
+    century to Busch Brewery equipping its sales teams with branded tools in
+    the 19th century, promotional branding has always been a powerful means of
+    communication.</p>
 
 
 
