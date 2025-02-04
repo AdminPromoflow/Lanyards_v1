@@ -1,85 +1,12 @@
 <link rel="stylesheet" href="../../views/assets/css/home/sections/contact-us.css?v=<?= filemtime(__DIR__ . '/../../views/assets/css/home/sections/contact-us.css'); ?>">
 
 <style media="screen">
-.contactUs{
-  padding: 50px 0;
-  position: relative;
-  background: rgb(250,250,250);
-  background: linear-gradient(0deg, rgba(69,79,177, .06) 96%, rgba(256,256,256,0.002) 100%);
-  }
-  .contactUsTitle{
-  position: relative;
-  text-align: center;
-  font-size: calc(1.3vw + 1.6em);
-  font-weight: 400;
-  color: black;
-  }
-  .contactUsContainer{
-  position: relative;
-  display: flex;
-  flex-wrap:wrap-reverse;
-  justify-content: center;
-  width: 95vw;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-top : 60px;
-  }
-  .contactUsBox{
-  position: relative;
-  width: 50%;
-  padding: 50px 30px;
-  }
-  .contactUsBox input{
-  position: relative;
-  height: 35px;
-  width: 100%;
-  font-size: 1.4em;
-  padding-left: 10px;
-  margin: 10px 0;
-  }
-  .contactUsBox textarea {
-  position: relative;
-  width: 100%;
-  font-size: 1.4em;
-  padding: 5px 10px;
-  margin: 10px 0;
-  border: none;
-  border-bottom: 1px solid lightgrey;
-  }
-  .contactUsBox h3{
-  position: relative;
-  font-weight: 300;
-  font-size: 1.4em;
-  margin: 0px 0 10px 0;
-  }
-  .contactUsBox button{
-  position: relative;
-  padding: 5px 10px;
-  font-size: 1.4em;
-  font-weight: 400;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: rgba(69,79,177,1);
-  color: white;
-  cursor: pointer;
 
-  }
-  @media screen and (max-width: 1024px){
-  .contactUsBox{
-    position: relative;
-    width: 100%;
-    padding: 10px 30px;
-  }
-  }
-  #map3 {
-  height: 300px;
-  z-index: 1;
-  }
 </style>
-<section class="contactUs">
-  <h1 class="contactUsTitle">Contact us</h1>
-  <div class="contactUsContainer">
-    <div class="contactUsBox">
+<section class="section_contact_us">
+  <h1 >Contact us</h1>
+  <div class="container_contact_us">
+    <div class="box_contact_us">
       <h3>Your contact info</h3>
       <input type="text" name="" placeholder="Name" value="">
       <input type="text" name="" placeholder="Email address" value="">
@@ -87,7 +14,7 @@
       <textarea name="name" placeholder="Please share your experiences" rows="3" cols="80"></textarea>
       <button type="button" name="button">Submit</button>
     </div>
-    <div class="contactUsBox">
+    <div class="button_contact_us">
       <div id="map3"></div>
     </div>
   </div>

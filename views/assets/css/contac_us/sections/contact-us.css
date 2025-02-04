@@ -23,7 +23,13 @@
 }
 .container_contact_us{
   position: relative;
-  width: 40%;
+  width: 80%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
 }
 
 /* Contenedor de los campos de contacto */
@@ -81,23 +87,4 @@
 .button_contact_us:hover {
   background-color: rgba(0,28,46, .8);
   color: black;
-}
-
-/* Estilo responsivo para dispositivos pequeños */
-@media (max-width: 380px) {
-  .section_contact_us {
-    padding: 20px;
-  }
-
-  .title_contact_us h3 {
-    position: relative;
-    font-size: 20px;
-  }
-
-  . {
-    position: relative;
-    font-size: 14px;
-    padding: 10px;
-
-  }
 }
