@@ -71,7 +71,7 @@
     padding: 10px 30px;
   }
   }
-  #map {
+  #map3 {
   height: 300px;
   z-index: 1;
   }
@@ -88,14 +88,14 @@
       <button type="button" name="button">Submit</button>
     </div>
     <div class="contactUsBox">
-      <div id="map"></div>
+      <div id="map3"></div>
     </div>
   </div>
 
 </section>
 
 <script type="text/javascript">
-  var map = L.map('map').setView([50.859644, -1.320230], 10);
+  var map = L.map('map3').setView([50.859644, -1.320230], 10);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
