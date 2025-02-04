@@ -80,6 +80,8 @@
   font-size: 1.2em;
   font-weight: 200;
   margin: 3px 5px;
+  background: rgba(0, 0, 0, 0);
+
 }
 @media screen and (max-width: 1385px) {
 /*  .aboutUs{
