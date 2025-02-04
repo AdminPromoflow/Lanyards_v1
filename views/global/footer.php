@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../../views/assets/css/home/sectons/footer.css">
+<link rel="stylesheet" href="../../views/assets/css/global/footer.css">
 <section class="container_footer">
 
   <div class="box_footer">
