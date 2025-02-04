@@ -58,7 +58,8 @@ class ApiHandlerLoginGoogle
 
 
     private function validateGoogleLogin() {
-
+      echo json_encode(array("google_login" => false));
+      exit;
         // Configuración inicial de Google OAuth
         $clientID = '1022332881668-587bktseqso57k6m2dmpfao53vasg83b.apps.googleusercontent.com';
         $clientSecret = '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';
@@ -76,6 +77,7 @@ class ApiHandlerLoginGoogle
 
         // Check if the HTTP_REFERER is set in the server variables
         if (isset($_SERVER['HTTP_REFERER'])) {
+
             $refererUrl = $_SERVER['HTTP_REFERER'];
 
             // Parse the referer URL to get its components
@@ -89,7 +91,7 @@ class ApiHandlerLoginGoogle
 
                   if (!isset($queryParams['code'])) {
                     header('Content-Type: application/json');
-                    echo json_encode(array("message" => false, "google_login" => false));
+                    echo json_encode(array( "google_login" => false));
                     exit;
                   }
                 // Check if the 'code' parameter exists in the query string
@@ -106,7 +108,7 @@ class ApiHandlerLoginGoogle
                     $name = $google_account_info->name;
 
                     header('Content-Type: application/json');
-                    echo json_encode(array("message" => true, "google_login" => true));
+                    echo json_encode(array( "google_login" => true));
                     exit;
 
                   } catch (\Exception $e) {

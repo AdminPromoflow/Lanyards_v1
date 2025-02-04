@@ -83,37 +83,6 @@ class Login {
 
   }
 
-
-
-  // updateDashboardState: Updates the dashboard UI based on the user's authentication state (login/logout)
-/*  updateDashboardState(state){
-  //  alert("hah");
-    const openLogin = document.querySelectorAll(".openLogin");
-    const openLogout = document.querySelectorAll(".openLogout");
-
-    if (state) {
-      for (var i = 0; i < openLogin.length; i++) {
-      //  alert("Han hecho login a la página");
-        openLogin[i].style.display = "none";
-      }
-      for (var i = 0; i < openLogout.length; i++) {
-        openLogout[i].style.display = "block";
-      }
-
-    }
-    else {
-      for (var i = 0; i < openLogin.length; i++) {
-        openLogin[i].style.display = "block";
-      }
-      for (var i = 0; i < openLogout.length; i++) {
-        openLogout[i].style.display = "none";
-      }
-    }
-
-
-  }*/
-
-  // Function to make the AJAX request
   // Function to make the AJAX request
   makeAjaxRequestLoginWithGoogle() {
       // Define the URL and the data to be sent
