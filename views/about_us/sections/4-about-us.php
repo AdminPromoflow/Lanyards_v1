@@ -36,9 +36,18 @@
     century to Busch Brewery equipping its sales teams with branded tools in
     the 19th century, promotional branding has always been a powerful means of
     communication.</p>
-
-
-
+  <p>While we may not have been around for centuries, our expertise is built on
+     a solid foundation. With a combined 40 years of experience in lanyards and
+     over 60 years in the promotional industry, we bring unmatched knowledge,
+     precision, and commitment to every project.</p>
+  <p>At our core, we are dedicated to professionalism, excellence, and reliability.
+     We take pride in delivering effective solutions, ensuring that every project
+     is completed on time and within budget. Our approach combines efficiency with
+     a passion for what we do, creating a seamless and enjoyable experience for
+     our clients.</p>
+  <p>Our commitment is unwavering—we strive to provide the best service, the
+    highest quality, and innovative promotional solutions that leave a lasting
+    impact.</p>
 
 </section>
 
