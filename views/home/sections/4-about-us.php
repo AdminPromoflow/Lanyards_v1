@@ -29,11 +29,10 @@
     </div>
 
   </div>
-  <button type="button" name="button">Explore More</button>
 
-
-
-
+  <a href="../../views/about_us/index.php">
+      <button type="button" name="button">Explore More</button>
+  </a>
 </section>
 
 <!-- Link to external JavaScript for additional functionality -->
