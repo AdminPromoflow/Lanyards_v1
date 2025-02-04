@@ -12,14 +12,12 @@
 .containers_contact_us{
   position: relative;
   padding: 1vw;
-  background: orange;
   margin: 5px;
 
 
 }
 .box_contact_us{
   position: relative;
-  background: green;
 
   display: flex;
   justify-content: center;
