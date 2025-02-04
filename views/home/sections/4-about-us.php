@@ -29,6 +29,7 @@
     </div>
 
   </div>
+  <button type="button" name="button">Explore More</button>
 
 
 
