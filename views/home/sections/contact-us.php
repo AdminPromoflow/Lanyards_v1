@@ -75,7 +75,7 @@
       <textarea name="name" placeholder="Please share your experiences" rows="3" cols="80"></textarea>
       <button type="button" name="button">Submit</button>
     </div>
-    <div class="box_contact_us">
+    <div class="contactUsBox">
       <div id="map3"></div>
     </div>
   </div>
