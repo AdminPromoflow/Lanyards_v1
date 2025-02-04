@@ -1,11 +1,16 @@
 .section_about_us{
   position: relative;
   padding: 3vw 0;
+
+  display: flex;
+  justify-content: center;
+
 }
 .section_about_us p{
   position: relative;
   text-align: justify;
   color: white;
+  width: 80%;
   text-shadow: 3px 3px 2px black;
   font-size: 1.2em;
   font-weight: 200;
