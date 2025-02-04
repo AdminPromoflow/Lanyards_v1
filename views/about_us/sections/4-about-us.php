@@ -50,7 +50,7 @@
 
   <div class="section_about_us_container_buttons">
     <button type="button" name="button">Go Home</button>
-    <button type="button" name="button">Request a Consultation</button>
+    <button type="button" name="button">Contact us</button>
   </div>
 
 </section>
