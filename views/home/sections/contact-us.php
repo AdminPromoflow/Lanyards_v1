@@ -1,19 +1,7 @@
 <link rel="stylesheet" href="../../views/assets/css/home/sections/contact-us.css?v=<?= filemtime(__DIR__ . '/../../views/assets/css/home/sections/contact-us.css'); ?>">
 
 <style media="screen">
-.contactUs{
-  padding: 50px 0;
-  position: relative;
-  background: rgb(250,250,250);
-  background: linear-gradient(0deg, rgba(69,79,177, .06) 96%, rgba(256,256,256,0.002) 100%);
-  }
-  .contactUsTitle{
-  position: relative;
-  text-align: center;
-  font-size: calc(1.3vw + 1.6em);
-  font-weight: 400;
-  color: black;
-  }
+
   .contactUsContainer{
   position: relative;
   display: flex;
@@ -76,8 +64,8 @@
   z-index: 1;
   }
 </style>
-<section class="contactUs">
-  <h1 class="contactUsTitle">Contact us</h1>
+<section class="section_contact_us">
+  <h1 >Contact us</h1>
   <div class="contactUsContainer">
     <div class="contactUsBox">
       <h3>Your contact info</h3>
