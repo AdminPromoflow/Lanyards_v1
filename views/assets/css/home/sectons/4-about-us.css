@@ -14,8 +14,6 @@
   position: relative;
   width: calc(68vw + 20px);
   min-width: 620px;
-  left: 50%;
-  transform: translateX(-50%);
 }
 .titleAboutUs h3{
   position: relative;
