@@ -48,6 +48,11 @@
     highest quality, and innovative promotional solutions that leave a lasting
     impact.</p>
 
+  <div class="section_about_us_container_buttons">
+    <button type="button" name="button">Go Home</button>
+    <button type="button" name="button">Request a Consultation</button>
+  </div>
+
 </section>
 
 <!-- Link to external JavaScript for additional functionality -->

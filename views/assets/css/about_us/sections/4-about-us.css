@@ -204,31 +204,23 @@ display: none;
 .display1200px{
 display: block;
 }
-
-
-/*
-@media screen and (min-width: 480px) {
-  .display480px{
-    display: block;
-  }
+.section_about_us_container_buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
-@media screen and (min-width: 768px) {
-  .display480px{
-    display: none;
-  }
-  .display1024px{
-    display: block;
-  }
+.section_about_us_container_buttons button{
+  padding: calc(0.1vw + 0.1em) calc(0.6vw + 0.6em);
+  z-index: 10;
+  max-height: 70px;
+  font-size: calc(0.8vw + 0.8em);
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgba(141, 67, 68, .9);
+  color: white;
+  font-weight: 300;
+  text-shadow: 2px 2px 0px black;
+  cursor: pointer;
+  margin: 3vw;
 }
-@media screen and (min-width: 1024px) {
-
-}
-
-@media screen and (min-width: 1200px) {
-  .display1024px{
-    display: none;
-  }
-  .display1200px{
-    display: block;
-  }
-}*/
