@@ -49,8 +49,8 @@
     impact.</p>
 
   <div class="section_about_us_container_buttons">
-    <button type="button" name="button">Go Home</button>
-    <button type="button" name="button">Contact us</button>
+    <button type="button" name="button" onclick="window.location.href='../../views/home/index.php'">Go Home</button>
+    <button type="button" name="button" onclick="window.location.href='../../views/contact_us/index.php'">Contact us</button>
   </div>
 
 </section>
