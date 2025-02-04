@@ -87,14 +87,14 @@ class ApiHandlerLoginGoogle
 
                 // Parse the query string into an associative array
                 parse_str($urlComponents['query'], $queryParams);
-
+                echo json_encode(array("google_login" => false));
+                exit;
                   if (!isset($queryParams['code'])) {
                     header('Content-Type: application/json');
                     echo json_encode(array( "google_login" => false));
                     exit;
                   }
-                  echo json_encode(array("google_login" => false));
-                  exit;
+
                 // Check if the 'code' parameter exists in the query string
                 if (isset($queryParams['code'])) {
                   try {
