@@ -3,7 +3,7 @@
 <style media="screen">
 
   .contactUsBox{
-
+  width: 50%;
   }
 
 </style>
