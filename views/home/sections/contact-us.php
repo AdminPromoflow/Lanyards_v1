@@ -3,9 +3,11 @@
 <style media="screen">
 
   .contactUsBox{
+  position: relative;
   width: 50%;
   padding: 50px 30px;
   }
+
 
 </style>
 <section class="section_contact_us">
