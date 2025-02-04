@@ -76,15 +76,15 @@ class ApiHandlerLoginGoogle
 
         // Check if the HTTP_REFERER is set in the server variables
         if (isset($_SERVER['HTTP_REFERER'])) {
-
+          echo json_encode(array("google_login" => false));
+          exit
             $refererUrl = $_SERVER['HTTP_REFERER'];
 
             // Parse the referer URL to get its components
             $urlComponents = parse_url($refererUrl);
 
-            
-              echo json_encode(array("google_login" => false));
-              exit
+
+
 
 
             // Check if a query string exists in the URL components
