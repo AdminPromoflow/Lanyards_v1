@@ -1,6 +1,9 @@
 .section_about_us{
   position: relative;
   padding: 3vw 0;
+
+  display: flex;
+  justify-content: center;
 }
 .aboutUs a{
    all: unset;
