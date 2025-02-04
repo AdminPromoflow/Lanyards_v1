@@ -110,9 +110,9 @@ class ApiHandlerLoginGoogle
                     exit;
 
                   } catch (\Exception $e) {
-                    header('Content-Type: application/json');
-                    echo json_encode(array("message" => true, "google_login" => true));
-                    exit;
+                  //  header('Content-Type: application/json');
+                  //  echo json_encode(array("message" => true, "google_login" => true));
+                  //  exit;
 
                   }
 

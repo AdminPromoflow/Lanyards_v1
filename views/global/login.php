@@ -14,7 +14,7 @@
       <input id="emailLogin" type="text" name="" value="" placeholder="Email">
       <input id="passwordLogin" type="password" name="" value="" placeholder="Password">
       <h3 id="password_forgotten">Have you forgotten your password?</h3>
-
+   
       <button id="loginButton" type="button" name="button"><strong class="fontWeightButtonLogin">Login</strong></button>
     </div>
     <div class="footerLogin">
