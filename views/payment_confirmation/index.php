@@ -29,12 +29,11 @@
         <!-- Content section -->
         <div class="content" >
 
-          <!-- Include the menu component -->
-          <?php include "../../views/global/menu.php" ?>
+
           <div class="bgLanyards">
 
           <!-- Include the slider component for the index page -->
-            <?php include "../../views/checkout/sections/checkout.php" ?>
+            <?php include "../../views/payment_confirmation/sections/payment_confirmation.php" ?>
             <?php include "../../views/global/footer.php" ?>
 
           </div>
