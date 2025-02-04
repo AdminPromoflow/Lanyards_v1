@@ -56,6 +56,12 @@
   background-color: rgba( 25, 61, 116, 0.7);
   margin: 20px 15px;
   padding: 0px 10px;
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .boxAboutUs h3{
   position: relative;
