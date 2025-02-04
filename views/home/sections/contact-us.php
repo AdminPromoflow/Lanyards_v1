@@ -66,7 +66,7 @@
 </style>
 <section class="section_contact_us">
   <h1 >Contact us</h1>
-  <div class="contactUsContainer">
+  <div class="containers_contact_us">
     <div class="contactUsBox">
       <h3>Your contact info</h3>
       <input type="text" name="" placeholder="Name" value="">
