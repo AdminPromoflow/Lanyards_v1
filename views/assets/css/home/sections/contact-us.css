@@ -24,6 +24,7 @@
 .container_contact_us{
   position: relative;
   width: 80%;
+  background: orange;
 
   display: flex;
   justify-content: center;

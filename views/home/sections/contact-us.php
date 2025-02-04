@@ -1,8 +1,5 @@
 <link rel="stylesheet" href="../../views/assets/css/home/sections/contact-us.css?v=<?= filemtime(__DIR__ . '/../../views/assets/css/home/sections/contact-us.css'); ?>">
 
-<style media="screen">
-
-</style>
 <section class="section_contact_us">
   <h1 >Contact us</h1>
   <div class="containers_contact_us">
