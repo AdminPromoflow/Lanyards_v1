@@ -72,12 +72,12 @@ class ApiHandlerLoginGoogle
         $client->addScope("email");
         $client->addScope("profile");
 
-        echo json_encode(array("google_login" => false));
-        exit;
+
 
         // Check if the HTTP_REFERER is set in the server variables
         if (isset($_SERVER['HTTP_REFERER'])) {
-
+          echo json_encode(array("google_login" => false));
+          exit;
             $refererUrl = $_SERVER['HTTP_REFERER'];
 
             // Parse the referer URL to get its components
