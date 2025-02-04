@@ -9,4 +9,4 @@
       window.open("views/home/index.php", "_self");
     </script>
   </body>
-</html>
+</html>   
