@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../assets/css/home/sectons/3-materials.css?v=<?php echo filemtime('../assets/css/home/sectons/3-materials.css'); ?>">
+<link rel="stylesheet" href="../assets/css/home/sections/3-materials.css?v=<?php echo filemtime('../assets/css/home/sections/3-materials.css'); ?>">
 
 <section class="materials">
   <h1>Create your own lanyard from scratch.</h1>

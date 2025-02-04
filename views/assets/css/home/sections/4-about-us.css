@@ -185,7 +185,7 @@ display: none;
 display: block;
 }
 .section_about_us button{
-  padding: calc(0.1vw + 0.1em) calc(1vw + 1em);
+  padding: calc(0.1vw + 0.1em) calc(0.5vw + 0.5em);
   z-index: 10;
   max-height: 50px;
   font-size: calc(1vw + 1em);

@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../assets/css/home/sectons/1-slider.css?v=<?php echo filemtime('../assets/css/home/sectons/1-slider.css'); ?>">
+<link rel="stylesheet" href="../assets/css/home/sections/1-slider.css?v=<?php echo filemtime('../assets/css/home/sections/1-slider.css'); ?>">
 <section class="sliderContainer">
 
   <div id="sliderLong" class="sliderLong">

@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../../views/assets/css/home/sectons/2-most_popular_lanyard.css?v=<?php echo filemtime('../../views/assets/css/home/sectons/2-most_popular_lanyard.css'); ?>">
+<link rel="stylesheet" href="../../views/assets/css/home/sections/2-most_popular_lanyard.css?v=<?php echo filemtime('../../views/assets/css/home/sections/2-most_popular_lanyard.css'); ?>">
 
 <section class="most_popular_lanyard">
   <h1>Most popular lanyard</h1>

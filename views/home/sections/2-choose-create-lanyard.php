@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../assets/css/home/sectons/2-choose-create-lanyard.css?v=<?php echo filemtime('../assets/css/home/sectons/2-choose-create-lanyard.css'); ?>">
+<link rel="stylesheet" href="../assets/css/home/sections/2-choose-create-lanyard.css?v=<?php echo filemtime('../assets/css/home/sections/2-choose-create-lanyard.css'); ?>">
 <section id="section_most_popular" class="chooseCreateLanyard">
     <h1>Information About Our Customisation Options</h1>
 

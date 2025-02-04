@@ -1,6 +1,6 @@
 <!-- Link to external stylesheet for styling the section -->
-<link rel="stylesheet" href="../../views/assets/css/home/sectons/4-about-us.css">
-
+<!-- CSS with filemtime() to ensure the latest version is always loaded -->
+<link rel="stylesheet" href="../../views/assets/css/home/sections/4-about-us.css?v=<?php echo filemtime('../../views/assets/css/home/sections/4-about-us.css'); ?>">
 <section class="section_about_us">
   <!-- Title section for SOLENT -->
   <div class="titleAboutUs">
