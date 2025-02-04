@@ -2,11 +2,6 @@
 
 <style media="screen">
 
-  .contactUsBox{
-  position: relative;
-  width: 50%;
-  padding: 50px 30px;
-  }
 
 </style>
 <section class="section_contact_us">
@@ -20,7 +15,7 @@
       <textarea name="name" placeholder="Please share your experiences" rows="3" cols="80"></textarea>
       <button class="button_contact_us" id="button_contact_us_from_home" type="button" name="button">Submit</button>
     </div>
-    <div class="contactUsBox">
+    <div class="box_contact_us">
       <div id="map3"></div>
     </div>
   </div>
