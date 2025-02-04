@@ -29,10 +29,7 @@
     </div>
 
   </div>
-
-  <a href="../../views/about_us/index.php">
-      <button type="button" name="button">Explore More</button>
-  </a>
+  <button type="button" name="button" onclick="window.location.href='../../views/about_us/index.php'">Explore More</button>
 </section>
 
 <!-- Link to external JavaScript for additional functionality -->
