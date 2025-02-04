@@ -1,6 +1,5 @@
 <!-- Link to external stylesheet for styling the section -->
-<link rel="stylesheet" href="../../views/assets/css/about_us/sections/4-about-us.css">
-
+<link rel="stylesheet" href="../../views/assets/css/about_us/sections/4-about-us.css?v=<?= filemtime('../../views/assets/css/about_us/sections/4-about-us.css'); ?>">
 <section class="section_about_us">
   <!-- Title section for SOLENT -->
   <div class="titleAboutUs">
@@ -52,4 +51,4 @@
 </section>
 
 <!-- Link to external JavaScript for additional functionality -->
-<script src="../../views/assets/js/about_us/sections/about_us.js" type="text/javascript"></script>
+<script src="../../views/assets/js/about_us/sections/about_us.js?v=<?= filemtime('../../views/assets/js/about_us/sections/about_us.js'); ?>" type="text/javascript"></script>
