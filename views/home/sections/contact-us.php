@@ -67,7 +67,7 @@
 <section class="section_contact_us">
   <h1 >Contact us</h1>
   <div class="containers_contact_us">
-    <div class="contactUsBox">
+    <div class="box_contact_us">
       <h3>Your contact info</h3>
       <input type="text" name="" placeholder="Name" value="">
       <input type="text" name="" placeholder="Email address" value="">
@@ -75,7 +75,7 @@
       <textarea name="name" placeholder="Please share your experiences" rows="3" cols="80"></textarea>
       <button type="button" name="button">Submit</button>
     </div>
-    <div class="contactUsBox">
+    <div class="box_contact_us">
       <div id="map3"></div>
     </div>
   </div>

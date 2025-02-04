@@ -1,7 +1,8 @@
-.section_contact_us{
+.section_contact_us {
   position: relative;
-  background-color: red;
+  background-color: rgba(0, 0, 0, .5);
   padding: 7vw 0;
+  border-radius: 10px;
   width: 100%;
   margin: 0 auto;
 
@@ -9,45 +10,86 @@
   justify-content: center;
   align-items: center;
 }
-.containers_contact_us{
+
+.section_contact_us h3 {
   position: relative;
-  padding: 1vw;
-  margin: 5px;
-
-
+  text-align: center;
+  color: white;
+  text-shadow: 3px 3px 2px black;
+  font-size: calc(1.8em + 1.8vw);
+  font-weight: 200;
+  margin: 0 0 3vw 0;
+  padding: 0px;
 }
-.box_contact_us{
+.container_contact_us{
   position: relative;
+  width: 80%;
 
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+}
+
+/* Contenedor de los campos de contacto */
+.box_contact_us {
+  position: relative;
+  display: flex;
   flex-direction: column;
+  gap: 15px; /* Espaciado entre los campos */
+
 }
 
-.box_contact_us label{
-  margin: 5px 0;
-}
-.box_contact_us input{
-  margin: 5px 0;
-}
-.box_contact_us button{
-  margin: 5px 0;
-}
-#map3 {
-  height: 180px;
+/* Estilo de las etiquetas */
+.box_contact_us label {
+  position: relative;
+  font-size: 14px;
+  color: white; /* Color de texto suave */
+  margin-bottom: 5px;
 }
 
+/* Estilo de los campos de entrada */
+.box_contact_us input[type="text"] {
+  position: relative;
+  padding: 10px;
+  border: 1px solid #ddd; /* Borde claro */
+  border-radius: 5px;
+  font-size: 14px;
+  color: #333;
+  background-color: #fff; /* Fondo blanco */
+  transition: border-color 0.3s ease; /* Animación suave */
+}
 
+.box_contact_us input[type="text"]:focus {
+  position: relative;
+  border-color: #007bff;
+  outline: none;
+}
 
+/* Estilo del botón */
+.button_contact_us {
+  position: relative;
+  padding: 12px 20px;
+  color: white;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  max-width: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0,28,46, .6);
+  border:1px solid #004674;
+}
 
-
-
-
-
-
-
-
-
-
-/**/
+/* Efecto al pasar el mouse sobre el botón */
+.button_contact_us:hover {
+  background-color: rgba(0,28,46, .8);
+  color: black;
+}
+#map3{
+  z-index: 20;
+  width: 300px;
+  height: 300px;
+}
