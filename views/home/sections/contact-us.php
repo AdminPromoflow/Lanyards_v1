@@ -8,12 +8,6 @@
   padding: 50px 30px;
   }
 
-
-
-  #map3 {
-  height: 300px;
-  z-index: 1;
-  }
 </style>
 <section class="section_contact_us">
   <h1 >Contact us</h1>
