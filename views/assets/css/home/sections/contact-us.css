@@ -91,8 +91,6 @@
 
 #map3{
   position: relative;
-  left: 50%;
-  transform: translateX();
   height: 192px;
   border-radius: 5px;
   z-index: 1;
