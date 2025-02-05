@@ -191,11 +191,11 @@ class ApiHandlerLoginGoogle
 
 
 }
-
-require_once '../../controller/assets/lib/composer/vendor/autoload.php';
-//require_once '../../controller/users/session-user.php';
 echo json_encode(array("google_login" => false));
 exit
+require_once '../../controller/assets/lib/composer/vendor/autoload.php';
+//require_once '../../controller/users/session-user.php';
+
 
 
 
