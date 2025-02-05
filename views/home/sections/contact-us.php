@@ -7,7 +7,7 @@
       <input type="text" name="" placeholder="Name" value="">
       <input type="text" name="" placeholder="Email address" value="">
       <input type="text" name="" placeholder="Contact number" value="">
-      <textarea name="name" placeholder="Please share your experiences" rows="3" cols="80"></textarea>
+      <textarea name="name" placeholder="Please share your experiences" rows="3" ></textarea>
     </div>
     <div class="box_contact_us">
       <div id="map3"></div>
