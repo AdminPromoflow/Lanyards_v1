@@ -83,7 +83,7 @@ class ApiHandlerLoginGoogle
             $urlComponents = parse_url($refererUrl);
 
 
-            echo json_encode(array("google_login" => false));
+            echo json_encode(array("google_login" => isset($urlComponents['query'])));
             exit;
 
 
