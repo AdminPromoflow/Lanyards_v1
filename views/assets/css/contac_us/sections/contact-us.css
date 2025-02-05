@@ -84,7 +84,7 @@
 #map2{
   position: relative;
   left: 50%;
-  transform: translateX();
+  transform: translateX(-50%);
   height: 192px;
   border-radius: 5px;
   z-index: 1;
