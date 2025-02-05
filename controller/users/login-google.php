@@ -136,12 +136,12 @@
 
 
 }*/
+
+require_once '../../controller/assets/lib/composer/vendor/autoload.php';
 echo json_encode(array("google_login" => false));
 exit
-/*require_once '../../controller/assets/lib/composer/vendor/autoload.php';
 
-
-
+/*
 
 //controller/assets/lib/vendor/autoload.php
 $apiHandlerLoginGoogle = new ApiHandlerLoginGoogle();
