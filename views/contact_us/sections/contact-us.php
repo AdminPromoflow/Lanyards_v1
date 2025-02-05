@@ -14,8 +14,6 @@
     </div>
   </div>
   <button class="button_contact_us" id="button_contact_us" type="button" name="button">Submit</button>
-
-
 </section>
 
 <script type="text/javascript">

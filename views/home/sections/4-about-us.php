@@ -33,4 +33,4 @@
 </section>
 
 <!-- Link to external JavaScript for additional functionality -->
-<script src="../../views/assets/js/home/sectons/4-about-us.js" type="text/javascript"></script>
+<script src="../../views/assets/js/home/sections/4-about-us.js" type="text/javascript"></script>

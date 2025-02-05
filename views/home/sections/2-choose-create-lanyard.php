@@ -453,4 +453,4 @@
       <button type="button" name="button">Start</button>
   <!--  -->
 </section>
-<script src="../assets/js/home/sectons/2-choose-create-lanyard.js?v=<?php echo filemtime('../assets/js/home/sectons/2-choose-create-lanyard.js'); ?>"></script>
+<script src="../assets/js/home/sections/2-choose-create-lanyard.js?v=<?php echo filemtime('../assets/js/home/sections/2-choose-create-lanyard.js'); ?>"></script>

@@ -106,4 +106,4 @@
   </div>
 </section>
 
-<script src="../../views/assets/js/home/sectons/2-most_popular_lanyard.js?v=<?php echo filemtime('../../views/assets/js/home/sectons/2-most_popular_lanyard.js'); ?>" type="text/javascript"></script>
+<script src="../../views/assets/js/home/sections/2-most_popular_lanyard.js?v=<?php echo filemtime('../../views/assets/js/home/sections/2-most_popular_lanyard.js'); ?>" type="text/javascript"></script>
