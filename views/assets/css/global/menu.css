@@ -142,6 +142,8 @@
     width: 45%;
   }
   .logo img{
+    position: absolute;
+    left: 1vw;
     height: 85%;
     width: auto;
   }

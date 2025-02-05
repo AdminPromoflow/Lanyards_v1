@@ -107,8 +107,6 @@ class Login {
       })
       .then(data => {
         //  alert(data); // Display the data from the response
-          // Optionally, redirect based on the data received
-          // window.location.href = data;
            window.open(data, "_self");
       })
       .catch(error => {
