@@ -51,6 +51,10 @@ class ApiHandlerLoginGoogle
         $client->setRedirectUri($redirectUri);
         $client->addScope("email");
         $client->addScope("profile");
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
+        $_SESSION['logging_with_google'] = true;
 
         echo $client->createAuthUrl();
     }
@@ -58,8 +62,7 @@ class ApiHandlerLoginGoogle
 
 
     private function validateGoogleLogin() {
-      //  if (isset($_SESSION['logging_with_google']) && $_SESSION['logging_with_google'] === true) {
-          // code...
+        if (isset($_SESSION['logging_with_google']) && $_SESSION['logging_with_google'] === true) {
 
         // Configuración inicial de Google OAuth
         $clientID = '1022332881668-587bktseqso57k6m2dmpfao53vasg83b.apps.googleusercontent.com';
@@ -146,12 +149,12 @@ class ApiHandlerLoginGoogle
           echo json_encode(array("google_login" => false));
           exit;
         }
-  //    }
-    /*  else {
+      }
+      else {
         header('Content-Type: application/json');
         echo json_encode(array("google_login" => false));
         exit;
-      }*/
+      }
     }
   /*private function validateGoogleLogin() {
     // Google OAuth initial configuration
