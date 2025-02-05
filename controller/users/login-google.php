@@ -55,90 +55,69 @@ class ApiHandlerLoginGoogle
         echo $client->createAuthUrl();
     }
 
+    private function validateGoogleLogin()
+    {
+        // Obtener credenciales desde variables de entorno
+        $clientID = getenv('1022332881668-587bktseqso57k6m2dmpfao53vasg83b.apps.googleusercontent.com');
+        $clientSecret = getenv('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');
+        $redirectUri = getenv('https://lanyardsforyou.com/views/home/index.php');
 
-
-    private function validateGoogleLogin() {
-
-        // Configuración inicial de Google OAuth
-        $clientID = '1022332881668-587bktseqso57k6m2dmpfao53vasg83b.apps.googleusercontent.com';
-        $clientSecret = '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';
-        $redirectUri = 'https://lanyardsforyou.com/views/home/index.php';
+        if (!$clientID || !$clientSecret || !$redirectUri) {
+            $this->jsonResponse(500, "Google OAuth credentials are missing");
+        }
 
         // Crear cliente de Google
         $client = new Google_Client();
         $client->setClientId($clientID);
         $client->setClientSecret($clientSecret);
         $client->setRedirectUri($redirectUri);
-        $client->addScope("email");
-        $client->addScope("profile");
 
-
-
-        // Check if the HTTP_REFERER is set in the server variables
-        if (isset($_SERVER['HTTP_REFERER'])) {
-
-            $refererUrl = $_SERVER['HTTP_REFERER'];
-
-            // Parse the referer URL to get its components
-            $urlComponents = parse_url($refererUrl);
-
-
-
-
-
-            // Check if a query string exists in the URL components
-            if (isset($urlComponents['query'])) {
-
-                // Parse the query string into an associative array
-                parse_str($urlComponents['query'], $queryParams);
-
-                  if (!isset($queryParams['code'])) {
-                    header('Content-Type: application/json');
-                    echo json_encode(array( "google_login" => false));
-                    exit;
-                  }
-
-                // Check if the 'code' parameter exists in the query string
-                if (isset($queryParams['code'])) {
-
-                  try {
-                    // Fetch the access token using the authorization code
-                    $token = $client->fetchAccessTokenWithAuthCode($queryParams['code']);
-                    $client->setAccessToken($token['access_token']);
-
-                    // Retrieve the user's profile information
-                    $google_oauth = new Google_Service_Oauth2($client);
-                    $google_account_info = $google_oauth->userinfo->get();
-                    $email = $google_account_info->email;
-                    $name = $google_account_info->name;
-
-                    header('Content-Type: application/json');
-                    echo json_encode(array( "google_login" => true));
-                    exit;
-
-                  } catch (\Exception $e) {
-                  //  header('Content-Type: application/json');
-                  //  echo json_encode(array("message" => true, "google_login" => true));
-                  //  exit;
-
-                  }
-
-
-                }
-            }
-            else {
-              header('Content-Type: application/json');
-              echo json_encode(array("google_login" => false));
-              exit;
-            }
-        }
-        else {
-          header('Content-Type: application/json');
-          echo json_encode(array("message" => false, "google_login" => false));
-          exit;
+        // Verificar si el código de autenticación está presente en la URL
+        if (!isset($_GET['code']) || empty($_GET['code'])) {
+            $this->jsonResponse(400, "Missing 'code' parameter", ["google_login" => false]);
         }
 
+        try {
+            // Obtener el token de acceso con el código de autenticación
+            $token = $client->fetchAccessTokenWithAuthCode($_GET['code']);
+
+            if (isset($token['error'])) {
+                throw new Exception("Invalid token response: " . json_encode($token));
+            }
+
+            $client->setAccessToken($token['access_token']);
+
+            // Obtener la información del usuario
+            $google_oauth = new Google_Service_Oauth2($client);
+            $google_account_info = $google_oauth->userinfo->get();
+            $email = $google_account_info->email;
+            $name = $google_account_info->name;
+
+            // Iniciar sesión si no está iniciada
+            if (session_status() === PHP_SESSION_NONE) {
+                session_start();
+            }
+
+            $_SESSION['logged_in'] = true;
+            $_SESSION['name'] = $name;
+            $_SESSION['email'] = $email;
+            $_SESSION['session_type'] = "google";
+
+            // Enviar respuesta exitosa
+            $this->jsonResponse(200, "Google login successful", [
+                "google_login" => true,
+                "email" => $email,
+                "name" => $name
+            ]);
+
+        } catch (Exception $e) {
+            $this->jsonResponse(500, "Google authentication failed", [
+                "error" => $e->getMessage(),
+                "google_login" => false
+            ]);
+        }
     }
+
 
 
   /*private function validateGoogleLogin() {
