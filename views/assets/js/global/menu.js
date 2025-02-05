@@ -19,7 +19,7 @@ class Menu {
         menu.style.display = "none";
       }
       else {
-        menu.style.display = "block";
+        menu.style.display = "flex";
       }
     });
 
@@ -64,7 +64,7 @@ class Menu {
         showLogout.addEventListener("click", function () {
           container_logout.style.display =
             container_logout.style.display === "none" || container_logout.style.display === ""
-              ? "block"
+              ? "flex"
               : "none";
         });
       }
@@ -219,7 +219,7 @@ class Menu {
   closeMenuMobile() {
     closeMenuMobile.style.display = "none"; // Hide the close button
     menuMobile.style.left = "calc(100%)"; // Slide the mobile menu out of view
-    openMenuMobile.style.display = "block"; // Show the open button
+    openMenuMobile.style.display = "flex"; // Show the open button
   }
 
   // Function to close the mobile menu if the user clicks outside of it
