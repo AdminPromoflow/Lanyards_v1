@@ -52,12 +52,20 @@ class ApiHandlerLoginGoogle
         $client->addScope("email");
         $client->addScope("profile");
 
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
+        $_SESSION['logging_with_google'] = true;
+
+
         echo $client->createAuthUrl();
     }
 
 
 
     private function validateGoogleLogin() {
+        if (isset($_SESSION['logging_with_google']) && $_SESSION['logging_with_google'] === true) {
+          // code...
 
         // Configuración inicial de Google OAuth
         $clientID = '1022332881668-587bktseqso57k6m2dmpfao53vasg83b.apps.googleusercontent.com';
@@ -81,10 +89,6 @@ class ApiHandlerLoginGoogle
 
             // Parse the referer URL to get its components
             $urlComponents = parse_url($refererUrl);
-
-
-
-
 
             // Check if a query string exists in the URL components
             if (isset($urlComponents['query'])) {
@@ -119,13 +123,10 @@ class ApiHandlerLoginGoogle
                       $email = $google_account_info->email;
                       $name = $google_account_info->name;
 
+                      $_SESSION['logging_with_google'] = false;
                       // Enviar respuesta exitosa con los datos del usuario
                       header('Content-Type: application/json');
-                      echo json_encode([
-                          "google_login" => true,
-                          "email" => $email,
-                          "name" => $name
-                      ]);
+                      echo json_encode(array("google_login" => true));
                       exit;
 
                   } catch (Exception $e) {
@@ -148,10 +149,15 @@ class ApiHandlerLoginGoogle
         }
         else {
           header('Content-Type: application/json');
-          echo json_encode(array("message" => false, "google_login" => false));
+          echo json_encode(array("google_login" => false));
           exit;
         }
-
+      }
+      else {
+        header('Content-Type: application/json');
+        echo json_encode(array("google_login" => false));
+        exit;
+      }
     }
 
 
