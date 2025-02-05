@@ -103,7 +103,7 @@
   background-color: rgba(0,28,46, .8);
   color: black;
 }
-/*#map3{
-  height: 200px;
+#map3{
+  width: 200px;
   z-index: 1;
-}*/
+}
