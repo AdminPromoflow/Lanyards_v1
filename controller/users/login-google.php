@@ -1,8 +1,9 @@
 <?php
-/*class ApiHandlerLoginGoogle
+class ApiHandlerLoginGoogle
 {
     public function handleRequest() {
-
+      echo json_encode(array("google_login" => '1'));
+      exit
 
         // Check if a GET request was received
         if ($_SERVER["REQUEST_METHOD"] == "GET") {
@@ -135,15 +136,14 @@
     }
 
 
-}*/
+}
 
 require_once '../../controller/assets/lib/composer/vendor/autoload.php';
-echo json_encode(array("google_login" => '1'));
-exit
 
-/*
+
+
 
 //controller/assets/lib/vendor/autoload.php
 $apiHandlerLoginGoogle = new ApiHandlerLoginGoogle();
-$apiHandlerLoginGoogle->handleRequest();*/
+$apiHandlerLoginGoogle->handleRequest();
 ?>
