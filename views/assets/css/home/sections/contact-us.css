@@ -52,7 +52,19 @@
   color: #333;
   margin: 5px;
 }
+.box_contact_us textarea{
+  background: purple;
 
+  position: relative;
+  padding: 5px 0px 5px 10px;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 1em;
+  color: #333;
+  margin: 5px;
+  
+  height: 100px;
+}
 
 
 
