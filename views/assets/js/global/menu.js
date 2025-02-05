@@ -142,7 +142,7 @@ class Menu {
 
     // Toggle display based on the session state
     openLogin.forEach(element => {
-      element.style.display = activeSession ? 'none' : 'flex'; // Show or hide login buttons
+      element.style.display = activeSession ? 'none' : 'block'; // Show or hide login buttons
     });
 
     openLogoutClass.forEach(element => {
