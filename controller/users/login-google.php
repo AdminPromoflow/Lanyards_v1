@@ -83,8 +83,7 @@ class ApiHandlerLoginGoogle
             $urlComponents = parse_url($refererUrl);
 
 
-            echo json_encode(array("google_login" => false));
-            exit;
+
 
 
             // Check if a query string exists in the URL components
@@ -98,9 +97,11 @@ class ApiHandlerLoginGoogle
                     echo json_encode(array( "google_login" => false));
                     exit;
                   }
-
+                  echo json_encode(array("google_login" => false));
+                  exit;
                 // Check if the 'code' parameter exists in the query string
                 if (isset($queryParams['code'])) {
+
                   try {
                     // Fetch the access token using the authorization code
                     $token = $client->fetchAccessTokenWithAuthCode($queryParams['code']);
