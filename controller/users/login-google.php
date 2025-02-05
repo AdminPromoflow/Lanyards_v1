@@ -58,6 +58,8 @@ class ApiHandlerLoginGoogle
 
 
     private function validateGoogleLogin() {
+      //  if (isset($_SESSION['logging_with_google']) && $_SESSION['logging_with_google'] === true) {
+          // code...
 
         // Configuración inicial de Google OAuth
         $clientID = '1022332881668-587bktseqso57k6m2dmpfao53vasg83b.apps.googleusercontent.com';
@@ -76,6 +78,7 @@ class ApiHandlerLoginGoogle
 
         // Check if the HTTP_REFERER is set in the server variables
         if (isset($_SERVER['HTTP_REFERER'])) {
+
             $refererUrl = $_SERVER['HTTP_REFERER'];
 
             // Parse the referer URL to get its components
@@ -89,46 +92,67 @@ class ApiHandlerLoginGoogle
 
                   if (!isset($queryParams['code'])) {
                     header('Content-Type: application/json');
-                    echo json_encode(array("message" => false, "google_login" => false));
+                    echo json_encode(array( "google_login" => false));
                     exit;
                   }
+
                 // Check if the 'code' parameter exists in the query string
                 if (isset($queryParams['code'])) {
+
                   try {
-                    // Fetch the access token using the authorization code
-                    $token = $client->fetchAccessTokenWithAuthCode($queryParams['code']);
-                    $client->setAccessToken($token['access_token']);
+                      // Obtener el token de acceso usando el código de autorización
+                      $token = $client->fetchAccessTokenWithAuthCode($queryParams['code']);
 
-                    // Retrieve the user's profile information
-                    $google_oauth = new Google_Service_Oauth2($client);
-                    $google_account_info = $google_oauth->userinfo->get();
-                    $email = $google_account_info->email;
-                    $name = $google_account_info->name;
+                      // Verificar si hubo un error en la respuesta
+                      if (isset($token['error']) || !isset($token['access_token'])) {
+                          throw new Exception("Error fetching access token: " . json_encode($token));
+                      }
 
-                    header('Content-Type: application/json');
-                    echo json_encode(array("message" => true, "google_login" => true));
-                    exit;
+                      // Establecer el token de acceso en el cliente
+                      $client->setAccessToken($token['access_token']);
 
-                  } catch (\Exception $e) {
-                    header('Content-Type: application/json');
-                    echo json_encode(array("message" => true, "google_login" => true));
-                    exit;
+                      // Obtener la información del usuario
+                      $google_oauth = new Google_Service_Oauth2($client);
+                      $google_account_info = $google_oauth->userinfo->get();
+                      $email = $google_account_info->email;
+                      $name = $google_account_info->name;
 
+                //      $_SESSION['logging_with_google'] = false;
+                      // Enviar respuesta exitosa con los datos del usuario
+                      header('Content-Type: application/json');
+                      echo json_encode(array("google_login" => true));
+                      exit;
+
+                  } catch (Exception $e) {
+                      // Enviar respuesta de error con detalles
+                      header('Content-Type: application/json');
+                      echo json_encode([
+                          "google_login" => false,
+                          "error" => $e->getMessage()
+                      ]);
+                      exit;
                   }
 
-
                 }
+            }
+            else {
+              header('Content-Type: application/json');
+              echo json_encode(array("google_login" => false));
+              exit;
             }
         }
         else {
           header('Content-Type: application/json');
-          echo json_encode(array("message" => false, "google_login" => false));
+          echo json_encode(array("google_login" => false));
           exit;
         }
-
+  //    }
+    /*  else {
+        header('Content-Type: application/json');
+        echo json_encode(array("google_login" => false));
+        exit;
+      }*/
     }
-
-
   /*private function validateGoogleLogin() {
     // Google OAuth initial configuration
     $clientID = '1022332881668-587bktseqso57k6m2dmpfao53vasg83b.apps.googleusercontent.com';
