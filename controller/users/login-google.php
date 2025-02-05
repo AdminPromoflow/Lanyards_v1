@@ -83,8 +83,7 @@ class ApiHandlerLoginGoogle
             $urlComponents = parse_url($refererUrl);
 
 
-            echo json_encode(array("google_login" => isset($urlComponents['query'])));
-            exit;
+
 
 
             // Check if a query string exists in the URL components
@@ -126,6 +125,11 @@ class ApiHandlerLoginGoogle
 
 
                 }
+            }
+            else {
+              header('Content-Type: application/json');
+              echo json_encode(array("google_login" => false));
+              exit;
             }
         }
         else {
