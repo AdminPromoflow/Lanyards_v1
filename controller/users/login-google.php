@@ -58,8 +58,7 @@ class ApiHandlerLoginGoogle
 
 
     private function validateGoogleLogin() {
-      echo json_encode(array("google_login" => false));
-      exit
+
         // Configuración inicial de Google OAuth
         $clientID = '1022332881668-587bktseqso57k6m2dmpfao53vasg83b.apps.googleusercontent.com';
         $clientSecret = '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';
@@ -195,7 +194,8 @@ class ApiHandlerLoginGoogle
 
 require_once '../../controller/assets/lib/composer/vendor/autoload.php';
 //require_once '../../controller/users/session-user.php';
-
+echo json_encode(array("google_login" => false));
+exit
 
 
 
