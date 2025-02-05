@@ -2,7 +2,7 @@
 
 <section class="section_contact_us">
   <h1 >Contact us</h1>
-  <div class="containers_contact_us">
+  <div class="container_contact_us">
     <div class="box_contact_us">
       <h3>Your contact info</h3>
       <input type="text" name="" placeholder="Name" value="">
