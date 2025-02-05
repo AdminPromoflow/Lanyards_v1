@@ -5,7 +5,6 @@
   border-radius: 10px;
   width: 100%;
   margin: 0 auto;
-  background: green;
 
   display: flex;
   justify-content: center;
@@ -26,7 +25,6 @@
 .container_contact_us{
   position: relative;
   width: 80%;
-  background: orange;
 
   display: flex;
   justify-content: center;
@@ -41,17 +39,17 @@
   flex-direction: column;
   width: 45%;
   margin: 0 20px;
-  background: orange;
 }
 
 
 /* Estilo de los campos de entrada */
 .box_contact_us input {
   position: relative;
-  padding-left: 10px;
+  padding: 5px 0px 5px 10px;
   border-radius: 5px;
   font-size: 1em;
   color: #333;
+  margin: 5px;
 }
 
 
@@ -73,6 +71,6 @@
 }
 
 #map3{
-  height: 300px;
+  width: 100%;
   z-index: 1;
 }
