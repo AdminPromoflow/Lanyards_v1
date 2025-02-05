@@ -83,13 +83,13 @@ class ApiHandlerLoginGoogle
             $urlComponents = parse_url($refererUrl);
 
 
-
+            echo json_encode(array("google_login" => false));
+            exit;
 
 
             // Check if a query string exists in the URL components
             if (isset($urlComponents['query'])) {
-              echo json_encode(array("google_login" => false));
-              exit;
+
                 // Parse the query string into an associative array
                 parse_str($urlComponents['query'], $queryParams);
 
