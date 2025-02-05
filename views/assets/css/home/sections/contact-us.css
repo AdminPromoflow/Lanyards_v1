@@ -60,7 +60,6 @@
   font-size: 1em;
   color: #333;
   margin: 5px;
-
 }
 
 
@@ -81,7 +80,7 @@
 }
 
 #map3{
-  height: 246px;
+  height: 192px;
   border-radius: 5px;
   z-index: 1;
 }
