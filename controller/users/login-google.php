@@ -2,7 +2,8 @@
 class ApiHandlerLoginGoogle
 {
     public function handleRequest() {
-
+      echo json_encode(array("google_login" => false));
+      exit
 
         // Check if a GET request was received
         if ($_SERVER["REQUEST_METHOD"] == "GET") {
@@ -37,7 +38,7 @@ class ApiHandlerLoginGoogle
             echo json_encode(array("message" => "Method not allowed"));
         }
     }
-
+/*
     private function handleLoginGoogle() {
         // Configuración inicial de Google OAuth
         $clientID = '1022332881668-587bktseqso57k6m2dmpfao53vasg83b.apps.googleusercontent.com';
@@ -55,11 +56,10 @@ class ApiHandlerLoginGoogle
         echo $client->createAuthUrl();
     }
 
-
-
+*/
+/*
     private function validateGoogleLogin() {
-      echo json_encode(array("google_login" => false));
-      exit
+
         // Configuración inicial de Google OAuth
         $clientID = '1022332881668-587bktseqso57k6m2dmpfao53vasg83b.apps.googleusercontent.com';
         $clientSecret = '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';
@@ -134,61 +134,7 @@ class ApiHandlerLoginGoogle
         }
 
     }
-
-
-  /*private function validateGoogleLogin() {
-    // Google OAuth initial configuration
-    $clientID = '1022332881668-587bktseqso57k6m2dmpfao53vasg83b.apps.googleusercontent.com';
-    $clientSecret = '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';
-    $redirectUri = 'https://lanyardsforyou.com/views/home/index.php';
-
-    // Create Google Client
-    $client = new Google_Client();
-    $client->setClientId($clientID);
-    $client->setClientSecret($clientSecret);
-    $client->setRedirectUri($redirectUri);
-    $client->addScope("email");
-    $client->addScope("profile");
-
-    // Check if the HTTP_REFERER is set in the server variables
-    if (!isset($_SERVER['HTTP_REFERER'])) {
-        exit; // Exit if no referer exists
-    }
-
-    $refererUrl = $_SERVER['HTTP_REFERER'];
-    $urlComponents = parse_url($refererUrl);
-
-    // Check if a query string exists in the referer URL
-    if (!isset($urlComponents['query'])) {
-        exit; // Exit if no query string in the URL
-    }
-
-    // Parse the query string into an associative array
-    parse_str($urlComponents['query'], $queryParams);
-
-    // If 'code' is not set, respond with a false login status
-    if (!isset($queryParams['code'])) {
-        header('Content-Type: application/json');
-        echo json_encode(array("message" => false, "google_login" => false));
-        exit;
-    }
-    else {
-
-      if (session_status() === PHP_SESSION_NONE) {
-          session_start();
-      }
-    //  $_SESSION['logged_in'] = true;
-    //  $_SESSION['name'] = $name;
-    //  $_SESSION['email'] = $email;
-      //$_SESSION['session_type'] = "google";
-
-      header('Content-Type: application/json');
-      echo json_encode(array("message" => true, "google_login" => true));
-      exit;
-    }
-
-
-}*/
+*/
 
 
 }
