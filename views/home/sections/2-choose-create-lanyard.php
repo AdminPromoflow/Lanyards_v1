@@ -446,11 +446,10 @@
 
         </div>
 
-
-
       </div>
     </div>
       <button type="button" name="button">Start</button>
   <!--  -->
 </section>
-<script src="../assets/js/home/sections/2-choose-create-lanyard.js?v=<?php echo filemtime('../assets/js/home/sections/2-choose-create-lanyard.js'); ?>"></script>
+<!-- JavaScript -->
+<script src="/assets/js/home/sections/3-materials.js?v=<?= $jsVersion; ?>"></script>
