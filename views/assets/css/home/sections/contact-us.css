@@ -42,13 +42,9 @@
   min-width: 293px;
   margin: 10px 20px;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap-reverse;
 
-  background: rgb(0, 255, 255);
+
+  background: rgb(255, 0, 255);
 }
 
 
@@ -91,6 +87,8 @@
 
 #map3{
   position: relative;
+  left: 50%;
+  transform: translateX(-50%);
   height: 192px;
   border-radius: 5px;
   z-index: 1;
