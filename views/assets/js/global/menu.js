@@ -210,7 +210,7 @@ class Menu {
 
   // Function to open the mobile menu
   openMenuMobile() {
-    closeMenuMobile.style.display = "block"; // Show the close button
+    closeMenuMobile.style.display = "flex"; // Show the close button
     menuMobile.style.left = "calc(100% - 300px)"; // Slide the mobile menu in from the right
     openMenuMobile.style.display = "none"; // Hide the open button
   }
