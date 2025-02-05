@@ -102,27 +102,41 @@ class ApiHandlerLoginGoogle
                 if (isset($queryParams['code'])) {
 
                   try {
-                    // Fetch the access token using the authorization code
-                    $token = $client->fetchAccessTokenWithAuthCode($queryParams['code']);
-                    $client->setAccessToken($token['access_token']);
+                      // Obtener el token de acceso usando el código de autorización
+                      $token = $client->fetchAccessTokenWithAuthCode($queryParams['code']);
 
-                    // Retrieve the user's profile information
-                    $google_oauth = new Google_Service_Oauth2($client);
-                    $google_account_info = $google_oauth->userinfo->get();
-                    $email = $google_account_info->email;
-                    $name = $google_account_info->name;
+                      // Verificar si hubo un error en la respuesta
+                      if (isset($token['error']) || !isset($token['access_token'])) {
+                          throw new Exception("Error fetching access token: " . json_encode($token));
+                      }
 
-                    header('Content-Type: application/json');
-                    echo json_encode(array( "google_login" => true));
-                    exit;
+                      // Establecer el token de acceso en el cliente
+                      $client->setAccessToken($token['access_token']);
 
-                  } catch (\Exception $e) {
-                    header('Content-Type: application/json');
-                    echo json_encode(array( "google_login" => true));
-                    exit;
+                      // Obtener la información del usuario
+                      $google_oauth = new Google_Service_Oauth2($client);
+                      $google_account_info = $google_oauth->userinfo->get();
+                      $email = $google_account_info->email;
+                      $name = $google_account_info->name;
 
+                      // Enviar respuesta exitosa con los datos del usuario
+                      header('Content-Type: application/json');
+                      echo json_encode([
+                          "google_login" => true,
+                          "email" => $email,
+                          "name" => $name
+                      ]);
+                      exit;
+
+                  } catch (Exception $e) {
+                      // Enviar respuesta de error con detalles
+                      header('Content-Type: application/json');
+                      echo json_encode([
+                          "google_login" => false,
+                          "error" => $e->getMessage()
+                      ]);
+                      exit;
                   }
-
 
                 }
             }
