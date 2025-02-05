@@ -6,7 +6,7 @@ class ApiHandlerLoginGoogle
       exit
 
         // Check if a GET request was received
-        if ($_SERVER["REQUEST_METHOD"] == "GET") {
+      /*  if ($_SERVER["REQUEST_METHOD"] == "GET") {
             // Check if "action" exists in the query parameters
             if (isset($_GET['action'])) {
                 $action = $_GET['action'];
@@ -36,7 +36,7 @@ class ApiHandlerLoginGoogle
             // The request is not a valid GET request
             http_response_code(405); // Method Not Allowed
             echo json_encode(array("message" => "Method not allowed"));
-        }
+        }*/
     }
 /*
     private function handleLoginGoogle() {
