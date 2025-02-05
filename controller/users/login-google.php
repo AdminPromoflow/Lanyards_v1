@@ -138,7 +138,7 @@
 }*/
 
 require_once '../../controller/assets/lib/composer/vendor/autoload.php';
-echo json_encode(array("google_login" => false));
+echo json_encode(array("google_login" => '1'));
 exit
 
 /*
