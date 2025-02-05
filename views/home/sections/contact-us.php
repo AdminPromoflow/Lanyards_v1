@@ -4,17 +4,17 @@
   <h1 >Contact us</h1>
   <div class="container_contact_us">
     <div class="box_contact_us">
-      <h3>Your contact info</h3>
       <input type="text" name="" placeholder="Name" value="">
       <input type="text" name="" placeholder="Email address" value="">
       <input type="text" name="" placeholder="Contact number" value="">
       <textarea name="name" placeholder="Please share your experiences" rows="3" cols="80"></textarea>
-      <button class="button_contact_us" id="button_contact_us_from_home" type="button" name="button">Submit</button>
     </div>
     <div class="box_contact_us">
       <div id="map3"></div>
     </div>
   </div>
+  <button class="button_contact_us" id="button_contact_us_from_home" type="button" name="button">Submit</button>
+
 
 </section>
 
