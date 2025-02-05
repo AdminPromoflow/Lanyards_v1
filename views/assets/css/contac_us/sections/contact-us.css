@@ -40,7 +40,7 @@
   flex-direction: column;
   width: 45%;
   min-width: 293px;
-  margin: 0 20px;
+  margin: 10px 20px;
 }
 
 
@@ -49,7 +49,9 @@
   position: relative;
   padding: 5px 0px 5px 10px;
   border-radius: 5px;
-  width: 100%;
+  width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 1em;
   color: #333;
   margin: 5px;
@@ -58,7 +60,9 @@
   position: relative;
   padding: 5px 0px 5px 10px;
   border-radius: 5px;
-  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
   font-size: 1em;
   color: #333;
   margin: 5px;
@@ -86,6 +90,6 @@
   left: 50%;
   transform: translateX(-50%);
   height: 192px;
-  border-radius: 5px;
+  border-radius: 15px;
   z-index: 1;
 }
