@@ -40,7 +40,9 @@
   flex-direction: column;
   width: 45%;
   min-width: 293px;
-  margin: 0 20px;
+  margin: 10px 20px;
+
+  background: rgb(255, 255, 0);
 }
 
 
