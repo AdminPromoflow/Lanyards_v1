@@ -52,10 +52,10 @@ class ApiHandlerLoginGoogle
         $client->addScope("email");
         $client->addScope("profile");
 
-        if (session_status() === PHP_SESSION_NONE) {
-            session_start();
-        }
-        $_SESSION['logging_with_google'] = true;
+      //  if (session_status() === PHP_SESSION_NONE) {
+      //      session_start();
+      //  }
+      //  $_SESSION['logging_with_google'] = true;
 
 
         echo $client->createAuthUrl();
@@ -123,7 +123,7 @@ class ApiHandlerLoginGoogle
                       $email = $google_account_info->email;
                       $name = $google_account_info->name;
 
-                      $_SESSION['logging_with_google'] = false;
+                //      $_SESSION['logging_with_google'] = false;
                       // Enviar respuesta exitosa con los datos del usuario
                       header('Content-Type: application/json');
                       echo json_encode(array("google_login" => true));
