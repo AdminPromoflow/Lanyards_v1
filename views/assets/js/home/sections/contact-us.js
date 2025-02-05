@@ -1,7 +1,7 @@
 class ContactUsHome {
   constructor() {
     button_contact_us_from_home.addEventListener('click', function(){
-
+      alert(nameContactUsHome);
     });
   }
 }
