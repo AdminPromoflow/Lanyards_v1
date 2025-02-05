@@ -41,10 +41,6 @@
   width: 45%;
   min-width: 293px;
   margin: 10px 20px;
-
-
-
-  background: rgb(255, 255, 255);
 }
 
 
@@ -94,6 +90,6 @@
   left: 50%;
   transform: translateX(-50%);
   height: 192px;
-  border-radius: 5px;
+  border-radius: 15px;
   z-index: 1;
 }
