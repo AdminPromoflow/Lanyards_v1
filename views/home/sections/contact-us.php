@@ -13,7 +13,7 @@
     </div>
     <div class="box_contact_us">
       <div id="map3"></div>
-    </div>
+    </div> 
   </div>
 
 </section>

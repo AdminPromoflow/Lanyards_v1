@@ -39,8 +39,8 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 45%;
-  background: orange;
+  width: 40%;
+  background: red;
 }
 
 /* Estilo de las etiquetas */
@@ -102,6 +102,6 @@
   color: black;
 }
 #map3{
-  height: 300px;
+  height: 200px;
   z-index: 1;
 }
