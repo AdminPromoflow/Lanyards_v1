@@ -109,7 +109,7 @@ class ContactUsHome {
       throw new Error("Network error.");
     })
     .then(data => {
-      alert(JSON.parse(data));
+      alert(JSON.parse(data) + 'hola tu');
 
       // Process the response data
       chargingClass.hideShowchargin(false);
