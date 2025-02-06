@@ -123,6 +123,8 @@ class ContactUsHome {
     .catch(error => {
       // Handle specific errors (from throw in the .then block)
       console.error("Error:", error.message);
+      chargingClass.hideShowchargin(false);
+
       alert(error.message); // Show the error message in an alert
     });
 
