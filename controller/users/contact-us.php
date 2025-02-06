@@ -36,7 +36,7 @@ class ApiHandlerContactUs {
       $emailSender = new EmailSender();
 
 
-      $emailSent = $emailSender->sendEmailRegistration();
+      $emailSent = $emailSender->sendEmailContactUs($data);
       if ($emailSender == '1') {
         echo json_encode(array("message" => true));
       }

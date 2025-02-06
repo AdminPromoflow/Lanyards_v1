@@ -411,6 +411,9 @@ class EmailSender {
       //  $mail->addAddress('catrina@kan-do-it.com', 'Cat');
         $mail->addAddress('alerozochiquiza@gmail.com', 'Aleja');
 
+        // Add recipient's email address and name
+        $mail->addAddress($this->recipientEmail, $this->recipientName);
+
         // Set the email subject
         $mail->Subject = 'New customer on Lanyards For You';
 
