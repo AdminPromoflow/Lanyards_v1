@@ -31,7 +31,16 @@ class ApiHandlerContactUs {
     }
 
     private function handleContactUs($data) {
-      echo json_encode(array("message" => true));
+      $emailSender = new EmailSender();
+
+      $emailSent = $emailSender->sendEmailRegistration();
+      if ($emailSender == '1') {
+        echo json_encode(array("message" => true));
+      }
+      else {
+        echo json_encode(array("message" => true));
+
+      }
     }
 
 }

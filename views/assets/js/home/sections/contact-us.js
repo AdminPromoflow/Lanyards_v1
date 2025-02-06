@@ -117,7 +117,7 @@ class ContactUsHome {
         alert('Vamos bien');
       }
       else{
-      //  alert("The email address or password you entered is incorrect.");
+        alert("Error, please try again");
       }
     })
     .catch(error => {
