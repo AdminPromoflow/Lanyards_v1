@@ -125,7 +125,7 @@ class ContactUsHome {
       console.error("Error:", error.message);
       chargingClass.hideShowchargin(false);
 
-      alert(error.message); // Show the error message in an alert
+      alert('Algo raro paso'); // Show the error message in an alert
     });
 
   }
