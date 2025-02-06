@@ -41,7 +41,7 @@ class ApiHandlerContactUs {
         echo json_encode(array("message" => true));
       }
       else {
-        echo json_encode(array("message" => true));
+        echo json_encode(array("message" => false));
 
       }
     }
