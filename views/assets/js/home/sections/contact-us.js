@@ -1,6 +1,7 @@
 class ContactUsHome {
   constructor() {
     button_contact_us_from_home.addEventListener('click', () => {
+      chargingClass.hideShowchargin(true);
       this.validateFields();
     });
   }
@@ -78,6 +79,51 @@ class ContactUsHome {
       input.style.border = '1px solid #ccc'; // Reset to default border
     });
   }
+
+  // Function to make the AJAX request
+  makeAjaxRequestLogin() {
+    // Define the URL and the JSON data you want to send
+    const url = "../../controller/users/login.php"; // Replace with your API endpoint URL
+    const data = {
+      action: "login",
+      emailLogin: emailLogin.value,
+      passwordLogin: passwordLogin.value
+    };
+
+    fetch(url, {
+    method: "POST", // HTTP POST method to send data
+    headers: {
+      "Content-Type": "application/json" // Indicate that you're sending JSON
+    },
+    body: JSON.stringify(data) // Convert the JSON object to a JSON string and send it
+  })
+    .then(response => {
+      // Check if the response status is OK (2xx range)
+      if (response.ok) {
+        return response.json(); // Parse the response as JSON
+      }
+      // For other errors, throw a general network error
+      throw new Error("Network error.");
+    })
+    .then(data => {
+      // Process the response data
+      chargingClass.hideShowchargin(false);
+
+      if (data.message) {
+        //alert();
+      }
+      else{
+      //  alert("The email address or password you entered is incorrect.");
+      }
+    })
+    .catch(error => {
+      // Handle specific errors (from throw in the .then block)
+      console.error("Error:", error.message);
+      alert(error.message); // Show the error message in an alert
+    });
+
+  }
+
 }
 
 const nameContactUsHome = document.getElementById('nameContactUsHome');
