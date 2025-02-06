@@ -493,7 +493,7 @@ class EmailSender {
         if (!$mail->send()) {
             return 'Sender Error: ' . $mail->ErrorInfo;
         } else {
-            return '1';
+            return true;
         }
     }
 
