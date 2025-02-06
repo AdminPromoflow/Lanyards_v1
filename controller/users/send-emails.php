@@ -491,7 +491,7 @@ class EmailSender {
 
         // Send the email and check if it was sent successfully
         if (!$mail->send()) {
-            return 'Sender Error: ' . $mail->ErrorInfo;
+            return false;
         } else {
             return true;
         }
