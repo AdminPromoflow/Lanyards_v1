@@ -409,7 +409,7 @@ class EmailSender {
       //  $mail->addAddress('lonsus30@gmail.com', 'Admin Ale');
       //  $mail->addAddress('ian@kan-do-it.com', 'Ian');
       //  $mail->addAddress('catrina@kan-do-it.com', 'Cat');
-    /    $mail->addAddress('alerozochiquiza@gmail.com', 'Aleja');
+        $mail->addAddress('alerozochiquiza@gmail.com', 'Aleja');
 
         // Set the email subject
         $mail->Subject = 'New customer on Lanyards For You';
