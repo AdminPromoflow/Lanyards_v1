@@ -51,7 +51,7 @@ class ContactUsHome {
     if (errors.length > 0) {
       alert(errors.join('\n'));
     } else {
-      alert('Valid form. You can submit it.');
+      this.makeAjaxRequestContactUs();
     }
   }
 
@@ -81,14 +81,17 @@ class ContactUsHome {
   }
 
   // Function to make the AJAX request
-  makeAjaxRequestLogin() {
+  makeAjaxRequestContactUs() {
     // Define the URL and the JSON data you want to send
-    const url = "../../controller/users/login.php"; // Replace with your API endpoint URL
+    const url = "../../controller/users/contact-us.php"; // Replace with your API endpoint URL
     const data = {
-      action: "login",
-      emailLogin: emailLogin.value,
-      passwordLogin: passwordLogin.value
+        action: "contactUs",
+        name: nameContactUsHome.value,
+        email: emailContactUsHome.value,
+        phone: phoneContactUsHome.value,
+        message: messageContactUsHome.value
     };
+
 
     fetch(url, {
     method: "POST", // HTTP POST method to send data
@@ -106,11 +109,12 @@ class ContactUsHome {
       throw new Error("Network error.");
     })
     .then(data => {
+
       // Process the response data
       chargingClass.hideShowchargin(false);
 
       if (data.message) {
-        //alert();
+        alert('Vamos bien');
       }
       else{
       //  alert("The email address or password you entered is incorrect.");

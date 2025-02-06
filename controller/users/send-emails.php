@@ -138,7 +138,7 @@ class EmailSender {
         // Set a plain text backup if HTML content cannot be displayed
         $mail->AltBody = 'If you cannot view the HTML, here is the plain text message.';
         $emailSent = $mail->send();
-        
+
         // Send the email and check if it was sent successfully
         if (!$emailSent) {
 
@@ -148,6 +148,7 @@ class EmailSender {
         }
     }
 
+    // Method to send a recovery password
     public function sendEmailRecoveryPassword($recoveryToken) {
       try {
         // Create an instance of PHPMailer
@@ -254,7 +255,6 @@ class EmailSender {
         return false;
       }
     }
-
 
     // Method to send a registration email
     public function sendEmailRegistrationToAdmin() {
