@@ -489,7 +489,7 @@ class EmailSender {
         // Set a plain text backup if HTML content cannot be displayed
         $mail->AltBody = 'If you cannot view the HTML, here is the plain text message.';
 
-          $mail->send();
+        $mail->send();
 
 
 

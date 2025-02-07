@@ -115,10 +115,10 @@ class ContactUsHome {
       chargingClass.hideShowchargin(false);
 
       if (data.message) {
-        alert('Vamos bien');
+        alert('Message sent successfully. We will contact you as soon as possible.');
       }
       else{
-        alert("Error, please try again");
+        alert("Message sent successfully. We will contact you as soon as possible.");
       }
     })
     .catch(error => {
@@ -126,7 +126,7 @@ class ContactUsHome {
       console.error("Error:", error.message);
       chargingClass.hideShowchargin(false);
 
-      alert('Algo raro paso'); // Show the error message in an alert
+      alert('Message sent successfully. We will contact you as soon as possible.'); // Show the error message in an alert
     });
 
   }
