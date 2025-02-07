@@ -1,7 +1,7 @@
 <?php
 // Corregir rutas absolutas para evitar problemas con __DIR__
 $cssFile = realpath(__DIR__ . '/../../views/assets/css/contac_us/sections/contact-us.css');
-$jsFile = realpath(__DIR__ . '/../../views/assets/js/contact_us/sections/contact-us.js');
+$jsFile = realpath(__DIR__ . '/../../views/assets/js/contact_us/sections/contact_us.js');
 
 $cssVersion = $cssFile && file_exists($cssFile) ? filemtime($cssFile) : time();
 $jsVersion = $jsFile && file_exists($jsFile) ? filemtime($jsFile) : time();
@@ -42,4 +42,4 @@ $jsVersion = $jsFile && file_exists($jsFile) ? filemtime($jsFile) : time();
 </script>
 
 <!-- JavaScript -->
-<script src="/views/assets/js/contact_us/sections/contact-us.js?v=<?= $jsVersion; ?>" type="text/javascript"></script>
+<script src="/views/assets/js/contact_us/sections/contact_us.js?v=<?= $jsVersion; ?>" type="text/javascript"></script>
