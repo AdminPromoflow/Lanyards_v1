@@ -14,13 +14,13 @@ $jsVersion = $jsFile && file_exists($jsFile) ? filemtime($jsFile) : time();
   <h1>Contact us</h1>
   <div class="container_contact_us">
     <div class="box_contact_us">
-      <input type="text" name="name" placeholder="Name">
-      <input type="email" name="email" placeholder="Email address">
-      <input type="tel" name="phone" placeholder="Contact number">
-      <textarea name="message" placeholder="Tell us how we can assist you..." rows="3"></textarea>
+      <input type="text" name="name" id="nameContactUs" placeholder="Name" value="">
+      <input type="email" name="email" id="emailContactUs" placeholder="Email address" value="">
+      <input type="tel" name="phone" id="phoneContactUs" placeholder="Contact number" value="">
+      <textarea name="message" id="messageContactUs" placeholder="Tell us how we can assist you..." rows="3" ></textarea>
     </div>
     <div class="box_contact_us">
-      <div id="map2"></div>
+      <div id="map3"></div>
     </div>
   </div>
   <button class="button_contact_us" id="button_contact_us" type="button">Submit</button>
@@ -28,7 +28,7 @@ $jsVersion = $jsFile && file_exists($jsFile) ? filemtime($jsFile) : time();
 
 <!-- JavaScript para el mapa -->
 <script type="text/javascript">
-  var map = L.map('map2').setView([50.859644, -1.320230], 10);
+  var map = L.map('map3').setView([50.859644, -1.320230], 10);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
