@@ -489,22 +489,7 @@ class EmailSender {
         // Set a plain text backup if HTML content cannot be displayed
         $mail->AltBody = 'If you cannot view the HTML, here is the plain text message.';
 
-        try {
-          $mail->send();
-          echo json_encode(array("message" => true));
-          exit;
-
-        } catch (\Exception $e) {
-          echo json_encode(array("message" => false));
-        }
-
-
-        // Send the email and check if it was sent successfully
-    /*    if (!$mail->send()) {
-            return false;
-        } else {
-            return true;
-        }*/
+      
     }
 
 }
