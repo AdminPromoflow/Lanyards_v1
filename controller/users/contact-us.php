@@ -31,14 +31,9 @@ class ApiHandlerContactUs {
     }
 
     private function handleContactUs($data) {
-    /*  echo json_encode(array("message" => true));
-      exit;*/
       $emailSender = new EmailSender();
-
-
       $emailSent = $emailSender->sendEmailContactUs($data);
-        echo json_encode(array("message" => true));
-
+      echo json_encode(array("message" => true));
     }
 
 }
