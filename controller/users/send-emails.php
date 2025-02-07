@@ -454,20 +454,20 @@ class EmailSender {
                   <!-- Title welcoming to the community -->
                   Message
                 </h3>
-                <h4 style='font-family: Oswald, sans-serif; color: rgb(185,185,185); font-weight: 200; font-size: calc(0.9vw + 0.5em); position: relative; margin: 0 auto; letter-spacing: 0px;  text-align: center; width: 60%;'>
+                <h4 style='font-family: Oswald, sans-serif; color: rgb(185,185,185); font-weight: 200; font-size: calc(0.9vw + 0.5em); position: relative; margin: 0 auto; letter-spacing: 0px;  text-align: left; width: 60%;'>
                   <!-- Subtitle about account info -->
                   From: $data->name
                 </h4>
                 <!-- User Info Section -->
-                <h4 style='font-family: Oswald, sans-serif; color: rgb(232,232,232); font-weight: 400; font-size: calc(0.9vw + 0.5em); position: relative; margin: 0 auto; letter-spacing: 0px;  text-align: center; margin-top: calc(0.3vw + 0.3em);'>
+                <h4 style='font-family: Oswald, sans-serif; color: rgb(232,232,232); font-weight: 400; font-size: calc(0.9vw + 0.5em); position: relative; margin: 0 auto; letter-spacing: 0px;  text-align: left; margin-top: calc(0.3vw + 0.3em);'>
                   <!-- User's username -->
                   email: $data->email
                 </h4>
-                <h4 style='font-family: Oswald, sans-serif; color: rgb(232,232,232); font-weight: 400; font-size: calc(0.9vw + 0.5em); position: relative; margin: 0 auto; letter-spacing: 0px;  text-align: center; margin-top: calc(0.3vw + 0.3em);'>
+                <h4 style='font-family: Oswald, sans-serif; color: rgb(232,232,232); font-weight: 400; font-size: calc(0.9vw + 0.5em); position: relative; margin: 0 auto; letter-spacing: 0px;  text-align: left; margin-top: calc(0.3vw + 0.3em);'>
                   <!-- User's username -->
                   email: $data->phone
                 </h4>
-                <h4 style='font-family: Oswald, sans-serif; color: rgb(232,232,232); font-weight: 400; font-size: calc(0.9vw + 0.5em); position: relative; margin: 0 auto; letter-spacing: 0px;  text-align: center; margin-top: calc(0.3vw + 0.3em);'>
+                <h4 style='font-family: Oswald, sans-serif; color: rgb(232,232,232); font-weight: 400; font-size: calc(0.9vw + 0.5em); position: relative; margin: 0 auto; letter-spacing: 0px;  text-align: left; margin-top: calc(0.3vw + 0.3em);'>
                   <!-- User's username -->
                   email: $data->message
                 </h4>
