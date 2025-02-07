@@ -1,6 +1,7 @@
 class ContactUs {
   constructor() {
     button_contact_us.addEventListener('click', () => {
+      alert('hola');
       chargingClass.hideShowchargin(true);
       this.validateFields();
     });

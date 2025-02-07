@@ -14,9 +14,9 @@ $jsVersion = $jsFile && file_exists($jsFile) ? filemtime($jsFile) : time();
   <h1>Contact us</h1>
   <div class="container_contact_us">
     <div class="box_contact_us">
-      <input type="text" name="name" id="nameContactUs" placeholder="Name" value="">
-      <input type="email" name="email" id="emailContactUs" placeholder="Email address" value="">
-      <input type="tel" name="phone" id="phoneContactUs" placeholder="Contact number" value="">
+      <input type="text" name="name" id="nameContactUs" placeholder="Name" value=Ale"">
+      <input type="email" name="email" id="emailContactUs" placeholder="Email address" value="ale@gmail.com">
+      <input type="tel" name="phone" id="phoneContactUs" placeholder="Contact number" value="3215674955">
       <textarea name="message" id="messageContactUs" placeholder="Tell us how we can assist you..." rows="3" ></textarea>
     </div>
     <div class="box_contact_us">
