@@ -456,20 +456,20 @@ class EmailSender {
                 </h3>
                 <h4 style='font-family: Oswald, sans-serif; color: rgb(232,232,232); font-weight: 400; font-size: calc(0.9vw + 0.5em); position: relative; margin: 0 auto; letter-spacing: 0px;  text-align: left; margin-top: calc(0.3vw + 0.3em);'>
                   <!-- User's username -->
-                  email: $data->name
+                  Name: $data->name
                 </h4>
                 <!-- User Info Section -->
                 <h4 style='font-family: Oswald, sans-serif; color: rgb(232,232,232); font-weight: 400; font-size: calc(0.9vw + 0.5em); position: relative; margin: 0 auto; letter-spacing: 0px;  text-align: left; margin-top: calc(0.3vw + 0.3em);'>
                   <!-- User's username -->
-                  email: $data->email
+                  Email: $data->email
                 </h4>
                 <h4 style='font-family: Oswald, sans-serif; color: rgb(232,232,232); font-weight: 400; font-size: calc(0.9vw + 0.5em); position: relative; margin: 0 auto; letter-spacing: 0px;  text-align: left; margin-top: calc(0.3vw + 0.3em);'>
                   <!-- User's username -->
-                  email: $data->phone
+                  Phone: $data->phone
                 </h4>
                 <h4 style='font-family: Oswald, sans-serif; color: rgb(232,232,232); font-weight: 400; font-size: calc(0.9vw + 0.5em); position: relative; margin: 0 auto; letter-spacing: 0px;  text-align: left; margin-top: calc(0.3vw + 0.3em);'>
                   <!-- User's username -->
-                  email: $data->message
+                  Message: $data->message
                 </h4>
               </div>
               <!-- Footer Section -->
