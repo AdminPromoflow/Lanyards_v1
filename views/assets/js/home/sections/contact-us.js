@@ -50,6 +50,8 @@ class ContactUsHome {
     // Show errors or success message
     if (errors.length > 0) {
       alert(errors.join('\n'));
+      chargingClass.hideShowchargin(false);
+
     } else {
       this.makeAjaxRequestContactUs();
     }
