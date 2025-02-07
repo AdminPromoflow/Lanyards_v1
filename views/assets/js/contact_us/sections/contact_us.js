@@ -1,7 +1,6 @@
 class ContactUs {
   constructor() {
     button_contact_us.addEventListener('click', () => {
-      alert('hola');
       chargingClass.hideShowchargin(true);
       this.validateFields();
     });
@@ -112,7 +111,6 @@ class ContactUs {
       throw new Error("Network error.");
     })
     .then(data => {
-      alert(JSON.parse(data) + 'hola tu');
 
       // Process the response data
       chargingClass.hideShowchargin(false);
