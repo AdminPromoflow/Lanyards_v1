@@ -440,7 +440,7 @@ class EmailSender {
                 </h1>
                 <h2 style='font-family: Oswald, sans-serif; font-weight: 300; font-size: calc(1.1vw + 0.7em); position: relative; margin: 0 auto; letter-spacing: 0px; color: rgb(232,232,232); text-align: center; margin-top: calc(0.2vw + 0.2em);'>
                   <!-- Subtitle -->
-                  Hello Ian and Cat we hope you are well
+                  New message from a customer.
                 </h2>
               </div>
               <div class='imgEmail' style='position: relative; width: 85%; margin: 0 auto; margin-top: calc(0.8vw + 0.8em);'>
@@ -452,25 +452,25 @@ class EmailSender {
                 <!-- Container for titles -->
                 <h3 style='font-family: Oswald, sans-serif; color: rgb(232,232,232); font-weight: 500; font-size: calc(1vw + 0.6em); position: relative; margin: 0 auto; letter-spacing: 0px;  text-align: center;'>
                   <!-- Title welcoming to the community -->
-                  New customer
+                  Message
                 </h3>
                 <h4 style='font-family: Oswald, sans-serif; color: rgb(185,185,185); font-weight: 200; font-size: calc(0.9vw + 0.5em); position: relative; margin: 0 auto; letter-spacing: 0px;  text-align: center; width: 60%;'>
                   <!-- Subtitle about account info -->
-                  This email is to inform you that a new user has registered on Lanyards For You with the following information:
+                  From: $data->name
                 </h4>
                 <!-- User Info Section -->
                 <h4 style='font-family: Oswald, sans-serif; color: rgb(232,232,232); font-weight: 400; font-size: calc(0.9vw + 0.5em); position: relative; margin: 0 auto; letter-spacing: 0px;  text-align: center; margin-top: calc(0.3vw + 0.3em);'>
                   <!-- User's username -->
-                  email: @
+                  email: $data->email
                 </h4>
-                <h4 style='font-family: Oswald, sans-serif; color: rgb(232,232,232); font-weight: 400; font-size: calc(0.9vw + 0.5em); position: relative; margin: 0 auto; letter-spacing: 0px;  text-align: center; margin-top: calc(0.2vw + 0.2em);'>
-                  <!-- User's password -->
-                  password: @
+                <h4 style='font-family: Oswald, sans-serif; color: rgb(232,232,232); font-weight: 400; font-size: calc(0.9vw + 0.5em); position: relative; margin: 0 auto; letter-spacing: 0px;  text-align: center; margin-top: calc(0.3vw + 0.3em);'>
+                  <!-- User's username -->
+                  email: $data->phone
                 </h4>
-                <h3 style='font-family: Oswald, sans-serif; color: rgb(185,185,185); font-weight: 300; font-size: calc(1vw + 0.6em); position: relative; margin: 0 auto; letter-spacing: 0px;  text-align: center; margin-top: calc(0.4vw + 0.4em);'>
-                  <!-- Another subtitle -->
-                  We greatly appreciate this registration.
-                </h3>
+                <h4 style='font-family: Oswald, sans-serif; color: rgb(232,232,232); font-weight: 400; font-size: calc(0.9vw + 0.5em); position: relative; margin: 0 auto; letter-spacing: 0px;  text-align: center; margin-top: calc(0.3vw + 0.3em);'>
+                  <!-- User's username -->
+                  email: $data->message
+                </h4>
               </div>
               <!-- Footer Section -->
               <div class='footer' style='position: relative; background: rgba(106, 123, 141, 1); width: 100%; margin-top: calc(1.8vw + 0.8em); padding: calc(1vw + 1em) 0;'>
