@@ -11,13 +11,23 @@ class MaterialHome {
     for (let i = 0; i < openCustomizeLanyardFromMaterials.length; i++) {
       openCustomizeLanyardFromMaterials[i].addEventListener("click", function(){
 
+
+        const url2 = "../../controller/lanyard/material.php";
+        const data2 = {
+          action: "getMaterials"
+        };
+        // Make an AJAX request to fetch all materials.
+        material.makeAjaxRequestGetAllMaterials(url2, data2);
+
+
+
         const url = "../../controller/lanyard/material.php";
         const data = {
           action: "setMaterialSelected",
           optionSelected: materialForSelect[i].textContent,
           amountSelected: priceClass.getAmountSelected()
         };
- 
+
         priceClass.setAmountSelected(1000);
 
         material.setMaterialSelected(materialForSelect[i].textContent);
