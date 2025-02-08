@@ -1,5 +1,6 @@
 class Home {
     constructor() {
+        this._customizeLanyardCreated = false;
         this.isScrolling = false;
         this.velocity = 0;
         this.previousY = 0;
@@ -42,6 +43,19 @@ class Home {
          customizeLanyard.openCustomizeLanyard(true);
          customizeLanyard.setStateVisibilityPanelCustomeLanyard (true);
     }
+    getCustomizeLanyardCreated() {
+        return this._customizeLanyardCreated;
+    }
+
+    setCustomizeLanyardCreated(value) {
+        if (typeof value === "boolean") {
+            this._customizeLanyardCreated = value;
+        } else {
+            console.warn("customizeLanyardCreated must be a boolean value.");
+        }
+    }
+    
+
 }
 
 // Instancia de la clase
