@@ -39,40 +39,7 @@ class Home {
     }
 
     setupCustomizeLanyardListener() {
-      const url2 = "../../controller/lanyard/material.php";
-      const data2 = {
-        action: "getMaterials"
-      };
-      // Make an AJAX request to fetch all materials.
-      material.makeAjaxRequestGetAllMaterials(url2, data2);
-
-
-
-      const url = "../../controller/lanyard/material.php";
-      const data = {
-        action: "setMaterialSelected",
-        optionSelected: materialForSelect[i].textContent,
-        amountSelected: priceClass.getAmountSelected()
-      };
-
-      priceClass.setAmountSelected(1000);
-
-      material.setMaterialSelected(materialForSelect[i].textContent);
-      // Show the selected material.
-      material.showSelectedMaterial();
-
-      // Show the selected preview material.
-      previewMaterial.showSelectedPreviewtMaterial(material.getMaterialSelected());
-
-      // Update material prices.
-      material.updatePriceMaterial();
-
-      material.makeAjaxRequestSetMaterialSelected(url, data);
-
-      customizeLanyard.openCustomizeLanyard(true);
-
-      customizeLanyard.setStateVisibilityPanelCustomeLanyard (true);
-
+        // Función vacía
     }
 }
 
