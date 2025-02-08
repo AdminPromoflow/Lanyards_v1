@@ -39,14 +39,14 @@ class Home {
     }
 
     setupCustomizeLanyardListener() {
-
-
-
-
-
-      
-      material.makeAjaxRequestGetAllMaterials();
+      const url2 = "../../controller/lanyard/material.php";
+         const data2 = {
+           action: "getMaterials"
+         };
+         // Make an AJAX request to fetch all materials.
+         material.makeAjaxRequestGetAllMaterials(url2, data2);
       customizeLanyard.openCustomizeLanyard(true);
+
       customizeLanyard.setStateVisibilityPanelCustomeLanyard (true);
     }
 }

@@ -33,13 +33,9 @@ class Material {
   }
 
   // Function to make an AJAX request to fetch all materials.
-  makeAjaxRequestGetAllMaterials() {
+  makeAjaxRequestGetAllMaterials(url, data) {
 
-    const url = "../../controller/lanyard/material.php";
-       const data = {
-         action: "getMaterials"
-       };
-       // Make an AJAX request to fetch all materials.
+    
     // Make a fetch request to the given URL with the specified data
     fetch(url, {
       method: "POST",
