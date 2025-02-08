@@ -11,17 +11,18 @@
     <input id="search-box" type="text" placeholder="Search an address">
     <ul id="result-list"></ul>
     <br><br>
-    <label for="postcode">Postcode</label>
+    <label for="">Postcode</label>
     <br>
-     <input id="postcode" type="text"  >
+     <input id="postcode" type="text">
      <br><br>
      <label for="country">Country</label>
      <br>
-      <input id="country" type="text"  >
+      <input id="country" type="text" >
       <br><br>
       <label for="region">Region</label>
       <br>
-       <input id="region" type="text"  >
+       <input id="region" type="text"">
+
   </div>
 </section>
 <script src="../../views/assets/js/customize-lanyard/sections/provided_information.js"></script>

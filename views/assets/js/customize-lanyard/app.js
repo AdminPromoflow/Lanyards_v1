@@ -9,7 +9,6 @@ class CustomizeLanyard {
     this.showCurrentSection(this.currentSectionOpen);
     this.changePreviewNextSection();
   //  this.getLanyardsActive();
-  // Define the URL and data object for AJAX request.
 
   // Make an AJAX request to fetch all materials.
   material.makeAjaxRequestGetAllMaterials();
