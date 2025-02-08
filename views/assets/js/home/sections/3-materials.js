@@ -12,7 +12,7 @@ class MaterialHome {
       openCustomizeLanyardFromMaterials[i].addEventListener("click", function(){
 
 
-  /*      const url2 = "../../controller/lanyard/material.php";
+     const url2 = "../../controller/lanyard/material.php";
         const data2 = {
           action: "getMaterials"
         };
@@ -20,7 +20,7 @@ class MaterialHome {
         material.makeAjaxRequestGetAllMaterials(url2, data2);
 
 
-
+  /* 
         const url = "../../controller/lanyard/material.php";
         const data = {
           action: "setMaterialSelected",
