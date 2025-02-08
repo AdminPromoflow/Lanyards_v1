@@ -1,5 +1,6 @@
 class CustomizeLanyard {
   constructor() {
+    this.openCustomizeLanyard(false);
     this.jsonLanyards = "";
     this.noColours = "one-colour";
     this.currentSectionOpen = 0;
