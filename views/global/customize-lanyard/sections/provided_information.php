@@ -13,15 +13,15 @@
     <br><br>
     <label for="postcode">Postcode</label>
     <br>
-     <input id="postcode" type="text" name="" value="">
+     <input id="postcode" type="text" name="" >
      <br><br>
      <label for="country">Country</label>
      <br>
-      <input id="country" type="text" name="" value="">
+      <input id="country" type="text" name="" >
       <br><br>
       <label for="region">Region</label>
       <br>
-       <input id="region" type="text" name="" value="">
+       <input id="region" type="text" name="" >
 
   </div>
 </section>
