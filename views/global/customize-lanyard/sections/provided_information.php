@@ -11,7 +11,7 @@
     <input id="search-box" type="text" placeholder="Search an address">
     <ul id="result-list"></ul>
     <br><br>
-    <label for="">Postcode</label>
+    <label for="postcode">Postcode</label>
     <br>
      <input id="postcode" type="text" name="" value="">
      <br><br>
