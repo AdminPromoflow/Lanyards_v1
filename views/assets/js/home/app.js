@@ -82,13 +82,30 @@ class Home {
         const customizeLanyard = document.getElementById("customize-lanyard");
 
         if (customizeLanyard) {
-            fetch("../../controller/assets/data/lanyards/customize-lanyard-content.php")
+            fetch("customize-lanyard-content.php")
                 .then(response => response.text())
                 .then(html => {
                     customizeLanyard.innerHTML = html;
+                    this.executeScripts(customizeLanyard);
                 })
                 .catch(error => console.error("Error loading customize-lanyard:", error));
         }
+    }
+
+    executeScripts(container) {
+        const scripts = container.querySelectorAll("script");
+
+        scripts.forEach(oldScript => {
+            const newScript = document.createElement("script");
+            if (oldScript.src) {
+                newScript.src = oldScript.src;
+                newScript.async = true; // Carga los scripts de manera asíncrona
+            } else {
+                newScript.textContent = oldScript.textContent; // Scripts inline
+            }
+            document.body.appendChild(newScript);
+            oldScript.remove(); // Eliminamos el viejo script para evitar duplicados
+        });
     }
 
 }
