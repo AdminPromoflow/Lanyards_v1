@@ -11,7 +11,6 @@ class Home {
     init() {
         console.log("Home initialized.");
         this.setupScrollListener();
-        this.setupCustomizeLanyardListener();
     }
 
     setupScrollListener() {
