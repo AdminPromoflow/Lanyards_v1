@@ -42,10 +42,30 @@ class Home {
          this.createCustomizeLanyard();
          material.makeAjaxRequestGetAllMaterials();
 
-         customizeLanyard.openCustomizeLanyard(true);
-         alert('ha2');
+         const url = "../../controller/lanyard/material.php";
+         const data = {
+           action: "setMaterialSelected",
+           optionSelected: "Tubular",
+           amountSelected: priceClass.getAmountSelected()
+         };
 
-         customizeLanyard.setStateVisibilityPanelCustomeLanyard (true);
+         priceClass.setAmountSelected(1000);
+
+         material.setMaterialSelected("Tubular");
+         // Show the selected material.
+         material.showSelectedMaterial();
+
+         // Show the selected preview material.
+         previewMaterial.showSelectedPreviewtMaterial(material.getMaterialSelected());
+
+         // Update material prices.
+         material.updatePriceMaterial();
+
+         material.makeAjaxRequestSetMaterialSelected(url, data);
+
+        customizeLanyard.openCustomizeLanyard(true);
+
+        customizeLanyard.setStateVisibilityPanelCustomeLanyard (true);
     }
     getCustomizeLanyardCreated() {
         return this._customizeLanyardCreated;
