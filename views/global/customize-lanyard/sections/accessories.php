@@ -20,7 +20,7 @@ $imgFile_accessories_11 = "../../views/assets/img/global/customize-lanyard/secti
 <link rel="stylesheet" href="<?= $cssFile_accessories ?>?v=<?= asset_version_accessories($cssFile_accessories) ?>">
 
 <section class="accessoriesSection section">
-  <h2 class="name-section-customize-lanyard">Accessories</h2>
+  <h2 class="name-section-customize-lanyard">Accessories 2</h2>
   <br>
   <p>Select one accessories</p>
   <br>
