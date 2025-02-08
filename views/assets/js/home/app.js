@@ -54,9 +54,9 @@ class Home {
             console.warn("customizeLanyardCreated must be a boolean value.");
         }
     }
-    
+
 
 }
 
 // Instancia de la clase
-const home = new Home();
+const homeClass = new Home();
