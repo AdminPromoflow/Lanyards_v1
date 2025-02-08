@@ -39,10 +39,10 @@ class Home {
     setupCustomizeLanyardListener() {
 
          // Make an AJAX request to fetch all materials.
-  /*       this.createCustomizeLanyard();
+    //     this.createCustomizeLanyard();
          material.makeAjaxRequestGetAllMaterials();
 
-         const url = "../../controller/lanyard/material.php";
+      /*   const url = "../../controller/lanyard/material.php";
          const data = {
            action: "setMaterialSelected",
            optionSelected: "Tubular",
@@ -61,11 +61,11 @@ class Home {
          // Update material prices.
          material.updatePriceMaterial();
 
-         material.makeAjaxRequestSetMaterialSelected(url, data);
+         material.makeAjaxRequestSetMaterialSelected(url, data);*/
 
         customizeLanyard.openCustomizeLanyard(true);
 
-        customizeLanyard.setStateVisibilityPanelCustomeLanyard (true);*/
+        customizeLanyard.setStateVisibilityPanelCustomeLanyard (true);
     }
     getCustomizeLanyardCreated() {
         return this._customizeLanyardCreated;
