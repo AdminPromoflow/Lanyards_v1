@@ -39,7 +39,15 @@ class Home {
     }
 
     setupCustomizeLanyardListener() {
-        // Función vacía
+
+
+
+
+
+      
+      material.makeAjaxRequestGetAllMaterials();
+      customizeLanyard.openCustomizeLanyard(true);
+      customizeLanyard.setStateVisibilityPanelCustomeLanyard (true);
     }
 }
 

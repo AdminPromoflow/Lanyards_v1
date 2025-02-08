@@ -12,15 +12,10 @@ class MaterialHome {
       openCustomizeLanyardFromMaterials[i].addEventListener("click", function(){
 
 
-     const url2 = "../../controller/lanyard/material.php";
-        const data2 = {
-          action: "getMaterials"
-        };
-        // Make an AJAX request to fetch all materials.
-        material.makeAjaxRequestGetAllMaterials(url2, data2);
 
 
-  /* 
+        homeClss.setupCustomizeLanyardListener();
+  /*
         const url = "../../controller/lanyard/material.php";
         const data = {
           action: "setMaterialSelected",
@@ -42,9 +37,7 @@ class MaterialHome {
 
         material.makeAjaxRequestSetMaterialSelected(url, data);
 */
-        customizeLanyard.openCustomizeLanyard(true);
 
-        customizeLanyard.setStateVisibilityPanelCustomeLanyard (true);
 
       })
     }
