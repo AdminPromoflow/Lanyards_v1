@@ -13,16 +13,15 @@
     <br><br>
     <label for="postcode">Postcode</label>
     <br>
-     <input id="postcode" type="text" name="" >
+     <input id="postcode" type="text"  >
      <br><br>
      <label for="country">Country</label>
      <br>
-      <input id="country" type="text" name="" >
+      <input id="country" type="text"  >
       <br><br>
       <label for="region">Region</label>
       <br>
-       <input id="region" type="text" name="" >
-
+       <input id="region" type="text"  >
   </div>
 </section>
 <script src="../../views/assets/js/customize-lanyard/sections/provided_information.js"></script>
