@@ -1,6 +1,5 @@
 class Home {
     constructor() {
-        console.log("Home class initialized");
         this.isScrolling = false;
         this.velocity = 0;
         this.previousY = 0;
@@ -9,7 +8,6 @@ class Home {
     }
 
     init() {
-        console.log("Home initialized.");
         this.setupScrollListener();
     }
 
@@ -38,15 +36,11 @@ class Home {
     }
 
     setupCustomizeLanyardListener() {
-      const url2 = "../../controller/lanyard/material.php";
-         const data2 = {
-           action: "getMaterials"
-         };
-         // Make an AJAX request to fetch all materials.
-         material.makeAjaxRequestGetAllMaterials(url2, data2);
-      customizeLanyard.openCustomizeLanyard(true);
 
-      customizeLanyard.setStateVisibilityPanelCustomeLanyard (true);
+         // Make an AJAX request to fetch all materials.
+         material.makeAjaxRequestGetAllMaterials();
+         customizeLanyard.openCustomizeLanyard(true);
+         customizeLanyard.setStateVisibilityPanelCustomeLanyard (true);
     }
 }
 
