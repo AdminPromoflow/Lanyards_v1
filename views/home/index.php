@@ -48,7 +48,7 @@
         <!-- Content section -->
         <div class="content">
           <div id="activate-customize-lanyards">
-            <?php  include "../../views/global/customize-lanyard/customize-lanyard.php" ?>
+            <?php //  include "../../views/global/customize-lanyard/customize-lanyard.php" ?>
           </div>
 
           <!-- Include the menu component -->
