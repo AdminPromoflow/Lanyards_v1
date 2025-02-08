@@ -1,16 +1,15 @@
+<?php
+function asset_version_customize_lanyard($filePath) {
+    $realPath = realpath(__DIR__ . $filePath);
+    return ($realPath && file_exists($realPath)) ? filemtime($realPath) : time();
+}
+
+$cssFile_customize_lanyard = "../../views/assets/css/global/customize-lanyard/style.css";
+$jsFile_customize_lanyard = "../../views/assets/js/customize-lanyard/app.js";
+$imgFile_customize_lanyard = "../../views/assets/img/global/customize-lanyard/close.png";
+?>
 
 <section id="customize-lanyard" class="customize-lanyard">
-  <?php
-  function asset_version_customize_lanyard($filePath) {
-      $realPath = realpath(__DIR__ . $filePath);
-      return ($realPath && file_exists($realPath)) ? filemtime($realPath) : time();
-  }
-
-  $cssFile_customize_lanyard = "../../views/assets/css/global/customize-lanyard/style.css";
-  $jsFile_customize_lanyard = "../../views/assets/js/customize-lanyard/app.js";
-  $imgFile_customize_lanyard = "../../views/assets/img/global/customize-lanyard/close.png";
-  ?>
-
   <link rel="stylesheet" href="<?= $cssFile_customize_lanyard ?>?v=<?= asset_version_customize_lanyard($cssFile_customize_lanyard) ?>">
 
   <div class="customize-lanyard-container">
@@ -68,6 +67,4 @@
   </div>
 
   <script src="<?= $jsFile_customize_lanyard ?>?v=<?= asset_version_customize_lanyard($jsFile_customize_lanyard) ?>" type="text/javascript"></script>
-
-
 </section>

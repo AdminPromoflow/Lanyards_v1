@@ -39,33 +39,9 @@ class Home {
     setupCustomizeLanyardListener() {
 
          // Make an AJAX request to fetch all materials.
-    //     this.createCustomizeLanyard();
          material.makeAjaxRequestGetAllMaterials();
-
-      /*   const url = "../../controller/lanyard/material.php";
-         const data = {
-           action: "setMaterialSelected",
-           optionSelected: "Tubular",
-           amountSelected: priceClass.getAmountSelected()
-         };
-
-         priceClass.setAmountSelected(1000);
-
-         material.setMaterialSelected("Tubular");
-         // Show the selected material.
-         material.showSelectedMaterial();
-
-         // Show the selected preview material.
-         previewMaterial.showSelectedPreviewtMaterial(material.getMaterialSelected());
-
-         // Update material prices.
-         material.updatePriceMaterial();
-
-         material.makeAjaxRequestSetMaterialSelected(url, data);*/
-
-        customizeLanyard.openCustomizeLanyard(true);
-
-        customizeLanyard.setStateVisibilityPanelCustomeLanyard (true);
+         customizeLanyard.openCustomizeLanyard(true);
+         customizeLanyard.setStateVisibilityPanelCustomeLanyard (true);
     }
     getCustomizeLanyardCreated() {
         return this._customizeLanyardCreated;
@@ -78,19 +54,6 @@ class Home {
             console.warn("customizeLanyardCreated must be a boolean value.");
         }
     }
-    createCustomizeLanyard() {
-        const customizeLanyard = document.getElementById("customize-lanyard");
-
-        if (customizeLanyard) {
-            fetch("../../controller/assets/data/lanyards/customize-lanyard-content.php")
-                .then(response => response.text())
-                .then(html => {
-                    customizeLanyard.innerHTML = html;
-                })
-                .catch(error => console.error("Error loading customize-lanyard:", error));
-        }
-    }
-
 
 
 }
