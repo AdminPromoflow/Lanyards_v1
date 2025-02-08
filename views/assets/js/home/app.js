@@ -82,7 +82,7 @@ class Home {
         const customizeLanyard = document.getElementById("customize-lanyard");
 
         if (customizeLanyard) {
-            fetch("customize-lanyard-content.php")
+            fetch("../../controller/assets/data/lanyards/customize-lanyard-content.php")
                 .then(response => response.text())
                 .then(html => {
                     customizeLanyard.innerHTML = html;
