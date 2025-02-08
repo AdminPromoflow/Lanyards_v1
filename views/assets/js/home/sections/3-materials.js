@@ -11,7 +11,7 @@ class MaterialHome {
     for (let i = 0; i < openCustomizeLanyardFromMaterials.length; i++) {
       openCustomizeLanyardFromMaterials[i].addEventListener("click", function(){
 
-
+        alert('buenas');
      const url2 = "../../controller/lanyard/material.php";
         const data2 = {
           action: "getMaterials"
