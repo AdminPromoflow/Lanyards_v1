@@ -39,7 +39,7 @@ class Home {
     setupCustomizeLanyardListener() {
 
          // Make an AJAX request to fetch all materials.
-         this.createCustomizeLanyard();
+  /*       this.createCustomizeLanyard();
          material.makeAjaxRequestGetAllMaterials();
 
          const url = "../../controller/lanyard/material.php";
@@ -65,7 +65,7 @@ class Home {
 
         customizeLanyard.openCustomizeLanyard(true);
 
-        customizeLanyard.setStateVisibilityPanelCustomeLanyard (true);
+        customizeLanyard.setStateVisibilityPanelCustomeLanyard (true);*/
     }
     getCustomizeLanyardCreated() {
         return this._customizeLanyardCreated;
