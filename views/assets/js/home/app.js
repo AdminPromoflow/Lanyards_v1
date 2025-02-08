@@ -40,6 +40,7 @@ class Home {
 
          // Make an AJAX request to fetch all materials.
          this.createCustomizeLanyard();
+         alert('hah');
          material.makeAjaxRequestGetAllMaterials();
          customizeLanyard.openCustomizeLanyard(true);
          customizeLanyard.setStateVisibilityPanelCustomeLanyard (true);
