@@ -21,7 +21,7 @@
   <br>
   <div class="opacity-background-option-second-option opacity-option-background-selected">
   </div>
-  <input class="select-colour-second-option" id="optionColourBackground" type="color" value="white">
+  <input class="select-colour-second-option" id="optionColourBackground" type="color" value="#FFFFFF">
 
 </section>
 
