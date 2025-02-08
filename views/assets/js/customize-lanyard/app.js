@@ -10,12 +10,12 @@ class CustomizeLanyard {
     this.changePreviewNextSection();
   //  this.getLanyardsActive();
   // Define the URL and data object for AJAX request.
-/*  const url = "../../controller/lanyard/material.php";
+  const url = "../../controller/lanyard/material.php";
   const data = {
     action: "getMaterials"
   };
   // Make an AJAX request to fetch all materials.
-  material.makeAjaxRequestGetAllMaterialsF(url, data);*/
+  material.makeAjaxRequestGetAllMaterials(url, data);
   }
 
   getLanyardsActive(){

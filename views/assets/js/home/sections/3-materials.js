@@ -17,7 +17,7 @@ class MaterialHome {
           optionSelected: materialForSelect[i].textContent,
           amountSelected: priceClass.getAmountSelected()
         };
-
+ 
         priceClass.setAmountSelected(1000);
 
         material.setMaterialSelected(materialForSelect[i].textContent);
@@ -77,7 +77,7 @@ class MaterialHome {
       }
     }
   }
-  
+
 }
 
 // Selecting elements from the DOM
