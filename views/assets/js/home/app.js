@@ -1,62 +1,24 @@
-class Home {
-    constructor() {
-        this._customizeLanyardCreated = false;
-        this.isScrolling = false;
-        this.velocity = 0;
-        this.previousY = 0;
 
-        this.init();
-    }
+// Función para manejar el scroll suave y respuesta rápida
+        let isScrolling = false;
+        let velocity = 0;
+        let previousY = 0;
 
-    init() {
-        this.setupScrollListener();
-    }
+        function handleScroll() {
+        if (!isScrolling) {
+          requestAnimationFrame(() => {
+            const currentY = window.scrollY;
+            const deltaY = currentY - previousY;
 
-    setupScrollListener() {
-        window.addEventListener("scroll", () => {
-            if (!this.isScrolling) {
-                this.isScrolling = true;
-                requestAnimationFrame(() => this.handleScroll());
-            }
-        });
-    }
+            // Agregar aceleración
+            velocity += deltaY * 0.05;
+            // Aplicar desaceleración gradual
+            velocity *= 0.0;
 
-    handleScroll() {
-        const currentY = window.scrollY;
-        const deltaY = currentY - this.previousY;
+            window.scrollBy(0, velocity);
 
-        // Agregar aceleración
-        this.velocity += deltaY * 0.05;
-        // Aplicar desaceleración gradual
-        this.velocity *= 0.0;
-
-        window.scrollBy(0, this.velocity);
-
-        this.previousY = currentY;
-        this.isScrolling = false;
-    }
-
-    setupCustomizeLanyardListener() {
-
-         // Make an AJAX request to fetch all materials.
-         material.makeAjaxRequestGetAllMaterials();
-         customizeLanyard.openCustomizeLanyard(true);
-         customizeLanyard.setStateVisibilityPanelCustomeLanyard (true);
-    }
-    getCustomizeLanyardCreated() {
-        return this._customizeLanyardCreated;
-    }
-
-    setCustomizeLanyardCreated(value) {
-        if (typeof value === "boolean") {
-            this._customizeLanyardCreated = value;
-        } else {
-            console.warn("customizeLanyardCreated must be a boolean value.");
+            previousY = currentY;
+            isScrolling = false;
+          });
         }
-    }
-
-
-}
-
-// Instancia de la clase
-const homeClass = new Home();
+        }

@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="../../views/assets/css/global/customize-lanyard/sections/accessories.css">
 <section class="accessoriesSection  section ">
   <h2 class="name-section-customize-lanyard">Accessories</h2>
-  <br>
+  <br> 
   <p>Select one accessories</p>
   <br>
 

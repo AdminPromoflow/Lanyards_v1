@@ -10,15 +10,7 @@ class MaterialHome {
 
     for (let i = 0; i < openCustomizeLanyardFromMaterials.length; i++) {
       openCustomizeLanyardFromMaterials[i].addEventListener("click", function(){
-      /*  const url2 = "../../controller/lanyard/material.php";
-        const data2 = {
-          action: "getMaterials"
-        };*/
-        // Make an AJAX request to fetch all materials.
-      //  material.makeAjaxRequestGetAllMaterials(url2, data2);
 
-
-  /*
         const url = "../../controller/lanyard/material.php";
         const data = {
           action: "setMaterialSelected",
@@ -39,11 +31,11 @@ class MaterialHome {
         material.updatePriceMaterial();
 
         material.makeAjaxRequestSetMaterialSelected(url, data);
-*/
-    //    customizeLanyard.openCustomizeLanyard(true);
 
-      //  customizeLanyard.setStateVisibilityPanelCustomeLanyard (true);
-        homeClass.setupCustomizeLanyardListener();
+        customizeLanyard.openCustomizeLanyard(true);
+
+        customizeLanyard.setStateVisibilityPanelCustomeLanyard (true);
+
       })
     }
 
@@ -85,7 +77,7 @@ class MaterialHome {
       }
     }
   }
-
+  
 }
 
 // Selecting elements from the DOM
