@@ -33,6 +33,7 @@ class Price {
 
     // Event listener for input changes on amountLanyardsRange element.
     amountLanyardsRange.addEventListener('input', function() {
+      alert(amountLanyards.value);
       // Check if amountLanyards value is not equal to 0.
       if (amountLanyards.value > 0) {
           // Update amountLanyards value to match amountLanyardsRange value.
