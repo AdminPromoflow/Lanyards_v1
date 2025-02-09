@@ -43,7 +43,7 @@ class Price {
       }
       else {
         amountLanyards.value = 1000;
-        priceClass.setAmountSelected(amountLanyards.value);
+        priceClass.setAmountSelected(1000);
         material.updatePriceMaterial();
         widthClass.updatePriceWidth();
       }
