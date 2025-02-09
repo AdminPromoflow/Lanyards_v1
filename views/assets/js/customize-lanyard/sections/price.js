@@ -21,7 +21,6 @@ class Price {
 
     // Event listener for input changes on amountLanyards element.
     amountLanyards.addEventListener('input', function(event) {
-      // Remove non-digit characters from the value.
       this.value = this.value.replace(/\D/g, '');
       if (this.value > 0) {
         amountLanyardsRange.value = this.value;
@@ -32,7 +31,6 @@ class Price {
         widthClass.updatePriceWidth();
       }
       else {
-        alert('buenas');
         amountLanyardsRange.value = 1000;
         amountLanyards.value = 1000;
 
@@ -40,15 +38,10 @@ class Price {
         material.updatePriceMaterial();
         widthClass.updatePriceWidth();
       }
-      // Update amountLanyardsRange value to match amountLanyards value.
-
-
     });
 
     // Event listener for input changes on amountLanyardsRange element.
     amountLanyardsRange.addEventListener('input', function() {
-      // Check if amountLanyards value is not equal to 0.
-          // Update amountLanyards value to match amountLanyardsRange value.
           amountLanyards.value = this.value;
           amountLanyardsRange.value = this.value;
 
