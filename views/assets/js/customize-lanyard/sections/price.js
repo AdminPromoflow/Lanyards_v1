@@ -42,6 +42,7 @@ class Price {
           widthClass.updatePriceWidth();
       }
       else {
+        alert('hah');
         amountLanyards.value = 1000;
         priceClass.setAmountSelected(1000);
         material.updatePriceMaterial();
