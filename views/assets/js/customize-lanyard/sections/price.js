@@ -18,6 +18,9 @@ class Price {
     amountLanyards.value = 1000;
 
 
+    
+
+
 
     // Event listener for input changes on amountLanyards element.
     amountLanyards.addEventListener('input', function(event) {

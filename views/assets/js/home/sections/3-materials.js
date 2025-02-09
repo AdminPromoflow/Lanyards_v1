@@ -11,6 +11,10 @@ class MaterialHome {
     for (let i = 0; i < openCustomizeLanyardFromMaterials.length; i++) {
       openCustomizeLanyardFromMaterials[i].addEventListener("click", function(){
 
+        priceClass.setAmountSelected(1000);
+        material.updatePriceMaterial();
+        widthClass.updatePriceWidth();
+
         const url = "../../controller/lanyard/material.php";
         const data = {
           action: "setMaterialSelected",
@@ -18,7 +22,9 @@ class MaterialHome {
           amountSelected: priceClass.getAmountSelected()
         };
 
-        priceClass.setAmountSelected(1000);
+
+
+
 
         material.setMaterialSelected(materialForSelect[i].textContent);
         // Show the selected material.
@@ -77,7 +83,7 @@ class MaterialHome {
       }
     }
   }
-  
+
 }
 
 // Selecting elements from the DOM
