@@ -34,14 +34,20 @@ class Price {
     // Event listener for input changes on amountLanyardsRange element.
     amountLanyardsRange.addEventListener('input', function() {
       // Check if amountLanyards value is not equal to 0.
-      if (amountLanyards.value !== 0) {
-        // Update amountLanyards value to match amountLanyardsRange value.
-        amountLanyards.value = this.value;
+      if (amountLanyards.value > 0) {
+          // Update amountLanyards value to match amountLanyardsRange value.
+          amountLanyards.value = this.value;
+          priceClass.setAmountSelected(amountLanyards.value);
+          material.updatePriceMaterial();
+          widthClass.updatePriceWidth();
+      }
+      else {
+        amountLanyards.value = 1000;
         priceClass.setAmountSelected(amountLanyards.value);
         material.updatePriceMaterial();
         widthClass.updatePriceWidth();
-
       }
+
     });
   }
 

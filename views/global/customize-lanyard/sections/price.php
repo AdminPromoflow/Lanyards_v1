@@ -1,4 +1,15 @@
-<link rel="stylesheet" href="../assets/css/global/customize-lanyard/sections/price.css">
+<?php
+function asset_version_price($filePath) {
+    $realPath = realpath(__DIR__ . $filePath);
+    return ($realPath && file_exists($realPath)) ? filemtime($realPath) : time();
+}
+
+$cssFile_price = "../../views/assets/css/global/customize-lanyard/sections/price.css";
+$jsFile_price = "../../views/assets/js/customize-lanyard/sections/price.js";
+?>
+
+<link rel="stylesheet" href="<?= $cssFile_price ?>?v=<?= asset_version_price($cssFile_price) ?>">
+
 <section class="price">
   <div class="priceNumber">
     <h3>Cost per Lanyard: </h3>
@@ -10,4 +21,5 @@
     <input id="amountLanyards" type="text" name="" value="1000">
   </div>
 </section>
-<script src="../assets/js/customize-lanyard/sections/price.js"></script>
+
+<script src="<?= $jsFile_price ?>?v=<?= asset_version_price($jsFile_price) ?>" type="text/javascript"></script>
