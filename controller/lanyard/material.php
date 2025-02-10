@@ -266,7 +266,8 @@ class Material {
         $lanyards->setMaterial($materialSelected);
         $result = $lanyards->getLanyardDataByMaterial();
 
-
+        return $result->fetch_assoc();
+        exit;
 
         $data = ["Lanyards" => []];
 
@@ -357,8 +358,7 @@ class Material {
                 "amountPrice" => (float) $amountPrice
             ];
         }
-        return $result;
-        exit;
+
 
         return $data;
     }
