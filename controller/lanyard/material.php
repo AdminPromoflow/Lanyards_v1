@@ -154,12 +154,6 @@ class Material {
                     //    $jsonLanyard = $this->processResults($dataLanyard);
 
 
-                    $connection = new Database(); // Create a new database connection
-
-                    $lanyards = new Lanyards($connection); // Instantiate the Lanyards model
-                    $lanyards->setMaterial($data); // Set the selected material in the model
-
-                    $response = $lanyards->getInfoMaterials(); // Retrieve material information
 
 
 
