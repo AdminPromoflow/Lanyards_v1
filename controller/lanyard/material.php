@@ -266,12 +266,11 @@ class Material {
         $lanyards->setMaterial($materialSelected);
         $result = $lanyards->getLanyardDataByMaterial();
 
-        return $result->fetch_assoc();
-        exit;
+
 
         $data = ["Lanyards" => []];
 
-        while ($row = $result->fetch_assoc()) {
+        while ($result as $row) {
             $materialName = $row['material'];
             $lanyardType = $row['lanyardType'];
             $lanyardPrice = $row['lanyardPrice'];
