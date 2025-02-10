@@ -265,7 +265,7 @@ class Material {
         $result = $lanyards->getLanyardDataByMaterial();
 
 
-        $data = ["Lanyards" => []];
+    /*    $data = ["Lanyards" => []];
 
         while ($row = $result->fetch_assoc()) {
             $materialName = $row['material'];
@@ -355,7 +355,9 @@ class Material {
             ];
         }
 
-        return $data;
+        return $data;*/
+        return '$data';
+
     }
 
 
