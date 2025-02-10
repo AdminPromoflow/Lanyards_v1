@@ -146,6 +146,13 @@ class Material {
                         $allAmount =  $amount->getAllAmountByNoColour();
 
 
+                        $connection = new Database(); // Create a new database connection
+                        $lanyards = new Lanyards($connection); // Instantiate the Lanyards model
+                        $lanyards->setIdMaterial($data->optionSelected);
+                        $dataLanyard = $lanyards->getLanyardDataByMaterial();
+                        $jsonLanyard = $this->processResults($dataLanyard);
+
+
 
                         // $amountSelected = $amount-> selectAmount($allAmount);
                         // $amount->setMinAmount($amountSelected);
