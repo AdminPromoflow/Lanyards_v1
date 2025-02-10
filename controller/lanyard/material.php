@@ -261,8 +261,8 @@ class Material {
     private function processResults($materialSelected) {
         $connection = new Database();
         $lanyards = new Lanyards($connection);
-      /*  $lanyards->setIdMaterial($materialSelected);
-        $result = $lanyards->getLanyardDataByMaterial();*/
+        $lanyards->setIdMaterial($materialSelected);
+    /*    $result = $lanyards->getLanyardDataByMaterial();*/
 
 
     /*    $data = ["Lanyards" => []];
