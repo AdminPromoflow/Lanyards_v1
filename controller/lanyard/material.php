@@ -147,7 +147,7 @@ class Material {
 
 
 
-                    $jsonLanyard =  $this->processResults($data->optionSelecte);
+                    $jsonLanyard =  $this->processResults($data->optionSelected);
 
 
 
