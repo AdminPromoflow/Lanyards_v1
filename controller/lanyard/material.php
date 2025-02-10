@@ -266,6 +266,8 @@ class Material {
         $lanyards->setMaterial($materialSelected);
         $result = $lanyards->getLanyardDataByMaterial();
 
+        return $result;
+        exit;
 
         $data = ["Lanyards" => []];
 
