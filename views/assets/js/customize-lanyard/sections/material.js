@@ -56,6 +56,7 @@ class Material {
         throw new Error("Network error.");
       })
       .then(data => {
+        console.log(data);
         data = JSON.parse(data);
         customizeLanyard.setJsonLanyards(data["lanyards"]);
 
@@ -258,7 +259,6 @@ class Material {
         throw new Error("Network error.");
       })
       .then(data => {
-        console.log(data);
         // Parse the response data as JSON
         data = JSON.parse(data);
 

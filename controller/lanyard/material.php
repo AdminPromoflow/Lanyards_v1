@@ -78,8 +78,7 @@ class Material {
 
                         // Handle setting the selected material and searching its attributes
                         $this->setSessionMaterial($data);
-                        $infoMaterial  = $this->getAttributesMaterial($data->optionSelected
-                      );
+                        $infoMaterial  = $this->getAttributesMaterial($data->optionSelected);
 
 
                         $lanyardTypes = new TypeLanyards();
@@ -145,6 +144,9 @@ class Material {
                         $amount->setNoSides($sidePrintedSelected);
                         $amount->setNoColour($noColourSelected);
                         $allAmount =  $amount->getAllAmountByNoColour();
+
+
+                        
                         // $amountSelected = $amount-> selectAmount($allAmount);
                         // $amount->setMinAmount($amountSelected);
                         // $allWidthPrice = $amount-> getAllPriceOfWidth();
