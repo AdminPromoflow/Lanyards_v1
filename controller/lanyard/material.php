@@ -146,7 +146,7 @@ class Material {
                         $allAmount =  $amount->getAllAmountByNoColour();
 
 
-                        
+
                         // $amountSelected = $amount-> selectAmount($allAmount);
                         // $amount->setMinAmount($amountSelected);
                         // $allWidthPrice = $amount-> getAllPriceOfWidth();
@@ -256,6 +256,100 @@ class Material {
         $response = $lanyards->getAllLanyardMaterials(); // Retrieve all lanyard materials
 
         return($response); // Send the response with all materials
+    }
+
+    private function processResults($result) {
+        $data = ["Lanyards" => []];
+
+        while ($row = $result->fetch_assoc()) {
+            $materialName = $row['material'];
+            $lanyardType = $row['lanyardType'];
+            $lanyardPrice = $row['lanyardPrice'];
+            $width = $row['width'];
+            $clipName = $row['clipName'];
+            $clipPrice = $row['clipPrice'];
+            $side = $row['side'];
+            $colourOption = $row['colourOption'];
+            $minAmount = $row['minAmount'];
+            $maxAmount = $row['maxAmount'];
+            $amountPrice = $row['amountPrice'];
+
+            // Buscar si el material ya existe en la lista de lanyards
+            $materialIndex = array_search($materialName, array_column($data["Lanyards"], "material"));
+
+            if ($materialIndex === false) {
+                $data["Lanyards"][] = [
+                    "material" => $materialName,
+                    "LanyardType" => [],
+                    "Width" => []
+                ];
+                $materialIndex = count($data["Lanyards"]) - 1;
+            }
+
+            // Buscar si el LanyardType ya existe
+            $lanyardTypeIndex = array_search($lanyardType, array_column($data["Lanyards"][$materialIndex]["LanyardType"], "LanyardType"));
+
+            if ($lanyardTypeIndex === false) {
+                $data["Lanyards"][$materialIndex]["LanyardType"][] = [
+                    "LanyardType" => $lanyardType,
+                    "lanyardPrice" => (float) $lanyardPrice
+                ];
+            }
+
+            // Buscar si el Width ya existe
+            $widthIndex = array_search($width, array_column($data["Lanyards"][$materialIndex]["Width"], "width"));
+
+            if ($widthIndex === false) {
+                $data["Lanyards"][$materialIndex]["Width"][] = [
+                    "width" => $width,
+                    "Clips" => []
+                ];
+                $widthIndex = count($data["Lanyards"][$materialIndex]["Width"]) - 1;
+            }
+
+            // Buscar si el Clip ya existe
+            $clipIndex = array_search($clipName, array_column($data["Lanyards"][$materialIndex]["Width"][$widthIndex]["Clips"], "clipName"));
+
+            if ($clipIndex === false) {
+                $data["Lanyards"][$materialIndex]["Width"][$widthIndex]["Clips"][] = [
+                    "clipName" => $clipName,
+                    "clipPrice" => (float) $clipPrice,
+                    "SidePrinted" => []
+                ];
+                $clipIndex = count($data["Lanyards"][$materialIndex]["Width"][$widthIndex]["Clips"]) - 1;
+            }
+
+            // Buscar si el SidePrinted ya existe
+            $sideIndex = array_search($side, array_column($data["Lanyards"][$materialIndex]["Width"][$widthIndex]["Clips"][$clipIndex]["SidePrinted"], "side"));
+
+            if ($sideIndex === false) {
+                $data["Lanyards"][$materialIndex]["Width"][$widthIndex]["Clips"][$clipIndex]["SidePrinted"][] = [
+                    "side" => $side,
+                    "Colours" => []
+                ];
+                $sideIndex = count($data["Lanyards"][$materialIndex]["Width"][$widthIndex]["Clips"][$clipIndex]["SidePrinted"]) - 1;
+            }
+
+            // Buscar si el ColourOption ya existe
+            $colourIndex = array_search($colourOption, array_column($data["Lanyards"][$materialIndex]["Width"][$widthIndex]["Clips"][$clipIndex]["SidePrinted"][$sideIndex]["Colours"], "colourOption"));
+
+            if ($colourIndex === false) {
+                $data["Lanyards"][$materialIndex]["Width"][$widthIndex]["Clips"][$clipIndex]["SidePrinted"][$sideIndex]["Colours"][] = [
+                    "colourOption" => $colourOption,
+                    "Amount" => []
+                ];
+                $colourIndex = count($data["Lanyards"][$materialIndex]["Width"][$widthIndex]["Clips"][$clipIndex]["SidePrinted"][$sideIndex]["Colours"]) - 1;
+            }
+
+            // Agregar Amount dentro de Colours
+            $data["Lanyards"][$materialIndex]["Width"][$widthIndex]["Clips"][$clipIndex]["SidePrinted"][$sideIndex]["Colours"][$colourIndex]["Amount"][] = [
+                "minAmount" => (int) $minAmount,
+                "maxAmount" => (int) $maxAmount,
+                "amountPrice" => (float) $amountPrice
+            ];
+        }
+
+        return $data;
     }
 
 
