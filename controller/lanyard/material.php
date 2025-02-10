@@ -147,12 +147,12 @@ class Material {
 
 
 
-                    $jsonLanyard =  $this->processResults($data->optionSelected);
+                    $jsonDataByMaterial =  $this->getJsonDataByMaterial($data->optionSelected);
 
 
 
                         // Prepare and send the response with material information
-                        $response = array ('jsonLanyard' => $jsonLanyard,
+                        $response = array ('jsonDataByMaterial' => $jsonDataByMaterial,
                                           'sidePrintedSelected' => $sidePrintedSelected,
                                           'noColourSelected' => $noColourSelected,
                                           'material' => $infoMaterial,
@@ -260,7 +260,7 @@ class Material {
         return($response); // Send the response with all materials
     }
 
-    private function processResults($materialSelected) {
+    private function getJsonDataByMaterial($materialSelected) {
         // Establish database connection
         $connection = new Database();
         $lanyards = new Lanyards($connection);
