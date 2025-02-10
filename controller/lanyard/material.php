@@ -150,7 +150,7 @@ class Material {
                         $lanyards = new Lanyards($connection); // Instantiate the Lanyards model
                         $lanyards->setIdMaterial($data->optionSelected);
                         $dataLanyard = $lanyards->getLanyardDataByMaterial();
-                        $jsonLanyard = $this->processResults($dataLanyard);
+                    //    $jsonLanyard = $this->processResults($dataLanyard);
 
 
 
