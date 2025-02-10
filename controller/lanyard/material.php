@@ -146,20 +146,10 @@ class Material {
                         $allAmount =  $amount->getAllAmountByNoColour();
 
 
-                      /*  $connection = new Database();
-                        $lanyards = new Lanyards($connection);
-                        $lanyards->setIdMaterial($data->optionSelected);*/
 
-                    //    $dataLanyard = $lanyards->getLanyardDataByMaterial();
-                    //    $jsonLanyard = $this->processResults($dataLanyard);
+                    $jsonLanyard =  $this->processResults($data->optionSelecte);
 
 
-
-
-
-                        // $amountSelected = $amount-> selectAmount($allAmount);
-                        // $amount->setMinAmount($amountSelected);
-                        // $allWidthPrice = $amount-> getAllPriceOfWidth();
 
                         // Prepare and send the response with material information
                         $response = array ('sidePrintedSelected' => $sidePrintedSelected,
@@ -268,7 +258,13 @@ class Material {
         return($response); // Send the response with all materials
     }
 
-    private function processResults($result) {
+    private function processResults($materialSelected) {
+        $connection = new Database();
+        $lanyards = new Lanyards($connection);
+        $lanyards->setIdMaterial($materialSelected);
+        $result = $lanyards->getLanyardDataByMaterial();
+
+
         $data = ["Lanyards" => []];
 
         while ($row = $result->fetch_assoc()) {
