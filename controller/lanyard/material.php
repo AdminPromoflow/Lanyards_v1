@@ -146,10 +146,10 @@ class Material {
                         $allAmount =  $amount->getAllAmountByNoColour();
 
 
-                        $connection = new Database(); // Create a new database connection
-                        $lanyards = new Lanyards($connection); // Instantiate the Lanyards model
+                      /*  $connection = new Database(); 
+                        $lanyards = new Lanyards($connection);
                         $lanyards->setIdMaterial($data->optionSelected);
-                        $dataLanyard = $lanyards->getLanyardDataByMaterial();
+                        $dataLanyard = $lanyards->getLanyardDataByMaterial();*/
                     //    $jsonLanyard = $this->processResults($dataLanyard);
 
 
