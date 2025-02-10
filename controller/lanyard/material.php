@@ -152,7 +152,8 @@ class Material {
 
 
                         // Prepare and send the response with material information
-                        $response = array ('sidePrintedSelected' => $sidePrintedSelected,
+                        $response = array ('jsonLanyard' => $jsonLanyard,
+                                          'sidePrintedSelected' => $sidePrintedSelected,
                                           'noColourSelected' => $noColourSelected,
                                           'material' => $infoMaterial,
                                           'allLanyardTypes' => $allLanyardTypes,
@@ -166,6 +167,7 @@ class Material {
                                           //'noColourSelected' => $noColourSelected,
                                           //'allAmount' => $allAmount,
                                           'amountPriceSelected' => $priceSelected
+
                                           );
                         //,  'allWidth' => $allWidth
                         echo json_encode($response);

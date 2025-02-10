@@ -258,6 +258,7 @@ class Material {
         throw new Error("Network error.");
       })
       .then(data => {
+        alert(data);
         // Parse the response data as JSON
         data = JSON.parse(data);
 
