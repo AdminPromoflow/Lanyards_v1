@@ -174,17 +174,13 @@ class Material {
                                               priceDataMaterialResult[existingIndex].price = pricePerMaterial;
                                           }
                                       }
-                                      else if (Number(amountSelected) > Number(maxAmount)) {
-                                          // Si el amountSelected es mayor a maxAmount, usar el precio de maxAmount
-                                          priceDataMaterialResult.push({
-                                              material,
-                                              width,
-                                              noSides,
-                                              noColour,
-                                              minAmount,
-                                              maxAmount,
-                                              price: pricePerMaterial
-                                          });
+                                      
+
+
+
+
+
+
                                   }
                               }
                           }
@@ -199,19 +195,18 @@ class Material {
     //  alert(priceDataMaterialResult.length);
 
       // Iterating through the priceDataMaterialResult array to update the HTML.
-      for (var j = 0; j < priceDataMaterialResult.length; j++) {
-          /*if (typeof priceDataMaterialResult != 'undefined') {
-            alert(JSON.stringify(priceDataMaterialResult));
-          }*/
+      for (var i = 0; i < priceDataMaterialResult.length; i++) {
+        /*if (typeof priceDataMaterialResult != 'undefined') {
+          alert(JSON.stringify(priceDataMaterialResult));
+        }*/
 
-          pricesDataMaterial[j].innerHTML = "£" + priceDataMaterialResult[j]["price"] + " per unit";
+          pricesDataMaterial[i].innerHTML = "£" + priceDataMaterialResult[i]["price"] + " per unit";
 
-          if (json[j]["materials"]["material"] == materialSelected) {
-              priceClass.setPricePerMaterialWithAmount(priceDataMaterialResult[j]["price"]);
+          if (json[i]["materials"]["material"] == materialSelected) {
+              priceClass.setPricePerMaterialWithAmount(priceDataMaterialResult[i]["price"]);
               priceClass.changePricePerLanyard();
           }
       }
-
   }
 
   // Function to search for a material.
