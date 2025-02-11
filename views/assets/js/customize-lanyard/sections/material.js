@@ -93,7 +93,6 @@ class Material {
       </div>`;
 
       const pricesDataMaterial = document.querySelectorAll('.pricesDataMaterial');
-      alert('Esto deberia crearse'+ pricesDataMaterial.length +' veces no mas');
   }
 
   // Function to update material prices.
@@ -187,6 +186,7 @@ class Material {
     // Get all elements with the class "pricesDataMaterial".
     const pricesDataMaterial = document.querySelectorAll(".pricesDataMaterial");
 
+    alert('Esto deberia crearse'+ pricesDataMaterial.length +' veces no mas');
 
     // Iterating through the priceDataMaterialResult array to update the HTML.
     for (var i = 0; i < priceDataMaterialResult.length; i++) {
