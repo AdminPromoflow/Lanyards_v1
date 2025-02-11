@@ -183,10 +183,9 @@ class Material {
 
     // Get all elements with the class "pricesDataMaterial".
     const pricesDataMaterial = document.querySelectorAll(".pricesDataMaterial");
-
+    alert(priceDataMaterialResult.length);
     // Iterating through the priceDataMaterialResult array to update the HTML.
     for (var i = 0; i < priceDataMaterialResult.length; i++) {
-      alert( priceDataMaterialResult[i]["price"]);
       // Update the inner HTML of the pricesDataMaterial elements with the price per unit.
       pricesDataMaterial[i].innerHTML = "£" + priceDataMaterialResult[i]["price"] + " per unit";
 
