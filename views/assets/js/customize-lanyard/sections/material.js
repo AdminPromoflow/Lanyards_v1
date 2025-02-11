@@ -91,7 +91,9 @@ class Material {
         <h4 class="dataMaterial">${data['material']}</h4>
         <h3 class="pricesDataMaterial">£0 per unit</h3>
       </div>`;
-      alert('Esto deberia crearse 5 veces no mas');
+
+      const pricesDataMaterial = document.querySelectorAll('.pricesDataMaterial');
+      alert('Esto deberia crearse'+ pricesDataMaterial.length +' veces no mas');
   }
 
   // Function to update material prices.
