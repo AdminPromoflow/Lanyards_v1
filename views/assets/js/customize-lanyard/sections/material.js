@@ -28,7 +28,7 @@ class Material {
 
 
   // Getter method to get the JSON materials.
-  getJsonMaterials() {
+  getJsonMaterials4() {
     return this.jsonMaterials;
   }
 
