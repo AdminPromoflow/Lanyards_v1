@@ -115,8 +115,9 @@ class Material {
       // Get the amount selected from the priceClass object.
       var amountSelected = priceClass.getAmountSelected();
 
-      // Initialize an array to store the results for material prices.
+      // Ensure the priceDataMaterialResult array is empty
       let priceDataMaterialResult = [];
+      priceDataMaterialResult.length = 0; // Vaciar el array en caso de que tenga datos previos
 
       // Iterating through each item in the JSON array.
       for (let i = 0; i < json.length; i++) {
@@ -149,7 +150,6 @@ class Material {
                                       const pricePerMaterial = amounts[m].price; // Captura el precio del material
 
                                       if (Number(amountSelected) >= Number(minAmount) && Number(amountSelected) <= Number(maxAmount)) {
-                                      //  alert(minAmount +'  ' + amountSelected +'  ' + maxAmount)
                                           // Verifica si ya existe una entrada con el mismo material, ancho, lados y colores
                                           let existingIndex = priceDataMaterialResult.findIndex(item =>
                                               item.material === material &&
@@ -174,13 +174,6 @@ class Material {
                                               priceDataMaterialResult[existingIndex].price = pricePerMaterial;
                                           }
                                       }
-                                      
-
-
-
-
-
-
                                   }
                               }
                           }
@@ -192,14 +185,9 @@ class Material {
 
       // Get all elements with the class "pricesDataMaterial".
       const pricesDataMaterial = document.querySelectorAll(".pricesDataMaterial");
-    //  alert(priceDataMaterialResult.length);
 
       // Iterating through the priceDataMaterialResult array to update the HTML.
       for (var i = 0; i < priceDataMaterialResult.length; i++) {
-        /*if (typeof priceDataMaterialResult != 'undefined') {
-          alert(JSON.stringify(priceDataMaterialResult));
-        }*/
-
           pricesDataMaterial[i].innerHTML = "£" + priceDataMaterialResult[i]["price"] + " per unit";
 
           if (json[i]["materials"]["material"] == materialSelected) {
