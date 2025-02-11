@@ -199,18 +199,19 @@ class Material {
     //  alert(priceDataMaterialResult.length);
 
       // Iterating through the priceDataMaterialResult array to update the HTML.
-      for (var i = 0; i < priceDataMaterialResult.length; i++) {
-        /*if (typeof priceDataMaterialResult != 'undefined') {
-          alert(JSON.stringify(priceDataMaterialResult));
-        }*/
+      for (var j = 0; j < priceDataMaterialResult.length; j++) {
+          /*if (typeof priceDataMaterialResult != 'undefined') {
+            alert(JSON.stringify(priceDataMaterialResult));
+          }*/
 
-          pricesDataMaterial[i].innerHTML = "£" + priceDataMaterialResult[i]["price"] + " per unit";
+          pricesDataMaterial[j].innerHTML = "£" + priceDataMaterialResult[j]["price"] + " per unit";
 
-          if (json[i]["materials"]["material"] == materialSelected) {
-              priceClass.setPricePerMaterialWithAmount(priceDataMaterialResult[i]["price"]);
+          if (json[j]["materials"]["material"] == materialSelected) {
+              priceClass.setPricePerMaterialWithAmount(priceDataMaterialResult[j]["price"]);
               priceClass.changePricePerLanyard();
           }
       }
+
   }
 
   // Function to search for a material.
