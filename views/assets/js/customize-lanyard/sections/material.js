@@ -258,9 +258,11 @@ class Material {
         throw new Error("Network error.");
       })
       .then(data => {
-        console.log(data);
         // Parse the response data as JSON
         data = JSON.parse(data);
+        console.log(data["jsonDataByMaterial"]);
+
+
 
         oneTwoEndsClass.setJsonLanyardType(data["allLanyardTypes"]);
         oneTwoEndsClass.selectOneTwoEnds();
