@@ -93,101 +93,124 @@ class Width {
   }
 
   updatePriceWidth() {
-    // Get the JSON data for the lanyards
-    var json = customizeLanyard.getJsonLanyards();
+      // Get the JSON lanyards data from the customizeLanyard object.
+      var json = customizeLanyard.getJsonLanyards();
 
-    // Get the selected values for material, side printed, color, and amount
-    var materialSelected = material.getMaterialSelected();
-    var sidePrintedSelected = sidePrintedClass.getSidePrintedSelected();
-    var noColourSelected = colourClass.getColourSelected();
-    var amountSelected = priceClass.getAmountSelected();
+      // Get the selected material from the material object.
+      var materialSelected = material.getMaterialSelected();
 
-    let priceDataWidthResult = [];
-    let equalsSidePrinted = false; // Initialize equalsSidePrinted variable
-    let equalsNoColour = false; // Initialize equalsNoColour variable
+      // Get the selected side printed option from the sidePrintedClass object.
+      var sidePrintedSelected = sidePrintedClass.getSidePrintedSelected();
 
-    // Iterate through the JSON data
-    for (let i = 0; i < json.length; i++) {
-      let material = json[i].materials.material;
+      // Get the number of colors selected from the customizeLanyard object.
+      var noColourSelected = colourClass.getColourSelected();
 
-      // Check if the selected material matches the current material in the loop
-      if (materialSelected == material) {
+      // Get the amount selected from the priceClass object.
+      var amountSelected = priceClass.getAmountSelected();
 
-        // Iterate through the widths of the current material
-        for (let j = 0; j < json[i].materials.width.length; j++) {
-          let width = json[i].materials.width[j].width;
+      // Ensure the priceDataMaterialResult array is empty
+      let priceDataWidthResult = [];
+      priceDataWidthResult.length = 0; // Vaciar el array en caso de que tenga datos previos
 
-          // Iterate through the side printed options of the current width
-          for (let k = 0; k < json[i].materials.width[j].sidePrinted.length; k++) {
-            let sidePrinted = json[i].materials.width[j].sidePrinted[k].noSides;
-            equalsSidePrinted = false;
+      // Iterating through each item in the JSON array.
+      for (let i = 0; i < json.length; i++) {
+          const material = json[i].materials.material;
+          const widths = json[i].materials.width;
 
-            // Check if the selected side printed matches the current side printed in the loop
-            if (sidePrintedSelected == sidePrinted) {
-              equalsSidePrinted = true;
-            } else {
-              sidePrintedSelected = json[i].materials.width[j].sidePrinted[0].noSides;
-              if (sidePrintedSelected == sidePrinted) {
-                equalsSidePrinted = true;
+          for (let j = 0; j < widths.length; j++) {
+              const width = widths[j].width;
+              const sidePrinted = widths[j].sidePrinted;
+
+              for (let k = 0; k < sidePrinted.length; k++) {
+                  const noSides = sidePrinted[k].noSides;
+                  sidePrintedSelected = (noSides == sidePrintedSelected) ? noSides : sidePrinted[0].noSides;
+
+                  if (noSides == sidePrintedSelected) {
+                      const noColours = sidePrinted[k].noColours;
+
+                      for (let l = 0; l < noColours.length; l++) {
+                          const noColour = noColours[l].noColour;
+                          noColourSelected = (noColour == noColourSelected) ? noColour : noColours[0].noColour;
+
+                          if (noColour == noColourSelected) {
+                              const amounts = noColours[l].amount;
+
+                              for (let m = 0; m < amounts.length; m++) {
+                                  const minAmount = amounts[m]['min-amount'];
+                                  const maxAmount = amounts[m]['max-amount'];
+                                  const pricePerMaterial = amounts[m].price; // Captura el precio del material
+
+                                  if (Number(amountSelected) >= Number(minAmount) && Number(amountSelected) <= Number(maxAmount)) {
+                                      // Verifica si ya existe una entrada con el mismo material, ancho, lados y colores
+                                      let existingIndex = priceDataWidthResult.findIndex(item =>
+                                          item.material === material &&
+                                          item.width === width &&
+                                          item.noSides === noSides &&
+                                          item.noColour === noColour
+                                      );
+
+                                      if (existingIndex === -1) {
+                                          // Si no existe, agrega un nuevo objeto con el precio del material
+                                          priceDataWidthResult.push({
+                                              material,
+                                              width,
+                                              noSides,
+                                              noColour,
+                                              minAmount,
+                                              maxAmount,
+                                              price: pricePerMaterial
+                                          });
+                                      } else {
+                                          // Si ya existe, actualiza el precio en caso de cambios
+                                          priceDataWidthResult[existingIndex].price = pricePerMaterial;
+                                      }
+                                  } else if (Number(amountSelected) > Number(maxAmount)) {
+                                      // Si el amountSelected es mayor que el maxAmount, usa el precio del mayor intervalo disponible
+                                      let highestIndex = amounts.length - 1;
+                                      let highestMinAmount = amounts[highestIndex]['min-amount'];
+                                      let highestMaxAmount = amounts[highestIndex]['max-amount'];
+                                      let highestPrice = amounts[highestIndex].price;
+
+                                      let existingIndex = priceDataWidthResult.findIndex(item =>
+                                          item.material === material &&
+                                          item.width === width &&
+                                          item.noSides === noSides &&
+                                          item.noColour === noColour
+                                      );
+
+                                      if (existingIndex === -1) {
+                                          // Agregar el precio del mayor intervalo
+                                          priceDataWidthResult.push({
+                                              material,
+                                              width,
+                                              noSides,
+                                              noColour,
+                                              minAmount: highestMinAmount,
+                                              maxAmount: highestMaxAmount,
+                                              price: highestPrice
+                                          });
+                                      } else {
+                                          // Si ya existe, actualizar el precio con el mayor intervalo disponible
+                                          priceDataWidthResult[existingIndex].price = highestPrice;
+                                      }
+                                  }
+                              }
+                          }
+                      }
+                  }
               }
-            }
-
-            // If the side printed matches, proceed to check colors
-            if (equalsSidePrinted) {
-
-              // Iterate through the color options of the current side printed
-              for (let l = 0; l < json[i].materials.width[j].sidePrinted[k].noColours.length; l++) {
-                let noColour = json[i].materials.width[j].sidePrinted[k].noColours[l].noColour;
-                equalsNoColour = false;
-
-                // Check if the selected color matches the current color in the loop
-                if (noColourSelected == noColour) {
-                  equalsNoColour = true;
-                } else {
-                  noColourSelected = json[i].materials.width[j].sidePrinted[k].noColours[0].noColour;
-                  if (noColourSelected == noColour) {
-                    equalsNoColour = true;
-                  }
-                }
-
-                // If the color matches, proceed to check the amount ranges
-                if (equalsNoColour) {
-                  let maxAmountExceeded = true; // Flag to check if amountSelected exceeds max-amount
-
-                  // Iterate through the amount ranges of the current color
-                  for (let m = 0; m < json[i].materials.width[j].sidePrinted[k].noColours[l].amount.length; m++) {
-                    let amount = json[i].materials.width[j].sidePrinted[k].noColours[l].amount[m];
-
-                    // Check if the selected amount falls within the current amount range
-                    if (amountSelected >= amount['min-amount'] && amountSelected <= amount['max-amount']) {
-                      priceDataWidthResult.push(amount.price);
-                      maxAmountExceeded = false; // Reset flag as amountSelected is within range
-                      break; // Exit the loop once we have found the matching range
-                    }
-                  }
-
-                  // If amountSelected exceeds max-amount, log the price of the highest range
-                  if (maxAmountExceeded) {
-                    let highestAmount = json[i].materials.width[j].sidePrinted[k].noColours[l].amount.slice(-1)[0];
-                    priceDataWidthResult.push(highestAmount.price);
-                  }
-                }
-              }
-            }
           }
-        }
       }
-    }
 
-    // Get the elements to display the price data
-    const priceDataWidth = document.querySelectorAll(".priceDataWidth");
-    var totalPriceWidth;
+      // Get the elements to display the price data
+      const priceDataWidth = document.querySelectorAll(".priceDataWidth");
+      var totalPriceWidth;
 
-    // Update the price display for each element
-    for (var i = 0; i < priceDataWidth.length; i++) {
-      totalPriceWidth = priceDataWidthResult[i] - priceDataWidthResult[0];
-      priceDataWidth[i].innerHTML = "£" + totalPriceWidth.toFixed(2) + " per unit";
-    }
+      // Update the price display for each element
+      for (var i = 0; i < priceDataWidth.length; i++) {
+          totalPriceWidth = priceDataWidthResult[i] - priceDataWidthResult[0];
+          priceDataWidth[i].innerHTML = "£" + totalPriceWidth.toFixed(2) + " per unit";
+      }
   }
 
 
