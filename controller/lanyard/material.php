@@ -313,7 +313,8 @@ class Material {
             if ($widthIndex === false) {
                 $data["Lanyards"][$materialIndex]["Width"][] = [
                     "width" => $width,
-                    "Clips" => []
+                    "Clips" => [],
+                    "SidePrinted" => []
                 ];
                 $widthIndex = count($data["Lanyards"][$materialIndex]["Width"]) - 1;
             }
@@ -324,36 +325,34 @@ class Material {
             if ($clipIndex === false) {
                 $data["Lanyards"][$materialIndex]["Width"][$widthIndex]["Clips"][] = [
                     "clipName" => $clipName,
-                    "clipPrice" => (float) $clipPrice,
-                    "SidePrinted" => []
+                    "clipPrice" => (float) $clipPrice
                 ];
-                $clipIndex = count($data["Lanyards"][$materialIndex]["Width"][$widthIndex]["Clips"]) - 1;
             }
 
             // Find if the SidePrinted already exists
-            $sideIndex = array_search($side, array_column($data["Lanyards"][$materialIndex]["Width"][$widthIndex]["Clips"][$clipIndex]["SidePrinted"], "side"));
+            $sideIndex = array_search($side, array_column($data["Lanyards"][$materialIndex]["Width"][$widthIndex]["SidePrinted"], "side"));
 
             if ($sideIndex === false) {
-                $data["Lanyards"][$materialIndex]["Width"][$widthIndex]["Clips"][$clipIndex]["SidePrinted"][] = [
+                $data["Lanyards"][$materialIndex]["Width"][$widthIndex]["SidePrinted"][] = [
                     "side" => $side,
                     "Colours" => []
                 ];
-                $sideIndex = count($data["Lanyards"][$materialIndex]["Width"][$widthIndex]["Clips"][$clipIndex]["SidePrinted"]) - 1;
+                $sideIndex = count($data["Lanyards"][$materialIndex]["Width"][$widthIndex]["SidePrinted"]) - 1;
             }
 
             // Find if the ColourOption already exists
-            $colourIndex = array_search($colourOption, array_column($data["Lanyards"][$materialIndex]["Width"][$widthIndex]["Clips"][$clipIndex]["SidePrinted"][$sideIndex]["Colours"], "colourOption"));
+            $colourIndex = array_search($colourOption, array_column($data["Lanyards"][$materialIndex]["Width"][$widthIndex]["SidePrinted"][$sideIndex]["Colours"], "colourOption"));
 
             if ($colourIndex === false) {
-                $data["Lanyards"][$materialIndex]["Width"][$widthIndex]["Clips"][$clipIndex]["SidePrinted"][$sideIndex]["Colours"][] = [
+                $data["Lanyards"][$materialIndex]["Width"][$widthIndex]["SidePrinted"][$sideIndex]["Colours"][] = [
                     "colourOption" => $colourOption,
                     "Amount" => []
                 ];
-                $colourIndex = count($data["Lanyards"][$materialIndex]["Width"][$widthIndex]["Clips"][$clipIndex]["SidePrinted"][$sideIndex]["Colours"]) - 1;
+                $colourIndex = count($data["Lanyards"][$materialIndex]["Width"][$widthIndex]["SidePrinted"][$sideIndex]["Colours"]) - 1;
             }
 
             // Add Amount inside Colours
-            $data["Lanyards"][$materialIndex]["Width"][$widthIndex]["Clips"][$clipIndex]["SidePrinted"][$sideIndex]["Colours"][$colourIndex]["Amount"][] = [
+            $data["Lanyards"][$materialIndex]["Width"][$widthIndex]["SidePrinted"][$sideIndex]["Colours"][$colourIndex]["Amount"][] = [
                 "minAmount" => (int) $minAmount,
                 "maxAmount" => (int) $maxAmount,
                 "amountPrice" => (float) $amountPrice
@@ -362,7 +361,6 @@ class Material {
 
         return $data;
     }
-
 
 
     private function getAllLanyardInfo() {
