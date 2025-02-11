@@ -100,6 +100,9 @@ class Material {
       // Get the JSON lanyards data from the customizeLanyard object.
       var json = customizeLanyard.getJsonLanyards();
 
+      // Get the material selected.
+      var materialSelected = material.getMaterialSelected();
+
       var widthSelected;
       var sidePrintedSelected;
       var noColourSelected;
