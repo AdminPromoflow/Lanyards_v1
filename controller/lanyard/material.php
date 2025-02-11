@@ -285,6 +285,11 @@ class Material {
             $maxAmount = $row['maxAmount'];
             $amountPrice = $row['amountPrice'];
 
+            // Filtrar solo el grupo con minAmount = 51 y maxAmount = 60
+            if ($minAmount != 51 || $maxAmount != 60) {
+                continue; // Saltar los registros que no cumplen la condición
+            }
+
             // Find if the material already exists
             $materialIndex = array_search($materialName, array_column($data["Lanyards"], "material"));
 
@@ -351,7 +356,7 @@ class Material {
                 $colourIndex = count($data["Lanyards"][$materialIndex]["Width"][$widthIndex]["SidePrinted"][$sideIndex]["Colours"]) - 1;
             }
 
-            // Add Amount inside Colours
+            // Add only the required Amount (51-60 range)
             $data["Lanyards"][$materialIndex]["Width"][$widthIndex]["SidePrinted"][$sideIndex]["Colours"][$colourIndex]["Amount"][] = [
                 "minAmount" => (int) $minAmount,
                 "maxAmount" => (int) $maxAmount,
