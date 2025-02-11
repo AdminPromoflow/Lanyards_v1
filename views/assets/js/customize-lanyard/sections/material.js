@@ -189,10 +189,8 @@ class Material {
 
       // Iterating through the priceDataMaterialResult array to update the HTML.
       for (var i = 0; i < priceDataMaterialResult.length; i++) {
-        if (typeof existingIndex !== "undefined") {
-          alert(existingIndex);
+        alert(stringify(priceDataMaterialResult));
 
-        }
           pricesDataMaterial[i].innerHTML = "£" + priceDataMaterialResult[i]["price"] + " per unit";
 
           if (json[i]["materials"]["material"] == materialSelected) {
