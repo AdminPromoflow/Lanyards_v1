@@ -173,6 +173,35 @@ class Material {
                                               // Si ya existe, actualiza el precio en caso de cambios
                                               priceDataMaterialResult[existingIndex].price = pricePerMaterial;
                                           }
+                                      } else if (Number(amountSelected) > Number(maxAmount)) {
+                                          // Si el amountSelected es mayor que el maxAmount, usa el precio del mayor intervalo disponible
+                                          let highestIndex = amounts.length - 1;
+                                          let highestMinAmount = amounts[highestIndex]['min-amount'];
+                                          let highestMaxAmount = amounts[highestIndex]['max-amount'];
+                                          let highestPrice = amounts[highestIndex].price;
+
+                                          let existingIndex = priceDataMaterialResult.findIndex(item =>
+                                              item.material === material &&
+                                              item.width === width &&
+                                              item.noSides === noSides &&
+                                              item.noColour === noColour
+                                          );
+
+                                          if (existingIndex === -1) {
+                                              // Agregar el precio del mayor intervalo
+                                              priceDataMaterialResult.push({
+                                                  material,
+                                                  width,
+                                                  noSides,
+                                                  noColour,
+                                                  minAmount: highestMinAmount,
+                                                  maxAmount: highestMaxAmount,
+                                                  price: highestPrice
+                                              });
+                                          } else {
+                                              // Si ya existe, actualizar el precio con el mayor intervalo disponible
+                                              priceDataMaterialResult[existingIndex].price = highestPrice;
+                                          }
                                       }
                                   }
                               }
