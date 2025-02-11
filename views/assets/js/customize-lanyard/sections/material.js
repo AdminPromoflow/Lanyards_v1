@@ -260,8 +260,8 @@ class Material {
       .then(data => {
         // Parse the response data as JSON
         data = JSON.parse(data);
-        materials.setJsonMaterials(data["jsonDataByMaterial"]);
-        alert(materials.getJsonMaterials());
+        this.setJsonMaterials(data["jsonDataByMaterial"]);
+        alert(this.getJsonMaterials());
 
 
 
