@@ -206,7 +206,7 @@ class Width {
 
       // Update the price display for each element
       for (var i = 0; i < priceDataWidth.length; i++) {
-          totalPriceWidth = priceDataWidthResult[i] - priceDataWidthResult[0];
+          totalPriceWidth = priceDataWidthResult[i] ;
           priceDataWidth[i].innerHTML = "£" + totalPriceWidth.price.toFixed(2) + " per unit";
       }
   }
