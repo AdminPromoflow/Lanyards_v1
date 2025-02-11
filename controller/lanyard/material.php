@@ -351,17 +351,29 @@ class Material {
                 $colourIndex = count($data["Lanyards"][$materialIndex]["Width"][$widthIndex]["SidePrinted"][$sideIndex]["Colours"]) - 1;
             }
 
-            // Add Amount inside Colours
-            $data["Lanyards"][$materialIndex]["Width"][$widthIndex]["SidePrinted"][$sideIndex]["Colours"][$colourIndex]["Amount"][] = [
-                "minAmount" => (int) $minAmount,
-                "maxAmount" => (int) $maxAmount,
-                "amountPrice" => (float) $amountPrice
-            ];
+            // Find if the Amount already exists to avoid duplicates
+            $existingAmounts = &$data["Lanyards"][$materialIndex]["Width"][$widthIndex]["SidePrinted"][$sideIndex]["Colours"][$colourIndex]["Amount"];
+
+            $amountExists = false;
+            foreach ($existingAmounts as $amount) {
+                if ($amount["minAmount"] == $minAmount && $amount["maxAmount"] == $maxAmount && $amount["amountPrice"] == $amountPrice) {
+                    $amountExists = true;
+                    break;
+                }
+            }
+
+            // If Amount is not duplicated, add it
+            if (!$amountExists) {
+                $existingAmounts[] = [
+                    "minAmount" => (int) $minAmount,
+                    "maxAmount" => (int) $maxAmount,
+                    "amountPrice" => (float) $amountPrice
+                ];
+            }
         }
 
         return $data;
     }
-
 
     private function getAllLanyardInfo() {
         // Create a connection to the database
