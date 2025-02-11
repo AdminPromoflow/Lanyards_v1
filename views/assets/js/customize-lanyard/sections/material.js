@@ -28,7 +28,7 @@ class Material {
 
 
   // Getter method to get the JSON materials.
-  getJsonMaterials4() {
+  getJsonMaterials() {
     return this.jsonMaterials;
   }
 
@@ -260,7 +260,8 @@ class Material {
       .then(data => {
         // Parse the response data as JSON
         data = JSON.parse(data);
-        console.log(data["jsonDataByMaterial"]);
+        materials.setJsonMaterials(data["jsonDataByMaterial"]);
+        alert(materials.getJsonMaterials());
 
 
 
