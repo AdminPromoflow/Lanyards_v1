@@ -148,9 +148,8 @@ class Material {
                                       const maxAmount = amounts[m]['max-amount'];
                                       const pricePerMaterial = amounts[m].price; // Captura el precio del material
 
-                                      if (Number(amountSelected) >= Number(minAmount) && Number(amountSelected) <= Number(maxAmount)
-) {
-                                        alert(minAmount +'  ' + amountSelected +'  ' + maxAmount)
+                                      if (Number(amountSelected) >= Number(minAmount) && Number(amountSelected) <= Number(maxAmount)) {
+                                      //  alert(minAmount +'  ' + amountSelected +'  ' + maxAmount)
                                           // Verifica si ya existe una entrada con el mismo material, ancho, lados y colores
                                           let existingIndex = priceDataMaterialResult.findIndex(item =>
                                               item.material === material &&
@@ -190,6 +189,7 @@ class Material {
 
       // Iterating through the priceDataMaterialResult array to update the HTML.
       for (var i = 0; i < priceDataMaterialResult.length; i++) {
+        alert(existingIndex);
           pricesDataMaterial[i].innerHTML = "£" + priceDataMaterialResult[i]["price"] + " per unit";
 
           if (json[i]["materials"]["material"] == materialSelected) {
