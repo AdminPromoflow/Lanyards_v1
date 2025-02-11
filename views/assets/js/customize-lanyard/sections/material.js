@@ -56,6 +56,7 @@ class Material {
         throw new Error("Network error.");
       })
       .then(data => {
+        alert(data);
         data = JSON.parse(data);
         customizeLanyard.setJsonLanyards(data["lanyards"]);
 
@@ -260,10 +261,7 @@ class Material {
       .then(data => {
         // Parse the response data as JSON
         data = JSON.parse(data);
-        this.setJsonMaterials(data["jsonDataByMaterial"]);
-        alert(this.getJsonMaterials());
-
-
+      //  this.setJsonMaterials(data["jsonDataByMaterial"]);
 
         oneTwoEndsClass.setJsonLanyardType(data["allLanyardTypes"]);
         oneTwoEndsClass.selectOneTwoEnds();
