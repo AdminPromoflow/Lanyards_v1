@@ -149,7 +149,6 @@ class Material {
                                       const pricePerMaterial = amounts[m].price; // Captura el precio del material
 
                                       if (Number(amountSelected) >= Number(minAmount) && Number(amountSelected) <= Number(maxAmount)) {
-                                      //  alert(minAmount +'  ' + amountSelected +'  ' + maxAmount)
                                           // Verifica si ya existe una entrada con el mismo material, ancho, lados y colores
                                           let existingIndex = priceDataMaterialResult.findIndex(item =>
                                               item.material === material &&
@@ -173,7 +172,25 @@ class Material {
                                               // Si ya existe, actualiza el precio en caso de cambios
                                               priceDataMaterialResult[existingIndex].price = pricePerMaterial;
                                           }
+                                      } else if (Number(amountSelected) > Number(maxAmount)) {
+                                          // Si el amountSelected es mayor a maxAmount, usar el precio de maxAmount
+                                          priceDataMaterialResult.push({
+                                              material,
+                                              width,
+                                              noSides,
+                                              noColour,
+                                              minAmount,
+                                              maxAmount,
+                                              price: pricePerMaterial
+                                          });
                                       }
+
+
+
+
+
+
+
                                   }
                               }
                           }
