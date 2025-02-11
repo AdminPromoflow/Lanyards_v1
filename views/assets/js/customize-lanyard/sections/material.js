@@ -73,7 +73,6 @@ class Material {
 
       selecteMaterial(data){
         var data = customizeLanyard.getJsonLanyards();
-        alert('hola, esto crea los materiales.');
         // Clear the container for materials
         containersBoxesMaterial.innerHTML = "";
         // Set the fetched JSON materials
@@ -92,6 +91,7 @@ class Material {
         <h4 class="dataMaterial">${data['material']}</h4>
         <h3 class="pricesDataMaterial">£0 per unit</h3>
       </div>`;
+      alert('Esto deberia crearse 5 veces no mas');
   }
 
   // Function to update material prices.
