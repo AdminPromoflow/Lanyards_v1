@@ -95,74 +95,107 @@ class Material {
 
   // Function to update material prices.
   updatePriceMaterial() {
-      var json = customizeLanyard.getJsonLanyards();
-      var materialSelected = material.getMaterialSelected();
-      var widthSelected = widthClass.getWidthSelected();
-      var sidePrintedSelected = sidePrintedClass.getSidePrintedSelected();
-      var noColourSelected = colourClass.getColourSelected();
-      var amountSelected = priceClass.getAmountSelected();
+    // Get the JSON lanyards data from the customizeLanyard object.
+    var json = customizeLanyard.getJsonLanyards();
 
-      let priceDataMaterialResult = new Map();
+    // Get the selected material from the material object.
+    var materialSelected = material.getMaterialSelected();
 
-      json.forEach(item => {
-          if (!item.materials) return;
-          const material = item.materials.material || "";
-          const widths = item.materials.width || [];
+    // Get the selected width from the widthClass object.
+    var widthSelected = widthClass.getWidthSelected();
 
-          widths.forEach(widthItem => {
-              if (!widthItem.sidePrinted) return;
-              const width = widthItem.width || "";
+    // Get the selected side printed option from the sidePrintedClass object.
+    var sidePrintedSelected = sidePrintedClass.getSidePrintedSelected();
 
-              if (width == widthSelected) {
-                  widthItem.sidePrinted.forEach(sidePrintedItem => {
-                      if (!sidePrintedItem.noColours) return;
-                      const noSides = sidePrintedItem.noSides || "";
+    // Get the number of colors selected from the customizeLanyard object.
+    var noColourSelected = colourClass.getColourSelected();
 
-                      if (sidePrintedItem.noColours.length > 0) {
-                          sidePrintedSelected = (noSides == sidePrintedSelected) ? noSides : sidePrintedItem.noColours[0].noSides;
-                      }
+    // Get the amount selected from the priceClass object.
+    var amountSelected = priceClass.getAmountSelected();
 
-                      if (noSides == sidePrintedSelected) {
-                          sidePrintedItem.noColours.forEach(colourItem => {
-                              if (!colourItem.amount) return;
-                              const noColour = colourItem.noColour || "";
+    // Initialize an array to store the results for material prices.
+    let priceDataMaterialResult = [];
 
-                              if (colourItem.amount.length > 0) {
-                                  noColourSelected = (noColour == noColourSelected) ? noColour : colourItem.amount[0].noColour;
-                              }
+    // Iterating through each item in the JSON array.
+    for (let i = 0; i < json.length; i++) {
+      // Extracting the 'material' from the current JSON item.
+      const material = json[i].materials.material;
 
-                              if (noColour == noColourSelected) {
-                                  colourItem.amount.forEach(amountItem => {
-                                      const minAmount = amountItem['min-amount'];
-                                      const maxAmount = amountItem['max-amount'];
-                                      const price = amountItem.price;
+      // Extracting the 'widths' array from the current JSON item.
+      const widths = json[i].materials.width;
 
-                                      const key = `${minAmount}-${maxAmount}-${price}`;
-                                      if (!priceDataMaterialResult.has(key)) {
-                                          priceDataMaterialResult.set(key, { material, width, noSides, noColour, minAmount, maxAmount, price });
-                                      }
-                                  });
-                              }
-                          });
-                      }
-                  });
+      // Iterating through each width in the 'widths' array.
+      for (let j = 0; j < widths.length; j++) {
+        // Extracting the 'width' value from the current width object.
+        const width = widths[j].width;
+
+        // Checking if the width matches the selected width.
+        if (width == widthSelected) {
+          // Extracting the 'sidePrinted' array from the current width object.
+          const sidePrinted = widths[j].sidePrinted;
+
+          // Iterating through each item in the 'sidePrinted' array.
+          for (let k = 0; k < sidePrinted.length; k++) {
+            // Extracting the 'noSides' value from the current sidePrinted object.
+            const noSides = sidePrinted[k].noSides;
+
+            // Update the sidePrintedSelected value if it matches the noSides value.
+            sidePrintedSelected = (noSides == sidePrintedSelected) ? noSides : sidePrinted[0].noSides;
+
+            // Checking if the number of sides matches the selected number of sides.
+            if (noSides == sidePrintedSelected) {
+              // Extracting the 'noColours' array from the current sidePrinted object.
+              const noColours = sidePrinted[k].noColours;
+
+              // Iterating through each item in the 'noColours' array.
+              for (let l = 0; l < noColours.length; l++) {
+                // Extracting the 'noColour' value from the current noColours object.
+                const noColour = noColours[l].noColour;
+
+                // Update the noColourSelected value if it matches the noColour value.
+                noColourSelected = (noColour == noColourSelected) ? noColour : noColours[0].noColour;
+
+                // Checking if the number of colors matches the selected number of colors.
+                if (noColour == noColourSelected) {
+                  // Extracting the 'amount' array from the current noColours object.
+                  const amounts = noColours[l].amount;
+
+                  // Iterating through each amount in the 'amounts' array.
+                  for (let m = 0; m < amounts.length; m++) {
+                    // Extracting the 'min-amount' and 'max-amount' values from the current amount object.
+                    const minAmount = amounts[m]['min-amount'];
+                    const maxAmount = amounts[m]['max-amount'];
+                    const price = amounts[m].price;
+
+                    // Checking if the selected amount falls within the min and max amount range.
+                    if (amountSelected >= minAmount && amountSelected <= maxAmount) {
+                      // Push the result into the priceDataMaterialResult array.
+                      priceDataMaterialResult.push({ material, width, noSides, noColour, minAmount, maxAmount, price });
+                    }
+                  }
+                }
               }
-          });
-      });
-
-      const pricesDataMaterial = document.querySelectorAll(".pricesDataMaterial");
-      const priceArray = Array.from(priceDataMaterialResult.values());
-
-      for (let i = 0; i < pricesDataMaterial.length; i++) {
-          if (priceArray[i]) {
-              pricesDataMaterial[i].innerHTML = "£" + priceArray[i].price + " per unit";
-
-              if (json[i]?.materials?.material === materialSelected) {
-                  priceClass.setPricePerMaterialWithAmount(priceArray[i].price);
-                  priceClass.changePricePerLanyard();
-              }
+            }
           }
+        }
       }
+    }
+
+    // Get all elements with the class "pricesDataMaterial".
+    const pricesDataMaterial = document.querySelectorAll(".pricesDataMaterial");
+
+    // Iterating through the priceDataMaterialResult array to update the HTML.
+    for (var i = 0; i < priceDataMaterialResult.length; i++) {
+      alert( priceDataMaterialResult[i]["price"]);
+      // Update the inner HTML of the pricesDataMaterial elements with the price per unit.
+      pricesDataMaterial[i].innerHTML = "£" + priceDataMaterialResult[i]["price"] + " per unit";
+
+      // If the material matches the selected material, update the price class.
+      if (json[i]["materials"]["material"] == materialSelected) {
+        priceClass.setPricePerMaterialWithAmount(priceDataMaterialResult[i]["price"]);
+        priceClass.changePricePerLanyard();
+      }
+    }
   }
 
   // Function to search for a material.
