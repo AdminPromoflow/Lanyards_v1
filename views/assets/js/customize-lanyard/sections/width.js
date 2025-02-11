@@ -126,14 +126,14 @@ class Width {
 
           for (let k = 0; k < sidePrinted.length; k++) {
               const noSides = sidePrinted[k].noSides;
-              sidePrintedSelected = (noSides == sidePrintedSelected) ? noSides : sidePrinted[0].noSides;
+              sidePrintedSelected = sidePrinted[0].noSides;
 
               if (noSides == sidePrintedSelected) {
                   const noColours = sidePrinted[k].noColours;
 
                   for (let l = 0; l < noColours.length; l++) {
                       const noColour = noColours[l].noColour;
-                      noColourSelected = (noColour == noColourSelected) ? noColour : noColours[0].noColour;
+                      noColourSelected = noColours[0].noColour;
 
                       if (noColour == noColourSelected) {
                           const amounts = noColours[l].amount;
@@ -206,7 +206,7 @@ class Width {
 
       // Update the price display for each element
       for (var i = 0; i < priceDataWidth.length; i++) {
-          totalPriceWidth = priceDataWidthResult[i];
+          totalPriceWidth = priceDataWidthResult[i] - priceDataWidthResult[0];
           priceDataWidth[i].innerHTML = "£" + totalPriceWidth.price.toFixed(2) + " per unit";
       }
   }
