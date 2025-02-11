@@ -118,6 +118,8 @@ class Width {
       if (!jsonMaterial) return; // Exit if material is not found
 
       const widths = jsonMaterial.materials.width;
+      let tableData = "Width | No Sides | No Colour | Min Amount | Max Amount | Price\n";
+      tableData += "-----------------------------------------------------------\n";
 
       // Iterate through the widths of the selected material
       for (let j = 0; j < widths.length; j++) {
@@ -143,56 +145,8 @@ class Width {
                               const maxAmount = amounts[m]['max-amount'];
                               const pricePerMaterial = amounts[m].price; // Captura el precio del material
 
-                              if (Number(amountSelected) >= Number(minAmount) && Number(amountSelected) <= Number(maxAmount)) {
-                                  // Verifica si ya existe una entrada con el mismo width, lados y colores
-                                  let existingIndex = priceDataWidthResult.findIndex(item =>
-                                      item.width === width &&
-                                      item.noSides === noSides &&
-                                      item.noColour === noColour
-                                  );
-
-                                  if (existingIndex === -1) {
-                                      // Si no existe, agrega un nuevo objeto con el precio del width
-                                      priceDataWidthResult.push({
-                                          width,
-                                          noSides,
-                                          noColour,
-                                          minAmount,
-                                          maxAmount,
-                                          price: pricePerMaterial
-                                      });
-                                  } else {
-                                      // Si ya existe, actualiza el precio en caso de cambios
-                                      priceDataWidthResult[existingIndex].price = pricePerMaterial;
-                                  }
-                              } else if (Number(amountSelected) > Number(maxAmount)) {
-                                  // Si el amountSelected es mayor que el maxAmount, usa el precio del mayor intervalo disponible
-                                  let highestIndex = amounts.length - 1;
-                                  let highestMinAmount = amounts[highestIndex]['min-amount'];
-                                  let highestMaxAmount = amounts[highestIndex]['max-amount'];
-                                  let highestPrice = amounts[highestIndex].price;
-
-                                  let existingIndex = priceDataWidthResult.findIndex(item =>
-                                      item.width === width &&
-                                      item.noSides === noSides &&
-                                      item.noColour === noColour
-                                  );
-
-                                  if (existingIndex === -1) {
-                                      // Agregar el precio del mayor intervalo
-                                      priceDataWidthResult.push({
-                                          width,
-                                          noSides,
-                                          noColour,
-                                          minAmount: highestMinAmount,
-                                          maxAmount: highestMaxAmount,
-                                          price: highestPrice
-                                      });
-                                  } else {
-                                      // Si ya existe, actualizar el precio con el mayor intervalo disponible
-                                      priceDataWidthResult[existingIndex].price = highestPrice;
-                                  }
-                              }
+                              // Agregar los datos a la tabla
+                              tableData += `${width} | ${noSides} | ${noColour} | ${minAmount} | ${maxAmount} | £${pricePerMaterial}\n`;
                           }
                       }
                   }
@@ -200,15 +154,8 @@ class Width {
           }
       }
 
-      // Get the elements to display the price data
-      const priceDataWidth = document.querySelectorAll(".priceDataWidth");
-      var totalPriceWidth;
-
-      // Update the price display for each element
-      for (var i = 0; i < priceDataWidth.length; i++) {
-          totalPriceWidth = priceDataWidthResult[i] ;
-          priceDataWidth[i].innerHTML = "£" + totalPriceWidth.price.toFixed(2) + " per unit";
-      }
+      // Mostrar la tabla en un alert
+      alert(tableData);
   }
 
 
