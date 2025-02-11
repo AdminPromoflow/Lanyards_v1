@@ -18,7 +18,7 @@ class Price {
     amountLanyards.value = 1000;
 
 
-    
+
 
 
 
@@ -34,8 +34,8 @@ class Price {
         widthClass.updatePriceWidth();
       }
       else {
-        amountLanyardsRange.value = 1000;
-        amountLanyards.value = 1000;
+        amountLanyardsRange.value = 1;
+        amountLanyards.value = 1;
 
         priceClass.setAmountSelected(amountLanyardsRange.value);
         material.updatePriceMaterial();
