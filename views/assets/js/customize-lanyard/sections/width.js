@@ -108,14 +108,15 @@ class Width {
       // Get the amount selected from the priceClass object.
       var amountSelected = priceClass.getAmountSelected();
 
-      // Ensure the priceDataMaterialResult array is empty
+      // Ensure the priceDataWidthResult array is empty
       let priceDataWidthResult = [];
-      priceDataWidthResult.length = 0; // Vaciar el array en caso de que tenga datos previos
 
-      // Iterating through each item in the JSON array.
-      for (let i = 0; i < json.length; i++) {
-          const material = json[i].materials.material;
-          const widths = json[i].materials.width;
+      // Find the selected material directly
+      let selectedMaterialData = json.find(item => item.materials.material === materialSelected);
+
+      // If the material is found, process its widths
+      if (selectedMaterialData) {
+          const widths = selectedMaterialData.materials.width;
 
           for (let j = 0; j < widths.length; j++) {
               const width = widths[j].width;
@@ -141,18 +142,14 @@ class Width {
                                   const pricePerMaterial = amounts[m].price; // Captura el precio del material
 
                                   if (Number(amountSelected) >= Number(minAmount) && Number(amountSelected) <= Number(maxAmount)) {
-                                      // Verifica si ya existe una entrada con el mismo material, ancho, lados y colores
                                       let existingIndex = priceDataWidthResult.findIndex(item =>
-                                          item.material === material &&
                                           item.width === width &&
                                           item.noSides === noSides &&
                                           item.noColour === noColour
                                       );
 
                                       if (existingIndex === -1) {
-                                          // Si no existe, agrega un nuevo objeto con el precio del material
                                           priceDataWidthResult.push({
-                                              material,
                                               width,
                                               noSides,
                                               noColour,
@@ -161,27 +158,22 @@ class Width {
                                               price: pricePerMaterial
                                           });
                                       } else {
-                                          // Si ya existe, actualiza el precio en caso de cambios
                                           priceDataWidthResult[existingIndex].price = pricePerMaterial;
                                       }
                                   } else if (Number(amountSelected) > Number(maxAmount)) {
-                                      // Si el amountSelected es mayor que el maxAmount, usa el precio del mayor intervalo disponible
                                       let highestIndex = amounts.length - 1;
                                       let highestMinAmount = amounts[highestIndex]['min-amount'];
                                       let highestMaxAmount = amounts[highestIndex]['max-amount'];
                                       let highestPrice = amounts[highestIndex].price;
 
                                       let existingIndex = priceDataWidthResult.findIndex(item =>
-                                          item.material === material &&
                                           item.width === width &&
                                           item.noSides === noSides &&
                                           item.noColour === noColour
                                       );
 
                                       if (existingIndex === -1) {
-                                          // Agregar el precio del mayor intervalo
                                           priceDataWidthResult.push({
-                                              material,
                                               width,
                                               noSides,
                                               noColour,
@@ -190,7 +182,6 @@ class Width {
                                               price: highestPrice
                                           });
                                       } else {
-                                          // Si ya existe, actualizar el precio con el mayor intervalo disponible
                                           priceDataWidthResult[existingIndex].price = highestPrice;
                                       }
                                   }
@@ -208,7 +199,7 @@ class Width {
 
       // Update the price display for each element
       for (var i = 0; i < priceDataWidth.length; i++) {
-          totalPriceWidth = priceDataWidthResult[i];
+          totalPriceWidth = priceDataWidthResult[i]?.price || 0; // Ensure there's a value
           priceDataWidth[i].innerHTML = "£" + totalPriceWidth.toFixed(2) + " per unit";
       }
   }
