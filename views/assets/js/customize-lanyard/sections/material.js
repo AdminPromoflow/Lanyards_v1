@@ -149,6 +149,7 @@ class Material {
                                       const pricePerMaterial = amounts[m].price; // Captura el precio del material
 
                                       if (amountSelected >= minAmount && amountSelected <= maxAmount) {
+                                        alert(minAmount +'  ' + amountSelected +'  ' + maxAmount)
                                           // Verifica si ya existe una entrada con el mismo material, ancho, lados y colores
                                           let existingIndex = priceDataMaterialResult.findIndex(item =>
                                               item.material === material &&
