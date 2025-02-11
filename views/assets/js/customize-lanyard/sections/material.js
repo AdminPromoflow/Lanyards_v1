@@ -73,6 +73,7 @@ class Material {
 
       selecteMaterial(data){
         var data = customizeLanyard.getJsonLanyards();
+        alert('hola, esto crea los materiales.');
         // Clear the container for materials
         containersBoxesMaterial.innerHTML = "";
         // Set the fetched JSON materials
@@ -183,7 +184,8 @@ class Material {
 
     // Get all elements with the class "pricesDataMaterial".
     const pricesDataMaterial = document.querySelectorAll(".pricesDataMaterial");
-    alert(priceDataMaterialResult.length);
+
+
     // Iterating through the priceDataMaterialResult array to update the HTML.
     for (var i = 0; i < priceDataMaterialResult.length; i++) {
       // Update the inner HTML of the pricesDataMaterial elements with the price per unit.
