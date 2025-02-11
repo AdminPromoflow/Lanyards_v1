@@ -113,16 +113,16 @@ class Material {
           const widths = json[i].materials.width;
 
           for (let j = 0; j < widths.length; j++) {
-              const width = widths[j].width;
+              const width = widths[0].width;
               const sidePrinted = widths[j].sidePrinted;
 
               for (let k = 0; k < sidePrinted.length; k++) {
-                  const noSides = sidePrinted[k].noSides || sidePrinted[0].noSides;
+                  const noSides =  sidePrinted[0].noSides;
 
                   const noColours = sidePrinted[k].noColours;
 
                   for (let l = 0; l < noColours.length; l++) {
-                      const noColour = noColours[l].noColour || noColours[0].noColour;
+                      const noColour =  noColours[0].noColour;
 
                       const amounts = noColours[l].amount;
 
