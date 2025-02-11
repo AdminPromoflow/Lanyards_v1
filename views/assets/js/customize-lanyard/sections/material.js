@@ -56,7 +56,6 @@ class Material {
         throw new Error("Network error.");
       })
       .then(data => {
-        alert(data);
         data = JSON.parse(data);
         customizeLanyard.setJsonLanyards(data["lanyards"]);
 
@@ -98,6 +97,7 @@ class Material {
   updatePriceMaterial() {
     // Get the JSON lanyards data from the customizeLanyard object.
     var json = customizeLanyard.getJsonLanyards();
+    console.log(json);
 
     // Get the selected material from the material object.
     var materialSelected = material.getMaterialSelected();
@@ -261,7 +261,7 @@ class Material {
       .then(data => {
         // Parse the response data as JSON
         data = JSON.parse(data);
-      //  this.setJsonMaterials(data["jsonDataByMaterial"]);
+        this.setJsonMaterials(data["jsonDataByMaterial"]);
 
         oneTwoEndsClass.setJsonLanyardType(data["allLanyardTypes"]);
         oneTwoEndsClass.selectOneTwoEnds();
