@@ -260,7 +260,7 @@ class Material {
         return($response); // Send the response with all materials
     }
 
-    private function getJsonDataByMaterial($materialSelected) {
+    private function getJsonLanyardsWithWidthClipsAndSidePrinted($materialSelected) {
         // Establish database connection
         $connection = new Database();
         $lanyards = new Lanyards($connection);
@@ -274,13 +274,54 @@ class Material {
 
         foreach ($rows as $row) {
             $materialName = $row['material'];
+            $width = $row['width'];
+            $clipName = $row['clipName'];
+            $clipPrice = $row['clipPrice'];
+            $side = $row['side'];
 
-            // Check if material already exists
+            // Find if the material already exists
             $materialIndex = array_search($materialName, array_column($data["Lanyards"], "material"));
 
             if ($materialIndex === false) {
+                // If material does not exist, create a new entry with an empty "Width" array
                 $data["Lanyards"][] = [
-                    "material" => $materialName
+                    "material" => $materialName,
+                    "Width" => []
+                ];
+                $materialIndex = count($data["Lanyards"]) - 1;
+            }
+
+            // Find if the width already exists for this material
+            $widthIndex = array_search($width, array_column($data["Lanyards"][$materialIndex]["Width"], "width"));
+
+            if ($widthIndex === false) {
+                // If width does not exist, add it with empty "Clips" and "SidePrinted" arrays
+                $data["Lanyards"][$materialIndex]["Width"][] = [
+                    "width" => $width,
+                    "Clips" => [],
+                    "SidePrinted" => []
+                ];
+                $widthIndex = count($data["Lanyards"][$materialIndex]["Width"]) - 1;
+            }
+
+            // Find if the clip already exists for this width
+            $clipIndex = array_search($clipName, array_column($data["Lanyards"][$materialIndex]["Width"][$widthIndex]["Clips"], "clipName"));
+
+            if ($clipIndex === false) {
+                // If clip does not exist, add it
+                $data["Lanyards"][$materialIndex]["Width"][$widthIndex]["Clips"][] = [
+                    "clipName" => $clipName,
+                    "clipPrice" => (float) $clipPrice
+                ];
+            }
+
+            // Find if the SidePrinted already exists for this width
+            $sideIndex = array_search($side, array_column($data["Lanyards"][$materialIndex]["Width"][$widthIndex]["SidePrinted"], "side"));
+
+            if ($sideIndex === false) {
+                // If SidePrinted does not exist, add it
+                $data["Lanyards"][$materialIndex]["Width"][$widthIndex]["SidePrinted"][] = [
+                    "side" => $side
                 ];
             }
         }
