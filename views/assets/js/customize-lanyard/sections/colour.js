@@ -47,7 +47,7 @@ class ColourClass {
     this.getPriceClipSelected(index);
 
 
-    colourSelectorClass.showColourSelector();
+  //  colourSelectorClass.showColourSelector();
 
   }
 
