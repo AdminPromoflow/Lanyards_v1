@@ -254,8 +254,6 @@ class Material {
     // Set the selected material.
     this.setMaterialSelected(materialSelected);
 
-    this.recalculateMaterialData();
-
 
     // Make an AJAX request to set the selected material.
     this.makeAjaxRequestSetMaterialSelected(url, data);
@@ -283,35 +281,21 @@ class Material {
         // Parse the response data as JSON
         data = JSON.parse(data);
         this.setJsonMaterials(data["jsonDataByMaterial"]);
-
-
         this.recalculateMaterialData();
 
         oneTwoEndsClass.setJsonLanyardType(data["allLanyardTypes"]);
-        oneTwoEndsClass.selectOneTwoEnds();
-        previewLanyardType.showSelectedPreviewtTemplate();
-
+        oneTwoEndsClass.recalculateLanyardTypeData();
 
         widthClass.setJsonWidth(data["allWidth"]);
         widthClass.recalculateWidthData();
 
-
         sidePrintedClass.setSidePrintedSelected(data["sidePrintedSelected"]);
-        sidePrintedClass.selectSidePrinted();
-
+        sidePrintedClass.recalculateSidePrintedData();
 
         clipClass.selectClip();
 
-
-        // Attachment
-
         colourClass.setColourSelected(data["noColourSelected"]);
-        colourClass.createColour();
-        colourClass.showSelectedColour();
-
-        previewColourClass.showSelectedPreviewtColour();
-        previewColourClass.showColourPreview("none");
-
+        colourClass.recalculateColourData();
   })
       .catch(error => {
         // Log any errors to the console

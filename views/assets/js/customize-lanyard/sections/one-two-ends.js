@@ -118,6 +118,11 @@ class OneTwoEnds {
     containersBoxesOneTwoEnds.innerHTML = "";
   }
 
+  recalculateLanyardTypeData(){
+    this.selectOneTwoEnds();
+    previewLanyardType.showSelectedPreviewtTemplate();
+  }
+
 }
 
 

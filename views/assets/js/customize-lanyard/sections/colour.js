@@ -207,16 +207,13 @@ updatePriceColour() {
 }
 
 
+recalculateColourData(){
+  this.createColour();
+  this.showSelectedColour();
 
-
-
-
-
-
-
-
-
-
+  previewColourClass.showSelectedPreviewtColour();
+  previewColourClass.showColourPreview("none");
+}
 }
 
 

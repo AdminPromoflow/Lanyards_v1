@@ -22,6 +22,9 @@ class SidePrinted {
       this.drawSidePrintedAvailable(sidePrintedAvailable[i], i);
     }
   }
+  recalculateSidePrintedData(){
+    this.selectSidePrinted();
+  }
 
   // Function to make the AJAX request
   makeAjaxRequestSetSidePrintedSelected(url, data) {
