@@ -107,27 +107,30 @@ class Width {
       let priceDataWidthResult = [];
       priceDataWidthResult.length = 0; // Vaciar en caso de que tenga datos previos
 
-      // 5️⃣ Filtrar los datos solo para el material seleccionado
+      // 5️⃣ Nueva variable para capturar TODOS los valores de cada iteración
+      let allPriceDataWidth = [];
+
+      // 6️⃣ Filtrar los datos solo para el material seleccionado
       var jsonMaterial = json.find(item => item.materials.material === materialSelected);
       if (!jsonMaterial) return; // Salir si no encuentra el material
 
       const widths = jsonMaterial.materials.width; // Obtener los widths disponibles
 
-      // 6️⃣ Recorrer los widths del material seleccionado
+      // 7️⃣ Recorrer los widths del material seleccionado
       for (let j = 0; j < widths.length; j++) {
           const width = widths[j].width; // Capturar cada width
 
-          // 7️⃣ Obtener el primer noSides (posición 0)
+          // 8️⃣ Obtener el primer noSides (posición 0)
           const sidePrinted = widths[j].sidePrinted;
           if (!sidePrinted || sidePrinted.length === 0) continue; // Si no hay datos, pasar al siguiente width
           const noSides = sidePrinted[0].noSides; // Solo usar la primera posición (mínima)
 
-          // 8️⃣ Obtener el primer noColours (posición 0) dentro del primer noSides
+          // 9️⃣ Obtener el primer noColours (posición 0) dentro del primer noSides
           const noColours = sidePrinted[0].noColours;
           if (!noColours || noColours.length === 0) continue; // Si no hay datos, pasar al siguiente width
           const noColour = noColours[0].noColour; // Solo usar la primera posición (mínima)
 
-          // 9️⃣ Obtener los valores de minAmount, maxAmount y price dentro del primer noColour
+          // 🔟 Obtener los valores de minAmount, maxAmount y price dentro del primer noColour
           const amounts = noColours[0].amount;
           if (!amounts || amounts.length === 0) continue; // Si no hay datos, pasar al siguiente width
 
@@ -136,7 +139,18 @@ class Width {
               const maxAmount = Number(amounts[m]['max-amount']);
               const price = Number(amounts[m].price);
 
-              //  🔟 Si amountSelected está dentro del rango minAmount - maxAmount, se guarda
+              // 1️⃣1️⃣ Guardar los valores en una nueva variable para capturar todos los datos
+              allPriceDataWidth.push({
+                  width,
+                  noSides,
+                  noColour,
+                  minAmount,
+                  amountSelected,
+                  maxAmount,
+                  price
+              });
+
+              // 1️⃣2️⃣ Aplicar la lógica para guardar solo el valor correcto si está dentro del rango
               if (amountSelected >= minAmount && amountSelected <= maxAmount) {
                   priceDataWidthResult.push({
                       width,
@@ -152,14 +166,14 @@ class Width {
           }
       }
 
-      // 1️⃣1️⃣ Mostrar los resultados en consola para verificar
-      console.table(priceDataWidthResult);
+      // 1️⃣3️⃣ Mostrar los resultados en consola para verificar
+      console.table(allPriceDataWidth); // Mostrar TODOS los valores iterados
+    //  console.table(priceDataWidthResult); // Mostrar SOLO los valores dentro del rango
 
-      // 1️⃣2️⃣ Obtener los elementos para mostrar los precios
+      // 1️⃣4️⃣ Obtener los elementos para mostrar los precios
       const priceDataWidth = document.querySelectorAll(".priceDataWidth");
 
-
-      // 1️⃣3️⃣ Actualizar la visualización de precios
+      // 1️⃣5️⃣ Actualizar la visualización de precios
       for (var i = 0; i < priceDataWidth.length; i++) {
           let totalPriceWidth = priceDataWidthResult[i].price - priceDataWidthResult[0].price;
           priceDataWidth[i].innerHTML = "£" + totalPriceWidth.toFixed(2) + " per unit";
