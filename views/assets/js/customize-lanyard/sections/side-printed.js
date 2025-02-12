@@ -183,7 +183,7 @@ class SidePrinted {
 
       // Update the price display for each element.
       for (var i = 0; i < priceDataSidePrinted.length; i++) {
-          let totalPriceSidePrinted = priceDataSidePrinted[i].price - priceDataSidePrinted[0].price;
+          let totalPriceSidePrinted = priceDataSidePrintedResult[i].price - priceDataSidePrintedResult[0].price;
           priceDataSidePrinted[i].innerHTML = "£" + totalPriceSidePrinted.toFixed(2) + " per unit.";
       }
   }
