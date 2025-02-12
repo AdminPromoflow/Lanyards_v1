@@ -36,7 +36,7 @@
 .message-preview-manual{
   position: relative;
   width: 100%;
-  background-color: gold;
+  background-color: gold!important;
 }
 .preview-artwork-boxes  {
   position: relative;
