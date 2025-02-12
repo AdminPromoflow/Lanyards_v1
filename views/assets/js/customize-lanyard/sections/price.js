@@ -32,6 +32,8 @@ class Price {
         priceClass.setAmountSelected(amountLanyardsRange.value);
         material.updatePriceMaterial();
         widthClass.updatePriceWidth();
+        colourClass.updatePriceColour();
+
       }
       else {
         amountLanyardsRange.value = 1;
@@ -41,6 +43,8 @@ class Price {
         material.updatePriceMaterial();
         widthClass.updatePriceWidth();
         sidePrintedClass.updatePriceSidePrinted();
+        colourClass.updatePriceColour();
+
 
       }
     });
