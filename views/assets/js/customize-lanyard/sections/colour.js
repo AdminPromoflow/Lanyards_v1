@@ -170,7 +170,7 @@ updatePriceColour() {
             });
         }
     }
-
+    alert('hah');
     console.table(priceDataColourResult);
 
     // Get the elements to display price data.
