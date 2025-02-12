@@ -119,7 +119,6 @@ updatePriceColour() {
     var jsonSidePrinted = jsonWidth.sidePrinted.find(item => item);
     if (!jsonSidePrinted) return; // Exit if sidePrinted is not found.
 
-    console.log(JSON.stringify(jsonSidePrinted));
 
     // Get available colours.
     const noColours = jsonSidePrinted.noColours;

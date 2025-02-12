@@ -176,7 +176,6 @@ class SidePrinted {
           }
       }
 
-      console.table(priceDataSidePrintedResult);
 
       // Get the elements to display price data.
       const priceDataSidePrinted = document.querySelectorAll(".priceDataSidePrinted");
