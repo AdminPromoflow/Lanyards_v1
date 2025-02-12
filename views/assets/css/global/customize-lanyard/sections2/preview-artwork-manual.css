@@ -63,6 +63,7 @@
 .preview-artwork-boxes-img{
   position: relative;
   width: 90%;
+  background-color: orange;
 }
 
 .artwork-manual-boxes{
