@@ -250,14 +250,12 @@ class Material {
       amountSelected: priceClass.getAmountSelected()
     };
 
+
     // Set the selected material.
     this.setMaterialSelected(materialSelected);
 
-    // Show the selected material.
-    this.showSelectedMaterial();
+    this.recalculateMaterialData();
 
-    // Show the selected preview material.
-    previewMaterial.showSelectedPreviewtMaterial(this.getMaterialSelected());
 
     // Make an AJAX request to set the selected material.
     this.makeAjaxRequestSetMaterialSelected(url, data);
@@ -316,6 +314,15 @@ class Material {
         // Log any errors to the console
         console.error("Error:", error);
       });
+  }
+
+  recalculateMaterialData(){
+
+    // Show the selected material.
+    this.showSelectedMaterial();
+
+    // Show the selected preview material.
+    previewMaterial.showSelectedPreviewtMaterial(this.getMaterialSelected());
   }
 
   // Function to display the selected material.
