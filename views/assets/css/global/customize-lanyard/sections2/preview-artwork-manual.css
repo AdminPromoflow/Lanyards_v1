@@ -65,6 +65,10 @@
   width: 90%;
   background-color: orange;
 }
+.preview-artwork-boxes-img img{
+  position: relative;
+  width: 100%;
+}
 
 .artwork-manual-boxes{
   position: relative;
