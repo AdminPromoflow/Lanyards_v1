@@ -284,13 +284,16 @@ class Material {
         data = JSON.parse(data);
         this.setJsonMaterials(data["jsonDataByMaterial"]);
 
+
+        this.recalculateMaterialData();
+
         oneTwoEndsClass.setJsonLanyardType(data["allLanyardTypes"]);
         oneTwoEndsClass.selectOneTwoEnds();
         previewLanyardType.showSelectedPreviewtTemplate();
 
 
         widthClass.setJsonWidth(data["allWidth"]);
-        widthClass.selectWidth();
+        widthClass.recalculateWidthData();
 
 
         sidePrintedClass.setSidePrintedSelected(data["sidePrintedSelected"]);

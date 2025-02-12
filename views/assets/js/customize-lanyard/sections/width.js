@@ -183,6 +183,11 @@ class Width {
       }
   }
 
+
+
+  recalculateWidthData(){
+    this.selectWidth();
+  }
   cleanWidth(){
     containersBoxesWidth.innerHTML = "";
   }
