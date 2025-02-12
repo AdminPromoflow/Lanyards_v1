@@ -63,9 +63,10 @@
   background: transparent!important;
   text-shadow: 1px 1px 2px black;
 }
-.preview-artwork-container  img{
+.preview-artwork-boxes img{
   position: relative;
   width: 90%;
+  background-color: orange;
   filter: drop-shadow(1px 1px 2px black);
 
 }
