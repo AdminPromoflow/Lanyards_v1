@@ -66,9 +66,7 @@
   background-color: orange;
 }
 .preview-artwork-boxes-img img{
-  position: absolute;
-  top: 0px;
-  left: 0px;
+  position: relative;
   width: 100%;
 }
 
