@@ -158,7 +158,6 @@ class Width {
       // 1️⃣2️⃣ Obtener los elementos para mostrar los precios
       const priceDataWidth = document.querySelectorAll(".priceDataWidth");
 
-      alert(JSON.stringify(priceDataWidthResult)); // Mostrar resultados en alert
 
       // 1️⃣3️⃣ Actualizar la visualización de precios
       for (var i = 0; i < priceDataWidth.length; i++) {
