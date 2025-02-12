@@ -93,7 +93,7 @@ class SidePrinted {
     return sidePrintedAvailable;
   }
 
-  function updatePriceSidePrinted() {
+   updatePriceSidePrinted() {
       // Get the JSON lanyards data.
       var json = customizeLanyard.getJsonLanyards();
 
