@@ -42,19 +42,11 @@
   position: relative;
   width: 100%;
 
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 .artwork-boxes h3 {
   position: relative;
   text-align: center;
-  width: 10%;
-  background-color: blue;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 100%;
   color: rgba(255, 255, 255, .7);
   font-size: 1.2em;
   font-weight: 300;
