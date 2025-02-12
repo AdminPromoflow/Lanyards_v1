@@ -9,7 +9,7 @@ class ColourClass {
   }
 
   // Getter method for the colourSelected property
-  getColourSelected() {  
+  getColourSelected() {
       return this.colourSelected;
   }
   createColour(){
@@ -85,6 +85,105 @@ class ColourClass {
       }
     }
 }
+
+
+updatePriceColour() {
+    // Get the JSON lanyards data.
+    var json = customizeLanyard.getJsonLanyards();
+
+    // Get the selected material.
+    var materialSelected = material.getMaterialSelected();
+
+    // Get the selected width.
+    var widthSelected = widthClass.getWidthSelected();
+
+    // Get the selected amount.
+    var amountSelected = priceClass.getAmountSelected();
+
+    // Get the selected colour.
+    var noColourSelected = colourClass.getColourSelected();
+
+    // Ensure the priceDataColourResult array is empty before use.
+    let priceDataColourResult = [];
+    priceDataColourResult.length = 0; // Clear if it contains previous data.
+
+    // Filter the data for the selected material.
+    var jsonMaterial = json.find(item => item.materials.material === materialSelected);
+    if (!jsonMaterial) return; // Exit if the material is not found.
+
+    // Filter the data for the selected width within the material.
+    var jsonWidth = jsonMaterial.materials.width.find(item => item.width === widthSelected);
+    if (!jsonWidth) return; // Exit if the width is not found.
+
+    // Filter the data for the selected sidePrinted within the width.
+    var jsonSidePrinted = jsonWidth.sidePrinted.find(item => item);
+    if (!jsonSidePrinted) return; // Exit if sidePrinted is not found.
+
+    console.log(JSON.stringify(jsonSidePrinted));
+
+    // Get available colours.
+    const noColours = jsonSidePrinted.noColours;
+    if (!noColours || noColours.length === 0) return; // Exit if no data is found.
+
+    // Iterate through the available colour options.
+    for (let l = 0; l < noColours.length; l++) {
+        const noColour = noColours[l].noColour; // Capture each colour.
+
+        // Get minAmount, maxAmount, and price within each colour.
+        const amounts = noColours[l].amount;
+        if (!amounts || amounts.length === 0) continue; // Skip if there is no data.
+
+        let priceCaptured = false; // Flag to avoid duplicates.
+
+        // Iterate through the available price ranges.
+        for (let m = 0; m < amounts.length; m++) {
+            const minAmount = Number(amounts[m]['min-amount']);
+            const maxAmount = Number(amounts[m]['max-amount']);
+            const price = Number(amounts[m].price);
+
+            // If amountSelected is within the minAmount - maxAmount range, store it.
+            if (amountSelected >= minAmount && amountSelected <= maxAmount) {
+                priceDataColourResult.push({
+                    noColour,
+                    minAmount,
+                    amountSelected,
+                    maxAmount,
+                    price
+                });
+                priceCaptured = true; // Indicate that the correct price has been captured.
+                break; // Stop iterating once the correct price is found.
+            }
+        }
+
+        // If amountSelected is greater than all available ranges, capture the highest interval price.
+        if (!priceCaptured) {
+            let highestIndex = amounts.length - 1; // Last index.
+            let highestMinAmount = Number(amounts[highestIndex]['min-amount']);
+            let highestMaxAmount = Number(amounts[highestIndex]['max-amount']);
+            let highestPrice = Number(amounts[highestIndex].price);
+
+            priceDataColourResult.push({
+                noColour,
+                minAmount: highestMinAmount,
+                amountSelected,
+                maxAmount: highestMaxAmount,
+                price: highestPrice
+            });
+        }
+    }
+
+    console.table(priceDataColourResult);
+
+    // Get the elements to display price data.
+    const priceDataColour = document.querySelectorAll(".priceDataColour");
+
+    // Update the price display for each element.
+    for (var i = 0; i < priceDataColour.length; i++) {
+        let totalPriceColour = priceDataColourResult[i].price - priceDataColourResult[0].price;
+        priceDataColour[i].innerHTML = "£" + Math.abs(totalPriceColour.toFixed(2)) + " per unit.";
+    }
+}
+
 
   getPriceClipSelected(index){
   const priceDataColour = document.querySelectorAll(".priceDataColour");
