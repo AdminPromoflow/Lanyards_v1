@@ -58,7 +58,7 @@ class Price {
           material.updatePriceMaterial();
           widthClass.updatePriceWidth();
           sidePrintedClass.updatePriceSidePrinted();
-
+          colourClass.updatePriceColour();
 
     });
   }
