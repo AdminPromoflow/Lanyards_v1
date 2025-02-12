@@ -33,6 +33,11 @@
   align-items: center;
   flex-direction: row;
 }
+.message-preview-manual{
+  position: relative;
+  width: 100%;
+  background-color: gold;
+}
 .preview-artwork-boxes  {
   position: relative;
   width: 100%;
