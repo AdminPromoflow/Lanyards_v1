@@ -40,6 +40,8 @@ class Price {
         priceClass.setAmountSelected(amountLanyardsRange.value);
         material.updatePriceMaterial();
         widthClass.updatePriceWidth();
+        sidePrintedClass.updatePriceSidePrinted();
+
       }
     });
 
@@ -51,6 +53,8 @@ class Price {
           priceClass.setAmountSelected(amountLanyards.value);
           material.updatePriceMaterial();
           widthClass.updatePriceWidth();
+          sidePrintedClass.updatePriceSidePrinted();
+
 
     });
   }
