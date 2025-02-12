@@ -29,7 +29,9 @@ foreach ($imgFiles_previewArtworkManual as $key => $path) {
       <h2>Manual</h2>
 
       <div id="open-background-colour" class="preview-artwork-manual-boxes">
-        <div class="artwork-manual-boxes"></div>
+        <div class="artwork-manual-boxes">
+          <h3>If you want to choose the background color, add text, and upload the logo image, select this option.</h3>
+        </div>
         <div class="artwork-manual-boxes">
           <h3>Choose the lanyard background color</h3>
         </div>
@@ -64,7 +66,7 @@ foreach ($imgFiles_previewArtworkManual as $key => $path) {
     <div class="preview-artwork-boxes">
       <h2>Artwork</h2>
       <div class="artwork-boxes">
-        <h3>If you already have a design for your lanyard, choose the artwork.</h3>
+        <h3>If you already have a design for your lanyard, select the artwork option</h3>
       </div>
       <img src="<?= $imgFiles_previewArtworkManual['artwork'] ?>" alt="Artwork">
     </div>
