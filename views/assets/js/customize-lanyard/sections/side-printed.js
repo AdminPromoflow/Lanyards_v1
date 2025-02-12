@@ -118,6 +118,8 @@ class SidePrinted {
       var jsonWidth = jsonMaterial.materials.width.find(item => item.width === widthSelected);
       if (!jsonWidth) return; // Exit if the width is not found.
 
+      console.log(JSON.stringify(jsonWidth));
+
       // Get available sidePrinted options.
       const sidePrinted = jsonWidth.sidePrinted;
       if (!sidePrinted || sidePrinted.length === 0) return; // Exit if no data is found.
