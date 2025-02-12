@@ -47,7 +47,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 9px;
+  padding: 9px 0;
 }
 .artwork-boxes h3 {
   position: relative;
@@ -64,7 +64,10 @@
   text-shadow: 1px 1px 2px black;
 }
 .artwork-boxes  img{
+  position: relative;
+  width: 90%;
   filter: drop-shadow(1px 1px 2px black);
+
 }
 .artwork-manual-boxes{
   position: relative;
