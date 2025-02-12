@@ -29,7 +29,6 @@ foreach ($imgFiles_previewArtworkManual as $key => $path) {
       <h2>Manual</h2>
 
       <div id="open-background-colour" class="preview-artwork-manual-boxes">
-          <h3 class="message-preview-manual">If you want to choose the background color, add text, and upload the logo image, select this option.</h3>
         <div class="artwork-manual-boxes">
           <h3>Choose the lanyard background color</h3>
         </div>
