@@ -161,7 +161,7 @@ class Width {
 
       // 1️⃣3️⃣ Actualizar la visualización de precios
       for (var i = 0; i < priceDataWidth.length; i++) {
-          let totalPriceWidth = priceDataWidthResult[i].price;
+          let totalPriceWidth = priceDataWidthResult[i].price - priceDataWidthResult[0].price;
           priceDataWidth[i].innerHTML = "£" + totalPriceWidth.toFixed(2) + " per unit";
       }
   }
