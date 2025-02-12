@@ -101,7 +101,7 @@ updatePriceColour() {
     var amountSelected = priceClass.getAmountSelected();
 
     // Get the selected colour.
-    var noColourSelected = colourClass.getColourSelected();
+    var sidePrintedSelected = sidePrintedClass.getSidePrintedSelected();
 
     // Ensure the priceDataColourResult array is empty before use.
     let priceDataColourResult = [];
@@ -116,7 +116,7 @@ updatePriceColour() {
     if (!jsonWidth) return; // Exit if the width is not found.
 
     // Filter the data for the selected sidePrinted within the width.
-    var jsonSidePrinted = jsonWidth.sidePrinted.find(item => item);
+    var jsonSidePrinted = jsonWidth.sidePrinted.find(item => item.noSides === sidePrintedSelected);
     if (!jsonSidePrinted) return; // Exit if sidePrinted is not found.
 
 
