@@ -20,6 +20,8 @@
 }
 
 .preview-artwork-container{
+  position: relative;
+  width: 100%;
   display: none;
 }
 
