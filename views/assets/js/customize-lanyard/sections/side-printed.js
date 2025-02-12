@@ -96,64 +96,44 @@ class SidePrinted {
    updatePriceSidePrinted() {
       // Get the JSON lanyards data.
       var json = customizeLanyard.getJsonLanyards();
-      alert("Fetching JSON data: " + JSON.stringify(json));
 
       // Get the selected material.
       var materialSelected = material.getMaterialSelected();
-      alert("Selected material: " + materialSelected);
 
       // Get the selected width.
       var widthSelected = widthClass.getWidthSelected();
-      alert("Selected width: " + widthSelected);
 
       // Get the selected amount.
       var amountSelected = priceClass.getAmountSelected();
-      alert("Selected amount: " + amountSelected);
 
       // Ensure the priceDataSidePrintedResult array is empty before use.
       let priceDataSidePrintedResult = [];
       priceDataSidePrintedResult.length = 0; // Clear if it contains previous data.
-      alert("Initialized priceDataSidePrintedResult array.");
 
       // Filter the data for the selected material.
       var jsonMaterial = json.find(item => item.materials.material === materialSelected);
-      if (!jsonMaterial) {
-          alert("Material not found, exiting function.");
-          return;
-      }
-      alert("Filtered JSON Material: " + JSON.stringify(jsonMaterial));
+      if (!jsonMaterial) return; // Exit if the material is not found.
 
       // Filter the data for the selected width within the material.
       var jsonWidth = jsonMaterial.materials.width.find(item => item.width === widthSelected);
-      if (!jsonWidth) {
-          alert("Width not found for selected material, exiting function.");
-          return;
-      }
-      alert("Filtered JSON Width: " + JSON.stringify(jsonWidth));
+      if (!jsonWidth) return; // Exit if the width is not found.
 
       // Get available sidePrinted options.
       const sidePrinted = jsonWidth.sidePrinted;
-      if (!sidePrinted || sidePrinted.length === 0) {
-          alert("No sidePrinted options found, exiting function.");
-          return;
-      }
-      alert("Available sidePrinted options: " + JSON.stringify(sidePrinted));
+      if (!sidePrinted || sidePrinted.length === 0) return; // Exit if no data is found.
 
       // Iterate through the available sidePrinted options.
       for (let j = 0; j < sidePrinted.length; j++) {
           const noSides = sidePrinted[j].noSides; // Capture each noSides.
-          alert("Processing noSides: " + noSides);
 
           // Get the first noColours (position 0) within each noSides.
           const noColours = sidePrinted[j].noColours;
           if (!noColours || noColours.length === 0) continue; // Skip if there is no data.
           const noColour = noColours[0].noColour; // Use only the first position (minimum).
-          alert("Selected noColour: " + noColour);
 
           // Get minAmount, maxAmount, and price within the first noColour.
           const amounts = noColours[0].amount;
           if (!amounts || amounts.length === 0) continue; // Skip if there is no data.
-          alert("Available price ranges: " + JSON.stringify(amounts));
 
           let priceCaptured = false; // Flag to avoid duplicates.
 
@@ -162,8 +142,6 @@ class SidePrinted {
               const minAmount = Number(amounts[m]['min-amount']);
               const maxAmount = Number(amounts[m]['max-amount']);
               const price = Number(amounts[m].price);
-
-              alert(`Checking price range: ${minAmount} - ${maxAmount}, Price: £${price}`);
 
               // If amountSelected is within the minAmount - maxAmount range, store it.
               if (amountSelected >= minAmount && amountSelected <= maxAmount) {
@@ -175,7 +153,6 @@ class SidePrinted {
                       maxAmount,
                       price
                   });
-                  alert("Captured price within range: " + JSON.stringify(priceDataSidePrintedResult));
                   priceCaptured = true; // Indicate that the correct price has been captured.
                   break; // Stop iterating once the correct price is found.
               }
@@ -196,23 +173,17 @@ class SidePrinted {
                   maxAmount: highestMaxAmount,
                   price: highestPrice
               });
-
-              alert("Captured highest interval price: " + JSON.stringify(priceDataSidePrintedResult));
           }
       }
 
       // Get the elements to display price data.
       const priceDataSidePrinted = document.querySelectorAll(".priceDataSidePrinted");
 
-      alert("Updating price display with the following data: " + JSON.stringify(priceDataSidePrintedResult));
-
       // Update the price display for each element.
       for (var i = 0; i < priceDataSidePrinted.length; i++) {
-          let totalPriceSidePrinted = priceDataSidePrintedResult[i].price - priceDataSidePrintedResult[0].price;
+          let totalPriceSidePrinted = priceDataSidePrinted[i].price - priceDataSidePrinted[0].price;
           priceDataSidePrinted[i].innerHTML = "£" + totalPriceSidePrinted.toFixed(2) + " per unit.";
       }
-
-      alert("Price update completed.");
   }
 
 
