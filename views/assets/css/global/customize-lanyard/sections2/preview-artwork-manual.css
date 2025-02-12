@@ -47,7 +47,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 9px 0;
 }
 .artwork-boxes h3 {
   position: relative;
@@ -66,7 +65,8 @@
 .preview-artwork-boxes img{
   position: relative;
   width: 90%;
-  background-color: orange;
+  left: 50%;
+  transform: translateX(-50%);
   filter: drop-shadow(1px 1px 2px black);
 
 }
