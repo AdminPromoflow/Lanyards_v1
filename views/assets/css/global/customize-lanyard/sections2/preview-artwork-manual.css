@@ -60,14 +60,11 @@
   background: transparent!important;
   text-shadow: 1px 1px 2px black;
 }
-.preview-artwork-boxes img{
+.preview-artwork-boxes-img{
   position: relative;
   width: 90%;
-  display: block;
-  left: 50%;
-  transform: translateX(-50%);
-  filter: drop-shadow(1px 1px 2px black);
 }
+
 .artwork-manual-boxes{
   position: relative;
   margin: 8px ;
