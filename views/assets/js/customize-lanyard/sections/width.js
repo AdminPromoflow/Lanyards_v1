@@ -94,49 +94,51 @@ class Width {
 
 
   updatePriceWidth() {
-      // 1️⃣ Obtener los datos JSON de los lanyards
+      // Get the JSON lanyards data.
       var json = customizeLanyard.getJsonLanyards();
 
-      // 2️⃣ Obtener el material seleccionado
+      // Get the selected material.
       var materialSelected = material.getMaterialSelected();
 
-      // 3️⃣ Obtener la cantidad seleccionada
+      // Get the selected amount.
       var amountSelected = priceClass.getAmountSelected();
 
-      // 4️⃣ Asegurar que priceDataWidthResult esté vacío antes de usarlo
+      // Ensure the priceDataWidthResult array is empty before use.
       let priceDataWidthResult = [];
-      priceDataWidthResult.length = 0; // Vaciar en caso de que tenga datos previos
+      priceDataWidthResult.length = 0; // Clear if it contains previous data.
 
-      // 5️⃣ Filtrar los datos solo para el material seleccionado
+      // Filter the data for the selected material.
       var jsonMaterial = json.find(item => item.materials.material === materialSelected);
-      if (!jsonMaterial) return; // Salir si no encuentra el material
+      if (!jsonMaterial) return; // Exit if the material is not found.
 
-      const widths = jsonMaterial.materials.width; // Obtener los widths disponibles
+      const widths = jsonMaterial.materials.width; // Get available widths.
 
-      // 6️⃣ Recorrer los widths del material seleccionado
+      // Iterate through the widths of the selected material.
       for (let j = 0; j < widths.length; j++) {
-          const width = widths[j].width; // Capturar cada width
+          const width = widths[j].width; // Store each width.
 
-          // 7️⃣ Obtener el primer noSides (posición 0)
+          // Get the first noSides (position 0).
           const sidePrinted = widths[j].sidePrinted;
-          if (!sidePrinted || sidePrinted.length === 0) continue; // Si no hay datos, pasar al siguiente width
-          const noSides = sidePrinted[0].noSides; // Solo usar la primera posición (mínima)
+          if (!sidePrinted || sidePrinted.length === 0) continue; // Skip if there is no data.
+          const noSides = sidePrinted[0].noSides; // Use only the first position (minimum).
 
-          // 8️⃣ Obtener el primer noColours (posición 0) dentro del primer noSides
+          // Get the first noColours (position 0) within the first noSides.
           const noColours = sidePrinted[0].noColours;
-          if (!noColours || noColours.length === 0) continue; // Si no hay datos, pasar al siguiente width
-          const noColour = noColours[0].noColour; // Solo usar la primera posición (mínima)
+          if (!noColours || noColours.length === 0) continue; // Skip if there is no data.
+          const noColour = noColours[0].noColour; // Use only the first position (minimum).
 
-          // 9️⃣ Obtener los valores de minAmount, maxAmount y price dentro del primer noColour
+          // Get the values of minAmount, maxAmount, and price within the first noColour.
           const amounts = noColours[0].amount;
-          if (!amounts || amounts.length === 0) continue; // Si no hay datos, pasar al siguiente width
+          if (!amounts || amounts.length === 0) continue; // Skip if there is no data.
+
+          let priceCaptured = false; // Flag to avoid duplicates.
 
           for (let m = 0; m < amounts.length; m++) {
               const minAmount = Number(amounts[m]['min-amount']);
               const maxAmount = Number(amounts[m]['max-amount']);
               const price = Number(amounts[m].price);
 
-              //  🔟 Si amountSelected está dentro del rango minAmount - maxAmount, se guarda
+              // If amountSelected is within the minAmount - maxAmount range, store it.
               if (amountSelected >= minAmount && amountSelected <= maxAmount) {
                   priceDataWidthResult.push({
                       width,
@@ -147,22 +149,37 @@ class Width {
                       maxAmount,
                       price
                   });
-                  break; // No seguir iterando, ya se encontró el precio correcto
+                  priceCaptured = true; // Mark that the correct price has been captured.
+                  break; // Stop iterating once the correct price is found.
               }
+          }
+
+          // If amountSelected is greater than all available ranges, capture the highest interval price.
+          if (!priceCaptured) {
+              let highestIndex = amounts.length - 1; // Last index.
+              let highestMinAmount = Number(amounts[highestIndex]['min-amount']);
+              let highestMaxAmount = Number(amounts[highestIndex]['max-amount']);
+              let highestPrice = Number(amounts[highestIndex].price);
+
+              priceDataWidthResult.push({
+                  width,
+                  noSides,
+                  noColour,
+                  minAmount: highestMinAmount,
+                  amountSelected,
+                  maxAmount: highestMaxAmount,
+                  price: highestPrice
+              });
           }
       }
 
-      // 1️⃣1️⃣ Mostrar los resultados en consola para verificar
-      console.table(priceDataWidthResult);
-
-      // 1️⃣2️⃣ Obtener los elementos para mostrar los precios
+      // Get the elements to display price data.
       const priceDataWidth = document.querySelectorAll(".priceDataWidth");
 
-
-      // 1️⃣3️⃣ Actualizar la visualización de precios
+      // Update the price display for each element.
       for (var i = 0; i < priceDataWidth.length; i++) {
           let totalPriceWidth = priceDataWidthResult[i].price - priceDataWidthResult[0].price;
-          priceDataWidth[i].innerHTML = "£" + totalPriceWidth.toFixed(2) + " per unit";
+          priceDataWidth[i].innerHTML = "£" + totalPriceWidth.toFixed(2) + " per unit.";
       }
   }
 
