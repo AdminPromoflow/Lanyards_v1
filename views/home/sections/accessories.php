@@ -11,46 +11,229 @@ $accessories_home_js = "../../views/assets/js/home/sections/accessories.js";
 <section id="accessories_home" class="accessories_home">
   <h1>Accessories</h1>
   <div class="container_accessories_home">
+    <!-- Container for the accessories home box -->
     <div class="box_accessories_home">
+
+      <!-- Title of the accessory -->
       <h2>Rigid Card Holder</h2>
-      <img src="../../views/assets/img/home/accessories/1.png" alt="">
+
+      <!-- Image of the accessory -->
+      <img src="../../views/assets/img/home/accessories/1.png" alt="Rigid Card Holder">
+
+      <!-- Container for selecting the quantity -->
       <div class="subcontainer_accessories_home_quantity">
+        <!-- Dropdown section to label quantity selection -->
         <div class="dropbox_accessories_home">
           <h3>Quantity</h3>
         </div>
+        <!-- Input field for entering the quantity -->
         <input type="text" name="" value="">
       </div>
+
+      <!-- Container for the product description -->
       <div class="subcontainer_accessories_home_description">
+        <!-- Each description box contains details about the product and price -->
         <div class="box_accessories_home_description">
-`         <h3>Description</h3>
+          <h3>Description</h3>
           <h3>£3 per unit</h3>
         </div>
         <div class="box_accessories_home_description">
-`         <h3>Description</h3>
+          <h3>Description</h3>
           <h3>£3 per unit</h3>
         </div>
         <div class="box_accessories_home_description">
-`         <h3>Description</h3>
+          <h3>Description</h3>
           <h3>£3 per unit</h3>
         </div>
       </div>
+
+      <!-- Container for the buying options -->
       <div class="subcontainer_accessories_home_buy_section">
+        <!-- Button to directly buy the item -->
         <button type="button" name="button">Buy</button>
+        <!-- Button to add the item to the shopping cart -->
         <button type="button" name="button">Add to cart</button>
       </div>
+
     </div>
+
     <div class="box_accessories_home">
+
+      <!-- Title of the accessory -->
+      <h2>Rigid Card Holder</h2>
+
+      <!-- Image of the accessory -->
+      <img src="../../views/assets/img/home/accessories/1.png" alt="Rigid Card Holder">
+
+      <!-- Container for selecting the quantity -->
+      <div class="subcontainer_accessories_home_quantity">
+        <!-- Dropdown section to label quantity selection -->
+        <div class="dropbox_accessories_home">
+          <h3>Quantity</h3>
+        </div>
+        <!-- Input field for entering the quantity -->
+        <input type="text" name="" value="">
+      </div>
+
+      <!-- Container for the product description -->
+      <div class="subcontainer_accessories_home_description">
+        <!-- Each description box contains details about the product and price -->
+        <div class="box_accessories_home_description">
+          <h3>Description</h3>
+          <h3>£3 per unit</h3>
+        </div>
+        <div class="box_accessories_home_description">
+          <h3>Description</h3>
+          <h3>£3 per unit</h3>
+        </div>
+        <div class="box_accessories_home_description">
+          <h3>Description</h3>
+          <h3>£3 per unit</h3>
+        </div>
+      </div>
+
+      <!-- Container for the buying options -->
+      <div class="subcontainer_accessories_home_buy_section">
+        <!-- Button to directly buy the item -->
+        <button type="button" name="button">Buy</button>
+        <!-- Button to add the item to the shopping cart -->
+        <button type="button" name="button">Add to cart</button>
+      </div>
 
     </div>
     <div class="box_accessories_home">
 
-    </div>
-    <div class="box_accessories_home">
+      <!-- Title of the accessory -->
+      <h2>Rigid Card Holder</h2>
+
+      <!-- Image of the accessory -->
+      <img src="../../views/assets/img/home/accessories/1.png" alt="Rigid Card Holder">
+
+      <!-- Container for selecting the quantity -->
+      <div class="subcontainer_accessories_home_quantity">
+        <!-- Dropdown section to label quantity selection -->
+        <div class="dropbox_accessories_home">
+          <h3>Quantity</h3>
+        </div>
+        <!-- Input field for entering the quantity -->
+        <input type="text" name="" value="">
+      </div>
+
+      <!-- Container for the product description -->
+      <div class="subcontainer_accessories_home_description">
+        <!-- Each description box contains details about the product and price -->
+        <div class="box_accessories_home_description">
+          <h3>Description</h3>
+          <h3>£3 per unit</h3>
+        </div>
+        <div class="box_accessories_home_description">
+          <h3>Description</h3>
+          <h3>£3 per unit</h3>
+        </div>
+        <div class="box_accessories_home_description">
+          <h3>Description</h3>
+          <h3>£3 per unit</h3>
+        </div>
+      </div>
+
+      <!-- Container for the buying options -->
+      <div class="subcontainer_accessories_home_buy_section">
+        <!-- Button to directly buy the item -->
+        <button type="button" name="button">Buy</button>
+        <!-- Button to add the item to the shopping cart -->
+        <button type="button" name="button">Add to cart</button>
+      </div>
 
     </div>
     <div class="box_accessories_home">
 
+      <!-- Title of the accessory -->
+      <h2>Rigid Card Holder</h2>
+
+      <!-- Image of the accessory -->
+      <img src="../../views/assets/img/home/accessories/1.png" alt="Rigid Card Holder">
+
+      <!-- Container for selecting the quantity -->
+      <div class="subcontainer_accessories_home_quantity">
+        <!-- Dropdown section to label quantity selection -->
+        <div class="dropbox_accessories_home">
+          <h3>Quantity</h3>
+        </div>
+        <!-- Input field for entering the quantity -->
+        <input type="text" name="" value="">
+      </div>
+
+      <!-- Container for the product description -->
+      <div class="subcontainer_accessories_home_description">
+        <!-- Each description box contains details about the product and price -->
+        <div class="box_accessories_home_description">
+          <h3>Description</h3>
+          <h3>£3 per unit</h3>
+        </div>
+        <div class="box_accessories_home_description">
+          <h3>Description</h3>
+          <h3>£3 per unit</h3>
+        </div>
+        <div class="box_accessories_home_description">
+          <h3>Description</h3>
+          <h3>£3 per unit</h3>
+        </div>
+      </div>
+
+      <!-- Container for the buying options -->
+      <div class="subcontainer_accessories_home_buy_section">
+        <!-- Button to directly buy the item -->
+        <button type="button" name="button">Buy</button>
+        <!-- Button to add the item to the shopping cart -->
+        <button type="button" name="button">Add to cart</button>
+      </div>
+
     </div>
+    <div class="box_accessories_home">
+
+      <!-- Title of the accessory -->
+      <h2>Rigid Card Holder</h2>
+
+      <!-- Image of the accessory -->
+      <img src="../../views/assets/img/home/accessories/1.png" alt="Rigid Card Holder">
+
+      <!-- Container for selecting the quantity -->
+      <div class="subcontainer_accessories_home_quantity">
+        <!-- Dropdown section to label quantity selection -->
+        <div class="dropbox_accessories_home">
+          <h3>Quantity</h3>
+        </div>
+        <!-- Input field for entering the quantity -->
+        <input type="text" name="" value="">
+      </div>
+
+      <!-- Container for the product description -->
+      <div class="subcontainer_accessories_home_description">
+        <!-- Each description box contains details about the product and price -->
+        <div class="box_accessories_home_description">
+          <h3>Description</h3>
+          <h3>£3 per unit</h3>
+        </div>
+        <div class="box_accessories_home_description">
+          <h3>Description</h3>
+          <h3>£3 per unit</h3>
+        </div>
+        <div class="box_accessories_home_description">
+          <h3>Description</h3>
+          <h3>£3 per unit</h3>
+        </div>
+      </div>
+
+      <!-- Container for the buying options -->
+      <div class="subcontainer_accessories_home_buy_section">
+        <!-- Button to directly buy the item -->
+        <button type="button" name="button">Buy</button>
+        <!-- Button to add the item to the shopping cart -->
+        <button type="button" name="button">Add to cart</button>
+      </div>
+
+    </div>
+
   </div>
 </section>
 <script src="<?php echo $accessories_home_js . '?v=' . accessories_home_file_version($accessories_home_js); ?>" type="text/javascript"></script>
