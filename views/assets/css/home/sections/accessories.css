@@ -66,7 +66,7 @@
 .dropbox_accessories_home{
   position: relative;
   width: calc(100% - 65px);
-  padding: 5px;
+  padding: 0 5px;
   background-color: orange;
 }
 .dropbox_accessories_home h3{
@@ -78,6 +78,7 @@
   position: relative;
   display: flex;
   width: 90%;
+  min-width: 210px;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
@@ -88,4 +89,5 @@
   position: relative;
   margin: 0;
   padding: 0;
+  font-weight: 300;
 }
