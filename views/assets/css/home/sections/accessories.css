@@ -121,7 +121,6 @@
   width: 40%;
   color: white;
   font-size: 1em;
-  margin: 0 7px 7px 0;
   font-weight: 300;
   padding: 7px 10px;
   cursor: pointer;
@@ -129,6 +128,6 @@
 .subcontainer_accessories_home_buy_section button:nth-child(1){
   background: darkgreen;
 }
-.subcontainer_accessories_home_buy_section button:nth-child(1){
+.subcontainer_accessories_home_buy_section button:nth-child(2){
   background: rgba(141, 67, 68, .9);
 }
