@@ -16,6 +16,9 @@ $accessories_home_js = "../../views/assets/js/home/sections/accessories.js";
     <div class="box_accessories_home">
 
     </div>
+    <div class="box_accessories_home">
+
+    </div>
   </div>
 </section>
 <script src="<?php echo $accessories_home_js . '?v=' . accessories_home_file_version($accessories_home_js); ?>" type="text/javascript"></script>
