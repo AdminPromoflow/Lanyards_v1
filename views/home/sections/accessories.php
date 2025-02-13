@@ -24,6 +24,14 @@ $accessories_home_js = "../../views/assets/js/home/sections/accessories.js";
 `         <h3>Description</h3>`
           <h3>£3 per unit</h3>
         </div>
+        <div class="box_accessories_home_quantity">
+`         <h3>Description</h3>`
+          <h3>£3 per unit</h3>
+        </div>
+        <div class="box_accessories_home_quantity">
+`         <h3>Description</h3>`
+          <h3>£3 per unit</h3>
+        </div>
       </div>
     </div>
     <div class="box_accessories_home">
