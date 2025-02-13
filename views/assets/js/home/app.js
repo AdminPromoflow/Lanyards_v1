@@ -129,6 +129,16 @@ class Home {
     customizeLanyard.setStateVisibilityPanelCustomeLanyard (true);
 
 
+    alert(
+       "We have set up the most popular lanyard options:\n\n" +
+       "-----------------------------------\n" +
+       "Material: Dye-sublimation\n" +
+       "Type of lanyard: Single ended\n" +
+       "Width: 20mm\n" +
+       "Colour: Full\n" +
+       "-----------------------------------\n\n" +
+       "Remember, you can always change these options by clicking on Preview."
+     );
 
     customizeLanyard.currentSectionOpen = 8;
     previewMaterial.showMaterialPreview("none");
