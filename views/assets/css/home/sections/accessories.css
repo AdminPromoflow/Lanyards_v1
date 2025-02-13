@@ -88,7 +88,8 @@
   width: 90%;
   margin: 7px 0;
   max-width: 225px;
-  max-height: 140px;
+  height: 140px;
+
   overflow-y: scroll;
 
 
