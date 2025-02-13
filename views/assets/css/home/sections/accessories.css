@@ -96,7 +96,7 @@
   flex-direction: row;
   flex-wrap: nowrap;
   cursor: pointer;
-  margin: 5px 0;
+  margin: 3px 0;
   background-color: blue;
 }
 .box_accessories_home_description h3{
@@ -105,4 +105,14 @@
   padding: 0;
   font-weight: 400;
   text-align: left;
+}
+.subcontainer_accessories_home_buy_section{
+  position: relative;
+  width: 90%;
+  margin: 7px 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
 }

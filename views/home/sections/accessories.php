@@ -33,6 +33,10 @@ $accessories_home_js = "../../views/assets/js/home/sections/accessories.js";
           <h3>£3 per unit</h3>
         </div>
       </div>
+      <div class="subcontainer_accessories_home_buy_section">
+        <button type="button" name="button">Buy</button>
+        <button type="button" name="button">Add to cart</button>
+      </div>
     </div>
     <div class="box_accessories_home">
 
