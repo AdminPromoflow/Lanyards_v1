@@ -96,6 +96,7 @@
   flex-direction: row;
   flex-wrap: nowrap;
   cursor: pointer;
+  margin: 5px 0;
   background-color: blue;
 }
 .box_accessories_home_description h3{
