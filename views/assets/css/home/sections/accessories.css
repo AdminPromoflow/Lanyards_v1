@@ -1,6 +1,6 @@
 .accessories_home{
   position: relative;
-
+  margin-top: 3vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,10 +10,8 @@
 .container_accessories_home{
   position: relative;
 
-  padding: 5vw;
   width: 80%;
   min-width: 280px;
-  background: blue;
 
 
   display: flex;
