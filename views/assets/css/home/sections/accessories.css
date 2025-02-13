@@ -12,6 +12,7 @@
   padding: 5vw;
   width: 80%;
   min-width: 280px;
+  background: blue;
   display: flex;
   justify-content: center;
   align-items: center;
