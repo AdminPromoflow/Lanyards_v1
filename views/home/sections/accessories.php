@@ -12,6 +12,7 @@ $accessories_home_js = "../../views/assets/js/home/sections/accessories.js";
   <h1>Accessories</h1>
   <div class="container_accessories_home">
     <div class="box_accessories_home">
+      <h2>Rigid Card Holder</h2>
       <img src="../../views/assets/img/home/accessories/1.png" alt="">
       <div class="subcontainer_accessories_home_quantity">
         <div class="dropbox_accessories_home">

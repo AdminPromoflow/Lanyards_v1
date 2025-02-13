@@ -40,6 +40,15 @@
   align-items: center;
   flex-direction: column;
 }
+.box_accessories_home h2{
+  position: relative;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.9em;
+  color: white;
+  padding-left: 10px;
+  margin: 0px 0 5px 0;
+}
 .box_accessories_home img {
   position: relative;
   height: 100px;
