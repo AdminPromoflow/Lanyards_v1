@@ -1,9 +1,17 @@
+.accesories_home{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .container_accessories_home{
   position: relative;
 
   padding: 5vw;
-  background: orange;
-
+  width: 80%;
+  min-width: 280px;
   display: flex;
   justify-content: center;
   align-items: center;
