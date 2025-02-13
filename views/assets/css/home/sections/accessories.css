@@ -77,9 +77,15 @@
 .box_accessories_home_quantity{
   position: relative;
   display: flex;
+  width: 90%;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
   flex-wrap: nowrap;
   background-color: green;
+}
+.box_accessories_home_quantity h3{
+  position: relative;
+  margin: 0;
+  padding: 0;
 }
