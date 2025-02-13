@@ -77,7 +77,7 @@ class Home {
     customizeLanyard.setStateVisibilityPanelCustomeLanyard (true);
   }
 }
-const open_from_scratch = document.querySelectorAll("open_from_scratch");
+const open_from_scratch = document.querySelectorAll(".open_from_scratch");
 const openCustomizeLanyardFromMaterials = document.querySelectorAll(".openCustomizeLanyardFromMaterials");
 
 const homeClass = new Home();
