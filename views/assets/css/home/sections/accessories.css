@@ -1,7 +1,7 @@
-.accesories_home{
+.accessories_home{
   position: relative;
 
-  display: flex!important;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
