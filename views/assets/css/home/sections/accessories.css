@@ -32,14 +32,14 @@
   perspective-origin: relative;
   min-width: 250px;
   padding: 15px 0;
-  background-color: rgba(0, 0, 0, .6);
+  background-color: rgba(25, 61, 116, 0.7);
   margin: 15px;
 
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-} 
+}
 .box_accessories_home h2{
   position: relative;
   text-align: center;
@@ -108,7 +108,7 @@
   flex-wrap: nowrap;
   cursor: pointer;
   margin: 3px 0;
-  background-color: rgba(0, 240, 0, .6);
+  background-color: rgba(0, 0, 0, .5);
 }
 .box_accessories_home_description h3{
   position: relative;
