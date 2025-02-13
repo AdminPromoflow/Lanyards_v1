@@ -30,7 +30,7 @@
 }
 .box_accessories_home{
   perspective-origin: relative;
-  min-width: 200px;
+  width: 200px;
   padding: 5vw;
   background-color: gold;
   margin: 15px;
