@@ -51,9 +51,9 @@ $accessories_home_js = "../../views/assets/js/home/sections/accessories.js";
       <!-- Container for the buying options -->
       <div class="subcontainer_accessories_home_buy_section">
         <!-- Button to directly buy the item -->
-        <button type="button" name="button">Buy</button>
+        <button class="buy_accessory" type="button" name="button">Buy</button>
         <!-- Button to add the item to the shopping cart -->
-        <button type="button" name="button">Add to cart</button>
+        <button class="add_to_cart_accessory" type="button" name="button">Add to cart</button>
       </div>
 
     </div>
@@ -95,9 +95,9 @@ $accessories_home_js = "../../views/assets/js/home/sections/accessories.js";
       <!-- Container for the buying options -->
       <div class="subcontainer_accessories_home_buy_section">
         <!-- Button to directly buy the item -->
-        <button type="button" name="button">Buy</button>
+        <button class="buy_accessory" type="button" name="button">Buy</button>
         <!-- Button to add the item to the shopping cart -->
-        <button type="button" name="button">Add to cart</button>
+        <button class="add_to_cart_accessory" type="button" name="button">Add to cart</button>
       </div>
 
     </div>
@@ -147,9 +147,9 @@ $accessories_home_js = "../../views/assets/js/home/sections/accessories.js";
       <!-- Container for the buying options -->
       <div class="subcontainer_accessories_home_buy_section">
         <!-- Button to directly buy the item -->
-        <button type="button" name="button">Buy</button>
+        <button class="buy_accessory" type="button" name="button">Buy</button>
         <!-- Button to add the item to the shopping cart -->
-        <button type="button" name="button">Add to cart</button>
+        <button class="add_to_cart_accessory" type="button" name="button">Add to cart</button>
       </div>
 
     </div>
@@ -185,9 +185,9 @@ $accessories_home_js = "../../views/assets/js/home/sections/accessories.js";
       <!-- Container for the buying options -->
       <div class="subcontainer_accessories_home_buy_section">
         <!-- Button to directly buy the item -->
-        <button type="button" name="button">Buy</button>
+        <button class="buy_accessory" type="button" name="button">Buy</button>
         <!-- Button to add the item to the shopping cart -->
-        <button type="button" name="button">Add to cart</button>
+        <button class="add_to_cart_accessory" type="button" name="button">Add to cart</button>
       </div>
 
     </div>
@@ -222,9 +222,9 @@ $accessories_home_js = "../../views/assets/js/home/sections/accessories.js";
       <!-- Container for the buying options -->
       <div class="subcontainer_accessories_home_buy_section">
         <!-- Button to directly buy the item -->
-        <button type="button" name="button">Buy</button>
+        <button class="buy_accessory" type="button" name="button">Buy</button>
         <!-- Button to add the item to the shopping cart -->
-        <button type="button" name="button">Add to cart</button>
+        <button class="add_to_cart_accessory" type="button" name="button">Add to cart</button>
       </div>
 
     </div>
