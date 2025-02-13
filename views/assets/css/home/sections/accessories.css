@@ -85,6 +85,7 @@
   align-items: center;
   flex-direction: row;
   flex-wrap: nowrap;
+  cursor: pointer;
   background-color: green;
 }
 .box_accessories_home_quantity h3{
