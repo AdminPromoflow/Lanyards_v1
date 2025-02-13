@@ -79,16 +79,16 @@ $accessories_home_js = "../../views/assets/js/home/sections/accessories.js";
       <div class="subcontainer_accessories_home_description">
         <!-- Each description box contains details about the product and price -->
         <div class="box_accessories_home_description">
-          <h3>Description</h3>
-          <h3>£3 per unit</h3>
+          <h3>Clear Plastic (closed face)</h3>
+          <h3>+£0.3 per unit</h3>
         </div>
         <div class="box_accessories_home_description">
-          <h3>Description</h3>
-          <h3>£3 per unit</h3>
+          <h3>Coloured Plastic (closed face)</h3>
+          <h3>+£0.3 per unit</h3>
         </div>
         <div class="box_accessories_home_description">
-          <h3>Description</h3>
-          <h3>£3 per unit</h3>
+          <h3>Coloured Plastic (open face)</h3>
+          <h3>+£0.25 per unit</h3>
         </div>
       </div>
 
@@ -104,10 +104,10 @@ $accessories_home_js = "../../views/assets/js/home/sections/accessories.js";
     <div class="box_accessories_home">
 
       <!-- Title of the accessory -->
-      <h2>Rigid Card Holder</h2>
+      <h2>Plastic Wallet</h2>
 
       <!-- Image of the accessory -->
-      <img src="../../views/assets/img/home/accessories/1.png" alt="Rigid Card Holder">
+      <img src="../../views/assets/img/home/accessories/7.png" alt="Rigid Card Holder">
 
       <!-- Container for selecting the quantity -->
       <div class="subcontainer_accessories_home_quantity">
@@ -123,16 +123,16 @@ $accessories_home_js = "../../views/assets/js/home/sections/accessories.js";
       <div class="subcontainer_accessories_home_description">
         <!-- Each description box contains details about the product and price -->
         <div class="box_accessories_home_description">
-          <h3>Description</h3>
-          <h3>£3 per unit</h3>
+          <h3>86 x 56mm</h3>
+          <h3>+£0.12 per unit</h3>
         </div>
         <div class="box_accessories_home_description">
-          <h3>Description</h3>
-          <h3>£3 per unit</h3>
+          <h3>103 x 70mm</h3>
+          <h3>+£0.13 per unit</h3>
         </div>
         <div class="box_accessories_home_description">
-          <h3>Description</h3>
-          <h3>£3 per unit</h3>
+          <h3>138 x 88mm</h3>
+          <h3>+£0.14 per unit</h3>
         </div>
       </div>
 
