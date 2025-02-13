@@ -1,0 +1,11 @@
+.container_accessories_home{
+  position: relative;
+
+  padding: 5vw;
+  background: orange;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

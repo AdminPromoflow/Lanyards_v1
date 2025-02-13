@@ -55,6 +55,8 @@
 
             <!-- Include the slider component for the index page -->
             <?php include "../../views/home/sections/1-slider.php"; ?>
+            <?php include "../../views/home/sections/accessories.php"; ?>
+
             <?php include "../../views/home/sections/2-most_popular_lanyard.php"; ?>
             <?php //include "../../views/home/sections/2-choose-create-lanyard.php"; ?>
 
