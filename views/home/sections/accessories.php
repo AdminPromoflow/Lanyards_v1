@@ -13,6 +13,12 @@ $accessories_home_js = "../../views/assets/js/home/sections/accessories.js";
   <div class="container_accessories_home">
     <div class="box_accessories_home">
       <img src="../../views/assets/img/home/accessories/1.png" alt="">
+      <div class="subcontainer_accessories_home">
+        <div class="dropbox_accessories_home">
+          <h3>Select</h3>
+        </div>
+        <input type="text" name="" value="">
+      </div>
     </div>
     <div class="box_accessories_home">
 

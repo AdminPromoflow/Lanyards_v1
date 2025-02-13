@@ -50,4 +50,20 @@
   width: 90%;
   background-color: blue;
   padding: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.subcontainer_accessories_home input{
+  position: relative;
+  width: 60px;
+  margin-left: 5px;
+}
+.dropbox_accessories_home{
+  position: relative;
+  width: calc(100% - 65px);
+  padding: 5px;
 }
