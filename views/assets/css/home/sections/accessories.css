@@ -21,6 +21,7 @@
   position: relative;
   width: 90%;
   min-width: 140px;
+  min-height: 480px;
 
   display: flex;
   justify-content: center;
