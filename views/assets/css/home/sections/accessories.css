@@ -53,8 +53,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  flex-direction: column;
 }
 .subcontainer_accessories_home_quantity input{
   position: relative;
