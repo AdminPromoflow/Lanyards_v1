@@ -91,10 +91,7 @@
   max-height: 140px;
   overflow-y: scroll;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+
 }
 /* Style for the scrollbar in WebKit browsers */
 .subcontainer_accessories_home_description::-webkit-scrollbar {
@@ -117,6 +114,8 @@
 }
 .box_accessories_home_description{
   position: relative;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   width: 90%;
   min-width: 210px;
