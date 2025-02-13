@@ -1,6 +1,7 @@
 .accessories_home{
   position: relative;
   margin-top: 3vw;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,10 +10,21 @@
 
 .container_accessories_home{
   position: relative;
-
   width: 80%;
   min-width: 280px;
+  background-color: green;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.box_accessories_home{
+  perspective-origin: relative;
+  min-width: 280px;
+  padding: 5vw;
+  background-color: gold;
 
   display: flex;
   justify-content: center;
