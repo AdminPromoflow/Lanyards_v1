@@ -1,5 +1,6 @@
 .accesories_home{
   position: relative;
+  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,6 +14,8 @@
   width: 80%;
   min-width: 280px;
   background: blue;
+
+
   display: flex;
   justify-content: center;
   align-items: center;
