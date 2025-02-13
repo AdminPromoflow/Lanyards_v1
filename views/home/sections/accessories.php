@@ -34,15 +34,15 @@ $accessories_home_js = "../../views/assets/js/home/sections/accessories.js";
       <!-- Container for the product description -->
       <div class="subcontainer_accessories_home_description">
         <!-- Each description box contains details about the product and price -->
-        <div class="box_accessories_home_description">
+        <div class="box_accessories_home_description box_accessories_home_rigid_card_holder">
           <h3>Clear Plastic (closed face)</h3>
           <h3>+£0.3 per unit</h3>
         </div>
-        <div class="box_accessories_home_description">
+        <div class="box_accessories_home_description box_accessories_home_rigid_card_holder">
           <h3>Coloured Plastic (closed face)</h3>
           <h3>+£0.3 per unit</h3>
         </div>
-        <div class="box_accessories_home_description">
+        <div class="box_accessories_home_description box_accessories_home_rigid_card_holder">
           <h3>Coloured Plastic (open face)</h3>
           <h3>+£0.25 per unit</h3>
         </div>
@@ -78,15 +78,15 @@ $accessories_home_js = "../../views/assets/js/home/sections/accessories.js";
       <!-- Container for the product description -->
       <div class="subcontainer_accessories_home_description">
         <!-- Each description box contains details about the product and price -->
-        <div class="box_accessories_home_description">
+        <div class="box_accessories_home_description box_accessories_home_plastic_wallet">
           <h3>86 x 56mm</h3>
           <h3>+£0.12 per unit</h3>
         </div>
-        <div class="box_accessories_home_description">
+        <div class="box_accessories_home_description box_accessories_home_plastic_wallet">
           <h3>103 x 70mm</h3>
           <h3>+£0.13 per unit</h3>
         </div>
-        <div class="box_accessories_home_description">
+        <div class="box_accessories_home_description box_accessories_home_plastic_wallet">
           <h3>138 x 88mm</h3>
           <h3>+£0.14 per unit</h3>
         </div>
@@ -104,7 +104,7 @@ $accessories_home_js = "../../views/assets/js/home/sections/accessories.js";
     <div class="box_accessories_home">
 
       <!-- Title of the accessory -->
-      <h2>Retractable Reelr</h2>
+      <h2>Retractable Reel</h2>
 
       <!-- Image of the accessory -->
       <img src="../../views/assets/img/home/accessories/12.png" alt="Rigid Card Holder">
@@ -122,23 +122,23 @@ $accessories_home_js = "../../views/assets/js/home/sections/accessories.js";
       <!-- Container for the product description -->
       <div class="subcontainer_accessories_home_description">
         <!-- Each description box contains details about the product and price -->
-        <div class="box_accessories_home_description">
+        <div class="box_accessories_home_description box_accessories_home_retractable_reel">
           <h3>Plastic</h3>
           <h3>+£0.5 per unit</h3>
         </div>
-        <div class="box_accessories_home_description">
+        <div class="box_accessories_home_description box_accessories_home_retractable_reel">
           <h3>Round</h3>
           <h3>+£0.85 per unit</h3>
         </div>
-        <div class="box_accessories_home_description">
+        <div class="box_accessories_home_description box_accessories_home_retractable_reel">
           <h3>Oval</h3>
           <h3>+£0.85 per unit</h3>
         </div>
-        <div class="box_accessories_home_description">
+        <div class="box_accessories_home_description box_accessories_home_retractable_reel">
           <h3>Metal</h3>
           <h3>+£1.10 per unit</h3>
         </div>
-        <div class="box_accessories_home_description">
+        <div class="box_accessories_home_description box_accessories_home_retractable_reel">
           <h3>Printing (per screen)</h3>
           <h3>+£25.0 per unit</h3>
         </div>
@@ -175,7 +175,7 @@ $accessories_home_js = "../../views/assets/js/home/sections/accessories.js";
       <!-- Container for the product description -->
       <div class="subcontainer_accessories_home_description">
         <!-- Each description box contains details about the product and price -->
-        <div class="box_accessories_home_description">
+        <div class="box_accessories_home_description box_accessories_home_cord_lock">
           <h3>Cord Lock</h3>
           <h3>+£0.08 per unit</h3>
         </div>
@@ -212,11 +212,11 @@ $accessories_home_js = "../../views/assets/js/home/sections/accessories.js";
       <!-- Container for the product description -->
       <div class="subcontainer_accessories_home_description">
         <!-- Each description box contains details about the product and price -->
-        <div class="box_accessories_home_description">
+        <div class="box_accessories_home_description box_accessories_home_whistle">
           <h3>Whistle</h3>
           <h3>+£0.1 per unit</h3>
         </div>
-      
+
       </div>
 
       <!-- Container for the buying options -->
