@@ -22,9 +22,10 @@
 }
 .box_accessories_home{
   perspective-origin: relative;
-  min-width: 280px;
+  min-width: 200px;
   padding: 5vw;
   background-color: gold;
+  margin: 15px;
 
   display: flex;
   justify-content: center;
