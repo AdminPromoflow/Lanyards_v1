@@ -1,5 +1,4 @@
-
-<link rel="stylesheet" href="./../views/assets/css/home/sections/accesories.css">
+<link rel="stylesheet" href="../../views/assets/css/home/sections/accessories.css">
 <section id="accesories_home" class="accesories_home">
   <div class="container_accessories_home">
     <h1>Hola</h1>
