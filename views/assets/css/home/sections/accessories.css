@@ -59,6 +59,7 @@
 .subcontainer_accessories_home input{
   position: relative;
   width: 60px;
+  height: 100%;
   margin: 0;
   margin-left: 5px;
 }
