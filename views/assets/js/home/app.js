@@ -26,42 +26,58 @@ class Home {
   constructor() {
     for (let i = 0; i < openCustomizeLanyardFromMaterials.length; i++) {
       openCustomizeLanyardFromMaterials[i].addEventListener("click", function(){
+        this.openLanyardFromScratch();
 
-        priceClass.setAmountSelected(1000);
-        material.updatePriceMaterial();
-        widthClass.updatePriceWidth();
-
-        const url = "../../controller/lanyard/material.php";
-        const data = {
-          action: "setMaterialSelected",
-          optionSelected: materialForSelect[i].textContent,
-          amountSelected: priceClass.getAmountSelected()
-        };
-
-
-
-
-
-        material.setMaterialSelected(materialForSelect[i].textContent);
-        // Show the selected material.
-        material.showSelectedMaterial();
-
-        // Show the selected preview material.
-        previewMaterial.showSelectedPreviewtMaterial(material.getMaterialSelected());
-
-        // Update material prices.
-        material.updatePriceMaterial();
-
-        material.makeAjaxRequestSetMaterialSelected(url, data);
-
-        customizeLanyard.openCustomizeLanyard(true);
-
-        customizeLanyard.setStateVisibilityPanelCustomeLanyard (true);
 
       })
     }
-    
+
+
+
+
+    for (let i = 0; i < open_from_scratch.length; i++) {
+      open_from_scratch[i].addEventListener("click", function(){
+        this.openLanyardFromScratch();
+
+
+      })
+    }
+
+  }
+  openLanyardFromScratch(){
+    priceClass.setAmountSelected(1000);
+    material.updatePriceMaterial();
+    widthClass.updatePriceWidth();
+
+    const url = "../../controller/lanyard/material.php";
+    const data = {
+      action: "setMaterialSelected",
+      optionSelected: "Tubular",
+      amountSelected: priceClass.getAmountSelected()
+    };
+
+
+
+
+
+    material.setMaterialSelected("Tubular");
+    // Show the selected material.
+    material.showSelectedMaterial();
+
+    // Show the selected preview material.
+    previewMaterial.showSelectedPreviewtMaterial(material.getMaterialSelected());
+
+    // Update material prices.
+    material.updatePriceMaterial();
+
+    material.makeAjaxRequestSetMaterialSelected(url, data);
+
+    customizeLanyard.openCustomizeLanyard(true);
+
+    customizeLanyard.setStateVisibilityPanelCustomeLanyard (true);
   }
 }
+const open_from_scratch = document.querySelectorAll("open_from_scratch");
+const openCustomizeLanyardFromMaterials = document.querySelectorAll(".openCustomizeLanyardFromMaterials");
 
 const home = new Home();

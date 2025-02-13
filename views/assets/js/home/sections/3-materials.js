@@ -56,7 +56,6 @@ const itemMaterial = document.querySelectorAll(".itemMaterial");
 const containerTextMaterials = document.querySelectorAll(".containerTextMaterials");
 //const closeMaterial = document.querySelectorAll(".closeMaterial");
 const buttonMaterialsBox = document.querySelectorAll(".buttonMaterialsBox");
-const openCustomizeLanyardFromMaterials = document.querySelectorAll(".openCustomizeLanyardFromMaterials");
 const materialForSelect = document.querySelectorAll(".material-for-select");
 const documento = document.documentElement;
 
