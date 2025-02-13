@@ -131,6 +131,8 @@ class Home {
 
 
     customizeLanyard.currentSectionOpen = 8;
+    previewMaterial.showMaterialPreview("none");
+
     customizeLanyard.openArtWorkManual();
 
 
