@@ -12,7 +12,7 @@ $accessories_home_js = "../../views/assets/js/home/sections/accessories.js";
   <h1>Accessories</h1>
   <div class="container_accessories_home">
     <div class="box_accessories_home">
-
+      <img src="../../views/assets/img/home/accessories/1.png" alt="">
     </div>
     <div class="box_accessories_home">
 
