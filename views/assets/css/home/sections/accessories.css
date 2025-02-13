@@ -7,7 +7,16 @@
   align-items: center;
   flex-direction: column;
 }
-
+.accessories_home h1{
+  position: relative;
+  text-align: center;
+  color: white;
+  text-shadow: 3px 3px 2px black;
+  font-size: calc(1.8em + 1.8vw);
+  font-weight: 200;
+  margin: 0 0 3vh 0;
+  padding: 0px;
+}
 .container_accessories_home{
   position: relative;
   width: 90%;
