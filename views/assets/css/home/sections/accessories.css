@@ -45,3 +45,9 @@
   height: 100px;
   width: auto;
 }
+.subcontainer_accessories_home{
+  position: relative;
+  width: 90%;
+  background-color: blue;
+  padding: 5px;
+}
