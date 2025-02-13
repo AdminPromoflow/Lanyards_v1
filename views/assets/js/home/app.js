@@ -26,7 +26,7 @@ class Home {
   constructor() {
     for (let i = 0; i < openCustomizeLanyardFromMaterials.length; i++) {
       openCustomizeLanyardFromMaterials[i].addEventListener("click", function(){
-        this.openLanyardFromScratch();
+        homeClass.openLanyardFromScratch();
 
 
       })
@@ -37,7 +37,7 @@ class Home {
 
     for (let i = 0; i < open_from_scratch.length; i++) {
       open_from_scratch[i].addEventListener("click", function(){
-        this.openLanyardFromScratch();
+        homeClass.openLanyardFromScratch();
 
 
       })
@@ -80,4 +80,4 @@ class Home {
 const open_from_scratch = document.querySelectorAll("open_from_scratch");
 const openCustomizeLanyardFromMaterials = document.querySelectorAll(".openCustomizeLanyardFromMaterials");
 
-const home = new Home();
+const homeClass = new Home();
