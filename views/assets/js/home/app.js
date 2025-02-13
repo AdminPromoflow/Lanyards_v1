@@ -132,7 +132,7 @@ class Home {
 
     customizeLanyard.currentSectionOpen = 8;
     previewMaterial.showMaterialPreview("none");
-
+    customizeLanyardshowPreview(true);
     customizeLanyard.openArtWorkManual();
 
 
