@@ -32,7 +32,7 @@
   perspective-origin: relative;
   min-width: 250px;
   padding: 15px 0;
-  background-color: gold;
+  background-color: rgba(0, 0, 0, .6);
   margin: 15px;
 
   display: flex;
@@ -76,7 +76,6 @@
   position: relative;
   width: calc(100% - 65px);
   padding: 0 5px;
-  background-color: orange;
 }
 .dropbox_accessories_home h3{
   position: relative;
@@ -109,7 +108,7 @@
   flex-wrap: nowrap;
   cursor: pointer;
   margin: 3px 0;
-  background-color: blue;
+  background-color: rgba(0, 240, 0, .6);
 }
 .box_accessories_home_description h3{
   position: relative;
