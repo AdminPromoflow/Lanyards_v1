@@ -48,7 +48,7 @@
 .subcontainer_accessories_home{
   position: relative;
   width: 90%;
-  background-color: blue;
+  margin: 7px 0;
 
   display: flex;
   justify-content: center;
@@ -72,5 +72,5 @@
   position: relative;
   margin: 0;
   padding: 0;
-  
+
 }
