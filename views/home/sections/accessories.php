@@ -19,17 +19,17 @@ $accessories_home_js = "../../views/assets/js/home/sections/accessories.js";
         </div>
         <input type="text" name="" value="">
       </div>
-      <div class="subcontainer_accessories_home_quantity">
-        <div class="box_accessories_home_quantity">
-`         <h3>Description</h3>`
+      <div class="subcontainer_accessories_home_description">
+        <div class="box_accessories_home_description">
+`         <h3>Description</h3>
           <h3>£3 per unit</h3>
         </div>
-        <div class="box_accessories_home_quantity">
-`         <h3>Description</h3>`
+        <div class="box_accessories_home_description">
+`         <h3>Description</h3>
           <h3>£3 per unit</h3>
         </div>
-        <div class="box_accessories_home_quantity">
-`         <h3>Description</h3>`
+        <div class="box_accessories_home_description">
+`         <h3>Description</h3>
           <h3>£3 per unit</h3>
         </div>
       </div>

@@ -55,16 +55,7 @@
   align-items: center;
   flex-direction: row;
 }
-.subcontainer_accessories_home_description{
-  position: relative;
-  width: 90%;
-  margin: 7px 0;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
 .subcontainer_accessories_home_quantity input{
   position: relative;
   width: 60px;
@@ -83,7 +74,17 @@
   margin: 0;
   padding: 0;
 }
-.box_accessories_home_quantity{
+.subcontainer_accessories_home_description{
+  position: relative;
+  width: 90%;
+  margin: 7px 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.box_accessories_home_description{
   position: relative;
   display: flex;
   width: 90%;
@@ -97,7 +98,7 @@
   cursor: pointer;
   background-color: green;
 }
-.box_accessories_home_quantity h3{
+.box_accessories_home_description h3{
   position: relative;
   margin: 0;
   padding: 0;
