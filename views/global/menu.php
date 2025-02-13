@@ -13,7 +13,7 @@
   <div class="containerItems">
     <a href="../../views/home/index.php"><h3 class="transparentLeftLine">Home</h3></a>
     <a href="../../views/about_us/index.php"><h3>About us</h3></a>
-    <a href="../../views/about_us/index.php"><h3>Lanyards</h3></a>
+    <h3 class="open_from_scratch">Lanyards</h3>
     <a href="../../views/contact_us/index.php"><h3>Contact us</h3></a>
   </div>
 
@@ -41,6 +41,7 @@
     <h3>Home</h3>
     <h3>About us</h3>
     <h3>Contact us</h3>
+    <h3 class="open_from_scratch">Lanyards</h3>
     <h3 class="openLogin showItemsMenuLoginFalse">Login</h3>
     <h3 class="openSignup showItemsMenuLoginFalse">Sign up</h3>
     <a href="../../views/shopping_cart/index.php"><h3 class="openLogout transparentBottonLine showItemsMenuLoginTrue">Shopping cart</h3></a>
