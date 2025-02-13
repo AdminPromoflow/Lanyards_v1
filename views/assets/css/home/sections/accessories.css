@@ -78,6 +78,8 @@
   position: relative;
   width: 90%;
   margin: 7px 0;
+  max-width: 225px;
+  overflow-y: scroll;
 
   display: flex;
   justify-content: center;
