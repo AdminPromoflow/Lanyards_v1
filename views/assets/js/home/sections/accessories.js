@@ -9,9 +9,13 @@ class AccessoriesHome {
     this.addToCartEvent(".add_to_cart_accessory");
   }
 
-  // Function to handle border selection
+  // Function to handle border selection and set first element as default
   addClickEvent(selector) {
     const elements = document.querySelectorAll(selector);
+    if (elements.length > 0) {
+      // Set the first element with a white border
+      elements[0].style.border = "2px solid white";
+    }
     elements.forEach(element => {
       element.addEventListener("click", () => {
         elements.forEach(el => el.style.border = "2px solid transparent"); // Reset all borders
