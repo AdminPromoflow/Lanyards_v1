@@ -43,6 +43,21 @@ class Home {
       })
     }
 
+
+
+    for (let i = 0; i < open_from_best_seller.length; i++) {
+      open_from_best_seller[i].addEventListener("click", function(){
+        homeClass.openLanyardFromBestSeller();
+
+
+      })
+    }
+
+
+
+
+
+
   }
   openLanyardFromScratch(){
     priceClass.setAmountSelected(1000);
@@ -76,8 +91,56 @@ class Home {
 
     customizeLanyard.setStateVisibilityPanelCustomeLanyard (true);
   }
+
+
+
+
+
+  openLanyardFromBestSeller(){
+    priceClass.setAmountSelected(1000);
+    material.updatePriceMaterial();
+    widthClass.updatePriceWidth();
+
+    const url = "../../controller/lanyard/material.php";
+    const data = {
+      action: "setMaterialSelected",
+      optionSelected: "Dye Sub polyester",
+      amountSelected: priceClass.getAmountSelected()
+    };
+
+
+
+
+
+    material.setMaterialSelected("Dye Sub polyester");
+    // Show the selected material.
+    material.showSelectedMaterial();
+
+    // Show the selected preview material.
+    previewMaterial.showSelectedPreviewtMaterial(material.getMaterialSelected());
+
+    // Update material prices.
+    material.updatePriceMaterial();
+
+    material.makeAjaxRequestSetMaterialSelected(url, data);
+
+    customizeLanyard.openCustomizeLanyard(true);
+
+    customizeLanyard.setStateVisibilityPanelCustomeLanyard (true);
+
+
+
+    customizeLanyard.currentSectionOpen = 8;
+    customizeLanyard.openArtWorkManual();
+
+
+
+  }
 }
 const open_from_scratch = document.querySelectorAll(".open_from_scratch");
+
+const open_from_best_seller = document.querySelectorAll(".open_from_best_seller");
+
 const openCustomizeLanyardFromMaterials = document.querySelectorAll(".openCustomizeLanyardFromMaterials");
 
 const homeClass = new Home();
