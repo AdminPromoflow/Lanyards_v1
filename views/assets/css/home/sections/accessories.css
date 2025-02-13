@@ -118,7 +118,6 @@
 }
 .subcontainer_accessories_home_buy_section button{
   position: relative;
-  width: 40%;
   color: white;
   font-size: 1em;
   font-weight: 300;
@@ -126,8 +125,10 @@
   cursor: pointer;
 }
 .subcontainer_accessories_home_buy_section button:nth-child(1){
-  background: darkgreen;
+  background: rgba(141, 67, 68, .9);
+  width: 35%;
 }
 .subcontainer_accessories_home_buy_section button:nth-child(2){
-  background: rgba(141, 67, 68, .9);
+  background: darkgreen;
+  width: 60%;
 }
