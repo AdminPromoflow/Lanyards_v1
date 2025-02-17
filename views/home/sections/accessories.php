@@ -10,11 +10,12 @@ $accessories_home_js = "../../views/assets/js/home/sections/accessories.js";
 <link rel="stylesheet" href="<?php echo $accessories_home_css . '?v=' . accessories_home_file_version($accessories_home_css); ?>">
 <section id="accessories_home" class="accessories_home">
   <h1>Accessories</h1>
+  <div class="container_accessories_home_arrow_left">
+    <img src="../../views/assets/img/home/accessories/arrow_top.png" alt="">
+  </div>
   <div class="container_accessories_home">
     <!-- Container for the accessories home box -->
-    <div class="container_accessories_home_arrow_left">
-      <img src="../../views/assets/img/home/accessories/arrow_top.png" alt="">
-    </div>
+
     <div class="box_accessories_home">
 
       <!-- Title of the accessory -->
@@ -229,9 +230,10 @@ $accessories_home_js = "../../views/assets/js/home/sections/accessories.js";
       </div>
 
     </div>
-    <div class="container_accessories_home_arrow_right">
-      <img src="../../views/assets/img/home/accessories/arrow_top.png" alt="">
-    </div>
+
+  </div>
+  <div class="container_accessories_home_arrow_right">
+    <img src="../../views/assets/img/home/accessories/arrow_top.png" alt="">
   </div>
 </section>
 <script src="<?php echo $accessories_home_js . '?v=' . accessories_home_file_version($accessories_home_js); ?>" type="text/javascript"></script>

@@ -86,7 +86,7 @@
   flex-direction: row;
 }
 .container_accessories_home_arrow_left{
-  position: sticky;
+  position: absolute;
   top: 50%;
   left: 0px;
   height: 20px;
@@ -94,7 +94,7 @@
   background: red;
 }
 .container_accessories_home_arrow_right{
-  position: sticky;
+  position: absolute;
   top: 50%;
   right: 0px;
   height: 20px;
