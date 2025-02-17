@@ -24,7 +24,7 @@
   min-width: 140px;
   overflow-x: scroll;
 
-  
+
 }
 /* Style for the scrollbar in WebKit browsers */
 .container_accessories_home::-webkit-scrollbar {
@@ -48,7 +48,7 @@
 
 .box_accessories_home{
   perspective-origin: relative;
-  min-width: 250px;
+  width: 250px;
   padding: 20px;
   background-color: rgba(25, 61, 116, 0.7);
   margin: 15px;
