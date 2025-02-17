@@ -53,7 +53,7 @@
   background-color: rgba(25, 61, 116, 0.7);
   margin: 15px;
 
-  display: flex;
+  display: inline-block;
   justify-content: center;
   align-items: center;
   flex-direction: column;
