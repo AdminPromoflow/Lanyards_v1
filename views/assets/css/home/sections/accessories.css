@@ -24,11 +24,7 @@
   min-width: 140px;
   overflow-x: scroll;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  
 }
 /* Style for the scrollbar in WebKit browsers */
 .container_accessories_home::-webkit-scrollbar {
