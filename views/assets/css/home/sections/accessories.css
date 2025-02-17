@@ -19,6 +19,7 @@
 }
 .container_accessories_home{
   position: relative;
+  padding-left: 3vw;
   width: 90%;
   min-width: 140px;
   overflow-x: scroll;
