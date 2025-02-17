@@ -13,7 +13,7 @@ $accessories_home_js = "../../views/assets/js/home/sections/accessories.js";
   <div class="container_accessories_home">
     <!-- Container for the accessories home box -->
     <div class="container_accessories_home_arrow_left">
-
+      <img src="../../" alt="">
     </div>
     <div class="box_accessories_home">
 
@@ -230,7 +230,7 @@ $accessories_home_js = "../../views/assets/js/home/sections/accessories.js";
 
     </div>
     <div class="container_accessories_home_arrow_right">
-
+      <img src="../../" alt="">
     </div>
   </div>
 </section>
