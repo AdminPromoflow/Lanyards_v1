@@ -88,7 +88,7 @@
 .container_accessories_home_arrow_left{
   position: absolute;
   top: 50%;
-  left: 20px;
+  left: 15px;
   height: 30px;
   width: 30px;
   transform: rotate(90deg)
@@ -96,7 +96,7 @@
 .container_accessories_home_arrow_right{
   position: absolute;
   top: 50%;
-  right: 20px;
+  right: 15px;
   height: 30px;
   width: 30px;
   transform: rotate(-90deg);
