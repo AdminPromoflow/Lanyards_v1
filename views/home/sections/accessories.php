@@ -153,7 +153,6 @@ $accessories_home_js = "../../views/assets/js/home/sections/accessories.js";
       </div>
 
     </div>
-
     <div class="box_accessories_home">
 
       <!-- Title of the accessory -->
