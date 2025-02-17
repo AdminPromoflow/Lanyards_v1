@@ -91,7 +91,7 @@
   left: 20px;
   height: 20px;
   width: 20px;
-  transform: rotate(-90deg)
+  transform: rotate(90deg)
 }
 .container_accessories_home_arrow_right{
   position: absolute;
@@ -99,7 +99,7 @@
   right: 20px;
   height: 20px;
   width: 20px;
-  transform: rotate(90deg);
+  transform: rotate(-90deg);
 }
 
 .subcontainer_accessories_home_quantity input{
