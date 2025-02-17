@@ -29,6 +29,26 @@
   flex-direction: row;
   flex-wrap: nowrap;
 }
+/* Style for the scrollbar in WebKit browsers */
+.container_accessories_home::-webkit-scrollbar {
+    width: 13px; /* Width of the scrollbar */
+}
+
+.container_accessories_home::-webkit-scrollbar-thumb {
+    background: #091d2c; /* Dark blue color for the draggable part */
+    border-radius: 5px; /* Rounded corners for the draggable part */
+    border: 1px solid rgba(255, 255, 255, .5); /* Semi-transparent white border for better contrast */
+}
+
+.container_accessories_home::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, .4); /* Light grey background color */
+    border-radius: 10px; /* Rounded corners for the track */
+}
+
+.container_accessories_home::-webkit-scrollbar-thumb:hover {
+    background: #132735; /* Darker color when hovering over the scrollbar */
+}
+
 .box_accessories_home{
   perspective-origin: relative;
   min-width: 250px;
