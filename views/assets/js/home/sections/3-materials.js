@@ -10,7 +10,7 @@ class MaterialHome {
 
 
 
-
+ 
     // Event listener to display containerTextMaterials when itemMaterial is clicked
     for (let i = 0; i < itemMaterial.length; i++) {
       containerTextMaterials[i].style.display = "none"; // Oculta todos los divs inicialmente

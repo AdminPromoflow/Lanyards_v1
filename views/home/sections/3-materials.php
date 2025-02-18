@@ -25,10 +25,10 @@ $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
         <img src="<?= $imgPath1 ?>?v=<?= $imgVersion1; ?>" alt="">
       </div>
       <div class="containerTextMaterialsBox">
-        <h3 class="material-for-select">Create your own lanyard</h3>
+        <h3 class="material_for_select">Create your own lanyard</h3>
       </div>
       <div class="buttonMaterialsBox">
-        <button class="openCustomizeLanyardFromMaterials" type="button">Select</button>
+        <button class="open_from_scratch_in_home" type="button">Select</button>
       </div>
     </div>
 
@@ -41,10 +41,10 @@ $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
         <img src="<?= $imgPath2 ?>?v=<?= $imgVersion2; ?>" alt="">
       </div>
       <div class="containerTextMaterialsBox">
-        <h3 class="material-for-select">Tubular</h3>
+        <h3 class="material_for_select">Tubular</h3>
       </div>
       <div class="buttonMaterialsBox">
-        <button class="openCustomizeLanyardFromMaterials" type="button">Select</button>
+        <button class="open_from_scratch_in_home" type="button">Select</button>
       </div>
     </div>
 
@@ -57,10 +57,10 @@ $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
         <img src="<?= $imgPath3 ?>?v=<?= $imgVersion3; ?>" alt="">
       </div>
       <div class="containerTextMaterialsBox">
-        <h3 class="material-for-select">RPET Polyester</h3>
+        <h3 class="material_for_select">RPET Polyester</h3>
       </div>
       <div class="buttonMaterialsBox">
-        <button class="openCustomizeLanyardFromMaterials" type="button">Select</button>
+        <button class="open_from_scratch_in_home" type="button">Select</button>
       </div>
     </div>
 
@@ -73,10 +73,10 @@ $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
         <img src="<?= $imgPath4 ?>?v=<?= $imgVersion4; ?>" alt="">
       </div>
       <div class="containerTextMaterialsBox">
-        <h3 class="material-for-select">Dye Sub polyester</h3>
+        <h3 class="material_for_select">Dye Sub polyester</h3>
       </div>
       <div class="buttonMaterialsBox">
-        <button class="openCustomizeLanyardFromMaterials" type="button">Select</button>
+        <button class="open_from_scratch_in_home" type="button">Select</button>
       </div>
     </div>
 
@@ -89,10 +89,10 @@ $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
         <img src="<?= $imgPath5 ?>?v=<?= $imgVersion5; ?>" alt="">
       </div>
       <div class="containerTextMaterialsBox">
-        <h3 class="material-for-select">Dye Sub RPET</h3>
+        <h3 class="material_for_select">Dye Sub RPET</h3>
       </div>
       <div class="buttonMaterialsBox">
-        <button class="openCustomizeLanyardFromMaterials" type="button">Select</button>
+        <button class="open_from_scratch_in_home" type="button">Select</button>
       </div>
     </div>
 

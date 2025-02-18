@@ -16,7 +16,7 @@ $jsVersionMaterial = $jsFileMaterial && file_exists($jsFileMaterial) ? filemtime
   <p>Select the type of lanyard</p>
   <br>
   <div id="containers_boxes_material" class="containers_boxes_material"></div>
-</section>
+</section>  
 
 <!-- JavaScript -->
 <script src="/views/assets/js/customize-lanyard/sections/material.js?v=<?= $jsVersionMaterial; ?>" type="text/javascript"></script>

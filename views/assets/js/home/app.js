@@ -26,6 +26,8 @@ class Home {
   constructor() {
     for (let i = 0; i < openCustomizeLanyardFromMaterials.length; i++) {
       openCustomizeLanyardFromMaterials[i].addEventListener("click", function(){
+        material.setMaterialSelected(material_for_select[i].innerText);
+        //material_for_select
         homeClass.openLanyardFromScratch();
 
 
@@ -67,7 +69,7 @@ class Home {
     const url = "../../controller/lanyard/material.php";
     const data = {
       action: "setMaterialSelected",
-      optionSelected: "Tubular",
+      optionSelected: material.getMaterialSelected(),
       amountSelected: priceClass.getAmountSelected()
     };
 
@@ -145,15 +147,14 @@ class Home {
     previewMaterial.showMaterialPreview("none");
     customizeLanyard.showPreview(true);
     customizeLanyard.openArtWorkManual();
-
-
-
   }
 }
 const open_from_scratch = document.querySelectorAll(".open_from_scratch");
 
 const open_from_best_seller = document.querySelectorAll(".open_from_best_seller");
 
-const openCustomizeLanyardFromMaterials = document.querySelectorAll(".openCustomizeLanyardFromMaterials");
+const open_from_scratch_in_home = document.querySelectorAll(".open_from_scratch_in_home");
+
+const material_for_select = document.querySelectorAll(".material_for_select");
 
 const homeClass = new Home();

@@ -7,7 +7,7 @@ class Material {
     this.materialSelected = "Tubular";
     // Initialize an empty object to store JSON materials.
     var jsonMaterials = {};
-
+ 
   }
 
   // Setter method for the materialSelected property.
