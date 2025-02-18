@@ -56,7 +56,7 @@ class AccessoriesHome {
       }
 
       // Amount to scroll per click (adjust as needed)
-      const scrollStep = 200;
+      const scrollStep = 350;
 
       arrows[0].addEventListener("click", () => {
           container_accessories_home.scrollBy({ left: -scrollStep, behavior: "smooth" });
