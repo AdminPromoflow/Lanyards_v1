@@ -290,7 +290,7 @@ class CustomizeLanyard {
 
      customizeLanyard.showCurrentSection(this.currentSectionOpen);
 
-     customizeLanyard.showPreview(true);
+     this.showPreview(true);
 
    }
    openWidth(){
@@ -329,13 +329,13 @@ class CustomizeLanyard {
      previewAccessoriesClass.showAccessoriesPreview("none");
 
      previewColourClass.showColourPreview("none");
-     
+
      previewMaterial.showMaterialPreview("none");
      previewArtworkManualClass.showArtworkManualPreview("flex");
      previewLanyardType.showTypeLanyardPreview("none");
      artworkPreviewClass.showHidePreviewArtwork(false);
      customizeLanyard.showCurrentSection(this.currentSectionOpen);
-     customizeLanyard.showPreview(true);
+     this.showPreview(true);
 
    }
   openBackgroundColour() {
