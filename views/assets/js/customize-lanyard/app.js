@@ -273,6 +273,8 @@ class CustomizeLanyard {
      previewMaterial.showMaterialPreview("flex");
      previewLanyardType.showTypeLanyardPreview("none");
      this.showCurrentSection(this.currentSectionOpen);
+     customizeLanyard.showPreview(false);
+
 
 
      const preview = document.getElementById("preview");
@@ -326,6 +328,8 @@ class CustomizeLanyard {
      previewAccessoriesClass.showAccessoriesPreview("none");
 
      previewColourClass.showColourPreview("none");
+     previewMaterial.showMaterialPreview("none");
+     customizeLanyard.showPreview(true);
 
      previewArtworkManualClass.showArtworkManualPreview("flex");
      previewLanyardType.showTypeLanyardPreview("none");

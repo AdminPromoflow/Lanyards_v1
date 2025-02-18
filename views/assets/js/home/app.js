@@ -34,7 +34,7 @@ class Home {
             open_from_scratch_in_home.forEach((element, index) => {
                 element.addEventListener("click", () => {
                     material.setMaterialSelected(material_for_select[index].innerText);
-                    homeClass.openLanyardFromScratch();
+                    homeClass.openLanyard();
                 });
             });
         }
@@ -42,7 +42,7 @@ class Home {
         if (open_from_scratch.length > 0) {
             open_from_scratch.forEach(element => {
                 element.addEventListener("click", () => {
-                    homeClass.openLanyardFromScratch();
+                    homeClass.openLanyard();
                 });
             });
         }
@@ -50,7 +50,22 @@ class Home {
         if (open_from_best_seller.length > 0) {
             open_from_best_seller.forEach(element => {
                 element.addEventListener("click", () => {
-                    homeClass.openLanyardFromBestSeller();
+                    material.setMaterialSelected("Dye Sub polyester");
+                    customizeLanyard.setCurrentSectionOpen(8);
+                    homeClass.openLanyard();
+                    // Show an alert with predefined lanyard options
+                    alert(
+                        "We have set up the most popular lanyard options:\n\n" +
+                        "-----------------------------------\n" +
+                        "Material: Dye-sublimation\n" +
+                        "Type of lanyard: Single ended\n" +
+                        "Width: 20mm\n" +
+                        "Colour: Full\n" +
+                        "-----------------------------------\n" +
+                        "You can continue adding the design inside the lanyard.\n\n" +
+                        "Remember, you can always change these options by clicking on Preview."
+                    );
+                    customizeLanyard.openArtWorkManual();
                 });
             });
         }
@@ -59,7 +74,7 @@ class Home {
     /**
      * Opens the lanyard customization process with default settings.
      */
-    openLanyardFromScratch() {
+    openLanyard() {
         // Set default amount and update material prices
         priceClass.setAmountSelected(1000);
         material.updatePriceMaterial();
@@ -91,19 +106,18 @@ class Home {
     openLanyardFromBestSeller() {
         // Set default amount and update material prices
         priceClass.setAmountSelected(1000);
-        material.updatePriceMaterial();
         widthClass.updatePriceWidth();
 
         // Prepare data for AJAX request
         const url = "../../controller/lanyard/material.php";
         const data = {
             action: "setMaterialSelected",
-            optionSelected: "Dye Sub polyester",
+            optionSelected: material.getMaterialSelected(),
             amountSelected: priceClass.getAmountSelected()
         };
 
         // Apply "Best Seller" material settings
-        material.setMaterialSelected("Dye Sub polyester");
+        material.updatePriceMaterial();
         material.showSelectedMaterial();
         previewMaterial.showSelectedPreviewtMaterial(material.getMaterialSelected());
         material.updatePriceMaterial();
@@ -113,24 +127,6 @@ class Home {
         customizeLanyard.openCustomizeLanyard(true);
         customizeLanyard.setStateVisibilityPanelCustomeLanyard(true);
 
-        // Show an alert with predefined lanyard options
-        alert(
-            "We have set up the most popular lanyard options:\n\n" +
-            "-----------------------------------\n" +
-            "Material: Dye-sublimation\n" +
-            "Type of lanyard: Single ended\n" +
-            "Width: 20mm\n" +
-            "Colour: Full\n" +
-            "-----------------------------------\n" +
-            "You can continue adding the design inside the lanyard.\n\n" +
-            "Remember, you can always change these options by clicking on Preview."
-        );
-
-        // Update UI state
-        customizeLanyard.currentSectionOpen = 8;
-        previewMaterial.showMaterialPreview("none");
-        customizeLanyard.showPreview(true);
-        customizeLanyard.openArtWorkManual();
     }
 }
 
