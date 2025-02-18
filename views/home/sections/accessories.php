@@ -16,7 +16,7 @@ $accessories_home_js = "../../views/assets/js/home/sections/accessories.js";
     <img src="<?php echo '../../views/assets/img/home/accessories/arrow_top.png?v=' . accessories_home_file_version('../../views/assets/img/home/accessories/arrow_top.png'); ?>" alt="">
   </div>
 
-  <div class="container_accessories_home">
+  <div id="container_accessories_home" class="container_accessories_home">
 
     <?php
     $accessories = [

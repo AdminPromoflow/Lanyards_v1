@@ -45,14 +45,25 @@ class AccessoriesHome {
       });
     });
   }
-  addArrowsEvent(selector){
-    const arrows = document.querySelectorAll(selector);
-    arrows.forEach(button => {
-      button.addEventListener("click", () => {
-        alert("Checkedt");
+
+  addArrowsEvent(selector) {
+      const arrows = document.querySelectorAll(selector);
+      const container_accessories_home = document.getElementById("container_accessories_home");
+
+      arrows.forEach(button => {
+          button.addEventListener("click", () => {
+              const scrollLeft = container_accessories_home.scrollLeft;
+              const maxScrollLeft = container_accessories_home.scrollWidth - container_accessories_home.clientWidth;
+
+              if (scrollLeft === 0) {
+                  alert("Estás al inicio");
+              } else if (scrollLeft >= maxScrollLeft) {
+                  alert("Estás al final");
+              }
+          });
       });
-    });
   }
+
 }
 
 // Instantiate the class to apply all event listeners
