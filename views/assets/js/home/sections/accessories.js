@@ -52,17 +52,21 @@ class AccessoriesHome {
 
       arrows.forEach(button => {
           button.addEventListener("click", () => {
-              const scrollLeft = container_accessories_home.scrollLeft;
-              const maxScrollLeft = container_accessories_home.scrollWidth - container_accessories_home.clientWidth;
+              // Forzar actualización del scroll después de un pequeño retraso
+              setTimeout(() => {
+                  const scrollLeft = container_accessories_home.scrollLeft;
+                  const maxScrollLeft = container_accessories_home.scrollWidth - container_accessories_home.clientWidth;
 
-              if (scrollLeft === 0) {
-                  alert("Estás al inicio");
-              } else if (scrollLeft >= maxScrollLeft) {
-                  alert("Estás al final");
-              }
+                  if (scrollLeft <= 0) {
+                      alert("Estás al inicio");
+                  } else if (scrollLeft >= maxScrollLeft - 1) { // Se resta 1 para compensar posibles diferencias de cálculo
+                      alert("Estás al final");
+                  }
+              }, 100); // Pequeño retraso para asegurar que el scroll haya terminado
           });
       });
   }
+
 
 }
 
