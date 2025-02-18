@@ -55,12 +55,23 @@ class AccessoriesHome {
           return;
       }
 
+      // Amount to scroll per click (adjust as needed)
+      const scrollStep = 200;
+
+      arrows[0].addEventListener("click", () => {
+          container_accessories_home.scrollBy({ left: -scrollStep, behavior: "smooth" });
+      });
+
+      arrows[1].addEventListener("click", () => {
+          container_accessories_home.scrollBy({ left: scrollStep, behavior: "smooth" });
+      });
+
+      // Delay check after scroll action
       arrows.forEach(button => {
           button.addEventListener("click", () => {
-              // Delay the check to ensure scroll has been updated
               setTimeout(() => {
                   this.checkScrollPosition(container_accessories_home, arrows);
-              }, 100);
+              }, 300); // Wait for the scroll animation to complete
           });
       });
 
