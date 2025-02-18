@@ -77,7 +77,7 @@ class Home {
 
 
 
-    material.setMaterialSelected("Tubular");
+    material.setMaterialSelected(material.getMaterialSelected());
     // Show the selected material.
     material.showSelectedMaterial();
 
