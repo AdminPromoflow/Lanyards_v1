@@ -272,14 +272,14 @@ class CustomizeLanyard {
 
      previewMaterial.showMaterialPreview("flex");
      previewLanyardType.showTypeLanyardPreview("none");
-     this.showCurrentSection(this.currentSectionOpen);
-     customizeLanyard.showPreview(false);
      previewArtworkManualClass.showArtworkManualPreview("none");
+     customizeLanyard.showPreview(false);
+     this.showCurrentSection(this.currentSectionOpen);
 
 
 
-     const preview = document.getElementById("preview");
-     preview.style.display = "none";
+    // const preview = document.getElementById("preview");
+//preview.style.display = "none";
    }
    openLanyardType(){
      previewAccessoriesClass.showAccessoriesPreview("flex");
