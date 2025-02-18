@@ -34,7 +34,6 @@ class Home {
             open_from_scratch_in_home.forEach((element, index) => {
                 element.addEventListener("click", () => {
                     material.setMaterialSelected(material_for_select[index].innerText);
-                    customizeLanyard.currentSectionOpen = 0;
 
                     homeClass.openLanyard();
                 });
@@ -44,7 +43,6 @@ class Home {
         if (open_from_scratch.length > 0) {
             open_from_scratch.forEach(element => {
                 element.addEventListener("click", () => {
-                  customizeLanyard.currentSectionOpen = 0;
                     homeClass.openLanyard();
                 });
             });
@@ -54,8 +52,7 @@ class Home {
             open_from_best_seller.forEach(element => {
                 element.addEventListener("click", () => {
                     material.setMaterialSelected("Dye Sub polyester");
-                    customizeLanyard.currentSectionOpen = 8;
-                    homeClass.openLanyard();
+                    homeClass.openLanyardFromBestSeller();
                     // Show an alert with predefined lanyard options
                     alert(
                         "We have set up the most popular lanyard options:\n\n" +
@@ -100,6 +97,8 @@ class Home {
 
         // Open the customization panel
         customizeLanyard.openCustomizeLanyard(true);
+        customizeLanyard.currentSectionOpen = 0;
+
         customizeLanyard.setStateVisibilityPanelCustomeLanyard(true);
     }
 
@@ -128,7 +127,10 @@ class Home {
 
         // Open the customization panel
         customizeLanyard.openCustomizeLanyard(true);
+        customizeLanyard.currentSectionOpen = 8;
+
         customizeLanyard.setStateVisibilityPanelCustomeLanyard(true);
+
 
     }
 }
