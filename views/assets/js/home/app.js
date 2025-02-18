@@ -34,7 +34,7 @@ class Home {
             open_from_scratch_in_home.forEach((element, index) => {
                 element.addEventListener("click", () => {
                     material.setMaterialSelected(material_for_select[index].innerText);
-                    customizeLanyard.setCurrentSectionOpen(0);
+                  //  customizeLanyard.setCurrentSectionOpen(0);
 
                     homeClass.openLanyard();
                 });
@@ -44,7 +44,7 @@ class Home {
         if (open_from_scratch.length > 0) {
             open_from_scratch.forEach(element => {
                 element.addEventListener("click", () => {
-                    customizeLanyard.setCurrentSectionOpen(0);
+                  //  customizeLanyard.setCurrentSectionOpen(0);
                     homeClass.openLanyard();
                 });
             });
@@ -54,7 +54,7 @@ class Home {
             open_from_best_seller.forEach(element => {
                 element.addEventListener("click", () => {
                     material.setMaterialSelected("Dye Sub polyester");
-                    customizeLanyard.setCurrentSectionOpen(8);
+                  //  customizeLanyard.setCurrentSectionOpen(8);
                     homeClass.openLanyard();
                     // Show an alert with predefined lanyard options
                     alert(
