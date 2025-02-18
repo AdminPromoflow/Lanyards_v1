@@ -7,6 +7,8 @@ class AccessoriesHome {
     this.addClickEvent(".box_accessories_home_rigid_card_holder");
     this.addBuyEvent(".buy_accessory");
     this.addToCartEvent(".add_to_cart_accessory");
+    this.addArrowsEvent(".container_accessories_home_arrow");
+
   }
 
   // Function to handle border selection and set first element as default
@@ -40,6 +42,14 @@ class AccessoriesHome {
     cartButtons.forEach(button => {
       button.addEventListener("click", () => {
         alert("Your product has been added to the basket");
+      });
+    });
+  }
+  addArrowsEvent(selector){
+    const arrows = document.querySelectorAll(selector);
+    arrows.forEach(button => {
+      button.addEventListener("click", () => {
+        alert("Checkedt");
       });
     });
   }

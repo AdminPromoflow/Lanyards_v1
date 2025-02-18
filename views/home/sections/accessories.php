@@ -12,7 +12,7 @@ $accessories_home_js = "../../views/assets/js/home/sections/accessories.js";
 <section id="accessories_home" class="accessories_home">
   <h1>Accessories</h1>
 
-  <div class="container_accessories_home_arrow_left">
+  <div class="container_accessories_home_arrow_left container_accessories_home_arrow">
     <img src="<?php echo '../../views/assets/img/home/accessories/arrow_top.png?v=' . accessories_home_file_version('../../views/assets/img/home/accessories/arrow_top.png'); ?>" alt="">
   </div>
 
@@ -84,7 +84,7 @@ $accessories_home_js = "../../views/assets/js/home/sections/accessories.js";
 
   </div>
 
-  <div class="container_accessories_home_arrow_right">
+  <div class="container_accessories_home_arrow_right container_accessories_home_arrow">
     <img src="<?php echo '../../views/assets/img/home/accessories/arrow_top.png?v=' . accessories_home_file_version('../../views/assets/img/home/accessories/arrow_top.png'); ?>" alt="">
   </div>
 
