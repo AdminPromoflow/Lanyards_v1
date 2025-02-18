@@ -110,10 +110,10 @@
 
 
 .container_accessories_home_arrow_left img:hover{
-  filter: drop-shadow(1px 1px 2px black);
+  filter: drop-shadow(3px 3px 2px black);
 }
 .container_accessories_home_arrow_right img:hover{
-  filter: drop-shadow(1px 1px 2px black);
+  filter: drop-shadow(3px 3px 2px black);
 }
 
 
