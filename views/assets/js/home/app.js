@@ -24,8 +24,8 @@
         }
 class Home {
   constructor() {
-    for (let i = 0; i < openCustomizeLanyardFromMaterials.length; i++) {
-      openCustomizeLanyardFromMaterials[i].addEventListener("click", function(){
+    for (let i = 0; i < open_from_scratch_in_home.length; i++) {
+      open_from_scratch_in_home[i].addEventListener("click", function(){
         material.setMaterialSelected(material_for_select[i].innerText);
         //material_for_select
         homeClass.openLanyardFromScratch();
