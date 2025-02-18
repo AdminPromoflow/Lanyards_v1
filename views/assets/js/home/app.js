@@ -1,160 +1,144 @@
+// Function to handle smooth scrolling with acceleration and deceleration
+let velocity = 0; // Stores the scrolling speed
+let previousY = window.scrollY; // Keeps track of the last scroll position
 
-// Función para manejar el scroll suave y respuesta rápida
-        let isScrolling = false;
-        let velocity = 0;
-        let previousY = 0;
+function handleScroll() {
+    requestAnimationFrame(() => {
+        const currentY = window.scrollY; // Get current scroll position
+        const deltaY = currentY - previousY; // Calculate scroll difference
 
-        function handleScroll() {
-        if (!isScrolling) {
-          requestAnimationFrame(() => {
-            const currentY = window.scrollY;
-            const deltaY = currentY - previousY;
+        // Apply acceleration to the scroll movement
+        velocity += deltaY * 0.05;
+        // Apply gradual deceleration
+        velocity *= 0.9;
 
-            // Agregar aceleración
-            velocity += deltaY * 0.05;
-            // Aplicar desaceleración gradual
-            velocity *= 0.0;
-
-            window.scrollBy(0, velocity);
-
-            previousY = currentY;
-            isScrolling = false;
-          });
-        }
-        }
-class Home {
-  constructor() {
-    for (let i = 0; i < open_from_scratch_in_home.length; i++) {
-      open_from_scratch_in_home[i].addEventListener("click", function(){
-        material.setMaterialSelected(material_for_select[i].innerText);
-        //material_for_select
-        homeClass.openLanyardFromScratch();
-
-
-      })
-    }
-
-
-
-
-    for (let i = 0; i < open_from_scratch.length; i++) {
-      open_from_scratch[i].addEventListener("click", function(){
-        homeClass.openLanyardFromScratch();
-
-
-      })
-    }
-
-
-
-    for (let i = 0; i < open_from_best_seller.length; i++) {
-      open_from_best_seller[i].addEventListener("click", function(){
-        homeClass.openLanyardFromBestSeller();
-
-
-      })
-    }
-
-
-
-
-
-
-  }
-  openLanyardFromScratch(){
-    priceClass.setAmountSelected(1000);
-    material.updatePriceMaterial();
-    widthClass.updatePriceWidth();
-
-    const url = "../../controller/lanyard/material.php";
-    const data = {
-      action: "setMaterialSelected",
-      optionSelected: material.getMaterialSelected(),
-      amountSelected: priceClass.getAmountSelected()
-    };
-
-
-
-
-
-    material.setMaterialSelected(material.getMaterialSelected());
-    // Show the selected material.
-    material.showSelectedMaterial();
-
-    // Show the selected preview material.
-    previewMaterial.showSelectedPreviewtMaterial(material.getMaterialSelected());
-
-    // Update material prices.
-    material.updatePriceMaterial();
-
-    material.makeAjaxRequestSetMaterialSelected(url, data);
-
-    customizeLanyard.openCustomizeLanyard(true);
-
-    customizeLanyard.setStateVisibilityPanelCustomeLanyard (true);
-  }
-
-
-
-
-
-  openLanyardFromBestSeller(){
-    priceClass.setAmountSelected(1000);
-    material.updatePriceMaterial();
-    widthClass.updatePriceWidth();
-
-    const url = "../../controller/lanyard/material.php";
-    const data = {
-      action: "setMaterialSelected",
-      optionSelected: "Dye Sub polyester",
-      amountSelected: priceClass.getAmountSelected()
-    };
-
-
-
-
-
-    material.setMaterialSelected("Dye Sub polyester");
-    // Show the selected material.
-    material.showSelectedMaterial();
-
-    // Show the selected preview material.
-    previewMaterial.showSelectedPreviewtMaterial(material.getMaterialSelected());
-
-    // Update material prices.
-    material.updatePriceMaterial();
-
-    material.makeAjaxRequestSetMaterialSelected(url, data);
-
-    customizeLanyard.openCustomizeLanyard(true);
-
-    customizeLanyard.setStateVisibilityPanelCustomeLanyard (true);
-
-
-    alert(
-    "We have set up the most popular lanyard options:\n\n" +
-    "-----------------------------------\n" +
-    "Material: Dye-sublimation\n" +
-    "Type of lanyard: Single ended\n" +
-    "Width: 20mm\n" +
-    "Colour: Full\n" +
-    "-----------------------------------\n" +
-    "You can continue adding the design inside the lanyard.\n\n" +
-    "Remember, you can always change these options by clicking on Preview."
-  );
-
-    customizeLanyard.currentSectionOpen = 8;
-    previewMaterial.showMaterialPreview("none");
-    customizeLanyard.showPreview(true);
-    customizeLanyard.openArtWorkManual();
-  }
+        window.scrollBy(0, velocity); // Move the page according to velocity
+        previousY = currentY; // Update previous position
+    });
 }
+
+// Add event listener to detect scrolling and trigger the smooth effect
+window.addEventListener("scroll", handleScroll);
+
+class Home {
+    constructor() {
+        this.initEventListeners(); // Initialize event listeners on page load
+    }
+
+    /**
+     * Initializes event listeners for buttons that open lanyard customization.
+     */
+    initEventListeners() {
+        // Check if elements exist before adding event listeners
+        if (open_from_scratch_in_home.length > 0) {
+            open_from_scratch_in_home.forEach((element, index) => {
+                element.addEventListener("click", () => {
+                    material.setMaterialSelected(material_for_select[index].innerText);
+                    homeClass.openLanyardFromScratch();
+                });
+            });
+        }
+
+        if (open_from_scratch.length > 0) {
+            open_from_scratch.forEach(element => {
+                element.addEventListener("click", () => {
+                    homeClass.openLanyardFromScratch();
+                });
+            });
+        }
+
+        if (open_from_best_seller.length > 0) {
+            open_from_best_seller.forEach(element => {
+                element.addEventListener("click", () => {
+                    homeClass.openLanyardFromBestSeller();
+                });
+            });
+        }
+    }
+
+    /**
+     * Opens the lanyard customization process with default settings.
+     */
+    openLanyardFromScratch() {
+        // Set default amount and update material prices
+        priceClass.setAmountSelected(1000);
+        material.updatePriceMaterial();
+        widthClass.updatePriceWidth();
+
+        // Prepare data for AJAX request
+        const url = "../../controller/lanyard/material.php";
+        const data = {
+            action: "setMaterialSelected",
+            optionSelected: material.getMaterialSelected(),
+            amountSelected: priceClass.getAmountSelected()
+        };
+
+        // Apply selected material
+        material.setMaterialSelected(material.getMaterialSelected());
+        material.showSelectedMaterial();
+        previewMaterial.showSelectedPreviewtMaterial(material.getMaterialSelected());
+        material.updatePriceMaterial();
+        material.makeAjaxRequestSetMaterialSelected(url, data);
+
+        // Open the customization panel
+        customizeLanyard.openCustomizeLanyard(true);
+        customizeLanyard.setStateVisibilityPanelCustomeLanyard(true);
+    }
+
+    /**
+     * Opens the customization process with pre-configured "Best Seller" settings.
+     */
+    openLanyardFromBestSeller() {
+        // Set default amount and update material prices
+        priceClass.setAmountSelected(1000);
+        material.updatePriceMaterial();
+        widthClass.updatePriceWidth();
+
+        // Prepare data for AJAX request
+        const url = "../../controller/lanyard/material.php";
+        const data = {
+            action: "setMaterialSelected",
+            optionSelected: "Dye Sub polyester",
+            amountSelected: priceClass.getAmountSelected()
+        };
+
+        // Apply "Best Seller" material settings
+        material.setMaterialSelected("Dye Sub polyester");
+        material.showSelectedMaterial();
+        previewMaterial.showSelectedPreviewtMaterial(material.getMaterialSelected());
+        material.updatePriceMaterial();
+        material.makeAjaxRequestSetMaterialSelected(url, data);
+
+        // Open the customization panel
+        customizeLanyard.openCustomizeLanyard(true);
+        customizeLanyard.setStateVisibilityPanelCustomeLanyard(true);
+
+        // Show an alert with predefined lanyard options
+        alert(
+            "We have set up the most popular lanyard options:\n\n" +
+            "-----------------------------------\n" +
+            "Material: Dye-sublimation\n" +
+            "Type of lanyard: Single ended\n" +
+            "Width: 20mm\n" +
+            "Colour: Full\n" +
+            "-----------------------------------\n" +
+            "You can continue adding the design inside the lanyard.\n\n" +
+            "Remember, you can always change these options by clicking on Preview."
+        );
+
+        // Update UI state
+        customizeLanyard.currentSectionOpen = 8;
+        previewMaterial.showMaterialPreview("none");
+        customizeLanyard.showPreview(true);
+        customizeLanyard.openArtWorkManual();
+    }
+}
+
+// Selectors for buttons and material options
 const open_from_scratch = document.querySelectorAll(".open_from_scratch");
-
 const open_from_best_seller = document.querySelectorAll(".open_from_best_seller");
-
 const open_from_scratch_in_home = document.querySelectorAll(".open_from_scratch_in_home");
-
 const material_for_select = document.querySelectorAll(".material_for_select");
 
+// Initialize Home class
 const homeClass = new Home();
