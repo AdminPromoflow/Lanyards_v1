@@ -50,21 +50,46 @@ class AccessoriesHome {
       const arrows = document.querySelectorAll(selector);
       const container_accessories_home = document.getElementById("container_accessories_home");
 
+      if (arrows.length < 2) {
+          console.error("At least two arrows are required.");
+          return;
+      }
+
       arrows.forEach(button => {
           button.addEventListener("click", () => {
-              // Forzar actualización del scroll después de un pequeño retraso
+              // Delay the check to ensure scroll has been updated
               setTimeout(() => {
-                  const scrollLeft = container_accessories_home.scrollLeft;
-                  const maxScrollLeft = container_accessories_home.scrollWidth - container_accessories_home.clientWidth;
-
-                  if (scrollLeft <= 0) {
-                      alert("Estás al inicio");
-                  } else if (scrollLeft >= maxScrollLeft - 1) { // Se resta 1 para compensar posibles diferencias de cálculo
-                      alert("Estás al final");
-                  }
-              }, 100); // Pequeño retraso para asegurar que el scroll haya terminado
+                  this.checkScrollPosition(container_accessories_home, arrows);
+              }, 100);
           });
       });
+
+      // Initial check on page load
+      this.checkScrollPosition(container_accessories_home, arrows);
+
+      // Also listen for manual scrolling
+      container_accessories_home.addEventListener("scroll", () => {
+          this.checkScrollPosition(container_accessories_home, arrows);
+      });
+  }
+
+  checkScrollPosition(container, arrows) {
+      const scrollLeft = container.scrollLeft;
+      const maxScrollLeft = container.scrollWidth - container.clientWidth;
+
+      if (scrollLeft <= 0) {
+          // At the beginning: Hide left arrow, show right arrow
+          arrows[0].style.display = "none";
+          arrows[1].style.display = "block";
+      } else if (scrollLeft >= maxScrollLeft - 1) {
+          // At the end: Show left arrow, hide right arrow
+          arrows[0].style.display = "block";
+          arrows[1].style.display = "none";
+      } else {
+          // Somewhere in the middle: Show both arrows
+          arrows[0].style.display = "block";
+          arrows[1].style.display = "block";
+      }
   }
 
 
