@@ -290,8 +290,8 @@ class CustomizeLanyard {
 
      customizeLanyard.showCurrentSection(this.currentSectionOpen);
 
-     const preview = document.getElementById("preview");
-     preview.style.display = "block";
+     customizeLanyard.showPreview(true);
+
    }
    openWidth(){
      customizeLanyard.showCurrentSection(this.currentSectionOpen);
@@ -330,12 +330,12 @@ class CustomizeLanyard {
 
      previewColourClass.showColourPreview("none");
      previewMaterial.showMaterialPreview("none");
-     customizeLanyard.showPreview(true);
-
      previewArtworkManualClass.showArtworkManualPreview("flex");
      previewLanyardType.showTypeLanyardPreview("none");
      artworkPreviewClass.showHidePreviewArtwork(false);
      customizeLanyard.showCurrentSection(this.currentSectionOpen);
+     customizeLanyard.showPreview(true);
+
    }
   openBackgroundColour() {
     previewAccessoriesClass.showAccessoriesPreview("flex");
