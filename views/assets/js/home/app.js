@@ -105,7 +105,7 @@ class Home {
      */
     openLanyardFromBestSeller(){
         // Set default amount and update material prices
-      //  this.setOriginValues(); 
+      //  this.setOriginValues();
         priceClass.setAmountSelected(1000);
 
         material.refreshMaterial();
@@ -138,7 +138,18 @@ class Home {
     } else {
         console.error("Material seleccionado no encontrado en el JSON.");
     }
-}
+  }
+    setOriginValuesBestSeller() {
+
+
+        material.setMaterialSelected("Dye Sub polyester");
+        oneTwoEndsClass.setTypeLanyardSelected("one-end");
+        widthClass.setWidthSelected("20mm");
+        sidePrintedClass.setSidePrintedSelected("two-side");
+        colourClass.setColourSelected("two-colour");
+        clipClass.setClipSelected("dog_clip");
+
+    }
 
 }
 
