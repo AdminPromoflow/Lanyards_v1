@@ -35,6 +35,8 @@ class Home {
                 element.addEventListener("click", () => {
                     material.setMaterialSelected(material_for_select[index].innerText);
                     homeClass.openLanyard();
+                    customizeLanyard.openMaterial();
+
                 });
             });
         }
@@ -44,6 +46,8 @@ class Home {
                 element.addEventListener("click", () => {
                   //  customizeLanyard.setCurrentSectionOpen(0);
                     homeClass.openLanyard();
+                    customizeLanyard.openMaterial();
+
                 });
             });
         }
