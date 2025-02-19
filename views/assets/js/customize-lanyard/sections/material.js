@@ -238,12 +238,12 @@ class Material {
     }
 
 
-    // Set the selected material.
+    // Material
     this.setMaterialSelected(materialSelected);
-
-
-    // Make an AJAX request to set the selected material.
     this.refreshMaterial();
+
+    // width
+    widthClass.recalculateWidthData();
   }
 
   refreshMaterial(){
