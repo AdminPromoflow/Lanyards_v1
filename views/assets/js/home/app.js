@@ -105,7 +105,7 @@ class Home {
      */
     openLanyardFromBestSeller(){
         // Set default amount and update material prices
-        this.setOriginValues();
+      //  this.setOriginValues(); 
         priceClass.setAmountSelected(1000);
 
         material.refreshMaterial();
@@ -122,17 +122,24 @@ class Home {
 
     }
 
-    setOriginValues(){
-      var json = customizeLanyard.getJsonLanyards();
-      material.setMaterialSelected(json[0].materials.material);
-      oneTwoEndsClass.setTypeLanyardSelected(json[0].materials.lanyardType[1].type);
-      widthClass.setWidthSelected(json[0].materials.width[0].width);
-      sidePrintedClass.setSidePrintedSelected(json[0].materials.width[0].sidePrinted[0].noSides);
-      colourClass.setColourSelected(json[0].materials.width[0].sidePrinted[0].noColours[0].noColour);
-      clipClass.setClipSelected(json[0].materials.width[0].clips[0].name);
+    setOriginValues() {
+    var json = customizeLanyard.getJsonLanyards();
+    var selectedMaterial = material.getMaterialSelected();
 
-      //console.log(`Material: ${firstMaterial}, Lanyard Type: ${secondLanyardType}, Width: ${firstWidth}, NoSides: ${firstNoSides}, NoColour: ${firstNoColour}, Clip: ${firstClip}`);
+    // Encontrar el índice del material seleccionado
+    var i = json.findIndex(item => item.materials.material === selectedMaterial);
+
+    if (i !== -1) { // Verifica que el material seleccionado existe
+        oneTwoEndsClass.setTypeLanyardSelected(json[i].materials.lanyardType[1].type);
+        widthClass.setWidthSelected(json[i].materials.width[0].width);
+        sidePrintedClass.setSidePrintedSelected(json[i].materials.width[0].sidePrinted[0].noSides);
+        colourClass.setColourSelected(json[i].materials.width[0].sidePrinted[0].noColours[0].noColour);
+        clipClass.setClipSelected(json[i].materials.width[0].clips[0].name);
+    } else {
+        console.error("Material seleccionado no encontrado en el JSON.");
     }
+}
+
 }
 
 // Selectors for buttons and material options
