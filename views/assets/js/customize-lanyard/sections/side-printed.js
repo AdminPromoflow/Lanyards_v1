@@ -16,13 +16,13 @@ class SidePrinted {
 
 
     // Get the available side printed options
-    let sidePrintedAvailable = sidePrintedClass.updatePriceSidePrinted();
+     this.updatePriceSidePrinted();
 
 
     // Iterate through the available side printed options and draw them
-    for (var i = 0; i < sidePrintedAvailable.length; i++) {
+  /*  for (var i = 0; i < sidePrintedAvailable.length; i++) {
       this.drawSidePrintedAvailable(sidePrintedAvailable[i], i);
-    }
+    }*/
   }
   refreshSidePrintedData(){
     chargingClass.hideShowchargin(true);
