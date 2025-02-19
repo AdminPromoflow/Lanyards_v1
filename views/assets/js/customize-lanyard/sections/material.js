@@ -242,21 +242,12 @@ class Material {
     }
 
 
-
-    const url = "../../controller/lanyard/material.php";
-    const data = {
-      action: "setMaterialSelected",
-      optionSelected: materialSelected,
-      amountSelected: priceClass.getAmountSelected()
-    };
-
-
     // Set the selected material.
     this.setMaterialSelected(materialSelected);
 
 
     // Make an AJAX request to set the selected material.
-    this.makeAjaxRequestSetMaterialSelected(url, data);
+    this.refreshMaterial();
   }
 
   refreshMaterial(){
@@ -298,7 +289,7 @@ class Material {
       })
       .then(data => {
         // Parse the response data as JSON
-        data = JSON.parse(data);
+      /*  data = JSON.parse(data);
         this.setJsonMaterials(data["jsonDataByMaterial"]);
 
         oneTwoEndsClass.setJsonLanyardType(data["allLanyardTypes"]);
@@ -313,7 +304,7 @@ class Material {
         clipClass.selectClip();
 
         colourClass.setColourSelected(data["noColourSelected"]);
-        colourClass.recalculateColourData();
+        colourClass.recalculateColourData();*/
   })
       .catch(error => {
         // Log any errors to the console
