@@ -31,7 +31,7 @@ class SidePrinted {
 
 
   updatePriceSidePrinted(){
-    alert(JSON.stringify(sidePrintedAvailable + "ahi vamos"));
+    alert(JSON.stringify("hola" + "ahi vamos"));
 
     var json = customizeLanyard.getJsonLanyards();
     var materialSelected = material.getMaterialSelected();
