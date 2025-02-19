@@ -251,9 +251,11 @@ class Material {
   }
 
   refreshMaterial(){
+    chargingClass.hideShowchargin(true);
     this.showSelectedMaterial();
     this.updatePriceMaterial();
     previewMaterial.showSelectedPreviewtMaterial(this.getMaterialSelected());
+    chargingClass.hideShowchargin(false);
   }
 
   // Function to display the selected material.

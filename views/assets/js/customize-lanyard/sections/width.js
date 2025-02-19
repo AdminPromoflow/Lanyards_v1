@@ -185,10 +185,11 @@ class Width {
 
 
   refreshWidth(){
+    chargingClass.hideShowchargin(true);
     this.updateWidth();
     this.updatePriceWidth();
     this.showSelectedWidth();
-    // Update the price based on the width
+    chargingClass.hideShowchargin(false);
   }
   cleanWidth(){
     containersBoxesWidth.innerHTML = "";
