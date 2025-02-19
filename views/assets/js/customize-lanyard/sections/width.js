@@ -186,7 +186,7 @@ class Width {
 
   refreshWidth(){
     this.updateWidth();
-  //  this.updatePriceWidth();
+    this.updatePriceWidth();
     this.showSelectedWidth();
     // Update the price based on the width
   }
