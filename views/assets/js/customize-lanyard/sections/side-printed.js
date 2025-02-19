@@ -12,6 +12,7 @@ class SidePrinted {
   }
   updateSidePrinted(){
     // Clean the side printed options
+    alert("entramos");
     this.cleanSidePrinted();
 
 
