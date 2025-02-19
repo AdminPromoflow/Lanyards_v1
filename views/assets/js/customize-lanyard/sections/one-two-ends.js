@@ -29,8 +29,6 @@ class OneTwoEnds {
         var data = json.find(item => item.materials.material === materialSelected)?.materials.lanyardType || [];
 
         console.log(data);
-
-      var data = this.getJsonLanyardType();
       // Clean the oneTwoEnds options
       this.cleanOneTwoEnds();
 
@@ -39,7 +37,6 @@ class OneTwoEnds {
         this.createOneTwoEnds(data[i]);
       }
 
-      // Display the selected "one" or "two" ends
     }
 
   showSelectedOneTwoEnds(){
