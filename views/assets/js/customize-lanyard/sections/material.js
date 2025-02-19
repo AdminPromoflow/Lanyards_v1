@@ -1,13 +1,11 @@
 // Define a class named Material.
 class Material {
-
   // Constructor method.
   constructor() {
     // Initialize the materialSelected property to "Tubular".
     this.materialSelected = "Tubular";
     // Initialize an empty object to store JSON materials.
     var jsonMaterials = {};
-
   }
 
   // Setter method for the materialSelected property.
@@ -20,12 +18,10 @@ class Material {
     return this.materialSelected;
   }
 
-
   // Setter method to set the JSON materials.
  setJsonMaterials(jsonMaterials) {
    this.jsonMaterials = jsonMaterials;
  }
-
 
   // Getter method to get the JSON materials.
   getJsonMaterials() {
@@ -71,17 +67,17 @@ class Material {
       });
   }
 
-      selecteMaterial(data){
-        var data = customizeLanyard.getJsonLanyards();
-        // Clear the container for materials
-        containersBoxesMaterial.innerHTML = "";
-        // Set the fetched JSON materials
-        //material.setJsonMaterials(data);
-        // Iterate through the lanyards and create materials HTML elements
-        for (var i = 0; i < data.length; i++) {
-          material.createMaterials(data[i]["materials"]);
-        }
-      }
+  selecteMaterial(data){
+    var data = customizeLanyard.getJsonLanyards();
+    // Clear the container for materials
+    containersBoxesMaterial.innerHTML = "";
+    // Set the fetched JSON materials
+    //material.setJsonMaterials(data);
+    // Iterate through the lanyards and create materials HTML elements
+    for (var i = 0; i < data.length; i++) {
+      material.createMaterials(data[i]["materials"]);
+    }
+  }
 
   // Function to create materials HTML elements.
   createMaterials(data, price) {
@@ -251,73 +247,8 @@ class Material {
   }
 
   refreshMaterial(){
-    // Prepare data for AJAX request
-  /*  const url = "../../controller/lanyard/material.php";
-    const data = {
-        action: "setMaterialSelected",
-        optionSelected: material.getMaterialSelected(),
-        amountSelected: priceClass.getAmountSelected()
-    };*/
-
-    // Apply "Best Seller" material settings
-    material.updatePriceMaterial();
-    material.showSelectedMaterial();
-    previewMaterial.showSelectedPreviewtMaterial(material.getMaterialSelected());
-    material.updatePriceMaterial();
-  //  material.makeAjaxRequestSetMaterialSelected(url, data);
-    this.recalculateMaterialData();
-
-  }
-
-  // Function to make an AJAX request to set the selected material.
-  makeAjaxRequestSetMaterialSelected(url, data) {
-    // Make a fetch request to the given URL with the specified data
-    fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(data)
-    })
-      .then(response => {
-        // Check if the response is okay, if so, return the response text
-        if (response.ok) {
-          return response.text();
-        }
-        // If the response is not okay, throw an error
-        throw new Error("Network error.");
-      })
-      .then(data => {
-        // Parse the response data as JSON
-      /*  data = JSON.parse(data);
-        this.setJsonMaterials(data["jsonDataByMaterial"]);
-
-        oneTwoEndsClass.setJsonLanyardType(data["allLanyardTypes"]);
-        oneTwoEndsClass.recalculateLanyardTypeData();
-
-        widthClass.setJsonWidth(data["allWidth"]);
-        widthClass.recalculateWidthData();
-
-        sidePrintedClass.setSidePrintedSelected(data["sidePrintedSelected"]);
-        sidePrintedClass.recalculateSidePrintedData();
-
-        clipClass.selectClip();
-
-        colourClass.setColourSelected(data["noColourSelected"]);
-        colourClass.recalculateColourData();*/
-  })
-      .catch(error => {
-        // Log any errors to the console
-        console.error("Error:", error);
-      });
-  }
-
-  recalculateMaterialData(){
-
-    // Show the selected material.
     this.showSelectedMaterial();
-
-    // Show the selected preview material.
+    this.updatePriceMaterial();
     previewMaterial.showSelectedPreviewtMaterial(this.getMaterialSelected());
   }
 
