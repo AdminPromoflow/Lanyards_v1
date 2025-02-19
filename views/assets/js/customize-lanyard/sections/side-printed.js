@@ -17,7 +17,6 @@ class SidePrinted {
 
     // Get the available side printed options
     let sidePrintedAvailable = this.updatePriceSidePrinted();
-    alert(JSON.stringify(sidePrintedAvailable));
 
 
     // Iterate through the available side printed options and draw them
@@ -34,6 +33,8 @@ class SidePrinted {
 
 
   updatePriceSidePrinted(){
+    alert(JSON.stringify("hi3"));
+
     alert(JSON.stringify("hola" + "ahi vamos"));
 
     var json = customizeLanyard.getJsonLanyards();
