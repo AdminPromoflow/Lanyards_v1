@@ -25,7 +25,7 @@ $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
         <img src="<?= $imgPath1 ?>?v=<?= $imgVersion1; ?>" alt="">
       </div>
       <div class="containerTextMaterialsBox">
-        <h3 class="material_for_select">Create your own lanyard</h3>
+        <h3 class="material_for_select">Ribbed Polyester</h3>
       </div>
       <div class="buttonMaterialsBox">
         <button class="open_from_scratch_in_home" type="button">Select</button>
