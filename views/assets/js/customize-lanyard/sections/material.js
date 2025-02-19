@@ -245,6 +245,9 @@ class Material {
     // Lanyard Type
     oneTwoEndsClass.refreshLanyardType();
 
+    widthClass.refreshWidth();
+
+
   }
 
   refreshMaterial(){

@@ -28,23 +28,22 @@ class Width {
     ;
   }
 
-  selectWidth(){
-    var data = this.getJsonWidth();
-    // Clean the width options
-    widthClass.cleanWidth();
+  updateWidth() {
+      var json = customizeLanyard.getJsonLanyards();
+      var materialSelected = material.getMaterialSelected();
 
-    // Iterate through the allWidth and create width elements
-    for (var i = 0; i < data.length; i++) {
-      widthClass.createWidth(data[i], i);
-    }
+      // Busca el material seleccionado y obtiene la lista de width
+      var data = json.find(item => item.materials.material === materialSelected)?.materials.width || [];
 
-    // Update the price based on the width
-    widthClass.updatePriceWidth();
+      // Limpia las opciones de ancho
+      widthClass.cleanWidth();
 
-    // Show the selected width
-    widthClass.showSelectedWidth();
-
+      // Itera sobre los anchos disponibles y crea los elementos correspondientes
+      for (var i = 0; i < data.length; i++) {
+          widthClass.createWidth(data[i], i);
+      }
   }
+
 
   searchDataWidthSelected(width, index) {
 
@@ -185,8 +184,11 @@ class Width {
 
 
 
-  recalculateWidthData(){
-    this.selectWidth();
+  refreshWidth(){
+    this.updateWidth();
+  //  this.updatePriceWidth();
+    this.showSelectedWidth();
+    // Update the price based on the width
   }
   cleanWidth(){
     containersBoxesWidth.innerHTML = "";

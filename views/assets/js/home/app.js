@@ -82,34 +82,34 @@ class Home {
     openLanyard() {
         // Set default amount and update material prices
         priceClass.setAmountSelected(1000);
-        widthClass.updatePriceWidth();
 
         material.refreshMaterial();
         oneTwoEndsClass.refreshLanyardType();
+
+        widthClass.updatePriceWidth();
 
 
         // Open the customization panel
         customizeLanyard.openCustomizeLanyard(true);
         customizeLanyard.setCurrentSectionOpen(0);
-
         customizeLanyard.setStateVisibilityPanelCustomeLanyard(true);
     }
 
     /**
      * Opens the customization process with pre-configured "Best Seller" settings.
      */
-    openLanyardFromBestSeller() {
+    openLanyardFromBestSeller(){
         // Set default amount and update material prices
         priceClass.setAmountSelected(1000);
-        widthClass.updatePriceWidth();
 
         material.refreshMaterial();
         oneTwoEndsClass.refreshLanyardType();
 
+        widthClass.updatePriceWidth();
+
         // Open the customization panel
         customizeLanyard.openCustomizeLanyard(true);
         customizeLanyard.setCurrentSectionOpen(8);
-
         customizeLanyard.setStateVisibilityPanelCustomeLanyard(true);
 
     }
