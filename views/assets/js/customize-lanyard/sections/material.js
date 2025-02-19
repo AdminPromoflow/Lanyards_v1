@@ -274,6 +274,8 @@ class Material {
     previewMaterial.showSelectedPreviewtMaterial(material.getMaterialSelected());
     material.updatePriceMaterial();
     material.makeAjaxRequestSetMaterialSelected(url, data);
+    this.recalculateMaterialData();
+
   }
 
   // Function to make an AJAX request to set the selected material.
@@ -297,8 +299,7 @@ class Material {
       .then(data => {
         // Parse the response data as JSON
         data = JSON.parse(data);
-        this.setJsonMaterials(data["jsonDataByMaterial"]);
-        this.recalculateMaterialData();
+      //  this.setJsonMaterials(data["jsonDataByMaterial"]);
 
       /*  oneTwoEndsClass.setJsonLanyardType(data["allLanyardTypes"]);
         oneTwoEndsClass.recalculateLanyardTypeData();
