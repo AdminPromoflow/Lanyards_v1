@@ -1,18 +1,18 @@
 <?php
 // Function to get the last modified timestamp of the file
-function get_customize_lanyard_file_version($filePath) {
+function get_colour_preview_file_version($filePath) {
     if (file_exists($filePath)) {
         return filemtime($filePath);
     }
-    return time(); // If the file doesn't exist, return current timestamp
+    return time(); // If the file doesn't exist, return the current timestamp
 }
 
-$customize_lanyard_css = "../../views/assets/css/global/customize-lanyard/sections2/preview-colour.css";
-$customize_lanyard_js = "../../views/assets/js/customize-lanyard/sections2/preview-colour.js";
+$colour_preview_css = "../../views/assets/css/global/customize-lanyard/sections2/preview-colour.css";
+$colour_preview_js = "../../views/assets/js/customize-lanyard/sections2/preview-colour.js";
 ?>
 
 <!-- Link CSS with versioning -->
-<link rel="stylesheet" href="<?php echo $customize_lanyard_css . '?v=' . get_customize_lanyard_file_version($customize_lanyard_css); ?>">
+<link rel="stylesheet" href="<?php echo $colour_preview_css . '?v=' . get_colour_preview_file_version($colour_preview_css); ?>">
 
 <section id="preview-colour-container" class="preview-colour-container">
   <!-- <h3>Tubular</h3>
@@ -26,4 +26,4 @@ $customize_lanyard_js = "../../views/assets/js/customize-lanyard/sections2/previ
 </section>
 
 <!-- Include JS with versioning -->
-<script src="<?php echo $customize_lanyard_js . '?v=' . get_customize_lanyard_file_version($customize_lanyard_js); ?>" type="text/javascript"></script>
+<script src="<?php echo $colour_preview_js . '?v=' . get_colour_preview_file_version($colour_preview_js); ?>" type="text/javascript"></script>
