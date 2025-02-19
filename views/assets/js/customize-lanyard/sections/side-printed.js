@@ -31,11 +31,10 @@ class SidePrinted {
 
 
   updatePriceSidePrinted(){
-    alert(("hi3"));
+    alert("entramos 3");
 
-    alert(("hola" + "ahi vamos"));
 
-    var json = customizeLanyard.getJsonLanyards();
+  /*  var json = customizeLanyard.getJsonLanyards();
     var materialSelected = material.getMaterialSelected();
     var widthSelected = widthClass.getWidthSelected();
 
@@ -71,7 +70,7 @@ class SidePrinted {
     }
 
 
-    return sidePrintedAvailable;
+    return sidePrintedAvailable;*/
   }
 
    updatePriceSidePrinted() {
@@ -173,7 +172,6 @@ class SidePrinted {
 
 
   cleanSidePrinted(){
-    alert("entramos 2");
 
     containerBoxSidePrinted.innerHTML = "";
   }
