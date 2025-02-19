@@ -84,6 +84,8 @@ class Home {
      */
     openLanyard() {
         // Set default amount and update material prices
+        this.setOriginValues();
+
         priceClass.setAmountSelected(1000);
 
         material.refreshMaterial();
@@ -103,6 +105,7 @@ class Home {
      */
     openLanyardFromBestSeller(){
         // Set default amount and update material prices
+        this.setOriginValues();
         priceClass.setAmountSelected(1000);
 
         material.refreshMaterial();
