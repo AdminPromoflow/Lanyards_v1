@@ -15,7 +15,7 @@ class SidePrinted {
     this.cleanSidePrinted();
 
     // Get the available side printed options
-    let sidePrintedAvailable = this.getDataSidePrintedAvailable();
+    let sidePrintedAvailable = this.updatePriceSidePrinted();
 
     // Iterate through the available side printed options and draw them
     for (var i = 0; i < sidePrintedAvailable.length; i++) {
