@@ -18,8 +18,6 @@ class SidePrinted {
 
     // Get the available side printed options
     let sidePrintedAvailable = this.updateEachPriceSidePrinted();
-
-    alert(sidePrintedAvailable.length);
     // Iterate through the available side printed options and draw them
     for (var i = 0; i < sidePrintedAvailable.length; i++) {
       this.drawSidePrintedAvailable(sidePrintedAvailable[i], i);
@@ -67,6 +65,8 @@ class SidePrinted {
     this.showSelectedSidePrinted();
     this.updateEachPriceSidePrinted();
     previewSidePrinted.showSelectedPreviewtTemplate();
+    previewSidePrinted.showSelectedPreviewtTemplate();
+
   }
 
 

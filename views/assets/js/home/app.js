@@ -118,6 +118,11 @@ class Home {
         customizeLanyard.setStateVisibilityPanelCustomeLanyard(true);
 
     }
+
+    setOriginValues(){
+      var json = customizeLanyard.getJsonLanyards();
+      console.log(JSON.stringify(json));
+    }
 }
 
 // Selectors for buttons and material options

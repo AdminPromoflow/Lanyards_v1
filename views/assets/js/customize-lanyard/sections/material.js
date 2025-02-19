@@ -19,7 +19,7 @@ class Material {
   }
 
   // Setter method to set the JSON materials.
- setJsonMaterials(jsonMaterials) {
+  setJsonMaterials(jsonMaterials) {
    this.jsonMaterials = jsonMaterials;
  }
 
@@ -240,7 +240,7 @@ class Material {
 
     // Material
     this.setMaterialSelected(materialSelected);
-    
+
     this.refreshMaterial();
     oneTwoEndsClass.refreshLanyardType();
     widthClass.refreshWidth();
