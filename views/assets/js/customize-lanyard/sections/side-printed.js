@@ -24,14 +24,14 @@ class SidePrinted {
   }
   refreshSidePrintedData(){
     chargingClass.hideShowchargin(true);
-    this.selectSidePrinted();
     this.updateSidePrinted();
+    this.updatePriceSidePrinted();
     this.showSelectedSidePrinted();
     chargingClass.hideShowchargin(false);
   }
 
 
-  getDataSidePrintedAvailable(){
+  updatePriceSidePrinted(){
     var json = customizeLanyard.getJsonLanyards();
     var materialSelected = material.getMaterialSelected();
     var widthSelected = widthClass.getWidthSelected();
