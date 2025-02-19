@@ -24,9 +24,11 @@ class OneTwoEnds {
     updateLanyardType(){
       var json = customizeLanyard.getJsonLanyards();
 
-      console.log(JSON.stringify(json));
-    //  var jsonMaterial = json.find(item => item.materials.material === materialSelected);
+      var materialSelected = material.getMaterialSelected();
 
+        var data = json.find(item => item.materials.material === materialSelected)?.materials.lanyardType || [];
+
+        console.log(data);
 
       var data = this.getJsonLanyardType();
       // Clean the oneTwoEnds options
