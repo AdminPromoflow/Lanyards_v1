@@ -25,7 +25,44 @@ class SidePrinted {
     }*/
   }
   updateEachPriceSidePrinted(){
-    alert("entramos 4");
+    alert("buenas");
+    var json = customizeLanyard.getJsonLanyards();
+     var materialSelected = material.getMaterialSelected();
+     var widthSelected = widthClass.getWidthSelected();
+
+     let sidePrintedAvailable = [];
+     // Iterating through each item in the JSON array
+     for (let i = 0; i < json.length; i++) {
+         // Extracting the 'materials' array from the current JSON item
+         const material = json[i].materials.material;
+         // Checking if the material matches the selected material
+         if (material == materialSelected) {
+             // Extracting the 'widths' array from the current JSON item
+             const widths = json[i].materials.width;
+             // Iterating through each width in the 'widths' array
+             for (let j = 0; j < widths.length; j++) {
+                 // Extracting the 'width' value from the current width object
+                 const width = widths[j].width;
+
+                 if (width == widthSelected) {
+
+                     // Extracting the 'sidePrinted' array from the current width object
+                     const sidePrinted = widths[j].sidePrinted;
+
+                     // Iterating through each item in the 'sidePrinted' array
+                     for (let k = 0; k < sidePrinted.length; k++) {
+                         // Extracting the 'noSides' value from the current sidePrinted object
+                         const noSides = sidePrinted[k].noSides;
+
+                         sidePrintedAvailable[k] = sidePrinted[k].noSides;
+                     }
+                 }
+             }
+         }
+     }
+
+
+     return sidePrintedAvailable;
   }
   refreshSidePrintedData(){
     this.updateSidePrinted();
