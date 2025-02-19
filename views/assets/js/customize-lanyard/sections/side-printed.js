@@ -31,6 +31,8 @@ class SidePrinted {
 
 
   updatePriceSidePrinted(){
+    alert(JSON.stringify(sidePrintedAvailable + "ahi vamos"));
+
     var json = customizeLanyard.getJsonLanyards();
     var materialSelected = material.getMaterialSelected();
     var widthSelected = widthClass.getWidthSelected();
@@ -65,7 +67,6 @@ class SidePrinted {
             }
         }
     }
-    alert(JSON.stringify(sidePrintedAvailable + "ahi vamos"));
 
 
     return sidePrintedAvailable;
