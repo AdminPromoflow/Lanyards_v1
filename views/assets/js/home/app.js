@@ -124,7 +124,14 @@ class Home {
 
     setOriginValues(){
       var json = customizeLanyard.getJsonLanyards();
-      console.log(JSON.stringify(json));
+      material.setMaterialSelected(json[0].materials.material);
+      oneTwoEndsClass.setTypeLanyardSelected(json[0].materials.lanyardType[1].type);
+      widthClass.setWidthSelected(json[0].materials.width[0].width);
+      sidePrintedClass.setSidePrintedSelected(json[0].materials.width[0].sidePrinted[0].noSides);
+      colourClass.setColourSelected(json[0].materials.width[0].sidePrinted[0].noColours[0].noColour);
+      clipClass.setClipSelected(json[0].materials.width[0].clips[0].name);
+
+      //console.log(`Material: ${firstMaterial}, Lanyard Type: ${secondLanyardType}, Width: ${firstWidth}, NoSides: ${firstNoSides}, NoColour: ${firstNoColour}, Clip: ${firstClip}`);
     }
 }
 
