@@ -16,16 +16,15 @@ class SidePrinted {
 
 
     // Get the available side printed options
-     this.updateEachPriceSidePrinted();
+    let sidePrintedAvailable = this.updateEachPriceSidePrinted();
 
 
     // Iterate through the available side printed options and draw them
-  /*  for (var i = 0; i < sidePrintedAvailable.length; i++) {
+    for (var i = 0; i < sidePrintedAvailable.length; i++) {
       this.drawSidePrintedAvailable(sidePrintedAvailable[i], i);
-    }*/
+    }
   }
   updateEachPriceSidePrinted(){
-    alert("buenas");
     var json = customizeLanyard.getJsonLanyards();
      var materialSelected = material.getMaterialSelected();
      var widthSelected = widthClass.getWidthSelected();
