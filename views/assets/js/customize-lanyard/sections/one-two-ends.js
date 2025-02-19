@@ -27,8 +27,6 @@ class OneTwoEnds {
       var materialSelected = material.getMaterialSelected();
 
         var data = json.find(item => item.materials.material === materialSelected)?.materials.lanyardType || [];
-
-        console.log(data);
       // Clean the oneTwoEnds options
       this.cleanOneTwoEnds();
 

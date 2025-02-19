@@ -85,6 +85,7 @@ class Home {
         widthClass.updatePriceWidth();
 
         material.refreshMaterial();
+        oneTwoEndsClass.refreshLanyardType();
 
 
         // Open the customization panel
@@ -103,6 +104,7 @@ class Home {
         widthClass.updatePriceWidth();
 
         material.refreshMaterial();
+        oneTwoEndsClass.refreshLanyardType();
 
         // Open the customization panel
         customizeLanyard.openCustomizeLanyard(true);
