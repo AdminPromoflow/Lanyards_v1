@@ -17,7 +17,7 @@ class SidePrinted {
 
     // Get the available side printed options
     let sidePrintedAvailable = this.updatePriceSidePrinted();
-    alert("hi2");
+    alert(JSON.stringify(sidePrintedAvailable));
 
 
     // Iterate through the available side printed options and draw them
