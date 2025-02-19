@@ -82,23 +82,10 @@ class Home {
     openLanyard() {
         // Set default amount and update material prices
         priceClass.setAmountSelected(1000);
-        material.updatePriceMaterial();
         widthClass.updatePriceWidth();
 
-        // Prepare data for AJAX request
-        const url = "../../controller/lanyard/material.php";
-        const data = {
-            action: "setMaterialSelected",
-            optionSelected: material.getMaterialSelected(),
-            amountSelected: priceClass.getAmountSelected()
-        };
+        material.refreshMaterial();
 
-        // Apply selected material
-        material.setMaterialSelected(material.getMaterialSelected());
-        material.showSelectedMaterial();
-        previewMaterial.showSelectedPreviewtMaterial(material.getMaterialSelected());
-        material.updatePriceMaterial();
-        material.makeAjaxRequestSetMaterialSelected(url, data);
 
         // Open the customization panel
         customizeLanyard.openCustomizeLanyard(true);
@@ -115,20 +102,7 @@ class Home {
         priceClass.setAmountSelected(1000);
         widthClass.updatePriceWidth();
 
-        // Prepare data for AJAX request
-        const url = "../../controller/lanyard/material.php";
-        const data = {
-            action: "setMaterialSelected",
-            optionSelected: material.getMaterialSelected(),
-            amountSelected: priceClass.getAmountSelected()
-        };
-
-        // Apply "Best Seller" material settings
-        material.updatePriceMaterial();
-        material.showSelectedMaterial();
-        previewMaterial.showSelectedPreviewtMaterial(material.getMaterialSelected());
-        material.updatePriceMaterial();
-        material.makeAjaxRequestSetMaterialSelected(url, data);
+        material.refreshMaterial();
 
         // Open the customization panel
         customizeLanyard.openCustomizeLanyard(true);

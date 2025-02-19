@@ -276,10 +276,6 @@ class CustomizeLanyard {
      this.showPreview(false);
      this.showCurrentSection(this.currentSectionOpen);
 
-
-
-    // const preview = document.getElementById("preview");
-//preview.style.display = "none";
    }
    openLanyardType(){
      previewAccessoriesClass.showAccessoriesPreview("flex");

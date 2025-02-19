@@ -7,7 +7,7 @@ class Material {
     this.materialSelected = "Tubular";
     // Initialize an empty object to store JSON materials.
     var jsonMaterials = {};
- 
+
   }
 
   // Setter method for the materialSelected property.
@@ -257,6 +257,23 @@ class Material {
 
     // Make an AJAX request to set the selected material.
     this.makeAjaxRequestSetMaterialSelected(url, data);
+  }
+
+  refreshMaterial(){
+    // Prepare data for AJAX request
+    const url = "../../controller/lanyard/material.php";
+    const data = {
+        action: "setMaterialSelected",
+        optionSelected: material.getMaterialSelected(),
+        amountSelected: priceClass.getAmountSelected()
+    };
+
+    // Apply "Best Seller" material settings
+    material.updatePriceMaterial();
+    material.showSelectedMaterial();
+    previewMaterial.showSelectedPreviewtMaterial(material.getMaterialSelected());
+    material.updatePriceMaterial();
+    material.makeAjaxRequestSetMaterialSelected(url, data);
   }
 
   // Function to make an AJAX request to set the selected material.
