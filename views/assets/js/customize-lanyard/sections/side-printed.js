@@ -14,6 +14,8 @@ class SidePrinted {
     // Clean the side printed options
     this.cleanSidePrinted();
 
+    alert("hi");
+
     // Get the available side printed options
     let sidePrintedAvailable = this.updatePriceSidePrinted();
 
