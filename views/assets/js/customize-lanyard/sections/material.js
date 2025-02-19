@@ -296,7 +296,7 @@ class Material {
       })
       .then(data => {
         // Parse the response data as JSON
-        data = JSON.parse(data);
+      /*  data = JSON.parse(data);
         this.setJsonMaterials(data["jsonDataByMaterial"]);
         this.recalculateMaterialData();
 
@@ -312,7 +312,7 @@ class Material {
         clipClass.selectClip();
 
         colourClass.setColourSelected(data["noColourSelected"]);
-        colourClass.recalculateColourData();
+        colourClass.recalculateColourData();*/
   })
       .catch(error => {
         // Log any errors to the console
