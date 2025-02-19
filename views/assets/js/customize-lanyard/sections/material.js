@@ -301,7 +301,7 @@ class Material {
         data = JSON.parse(data);
       //  this.setJsonMaterials(data["jsonDataByMaterial"]);
 
-      /*  oneTwoEndsClass.setJsonLanyardType(data["allLanyardTypes"]);
+        oneTwoEndsClass.setJsonLanyardType(data["allLanyardTypes"]);
         oneTwoEndsClass.recalculateLanyardTypeData();
 
         widthClass.setJsonWidth(data["allWidth"]);
@@ -313,7 +313,7 @@ class Material {
         clipClass.selectClip();
 
         colourClass.setColourSelected(data["noColourSelected"]);
-        colourClass.recalculateColourData();*/
+        colourClass.recalculateColourData();
   })
       .catch(error => {
         // Log any errors to the console
