@@ -243,7 +243,7 @@ class Material {
     this.refreshMaterial();
 
     // Lanyard Type
-    oneTwoEndsClass.recalculateLanyardTypeData();
+    oneTwoEndsClass.refreshLanyardType();
 
   }
 
