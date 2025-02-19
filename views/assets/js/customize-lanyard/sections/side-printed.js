@@ -65,7 +65,9 @@ class SidePrinted {
   }
   refreshSidePrintedData(){
     this.updateSidePrinted();
-  //  this.showSelectedSidePrinted();
+    this.showSelectedSidePrinted();
+    this.updateEachPriceSidePrinted();
+    previewSidePrinted.showSelectedPreviewtTemplate();
   }
 
 
