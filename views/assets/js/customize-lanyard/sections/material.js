@@ -296,11 +296,11 @@ class Material {
       })
       .then(data => {
         // Parse the response data as JSON
-      /*  data = JSON.parse(data);
+        data = JSON.parse(data);
         this.setJsonMaterials(data["jsonDataByMaterial"]);
         this.recalculateMaterialData();
 
-        oneTwoEndsClass.setJsonLanyardType(data["allLanyardTypes"]);
+      /*  oneTwoEndsClass.setJsonLanyardType(data["allLanyardTypes"]);
         oneTwoEndsClass.recalculateLanyardTypeData();
 
         widthClass.setJsonWidth(data["allWidth"]);
