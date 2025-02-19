@@ -55,7 +55,7 @@ class Material {
         data = JSON.parse(data);
         customizeLanyard.setJsonLanyards(data["lanyards"]);
 
-      //  this.selecteMaterial();
+        this.selecteMaterial();
       //  clipClass.selectClip();
       //  sidePrintedClass.selectSidePrinted();
 
