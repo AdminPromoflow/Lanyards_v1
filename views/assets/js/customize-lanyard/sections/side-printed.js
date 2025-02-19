@@ -16,7 +16,6 @@ class SidePrinted {
 
     // Get the available side printed options
     let sidePrintedAvailable = this.updatePriceSidePrinted();
-    alert(JSON.stringify(sidePrintedAvailable));
 
     // Iterate through the available side printed options and draw them
     for (var i = 0; i < sidePrintedAvailable.length; i++) {
@@ -26,7 +25,6 @@ class SidePrinted {
   refreshSidePrintedData(){
     chargingClass.hideShowchargin(true);
     this.updateSidePrinted();
-    this.updatePriceSidePrinted();
     this.showSelectedSidePrinted();
     chargingClass.hideShowchargin(false);
   }
@@ -67,6 +65,8 @@ class SidePrinted {
             }
         }
     }
+    alert(JSON.stringify(sidePrintedAvailable + "ahi vamos"));
+
 
     return sidePrintedAvailable;
   }
