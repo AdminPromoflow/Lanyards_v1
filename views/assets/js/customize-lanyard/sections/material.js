@@ -240,12 +240,12 @@ class Material {
 
     // Material
     this.setMaterialSelected(materialSelected);
+    
     this.refreshMaterial();
-
-    // Lanyard Type
     oneTwoEndsClass.refreshLanyardType();
-
     widthClass.refreshWidth();
+    sidePrintedClass.refreshSidePrintedData();
+
 
 
   }
