@@ -24,7 +24,7 @@ class SidePrinted {
   }
   refreshSidePrintedData(){
     chargingClass.hideShowchargin(true);
-  //  this.updateSidePrinted();
+    this.updateSidePrinted();
   //  this.showSelectedSidePrinted();
     chargingClass.hideShowchargin(false);
   }
