@@ -299,7 +299,7 @@ class Material {
       .then(data => {
         // Parse the response data as JSON
         data = JSON.parse(data);
-      //  this.setJsonMaterials(data["jsonDataByMaterial"]);
+        this.setJsonMaterials(data["jsonDataByMaterial"]);
 
         oneTwoEndsClass.setJsonLanyardType(data["allLanyardTypes"]);
         oneTwoEndsClass.recalculateLanyardTypeData();
