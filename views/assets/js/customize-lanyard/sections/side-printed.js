@@ -10,7 +10,7 @@ class SidePrinted {
   getSidePrintedSelected() {
     return this.sidePrintedSelected;
   }
-  selectSidePrinted(){
+  updateSidePrinted(){
     // Clean the side printed options
     this.cleanSidePrinted();
 
@@ -22,40 +22,14 @@ class SidePrinted {
       this.drawSidePrintedAvailable(sidePrintedAvailable[i], i);
     }
   }
-  recalculateSidePrintedData(){
+  refreshSidePrintedData(){
+    chargingClass.hideShowchargin(true);
     this.selectSidePrinted();
+    this.updateSidePrinted();
+    this.showSelectedSidePrinted();
+    chargingClass.hideShowchargin(false);
   }
 
-  // Function to make the AJAX request
-  makeAjaxRequestSetSidePrintedSelected(url, data) {
-    // Make the request using the Fetch API
-  /*  fetch(url, {
-      method: "POST", // HTTP POST method to send data
-      headers: {
-        "Content-Type": "application/json" // Indicate that you're sending JSON
-      },
-      body: JSON.stringify(data) // Convert the JSON object to a JSON string and send it
-    })
-      .then(response => {
-        if (response.ok) {
-          return response.text(); // or response.json() if you expect a JSON response
-        }
-        throw new Error("Network error.");
-      })
-      .then(data => {
-      //  alert(data);
-       data = JSON.parse(data);
-       oneTwoEndsClass.showSelectedOneTwoEnds(data["lanyardType"]);
-       previewLanyardType.showSelectedPreviewtTemplate(data["lanyardType"]["type"], "25mm");
-
-      })
-      .catch(error => {
-        console.error("Error:", error);
-      });*/
-
-
-
-  }
 
   getDataSidePrintedAvailable(){
     var json = customizeLanyard.getJsonLanyards();

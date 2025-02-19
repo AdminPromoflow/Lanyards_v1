@@ -89,6 +89,7 @@ class Home {
         material.refreshMaterial();
         oneTwoEndsClass.refreshLanyardType();
         widthClass.refreshWidth();
+        sidePrintedClass.refreshSidePrintedData()
 
 
 
@@ -109,6 +110,8 @@ class Home {
         material.refreshMaterial();
         oneTwoEndsClass.refreshLanyardType();
         widthClass.refreshWidth();
+        sidePrintedClass.refreshSidePrintedData()
+
 
 
         // Open the customization panel

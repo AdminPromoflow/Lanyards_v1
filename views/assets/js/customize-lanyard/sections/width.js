@@ -3,6 +3,7 @@ class Width {
     this.widthSelected = "10mm";
     var jsonWidth = {};
   }
+
   setWidthSelected(value) {
     this.widthSelected = value;
   }
@@ -10,9 +11,11 @@ class Width {
   getWidthSelected() {
     return this.widthSelected;
   }
+
   setJsonWidth(jsonWidth) {
     this.jsonWidth = jsonWidth;
   }
+
   getJsonWidth() {
    return this.jsonWidth;
  }
@@ -43,7 +46,6 @@ class Width {
           widthClass.createWidth(data[i], i);
       }
   }
-
 
   searchDataWidthSelected(width, index) {
 
@@ -90,7 +92,6 @@ class Width {
   //  artworkClass.changeWidthRightPanel();
 
   }
-
 
   updatePriceWidth() {
       // Get the JSON lanyards data.
@@ -182,8 +183,6 @@ class Width {
       }
   }
 
-
-
   refreshWidth(){
     chargingClass.hideShowchargin(true);
     this.updateWidth();
@@ -191,6 +190,7 @@ class Width {
     this.showSelectedWidth();
     chargingClass.hideShowchargin(false);
   }
+
   cleanWidth(){
     containersBoxesWidth.innerHTML = "";
   }
