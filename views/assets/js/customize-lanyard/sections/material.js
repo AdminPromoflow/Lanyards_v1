@@ -242,8 +242,9 @@ class Material {
     this.setMaterialSelected(materialSelected);
     this.refreshMaterial();
 
-    // width
-    widthClass.recalculateWidthData();
+    // Lanyard Type
+    oneTwoEndsClass.recalculateLanyardTypeData();
+
   }
 
   refreshMaterial(){
