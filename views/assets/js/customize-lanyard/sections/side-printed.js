@@ -12,7 +12,6 @@ class SidePrinted {
   }
   updateSidePrinted(){
     // Clean the side printed options
-    alert("entramos");
     this.cleanSidePrinted();
 
 
@@ -174,6 +173,8 @@ class SidePrinted {
 
 
   cleanSidePrinted(){
+    alert("entramos 2");
+
     containerBoxSidePrinted.innerHTML = "";
   }
   drawSidePrintedAvailable(data, index){
