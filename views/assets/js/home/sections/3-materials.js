@@ -1,66 +1,46 @@
-// Class MaterialHome
+// Class MaterialHome: Handles the behavior of displaying material descriptions
 class MaterialHome {
   constructor() {
-    // Event listener to hide containerTextMaterials when closeMaterial is clicked
-  /*  for (let i = 0; i < closeMaterial.length; i++) {
-      closeMaterial[i].addEventListener("click", function(){
-      //  containerTextMaterials[i].style.display = "none";
-      })
-    }*/
+    // Ensure there are elements to work with before proceeding
+    if (itemMaterial.length === 0 || containerTextMaterials.length === 0) return;
 
+    // Initialize all material text containers as hidden
+    containerTextMaterials.forEach(container => (container.style.display = "none"));
 
+    // Add event listeners to each material item for hover and click interactions
+    itemMaterial.forEach((item, index) => {
+      item.addEventListener("mouseover", () => this.showMaterialInfo(index));
+      item.addEventListener("click", () => this.showMaterialInfo(index));
+    });
 
- 
-    // Event listener to display containerTextMaterials when itemMaterial is clicked
-    for (let i = 0; i < itemMaterial.length; i++) {
-      containerTextMaterials[i].style.display = "none"; // Oculta todos los divs inicialmente
-      itemMaterial[i].addEventListener("mouseover", function () {
-        containerTextMaterials[i].style.display = "flex";
-        containerTextMaterialsOn = i;
-        materialHome.hideOtherContainerTextMaterials(i);
-      });
-    }
-    for (let i = 0; i < itemMaterial.length; i++) {
-      containerTextMaterials[i].style.display = "none"; // Oculta todos los divs inicialmente
-      itemMaterial[i].addEventListener("click", function () {
-        containerTextMaterials[i].style.display = "flex";
-        containerTextMaterialsOn = i;
-        materialHome.hideOtherContainerTextMaterials(i);
-      });
-    }
-
-    // Activa el div en la posición 0 al inicio
-    if (containerTextMaterials.length > 0) {
-      containerTextMaterials[0].style.display = "flex";
-      containerTextMaterialsOn = 0;
-    }
-
-
-    // Event listener to hide containerTextMaterials when clicking outside
-  //  document.addEventListener('click', this.outContainerTextMaterials);
+    // Activate the first material description by default
+    this.showMaterialInfo(0);
   }
 
-  // Method to hide other containerTextMaterials
-  hideOtherContainerTextMaterials(){
-    for (let i = 0; i < containerTextMaterials.length; i++) {
-      if (i != containerTextMaterialsOn) {
-        containerTextMaterials[i].style.display = "none";
-      }
-    }
-  }
+  /**
+   * Displays the material description for the given index
+   * and hides all others.
+   * @param {number} index - The index of the material to show
+   */
+  showMaterialInfo(index) {
+    containerTextMaterials.forEach((container, i) => {
+      container.style.display = i === index ? "flex" : "none";
+    });
 
+    // Update the active index
+    containerTextMaterialsOn = index;
+  }
 }
 
 // Selecting elements from the DOM
 const itemMaterial = document.querySelectorAll(".itemMaterial");
 const containerTextMaterials = document.querySelectorAll(".containerTextMaterials");
-//const closeMaterial = document.querySelectorAll(".closeMaterial");
 const buttonMaterialsBox = document.querySelectorAll(".buttonMaterialsBox");
 const materialForSelect = document.querySelectorAll(".material-for-select");
 const documento = document.documentElement;
 
-
-var containerTextMaterialsOn = 0;
+// Variable to track the currently active material description
+let containerTextMaterialsOn = 0;
 
 // Creating an instance of the MaterialHome class
 const materialHome = new MaterialHome();
