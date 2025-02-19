@@ -252,19 +252,19 @@ class Material {
 
   refreshMaterial(){
     // Prepare data for AJAX request
-    const url = "../../controller/lanyard/material.php";
+  /*  const url = "../../controller/lanyard/material.php";
     const data = {
         action: "setMaterialSelected",
         optionSelected: material.getMaterialSelected(),
         amountSelected: priceClass.getAmountSelected()
-    };
+    };*/
 
     // Apply "Best Seller" material settings
     material.updatePriceMaterial();
     material.showSelectedMaterial();
     previewMaterial.showSelectedPreviewtMaterial(material.getMaterialSelected());
     material.updatePriceMaterial();
-    material.makeAjaxRequestSetMaterialSelected(url, data);
+  //  material.makeAjaxRequestSetMaterialSelected(url, data);
     this.recalculateMaterialData();
 
   }
