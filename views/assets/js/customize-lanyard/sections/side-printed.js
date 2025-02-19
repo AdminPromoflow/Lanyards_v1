@@ -16,13 +16,16 @@ class SidePrinted {
 
 
     // Get the available side printed options
-     this.updatePriceSidePrinted();
+     this.updateEachPriceSidePrinted();
 
 
     // Iterate through the available side printed options and draw them
   /*  for (var i = 0; i < sidePrintedAvailable.length; i++) {
       this.drawSidePrintedAvailable(sidePrintedAvailable[i], i);
     }*/
+  }
+  updateEachPriceSidePrinted(){
+    alert("entramos 4");
   }
   refreshSidePrintedData(){
     this.updateSidePrinted();
@@ -31,7 +34,6 @@ class SidePrinted {
 
 
   updatePriceSidePrinted(){
-    alert("entramos 3");
 
 
   /*  var json = customizeLanyard.getJsonLanyards();
