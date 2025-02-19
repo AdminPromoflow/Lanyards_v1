@@ -87,8 +87,9 @@ class OneTwoEnds {
   }
 
   refreshLanyardType(){
-    this.showSelectedOneTwoEnds();
     this.updateLanyardType();
+    this.showSelectedOneTwoEnds();
+
     previewLanyardType.showSelectedPreviewtTemplate();
   }
 
