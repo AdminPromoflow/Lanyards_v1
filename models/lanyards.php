@@ -105,6 +105,49 @@ class Lanyards {
       }
   }
 
+  public function getAllLanyardData() {
+    try {
+        // Prepara la consulta sin filtrar por material
+        $sql = $this->connection->getConnection()->prepare("
+            SELECT
+                L.material,
+                LT.type AS lanyardType,
+                LT.price AS lanyardPrice,
+                W.width,
+                C.name AS clipName,
+                C.price AS clipPrice,
+                S.noSides AS side,
+                NC.option AS colourOption,
+                A.`min-amount` AS minAmount,
+                A.`max-amount` AS maxAmount,
+                A.price AS amountPrice
+            FROM `Lanyards` L
+            LEFT JOIN `LanyardTypes` LT ON L.idLanyard = LT.idLanyard
+            LEFT JOIN `Width` W ON L.idLanyard = W.idLanyard
+            LEFT JOIN `SidePrinted` S ON W.idWidth = S.idWidth
+            LEFT JOIN `Clips` C ON W.idWidth = C.idWidth
+            LEFT JOIN `noColours` NC ON S.idSidePrinted = NC.idSidePrinted
+            LEFT JOIN `Amount` A ON NC.idNoColour = A.idNoColour
+            ORDER BY L.material, LT.type, W.width, C.name, S.noSides, NC.option, A.`min-amount`
+        ");
+
+        // Ejecuta la consulta
+        $sql->execute();
+
+        // Obtiene todos los resultados como un arreglo asociativo
+        $result = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+        // Retorna los resultados
+        return $result;
+
+    } catch (PDOException $e) {
+        echo "Query error: " . $e->getMessage();
+        throw new Exception("Error retrieving JSON data for all materials.");
+    }
+}
+
+
+
 
   public function getInfoMaterials() {
       try {

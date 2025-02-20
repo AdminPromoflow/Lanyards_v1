@@ -93,7 +93,6 @@ class Home {
         widthClass.refreshWidth();
         sidePrintedClass.refreshSidePrintedData();
 
-
         // Open the customization panel
         customizeLanyard.openCustomizeLanyard(true);
         customizeLanyard.setCurrentSectionOpen(0);

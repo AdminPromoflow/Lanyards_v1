@@ -238,7 +238,6 @@ class Material {
     }
 
 
-    // Material
     this.setMaterialSelected(materialSelected);
 
     this.refreshMaterial();
