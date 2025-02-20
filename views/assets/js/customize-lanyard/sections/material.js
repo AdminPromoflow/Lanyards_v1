@@ -54,6 +54,7 @@ class Material {
       .then(data => {
         data = JSON.parse(data);
         customizeLanyard.setJsonLanyards(data["lanyards"]);
+        console.log(data["json"]);
 
         this.selecteMaterial();
       //  clipClass.selectClip();
