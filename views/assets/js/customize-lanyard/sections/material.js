@@ -53,7 +53,7 @@ class Material {
       })
       .then(data => {
         data = JSON.parse(data);
-        customizeLanyard.setJsonLanyards(data["lanyards"]);
+        customizeLanyard.setJsonLanyards(data["json"]);
         console.log(data["json"]);
 
         this.selecteMaterial();
