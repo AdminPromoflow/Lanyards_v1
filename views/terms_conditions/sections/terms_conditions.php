@@ -8,7 +8,7 @@
 <section class="teams_conditions">
   <div class="back_home_from_terms_conditions">
 <img src="<?php echo $imgFile_terms_conditions . '?v=' . $imgVersion_terms_conditions; ?>" alt="">
-    <h4>&nbsp;&nbsp;&nbsp;&nbsp; Home</h4>
+    <h4>Home</h4>
   </div>
   <h1>Terms & Conditions</h1>
 
