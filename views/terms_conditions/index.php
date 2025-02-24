@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" href="../../views/assets/css/terms_conditions/style.css">
   </head>
   <body>
     <?php include '../../views/terms_conditions/sections/terms_conditions.php'; ?>
