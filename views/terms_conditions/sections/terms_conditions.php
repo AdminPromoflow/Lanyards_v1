@@ -4,6 +4,10 @@
 ?>
 <link rel="stylesheet" href="<?php echo $cssFile_terms_conditions . '?v=' . $cssVersion_terms_conditions; ?>">
 <section class="teams_conditions">
+  <div class="back_home_from_terms_conditions">
+    <img src="../../views/assets/img/terms_conditions/arrow.png" alt="">
+    <h4>Home</h4>
+  </div>
   <h1>Terms & Conditions</h1>
 
   <p>By placing an order with Lanyards For You, you agree to these terms and conditions. We are not responsible for any failure or delay in fulfilling our obligations due to circumstances beyond our reasonable control.</p>

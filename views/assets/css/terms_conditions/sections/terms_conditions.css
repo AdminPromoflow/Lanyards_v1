@@ -16,3 +16,23 @@
   text-align: center;
   font-size: 2em;
 }
+.back_home_from_terms_conditions {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  height: 38px;
+  background: red;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  
+  flex-wrap: nowrap;
+}
+.back_home_from_terms_conditions img {
+  position: relative;
+  height: 100%;
+
+}
+.back_home_from_terms_conditions h4 {
+  color: white;
+}
