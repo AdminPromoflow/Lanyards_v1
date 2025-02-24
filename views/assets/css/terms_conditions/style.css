@@ -4,6 +4,7 @@ body{
   background: #051527;
   font-family: 'IBM Plex Sans Condensed', sans-serif;
   background-size: cover;
+  overflow: hidden;
 }
 .background{
   position: relative;

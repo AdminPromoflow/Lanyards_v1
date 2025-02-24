@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="../../views/assets/css/terms_conditions/style.css">
   </head>
   <body>
-    <?php include '../../views/terms_conditions/sections/terms_conditions.php'; ?>
     <section>
       <?php // include "../../views/global/test_alert.php"; ?>
       <?php include "../../views/global/charging.php"; ?>
@@ -23,7 +22,7 @@
             <!-- Include the menu component -->
             <?php include "../../views/global/menu.php"; ?>
             <div class="bgLanyards">
-
+              <?php include '../../views/terms_conditions/sections/terms_conditions.php'; ?>
               <!-- Include the slider component for the index page -->
 
               <?php include "../../views/global/footer.php"; ?>
