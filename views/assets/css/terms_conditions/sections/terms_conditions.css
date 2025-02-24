@@ -21,16 +21,15 @@
   top: 15px;
   left: 15px;
   height: 38px;
-  background: red;
   display: flex;
   justify-content: flex-start;
   flex-direction: row;
-  
+  align-items: center;
   flex-wrap: nowrap;
 }
 .back_home_from_terms_conditions img {
   position: relative;
-  height: 100%;
+  height: 60%;
 
 }
 .back_home_from_terms_conditions h4 {
