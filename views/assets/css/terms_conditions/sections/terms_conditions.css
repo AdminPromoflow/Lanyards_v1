@@ -1,0 +1,13 @@
+.teams_conditions{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+
+}
+.teams_conditions h2 {
+  color: white;
+}
+.teams_conditions p {
+  color: white;
+}
