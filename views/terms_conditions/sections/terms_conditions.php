@@ -1,11 +1,13 @@
 <?php
     $cssFile_terms_conditions = "../../views/assets/css/terms_conditions/sections/terms_conditions.css";
     $cssVersion_terms_conditions = filemtime($cssFile_terms_conditions);
+    $imgFile_terms_conditions = "../../views/assets/img/terms_conditions/arrow.png";
+    $imgVersion_terms_conditions = filemtime($imgFile_terms_conditions);
 ?>
 <link rel="stylesheet" href="<?php echo $cssFile_terms_conditions . '?v=' . $cssVersion_terms_conditions; ?>">
 <section class="teams_conditions">
   <div class="back_home_from_terms_conditions">
-    <img src="../../views/assets/img/terms_conditions/arrow.png" alt="">
+<img src="<?php echo $imgFile_terms_conditions . '?v=' . $imgVersion_terms_conditions; ?>" alt="">
     <h4>Home</h4>
   </div>
   <h1>Terms & Conditions</h1>
