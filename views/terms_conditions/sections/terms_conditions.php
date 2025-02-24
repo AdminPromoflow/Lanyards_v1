@@ -1,4 +1,9 @@
-<section>
+<?php
+    $cssFile_terms_conditions = "../../views/assets/css/terms_conditions/sections/terms_conditions.css";
+    $cssVersion_terms_conditions = filemtime($cssFile_terms_conditions);
+?>
+<link rel="stylesheet" href="<?php echo $cssFile_terms_conditions . '?v=' . $cssVersion_terms_conditions; ?>">
+<section class="teams_conditions">
   <p>By placing an order with Lanyards For You, you agree to these terms and conditions. We are not responsible for any failure or delay in fulfilling our obligations due to circumstances beyond our reasonable control.</p>
 
 <h2>Website Content</h2>
