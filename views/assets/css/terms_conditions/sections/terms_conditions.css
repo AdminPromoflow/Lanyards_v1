@@ -26,6 +26,7 @@
   flex-direction: row;
   align-items: center;
   flex-wrap: nowrap;
+  cursor: pointer;
 }
 .back_home_from_terms_conditions img {
   position: relative;
@@ -35,4 +36,7 @@
 .back_home_from_terms_conditions h4 {
   color: white;
   margin: 0 10px;
+}
+.back_home_from_terms_conditions:hover h4{
+  text-decoration: underline;
 }
