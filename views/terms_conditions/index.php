@@ -21,9 +21,7 @@
 
             <div class="bgLanyards">
               <?php include '../../views/terms_conditions/sections/terms_conditions.php'; ?>
-              <!-- Include the slider component for the index page -->
 
-              <?php include "../../views/global/footer.php"; ?>
 
             </div>
           </div>
