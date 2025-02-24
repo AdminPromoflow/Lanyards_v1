@@ -3,10 +3,12 @@
     $cssVersion_terms_conditions = filemtime($cssFile_terms_conditions);
     $imgFile_terms_conditions = "../../views/assets/img/terms_conditions/arrow.png";
     $imgVersion_terms_conditions = filemtime($imgFile_terms_conditions);
+    $jsFile_terms_conditions = "../../views/assets/js/terms_conditions/sections/teams_conditions.js";
+    $jsVersion_terms_conditions = filemtime($jsFile_terms_conditions);
 ?>
 <link rel="stylesheet" href="<?php echo $cssFile_terms_conditions . '?v=' . $cssVersion_terms_conditions; ?>">
 <section class="teams_conditions">
-  <div class="back_home_from_terms_conditions">
+  <div id="back_home_from_terms_conditions"class="back_home_from_terms_conditions">
 <img src="<?php echo $imgFile_terms_conditions . '?v=' . $imgVersion_terms_conditions; ?>" alt="">
     <h4>Home</h4>
   </div>
@@ -79,3 +81,4 @@
 
 <p>For any enquiries regarding these terms and conditions, please contact us at [email] or [phone number].</p>
 </section>
+<script src="<?php echo $jsFile_terms_conditions . '?v=' . $jsVersion_terms_conditions; ?>" type="text/javascript"></script>
