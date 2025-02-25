@@ -56,7 +56,7 @@ class SidePrinted {
                             const noColour = noColours[l].noColour;
 
                             // Filtrar solo los que coincidan con el color seleccionado
-                            if (Number(noColour) === Number(noColourSelecter)) {
+                            if ((noColour) === (noColourSelecter)) {
                                 const amounts = noColours[l].amount;
 
                                 for (let m = 0; m < amounts.length; m++) {
