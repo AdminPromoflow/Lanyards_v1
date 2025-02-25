@@ -16,7 +16,7 @@
   text-align: center;
   font-size: 2em;
 }
-.back_home_from_terms_conditions {
+.link_terms_conditions {
   position: absolute;
   top: 15px;
   left: 15px;
@@ -28,16 +28,16 @@
   flex-wrap: nowrap;
   cursor: pointer;
 }
-.back_home_from_terms_conditions img {
+.link_terms_conditions img {
   position: relative;
   height: 60%;
 
 }
-.back_home_from_terms_conditions h4 {
+.link_terms_conditions h4 {
   color: white;
   margin: 0 10px;
 }
-.back_home_from_terms_conditions:hover h4{
+.link_terms_conditions:hover h4{
   text-decoration: underline;
 }
 .buttom_terms_conditions{

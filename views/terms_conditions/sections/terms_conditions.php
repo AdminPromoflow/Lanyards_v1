@@ -8,7 +8,7 @@
 ?>
 <link rel="stylesheet" href="<?php echo $cssFile_terms_conditions . '?v=' . $cssVersion_terms_conditions; ?>">
 <section class="teams_conditions">
-  <div id="back_home_from_terms_conditions"class="back_home_from_terms_conditions">
+  <div class="back_home_from_terms_conditions link_terms_conditions">
 <img src="<?php echo $imgFile_terms_conditions . '?v=' . $imgVersion_terms_conditions; ?>" alt="">
     <h4>Home</h4>
   </div>
