@@ -173,6 +173,7 @@ class SidePrinted {
     containerBoxSidePrinted.innerHTML = "";
   }
   drawSidePrintedAvailable(data, index){
+    alert(JSON.stringify(data));
     var imgLink;
     if (data == "one-side") {
       imgLink = "views/assets/img/global/customize-lanyard/sections/side-printed/one-side.png";
