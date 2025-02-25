@@ -80,5 +80,6 @@
 <p>We may contact customers via email regarding website updates or changes in products and services.</p>
 
 <p>For any enquiries regarding these terms and conditions, please contact us at [email] or [phone number].</p>
+<button class="back_home_from_terms_conditions buttom_terms_conditions" type="button" name="button">Home</button>
 </section>
 <script src="<?php echo $jsFile_terms_conditions . '?v=' . $jsVersion_terms_conditions; ?>" type="text/javascript"></script>

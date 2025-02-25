@@ -40,3 +40,16 @@
 .back_home_from_terms_conditions:hover h4{
   text-decoration: underline;
 }
+.buttom_terms_conditions{
+  padding: calc(0.1vw + 0.1em) calc(0.5vw + 0.5em);
+  z-index: 10;
+  max-height: 50px;
+  font-size: calc(1vw + 1em);
+  font-weight: 300;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgba(141, 67, 68, .9);
+  color: white;
+  font-size: calc(0.8em + 0.8vw);
+  margin: 15px;
+}
