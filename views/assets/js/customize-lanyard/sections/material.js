@@ -244,6 +244,7 @@ class Material {
     oneTwoEndsClass.refreshLanyardType();
     widthClass.refreshWidth();
     sidePrintedClass.refreshSidePrintedData();
+    clipClass.updateClip();
 
 
 
