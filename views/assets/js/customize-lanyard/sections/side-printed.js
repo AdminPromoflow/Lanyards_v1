@@ -18,48 +18,119 @@ class SidePrinted {
 
     // Get the available side printed options
     let sidePrintedAvailable = this.updateEachPriceSidePrinted();
+    alert(JSON.stringify(sidePrintedAvailable));
     // Iterate through the available side printed options and draw them
     for (var i = 0; i < sidePrintedAvailable.length; i++) {
       this.drawSidePrintedAvailable(sidePrintedAvailable[i], i);
     }
   }
-  updateEachPriceSidePrinted(){
-    var json = customizeLanyard.getJsonLanyards();
-     var materialSelected = material.getMaterialSelected();
-     var widthSelected = widthClass.getWidthSelected();
 
-     let sidePrintedAvailable = [];
-     // Iterating through each item in the JSON array
-     for (let i = 0; i < json.length; i++) {
-         // Extracting the 'materials' array from the current JSON item
-         const material = json[i].materials.material;
-         // Checking if the material matches the selected material
-         if (material == materialSelected) {
-             // Extracting the 'widths' array from the current JSON item
-             const widths = json[i].materials.width;
-             // Iterating through each width in the 'widths' array
-             for (let j = 0; j < widths.length; j++) {
-                 // Extracting the 'width' value from the current width object
-                 const width = widths[j].width;
+   updateEachPriceSidePrinted() {
+      var json = customizeLanyard.getJsonLanyards();
+      var materialSelected = material.getMaterialSelected();
+      var widthSelected = widthClass.getWidthSelected();
+      var amountSelected = priceClass.getAmountSelected();
 
-                 if (width == widthSelected) {
+      let priceDataSidePrintedResult = [];
+      priceDataSidePrintedResult.length = 0; // Vaciar el array en caso de que tenga datos previos
 
-                     // Extracting the 'sidePrinted' array from the current width object
-                     const sidePrinted = widths[j].sidePrinted;
+      // Iterando a través del JSON de materiales
+      for (let i = 0; i < json.length; i++) {
+          const material = json[i].materials.material;
 
-                     // Iterating through each item in the 'sidePrinted' array
-                     for (let k = 0; k < sidePrinted.length; k++) {
-                         // Extracting the 'noSides' value from the current sidePrinted object
-                         const noSides = sidePrinted[k].noSides;
+          if (material == materialSelected) {
+              const widths = json[i].materials.width;
 
-                         sidePrintedAvailable[k] = sidePrinted[k].noSides;
-                     }
-                 }
-             }
-         }
-     }
-     return sidePrintedAvailable;
+              for (let j = 0; j < widths.length; j++) {
+                  const width = widths[j].width;
+
+                  if (width == widthSelected) {
+                      const sidePrinted = widths[j].sidePrinted;
+
+                      for (let k = 0; k < sidePrinted.length; k++) {
+                          const noSides = sidePrinted[k].noSides;
+                          const noColours = sidePrinted[k].noColours;
+
+                          for (let l = 0; l < noColours.length; l++) {
+                              const noColour = noColours[l].noColour;
+                              const amounts = noColours[l].amount;
+
+                              for (let m = 0; m < amounts.length; m++) {
+                                  const minAmount = amounts[m]['min-amount'];
+                                  const maxAmount = amounts[m]['max-amount'];
+                                  const pricePerSidePrinted = amounts[m].price; // Captura el precio del sidePrinted
+
+                                  if (Number(amountSelected) >= Number(minAmount) && Number(amountSelected) <= Number(maxAmount)) {
+                                      let existingIndex = priceDataSidePrintedResult.findIndex(item =>
+                                          item.material === material &&
+                                          item.width === width &&
+                                          item.noSides === noSides &&
+                                          item.noColour === noColour
+                                      );
+
+                                      if (existingIndex === -1) {
+                                          priceDataSidePrintedResult.push({
+                                              material,
+                                              width,
+                                              noSides,
+                                              noColour,
+                                              minAmount,
+                                              maxAmount,
+                                              price: pricePerSidePrinted
+                                          });
+                                      } else {
+                                          priceDataSidePrintedResult[existingIndex].price = pricePerSidePrinted;
+                                      }
+                                  } else if (Number(amountSelected) > Number(maxAmount)) {
+                                      let highestIndex = amounts.length - 1;
+                                      let highestMinAmount = amounts[highestIndex]['min-amount'];
+                                      let highestMaxAmount = amounts[highestIndex]['max-amount'];
+                                      let highestPrice = amounts[highestIndex].price;
+
+                                      let existingIndex = priceDataSidePrintedResult.findIndex(item =>
+                                          item.material === material &&
+                                          item.width === width &&
+                                          item.noSides === noSides &&
+                                          item.noColour === noColour
+                                      );
+
+                                      if (existingIndex === -1) {
+                                          priceDataSidePrintedResult.push({
+                                              material,
+                                              width,
+                                              noSides,
+                                              noColour,
+                                              minAmount: highestMinAmount,
+                                              maxAmount: highestMaxAmount,
+                                              price: highestPrice
+                                          });
+                                      } else {
+                                          priceDataSidePrintedResult[existingIndex].price = highestPrice;
+                                      }
+                                  }
+                              }
+                          }
+                      }
+                  }
+              }
+          }
+      }
+
+      // Actualizar los elementos HTML con la clase "pricesDataSidePrinted"
+      /* const pricesDataSidePrinted = document.querySelectorAll(".pricesDataSidePrinted");
+
+      for (var i = 0; i < priceDataSidePrintedResult.length; i++) {
+          pricesDataSidePrinted[i].innerHTML = "£" + priceDataSidePrintedResult[i]["price"] + " per unit";
+
+          if (json[i]["materials"]["material"] == materialSelected) {
+              priceClass.setPricePerSidePrintedWithAmount(priceDataSidePrintedResult[i]["price"]);
+              priceClass.changePricePerLanyard();
+          }
+      } */
+
+      return priceDataSidePrintedResult; // Retorna la variable con los precios
   }
+
   refreshSidePrintedData(){
     this.createSidePrinted();
     this.showSelectedSidePrinted();
@@ -173,7 +244,7 @@ class SidePrinted {
     containerBoxSidePrinted.innerHTML = "";
   }
   drawSidePrintedAvailable(data, index){
-    alert(JSON.stringify(data));
+  // alert(JSON.stringify(data));
     var imgLink;
     if (data == "one-side") {
       imgLink = "views/assets/img/global/customize-lanyard/sections/side-printed/one-side.png";
