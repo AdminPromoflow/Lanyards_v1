@@ -25,7 +25,7 @@ class SidePrinted {
     }
   }
 
-  function updateEachPriceSidePrinted() {
+   updateEachPriceSidePrinted() {
     var json = customizeLanyard.getJsonLanyards();
     var materialSelected = material.getMaterialSelected();
     var widthSelected = widthClass.getWidthSelected();
