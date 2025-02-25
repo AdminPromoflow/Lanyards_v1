@@ -18,7 +18,7 @@ class SidePrinted {
 
     // Get the available side printed options
     let sidePrintedAvailable = this.updateEachPriceSidePrinted();
-    alert(JSON.stringify(sidePrintedAvailable));
+  //  alert(JSON.stringify(sidePrintedAvailable));
     // Iterate through the available side printed options and draw them
     for (var i = 0; i < sidePrintedAvailable.length; i++) {
       this.drawSidePrintedAvailable(sidePrintedAvailable[i], i);
@@ -247,9 +247,9 @@ class SidePrinted {
       imgLink = "views/assets/img/global/customize-lanyard/sections/side-printed/two-side.png";
     }
     containerBoxSidePrinted.innerHTML +=
-    '<div class="container_boxes_side_printed" onclick="sidePrintedClass.searchDataSidePrintedSelected(\'' + data  + '\', \' '+ index +'  \');">' +
-        '<h3 class="priceDataSidePrinted">+£0 per unit</h3>' +
-        '<h4 class="data_side_printed">'+ data+'</h4>' +
+    '<div class="container_boxes_side_printed" onclick="sidePrintedClass.searchDataSidePrintedSelected(\'' + data[index]["noSides"]  + '\', \' '+ index +'  \');">' +
+        '<h3 class="priceDataSidePrinted">+£'+data[index]["price"]+' per unit</h3>' +
+        '<h4 class="data_side_printed">'+ data[index]["noSides"]+'</h4>' +
         '<img src="../../'+ imgLink +'" alt="">' +
       '</div>'
     ;
