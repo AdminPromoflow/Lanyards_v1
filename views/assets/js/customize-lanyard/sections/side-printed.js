@@ -43,7 +43,7 @@ class SidePrinted {
 
            for (let j = 0; j < widths.length; j++) {
                const width = widths[j].width;
- alert(JSON.stringify(width));
+ alert(JSON.stringify(width) + widthSelected);
                if (width == widthSelected) {
                    const sidePrinted = widths[j].sidePrinted;
 
