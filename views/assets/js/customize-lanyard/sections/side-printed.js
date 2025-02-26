@@ -43,10 +43,9 @@ class SidePrinted {
 
            for (let j = 0; j < widths.length; j++) {
                const width = widths[j].width;
-
+ alert(JSON.stringify(width));
                if (width == widthSelected) {
                    const sidePrinted = widths[j].sidePrinted;
-                   alert(JSON.stringify(sidePrinted));
 
                    for (let k = 0; k < sidePrinted.length; k++) {
                        const noSides = sidePrinted[k].noSides;
