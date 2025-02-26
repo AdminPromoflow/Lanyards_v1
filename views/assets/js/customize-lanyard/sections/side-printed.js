@@ -124,12 +124,13 @@ class SidePrinted {
        }
    }
    if (priceDataSidePrintedResult.length > 0) {
-        let basePrice = priceDataSidePrintedResult[0].price;
-        priceDataSidePrintedResult = priceDataSidePrintedResult.map(item => ({
-            ...item,
-            price: item.price - basePrice
-        }));
-    }
+         let basePrice = parseFloat(priceDataSidePrintedResult[0].price);
+         priceDataSidePrintedResult = priceDataSidePrintedResult.map(item => ({
+             ...item,
+             price: parseFloat((item.price - basePrice).toFixed(2))
+         }));
+     }
+
    return priceDataSidePrintedResult; // Retorna la variable con los precios filtrados
 }
 
