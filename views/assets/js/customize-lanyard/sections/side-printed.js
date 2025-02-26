@@ -46,6 +46,7 @@ class SidePrinted {
 
                if (width == widthSelected) {
                    const sidePrinted = widths[j].sidePrinted;
+                   alert(JSON.stringify(sidePrinted));
 
                    for (let k = 0; k < sidePrinted.length; k++) {
                        const noSides = sidePrinted[k].noSides;
