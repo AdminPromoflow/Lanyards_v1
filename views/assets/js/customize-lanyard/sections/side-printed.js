@@ -25,104 +25,107 @@ class SidePrinted {
     }
   }
 
-   updateEachPriceSidePrinted() {
-    var json = customizeLanyard.getJsonLanyards();
-    var materialSelected = material.getMaterialSelected();
-    var widthSelected = widthClass.getWidthSelected();
-    var amountSelected = priceClass.getAmountSelected();
-    var noColourSelecter = colourClass.getColourSelected(); // Obtener el color seleccionado
+  updateEachPriceSidePrinted() {
+   var json = customizeLanyard.getJsonLanyards();
+   var materialSelected = material.getMaterialSelected();
+   var widthSelected = widthClass.getWidthSelected();
+   var amountSelected = priceClass.getAmountSelected();
 
-    let priceDataSidePrintedResult = [];
-    priceDataSidePrintedResult.length = 0; // Vaciar el array en caso de que tenga datos previos
+   let priceDataSidePrintedResult = [];
+   priceDataSidePrintedResult.length = 0; // Vaciar el array en caso de que tenga datos previos
 
-    // Iterando a través del JSON de materiales
-    for (let i = 0; i < json.length; i++) {
-        const material = json[i].materials.material;
+   // Iterando a través del JSON de materiales
+   for (let i = 0; i < json.length; i++) {
+       const material = json[i].materials.material;
 
-        if (material == materialSelected) {
-            const widths = json[i].materials.width;
+       if (material == materialSelected) {
+           const widths = json[i].materials.width;
 
-            for (let j = 0; j < widths.length; j++) {
-                const width = widths[j].width;
+           for (let j = 0; j < widths.length; j++) {
+               const width = widths[j].width;
 
-                if (width == widthSelected) {
-                    const sidePrinted = widths[j].sidePrinted;
+               if (width == widthSelected) {
+                   const sidePrinted = widths[j].sidePrinted;
 
-                    for (let k = 0; k < sidePrinted.length; k++) {
-                        const noSides = sidePrinted[k].noSides;
-                        const noColours = sidePrinted[k].noColours;
+                   for (let k = 0; k < sidePrinted.length; k++) {
+                       const noSides = sidePrinted[k].noSides;
+                       const noColours = sidePrinted[k].noColours;
 
-                        for (let l = 0; l < noColours.length; l++) {
-                            const noColour = noColours[l].noColour;
+                       if (noColours.length > 0) {
+                           const noColourSelecter = noColours[0].noColour; // Tomar el primer color disponible
 
-                            // Filtrar solo los que coincidan con el color seleccionado
-                            if ((noColour) === (noColourSelecter)) {
-                                const amounts = noColours[l].amount;
+                           for (let l = 0; l < noColours.length; l++) {
+                               const noColour = noColours[l].noColour;
 
-                                for (let m = 0; m < amounts.length; m++) {
-                                    const minAmount = amounts[m]['min-amount'];
-                                    const maxAmount = amounts[m]['max-amount'];
-                                    const pricePerSidePrinted = amounts[m].price; // Captura el precio del sidePrinted
+                               if ((noColour) === (noColourSelecter)) {
+                                   const amounts = noColours[l].amount;
 
-                                    if (Number(amountSelected) >= Number(minAmount) && Number(amountSelected) <= Number(maxAmount)) {
-                                        let existingIndex = priceDataSidePrintedResult.findIndex(item =>
-                                            item.material === material &&
-                                            item.width === width &&
-                                            item.noSides === noSides &&
-                                            item.noColour === noColour
-                                        );
+                                   for (let m = 0; m < amounts.length; m++) {
+                                       const minAmount = amounts[m]['min-amount'];
+                                       const maxAmount = amounts[m]['max-amount'];
+                                       const pricePerSidePrinted = amounts[m].price; // Captura el precio del sidePrinted
 
-                                        if (existingIndex === -1) {
-                                            priceDataSidePrintedResult.push({
-                                                material,
-                                                width,
-                                                noSides,
-                                                noColour,
-                                                minAmount,
-                                                maxAmount,
-                                                price: pricePerSidePrinted
-                                            });
-                                        } else {
-                                            priceDataSidePrintedResult[existingIndex].price = pricePerSidePrinted;
-                                        }
-                                    } else if (Number(amountSelected) > Number(maxAmount)) {
-                                        let highestIndex = amounts.length - 1;
-                                        let highestMinAmount = amounts[highestIndex]['min-amount'];
-                                        let highestMaxAmount = amounts[highestIndex]['max-amount'];
-                                        let highestPrice = amounts[highestIndex].price;
+                                       if (Number(amountSelected) >= Number(minAmount) && Number(amountSelected) <= Number(maxAmount)) {
+                                           let existingIndex = priceDataSidePrintedResult.findIndex(item =>
+                                               item.material === material &&
+                                               item.width === width &&
+                                               item.noSides === noSides &&
+                                               item.noColour === noColour
+                                           );
 
-                                        let existingIndex = priceDataSidePrintedResult.findIndex(item =>
-                                            item.material === material &&
-                                            item.width === width &&
-                                            item.noSides === noSides &&
-                                            item.noColour === noColour
-                                        );
+                                           if (existingIndex === -1) {
+                                               priceDataSidePrintedResult.push({
+                                                   material,
+                                                   width,
+                                                   noSides,
+                                                   noColour,
+                                                   minAmount,
+                                                   maxAmount,
+                                                   price: pricePerSidePrinted
+                                               });
+                                           } else {
+                                               priceDataSidePrintedResult[existingIndex].price = pricePerSidePrinted;
+                                           }
+                                       } else if (Number(amountSelected) > Number(maxAmount)) {
+                                           let highestIndex = amounts.length - 1;
+                                           let highestMinAmount = amounts[highestIndex]['min-amount'];
+                                           let highestMaxAmount = amounts[highestIndex]['max-amount'];
+                                           let highestPrice = amounts[highestIndex].price;
 
-                                        if (existingIndex === -1) {
-                                            priceDataSidePrintedResult.push({
-                                                material,
-                                                width,
-                                                noSides,
-                                                noColour,
-                                                minAmount: highestMinAmount,
-                                                maxAmount: highestMaxAmount,
-                                                price: highestPrice
-                                            });
-                                        } else {
-                                            priceDataSidePrintedResult[existingIndex].price = highestPrice;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
+                                           let existingIndex = priceDataSidePrintedResult.findIndex(item =>
+                                               item.material === material &&
+                                               item.width === width &&
+                                               item.noSides === noSides &&
+                                               item.noColour === noColour
+                                           );
 
-    return priceDataSidePrintedResult; // Retorna la variable con los precios filtrados
+                                           if (existingIndex === -1) {
+                                               priceDataSidePrintedResult.push({
+                                                   material,
+                                                   width,
+                                                   noSides,
+                                                   noColour,
+                                                   minAmount: highestMinAmount,
+                                                   maxAmount: highestMaxAmount,
+                                                   price: highestPrice
+                                               });
+                                           } else {
+                                               priceDataSidePrintedResult[existingIndex].price = highestPrice;
+                                           }
+                                       }
+                                   }
+                               }
+                           }
+                       }
+                   }
+               }
+           }
+       }
+   }
+
+   return priceDataSidePrintedResult; // Retorna la variable con los precios filtrados
 }
+
 
 
   refreshSidePrintedData(){
