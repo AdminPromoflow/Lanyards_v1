@@ -45,7 +45,7 @@ class SidePrinted {
                const width = widths[j].width;
                if (width == widthSelected) {
                    const sidePrinted = widths[j].sidePrinted;
-                   alert(JSON.stringify(width) + widthSelected);
+                  // alert(JSON.stringify(width) + widthSelected);
 
 
                    for (let k = 0; k < sidePrinted.length; k++) {
@@ -123,7 +123,13 @@ class SidePrinted {
            }
        }
    }
-
+   if (priceDataSidePrintedResult.length > 0) {
+        let basePrice = priceDataSidePrintedResult[0].price;
+        priceDataSidePrintedResult = priceDataSidePrintedResult.map(item => ({
+            ...item,
+            price: item.price - basePrice
+        }));
+    }
    return priceDataSidePrintedResult; // Retorna la variable con los precios filtrados
 }
 
