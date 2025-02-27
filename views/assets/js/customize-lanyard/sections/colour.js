@@ -50,7 +50,13 @@ class ColourClass {
   //  colourSelectorClass.showColourSelector();
 
   }
+  updateColourQuantity(){
+    this.createColour();
+    this.showSelectedColour();
 
+    previewColourClass.showSelectedPreviewtColour();
+    previewColourClass.showColourPreview("none");
+  }
   showSelectedColour() {
     // Get the selected colour value
     var data = colourClass.getColourSelected();

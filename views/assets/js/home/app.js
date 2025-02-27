@@ -92,6 +92,7 @@ class Home {
         oneTwoEndsClass.refreshLanyardType();
         widthClass.refreshWidth();
         sidePrintedClass.refreshSidePrintedData();
+        colourClass.updateColourQuantity();
 
         // Open the customization panel
         customizeLanyard.openCustomizeLanyard(true);
@@ -111,7 +112,7 @@ class Home {
         oneTwoEndsClass.refreshLanyardType();
         widthClass.refreshWidth();
         sidePrintedClass.refreshSidePrintedData()
-
+        colourClass.updateColourQuantity();
 
 
         // Open the customization panel
