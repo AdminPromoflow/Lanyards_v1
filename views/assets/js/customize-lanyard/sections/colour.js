@@ -13,6 +13,7 @@ class ColourClass {
       return this.colourSelected;
   }
   createColour(){
+    alert(JSON.stringify(this.updateEachPriceColour()));
     containersBoxesColour.innerHTML = "";
     var sidePrintedSelected = sidePrintedClass.getSidePrintedSelected();
 
@@ -38,6 +39,118 @@ class ColourClass {
       ;
     }
   }
+  updateEachPriceColour() {
+   var json = customizeLanyard.getJsonLanyards();
+   var materialSelected = material.getMaterialSelected();
+   var widthSelected = widthClass.getWidthSelected();
+   var amountSelected = priceClass.getAmountSelected();
+   var sidePrintedSelected = sidePrintedClass.getSidePrintedSelected(); // Se agrega la selección de sidePrinted
+
+   let priceDataColourResult = [];
+   priceDataColourResult.length = 0; // Vaciar el array en caso de que tenga datos previos
+
+   // Iterando a través del JSON de materiales
+   for (let i = 0; i < json.length; i++) {
+       const material = json[i].materials.material;
+
+       if (material == materialSelected) {
+           const widths = json[i].materials.width;
+
+           for (let j = 0; j < widths.length; j++) {
+               const width = widths[j].width;
+               if (width == widthSelected) {
+                   const sidePrinted = widths[j].sidePrinted;
+
+                   for (let k = 0; k < sidePrinted.length; k++) {
+                       const noSides = sidePrinted[k].noSides;
+
+                       if (noSides == sidePrintedSelected) { // Filtra por la cantidad de lados impresos seleccionados
+                           const noColours = sidePrinted[k].noColours;
+
+                           if (noColours.length > 0) {
+                               const noColourSelecter = noColours[0].noColour; // Tomar el primer color disponible
+
+                               for (let l = 0; l < noColours.length; l++) {
+                                   const noColour = noColours[l].noColour;
+
+                                   if ((noColour) === (noColourSelecter)) {
+                                       const amounts = noColours[l].amount;
+
+                                       for (let m = 0; m < amounts.length; m++) {
+                                           const minAmount = amounts[m]['min-amount'];
+                                           const maxAmount = amounts[m]['max-amount'];
+                                           const pricePerColour = amounts[m].price; // Captura el precio del color
+
+                                           if (Number(amountSelected) >= Number(minAmount) && Number(amountSelected) <= Number(maxAmount)) {
+                                               let existingIndex = priceDataColourResult.findIndex(item =>
+                                                   item.material === material &&
+                                                   item.width === width &&
+                                                   item.noSides === noSides &&
+                                                   item.noColour === noColour
+                                               );
+
+                                               if (existingIndex === -1) {
+                                                   priceDataColourResult.push({
+                                                       material,
+                                                       width,
+                                                       noSides,
+                                                       noColour,
+                                                       minAmount,
+                                                       maxAmount,
+                                                       price: pricePerColour
+                                                   });
+                                               } else {
+                                                   priceDataColourResult[existingIndex].price = pricePerColour;
+                                               }
+                                           } else if (Number(amountSelected) > Number(maxAmount)) {
+                                               let highestIndex = amounts.length - 1;
+                                               let highestMinAmount = amounts[highestIndex]['min-amount'];
+                                               let highestMaxAmount = amounts[highestIndex]['max-amount'];
+                                               let highestPrice = amounts[highestIndex].price;
+
+                                               let existingIndex = priceDataColourResult.findIndex(item =>
+                                                   item.material === material &&
+                                                   item.width === width &&
+                                                   item.noSides === noSides &&
+                                                   item.noColour === noColour
+                                               );
+
+                                               if (existingIndex === -1) {
+                                                   priceDataColourResult.push({
+                                                       material,
+                                                       width,
+                                                       noSides,
+                                                       noColour,
+                                                       minAmount: highestMinAmount,
+                                                       maxAmount: highestMaxAmount,
+                                                       price: highestPrice
+                                                   });
+                                               } else {
+                                                   priceDataColourResult[existingIndex].price = highestPrice;
+                                               }
+                                           }
+                                       }
+                                   }
+                               }
+                           }
+                       }
+                   }
+               }
+           }
+       }
+   }
+
+   /*if (priceDataColourResult.length > 0) {
+       let basePrice = parseFloat(priceDataColourResult[0].price);
+       priceDataColourResult = priceDataColourResult.map(item => ({
+           ...item,
+           price: parseFloat((item.price - basePrice).toFixed(2))
+       }));
+   }*/
+
+   return priceDataColourResult; // Retorna la variable con los precios filtrados
+}
+
 
   searchDataColourSelected(coloursQuantity, index){
     this.setColourSelected(coloursQuantity);
