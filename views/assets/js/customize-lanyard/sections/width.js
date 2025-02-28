@@ -56,7 +56,7 @@ class Width {
 
     previewLanyardType.showSelectedPreviewtTemplate();
 
-    this.showSelectedWidth();
+    //this.showSelectedWidth();
 
     const priceDataWidth = document.querySelectorAll(".priceDataWidth");
 
@@ -78,17 +78,11 @@ class Width {
         }
       }
     }
-
-    sidePrintedClass.cleanSidePrinted();
-
-    // Draw SidePrinted available:
-    let sidePrintedAvailable = sidePrintedClass.getDataSidePrintedAvailable();
-
-    for (var i = 0; i < sidePrintedAvailable.length; i++) {
-      sidePrintedClass.drawSidePrintedAvailable(sidePrintedAvailable[i], i);
-    }
-
-    sidePrintedClass.updatePriceSidePrinted();
+    this.refreshWidth();
+    oneTwoEndsClass.refreshLanyardType();
+    sidePrintedClass.refreshSidePrintedData()
+    colourClass.updateColourQuantity();
+    clipClass.updateClip();
   //  artworkClass.changeWidthRightPanel();
 
   }
