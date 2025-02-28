@@ -133,13 +133,13 @@ class ColourClass {
          }
      }
 
-    /* if (priceDataColourResult.length > 0) {
+     if (priceDataColourResult.length > 0) {
          let basePrice = parseFloat(priceDataColourResult[0].price);
          priceDataColourResult = priceDataColourResult.map(item => ({
              ...item,
              price: parseFloat((item.price - basePrice).toFixed(2))
          }));
-     }*/
+     }
 
      return priceDataColourResult; // Retorna la variable con los precios filtrados
   }
