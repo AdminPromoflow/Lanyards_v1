@@ -13,7 +13,9 @@ class ColourClass {
       return this.colourSelected;
   }
   createColour(){
-    alert(JSON.stringify(this.updateEachPriceColour()));
+      let priceDataColourResult = this.updateEachPriceColour();
+
+  //  let firstPrice = priceDataColourResult[0].price;
     containersBoxesColour.innerHTML = "";
     var sidePrintedSelected = sidePrintedClass.getSidePrintedSelected();
 
@@ -21,11 +23,11 @@ class ColourClass {
       containersBoxesColour.innerHTML +=
       `<div class="container_boxes_colour" onclick='colourClass.searchDataColourSelected("one-colour", "0");'>
         <h4 class="dataColour">one-colour</h4>
-        <h3 class="priceDataColour">£0.0 per unit</h3>
+        <h3 class="priceDataColour">£ `+priceDataColourResult[0].price+` per unit</h3>
       </div>
       <div class="container_boxes_colour" onclick='colourClass.searchDataColourSelected("two-colour", "1");'>
         <h4 class="dataColour">two-colour</h4>
-        <h3 class="priceDataColour">£0.2 per unit</h3>
+        <h3 class="priceDataColour">£`+priceDataColourResult[1].price+` per unit</h3>
       </div>`;
       ;
 
@@ -34,7 +36,7 @@ class ColourClass {
       containersBoxesColour.innerHTML +=
       `<div class="container_boxes_colour" onclick='colourClass.searchDataColourSelected("full-colour", "0");'>
         <h4 class="dataColour">full-colour</h4>
-        <h3 class="priceDataColour">£0 per unit</h3>
+        <h3 class="priceDataColour">£`+priceDataColourResult[0].price+` per unit</h3>
       </div>`;
       ;
     }
