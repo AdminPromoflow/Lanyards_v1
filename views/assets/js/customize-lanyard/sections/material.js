@@ -240,12 +240,13 @@ class Material {
 
     this.setMaterialSelected(materialSelected);
 
-    this.refreshMaterial();
-    oneTwoEndsClass.refreshLanyardType();
-    widthClass.refreshWidth();
-    sidePrintedClass.refreshSidePrintedData();
-      clipClass.updateClip();
 
+      this.refreshMaterial();
+      oneTwoEndsClass.refreshLanyardType();
+      widthClass.refreshWidth();
+      sidePrintedClass.refreshSidePrintedData()
+      colourClass.updateColourQuantity();
+      clipClass.updateClip();
 
 
   }

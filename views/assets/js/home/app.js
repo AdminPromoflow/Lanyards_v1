@@ -92,7 +92,9 @@ class Home {
         oneTwoEndsClass.refreshLanyardType();
         widthClass.refreshWidth();
         sidePrintedClass.refreshSidePrintedData();
-        colourClass.updateColourQuantity(); 
+        colourClass.updateColourQuantity();
+        clipClass.updateClip();
+
 
         // Open the customization panel
         customizeLanyard.openCustomizeLanyard(true);
@@ -103,6 +105,7 @@ class Home {
     /**
      * Opens the customization process with pre-configured "Best Seller" settings.
      */
+
     openLanyardFromBestSeller(){
         // Set default amount and update material prices
         this.setOriginValuesBestSeller();
@@ -113,6 +116,8 @@ class Home {
         widthClass.refreshWidth();
         sidePrintedClass.refreshSidePrintedData()
         colourClass.updateColourQuantity();
+        clipClass.updateClip();
+
 
 
         // Open the customization panel
