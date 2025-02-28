@@ -20,26 +20,31 @@ class ColourClass {
     var sidePrintedSelected = sidePrintedClass.getSidePrintedSelected();
 
     if (sidePrintedSelected == "one-side") {
-      containersBoxesColour.innerHTML +=
-      `<div class="container_boxes_colour" onclick='colourClass.searchDataColourSelected("one-colour", "0");'>
-        <h4 class="dataColour">one-colour</h4>
-        <h3 class="priceDataColour">£ `+priceDataColourResult[0].price+` per unit</h3>
-      </div>
-      <div class="container_boxes_colour" onclick='colourClass.searchDataColourSelected("two-colour", "1");'>
-        <h4 class="dataColour">two-colour</h4>
-        <h3 class="priceDataColour">£`+priceDataColourResult[1].price+` per unit</h3>
-      </div>`;
-      ;
+      if (priceDataColourResult.length >= 2) {
+          containersBoxesColour.innerHTML += `
+          <div class="container_boxes_colour" onclick='colourClass.searchDataColourSelected("one-colour", "0");'>
+            <h4 class="dataColour">one-colour</h4>
+            <h3 class="priceDataColour">£ ${priceDataColourResult[0].price} per unit</h3>
+          </div>
+          <div class="container_boxes_colour" onclick='colourClass.searchDataColourSelected("two-colour", "1");'>
+            <h4 class="dataColour">two-colour</h4>
+            <h3 class="priceDataColour">£ ${priceDataColourResult[1].price} per unit</h3>
+          </div>`;
+      } else if (priceDataColourResult.length === 0) {
+          alert("No hay precios disponibles para la selección actual.");
+      }
+  } else if (sidePrintedSelected == "two-side") {
+      if (priceDataColourResult.length >= 1) {
+          containersBoxesColour.innerHTML += `
+          <div class="container_boxes_colour" onclick='colourClass.searchDataColourSelected("full-colour", "0");'>
+            <h4 class="dataColour">full-colour</h4>
+            <h3 class="priceDataColour">£ ${priceDataColourResult[0].price} per unit</h3>
+          </div>`;
+      } else if (priceDataColourResult.length === 0) {
+          alert("No hay precios disponibles para la selección actual.");
+      }
+  }
 
-    }
-    else if (sidePrintedSelected == "two-side") {
-      containersBoxesColour.innerHTML +=
-      `<div class="container_boxes_colour" onclick='colourClass.searchDataColourSelected("full-colour", "0");'>
-        <h4 class="dataColour">full-colour</h4>
-        <h3 class="priceDataColour">£`+priceDataColourResult[0].price+` per unit</h3>
-      </div>`;
-      ;
-    }
   }
   updateEachPriceColour() {
     var json = customizeLanyard.getJsonLanyards();
