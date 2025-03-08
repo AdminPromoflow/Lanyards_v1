@@ -120,6 +120,19 @@ class ApiHandlerLoginGoogle
                       $email = $google_account_info->email;
                       $name = $google_account_info->name;
 
+
+                      // Aca se llama la funcion de login para verificar si el usurio ya se registro
+                      // Tambien no olvidarme de adjuntar con php include la clase de register
+
+                      // Extract and validate user data
+                      $security = new Security();
+                      $validatedData = $security->validateUserData(
+                          $data->nameRegister,
+                          $data->emailRegister,
+                          $data->passwordRegister
+                      );
+
+
                 //      $_SESSION['logging_with_google'] = false;
                       // Enviar respuesta exitosa con los datos del usuario
                       header('Content-Type: application/json');
@@ -214,6 +227,8 @@ class ApiHandlerLoginGoogle
 }
 
 require_once '../../controller/assets/lib/composer/vendor/autoload.php';
+require_once '../../controller/config/security.php';
+
 //require_once '../../controller/users/session-user.php';
 
 
