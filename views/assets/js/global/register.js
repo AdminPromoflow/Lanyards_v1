@@ -175,7 +175,9 @@ class Register {
           registerClass.hideRegister(0);
           break;
         case "0":
-          alert("Registration unsuccessful. The user already exists.");
+          alert("You’re already registered. Please log in to continue.");
+          loginClass.showLogin(700);
+          registerClass.hideRegister(700);
           break;
         default:
           alert("An unexpected error occurred. Please try again.");
