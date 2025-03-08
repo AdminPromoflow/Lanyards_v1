@@ -10,6 +10,8 @@ class Menu {
     logo_img.addEventListener("click", function(){
       window.location.href = "../../views/home/index.php";
     });
+
+
     dadCustomizeLanyard.addEventListener('scroll', function() {
       var seventyVH = window.innerHeight * 0.7;
 
