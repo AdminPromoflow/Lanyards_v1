@@ -125,12 +125,12 @@ class ApiHandlerLoginGoogle
                       // Tambien no olvidarme de adjuntar con php include la clase de register
 
                       // Extract and validate user data
-                      $security = new Security();
+                    /*  $security = new Security();
                       $validatedData = $security->validateUserData(
                           $data->nameRegister,
                           $data->emailRegister,
                           $data->passwordRegister
-                      );
+                      );*/
 
 
                 //      $_SESSION['logging_with_google'] = false;
@@ -229,7 +229,7 @@ class ApiHandlerLoginGoogle
 }
 
 require_once '../../controller/assets/lib/composer/vendor/autoload.php';
-require_once '../../controller/config/security.php';
+//require_once '../../controller/config/security.php';
 
 //require_once '../../controller/users/session-user.php';
 
