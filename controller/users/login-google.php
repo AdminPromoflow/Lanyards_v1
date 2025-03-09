@@ -136,7 +136,9 @@ class ApiHandlerLoginGoogle
                 //      $_SESSION['logging_with_google'] = false;
                       // Enviar respuesta exitosa con los datos del usuario
                       header('Content-Type: application/json');
-                      echo json_encode(array("google_login" => true));
+                      echo json_encode(array("google_login" => true,
+                                              "validatedData" => $validatedData,
+                                              "name" =>$name));
                       exit;
 
                   } catch (Exception $e) {
