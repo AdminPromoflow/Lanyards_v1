@@ -64,6 +64,7 @@ class ApiHandlerLoginGoogle
     private function validateGoogleLogin() {
         if (isset($_SESSION['logging_with_google']) && $_SESSION['logging_with_google'] === true) {
 
+
         // Configuración inicial de Google OAuth
         $clientID = '1022332881668-587bktseqso57k6m2dmpfao53vasg83b.apps.googleusercontent.com';
         $clientSecret = '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';
@@ -78,6 +79,11 @@ class ApiHandlerLoginGoogle
         $client->addScope("profile");
 
 
+
+        echo json_encode([
+            "google_login" => true,
+            "error" => "hahhahahahahah"
+        ]);
 
         // Check if the HTTP_REFERER is set in the server variables
         if (isset($_SERVER['HTTP_REFERER'])) {
