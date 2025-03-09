@@ -63,9 +63,8 @@ class ApiHandlerLoginGoogle
 
     private function validateGoogleLogin() {
       echo json_encode([
-          "google_login" => true,
-          "error" => "hahhahahahahah"
-      ]);
+          "google_login" => true
+      ]);exit;
 
         if (isset($_SESSION['logging_with_google']) && $_SESSION['logging_with_google'] === true) {
 
