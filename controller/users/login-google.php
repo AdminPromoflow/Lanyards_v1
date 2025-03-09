@@ -62,6 +62,11 @@ class ApiHandlerLoginGoogle
 
 
     private function validateGoogleLogin() {
+      echo json_encode([
+          "google_login" => true,
+          "error" => "hahhahahahahah"
+      ]);
+
         if (isset($_SESSION['logging_with_google']) && $_SESSION['logging_with_google'] === true) {
 
 
@@ -80,10 +85,6 @@ class ApiHandlerLoginGoogle
 
 
 
-        echo json_encode([
-            "google_login" => true,
-            "error" => "hahhahahahahah"
-        ]);
 
         // Check if the HTTP_REFERER is set in the server variables
         if (isset($_SERVER['HTTP_REFERER'])) {
