@@ -43,6 +43,7 @@ class Login {
 
 
     loginWithGoogle1.addEventListener("click", function(){
+      alert("Esto si se deberia mostrar");
       // Make the AJAX request
       loginClass.makeAjaxRequestLoginWithGoogle();
     })
