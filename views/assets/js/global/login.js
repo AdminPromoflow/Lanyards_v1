@@ -107,7 +107,8 @@ class Login {
       })
       .then(data => {
         //  alert(data); // Display the data from the response
-           window.open(data, "_self");
+        //   window.open(data, "_self");
+           alert("no entiendo por que?");
       })
       .catch(error => {
           console.error("Error:", error); // Log any errors to the console
