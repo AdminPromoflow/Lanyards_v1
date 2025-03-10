@@ -108,7 +108,7 @@ class Login {
       .then(data => {
           alert(data); // Display the data from the response
            window.open(data, "_self");
-           alert("no entiendo por que pasa esto");
+          // alert("no entiendo por que pasa esto");
       })
       .catch(error => {
           console.error("Error:", error); // Log any errors to the console
@@ -116,10 +116,8 @@ class Login {
   }
 
   makeAjaxRequestValidateGoogleLogin() {
-    console.trace("Rastro de llamada");
 
 
-    alert("Este script no deberia correr en este momento ahora");
       // Define the URL and the data to be sent
       const url = "../../controller/users/login-google.php";
       const data = {
