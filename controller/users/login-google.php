@@ -68,7 +68,10 @@ class ApiHandlerLoginGoogle
         }
         if (isset($_SESSION['logging_with_google']) && $_SESSION['logging_with_google'] === true) {
 
-
+          echo json_encode([
+              "google_login" => true,
+              "hahah" => "hola, lo extrano bola"
+          ]);exit;
 
         // Configuración inicial de Google OAuth
         $clientID = '1022332881668-587bktseqso57k6m2dmpfao53vasg83b.apps.googleusercontent.com';
@@ -84,10 +87,7 @@ class ApiHandlerLoginGoogle
         $client->addScope("profile");
 
 
-        echo json_encode([
-            "google_login" => true,
-            "hahah" => "hola, lo extrano bola"
-        ]);exit;
+
 
         // Check if the HTTP_REFERER is set in the server variables
         if (isset($_SERVER['HTTP_REFERER'])) {
