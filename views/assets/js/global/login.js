@@ -115,6 +115,7 @@ class Login {
   }
 
   makeAjaxRequestValidateGoogleLogin() {
+    alert("Este script no deberia correr en este momento");
       // Define the URL and the data to be sent
       const url = "../../controller/users/login-google.php";
       const data = {
