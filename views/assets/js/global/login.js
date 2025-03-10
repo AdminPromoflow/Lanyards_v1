@@ -136,7 +136,8 @@ class Login {
           return response.json(); // Parse the response as JSON
       })
       .then(data => {
-        JSON.parse(data);
+        alert(JSON.parse(data));
+        ;
       //  alert(data.google_login + 'hi');
           // Check if 'google_login' is true
           if (data.google_login) {
