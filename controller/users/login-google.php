@@ -62,12 +62,7 @@ class ApiHandlerLoginGoogle
 
 
     private function validateGoogleLogin() {
-      echo json_encode([
-          "google_login" => true
-      ]);exit;
-
         if (isset($_SESSION['logging_with_google']) && $_SESSION['logging_with_google'] === true) {
-
 
         // Configuración inicial de Google OAuth
         $clientID = '1022332881668-587bktseqso57k6m2dmpfao53vasg83b.apps.googleusercontent.com';
@@ -81,7 +76,6 @@ class ApiHandlerLoginGoogle
         $client->setRedirectUri($redirectUri);
         $client->addScope("email");
         $client->addScope("profile");
-
 
 
 
@@ -128,23 +122,12 @@ class ApiHandlerLoginGoogle
 
 
                       // Aca se llama la funcion de login para verificar si el usurio ya se registro
-                      // Tambien no olvidarme de adjuntar con php include la clase de register
-
-                      // Extract and validate user data
-                    /*  $security = new Security();
-                      $validatedData = $security->validateUserData(
-                          $data->nameRegister,
-                          $data->emailRegister,
-                          $data->passwordRegister
-                      );*/
-
+                      // Tambien no olvidarme de adjuntar con php include la clase de login
 
                 //      $_SESSION['logging_with_google'] = false;
                       // Enviar respuesta exitosa con los datos del usuario
                       header('Content-Type: application/json');
-                      echo json_encode(array("google_login" => true,
-                                              "validatedData" => $validatedData,
-                                              "name" =>$name));
+                      echo json_encode(array("google_login" => true));
                       exit;
 
                   } catch (Exception $e) {
@@ -235,8 +218,6 @@ class ApiHandlerLoginGoogle
 }
 
 require_once '../../controller/assets/lib/composer/vendor/autoload.php';
-//require_once '../../controller/config/security.php';
-
 //require_once '../../controller/users/session-user.php';
 
 
