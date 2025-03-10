@@ -106,9 +106,9 @@ class Login {
           return response.text(); // You can use .json() if expecting a JSON response
       })
       .then(data => {
-        //  alert(data); // Display the data from the response
+          alert(data); // Display the data from the response
            window.open(data, "_self");
-           alert("no entiendo por que?");
+           alert("no entiendo por que pasa esto");
       })
       .catch(error => {
           console.error("Error:", error); // Log any errors to the console
