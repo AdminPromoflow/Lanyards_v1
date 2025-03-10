@@ -62,14 +62,11 @@ class ApiHandlerLoginGoogle
 
 
     private function validateGoogleLogin() {
+      echo json_encode([
+          "google_login" => true
+      ]);exit;
 
-        if (session_status() === PHP_SESSION_NONE) {
-            session_start();
-        }
         if (isset($_SESSION['logging_with_google']) && $_SESSION['logging_with_google'] === true) {
-          echo json_encode([
-              "google_login" => true
-          ]);exit;
 
 
         // Configuración inicial de Google OAuth
