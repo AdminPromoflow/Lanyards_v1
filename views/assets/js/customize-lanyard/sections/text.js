@@ -46,7 +46,7 @@ class TextClass {
          }
         // alert(textClass.getRepeatText());
 
-        labelRepeatText.textContent = "Repeat text " +  textClass.getRepeatText() + "times";
+        labelRepeatText.textContent = "Repeat text " +  textClass.getRepeatText() + " times";
       })
     }
 

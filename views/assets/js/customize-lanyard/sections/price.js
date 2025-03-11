@@ -19,29 +19,47 @@ class Price {
 
 
 
+
+
+
     // Event listener for input changes on amountLanyards element.
     amountLanyards.addEventListener('input', function(event) {
-      // Remove non-digit characters from the value.
       this.value = this.value.replace(/\D/g, '');
-      // Update amountLanyardsRange value to match amountLanyards value.
-      amountLanyardsRange.value = this.value;
-      priceClass.setAmountSelected(amountLanyardsRange.value);
-      material.updatePriceMaterial();
-      widthClass.updatePriceWidth();
+      if (this.value > 0) {
+        amountLanyardsRange.value = this.value;
+        amountLanyards.value = this.value;
 
+        priceClass.setAmountSelected(amountLanyardsRange.value);
+        material.updatePriceMaterial();
+        widthClass.updatePriceWidth();
+        colourClass.updatePriceColour();
+
+      }
+      else {
+        amountLanyardsRange.value = 1;
+        amountLanyards.value = 1;
+
+        priceClass.setAmountSelected(amountLanyardsRange.value);
+        material.updatePriceMaterial();
+        widthClass.updatePriceWidth();
+        sidePrintedClass.updatePriceSidePrinted();
+        colourClass.updatePriceColour();
+
+
+      }
     });
 
     // Event listener for input changes on amountLanyardsRange element.
     amountLanyardsRange.addEventListener('input', function() {
-      // Check if amountLanyards value is not equal to 0.
-      if (amountLanyards.value !== 0) {
-        // Update amountLanyards value to match amountLanyardsRange value.
-        amountLanyards.value = this.value;
-        priceClass.setAmountSelected(amountLanyards.value);
-        material.updatePriceMaterial();
-        widthClass.updatePriceWidth();
+          amountLanyards.value = this.value;
+          amountLanyardsRange.value = this.value;
 
-      }
+          priceClass.setAmountSelected(amountLanyards.value);
+          material.updatePriceMaterial();
+          widthClass.updatePriceWidth();
+          sidePrintedClass.updatePriceSidePrinted();
+          colourClass.updatePriceColour();
+
     });
   }
 
