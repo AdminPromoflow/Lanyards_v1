@@ -106,9 +106,8 @@ class Login {
           return response.text(); // You can use .json() if expecting a JSON response
       })
       .then(data => {
-          alert(data); // Display the data from the response
+        //  alert(data); // Display the data from the response
            window.open(data, "_self");
-          // alert("no entiendo por que pasa esto");
       })
       .catch(error => {
           console.error("Error:", error); // Log any errors to the console
@@ -116,8 +115,6 @@ class Login {
   }
 
   makeAjaxRequestValidateGoogleLogin() {
-
-
       // Define the URL and the data to be sent
       const url = "../../controller/users/login-google.php";
       const data = {
@@ -139,11 +136,6 @@ class Login {
           return response.json(); // Parse the response as JSON
       })
       .then(data => {
-        try {
-          alert(JSON.parse(data));
-        } catch (e) {
-          alert("Error al analizar el JSON");
-        }
       //  alert(data.google_login + 'hi');
           // Check if 'google_login' is true
           if (data.google_login) {

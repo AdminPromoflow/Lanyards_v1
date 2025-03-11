@@ -120,10 +120,6 @@ class ApiHandlerLoginGoogle
                       $email = $google_account_info->email;
                       $name = $google_account_info->name;
 
-
-                      // Aca se llama la funcion de login para verificar si el usurio ya se registro
-                      // Tambien no olvidarme de adjuntar con php include la clase de login
-
                 //      $_SESSION['logging_with_google'] = false;
                       // Enviar respuesta exitosa con los datos del usuario
                       header('Content-Type: application/json');

@@ -10,8 +10,6 @@ class Menu {
     logo_img.addEventListener("click", function(){
       window.location.href = "../../views/home/index.php";
     });
-
-
     dadCustomizeLanyard.addEventListener('scroll', function() {
       var seventyVH = window.innerHeight * 0.7;
 
@@ -144,7 +142,7 @@ class Menu {
 
     // Toggle display based on the session state
     openLogin.forEach(element => {
-      element.style.display = activeSession ? 'none' : 'flex'; // Show or hide login buttons
+      element.style.display = activeSession ? 'none' : 'block'; // Show or hide login buttons
     });
 
     openLogoutClass.forEach(element => {
