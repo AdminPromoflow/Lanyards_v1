@@ -1,0 +1,130 @@
+.section_passwrod_recovery{
+  position: relative;
+  background-color: rgba(0, 0, 0, .5);
+  padding: 7vw 0;
+  border-radius: 10px;
+  width: 100%;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+.menu_password_recovery{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 80px;
+
+  width: 100%;
+  background: rgb(0,0,0);
+  background: linear-gradient(180deg, rgba(0,0,0,0.9) 0%, rgba(5,29,53,0.9) 66%);
+
+
+  z-index: 12;
+  box-shadow: 7px 7px 5px rgba(255, 255, 255, 0.04);
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
+
+}
+.logo_continer_password_recovery{
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+}
+.logo_continer_password_recovery img{
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.container_passwrod_recovery{
+  margin-top: 5vw;
+  position: relative;
+  width: 60%;
+}
+.title_passwrod_recovery{
+  width: 100%;
+}
+.title_passwrod_recovery h3 {
+  position: relative;
+  text-align: center;
+  color: white;
+  text-shadow: 3px 3px 2px black;
+  font-size: calc(1.4em + 1.4vw);
+  font-weight: 300;
+  margin: 0 0 3vw 0;
+  padding: 0px;
+}
+.container_passwrod_recovery{
+  position: relative;
+  width: 40%;
+}
+
+/* Contenedor de los campos de contacto */
+.box_passwrod_recovery {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Espaciado entre los campos */
+
+}
+
+/* Estilo de las etiquetas */
+.box_passwrod_recovery label {
+  position: relative;
+  font-size: calc(0.7vw + 0.7em);
+  font-weight: 200;
+  color: white; /* Color de texto suave */
+  margin-bottom: 5px;
+}
+
+/* Estilo de los campos de entrada */
+.box_passwrod_recovery input[type="text"] {
+  position: relative;
+  padding: 10px;
+  border: 1px solid #ddd; /* Borde claro */
+  border-radius: 5px;
+  font-size: 14px;
+  color: #333;
+  background-color: #fff; /* Fondo blanco */
+  transition: border-color 0.3s ease; /* Animación suave */
+}
+
+.box_passwrod_recovery input[type="text"]:focus {
+  position: relative;
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Estilo del botón */
+.button_passwrod_recovery {
+  position: relative;
+  padding: 4px 14px;
+  z-index: 10;
+  font-size: 1.1em;
+  font-weight: 400;
+  border-radius: 5px;
+  max-width: 80px;
+
+  color: black;
+  background-color: rgba(179,199,191, .9);
+  cursor: pointer;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 10px;
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+.button_passwrod_recovery:hover {
+  background-color: rgba(179,199,191, 1);
+  color: black;
+}
+
+.button_passwrod_recovery:active {
+  background-color: rgba(179,199,191, .9);
+  color: black;
+}

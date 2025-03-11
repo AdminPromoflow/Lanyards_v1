@@ -1,0 +1,132 @@
+
+.one-end-normal-back-20mm{
+  position: absolute;
+  top: 0.8%;
+  left: 50%;
+  transform: translateX(-50%) perspective(1vw) rotateX(18deg);
+  height: 2.6%;
+  width: 26.7%;
+  background-color: white;
+  border: 1px solid black;
+  z-index: 1;
+}
+
+.one-end-normal-left-20mm{
+  position: absolute;
+  height: 67.3%;
+  width: 4.6%;
+  top: 3.8%;
+  left: 40.8%;
+  background-color: white;
+  border: 1px solid black;
+  transform:  skewX(7.4deg) perspective(7.4vw);
+  overflow: hidden;
+}
+
+.one-end-normal-right-20mm{
+  position: absolute;
+  height: 67.3%;
+  width: 4.4%;
+  top: 3.8%;
+  left: 54.1%;
+  background-color: white;
+  border: 1px solid black;
+  transform:  skewX(-7.4deg) perspective(7.4vw);
+  overflow: hidden;
+}
+
+.back-clip-one-end-20mm{
+  position: absolute;
+  height: 3.3%;
+  width: 6%;
+  top: 0.8%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 130;
+}
+.back-clip-one-end-20mm img:nth-child(1){
+  position: absolute;
+  top: 0px;
+  left: 36px;
+  height: 103%;
+  z-index: 131;
+  filter: drop-shadow(0px 0px 1px black);
+}
+.back-clip-one-end-20mm img:nth-child(2){
+  position: absolute;
+  top: 0px;
+  left: -36px;
+  height: 103%;
+  z-index: 131;
+  filter: drop-shadow(0px 0px 1px black);
+}
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------*/
+.artwork-os-normal-left-20mm{
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.artwork-os-normal-right-20mm{
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.artwork-os-normal-right-20mm img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ajusta la imagen para cubrir todo el contenedor */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.artwork-os-normal-left-20mm img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ajusta la imagen para cubrir todo el contenedor */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+
+
+
+
+.artwork-os-normal-left-20mm-tp{
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.artwork-os-normal-right-20mm-tp{
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.artwork-os-normal-right-20mm-tp img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ajusta la imagen para cubrir todo el contenedor */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.artwork-os-normal-left-20mm-tp img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ajusta la imagen para cubrir todo el contenedor */
+  position: absolute;
+  top: 0;
+  left: 0;
+}

@@ -1,0 +1,215 @@
+
+.login{
+  position: fixed;
+  left: -100%;
+  top: 50%;
+  transition: .7s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  z-index: 14;
+  transform: translateY(-50%);
+}
+.containerLogin{
+
+  width: 300px;
+  height: 400px;
+  max-height: 90vh;
+  overflow-y: scroll;
+  background: rgba(30,54,81,.7);
+  background: linear-gradient(180deg, rgba(30,54,81,.98) 57%, rgba(47,67,90,.98) 100%);
+  box-shadow: 0px 0px  29px #1B2737,  -0px -0px  29px #1B2737;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+  transform: perspective(600px) rotateY(0deg);
+  backface-visibility: hidden; /* cant see the backside elements as theyre turning around */
+  transition: transform 1s linear .1s;
+}
+.headLogin{
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 80px;
+  background: rgba(106,108,110, .1);
+  background: linear-gradient(90deg, rgba(106,108,110,.8) 0%, rgba(141,169,167,.8) 50%, rgba(106,108,110,.8) 100%);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  box-shadow: 0px 0px  5px black;
+}
+.headLoginContaner{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.headLoginContaner h1{
+  position: absolute;
+  left: 50%;
+  padding: 5px;
+  margin: 0px;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+  font-weight: 600;
+  color: rgba(255 , 255 , 255 , .8);
+  text-shadow: 0px 0px  5px black;
+}
+.headLogin img{
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 30%;
+  cursor: pointer;
+  filter: drop-shadow(1px 1px 1px black)  brightness(.8);
+  transition: .4;
+}
+.headLogin img:hover{
+  filter: drop-shadow(1px 1px 3px black)  brightness(.9);
+}
+.headLogin img:active{
+  filter: drop-shadow(1px 1px 1px black)  brightness(.8);
+}
+
+.bodyLogin{
+  position: absolute;
+  top: 80px;
+  width: 100%;
+  height: 190px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(0,0,0,0);
+}
+.bodyLogin h3{
+  color: white;
+  margin-bottom: 10px;
+  font-size: 0.9em;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom .4s;
+}
+.bodyLogin h3:hover{
+  border-bottom: 1px solid white;
+}
+.bodyLogin label{
+  position: relative;
+  text-align: center;
+  color: white;
+  margin-bottom: 6px;
+  font-size: 1.1em;
+  font-weight: 300;
+}
+.bodyLogin input{
+  position: relative;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  padding: 3px 10px;;
+  font-size: 1em;
+  background: rgba(255 , 255 , 255 , .8);
+}
+.bodyLogin button{
+  padding: 4px 14px;
+  z-index: 10;
+  font-size: 1.1em;
+  font-weight: 200;
+  border-radius: 5px;
+  color: black;
+  background-color: #B3C7BF;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.bodyLogin input::placeholder{
+  position: relative;
+  text-align: center;
+  padding: 3px 10px;;
+  font-size: 0.97em;
+  color: rgba(0 , 0 , 0 , .5);
+}
+
+.footerLogin{
+  position: absolute;
+  top: 270px;
+  width: 100%;
+  height: 130px;
+
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  flex-direction: column;
+
+  background-color: rgba(0,0,0,.06);
+}
+.footerLogin h3{
+  color: white;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  font-weight: 300;
+}
+.footerLoginOptionsContainer{
+  position: relative;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  flex-direction: row;
+}
+.footerLoginOptions{
+  position: relative;
+  height: 35px;
+  width: 35px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.footerLoginOptions img{
+  position: relative;
+  height: 100%;
+  width: auto;
+  filter: drop-shadow(1px 1px 1px black);
+  transition: filter .4s;
+}
+.footerLoginOptions img:hover{
+  filter: drop-shadow(3px 3px 1px black);
+}
+.footerLoginOptions img:active{
+  filter: drop-shadow(1px 1px 1px black);
+}
+.footerLogin h4{
+  margin: 10px;
+  margin-bottom: 30px;
+  color: rgba(255 , 255 , 255 , .9);
+  border-bottom: 1px solid transparent;
+
+  font-weight: 300;
+  cursor: pointer;
+  transition: .4s;
+}
+.footerLogin h4:hover{
+  color: rgba(255 , 255 , 255 , 1);
+  border-bottom: 1px solid white;
+}
+
+
+
+
+
+
+/** password_foorgotten **/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**                       **/
