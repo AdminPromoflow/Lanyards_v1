@@ -9,9 +9,13 @@ class CustomizeLanyard {
     this.showCurrentSection(this.currentSectionOpen);
     this.changePreviewNextSection();
   //  this.getLanyardsActive();
-
+  // Define the URL and data object for AJAX request.
+  const url = "../../controller/lanyard/material.php";
+  const data = {
+    action: "getMaterials"
+  };
   // Make an AJAX request to fetch all materials.
-  material.makeAjaxRequestGetAllMaterials();
+  material.makeAjaxRequestGetAllMaterials(url, data);
   }
 
   getLanyardsActive(){
@@ -272,10 +276,11 @@ class CustomizeLanyard {
 
      previewMaterial.showMaterialPreview("flex");
      previewLanyardType.showTypeLanyardPreview("none");
-     previewArtworkManualClass.showArtworkManualPreview("none");
-     this.showPreview(false);
      this.showCurrentSection(this.currentSectionOpen);
 
+
+     const preview = document.getElementById("preview");
+     preview.style.display = "none";
    }
    openLanyardType(){
      previewAccessoriesClass.showAccessoriesPreview("flex");
@@ -284,19 +289,19 @@ class CustomizeLanyard {
      previewLanyardType.showTypeLanyardPreview("flex");
      previewLanyardType.showSelectedPreviewtTemplate();
 
-     this.showCurrentSection(this.currentSectionOpen);
+     customizeLanyard.showCurrentSection(this.currentSectionOpen);
 
-     this.showPreview(true);
-
+     const preview = document.getElementById("preview");
+     preview.style.display = "block";
    }
    openWidth(){
-     this.showCurrentSection(this.currentSectionOpen);
+     customizeLanyard.showCurrentSection(this.currentSectionOpen);
    }
    openSidePrinted(){
-     this.showCurrentSection(this.currentSectionOpen);
+     customizeLanyard.showCurrentSection(this.currentSectionOpen);
    }
    openClips(){
-     this.showCurrentSection(this.currentSectionOpen);
+     customizeLanyard.showCurrentSection(this.currentSectionOpen);
    }
    openAttachment(){
      previewLanyardType.showTypeLanyardPreview("flex");
@@ -305,7 +310,7 @@ class CustomizeLanyard {
      previewAccessoriesClass.showAccessoriesPreview("none");
      previewAccessoriesClass.showAccessoriesPreview("flex");
 
-     this.showCurrentSection(this.currentSectionOpen);
+     customizeLanyard.showCurrentSection(this.currentSectionOpen);
    }
    openAccessories(){
      this.showCurrentSection(this.currentSectionOpen);
@@ -319,37 +324,33 @@ class CustomizeLanyard {
      previewColourClass.showColourPreview("flex");
      previewLanyardType.showTypeLanyardPreview("none");
      previewAccessoriesClass.showAccessoriesPreview("none");
-     this.showCurrentSection(this.currentSectionOpen);
+     customizeLanyard.showCurrentSection(this.currentSectionOpen);
    }
    openArtWorkManual(){
      previewAccessoriesClass.showAccessoriesPreview("none");
 
      previewColourClass.showColourPreview("none");
-
-     previewMaterial.showMaterialPreview("none");
      previewArtworkManualClass.showArtworkManualPreview("flex");
      previewLanyardType.showTypeLanyardPreview("none");
      artworkPreviewClass.showHidePreviewArtwork(false);
-     this.showCurrentSection(this.currentSectionOpen);
-     this.showPreview(true);
-
+     customizeLanyard.showCurrentSection(this.currentSectionOpen);
    }
   openBackgroundColour() {
     previewAccessoriesClass.showAccessoriesPreview("flex");
 
     previewArtworkManualClass.showArtworkManualPreview("none");
     previewLanyardType.showTypeLanyardPreview("flex");
-    this.showCurrentSection(this.currentSectionOpen);
+    customizeLanyard.showCurrentSection(this.currentSectionOpen);
   }
   openText(){
     previewLanyardType.showTypeLanyardPreview("flex");
     previewArtworkManualClass.showArtworkManualPreview("none");
-    this.showCurrentSection(this.currentSectionOpen);
+    customizeLanyard.showCurrentSection(this.currentSectionOpen);
   }
   openImage(){
     previewLanyardType.showTypeLanyardPreview("flex");
     previewArtworkManualClass.showArtworkManualPreview("none");
-    this.showCurrentSection(this.currentSectionOpen);
+    customizeLanyard.showCurrentSection(this.currentSectionOpen);
   }
 
   openArtwork(){
@@ -357,7 +358,7 @@ class CustomizeLanyard {
     artworkPreviewClass.showHidePreviewArtwork(true);
     previewLanyardType.showTypeLanyardPreview("none");
     previewArtworkManualClass.showArtworkManualPreview("none");
-    this.showCurrentSection(this.currentSectionOpen);
+    customizeLanyard.showCurrentSection(this.currentSectionOpen);
   }
 
   openArtworkFinal(){
@@ -365,7 +366,7 @@ class CustomizeLanyard {
     artworkPreviewClass.showHidePreviewArtwork(false);
     previewLanyardType.showTypeLanyardPreview("flex");
     classPreviewLogin.showLoginPreview("none");
-    this.showCurrentSection(this.currentSectionOpen);
+    customizeLanyard.showCurrentSection(this.currentSectionOpen);
     classRegister.openRegister(false);
   }
 
@@ -374,7 +375,7 @@ class CustomizeLanyard {
     classPreviewLogin.showLoginPreview("flex");
     previewLanyardType.showTypeLanyardPreview("none");
     previewProvidedInformation.showProvidedInformationPreview('none');
-    this.showCurrentSection(this.currentSectionOpen);
+    customizeLanyard.showCurrentSection(this.currentSectionOpen);
   }
 
   openProvidedInformation(){
@@ -382,14 +383,14 @@ class CustomizeLanyard {
     previewCheckout.showPreviewCheckout("none");
     previewProvidedInformation.showProvidedInformationPreview('flex');
     previewLanyardType.showTypeLanyardPreview("none");
-    this.showCurrentSection(this.currentSectionOpen);
+    customizeLanyard.showCurrentSection(this.currentSectionOpen);
     this.showNext(true);
   }
   openCheckout(){
     this.showNext(false);
     previewLanyardType.showTypeLanyardPreview("none");
     previewProvidedInformation.showProvidedInformationPreview('none');
-    this.showCurrentSection(this.currentSectionOpen);
+    customizeLanyard.showCurrentSection(this.currentSectionOpen);
     previewLanyardType.showTypeLanyardPreview("flex");
   }
   setStateVisibilityPanelCustomeLanyard(value) {

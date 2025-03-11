@@ -30,7 +30,7 @@ $jsVersion = $jsFile && file_exists($jsFile) ? filemtime($jsFile) : time();
 
     <!-- Box for second individual (Elevating Your Brand) -->
     <div class="boxAboutUs">
-      <h3>Elevating <br> Your Brand</h3>
+      <h3>Elevating Your Brand</h3>
       <p>With a focus on delivering the most popular lanyard styles, we help elevate
       your brand or event. Our experienced team is committed to innovation and
       functionality, offering customised products that reflect professionalism,

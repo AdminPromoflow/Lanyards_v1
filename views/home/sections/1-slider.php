@@ -12,7 +12,7 @@ $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
     <div class="slider">
       <div class="messageSlider reverseSlider">
         <h2>Click here to start creating your unique lanyard.</h2>
-        <button class="open_from_scratch buttonColor1 open_choose_options_lanyards" type="button"><strong class="width300">Start</strong></button>
+        <button class="buttonColor1 open_choose_options_lanyards" type="button"><strong class="width300">Start</strong></button>
       </div>
       <div class="imageSlider">
         <?php
@@ -33,7 +33,7 @@ $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
       </div>
       <div class="messageSlider">
         <h2>Start personalizing or choose the bestsellers here.</h2>
-        <button class="open_from_best_seller buttonColor2 open_choose_options_lanyards" type="button"><strong class="width300">Start</strong></button>
+        <button class="buttonColor2 open_choose_options_lanyards" type="button"><strong class="width300">Start</strong></button>
       </div>
     </div>
 
@@ -47,7 +47,7 @@ $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
       </div>
       <div class="messageSlider">
         <h2>Press here to create your lanyard from scratch.</h2>
-        <button class="open_from_scratch buttonColor3" type="button"><strong class="width300">Start</strong></button>
+        <button class="buttonColor3" type="button"><strong class="width300">Start</strong></button>
       </div>
     </div>
 
@@ -61,7 +61,7 @@ $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
       </div>
       <div class="messageSlider">
         <h2>Start here to choose the best-selling lanyard.</h2>
-        <button class="open_from_best_seller buttonColor4" type="button"><strong class="width300">Start</strong></button>
+        <button class="buttonColor4" type="button"><strong class="width300">Start</strong></button>
       </div>
     </div>
   </div>

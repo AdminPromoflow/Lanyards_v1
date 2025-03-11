@@ -36,8 +36,7 @@ $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
     </div>
 
     <div class="terms_conditions_footer">
-      <a href="../../views/terms_conditions/index.php"><p>Terms and conditions.</p></a>
-
+      <p>Terms and conditions.</p>
     </div>
   </div>
 </section>

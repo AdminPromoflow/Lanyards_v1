@@ -21,21 +21,49 @@ class OneTwoEnds {
     getJsonLanyardType(){
       return this.jsonLanyardType;
     }
-    updateLanyardType(){
-      var json = customizeLanyard.getJsonLanyards();
-
-      var materialSelected = material.getMaterialSelected();
-
-        var data = json.find(item => item.materials.material === materialSelected)?.materials.lanyardType || [];
+    selectOneTwoEnds(){
+      // Show the selected preview template
+      //this.showSelectedPreviewtTemplate();
+      var data = this.getJsonLanyardType();
       // Clean the oneTwoEnds options
       this.cleanOneTwoEnds();
 
       // Iterate through the allLanyardTypes and create oneTwoEnds elements
       for (var i = 0; i < data.length; i++) {
-        this.createOneTwoEnds(data[i]);
+        this.createOneTwoEnds(data[i], i);
       }
 
+      // Display the selected "one" or "two" ends
+      this.showSelectedOneTwoEnds();
     }
+  // Function to make the AJAX request
+  makeAjaxRequestSetTypeLanyardSelected(url, data) {
+    // Make the request using the Fetch API
+    fetch(url, {
+      method: "POST", // HTTP POST method to send data
+      headers: {
+        "Content-Type": "application/json" // Indicate that you're sending JSON
+      },
+      body: JSON.stringify(data) // Convert the JSON object to a JSON string and send it
+    })
+      .then(response => {
+        if (response.ok) {
+          return response.text(); // or response.json() if you expect a JSON response
+        }
+        throw new Error("Network error.");
+      })
+      .then(data => {
+       data = JSON.parse(data);
+
+
+    //   oneTwoEndsClass.showSelectedOneTwoEnds();
+    //   previewLanyardType.showSelectedPreviewtTemplate();
+
+      })
+      .catch(error => {
+        console.error("Error:", error);
+      });
+  }
 
   showSelectedOneTwoEnds(){
     var typeLanyardSelected = this.getTypeLanyardSelected();
@@ -59,7 +87,7 @@ class OneTwoEnds {
       }
     }
   }
-  createOneTwoEnds(data){
+  createOneTwoEnds(data, index){
     containersBoxesOneTwoEnds.innerHTML +=
     '<div class="container_boxes_one_two_ends"  onclick="oneTwoEndsClass.searchDataTypeLanyardSelected(\'' + data["type"] + '\', \'' + data["price"] + '\');">'+
       '<h3 class="price-one_two_ends">+£'+data["price"]+' per unit</h3>'+
@@ -71,6 +99,12 @@ class OneTwoEnds {
 
 
   searchDataTypeLanyardSelected(typeLanyardType, priceLanyardType){
+    const url = "../../controller/lanyard/material.php";
+    const data = {
+      action: "setTypeLanyardSelected",
+      optionSelected:   typeLanyardType
+    };
+  //    oneTwoEndsClass.makeAjaxRequestSetTypeLanyardSelected(url, data);
 
     oneTwoEndsClass.setTypeLanyardSelected(typeLanyardType);
     oneTwoEndsClass.showSelectedOneTwoEnds();
@@ -82,13 +116,6 @@ class OneTwoEnds {
   }
   cleanOneTwoEnds(){
     containersBoxesOneTwoEnds.innerHTML = "";
-  }
-
-  refreshLanyardType(){
-    this.updateLanyardType();
-    this.showSelectedOneTwoEnds();
-
-    previewLanyardType.showSelectedPreviewtTemplate();
   }
 
 }

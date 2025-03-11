@@ -52,7 +52,7 @@ $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
           <h3>Customization</h3>
         </div>
       </div>
-      <button class="open_from_best_seller" type="button" name="button">Select</button>
+      <button type="button" name="button">Select</button>
     </div>
 
     <div class="subcontainer_most_popular_lanyard">

@@ -65,12 +65,10 @@ class Material {
 
                         $lanyards = $this->getAllLanyardInfo();
 
-                        $json = $this->getJsonData();
 
                         // Prepare response with materials, lanyard types, and widths
                         $response = array('materials' => $materials,
-                                          'lanyards'  => $lanyards,
-                                          'json'      => $json
+                                          'lanyards'  => $lanyards
                                           );
 
                         echo json_encode($response);
@@ -80,7 +78,8 @@ class Material {
 
                         // Handle setting the selected material and searching its attributes
                         $this->setSessionMaterial($data);
-                        $infoMaterial  = $this->getAttributesMaterial($data->optionSelected);
+                        $infoMaterial  = $this->getAttributesMaterial($data->optionSelected
+                      );
 
 
                         $lanyardTypes = new TypeLanyards();
@@ -146,16 +145,12 @@ class Material {
                         $amount->setNoSides($sidePrintedSelected);
                         $amount->setNoColour($noColourSelected);
                         $allAmount =  $amount->getAllAmountByNoColour();
-
-
-
-                    $jsonDataByMaterial =  $this->getJsonDataByMaterial($data->optionSelected);
-
-
+                        // $amountSelected = $amount-> selectAmount($allAmount);
+                        // $amount->setMinAmount($amountSelected);
+                        // $allWidthPrice = $amount-> getAllPriceOfWidth();
 
                         // Prepare and send the response with material information
-                        $response = array ('jsonDataByMaterial' => $jsonDataByMaterial,
-                                          'sidePrintedSelected' => $sidePrintedSelected,
+                        $response = array ('sidePrintedSelected' => $sidePrintedSelected,
                                           'noColourSelected' => $noColourSelected,
                                           'material' => $infoMaterial,
                                           'allLanyardTypes' => $allLanyardTypes,
@@ -169,7 +164,6 @@ class Material {
                                           //'noColourSelected' => $noColourSelected,
                                           //'allAmount' => $allAmount,
                                           'amountPriceSelected' => $priceSelected
-
                                           );
                         //,  'allWidth' => $allWidth
                         echo json_encode($response);
@@ -262,225 +256,7 @@ class Material {
         return($response); // Send the response with all materials
     }
 
-    private function getJsonData(){
-      // Establecer la conexión a la base de datos
-    $connection = new Database();
-    $lanyards = new Lanyards($connection);
 
-    // Recuperar los datos para TODOS los materiales
-    $rows = $lanyards->getAllLanyardData(); // Se asume que este método existe y devuelve un arreglo asociativo
-
-    // Inicializar el array para almacenar el JSON estructurado
-    $data = ["Lanyards" => []];
-
-    foreach ($rows as $row) {
-        $materialName = $row['material'];
-        $lanyardType = $row['lanyardType'];
-        $lanyardPrice = $row['lanyardPrice'];
-        $width = $row['width'];
-        $clipName = $row['clipName'];
-        $clipPrice = $row['clipPrice'];
-        $side = $row['side'];
-        $colourOption = $row['colourOption'];
-        $minAmount = $row['minAmount'];
-        $maxAmount = $row['maxAmount'];
-        $amountPrice = $row['amountPrice'];
-
-        // Buscar si el material ya existe en el array
-        $materialIndex = array_search($materialName, array_column($data["Lanyards"], "material"));
-        if ($materialIndex === false) {
-            $data["Lanyards"][] = [
-                "material" => $materialName,
-                "LanyardType" => [],
-                "Width" => []
-            ];
-            $materialIndex = count($data["Lanyards"]) - 1;
-        }
-
-        // Buscar si el LanyardType ya existe para ese material
-        $lanyardTypeIndex = array_search($lanyardType, array_column($data["Lanyards"][$materialIndex]["LanyardType"], "LanyardType"));
-        if ($lanyardTypeIndex === false) {
-            $data["Lanyards"][$materialIndex]["LanyardType"][] = [
-                "LanyardType" => $lanyardType,
-                "lanyardPrice" => (float) $lanyardPrice
-            ];
-        }
-
-        // Buscar si el Width ya existe para ese material
-        $widthIndex = array_search($width, array_column($data["Lanyards"][$materialIndex]["Width"], "width"));
-        if ($widthIndex === false) {
-            $data["Lanyards"][$materialIndex]["Width"][] = [
-                "width" => $width,
-                "Clips" => [],
-                "SidePrinted" => []
-            ];
-            $widthIndex = count($data["Lanyards"][$materialIndex]["Width"]) - 1;
-        }
-
-        // Buscar si el Clip ya existe dentro del Width
-        $clipIndex = array_search($clipName, array_column($data["Lanyards"][$materialIndex]["Width"][$widthIndex]["Clips"], "clipName"));
-        if ($clipIndex === false) {
-            $data["Lanyards"][$materialIndex]["Width"][$widthIndex]["Clips"][] = [
-                "clipName" => $clipName,
-                "clipPrice" => (float) $clipPrice
-            ];
-        }
-
-        // Buscar si el SidePrinted ya existe dentro del Width
-        $sideIndex = array_search($side, array_column($data["Lanyards"][$materialIndex]["Width"][$widthIndex]["SidePrinted"], "side"));
-        if ($sideIndex === false) {
-            $data["Lanyards"][$materialIndex]["Width"][$widthIndex]["SidePrinted"][] = [
-                "side" => $side,
-                "Colours" => []
-            ];
-            $sideIndex = count($data["Lanyards"][$materialIndex]["Width"][$widthIndex]["SidePrinted"]) - 1;
-        }
-
-        // Buscar si el ColourOption ya existe dentro del SidePrinted
-        $colourIndex = array_search($colourOption, array_column($data["Lanyards"][$materialIndex]["Width"][$widthIndex]["SidePrinted"][$sideIndex]["Colours"], "colourOption"));
-        if ($colourIndex === false) {
-            $data["Lanyards"][$materialIndex]["Width"][$widthIndex]["SidePrinted"][$sideIndex]["Colours"][] = [
-                "colourOption" => $colourOption,
-                "Amount" => []
-            ];
-            $colourIndex = count($data["Lanyards"][$materialIndex]["Width"][$widthIndex]["SidePrinted"][$sideIndex]["Colours"]) - 1;
-        }
-
-        // Evitar duplicados en Amount: verifica si ya existe esa combinación
-        $existingAmounts = &$data["Lanyards"][$materialIndex]["Width"][$widthIndex]["SidePrinted"][$sideIndex]["Colours"][$colourIndex]["Amount"];
-        $amountExists = false;
-        foreach ($existingAmounts as $amount) {
-            if ($amount["minAmount"] == $minAmount && $amount["maxAmount"] == $maxAmount && $amount["amountPrice"] == $amountPrice) {
-                $amountExists = true;
-                break;
-            }
-        }
-        if (!$amountExists) {
-            $existingAmounts[] = [
-                "minAmount" => (int) $minAmount,
-                "maxAmount" => (int) $maxAmount,
-                "amountPrice" => (float) $amountPrice
-            ];
-        }
-    }
-
-    return $data;
-    }
-
-    private function getJsonDataByMaterial($materialSelected) {
-        // Establish database connection
-        $connection = new Database();
-        $lanyards = new Lanyards($connection);
-        $lanyards->setMaterial($materialSelected);
-
-        // Retrieve data using getLanyardDataByMaterial()
-        $rows = $lanyards->getLanyardDataByMaterial(); // Now $rows is already an associative array
-
-        // Initialize the array to store structured JSON
-        $data = ["Lanyards" => []];
-
-        foreach ($rows as $row) {
-            $materialName = $row['material'];
-            $lanyardType = $row['lanyardType'];
-            $lanyardPrice = $row['lanyardPrice'];
-            $width = $row['width'];
-            $clipName = $row['clipName'];
-            $clipPrice = $row['clipPrice'];
-            $side = $row['side'];
-            $colourOption = $row['colourOption'];
-            $minAmount = $row['minAmount'];
-            $maxAmount = $row['maxAmount'];
-            $amountPrice = $row['amountPrice'];
-
-            // Find if the material already exists
-            $materialIndex = array_search($materialName, array_column($data["Lanyards"], "material"));
-
-            if ($materialIndex === false) {
-                $data["Lanyards"][] = [
-                    "material" => $materialName,
-                    "LanyardType" => [],
-                    "Width" => []
-                ];
-                $materialIndex = count($data["Lanyards"]) - 1;
-            }
-
-            // Find if the LanyardType already exists
-            $lanyardTypeIndex = array_search($lanyardType, array_column($data["Lanyards"][$materialIndex]["LanyardType"], "LanyardType"));
-
-            if ($lanyardTypeIndex === false) {
-                $data["Lanyards"][$materialIndex]["LanyardType"][] = [
-                    "LanyardType" => $lanyardType,
-                    "lanyardPrice" => (float) $lanyardPrice
-                ];
-            }
-
-            // Find if the Width already exists
-            $widthIndex = array_search($width, array_column($data["Lanyards"][$materialIndex]["Width"], "width"));
-
-            if ($widthIndex === false) {
-                $data["Lanyards"][$materialIndex]["Width"][] = [
-                    "width" => $width,
-                    "Clips" => [],
-                    "SidePrinted" => []
-                ];
-                $widthIndex = count($data["Lanyards"][$materialIndex]["Width"]) - 1;
-            }
-
-            // Find if the Clip already exists
-            $clipIndex = array_search($clipName, array_column($data["Lanyards"][$materialIndex]["Width"][$widthIndex]["Clips"], "clipName"));
-
-            if ($clipIndex === false) {
-                $data["Lanyards"][$materialIndex]["Width"][$widthIndex]["Clips"][] = [
-                    "clipName" => $clipName,
-                    "clipPrice" => (float) $clipPrice
-                ];
-            }
-
-            // Find if the SidePrinted already exists
-            $sideIndex = array_search($side, array_column($data["Lanyards"][$materialIndex]["Width"][$widthIndex]["SidePrinted"], "side"));
-
-            if ($sideIndex === false) {
-                $data["Lanyards"][$materialIndex]["Width"][$widthIndex]["SidePrinted"][] = [
-                    "side" => $side,
-                    "Colours" => []
-                ];
-                $sideIndex = count($data["Lanyards"][$materialIndex]["Width"][$widthIndex]["SidePrinted"]) - 1;
-            }
-
-            // Find if the ColourOption already exists
-            $colourIndex = array_search($colourOption, array_column($data["Lanyards"][$materialIndex]["Width"][$widthIndex]["SidePrinted"][$sideIndex]["Colours"], "colourOption"));
-
-            if ($colourIndex === false) {
-                $data["Lanyards"][$materialIndex]["Width"][$widthIndex]["SidePrinted"][$sideIndex]["Colours"][] = [
-                    "colourOption" => $colourOption,
-                    "Amount" => []
-                ];
-                $colourIndex = count($data["Lanyards"][$materialIndex]["Width"][$widthIndex]["SidePrinted"][$sideIndex]["Colours"]) - 1;
-            }
-
-            // Find if the Amount already exists to avoid duplicates
-            $existingAmounts = &$data["Lanyards"][$materialIndex]["Width"][$widthIndex]["SidePrinted"][$sideIndex]["Colours"][$colourIndex]["Amount"];
-
-            $amountExists = false;
-            foreach ($existingAmounts as $amount) {
-                if ($amount["minAmount"] == $minAmount && $amount["maxAmount"] == $maxAmount && $amount["amountPrice"] == $amountPrice) {
-                    $amountExists = true;
-                    break;
-                }
-            }
-
-            // If Amount is not duplicated, add it
-            if (!$amountExists) {
-                $existingAmounts[] = [
-                    "minAmount" => (int) $minAmount,
-                    "maxAmount" => (int) $maxAmount,
-                    "amountPrice" => (float) $amountPrice
-                ];
-            }
-        }
-
-        return $data;
-    }
 
     private function getAllLanyardInfo() {
         // Create a connection to the database
