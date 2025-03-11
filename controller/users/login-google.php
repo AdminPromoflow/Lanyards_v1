@@ -66,7 +66,7 @@ class ApiHandlerLoginGoogle
       echo json_encode([
           "google_login" => true,
           "data" => "Estamos empezando a ver que es lo que pasa"
-      ]);
+      ]);exit;
         if (isset($_SESSION['logging_with_google']) && $_SESSION['logging_with_google'] === true) {
 
         // Configuración inicial de Google OAuth
