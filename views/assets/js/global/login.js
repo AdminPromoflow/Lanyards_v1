@@ -136,7 +136,11 @@ class Login {
           return response.json(); // Parse the response as JSON
       })
       .then(data => {
-      //  alert(data.google_login + 'hi');
+        try {
+            alert(JSON.parse(data));
+        } catch (error) {
+            alert("Error al analizar el JSON: " + error.message);
+        }
           // Check if 'google_login' is true
           if (data.google_login) {
               // Handle successful login
@@ -147,7 +151,7 @@ class Login {
           }
       })
       .catch(error => {
-          console.error("Error:", error); // Log any errors to the console
+          alert("Error:", error); // Log any errors to the console
       });
   }
 

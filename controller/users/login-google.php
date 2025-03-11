@@ -130,7 +130,7 @@ class ApiHandlerLoginGoogle
                       // Enviar respuesta de error con detalles
                       header('Content-Type: application/json');
                       echo json_encode([
-                          "google_login" => false,
+                          "google_login" => false,   
                           "error" => $e->getMessage()
                       ]);
                       exit;
