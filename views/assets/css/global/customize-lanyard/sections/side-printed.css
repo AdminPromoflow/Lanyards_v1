@@ -43,7 +43,6 @@
   display: flex;
   justify-content: center;
   flex-direction: row;
-  overflow-y: scroll;
   overflow-x: hidden;
 }
 .container_boxes_side_printed{

@@ -16,15 +16,10 @@ class ClipClass {
     containers_boxes_clip.innerHTML = "";
   }
 
-
-
-
   getDataClipAvailable(){
       var json = customizeLanyard.getJsonLanyards();
       var materialSelected = material.getMaterialSelected();
       var widthSelected = widthClass.getWidthSelected();
-
-
 
       let clipAvailable = [];
       // Iterating through each item in the JSON array
@@ -35,7 +30,6 @@ class ClipClass {
 
           // Checking if the material matches the selected material
           if (material == materialSelected) {
-
 
               // Extracting the 'widths' array from the current JSON item
               const widths = json[i].materials.width;
@@ -68,18 +62,7 @@ class ClipClass {
       return clipAvailable;
   }
 
-  selectClip(){
-    // Clean the clip options
-    clipClass.cleanClip();
 
-    // Get the available clip options
-    let clipAvailable = clipClass.getDataClipAvailable();
-
-    // Iterate through the available clip options and draw them
-    for (var i = 0; i < clipAvailable.length; i++) {
-      clipClass.drawClipAvailable(clipAvailable[i], i);
-    }
-  }
 
   drawClipAvailable(data, index){
   //  alert(JSON.stringify(data));
@@ -100,7 +83,16 @@ class ClipClass {
     ;
   }
   updateClip(){
+    // Clean the clip options
+    clipClass.cleanClip();
 
+    // Get the available clip options
+    let clipAvailable = clipClass.getDataClipAvailable();
+
+    // Iterate through the available clip options and draw them
+    for (var i = 0; i < clipAvailable.length; i++) {
+      clipClass.drawClipAvailable(clipAvailable[i], i);
+    }
   }
 
   searchDataClipSelected(data, index) {

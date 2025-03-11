@@ -1,148 +1,79 @@
 <?php
-// Validar el archivo CSS antes de usar filemtime()
+// Validate the CSS file before using filemtime()
 $cssPath = '../../views/assets/css/home/sections/3-materials.css';
 $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
 ?>
 
 <!-- CSS -->
-<link rel="stylesheet" href="../../views/assets/css/home/sections/3-materials.css?v=<?= $cssVersion; ?>">
+<link rel="stylesheet" href="<?= $cssPath ?>?v=<?= $cssVersion; ?>">
 
 <section class="materials">
   <h1>Create your own lanyard from scratch.</h1>
-  <p>Create your own custom lanyard from scratch! Tailor it to your style, needs,
-    and preferences for a unique accessory. Perfect for events, work, or personal use,
-    design a lanyard that stands out. Start creating yours today and enjoy a
-    one-of-a-kind design that's all your own!</p>
+  <p>Create your own custom lanyard from scratch! Tailor it to your style, needs, and preferences for a unique accessory. Perfect for events, work, or personal use, design a lanyard that stands out. Start creating yours today and enjoy a one-of-a-kind design that's all your own!</p>
 
   <div class="containerMaterials">
+    <?php
+    // Array of materials with file paths and names
+    $materials = [
+        ["path" => "Material-1-Flat-Polyester.jpg", "name" => "Ribbed Polyester"],
+        ["path" => "Material-2-Tabular.jpg", "name" => "Tubular"],
+        ["path" => "Material-3-Natural-Bamboo.jpg", "name" => "RPET Polyester"],
+        ["path" => "Material-4-Dye-sublimation.jpg", "name" => "Dye Sub polyester"],
+        ["path" => "Material-5-Dye-sub-Recycled-PET.jpg", "name" => "Dye Sub RPET"]
+    ];
 
-    <div class="containerTextMaterials">
-      <div class="containerTextMaterialsBox">
-        <?php
-        $imgPath1 = '../../views/assets/img/home/3-materials/Material-1-Flat-Polyester.jpg';
-        $imgVersion1 = file_exists($imgPath1) ? filemtime($imgPath1) : time();
-        ?>
-        <img src="<?= $imgPath1 ?>?v=<?= $imgVersion1; ?>" alt="">
-      </div>
-      <div class="containerTextMaterialsBox">
-        <h3 class="material-for-select">Create your own lanyard</h3>
-      </div>
-      <div class="buttonMaterialsBox">
-        <button class="openCustomizeLanyardFromMaterials" type="button">Select</button>
-      </div>
-    </div>
+    // Base path for material images
+    $imgBasePath = '../../views/assets/img/home/3-materials/';
 
-    <div class="containerTextMaterials">
-      <div class="containerTextMaterialsBox">
-        <?php
-        $imgPath2 = '../../views/assets/img/home/3-materials/Material-2-Tabular.jpg';
-        $imgVersion2 = file_exists($imgPath2) ? filemtime($imgPath2) : time();
-        ?>
-        <img src="<?= $imgPath2 ?>?v=<?= $imgVersion2; ?>" alt="">
-      </div>
-      <div class="containerTextMaterialsBox">
-        <h3 class="material-for-select">Tubular</h3>
-      </div>
-      <div class="buttonMaterialsBox">
-        <button class="openCustomizeLanyardFromMaterials" type="button">Select</button>
-      </div>
-    </div>
+    // Generate material selection blocks dynamically
+    foreach ($materials as $material) {
+        $imgPath = $imgBasePath . $material["path"];
+        $imgVersion = file_exists($imgPath) ? filemtime($imgPath) : time();
+    ?>
+        <div class="containerTextMaterials">
+          <div class="containerTextMaterialsBox">
+            <img src="<?= $imgPath ?>?v=<?= $imgVersion; ?>" alt="<?= $material['name']; ?>">
+          </div>
+          <div class="containerTextMaterialsBox">
+            <h3 class="material_for_select"><?= $material['name']; ?></h3>
+          </div>
+          <div class="buttonMaterialsBox">
+            <button class="open_from_scratch_in_home" type="button">Select</button>
+          </div>
+        </div>
+    <?php
+    }
+    ?>
 
-    <div class="containerTextMaterials">
-      <div class="containerTextMaterialsBox">
-        <?php
-        $imgPath3 = '../../views/assets/img/home/3-materials/Material-3-Natural-Bamboo.jpg';
-        $imgVersion3 = file_exists($imgPath3) ? filemtime($imgPath3) : time();
-        ?>
-        <img src="<?= $imgPath3 ?>?v=<?= $imgVersion3; ?>" alt="">
-      </div>
-      <div class="containerTextMaterialsBox">
-        <h3 class="material-for-select">RPET Polyester</h3>
-      </div>
-      <div class="buttonMaterialsBox">
-        <button class="openCustomizeLanyardFromMaterials" type="button">Select</button>
-      </div>
-    </div>
+    <?php
+    // Array of additional material preview images
+    $extraMaterials = [
+        "FlatPolyester.png",
+        "2.png",
+        "3.png",
+        "4.png",
+        "6.png"
+    ];
 
-    <div class="containerTextMaterials">
-      <div class="containerTextMaterialsBox">
-        <?php
-        $imgPath4 = '../../views/assets/img/home/3-materials/Material-4-Dye-sublimation.jpg';
-        $imgVersion4 = file_exists($imgPath4) ? filemtime($imgPath4) : time();
-        ?>
-        <img src="<?= $imgPath4 ?>?v=<?= $imgVersion4; ?>" alt="">
-      </div>
-      <div class="containerTextMaterialsBox">
-        <h3 class="material-for-select">Dye Sub polyester</h3>
-      </div>
-      <div class="buttonMaterialsBox">
-        <button class="openCustomizeLanyardFromMaterials" type="button">Select</button>
-      </div>
-    </div>
-
-    <div class="containerTextMaterials">
-      <div class="containerTextMaterialsBox">
-        <?php
-        $imgPath5 = '../../views/assets/img/home/3-materials/Material-5-Dye-sub-Recycled-PET.jpg';
-        $imgVersion5 = file_exists($imgPath5) ? filemtime($imgPath5) : time();
-        ?>
-        <img src="<?= $imgPath5 ?>?v=<?= $imgVersion5; ?>" alt="">
-      </div>
-      <div class="containerTextMaterialsBox">
-        <h3 class="material-for-select">Dye Sub RPET</h3>
-      </div>
-      <div class="buttonMaterialsBox">
-        <button class="openCustomizeLanyardFromMaterials" type="button">Select</button>
-      </div>
-    </div>
-
-    <div class="itemMaterial">
-      <?php
-      $imgPath6 = '../../views/assets/img/home/3-materials/FlatPolyester.png';
-      $imgVersion6 = file_exists($imgPath6) ? filemtime($imgPath6) : time();
-      ?>
-      <img src="<?= $imgPath6 ?>?v=<?= $imgVersion6; ?>" alt="">
-    </div>
-
-    <div class="itemMaterial">
-      <?php
-      $imgPath7 = '../../views/assets/img/home/3-materials/2.png';
-      $imgVersion7 = file_exists($imgPath7) ? filemtime($imgPath7) : time();
-      ?>
-      <img src="<?= $imgPath7 ?>?v=<?= $imgVersion7; ?>" alt="">
-    </div>
-
-    <div class="itemMaterial">
-      <?php
-      $imgPath8 = '../../views/assets/img/home/3-materials/3.png';
-      $imgVersion8 = file_exists($imgPath8) ? filemtime($imgPath8) : time();
-      ?>
-      <img src="<?= $imgPath8 ?>?v=<?= $imgVersion8; ?>" alt="">
-    </div>
-
-    <div class="itemMaterial">
-      <?php
-      $imgPath9 = '../../views/assets/img/home/3-materials/4.png';
-      $imgVersion9 = file_exists($imgPath9) ? filemtime($imgPath9) : time();
-      ?>
-      <img src="<?= $imgPath9 ?>?v=<?= $imgVersion9; ?>" alt="">
-    </div>
-
-    <div class="itemMaterial">
-      <?php
-      $imgPath10 = '../../views/assets/img/home/3-materials/6.png';
-      $imgVersion10 = file_exists($imgPath10) ? filemtime($imgPath10) : time();
-      ?>
-      <img src="<?= $imgPath10 ?>?v=<?= $imgVersion10; ?>" alt="">
-    </div>
+    // Generate extra material preview images dynamically
+    foreach ($extraMaterials as $extra) {
+        $imgPath = $imgBasePath . $extra;
+        $imgVersion = file_exists($imgPath) ? filemtime($imgPath) : time();
+    ?>
+        <div class="itemMaterial">
+          <img src="<?= $imgPath ?>?v=<?= $imgVersion; ?>" alt="">
+        </div>
+    <?php
+    }
+    ?>
   </div>
 </section>
 
 <?php
-// Validar el archivo JS antes de usar filemtime()
+// Validate the JavaScript file before using filemtime()
 $jsPath = '../../views/assets/js/home/sections/3-materials.js';
 $jsVersion = file_exists($jsPath) ? filemtime($jsPath) : time();
 ?>
 
 <!-- JavaScript -->
-<script src="../../views/assets/js/home/sections/3-materials.js?v=<?= $jsVersion; ?>"></script>
+<script src="<?= $jsPath ?>?v=<?= $jsVersion; ?>"></script>

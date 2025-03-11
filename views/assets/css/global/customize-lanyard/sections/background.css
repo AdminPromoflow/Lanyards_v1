@@ -149,7 +149,7 @@
 .opacity-background-option-first-option{
   position: absolute;
   width: 295px;
-  height: 160px;
+  height: 167px;
   top: 87px;
   left: 0px;
   background-color: rgba(0, 0, 0, .45);
@@ -158,8 +158,8 @@
 .opacity-background-option-second-option{
   position: absolute;
   width: 295px;
-  height: 45px;
-  top: 310px;
+  height: 50px;
+  top: 322px;
   left: 0px;
   background-color: rgba(0, 0, 0, .15);
   z-index: 3;

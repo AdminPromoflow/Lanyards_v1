@@ -37,7 +37,6 @@
 .description-preview-material{
   position: relative;
   width: 100%;
-  overflow-y: scroll;
 }
 .description-preview-material p{
   position: relative;
