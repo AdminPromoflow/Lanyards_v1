@@ -6,6 +6,28 @@ class Material {
     this.materialSelected = "Tubular";
     // Initialize an empty object to store JSON materials.
     var jsonMaterials = {};
+
+
+
+    // Función para desplazar hacia arriba
+ containers_arrow_up_material.addEventListener('click', function() {
+   containers_boxes_material.scrollBy({
+     top: -100, // Desplaza hacia arriba (valor negativo)
+     behavior: 'smooth' // Desplazamiento suave
+   });
+ });
+
+ // Función para desplazar hacia abajo
+ containers_arrow_down_material.addEventListener('click', function() {
+   containers_boxes_material.scrollBy({
+     top: 100, // Desplaza hacia abajo (valor positivo)
+     behavior: 'smooth' // Desplazamiento suave
+   });
+ });
+
+
+
+
   }
 
   // Setter method for the materialSelected property.
@@ -299,6 +321,9 @@ class Material {
 
 // Get the container element for materials by its ID.
 const containersBoxesMaterial = document.getElementById("containers_boxes_material");
+const containers_boxes_material = document.querySelector('.containers_boxes_material');
+const containers_arrow_up_material = document.querySelector('.containers_arrow_up_material');
+const containers_arrow_down_material = document.querySelector('.containers_arrow_down_material');
 
 // Create an instance of the Material class to initialize and manage materials.
 const material = new Material();
