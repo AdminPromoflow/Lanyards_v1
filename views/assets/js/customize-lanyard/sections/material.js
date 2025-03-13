@@ -8,17 +8,15 @@ class Material {
     var jsonMaterials = {};
 
     // Función para desplazar hacia arriba
- /*arrow_up_material.addEventListener('click', function() {
+ arrow_up_material.addEventListener('click', function() {
    alert("arriba");
  });
 
  // Función para desplazar hacia abajo
  arrow_down_material.addEventListener("click", function(){
    alert("Que rayos pasa?");
- })*/
- containersBoxesMaterial.addEventListener("click", function(){
-   alert("hahahahha");
  })
+
 
 
 
