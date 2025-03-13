@@ -11,6 +11,7 @@ class Material {
 
     // Función para desplazar hacia arriba
  containers_arrow_up_material.addEventListener('click', function() {
+   alert("arriba");
    containers_boxes_material.scrollBy({
      top: -100, // Desplaza hacia arriba (valor negativo)
      behavior: 'smooth' // Desplazamiento suave
@@ -19,6 +20,7 @@ class Material {
 
  // Función para desplazar hacia abajo
  containers_arrow_down_material.addEventListener('click', function() {
+   alert("abajo")
    containers_boxes_material.scrollBy({
      top: 100, // Desplaza hacia abajo (valor positivo)
      behavior: 'smooth' // Desplazamiento suave
