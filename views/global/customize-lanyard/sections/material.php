@@ -31,7 +31,7 @@ $imageMaterialVersionArrowDown = $imageMaterialArrowDown && file_exists($imageMa
       <!-- Agregar versión a la imagen de la flecha hacia abajo -->
       <img src="../../views/assets/img/global/customize-lanyard/sections/material/arrow_down.png?v=<?= $imageMaterialVersionArrowDown; ?>" alt="">
     </div>
-    <div id="Example">
+    <div id="example">
 
     </div>
   </div>
