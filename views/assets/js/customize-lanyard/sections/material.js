@@ -10,8 +10,8 @@ class Material {
 
 
 
-    checkArrowVisibility();
-    containersBoxesMaterial.addEventListener('scroll', checkArrowVisibility);
+    this.checkArrowVisibility();
+    containersBoxesMaterial.addEventListener('scroll', this.checkArrowVisibility);
 
     containersArrowUpMaterial.addEventListener('click', function() {
       containersBoxesMaterial.scrollBy({
