@@ -63,6 +63,7 @@ class ApiHandlerLoginGoogle
 
     private function validateGoogleLogin() {
         // Genera y envía el JSON
+        header('Content-Type: application/json');
         echo json_encode([
             "google_login" => true,
             "data" => "Estamos empezando a ver qué es lo que pasa"
