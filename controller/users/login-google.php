@@ -62,11 +62,14 @@ class ApiHandlerLoginGoogle
 
 
     private function validateGoogleLogin() {
-      header('Content-Type: application/json');
-      echo json_encode([
-          "google_login" => true,
-          "data" => "Estamos empezando a ver que es lo que pasa"
-      ]);exit;
+        // Genera y envía el JSON
+        echo json_encode([
+            "google_login" => true,
+            "data" => "Estamos empezando a ver qué es lo que pasa"
+        ]);
+
+        // Detiene la ejecución del script
+        exit;
         if (isset($_SESSION['logging_with_google']) && $_SESSION['logging_with_google'] === true) {
 
         // Configuración inicial de Google OAuth
@@ -99,7 +102,7 @@ class ApiHandlerLoginGoogle
                 parse_str($urlComponents['query'], $queryParams);
 
                   if (!isset($queryParams['code'])) {
-                    header('Content-Type: application/json');
+
                     echo json_encode(array( "google_login" => false));
                     exit;
                   }
@@ -127,13 +130,13 @@ class ApiHandlerLoginGoogle
 
                 //      $_SESSION['logging_with_google'] = false;
                       // Enviar respuesta exitosa con los datos del usuario
-                      header('Content-Type: application/json');
+
                       echo json_encode(array("google_login" => true));
                       exit;
 
                   } catch (Exception $e) {
                       // Enviar respuesta de error con detalles
-                      header('Content-Type: application/json');
+
                       echo json_encode([
                           "google_login" => false,
                           "error" => $e->getMessage()
@@ -144,19 +147,19 @@ class ApiHandlerLoginGoogle
                 }
             }
             else {
-              header('Content-Type: application/json');
+
               echo json_encode(array("google_login" => false));
               exit;
             }
         }
         else {
-          header('Content-Type: application/json');
+
           echo json_encode(array("google_login" => false));
           exit;
         }
       }
       else {
-        header('Content-Type: application/json');
+
         echo json_encode(array("google_login" => false));
         exit;
       }
@@ -193,7 +196,7 @@ class ApiHandlerLoginGoogle
 
     // If 'code' is not set, respond with a false login status
     if (!isset($queryParams['code'])) {
-        header('Content-Type: application/json');
+
         echo json_encode(array("message" => false, "google_login" => false));
         exit;
     }
@@ -207,7 +210,7 @@ class ApiHandlerLoginGoogle
     //  $_SESSION['email'] = $email;
       //$_SESSION['session_type'] = "google";
 
-      header('Content-Type: application/json');
+
       echo json_encode(array("message" => true, "google_login" => true));
       exit;
     }
