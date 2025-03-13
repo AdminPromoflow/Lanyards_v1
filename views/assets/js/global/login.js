@@ -146,7 +146,7 @@ class Login {
               menuClass.loginOrLogout();
           } else {
               // Si no es exitoso, puedes manejar el error de inicio de sesión aquí
-              alert("Fallo en el inicio de sesión con Google.");
+            //  alert("Fallo en el inicio de sesión con Google.");
           }
       })
       .catch(error => {
