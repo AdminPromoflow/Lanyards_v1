@@ -50,32 +50,31 @@ class ApiHandlerLoginGoogle
         $client->addScope("email");
         $client->addScope("profile");
 
+        // Iniciar sesión si no se ha iniciado previamente
         if (session_status() === PHP_SESSION_NONE) {
             session_start();
         }
         $_SESSION['logging_with_google'] = true;
 
+        // Generar la URL de autenticación de Google
         echo $client->createAuthUrl();
     }
 
     private function validateGoogleLogin() {
-      // Generar y enviar el JSON
-      header('Content-Type: application/json');
-      echo json_encode([
-          "google_login" => true,
-          "data" => "Estamos empezando a ver qué es lo que pasa"
-      ]);
+        // Generar y enviar la respuesta JSON
+        header('Content-Type: application/json');
+        echo json_encode([
+            "google_login" => true,
+            "data" => "Estamos empezando a revisar qué es lo que pasa."
+        ]);
 
-      // Detener la ejecución del script
-      exit;
-
+        // Detener la ejecución del script
+        exit;
+    }
 }
 
-
-}
-
+// Cargar el autoload de Composer
 require_once '../../controller/assets/lib/composer/vendor/autoload.php';
-//require_once '../../controller/users/session-user.php';
 
 $apiHandlerLoginGoogle = new ApiHandlerLoginGoogle();
 $apiHandlerLoginGoogle->handleRequest();
