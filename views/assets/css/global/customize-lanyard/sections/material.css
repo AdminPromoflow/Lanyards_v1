@@ -75,10 +75,11 @@
   transform: translateX(-50%); /* Centra la flecha horizontalmente */
   cursor: pointer;
   transition: color 0.3s ease;
+  z-index: 3;
 }
 .containers_arrow_down_material{
   position: absolute;
-  top: 100%;
+  bottom: 0px;
   left: 50%;
   height: 30px;
   width: 30px;
@@ -86,6 +87,7 @@
   transform: translateX(-50%); /* Centra la flecha horizontalmente */
   cursor: pointer;
   transition: color 0.3s ease;
+  z-index: 3;
 }
 .container_boxes_material{
   position: relative;
