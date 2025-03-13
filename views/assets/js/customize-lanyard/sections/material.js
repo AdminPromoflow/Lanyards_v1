@@ -314,8 +314,8 @@ class Material {
 
 // Get the container element for materials by its ID.
 const containersBoxesMaterial = document.getElementById("containers_boxes_material");
-const arrow_up_material = document.getElementById('arrow_up_material');
-const arrow_down_material = document.getElementById("arrow_down_material");
+const arrow_up_material =       document.getElementById("arrow_up_material");
+const arrow_down_material =     document.getElementById("arrow_down_material");
 
 // Create an instance of the Material class to initialize and manage materials.
 const material = new Material();
