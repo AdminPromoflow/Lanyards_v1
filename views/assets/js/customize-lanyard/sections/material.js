@@ -8,14 +8,12 @@ class Material {
     var jsonMaterials = {};
 
 
-
+    example.addEventListener("click", function(){
+      alert("please read this");
+    })
     // Función para desplazar hacia arriba
  arrow_up_material.addEventListener('click', function() {
    alert("arriba");
-   /*containersBoxesMaterial.scrollBy({
-     top: -100, // Desplaza hacia arriba (valor negativo)
-     behavior: 'smooth' // Desplazamiento suave
-   });*/
  });
 
  // Función para desplazar hacia abajo
@@ -321,5 +319,7 @@ class Material {
 const containersBoxesMaterial = document.getElementById("containers_boxes_material");
 const arrow_up_material = document.getElementById('arrow_up_material');
 const arrow_down_material = document.getElementById("arrow_down_material");
+const example = document.getElementById("example");
+
 // Create an instance of the Material class to initialize and manage materials.
 const material = new Material();

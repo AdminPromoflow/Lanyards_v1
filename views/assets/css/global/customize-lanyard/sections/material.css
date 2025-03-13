@@ -87,6 +87,14 @@
   transition: color 0.3s ease;
   z-index: 3;
 }
+.example{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 15px;
+  width: 15px;
+  background-color: gold;
+}
 .container_boxes_material{
   position: relative;
   width: 98%;
