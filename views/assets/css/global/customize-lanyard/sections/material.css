@@ -43,7 +43,6 @@
   height: 70%;
   overflow-y: scroll;
   overflow-x: hidden;
-  background-color: gold;
 }
 
 /* Estilo para la barra de desplazamiento en WebKit */
@@ -72,7 +71,6 @@
   left: 50%;
   height: 30px;
   width: 30px;
-  background-color: orange;
   transform: translateX(-50%); /* Centra la flecha horizontalmente */
   cursor: pointer;
   transition: color 0.3s ease;
@@ -84,7 +82,6 @@
   left: 50%;
   height: 30px;
   width: 30px;
-  background-color: orange;
   transform: translateX(-50%); /* Centra la flecha horizontalmente */
   cursor: pointer;
   transition: color 0.3s ease;
