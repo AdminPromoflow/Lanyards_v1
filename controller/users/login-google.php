@@ -2,15 +2,13 @@
 class ApiHandlerLoginGoogle
 {
     public function handleRequest() {
-
-
-        // Check if a GET request was received
+        // Verificar si se recibió una solicitud GET
         if ($_SERVER["REQUEST_METHOD"] == "GET") {
-            // Check if "action" exists in the query parameters
+            // Verificar si "action" existe en los parámetros de la consulta
             if (isset($_GET['action'])) {
                 $action = $_GET['action'];
 
-                // Perform actions based on the request
+                // Realizar acciones basadas en la solicitud
                 switch ($action) {
                     case "loginGoogle":
                         $this->handleLoginGoogle();
@@ -20,21 +18,21 @@ class ApiHandlerLoginGoogle
                         break;
 
                     default:
-                        // Unknown action
-                        http_response_code(400); // Bad Request
-                        $response = array("message" => "Unknown action");
+                        // Acción desconocida
+                        http_response_code(400); // Solicitud incorrecta
+                        $response = array("message" => "Acción desconocida");
                         echo json_encode($response);
                         break;
                 }
             } else {
-                // Missing "action" parameter
-                http_response_code(400); // Bad Request
-                echo json_encode(array("message" => "Missing 'action' parameter"));
+                // Falta el parámetro "action"
+                http_response_code(400); // Solicitud incorrecta
+                echo json_encode(array("message" => "Falta el parámetro 'action'"));
             }
         } else {
-            // The request is not a valid GET request
-            http_response_code(405); // Method Not Allowed
-            echo json_encode(array("message" => "Method not allowed"));
+            // La solicitud no es un GET válido
+            http_response_code(405); // Método no permitido
+            echo json_encode(array("message" => "Método no permitido"));
         }
     }
 
@@ -51,6 +49,7 @@ class ApiHandlerLoginGoogle
         $client->setRedirectUri($redirectUri);
         $client->addScope("email");
         $client->addScope("profile");
+
         if (session_status() === PHP_SESSION_NONE) {
             session_start();
         }
@@ -59,18 +58,16 @@ class ApiHandlerLoginGoogle
         echo $client->createAuthUrl();
     }
 
-
-
     private function validateGoogleLogin() {
-        // Genera y envía el JSON
-        header('Content-Type: application/json');
-        echo json_encode([
-            "google_login" => true,
-            "data" => "Estamos empezando a ver qué es lo que pasa"
-        ]);
+      // Generar y enviar el JSON
+      header('Content-Type: application/json');
+      echo json_encode([
+          "google_login" => true,
+          "data" => "Estamos empezando a ver qué es lo que pasa"
+      ]);
 
-        // Detiene la ejecución del script
-        exit;
+      // Detener la ejecución del script
+      exit;
       /*  if (isset($_SESSION['logging_with_google']) && $_SESSION['logging_with_google'] === true) {
 
         // Configuración inicial de Google OAuth
@@ -225,10 +222,6 @@ class ApiHandlerLoginGoogle
 require_once '../../controller/assets/lib/composer/vendor/autoload.php';
 //require_once '../../controller/users/session-user.php';
 
-
-
-
-//controller/assets/lib/vendor/autoload.php
 $apiHandlerLoginGoogle = new ApiHandlerLoginGoogle();
 $apiHandlerLoginGoogle->handleRequest();
 ?>
