@@ -18,13 +18,13 @@ $jsVersionMaterial = $jsFileMaterial && file_exists($jsFileMaterial) ? filemtime
 
   <!-- Contenedor con las flechas de desplazamiento -->
   <div id="containers_boxes_material" class="containers_boxes_material">
-
     <!-- Flechas de desplazamiento -->
-    <div class="scroll-arrow scroll-arrow-up">&#x2191;</div>
-    <div class="scroll-arrow scroll-arrow-down">&#x2193;</div>
-
+    <img src="../../views/assets/img/global/customize-lanyard/sections/material/arrow_up.png" alt="Up Arrow" class="arrow-material arrow-up-material" />
+    <img src="../../views/assets/img/global/customize-lanyard/sections/material/arrow_down.png" alt="Down Arrow" class="arrow-material arrow-down-material" />
   </div>
 </section>
+
+
 
 <!-- JavaScript -->
 <script src="/views/assets/js/customize-lanyard/sections/material.js?v=<?= $jsVersionMaterial; ?>" type="text/javascript"></script>
