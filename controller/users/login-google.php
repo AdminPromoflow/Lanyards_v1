@@ -71,7 +71,7 @@ class ApiHandlerLoginGoogle
 
         // Detiene la ejecución del script
         exit;
-        if (isset($_SESSION['logging_with_google']) && $_SESSION['logging_with_google'] === true) {
+      /*  if (isset($_SESSION['logging_with_google']) && $_SESSION['logging_with_google'] === true) {
 
         // Configuración inicial de Google OAuth
         $clientID = '1022332881668-587bktseqso57k6m2dmpfao53vasg83b.apps.googleusercontent.com';
@@ -164,7 +164,7 @@ class ApiHandlerLoginGoogle
         echo json_encode(array("google_login" => false));
         exit;
       }
-    }
+    }*/
   /*private function validateGoogleLogin() {
     // Google OAuth initial configuration
     $clientID = '1022332881668-587bktseqso57k6m2dmpfao53vasg83b.apps.googleusercontent.com';
