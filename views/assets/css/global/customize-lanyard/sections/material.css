@@ -88,11 +88,11 @@
   filter: drop-shadow(1px 1px 1px transparent);
   z-index: 900;
 }
-.containers_arrow_up_material:hover .containers_arrow_down_material:hover{
+.containers_arrow_up_material:hover, .containers_arrow_down_material:hover{
   filter: drop-shadow(2px 2px 1px black);
 }
 
-.containers_arrow_up_material:active .containers_arrow_down_material:active{
+.containers_arrow_up_material:active, .containers_arrow_down_material:active{
   filter: drop-shadow(1px 1px 1px transparent);
 }
 
