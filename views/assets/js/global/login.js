@@ -136,7 +136,7 @@ class Login {
           return response.json(); // Analiza la respuesta como JSON
       })
       .then(data => {
-        alert(JSON.stringify(data) + "Entramos");  // Puedes mostrar la respuesta en consola para verificarla
+      //  alert(JSON.stringify(data) + "Entramos");  // Puedes mostrar la respuesta en consola para verificarla
 
           // Muestra la respuesta si es un JSON válido
           if (data.google_login) {
@@ -150,7 +150,7 @@ class Login {
           }
       })
       .catch(error => {
-          alert("Error: " + error.message); // Maneja errores de red o análisis
+        //  alert("Error: " + error.message); // Maneja errores de red o análisis
       });
   }
 
