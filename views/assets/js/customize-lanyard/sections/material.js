@@ -319,7 +319,6 @@ class Material {
       }
     });
   }
-
 }
 
 // Get the container element for materials by its ID.
