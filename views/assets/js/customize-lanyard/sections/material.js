@@ -9,7 +9,6 @@ class Material {
 
 
 
-    alert("aahhh buenas");
     // Función para desplazar hacia arriba
  arrow_up_material.addEventListener('click', function() {
    alert("arriba");
@@ -20,13 +19,10 @@ class Material {
  });
 
  // Función para desplazar hacia abajo
- arrow_down_material.addEventListener('click', function() {
-   alert("abajo");
-  /* containersBoxesMaterial.scrollBy({
-     top: 100, // Desplaza hacia abajo (valor positivo)
-     behavior: 'smooth' // Desplazamiento suave
-   });*/
- });
+ arrow_down_material.addEventListener("click", function(){
+   alert("Que rayos pasa?");
+ })
+
 
 
 
@@ -324,7 +320,6 @@ class Material {
 // Get the container element for materials by its ID.
 const containersBoxesMaterial = document.getElementById("containers_boxes_material");
 const arrow_up_material = document.getElementById('arrow_up_material');
-const arrow_down_material = document.getElementById('arrow_down_material');
-
+const arrow_down_material = document.getElementById("arrow_down_material");
 // Create an instance of the Material class to initialize and manage materials.
 const material = new Material();
