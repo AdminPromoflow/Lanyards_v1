@@ -115,45 +115,43 @@ class Login {
   }
 
   makeAjaxRequestValidateGoogleLogin() {
-      // Define the URL and the data to be sent
+      // Define la URL y los datos a enviar
       const url = "../../controller/users/login-google.php";
       const data = {
           action: "validationLoginGoogle"
       };
 
-      // Construct the query parameters and full URL
-      const queryParams = new URLSearchParams(data).toString(); // Generate query parameters
-      const fullUrl = `${url}?${queryParams}`; // Append query parameters to the URL
+      // Construye los parámetros de la consulta y la URL completa
+      const queryParams = new URLSearchParams(data).toString(); // Genera los parámetros de consulta
+      const fullUrl = `${url}?${queryParams}`; // Añade los parámetros de consulta a la URL
 
-      // Make the request using the Fetch API with GET method
+      // Realiza la solicitud usando la API Fetch con el método GET
       fetch(fullUrl, {
-          method: "GET" // Use GET method
+          method: "GET" // Usar el método GET
       })
       .then(response => {
           if (!response.ok) {
-              throw new Error("Network error.");
+              throw new Error("Error de red.");
           }
-          return response.json(); // Parse the response as JSON
+          return response.json(); // Analiza la respuesta como JSON
       })
       .then(data => {
-        try {
-            alert(JSON.parse(data));
-        } catch (error) {
-            alert("Error al analizar el JSON: " + error.message);
-        }
-          // Check if 'google_login' is true
+          // Muestra la respuesta si es un JSON válido
+          console.log(data);  // Puedes mostrar la respuesta en consola para verificarla
           if (data.google_login) {
-              // Handle successful login
+              // Si 'google_login' es verdadero, maneja el inicio de sesión exitoso
               menuClass.setActiveSession(data.message);
               menuClass.loginOrLogout();
           } else {
-              //alert("Google login failed.");
+              // Si no es exitoso, puedes manejar el error de inicio de sesión aquí
+              alert("Fallo en el inicio de sesión con Google.");
           }
       })
       .catch(error => {
-          alert("Error:", error); // Log any errors to the console
+          alert("Error: " + error.message); // Maneja errores de red o análisis
       });
   }
+
 
 
   // Function to make the AJAX request
