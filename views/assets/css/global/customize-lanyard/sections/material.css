@@ -75,6 +75,7 @@
   cursor: pointer;
   transition: color 0.3s ease;
   z-index: 3;
+  background: pink;
 }
 .containers_arrow_down_material{
   position: fixed;
