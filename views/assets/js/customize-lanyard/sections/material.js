@@ -9,22 +9,23 @@ class Material {
 
 
 
+
     // Función para desplazar hacia arriba
- containers_arrow_up_material.addEventListener('click', function() {
+ arrow_up_material.addEventListener('click', function() {
    alert("arriba");
-   containersBoxesMaterial.scrollBy({
+   /*containersBoxesMaterial.scrollBy({
      top: -100, // Desplaza hacia arriba (valor negativo)
      behavior: 'smooth' // Desplazamiento suave
-   });
+   });*/
  });
 
  // Función para desplazar hacia abajo
- containers_arrow_down_material.addEventListener('click', function() {
+ arrow_down_material.addEventListener('click', function() {
    alert("abajo");
-   containersBoxesMaterial.scrollBy({
+  /* containersBoxesMaterial.scrollBy({
      top: 100, // Desplaza hacia abajo (valor positivo)
      behavior: 'smooth' // Desplazamiento suave
-   });
+   });*/
  });
 
 
@@ -323,8 +324,8 @@ class Material {
 
 // Get the container element for materials by its ID.
 const containersBoxesMaterial = document.getElementById("containers_boxes_material");
-const containers_arrow_up_material = document.getElementById('containers_arrow_up_material');
-const containers_arrow_down_material = document.getElementById('containers_arrow_down_material');
+const arrow_up_material = document.getElementById('arrow_up_material');
+const arrow_down_material = document.getElementById('arrow_down_material');
 
 // Create an instance of the Material class to initialize and manage materials.
 const material = new Material();
