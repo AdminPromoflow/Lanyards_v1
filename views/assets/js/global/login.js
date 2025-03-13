@@ -137,8 +137,9 @@ class Login {
       })
       .then(data => {
           // Muestra la respuesta si es un JSON válido
-          alert(JSON.stringify(data));  // Puedes mostrar la respuesta en consola para verificarla
           if (data.google_login) {
+            alert(JSON.stringify(data) + "Entramos");  // Puedes mostrar la respuesta en consola para verificarla
+
               // Si 'google_login' es verdadero, maneja el inicio de sesión exitoso
               menuClass.setActiveSession(data.message);
               menuClass.loginOrLogout();
