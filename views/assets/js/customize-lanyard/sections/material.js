@@ -7,15 +7,13 @@ class Material {
     // Initialize an empty object to store JSON materials.
     var jsonMaterials = {};
 
-    // Función para desplazar hacia arriba
- arrow_up_material.addEventListener('click', function() {
-   alert("arriba");
- });
+    containersArrowUpMaterial.addEventListener('click', function() {
+        alert("Haz hecho clic en la flecha hacia arriba");
+    });
 
- // Función para desplazar hacia abajo
- arrow_down_material.addEventListener("click", function(){
-   alert("Que rayos pasa?");
- })
+    containersArrowDownMaterial.addEventListener('click', function() {
+        alert("Haz hecho clic en la flecha hacia abajo");
+    });
 
 
 
@@ -314,8 +312,8 @@ class Material {
 
 // Get the container element for materials by its ID.
 const containersBoxesMaterial = document.getElementById("containers_boxes_material");
-const arrow_up_material =       document.getElementById("arrow_up_material");
-const arrow_down_material =     document.getElementById("arrow_down_material");
+var containersArrowUpMaterial = document.getElementById("containers_arrow_up_material");
+var containersArrowDownMaterial = document.getElementById("containers_arrow_down_material");
 
 // Create an instance of the Material class to initialize and manage materials.
 const material = new Material();

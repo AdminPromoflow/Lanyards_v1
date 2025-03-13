@@ -65,7 +65,7 @@
     background: #132735; /* Color más oscuro cuando el mouse está encima */
 }
 
-.arrow_up_material{
+.containers_arrow_up_material{
   position: fixed;
   top: 30%;
   left: 50%;
@@ -76,7 +76,7 @@
   transition: color 0.3s ease;
   z-index: 30;
 }
-.arrow_down_material{
+.containers_arrow_down_material{
   position: fixed;
   bottom: 5px;
   left: 50%;
