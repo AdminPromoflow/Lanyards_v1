@@ -94,6 +94,7 @@
   height: 15px;
   width: 15px;
   background-color: gold;
+  z-index: 9;
 }
 .container_boxes_material{
   position: relative;
