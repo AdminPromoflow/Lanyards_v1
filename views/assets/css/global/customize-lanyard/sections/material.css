@@ -73,7 +73,7 @@
   width: 30px;
   transform: translateX(-50%); /* Centra la flecha horizontalmente */
   cursor: pointer;
-  transition: color 0.3s ease;
+  transition: color 0.4s ease;
   z-index: 90;
 }
 .containers_arrow_down_material{

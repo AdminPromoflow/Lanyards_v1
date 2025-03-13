@@ -7,19 +7,44 @@ class Material {
     // Initialize an empty object to store JSON materials.
     var jsonMaterials = {};
 
+
+
+
+    checkArrowVisibility();
+    containersBoxesMaterial.addEventListener('scroll', checkArrowVisibility);
+
     containersArrowUpMaterial.addEventListener('click', function() {
-        alert("Haz hecho clic en la flecha hacia arriba");
+      containersBoxesMaterial.scrollBy({
+        top: -100, // Desplaza hacia arriba (valor negativo)
+        behavior: 'smooth' // Desplazamiento suave
+      });
     });
 
+    // Función para desplazar hacia abajo
     containersArrowDownMaterial.addEventListener('click', function() {
-        alert("Haz hecho clic en la flecha hacia abajo");
+      containersBoxesMaterial.scrollBy({
+        top: 100, // Desplaza hacia abajo (valor positivo)
+        behavior: 'smooth' // Desplazamiento suave
+      });
     });
 
 
+  }
 
+  checkArrowVisibility() {
+    // Si el scroll está en la parte superior, ocultar la flecha hacia arriba
+    if (containersBoxesMaterial.scrollTop === 0) {
+      containersArrowUpMaterial.style.display = 'none';
+    } else {
+      containersArrowUpMaterial.style.display = 'block';
+    }
 
-
-
+    // Si el scroll está en la parte inferior, ocultar la flecha hacia abajo
+    if (containersBoxesMaterial.scrollHeight - containersBoxesMaterial.scrollTop === containersBoxesMaterial.clientHeight) {
+      containersArrowDownMaterial.style.display = 'none';
+    } else {
+      containersArrowDownMaterial.style.display = 'block';
+    }
   }
 
   // Setter method for the materialSelected property.
