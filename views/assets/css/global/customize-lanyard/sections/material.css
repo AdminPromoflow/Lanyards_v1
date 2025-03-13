@@ -86,7 +86,7 @@
   transform: translateX(-50%); /* Centra la flecha horizontalmente */
   cursor: pointer;
   transition: color 0.3s ease;
-  z-index: 30;
+  z-index: 90;
   background: green;
 
 }
