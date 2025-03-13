@@ -3,15 +3,8 @@
 $cssFileMaterial = realpath(__DIR__ . '/../../views/assets/css/global/customize-lanyard/sections/material.css');
 $jsFileMaterial = realpath(__DIR__ . '/../../views/assets/js/customize-lanyard/sections/material.js');
 
-// Rutas y versión de las imágenes
-$imageMaterialArrowUp = realpath(__DIR__ . '/../../views/assets/img/global/customize-lanyard/sections/material/arrow_up.png');
-$imageMaterialArrowDown = realpath(__DIR__ . '/../../views/assets/img/global/customize-lanyard/sections/material/arrow_down.png');
-
 $cssVersionMaterial = $cssFileMaterial && file_exists($cssFileMaterial) ? filemtime($cssFileMaterial) : time();
 $jsVersionMaterial = $jsFileMaterial && file_exists($jsFileMaterial) ? filemtime($jsFileMaterial) : time();
-
-$imageMaterialVersionArrowUp = $imageMaterialArrowUp && file_exists($imageMaterialArrowUp) ? filemtime($imageMaterialArrowUp) : time();
-$imageMaterialVersionArrowDown = $imageMaterialArrowDown && file_exists($imageMaterialArrowDown) ? filemtime($imageMaterialArrowDown) : time();
 ?>
 
 <!-- CSS -->
@@ -22,12 +15,13 @@ $imageMaterialVersionArrowDown = $imageMaterialArrowDown && file_exists($imageMa
   <br>
   <p>Select the type of lanyard</p>
   <br>
-
-  <!-- Contenedor con las flechas de desplazamiento -->
   <div id="containers_boxes_material" class="containers_boxes_material">
-    <!-- Flechas de desplazamiento -->
-    <img src="../../views/assets/img/global/customize-lanyard/sections/material/arrow_up.png?v=<?= $imageMaterialVersionArrowUp; ?>" alt="Up Arrow" class="arrow-material arrow-up-material" />
-    <img src="../../views/assets/img/global/customize-lanyard/sections/material/arrow_down.png?v=<?= $imageMaterialVersionArrowDown; ?>" alt="Down Arrow" class="arrow-material arrow-down-material" />
+    <div class="containers_arrow_up_material">
+      <img src="../../views/assets/img/global/customize-lanyard/sections/material/arrow_up.png" alt="">
+    </div>
+    <div class="containers_arrow_down_material">
+      <img src="../../views/assets/img/global/customize-lanyard/sections/material/arrow_down.png" alt="">
+    </div>
   </div>
 </section>
 
