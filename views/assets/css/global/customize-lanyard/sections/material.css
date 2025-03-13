@@ -65,6 +65,35 @@
     background: #132735; /* Color más oscuro cuando el mouse está encima */
 }
 
+
+/* Flechas */
+.scroll-arrow {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); /* Centra la flecha horizontalmente */
+  font-size: 24px; /* Tamaño de la flecha */
+  color: #091d2c; /* Color de las flechas */
+  cursor: pointer;
+  z-index: 10;
+  transition: color 0.3s ease;
+}
+
+.scroll-arrow:hover {
+  color: #132735; /* Color más oscuro al pasar el mouse */
+}
+
+/* Flecha arriba */
+.scroll-arrow-up {
+  top: 0; /* Coloca la flecha en la parte superior */
+  padding-top: 10px; /* Ajusta el espacio entre la flecha y el borde superior */
+}
+
+/* Flecha abajo */
+.scroll-arrow-down {
+  bottom: 0; /* Coloca la flecha en la parte inferior */
+  padding-bottom: 10px; /* Ajusta el espacio entre la flecha y el borde inferior */
+}
+
 .container_boxes_material{
   position: relative;
   width: 98%;

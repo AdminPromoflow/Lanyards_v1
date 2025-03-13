@@ -15,8 +15,16 @@ $jsVersionMaterial = $jsFileMaterial && file_exists($jsFileMaterial) ? filemtime
   <br>
   <p>Select the type of lanyard</p>
   <br>
-  <div id="containers_boxes_material" class="containers_boxes_material"></div>
-</section>  
+
+  <!-- Contenedor con las flechas de desplazamiento -->
+  <div id="containers_boxes_material" class="containers_boxes_material">
+
+    <!-- Flechas de desplazamiento -->
+    <div class="scroll-arrow scroll-arrow-up">&#x2191;</div>
+    <div class="scroll-arrow scroll-arrow-down">&#x2193;</div>
+
+  </div>
+</section>
 
 <!-- JavaScript -->
 <script src="/views/assets/js/customize-lanyard/sections/material.js?v=<?= $jsVersionMaterial; ?>" type="text/javascript"></script>

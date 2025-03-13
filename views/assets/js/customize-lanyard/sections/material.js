@@ -50,7 +50,7 @@ class Material {
         }
         // If the response is not okay, throw an error
         throw new Error("Network error.");
-      })
+      })   
       .then(data => {
         data = JSON.parse(data);
         customizeLanyard.setJsonLanyards(data["lanyards"]);
