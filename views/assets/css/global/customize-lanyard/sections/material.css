@@ -74,7 +74,8 @@
   transform: translateX(-50%); /* Centra la flecha horizontalmente */
   cursor: pointer;
   transition: color 0.3s ease;
-  z-index: 30;
+  z-index: 90;
+  background: orange;
 }
 .containers_arrow_down_material{
   position: fixed;
@@ -86,6 +87,8 @@
   cursor: pointer;
   transition: color 0.3s ease;
   z-index: 30;
+  background: green;
+
 }
 .example{
   position: relative;
