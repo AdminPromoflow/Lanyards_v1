@@ -216,8 +216,8 @@ class ApiHandlerLoginGoogle
       exit;
     }
 
-
-}*/
+*/
+}
 
 
 }
