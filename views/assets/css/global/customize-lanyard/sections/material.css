@@ -75,7 +75,6 @@
   cursor: pointer;
   transition: color 0.3s ease;
   z-index: 90;
-  background: orange;
 }
 .containers_arrow_down_material{
   position: absolute;
@@ -85,10 +84,18 @@
   width: 30px;
   transform: translateX(-50%); /* Centra la flecha horizontalmente */
   cursor: pointer;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+  filter: drop-shadow(1px 1px 1px transparent);
   z-index: 900;
-  background: green;
 }
+.containers_arrow_up_material:hover .containers_arrow_down_material:hover{
+  filter: drop-shadow(2px 2px 1px black);
+}
+
+.containers_arrow_up_material:active .containers_arrow_down_material:active{
+  filter: drop-shadow(1px 1px 1px transparent);
+}
+
 .container_boxes_material{
   position: relative;
   width: 98%;
