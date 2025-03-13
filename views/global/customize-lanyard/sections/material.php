@@ -23,11 +23,11 @@ $imageMaterialVersionArrowDown = $imageMaterialArrowDown && file_exists($imageMa
   <p>Select the type of lanyard</p>
   <br>
   <div id="containers_boxes_material" class="containers_boxes_material">
-    <div id="arrow_up_material" class="containers_arrow_up_material">
+    <div id="arrow_up_material" class="arrow_up_material">
       <!-- Agregar versión a la imagen de la flecha hacia arriba -->
       <img src="../../views/assets/img/global/customize-lanyard/sections/material/arrow_up.png?v=<?= $imageMaterialVersionArrowUp; ?>" alt="">
     </div>
-    <div id="arrow_down_material" class="containers_arrow_down_material">
+    <div id="arrow_down_material" class="arrow_down_material">
       <!-- Agregar versión a la imagen de la flecha hacia abajo -->
       <img src="../../views/assets/img/global/customize-lanyard/sections/material/arrow_down.png?v=<?= $imageMaterialVersionArrowDown; ?>" alt="">
     </div>

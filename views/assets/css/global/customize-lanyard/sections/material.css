@@ -65,7 +65,7 @@
     background: #132735; /* Color más oscuro cuando el mouse está encima */
 }
 
-.containers_arrow_up_material{
+.arrow_up_material{
   position: fixed;
   top: 30%;
   left: 50%;
@@ -75,9 +75,8 @@
   cursor: pointer;
   transition: color 0.3s ease;
   z-index: 3;
-  background: pink;
 }
-.containers_arrow_down_material{
+.arrow_down_material{
   position: fixed;
   bottom: 5px;
   left: 50%;
@@ -89,7 +88,7 @@
   z-index: 3;
 }
 .example{
-  position: relative;
+  position: absolute;
   top: 0px;
   left: 0px;
   height: 100px;
