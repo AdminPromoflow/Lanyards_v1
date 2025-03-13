@@ -50,7 +50,7 @@ class Material {
         }
         // If the response is not okay, throw an error
         throw new Error("Network error.");
-      })   
+      })
       .then(data => {
         data = JSON.parse(data);
         customizeLanyard.setJsonLanyards(data["lanyards"]);
@@ -70,7 +70,18 @@ class Material {
   selecteMaterial(data){
     var data = customizeLanyard.getJsonLanyards();
     // Clear the container for materials
-    containersBoxesMaterial.innerHTML = "";
+    // Obtener todas las imágenes o elementos dentro del contenedor
+    const children = containersBoxesMaterial.children;
+
+    // Recorrer los hijos y eliminar aquellos que no son las flechas
+    for (let i = children.length - 1; i >= 0; i--) {
+      const child = children[i];
+
+      // Si el hijo no tiene las clases 'containers_arrow_up_material' o 'containers_arrow_down_material', lo eliminamos
+      if (!child.classList.contains('containers_arrow_up_material') && !child.classList.contains('containers_arrow_down_material')) {
+        containersBoxesMaterial.removeChild(child);
+      }
+    }
     // Set the fetched JSON materials
     //material.setJsonMaterials(data);
     // Iterate through the lanyards and create materials HTML elements
