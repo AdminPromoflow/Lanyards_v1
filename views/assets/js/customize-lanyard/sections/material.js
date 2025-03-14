@@ -286,6 +286,7 @@ class Material {
     // Refresh the material display and related components.
     this.refreshMaterial();
     oneTwoEndsClass.refreshLanyardType();
+    alert("4");
 
     widthClass.refreshWidth();
     sidePrintedClass.refreshSidePrintedData();
@@ -300,9 +301,9 @@ class Material {
     this.updatePriceMaterial(); // Update the material prices.
     previewMaterial.showSelectedPreviewtMaterial(this.getMaterialSelected()); // Show preview of selected material.
 
-    alert("3");
 
     chargingClass.hideShowchargin(false); // Hide loading animation.
+
   }
 
   // Method to highlight the selected material by setting its border.
