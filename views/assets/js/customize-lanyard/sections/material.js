@@ -291,7 +291,7 @@ class Material {
     sidePrintedClass.refreshSidePrintedData();
     colourClass.updateColourQuantity();
 
-    alert("6");
+  //  alert("6");
 
     clipClass.updateClip();
   }
