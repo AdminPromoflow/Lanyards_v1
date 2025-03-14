@@ -274,7 +274,6 @@ class Material {
       if (material == materialSelected) {
         let number = pricesDataMaterialElements[i].innerText;
         let price = number.match(/\d+(\.\d+)?/)[0];
-        alert("1");
         // Update the price class with the selected material's price.
         priceClass.setPricePerMaterialWithAmount(price);
         priceClass.changePricePerLanyard();
@@ -287,6 +286,8 @@ class Material {
     // Refresh the material display and related components.
     this.refreshMaterial();
     oneTwoEndsClass.refreshLanyardType();
+    alert("2");
+
     widthClass.refreshWidth();
     sidePrintedClass.refreshSidePrintedData();
     colourClass.updateColourQuantity();
