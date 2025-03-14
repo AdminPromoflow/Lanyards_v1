@@ -286,11 +286,13 @@ class Material {
     // Refresh the material display and related components.
     this.refreshMaterial();
     oneTwoEndsClass.refreshLanyardType();
-    alert("4");
 
     widthClass.refreshWidth();
     sidePrintedClass.refreshSidePrintedData();
     colourClass.updateColourQuantity();
+
+    alert("5");
+
     clipClass.updateClip();
   }
 
