@@ -281,7 +281,7 @@ class Material {
     }
 
     // Set the selected material.
-    /*this.setMaterialSelected(materialSelected);
+    this.setMaterialSelected(materialSelected);
 
     // Refresh the material display and related components.
     this.refreshMaterial();
@@ -290,7 +290,7 @@ class Material {
     widthClass.refreshWidth();
     sidePrintedClass.refreshSidePrintedData();
     colourClass.updateColourQuantity();
-    clipClass.updateClip();*/
+    clipClass.updateClip();
   }
 
   // Method to refresh the selected material and its display.
