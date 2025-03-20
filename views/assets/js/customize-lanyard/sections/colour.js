@@ -173,6 +173,7 @@ class ColourClass {
 
   }
   updateColourQuantity(){
+    
     this.createColour();
     this.showSelectedColour();
 
