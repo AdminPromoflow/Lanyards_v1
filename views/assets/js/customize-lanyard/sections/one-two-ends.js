@@ -21,6 +21,21 @@ class OneTwoEnds {
     getJsonLanyardType(){
       return this.jsonLanyardType;
     }
+
+    autoSelectLanyardType(){
+      if (typeof (oneTwoEndsClass.getTypeLanyardSelected()) !== 'undefined') {
+          alert("La variable ha sido definida.");
+        } else {
+          alert("La variable NO ha sido definida.LLLL");
+          oneTwoEndsClass.setTypeLanyardSelected(json[i].materials.lanyardType[1].type);
+          alert(oneTwoEndsClass.getTypeLanyardSelected());
+        }
+    }
+
+
+
+
+
     updateLanyardType(){
       var json = customizeLanyard.getJsonLanyards();
 

@@ -313,13 +313,7 @@ class Material {
 
   if (i !== -1) {
 
-    if (typeof (oneTwoEndsClass.getTypeLanyardSelected()) !== 'undefined') {
-        alert("La variable ha sido definida.");
-      } else {
-        alert("La variable NO ha sido definida.");
-        oneTwoEndsClass.setTypeLanyardSelected(json[i].materials.lanyardType[1].type);
-        alert(oneTwoEndsClass.getTypeLanyardSelected());
-      }
+    autoSelectLanyardType.oneTwoEndsClass();
 
       widthClass.setWidthSelected(json[i].materials.width[0].width);
       sidePrintedClass.setSidePrintedSelected(json[i].materials.width[0].sidePrinted[0].noSides);
