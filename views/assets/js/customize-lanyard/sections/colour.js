@@ -49,8 +49,6 @@ class ColourClass {
   }
   updateEachPriceColour() {
       var json = customizeLanyard.getJsonLanyards();
-      //alert("json: " + JSON.stringify(json));
-
 
       var materialSelected = material.getMaterialSelected();
       var widthSelected = widthClass.getWidthSelected();
