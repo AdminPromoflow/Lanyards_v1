@@ -17,7 +17,7 @@ class ColourClass {
       alert(priceDataColourResult.length + "colour.js line 17");
 
   //  let firstPrice = priceDataColourResult[0].price;
-/*    containersBoxesColour.innerHTML = "";
+    containersBoxesColour.innerHTML = "";
     var sidePrintedSelected = sidePrintedClass.getSidePrintedSelected();
 
     if (sidePrintedSelected == "one-side") {
@@ -44,7 +44,7 @@ class ColourClass {
       } else if (priceDataColourResult.length === 0) {
           alert("No hay precios disponibles para la selección actual.");
       }
-  }*/
+  }
 
   }
   updateEachPriceColour() {
