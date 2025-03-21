@@ -314,7 +314,7 @@ class Material {
   if (i !== -1) {
 
 
-    oneTwoEndsClass.autoSelectLanyardType();
+    oneTwoEndsClass.autoSelectLanyardType(i);
 
       widthClass.setWidthSelected(json[i].materials.width[0].width);
       sidePrintedClass.setSidePrintedSelected(json[i].materials.width[0].sidePrinted[0].noSides);
