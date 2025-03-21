@@ -1,7 +1,7 @@
 class OneTwoEnds {
   constructor() {
     this.jsonLanyardType;
-  //  this.setTypeLanyardSelected("one-end");
+    this.setTypeLanyardSelected("one-end");
     this.showSelectedOneTwoEnds();
 
   }
