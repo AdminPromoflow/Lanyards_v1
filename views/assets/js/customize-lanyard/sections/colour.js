@@ -14,7 +14,7 @@ class ColourClass {
   }
   createColour(){
       let priceDataColourResult = this.updateEachPriceColour();
-      alert(priceDataColourResult.length + "colour.js line 17");
+    //  alert(priceDataColourResult.length + "colour.js line 17");
 
   //  let firstPrice = priceDataColourResult[0].price;
 /*    containersBoxesColour.innerHTML = "";
