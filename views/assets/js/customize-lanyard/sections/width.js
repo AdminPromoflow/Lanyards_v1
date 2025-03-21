@@ -44,11 +44,8 @@ class Width {
 
       if (this.getWidthSelected() === undefined) {  // If no width is selected
         this.setWidthSelected(width[0].width);  // Select the first available width
-        alert("width indefinido");
-
       } else if (!isWidthValid) {  // If the selected width doesn't match any available
         this.setWidthSelected(width[0].width);  // Select the first available width
-        alert("width en un rango diferente");
       }
     }
   }
