@@ -22,13 +22,24 @@ class OneTwoEnds {
       return this.jsonLanyardType;
     }
 
-    autoSelectLanyardType(i){
-      var json = customizeLanyard.getJsonLanyards();
-      this.getTypeLanyardSelected() === undefined && this.setTypeLanyardSelected(json[i].materials.lanyardType[1].type);
+    autoSelectLanyardType() {
+      const json = customizeLanyard.getJsonLanyards();  // Get the lanyard JSON data
+      const selectedMaterial = material.getMaterialSelected();  // Get the selected material
+      const i = json.findIndex(item => item.materials.material === selectedMaterial);  // Find the index of the selected material
+
+      if (i !== -1) {  // If the material exists
+        const lanyardTypes = json[i].materials.lanyardType;  // Get the available lanyard types for the material
+
+        // Check if the selected lanyard type matches any of the available ones
+        const isLanyardTypeValid = lanyardTypes.some(type => type.type === this.getTypeLanyardSelected());
+
+        if (this.getTypeLanyardSelected() === undefined) {  // If no lanyard type is selected
+          this.setTypeLanyardSelected(lanyardTypes[1]?.type);  // Select the first available lanyard type
+        } else if (!isLanyardTypeValid) {  // If the selected lanyard type doesn't match any available
+          this.setTypeLanyardSelected(lanyardTypes[1]?.type);  // Select the first available lanyard type
+        }
+      }
     }
-
-
-
 
 
     updateLanyardType(){

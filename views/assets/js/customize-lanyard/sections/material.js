@@ -295,34 +295,30 @@ class Material {
 
   // Method to refresh the selected material and its display.
   refreshMaterial() {
-
     this.showSelectedMaterial(); // Display the selected material.
     this.updatePriceMaterial(); // Update the material prices.
     previewMaterial.showSelectedPreviewtMaterial(this.getMaterialSelected()); // Show preview of selected material.
-
-
     chargingClass.hideShowchargin(false); // Hide loading animation.
-
   }
+
   setOriginValuesAfteMaterial() {
-  var json = customizeLanyard.getJsonLanyards();
-  var selectedMaterial = material.getMaterialSelected();
+    oneTwoEndsClass.autoSelectLanyardType();
 
-  // Encontrar el índice del material seleccionado
-  var i = json.findIndex(item => item.materials.material === selectedMaterial);
+    var json = customizeLanyard.getJsonLanyards();
+    var selectedMaterial = material.getMaterialSelected();
 
-  if (i !== -1) {
+    // Encontrar el índice del material seleccionado
+    var i = json.findIndex(item => item.materials.material === selectedMaterial);
 
+    if (i !== -1) {
 
-    oneTwoEndsClass.autoSelectLanyardType(i);
-
-      widthClass.setWidthSelected(json[i].materials.width[0].width);
-      sidePrintedClass.setSidePrintedSelected(json[i].materials.width[0].sidePrinted[0].noSides);
-      colourClass.setColourSelected(json[i].materials.width[0].sidePrinted[0].noColours[0].noColour);
-      clipClass.setClipSelected(json[i].materials.width[0].clips[0].name);
-  } else {
-      console.error("Material seleccionado no encontrado en el JSON.");
-  }
+        widthClass.setWidthSelected(json[i].materials.width[0].width);
+        sidePrintedClass.setSidePrintedSelected(json[i].materials.width[0].sidePrinted[0].noSides);
+        colourClass.setColourSelected(json[i].materials.width[0].sidePrinted[0].noColours[0].noColour);
+        clipClass.setClipSelected(json[i].materials.width[0].clips[0].name);
+    } else {
+        console.error("Material seleccionado no encontrado en el JSON.");
+    }
 }
 
   // Method to highlight the selected material by setting its border.
