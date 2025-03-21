@@ -303,6 +303,8 @@ class Material {
 
   setOriginValuesAfteMaterial() {
     oneTwoEndsClass.autoSelectLanyardType();
+    widthClass.autoSelectWidth();
+
 
     var json = customizeLanyard.getJsonLanyards();
     var selectedMaterial = material.getMaterialSelected();
