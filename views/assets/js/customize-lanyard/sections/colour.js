@@ -49,7 +49,7 @@ class ColourClass {
   }
   updateEachPriceColour() {
       var json = customizeLanyard.getJsonLanyards();
-      alert("json: " + JSON.stringify(json));
+      //alert("json: " + JSON.stringify(json));
 
 
       var materialSelected = material.getMaterialSelected();
@@ -84,7 +84,7 @@ class ColourClass {
 
                               for (let l = 0; l < noColours.length; l++) {
                                   const noColour = noColours[l].noColour;
-                                  //alert("noColour: " + noColour);
+                                  alert("noColour: " + noColour);
 
                                   const amounts = noColours[l].amount;
                                   //alert("amounts: " + JSON.stringify(amounts));
