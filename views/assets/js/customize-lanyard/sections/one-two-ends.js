@@ -24,14 +24,7 @@ class OneTwoEnds {
 
     autoSelectLanyardType(i){
       var json = customizeLanyard.getJsonLanyards();
-
-      if (typeof (this.getTypeLanyardSelected()) !== 'undefined') {
-          alert("La variable ha sido definida.");
-        } else {
-          alert("La variable NO ha sido definida.MMM");
-          this.setTypeLanyardSelected(json[i].materials.lanyardType[1].type);
-          alert(this.getTypeLanyardSelected());
-        }
+      this.getTypeLanyardSelected() === undefined && this.setTypeLanyardSelected(json[i].materials.lanyardType[1].type);
     }
 
 
