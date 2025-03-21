@@ -49,6 +49,8 @@ class ColourClass {
   }
   updateEachPriceColour() {
       var json = customizeLanyard.getJsonLanyards();
+      alert("json: " + JSON.stringify(json));
+
 
       var materialSelected = material.getMaterialSelected();
       var widthSelected = widthClass.getWidthSelected();
@@ -66,7 +68,7 @@ class ColourClass {
 
               for (let j = 0; j < widths.length; j++) {
                   const width = widths[j].width;
-                  alert("width: " + width);
+                //  alert("width: " + width);
 
                   if (width == widthSelected) {
                       const sidePrinted = widths[j].sidePrinted;
