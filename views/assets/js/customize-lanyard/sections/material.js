@@ -318,6 +318,7 @@ class Material {
       } else {
         alert("La variable NO ha sido definida.");
         oneTwoEndsClass.setTypeLanyardSelected(json[i].materials.lanyardType[1].type);
+        alert(oneTwoEndsClass.getTypeLanyardSelected());
       }
 
       widthClass.setWidthSelected(json[i].materials.width[0].width);
