@@ -312,9 +312,14 @@ class Material {
   var i = json.findIndex(item => item.materials.material === selectedMaterial);
 
   if (i !== -1) {
-    alert(oneTwoEndsClass.getTypeLanyardSelected());
 
-      oneTwoEndsClass.setTypeLanyardSelected(json[i].materials.lanyardType[1].type);
+    if (typeof (oneTwoEndsClass.getTypeLanyardSelected()) !== 'undefined') {
+        alert("La variable ha sido definida.");
+      } else {
+        alert("La variable NO ha sido definida.");
+        oneTwoEndsClass.setTypeLanyardSelected(json[i].materials.lanyardType[1].type);
+      }
+
       widthClass.setWidthSelected(json[i].materials.width[0].width);
       sidePrintedClass.setSidePrintedSelected(json[i].materials.width[0].sidePrinted[0].noSides);
       colourClass.setColourSelected(json[i].materials.width[0].sidePrinted[0].noColours[0].noColour);
