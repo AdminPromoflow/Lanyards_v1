@@ -41,13 +41,10 @@ class Width {
 
       // Check if the selected width matches any of the available ones
       const isWidthValid = width.some(w => w === this.getWidthSelected());
-
+      alert(json[i].materials.width + "Width selected: " +this.getWidthSelected());
       if (this.getWidthSelected() === undefined) {  // If no width is selected
-        alert("entramos undefined");
         this.setWidthSelected(width[0]);  // Select the first available width
       } else if (!isWidthValid) {  // If the selected width doesn't match any available
-        alert("entramos no se encontró");
-
         this.setWidthSelected(width[0]);  // Select the first available width
       }
     }
