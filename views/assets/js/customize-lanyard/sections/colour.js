@@ -103,49 +103,7 @@ class ColourClass {
         }
     }
 
-    // Si no se encontró un precio dentro del rango, usar el precio más alto
-    if (priceDataColourResult.length === 0) {
-        for (let i = 0; i < json.length; i++) {
-            const material = json[i].materials.material;
 
-            if (material == materialSelected) {
-                const widths = json[i].materials.width;
-
-                for (let j = 0; j < widths.length; j++) {
-                    const width = widths[j].width;
-                    if (width == widthSelected) {
-                        const sidePrinted = widths[j].sidePrinted;
-
-                        for (let k = 0; k < sidePrinted.length; k++) {
-                            const noSides = sidePrinted[k].noSides;
-
-                            if (noSides == sidePrintedSelected) {
-                                const noColours = sidePrinted[k].noColours;
-
-                                for (let l = 0; l < noColours.length; l++) {
-                                    const noColour = noColours[l].noColour;
-                                    const amounts = noColours[l].amount;
-
-                                    if (amounts.length > 0) {
-                                        let highestIndex = amounts.length - 1;
-                                        priceDataColourResult.push({
-                                            material,
-                                            width,
-                                            noSides,
-                                            noColour,
-                                            minAmount: amounts[highestIndex]['min-amount'],
-                                            maxAmount: amounts[highestIndex]['max-amount'],
-                                            price: amounts[highestIndex].price
-                                        });
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
 
     // Ajustar precios restando el precio base
     if (priceDataColourResult.length > 0) {
