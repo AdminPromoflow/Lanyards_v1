@@ -80,11 +80,11 @@ class ColourClass {
 
                           if (noSides == sidePrintedSelected) { // Filtra por la cantidad de lados impresos seleccionados
                               const noColours = sidePrinted[k].noColours;
-                              //alert("noColours: " + JSON.stringify(noColours));
+                              alert("noColours: " + JSON.stringify(noColours));
 
                               for (let l = 0; l < noColours.length; l++) {
                                   const noColour = noColours[l].noColour;
-                                  alert("noColour: " + noColour);
+                                  //alert("noColour: " + noColour);
 
                                   const amounts = noColours[l].amount;
                                   //alert("amounts: " + JSON.stringify(amounts));
