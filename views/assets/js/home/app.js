@@ -84,7 +84,7 @@ class Home {
      */
     openLanyard() {
         // Set default amount and update material prices
-        this.setOriginValues();
+        material.setOriginValuesAfteMaterial();
 
         priceClass.setAmountSelected(1000);
 
@@ -127,26 +127,7 @@ class Home {
 
     }
 
-    setOriginValues() {
-    var json = customizeLanyard.getJsonLanyards();
-    var selectedMaterial = material.getMaterialSelected();
 
-    // Encontrar el índice del material seleccionado
-    var i = json.findIndex(item => item.materials.material === selectedMaterial);
-
-    if (i !== -1) { // Verifica que el material seleccionado existe
-      /*alert(json[i].materials.lanyardType[1].type + " " + json[i].materials.width[0].width + " " +
-    json[i].materials.width[0].sidePrinted[0].noSides + " " + json[i].materials.width[0].sidePrinted[0].noColours[0].noColour
-   + " " + json[i].materials.width[0].clips[0].name);*/
-        oneTwoEndsClass.setTypeLanyardSelected(json[i].materials.lanyardType[1].type);
-        widthClass.setWidthSelected(json[i].materials.width[0].width);
-        sidePrintedClass.setSidePrintedSelected(json[i].materials.width[0].sidePrinted[0].noSides);
-        colourClass.setColourSelected(json[i].materials.width[0].sidePrinted[0].noColours[0].noColour);
-        clipClass.setClipSelected(json[i].materials.width[0].clips[0].name);
-    } else {
-        console.error("Material seleccionado no encontrado en el JSON.");
-    }
-  }
     setOriginValuesBestSeller() {
 
 
