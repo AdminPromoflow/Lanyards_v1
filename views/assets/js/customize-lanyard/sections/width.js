@@ -38,17 +38,21 @@ class Width {
 
     if (i !== -1) {  // If the material exists
       const width = json[i].materials.width;  // Get the available widths for the material
-      alert(JSON.stringify(width));
+
       // Check if the selected width matches any of the available ones
-      const isWidthValid = width.some(w => w === this.getWidthSelected());
-      alert(json[i].materials.width + "Width selected: " +this.getWidthSelected());
+      const isWidthValid = width.some(w => w.width === this.getWidthSelected());  // Compare by "width" property
+
       if (this.getWidthSelected() === undefined) {  // If no width is selected
-        this.setWidthSelected(width[0]);  // Select the first available width
+        this.setWidthSelected(width[0].width);  // Select the first available width
+        alert("width indefinido");
+
       } else if (!isWidthValid) {  // If the selected width doesn't match any available
-        this.setWidthSelected(width[0]);  // Select the first available width
+        this.setWidthSelected(width[0].width);  // Select the first available width
+        alert("width en un rango diferente");
       }
     }
   }
+
 
 
   updateWidth() {
