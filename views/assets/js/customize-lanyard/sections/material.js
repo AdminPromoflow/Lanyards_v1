@@ -313,7 +313,8 @@ class Material {
 
   if (i !== -1) {
 
-    autoSelectLanyardType.oneTwoEndsClass();
+
+    oneTwoEndsClass.autoSelectLanyardType();
 
       widthClass.setWidthSelected(json[i].materials.width[0].width);
       sidePrintedClass.setSidePrintedSelected(json[i].materials.width[0].sidePrinted[0].noSides);
