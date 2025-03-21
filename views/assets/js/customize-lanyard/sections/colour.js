@@ -49,26 +49,16 @@ class ColourClass {
   }
   updateEachPriceColour() {
       var json = customizeLanyard.getJsonLanyards();
-      alert("json: " + JSON.stringify(json)); // Mostrar json completo
 
       var materialSelected = material.getMaterialSelected();
-      alert("materialSelected: " + materialSelected);
-
       var widthSelected = widthClass.getWidthSelected();
-      alert("widthSelected: " + widthSelected);
-
       var amountSelected = priceClass.getAmountSelected();
-      alert("amountSelected: " + amountSelected);
-
       var sidePrintedSelected = sidePrintedClass.getSidePrintedSelected();
-      alert("sidePrintedSelected: " + sidePrintedSelected); // Mostrar valor de sidePrintedSelected
-
       let priceDataColourResult = [];
 
       // Iterando a través del JSON de materiales
       for (let i = 0; i < json.length; i++) {
           const material = json[i].materials.material;
-          alert("material: " + material);
 
           if (material == materialSelected) {
               const widths = json[i].materials.width;
@@ -76,32 +66,32 @@ class ColourClass {
 
               for (let j = 0; j < widths.length; j++) {
                   const width = widths[j].width;
-                  alert("width: " + width);
+                //  alert("width: " + width);
 
                   if (width == widthSelected) {
                       const sidePrinted = widths[j].sidePrinted;
-                      alert("sidePrinted: " + JSON.stringify(sidePrinted));
+                      //alert("sidePrinted: " + JSON.stringify(sidePrinted));
 
                       for (let k = 0; k < sidePrinted.length; k++) {
                           const noSides = sidePrinted[k].noSides;
-                          alert("noSides: " + noSides);
+                          //alert("noSides: " + noSides);
 
                           if (noSides == sidePrintedSelected) { // Filtra por la cantidad de lados impresos seleccionados
                               const noColours = sidePrinted[k].noColours;
-                              alert("noColours: " + JSON.stringify(noColours));
+                              //alert("noColours: " + JSON.stringify(noColours));
 
                               for (let l = 0; l < noColours.length; l++) {
                                   const noColour = noColours[l].noColour;
-                                  alert("noColour: " + noColour);
+                                  //alert("noColour: " + noColour);
 
                                   const amounts = noColours[l].amount;
-                                  alert("amounts: " + JSON.stringify(amounts));
+                                  //alert("amounts: " + JSON.stringify(amounts));
 
                                   for (let m = 0; m < amounts.length; m++) {
                                       const minAmount = amounts[m]['min-amount'];
                                       const maxAmount = amounts[m]['max-amount'];
                                       const pricePerColour = amounts[m].price;
-                                      alert("minAmount: " + minAmount + " maxAmount: " + maxAmount + " pricePerColour: " + pricePerColour);
+                                      //alert("minAmount: " + minAmount + " maxAmount: " + maxAmount + " pricePerColour: " + pricePerColour);
 
                                       if (Number(amountSelected) >= Number(minAmount) && Number(amountSelected) <= Number(maxAmount)) {
                                           priceDataColourResult.push({
@@ -126,13 +116,13 @@ class ColourClass {
       // Ajustar precios restando el precio base
       if (priceDataColourResult.length > 0) {
           let basePrice = parseFloat(priceDataColourResult[0].price);
-          alert("basePrice: " + basePrice);
+          //alert("basePrice: " + basePrice);
 
           priceDataColourResult = priceDataColourResult.map(item => ({
               ...item,
               price: parseFloat((item.price - basePrice).toFixed(2))
           }));
-          alert("priceDataColourResult after base price adjustment: " + JSON.stringify(priceDataColourResult));
+          //alert("priceDataColourResult after base price adjustment: " + JSON.stringify(priceDataColourResult));
       }
 
       return priceDataColourResult; // Retorna la variable con los precios filtrados
