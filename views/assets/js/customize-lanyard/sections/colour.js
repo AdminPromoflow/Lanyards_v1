@@ -48,74 +48,96 @@ class ColourClass {
 
   }
   updateEachPriceColour() {
-    var json = customizeLanyard.getJsonLanyards();
-    var materialSelected = material.getMaterialSelected();
-    var widthSelected = widthClass.getWidthSelected();
-    var amountSelected = priceClass.getAmountSelected();
-    var sidePrintedSelected = sidePrintedClass.getSidePrintedSelected(); // Se agrega la selección de sidePrinted
+      var json = customizeLanyard.getJsonLanyards();
+      alert("json: " + JSON.stringify(json)); // Mostrar json completo
 
-    let priceDataColourResult = [];
+      var materialSelected = material.getMaterialSelected();
+      alert("materialSelected: " + materialSelected);
 
-    // Iterando a través del JSON de materiales
-    for (let i = 0; i < json.length; i++) {
-        const material = json[i].materials.material;
+      var widthSelected = widthClass.getWidthSelected();
+      alert("widthSelected: " + widthSelected);
 
-        if (material == materialSelected) {
-            const widths = json[i].materials.width;
+      var amountSelected = priceClass.getAmountSelected();
+      alert("amountSelected: " + amountSelected);
 
-            for (let j = 0; j < widths.length; j++) {
-                const width = widths[j].width;
-                if (width == widthSelected) {
-                    const sidePrinted = widths[j].sidePrinted;
+      var sidePrintedSelected = sidePrintedClass.getSidePrintedSelected();
+      alert("sidePrintedSelected: " + sidePrintedSelected); // Mostrar valor de sidePrintedSelected
 
-                    for (let k = 0; k < sidePrinted.length; k++) {
-                        const noSides = sidePrinted[k].noSides;
+      let priceDataColourResult = [];
 
-                        if (noSides == sidePrintedSelected) { // Filtra por la cantidad de lados impresos seleccionados
-                            const noColours = sidePrinted[k].noColours;
+      // Iterando a través del JSON de materiales
+      for (let i = 0; i < json.length; i++) {
+          const material = json[i].materials.material;
+          alert("material: " + material);
 
-                            for (let l = 0; l < noColours.length; l++) {
-                                const noColour = noColours[l].noColour;
-                                const amounts = noColours[l].amount;
+          if (material == materialSelected) {
+              const widths = json[i].materials.width;
+              alert("widths: " + JSON.stringify(widths));
 
-                                for (let m = 0; m < amounts.length; m++) {
-                                    const minAmount = amounts[m]['min-amount'];
-                                    const maxAmount = amounts[m]['max-amount'];
-                                    const pricePerColour = amounts[m].price; // Captura el precio del color
+              for (let j = 0; j < widths.length; j++) {
+                  const width = widths[j].width;
+                  alert("width: " + width);
 
-                                    if (Number(amountSelected) >= Number(minAmount) && Number(amountSelected) <= Number(maxAmount)) {
-                                        priceDataColourResult.push({
-                                            material,
-                                            width,
-                                            noSides,
-                                            noColour,
-                                            minAmount,
-                                            maxAmount,
-                                            price: pricePerColour
-                                        });
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
+                  if (width == widthSelected) {
+                      const sidePrinted = widths[j].sidePrinted;
+                      alert("sidePrinted: " + JSON.stringify(sidePrinted));
 
+                      for (let k = 0; k < sidePrinted.length; k++) {
+                          const noSides = sidePrinted[k].noSides;
+                          alert("noSides: " + noSides);
 
+                          if (noSides == sidePrintedSelected) { // Filtra por la cantidad de lados impresos seleccionados
+                              const noColours = sidePrinted[k].noColours;
+                              alert("noColours: " + JSON.stringify(noColours));
 
-    // Ajustar precios restando el precio base
-    if (priceDataColourResult.length > 0) {
-        let basePrice = parseFloat(priceDataColourResult[0].price);
-        priceDataColourResult = priceDataColourResult.map(item => ({
-            ...item,
-            price: parseFloat((item.price - basePrice).toFixed(2))
-        }));
-    }
+                              for (let l = 0; l < noColours.length; l++) {
+                                  const noColour = noColours[l].noColour;
+                                  alert("noColour: " + noColour);
 
-    return priceDataColourResult; // Retorna la variable con los precios filtrados
-}
+                                  const amounts = noColours[l].amount;
+                                  alert("amounts: " + JSON.stringify(amounts));
+
+                                  for (let m = 0; m < amounts.length; m++) {
+                                      const minAmount = amounts[m]['min-amount'];
+                                      const maxAmount = amounts[m]['max-amount'];
+                                      const pricePerColour = amounts[m].price;
+                                      alert("minAmount: " + minAmount + " maxAmount: " + maxAmount + " pricePerColour: " + pricePerColour);
+
+                                      if (Number(amountSelected) >= Number(minAmount) && Number(amountSelected) <= Number(maxAmount)) {
+                                          priceDataColourResult.push({
+                                              material,
+                                              width,
+                                              noSides,
+                                              noColour,
+                                              minAmount,
+                                              maxAmount,
+                                              price: pricePerColour
+                                          });
+                                      }
+                                  }
+                              }
+                          }
+                      }
+                  }
+              }
+          }
+      }
+
+      // Ajustar precios restando el precio base
+      if (priceDataColourResult.length > 0) {
+          let basePrice = parseFloat(priceDataColourResult[0].price);
+          alert("basePrice: " + basePrice);
+
+          priceDataColourResult = priceDataColourResult.map(item => ({
+              ...item,
+              price: parseFloat((item.price - basePrice).toFixed(2))
+          }));
+          alert("priceDataColourResult after base price adjustment: " + JSON.stringify(priceDataColourResult));
+      }
+
+      return priceDataColourResult; // Retorna la variable con los precios filtrados
+  }
+
 
 
 
