@@ -62,11 +62,11 @@ class ColourClass {
 
           if (material == materialSelected) {
               const widths = json[i].materials.width;
-              alert("widths: " + JSON.stringify(widths));
+              //alert("widths: " + JSON.stringify(widths));
 
               for (let j = 0; j < widths.length; j++) {
                   const width = widths[j].width;
-                //  alert("width: " + width);
+                  alert("width: " + width);
 
                   if (width == widthSelected) {
                       const sidePrinted = widths[j].sidePrinted;
