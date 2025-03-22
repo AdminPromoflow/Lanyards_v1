@@ -29,11 +29,11 @@ class SidePrinted {
       const json = customizeLanyard.getJsonLanyards();
       const selectedMaterial = material.getMaterialSelected();
       const iSelectedMaterial = json.findIndex(item => item.materials.material === selectedMaterial);
+      alert("hah2");
 
       if (iSelectedMaterial !== -1) {
         const width = json[iSelectedMaterial].materials.width;
         const selectedWidth = widthClass.getWidthSelected();
-        alert("hah");
         const iSelectedWidth = width.findIndex(w => w.width === selectedWidth);
 
         if (iSelectedWidth !== -1) {
