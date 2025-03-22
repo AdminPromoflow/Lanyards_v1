@@ -27,6 +27,7 @@ class SidePrinted {
 
   autoSelectSidePrinted() {
     const json = customizeLanyard.getJsonLanyards();  // Get the lanyard JSON data
+    alert(JSON.stringify(json));
     const selectedMaterial = material.getMaterialSelected();  // Get the selected material
     const selectedWidth = widthClass.getWidthSelected();  // Get the selected width
 
