@@ -51,7 +51,6 @@ class Width {
   }
 
 
-
   updateWidth() {
       var json = customizeLanyard.getJsonLanyards();
       var materialSelected = material.getMaterialSelected();

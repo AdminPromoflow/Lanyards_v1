@@ -294,7 +294,7 @@ class Material {
   }
 
   // Method to refresh the selected material and its display.
-  refreshMaterial() {
+  refreshMaterial(){
     this.setOriginValuesAfteMaterial();
     this.showSelectedMaterial(); // Display the selected material.
     this.updatePriceMaterial(); // Update the material prices.
@@ -315,7 +315,6 @@ class Material {
 
     if (i !== -1) {
 
-        widthClass.setWidthSelected(json[i].materials.width[0].width);
         sidePrintedClass.setSidePrintedSelected(json[i].materials.width[0].sidePrinted[0].noSides);
         colourClass.setColourSelected(json[i].materials.width[0].sidePrinted[0].noColours[0].noColour);
         clipClass.setClipSelected(json[i].materials.width[0].clips[0].name);

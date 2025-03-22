@@ -25,6 +25,40 @@ class SidePrinted {
     }
   }
 
+  autoSelectSidePrinted() {
+    const json = customizeLanyard.getJsonLanyards();  // Get the lanyard JSON data
+    const selectedMaterial = material.getMaterialSelected();  // Get the selected material
+    const selectedWidth = widthClass.getWidthSelected();  // Get the selected width
+
+    const i = json.findIndex(item => item.materials.material === selectedMaterial);  // Find the index of the selected material
+
+    if (i !== -1) {  // If the material exists
+      const width = json[i].materials.width;  // Get the available widths for the material
+
+      // Find the index of the selected width in the available widths
+      const widthSelectedIndex = width.findIndex(w => w.width === selectedWidth);  // Find the index of the selected width
+
+      if (widthSelectedIndex !== -1) {  // If the selected width exists in the available widths
+        const sidePrinted = width[widthSelectedIndex].sidePrinted;  // Get the sidePrinted information for the selected width
+
+        // Optionally, you can add logic to handle the sidePrinted information
+        console.log('sidePrinted:', sidePrinted);  // Log or process the sidePrinted information
+      } else {
+        console.log('Selected width not found in available widths');
+      }
+
+      // Check if the selected width matches any of the available ones
+      const isWidthValid = width.some(w => w.width === selectedWidth);  // Compare by "width" property
+
+      if (this.getWidthSelected() === undefined) {  // If no width is selected
+        this.setWidthSelected(width[0].width);  // Select the first available width
+      } else if (!isWidthValid) {  // If the selected width doesn't match any available
+        this.setWidthSelected(width[0].width);  // Select the first available width
+      }
+    }
+  }
+
+
   updateEachPriceSidePrinted() {
    var json = customizeLanyard.getJsonLanyards();
    var materialSelected = material.getMaterialSelected();
