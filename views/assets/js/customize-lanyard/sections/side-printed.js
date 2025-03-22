@@ -36,17 +36,17 @@ class SidePrinted {
         const width = json[iSelectedMaterial].materials.width;
         const selectedWidth = widthClass.getWidthSelected();
         const iSelectedWidth = width.findIndex(w => w.width === selectedWidth);
-/*
+
         if (iSelectedWidth !== -1) {
-          const sidePrinted = json[iSelectedMaterial]?.materials?.width[iSelectedWidth]?.sidePrinted;
+  /*        const sidePrinted = json[iSelectedMaterial]?.materials?.width[iSelectedWidth]?.sidePrinted;
 
           const iSelectedSidePrinted = sidePrinted.findIndex(s => s.side === selectedWidth);  // Devuelve el índice
 
           if (iSelectedSidePrinted !== -1) {
            const var =  this.setSidePrintedSelected(json[iSelectedMaterial].materials.width[iSelectedWidth].sidePrinted[iSelectedSidePrinted].noSides);
            alert(var);
-          }
-        }*/
+          }*/
+        }
       }
   }
 
