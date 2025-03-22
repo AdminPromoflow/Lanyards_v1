@@ -42,7 +42,7 @@ class SidePrinted {
           const iSelectedSidePrinted = sidePrinted.findIndex(s => s.side === selectedWidth);  // Devuelve el índice
 
           if (iSelectedSidePrinted !== -1) {
-           const var =  this.setSidePrintedSelected(json[iSelectedMaterial].materials.width[iSelectedWidth].sidePrinted[iSelectedSidePrinted].noSides);
+           //const var =  this.setSidePrintedSelected(json[iSelectedMaterial].materials.width[iSelectedWidth].sidePrinted[iSelectedSidePrinted].noSides);
           // alert(var);
           }
         }
