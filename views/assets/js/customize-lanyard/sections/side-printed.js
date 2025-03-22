@@ -25,7 +25,7 @@ class SidePrinted {
     }
   }
 
-/*  autoSelectSidePrinted() {
+  autoSelectSidePrinted() {
     alert("hah2");
       const json = customizeLanyard.getJsonLanyards();
       const selectedMaterial = material.getMaterialSelected();
@@ -48,7 +48,7 @@ class SidePrinted {
           }
         }
       }
-  }*/
+  }
 
 
 
