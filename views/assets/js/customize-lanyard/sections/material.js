@@ -305,7 +305,7 @@ class Material {
   setOriginValuesAfteMaterial() {
     oneTwoEndsClass.autoSelectLanyardType();
     widthClass.autoSelectWidth();
-  //  sidePrintedClass.autoSelectSidePrinted();
+    sidePrintedClass.autoSelectSidePrinted();
 
     var json = customizeLanyard.getJsonLanyards();
     var selectedMaterial = material.getMaterialSelected();
