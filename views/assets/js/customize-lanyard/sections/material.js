@@ -305,7 +305,7 @@ class Material {
   setOriginValuesAfteMaterial() {
     oneTwoEndsClass.autoSelectLanyardType();
     widthClass.autoSelectWidth();
-
+    sidePrintedClass.autoSelectSidePrinted();
 
     var json = customizeLanyard.getJsonLanyards();
     var selectedMaterial = material.getMaterialSelected();
@@ -315,7 +315,7 @@ class Material {
 
     if (i !== -1) {
 
-        sidePrintedClass.setSidePrintedSelected(json[i].materials.width[0].sidePrinted[0].noSides);
+        //sidePrintedClass.setSidePrintedSelected(json[i].materials.width[0].sidePrinted[0].noSides);
         colourClass.setColourSelected(json[i].materials.width[0].sidePrinted[0].noColours[0].noColour);
         clipClass.setClipSelected(json[i].materials.width[0].clips[0].name);
     } else {

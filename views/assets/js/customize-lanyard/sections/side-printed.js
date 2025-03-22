@@ -28,7 +28,7 @@ class SidePrinted {
   autoSelectSidePrinted() {
     const json = customizeLanyard.getJsonLanyards();  // Get the lanyard JSON data
     alert(JSON.stringify(json));
-    const selectedMaterial = material.getMaterialSelected();  // Get the selected material
+    /*const selectedMaterial = material.getMaterialSelected();  // Get the selected material
     const selectedWidth = widthClass.getWidthSelected();  // Get the selected width
 
     const i = json.findIndex(item => item.materials.material === selectedMaterial);  // Find the index of the selected material
@@ -56,7 +56,7 @@ class SidePrinted {
       } else if (!isWidthValid) {  // If the selected width doesn't match any available
         this.setWidthSelected(width[0].width);  // Select the first available width
       }
-    }
+    }*/
   }
 
 
