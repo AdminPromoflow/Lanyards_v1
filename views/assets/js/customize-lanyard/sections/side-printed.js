@@ -45,6 +45,8 @@ class SidePrinted {
 
           //this.setSidePrintedSelected(sidePrinted[0].side);  // Selecciona el primer sidePrinted disponible
         } else if (iSelectedSidePrinted === -1) {  // Si el sidePrinted seleccionado no coincide con ninguno disponible
+          alert(JSON.stringify(sidePrinted));
+
           //this.setSidePrintedSelected(sidePrinted[0].side);  // Selecciona el primer sidePrinted disponible
         }
       }
