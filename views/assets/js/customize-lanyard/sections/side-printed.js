@@ -38,7 +38,7 @@ class SidePrinted {
         const sidePrinted = json[iSelectedMaterial]?.materials?.width[iSelectedWidth]?.sidePrinted;
         const sidePrintedSelected = sidePrintedClass.getSidePrintedSelected();
         const iSelectedSidePrinted = sidePrinted.findIndex(s => s.nosides === sidePrintedSelected);  // Devuelve el índice
-        alert(JSON.stringify(sidePrinted[1]));
+        alert(JSON.stringify(sidePrinted));
         // Cambiar la lógica para `sidePrinted`
         if (this.getSidePrintedSelected() === undefined) {  // Si no se ha seleccionado un sidePrinted
           alert("indefined" + JSON.stringify(sidePrinted[0].noSides));
