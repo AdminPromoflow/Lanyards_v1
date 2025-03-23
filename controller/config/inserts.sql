@@ -997,7 +997,6 @@ INSERT INTO ⁠ Amount ⁠ (⁠ min-amount ⁠, ⁠ max-amount ⁠, 
 
 
 
-
 /*CLIPS*/
 
 
