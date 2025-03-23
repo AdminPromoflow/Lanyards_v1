@@ -18,7 +18,6 @@ class SidePrinted {
 
     // Get the available side printed options
     let sidePrintedAvailable = this.updateEachPriceSidePrinted();
-  //  alert(JSON.stringify(sidePrintedAvailable));
     // Iterate through the available side printed options and draw them
     for (var i = 0; i < sidePrintedAvailable.length; i++) {
       this.drawSidePrintedAvailable(sidePrintedAvailable[i], i);
@@ -38,8 +37,9 @@ class SidePrinted {
 
         if (iSelectedWidth !== -1) {
           const sidePrinted = json[iSelectedMaterial]?.materials?.width[iSelectedWidth]?.sidePrinted;
+          const sidePrintedSelected = sidePrintedClass.getSidePrintedSelected();
 
-          const iSelectedSidePrinted = sidePrinted.findIndex(s => s.side === selectedWidth);  // Devuelve el índice
+          const iSelectedSidePrinted = sidePrinted.findIndex(s => s.side === sidePrintedSelected);  // Devuelve el índice
 
           if (iSelectedSidePrinted !== -1) {
             alert(iSelectedMaterial + iSelectedWidth + iSelectedSidePrinted);
