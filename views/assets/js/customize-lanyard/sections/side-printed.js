@@ -40,10 +40,11 @@ class SidePrinted {
         const iSelectedSidePrinted = sidePrinted.findIndex(s => s.noSides === sidePrintedSelected);
         // Cambiar la lógica para `sidePrinted`
         if (this.getSidePrintedSelected() === undefined) {  // Si no se ha seleccionado un sidePrinted
-
-          this.setSidePrintedSelected(sidePrinted[0].noSides);  // Selecciona el primer sidePrinted disponible
+          //this.setSidePrintedSelected(sidePrinted[0].noSides);  // Selecciona el primer sidePrinted disponible
+          this.searchDataSidePrintedSelected(sidePrinted[0].noSides, 0);
         } else if (iSelectedSidePrinted === -1) {  // Si el sidePrinted seleccionado no coincide con ninguno disponible
-          this.setSidePrintedSelected(sidePrinted[0].noSides);  // Selecciona el primer sidePrinted disponible
+          //this.setSidePrintedSelected(sidePrinted[0].noSides);  // Selecciona el primer sidePrinted disponible
+          this.searchDataSidePrintedSelected(sidePrinted[0].noSides, 0);
         }
       }
     }
