@@ -41,11 +41,11 @@ class SidePrinted {
         alert(JSON.stringify(sidePrinted[1]));
         // Cambiar la lógica para `sidePrinted`
         if (this.getSidePrintedSelected() === undefined) {  // Si no se ha seleccionado un sidePrinted
-          alert(JSON.stringify(sidePrinted[0].noSides));
+          alert("indefined" + JSON.stringify(sidePrinted[0].noSides));
 
           this.setSidePrintedSelected(sidePrinted[0].noSides);  // Selecciona el primer sidePrinted disponible
         } else if (iSelectedSidePrinted === -1) {  // Si el sidePrinted seleccionado no coincide con ninguno disponible
-          alert(JSON.stringify(sidePrinted[0].noSides));
+          alert("It is not on the JSON" + JSON.stringify(sidePrinted[0].noSides));
 
           this.setSidePrintedSelected(sidePrinted[0].noSides);  // Selecciona el primer sidePrinted disponible
         }
