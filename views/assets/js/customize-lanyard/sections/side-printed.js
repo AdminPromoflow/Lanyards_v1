@@ -25,31 +25,31 @@ class SidePrinted {
   }
 
   autoSelectSidePrinted() {
-      const json = customizeLanyard.getJsonLanyards();
-      const selectedMaterial = material.getMaterialSelected();
-      const iSelectedMaterial = json.findIndex(item => item.materials.material === selectedMaterial);
+    const json = customizeLanyard.getJsonLanyards();
+    const selectedMaterial = material.getMaterialSelected();
+    const iSelectedMaterial = json.findIndex(item => item.materials.material === selectedMaterial);
 
+    if (iSelectedMaterial !== -1) {
+      const width = json[iSelectedMaterial].materials.width;
+      const selectedWidth = widthClass.getWidthSelected();
+      const iSelectedWidth = width.findIndex(w => w.width === selectedWidth);
 
-      if (iSelectedMaterial !== -1) {
-        const width = json[iSelectedMaterial].materials.width;
-        const selectedWidth = widthClass.getWidthSelected();
-        const iSelectedWidth = width.findIndex(w => w.width === selectedWidth);
-        if (iSelectedWidth !== -1) {
+      if (iSelectedWidth !== -1) {
+        const sidePrinted = json[iSelectedMaterial]?.materials?.width[iSelectedWidth]?.sidePrinted;
+        const sidePrintedSelected = sidePrintedClass.getSidePrintedSelected();
 
-          const sidePrinted = json[iSelectedMaterial]?.materials?.width[iSelectedWidth]?.sidePrinted;
-          const sidePrintedSelected = sidePrintedClass.getSidePrintedSelected();
+        const iSelectedSidePrinted = sidePrinted.findIndex(s => s.side === sidePrintedSelected);  // Devuelve el índice
 
-          const iSelectedSidePrinted = sidePrinted.findIndex(s => s.side === sidePrintedSelected);  // Devuelve el índice
-          alert(iSelectedSidePrinted);
-
-          if (iSelectedSidePrinted !== -1) {
-            alert(iSelectedMaterial + iSelectedWidth + iSelectedSidePrinted);
-           //const var =  this.setSidePrintedSelected(json[iSelectedMaterial].materials.width[iSelectedWidth].sidePrinted[iSelectedSidePrinted].noSides);
-          // alert(var);
-          }
+        // Cambiar la lógica para `sidePrinted`
+        if (this.getSidePrintedSelected() === undefined) {  // Si no se ha seleccionado un sidePrinted
+          this.setSidePrintedSelected(sidePrinted[0].side);  // Selecciona el primer sidePrinted disponible
+        } else if (iSelectedSidePrinted === -1) {  // Si el sidePrinted seleccionado no coincide con ninguno disponible
+          this.setSidePrintedSelected(sidePrinted[0].side);  // Selecciona el primer sidePrinted disponible
         }
       }
+    }
   }
+
 
 
 
