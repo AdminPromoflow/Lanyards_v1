@@ -37,14 +37,15 @@ class SidePrinted {
       if (iSelectedWidth !== -1) {
         const sidePrinted = json[iSelectedMaterial]?.materials?.width[iSelectedWidth]?.sidePrinted;
         const sidePrintedSelected = sidePrintedClass.getSidePrintedSelected();
-        alert(sidePrintedSelected);
         const iSelectedSidePrinted = sidePrinted.findIndex(s => s.side === sidePrintedSelected);  // Devuelve el índice
 
         // Cambiar la lógica para `sidePrinted`
         if (this.getSidePrintedSelected() === undefined) {  // Si no se ha seleccionado un sidePrinted
-          this.setSidePrintedSelected(sidePrinted[0].side);  // Selecciona el primer sidePrinted disponible
+          alert(JSON.stringify(sidePrinted));
+
+          //this.setSidePrintedSelected(sidePrinted[0].side);  // Selecciona el primer sidePrinted disponible
         } else if (iSelectedSidePrinted === -1) {  // Si el sidePrinted seleccionado no coincide con ninguno disponible
-          this.setSidePrintedSelected(sidePrinted[0].side);  // Selecciona el primer sidePrinted disponible
+          //this.setSidePrintedSelected(sidePrinted[0].side);  // Selecciona el primer sidePrinted disponible
         }
       }
     }
