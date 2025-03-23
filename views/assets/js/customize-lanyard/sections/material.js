@@ -299,7 +299,9 @@ class Material {
     this.showSelectedMaterial(); // Display the selected material.
     this.updatePriceMaterial(); // Update the material prices.
     previewMaterial.showSelectedPreviewtMaterial(this.getMaterialSelected()); // Show preview of selected material.
+    priceClass.changePricePerLanyard();
     chargingClass.hideShowchargin(false); // Hide loading animation.
+
   }
 
   setOriginValuesAfteMaterial() {
