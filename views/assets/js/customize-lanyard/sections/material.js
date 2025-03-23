@@ -301,7 +301,6 @@ class Material {
     previewMaterial.showSelectedPreviewtMaterial(this.getMaterialSelected()); // Show preview of selected material.
     priceClass.changePricePerLanyard();
     chargingClass.hideShowchargin(false); // Hide loading animation.
-
   }
 
   setOriginValuesAfteMaterial() {
