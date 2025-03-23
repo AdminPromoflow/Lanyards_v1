@@ -48,8 +48,8 @@ class Width {
         this.searchDataWidthSelected(width[0].width, 0);
       } else if (!isWidthValid) {  // If the selected width doesn't match any available
         this.setWidthSelected(width[0].width);  // Select the first available width
-        this.searchDataWidthSelected(width[0].width, 0)
- 
+        this.searchDataWidthSelected(width[0].width, 0);
+
       }
     }
   }
