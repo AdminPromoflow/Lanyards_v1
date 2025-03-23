@@ -44,8 +44,11 @@ class Width {
 
       if (this.getWidthSelected() === undefined) {  // If no width is selected
         this.setWidthSelected(width[0].width);  // Select the first available width
+        this.searchDataWidthSelected(width[0].width, 0) {
       } else if (!isWidthValid) {  // If the selected width doesn't match any available
         this.setWidthSelected(width[0].width);  // Select the first available width
+        this.searchDataWidthSelected(width[0].width, 0) {
+
       }
     }
   }
@@ -68,7 +71,6 @@ class Width {
   }
 
   searchDataWidthSelected(width, index) {
-    alert(width + index);
     // Set the selected material.
     this.setWidthSelected(width);
 
