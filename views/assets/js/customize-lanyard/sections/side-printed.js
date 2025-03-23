@@ -1,7 +1,7 @@
 
 class SidePrinted {
   constructor() {
-    this.sidePrintedSelected = "one-side";
+    //this.sidePrintedSelected = "one-side";
   }
 
   setSidePrintedSelected(value) {
