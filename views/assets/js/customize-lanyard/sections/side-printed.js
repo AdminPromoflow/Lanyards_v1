@@ -38,9 +38,9 @@ class SidePrinted {
 
           const sidePrinted = json[iSelectedMaterial]?.materials?.width[iSelectedWidth]?.sidePrinted;
           const sidePrintedSelected = sidePrintedClass.getSidePrintedSelected();
-          alert(sidePrintedSelected);
 
           const iSelectedSidePrinted = sidePrinted.findIndex(s => s.side === sidePrintedSelected);  // Devuelve el índice
+          alert(iSelectedSidePrinted);
 
           if (iSelectedSidePrinted !== -1) {
             alert(iSelectedMaterial + iSelectedWidth + iSelectedSidePrinted);
