@@ -68,7 +68,7 @@ class Width {
   }
 
   searchDataWidthSelected(width, index) {
-
+    alert(width + index);
     // Set the selected material.
     this.setWidthSelected(width);
 
