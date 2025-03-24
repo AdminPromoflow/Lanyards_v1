@@ -202,7 +202,7 @@ class Width {
 
       // Get the elements to display price data.
       const priceDataWidth = document.querySelectorAll(".priceDataWidth");
-      //alert(JSON.stringify(priceDataWidthResult));
+      alert(JSON.stringify(priceDataWidthResult));
 
 
       // Update the price display for each element.
