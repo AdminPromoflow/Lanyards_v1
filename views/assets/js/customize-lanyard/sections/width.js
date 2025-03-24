@@ -1,6 +1,7 @@
 class Width {
   constructor(){
   //  this.widthSelected = "10mm";
+  this.setWidthSelectedIndex(0);
     var jsonWidth = {};
   }
 
@@ -210,8 +211,8 @@ class Width {
   }
 
   refreshWidth(){
-    alert(this.getWidthSelected() + this.getWidthSelectedIndex());
-  //  this.searchDataWidthSelected(this.getWidthSelected(), this.getWidthSelectedIndex());
+    // alert(this.getWidthSelected() + this.getWidthSelectedIndex());
+    this.searchDataWidthSelected(this.getWidthSelected(), this.getWidthSelectedIndex());
     chargingClass.hideShowchargin(true);
     this.updateWidth();
     this.updatePriceWidth();
