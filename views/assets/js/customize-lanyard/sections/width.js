@@ -11,6 +11,14 @@ class Width {
   getWidthSelected() {
     return this.widthSelected;
   }
+  setWidthSelectedIndex(value) {
+    this.widthSelectedIndex = value;
+  }
+
+  getWidthSelectedIndex() {
+      return this.widthSelectedIndex;
+  }
+
 
   setJsonWidth(jsonWidth) {
     this.jsonWidth = jsonWidth;
@@ -45,9 +53,11 @@ class Width {
       if (this.getWidthSelected() === undefined) {  // If no width is selected
         //this.setWidthSelected(width[0].width);  // Select the first available width
         this.searchDataWidthSelected(width[0].width, 0);
+        this.setWidthSelectedIndex(0);
       } else if (!isWidthValid) {  // If the selected width doesn't match any available
       //  this.setWidthSelected(width[0].width);  // Select the first available width
         this.searchDataWidthSelected(width[0].width, 0);
+        this.setWidthSelectedIndex(0);
       }
     }
   }
@@ -200,7 +210,7 @@ class Width {
   }
 
   refreshWidth(){
-    alert(this.getWidthSelected());
+    this.searchDataWidthSelected(this.getWidthSelected(), this.getWidthSelectedIndex());
     chargingClass.hideShowchargin(true);
     this.updateWidth();
     this.updatePriceWidth();
