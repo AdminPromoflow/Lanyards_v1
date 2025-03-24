@@ -90,27 +90,8 @@ class Width {
     previewLanyardType.showSelectedPreviewtTemplate();
 
     //this.showSelectedWidth();
+      this.updatePriceWidth(index);
 
-    const priceDataWidth = document.querySelectorAll(".priceDataWidth");
-
-    for (var i = 0; i < priceDataWidth.length; i++) {
-      if (i == index) {
-
-        let text = priceDataWidth[i].innerHTML+"";
-        let number = +text.match(/-?\d+\.\d+|\d+/); // Finds the first number (float or integer), which can be negative.
-
-      //  alert(number);
-        if (number >= 0) {
-        //  alert("hi, I just enter in if");
-            let result = number.toFixed(2);
-            priceClass.setPriceWidth(result); // Displays the positive float number with two decimals.
-            priceClass.changePricePerLanyard();
-        } else {
-          throw new Error("The number width is negative or no numbers were found.");
-          //alert("hi, I just enter in else too");
-        }
-      }
-    }
     this.refreshWidth();
     oneTwoEndsClass.refreshLanyardType();
     sidePrintedClass.refreshSidePrintedData()
@@ -119,7 +100,24 @@ class Width {
   //  artworkClass.changeWidthRightPanel();
 
   }
+  updatePriceWidth(index) {
+    const priceDataWidth = document.querySelectorAll(".priceDataWidth");
 
+    for (var i = 0; i < priceDataWidth.length; i++) {
+        if (i == index) {
+            let text = priceDataWidth[i].innerHTML + "";
+            let number = +text.match(/-?\d+\.\d+|\d+/); // Finds the first number (float or integer), which can be negative.
+
+            if (number >= 0) {
+                let result = number.toFixed(2);
+                priceClass.setPriceWidth(result); // Displays the positive float number with two decimals.
+                priceClass.changePricePerLanyard();
+            } else {
+                throw new Error("The number width is negative or no numbers were found.");
+            }
+        }
+    }
+}
   updatePriceWidth() {
       // Get the JSON lanyards data.
       var json = customizeLanyard.getJsonLanyards();
@@ -211,8 +209,9 @@ class Width {
   }
 
   refreshWidth(){
-   alert(this.getWidthSelected() + this.getWidthSelectedIndex());
-    this.searchDataWidthSelected(this.getWidthSelected(), this.getWidthSelectedIndex());
+  // alert(this.getWidthSelected() + this.getWidthSelectedIndex());
+    // this.searchDataWidthSelected(this.getWidthSelected(), this.getWidthSelectedIndex());
+      this.updatePriceWidth(index);
     chargingClass.hideShowchargin(true);
     this.updateWidth();
     this.updatePriceWidth();
