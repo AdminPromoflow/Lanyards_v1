@@ -161,6 +161,16 @@ class Price {
      +  priceClass.getPriceSidePrinted() + priceClass.getPriceClip()
      + priceClass.getPriceAttachment() + priceClass.getPriceColour()
      + priceClass.getPriceAccessory();
+     alert("Detalle de precios:\n" +
+      "Material: " + pricePerMaterial + "\n" +
+      "Tipo de Lanyard: " + priceLanyardType + "\n" +
+      "Ancho: " + priceWidth + "\n" +
+      "Impresión: " + priceSidePrinted + "\n" +
+      "Clip: " + priceClip + "\n" +
+      "Adjunto: " + priceAttachment + "\n" +
+      "Color: " + priceColour + "\n" +
+      "Accesorio: " + priceAccessory + "\n" +
+      "\nTotal: " + totalPrice);
     // Update the inner HTML of pricePerLanyard element to display the price with currency symbol.
     pricePerLanyard.innerHTML = "£" + totalPrice.toFixed(2);
   }
