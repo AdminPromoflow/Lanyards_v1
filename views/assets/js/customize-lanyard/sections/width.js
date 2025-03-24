@@ -101,6 +101,7 @@ class Width {
 
   }
   updatePriceWidth(index) {
+    alert(index);
     const priceDataWidth = document.querySelectorAll(".priceDataWidth");
 
     for (var i = 0; i < priceDataWidth.length; i++) {
