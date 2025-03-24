@@ -90,9 +90,7 @@ class Width {
     previewLanyardType.showSelectedPreviewtTemplate();
 
     //this.showSelectedWidth();
-    let updatePrice = this.updatePriceWidth.bind(this);
-    updatePrice(index);  // Asegura que `this` apunte al objeto correcto
-
+    this.ejemplo();
     this.refreshWidth();
     oneTwoEndsClass.refreshLanyardType();
     sidePrintedClass.refreshSidePrintedData()
@@ -100,6 +98,9 @@ class Width {
     clipClass.updateClip();
   //  artworkClass.changeWidthRightPanel();
 
+  }
+  ejemplo(){
+    alert("buenas");
   }
   updatePriceWidth(index) {
     alert(index);
