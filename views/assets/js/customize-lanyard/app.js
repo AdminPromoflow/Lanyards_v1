@@ -14,7 +14,7 @@ class CustomizeLanyard {
   material.makeAjaxRequestGetAllMaterials();
   }
 
-  getLanyardsActive(){ 
+  getLanyardsActive(){
     var lanyardActive;
 
     var lanyardType = oneTwoEndsClass.getTypeLanyardSelected();
@@ -188,7 +188,7 @@ class CustomizeLanyard {
        customizeLanyard.openBackgroundColour();
     }
     else {
-        this.openArtwork();
+        customizeLanyard.openArtwork();
     }
    }
 
