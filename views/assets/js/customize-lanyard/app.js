@@ -353,12 +353,12 @@ class CustomizeLanyard {
   }
 
   openArtwork(){
-    /*rtworkClass.showHideArtwork(true);
-    artworkPreviewClass.showHidePreviewArtwork(true);
+    artworkClass.showHideArtwork(true);
+    /*artworkPreviewClass.showHidePreviewArtwork(true);
     previewLanyardType.showTypeLanyardPreview("none");
     previewArtworkManualClass.showArtworkManualPreview("none");
     this.showCurrentSection(this.currentSectionOpen);*/
-    alert("hola");
+    alert("hola2");
   }
 
   openArtworkFinal(){
