@@ -90,7 +90,22 @@ class Width {
     previewLanyardType.showSelectedPreviewtTemplate();
 
     //this.showSelectedWidth();
-      this.updatePriceWidth(index);
+    const priceDataWidth = document.querySelectorAll(".priceDataWidth");
+
+    for (var i = 0; i < priceDataWidth.length; i++) {
+        if (i == index) {
+            let text = priceDataWidth[i].innerHTML + "";
+            let number = +text.match(/-?\d+\.\d+|\d+/); // Finds the first number (float or integer), which can be negative.
+
+            if (number >= 0) {
+                let result = number.toFixed(2);
+                priceClass.setPriceWidth(result); // Displays the positive float number with two decimals.
+                priceClass.changePricePerLanyard();
+            } else {
+                throw new Error("The number width is negative or no numbers were found.");
+            }
+        }
+    }
 
     this.refreshWidth();
     oneTwoEndsClass.refreshLanyardType();
