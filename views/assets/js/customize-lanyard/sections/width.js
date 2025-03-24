@@ -210,6 +210,7 @@ class Width {
   }
 
   refreshWidth(){
+    alert(this.getWidthSelected() + this.getWidthSelectedIndex());
   //  this.searchDataWidthSelected(this.getWidthSelected(), this.getWidthSelectedIndex());
     chargingClass.hideShowchargin(true);
     this.updateWidth();
