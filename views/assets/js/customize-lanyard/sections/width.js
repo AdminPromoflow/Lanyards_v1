@@ -41,13 +41,11 @@ class Width {
 
       // Check if the selected width matches any of the available ones
       const isWidthValid = width.some(w => w.width === this.getWidthSelected());  // Compare by "width" property
-      //alert(width[0].width);
+
       if (this.getWidthSelected() === undefined) {  // If no width is selected
-        //this.setWidthSelected(width[0].width);  // Select the first available width
-        this.searchDataWidthSelected(width[0].width, 0);
+        this.setWidthSelected(width[0].width);  // Select the first available width
       } else if (!isWidthValid) {  // If the selected width doesn't match any available
-        //this.setWidthSelected(width[0].width);  // Select the first available width
-        this.searchDataWidthSelected(width[0].width, 0);
+        this.setWidthSelected(width[0].width);  // Select the first available width
       }
     }
   }
@@ -70,6 +68,7 @@ class Width {
   }
 
   searchDataWidthSelected(width, index) {
+
     // Set the selected material.
     this.setWidthSelected(width);
 
