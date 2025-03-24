@@ -214,7 +214,7 @@ class Width {
     // this.searchDataWidthSelected(this.getWidthSelected(), this.getWidthSelectedIndex());
       // this.updatePriceWidth(this.getWidthSelectedIndex());
     chargingClass.hideShowchargin(true);
-  //  this.updatePriceWidthIndividual(this.getWidthSelectedIndex());
+    this.updatePriceWidthIndividual(this.getWidthSelectedIndex());
     this.updateWidth();
     this.updatePriceWidth();
     this.showSelectedWidth();
