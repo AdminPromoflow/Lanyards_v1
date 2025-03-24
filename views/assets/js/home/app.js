@@ -33,11 +33,11 @@ class Home {
         if (open_from_scratch_in_home.length > 0) {
             open_from_scratch_in_home.forEach((element, index) => {
                 element.addEventListener("click", () => {
-                    chargingClass.hideShowchargin(true);
+                  //  chargingClass.hideShowchargin(true);
                     material.setMaterialSelected(material_for_select[index].innerText);
                     homeClass.openLanyard();
                     customizeLanyard.openMaterial();
-                    chargingClass.hideShowchargin(false);
+                    //chargingClass.hideShowchargin(false);
                 });
             });
         }
@@ -71,9 +71,9 @@ class Home {
                         "You can continue adding the design inside the lanyard.\n\n" +
                         "Remember, you can always change these options by clicking on Preview."
                     );
-                    chargingClass.hideShowchargin(true);
+                  //  chargingClass.hideShowchargin(true);
                     customizeLanyard.openArtWorkManual();
-                    chargingClass.hideShowchargin(false);
+                  //  chargingClass.hideShowchargin(false);
                 });
             });
         }
