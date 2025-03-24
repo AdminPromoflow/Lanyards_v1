@@ -109,17 +109,17 @@ class ApiHandlerLoginGoogle
                   try {
                       // Obtener el token de acceso usando el código de autorización
                       $token = $client->fetchAccessTokenWithAuthCode($queryParams['code']);
-                      echo json_encode(array(
-                          "google_login" => true,
-                          "info" => "ejemplo7"
-                      ));
 
-                      exit;
                       // Verificar si hubo un error en la respuesta
                       if (isset($token['error']) || !isset($token['access_token'])) {
                           throw new Exception("Error fetching access token: " . json_encode($token));
                       }
+                      echo json_encode(array(
+                          "google_login" => true,
+                          "info" => "ejemplo8"
+                      ));
 
+                      exit;
                       // Establecer el token de acceso en el cliente
                       $client->setAccessToken($token['access_token']);
 
