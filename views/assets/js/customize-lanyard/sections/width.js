@@ -90,7 +90,8 @@ class Width {
     previewLanyardType.showSelectedPreviewtTemplate();
 
     //this.showSelectedWidth();
-      this.updatePriceWidth(index);
+    let updatePrice = this.updatePriceWidth.bind(this);
+    updatePrice(index);  // Asegura que `this` apunte al objeto correcto
 
     this.refreshWidth();
     oneTwoEndsClass.refreshLanyardType();
