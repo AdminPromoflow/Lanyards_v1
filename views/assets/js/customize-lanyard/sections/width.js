@@ -90,7 +90,7 @@ class Width {
     previewLanyardType.showSelectedPreviewtTemplate();
 
     //this.showSelectedWidth();
-    this.updatePriceWidthIndividual(index);
+    // this.updatePriceWidthIndividual(index);
     this.refreshWidth();
     oneTwoEndsClass.refreshLanyardType();
     sidePrintedClass.refreshSidePrintedData()
@@ -215,9 +215,9 @@ class Width {
     // this.searchDataWidthSelected(this.getWidthSelected(), this.getWidthSelectedIndex());
       // this.updatePriceWidth(this.getWidthSelectedIndex());
     chargingClass.hideShowchargin(true);
-    this.updatePriceWidthIndividual(this.getWidthSelectedIndex());
     this.updateWidth();
     this.updatePriceWidth();
+    this.updatePriceWidthIndividual(this.getWidthSelectedIndex());
     this.showSelectedWidth();
     chargingClass.hideShowchargin(false);
   }
