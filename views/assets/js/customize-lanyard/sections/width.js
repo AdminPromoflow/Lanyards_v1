@@ -84,7 +84,7 @@ class Width {
 
     // Set the selected material.
     this.setWidthSelected(width);
-
+    this.setWidthSelectedIndex(index);
     //artworkPreviewClass.changeAllSettingsWidth();
 
     previewLanyardType.showSelectedPreviewtTemplate();
