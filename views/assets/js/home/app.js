@@ -45,10 +45,10 @@ class Home {
         if (open_from_scratch.length > 0) {
             open_from_scratch.forEach(element => {
                 element.addEventListener("click", () => {
-                    chargingClass.hideShowchargin(true);
+                  //  chargingClass.hideShowchargin(true);
                     homeClass.openLanyard();
                     customizeLanyard.openMaterial();
-                    chargingClass.hideShowchargin(false);
+                  //  chargingClass.hideShowchargin(false);
                 });
             });
         }
