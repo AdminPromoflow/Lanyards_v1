@@ -161,6 +161,19 @@ class Price {
      +  priceClass.getPriceSidePrinted() + priceClass.getPriceClip()
      + priceClass.getPriceAttachment() + priceClass.getPriceColour()
      + priceClass.getPriceAccessory();
+     var pricePerMaterial = priceClass.getPricePerMaterialWithAmount();
+      var priceLanyardType = priceClass.getPriceLanyardType();
+      var priceWidth = priceClass.getPriceWidth();
+      var priceSidePrinted = priceClass.getPriceSidePrinted();
+      var priceClip = priceClass.getPriceClip();
+      var priceAttachment = priceClass.getPriceAttachment();
+      var priceColour = priceClass.getPriceColour();
+      var priceAccessory = priceClass.getPriceAccessory();
+
+      var totalPrice = pricePerMaterial + priceLanyardType + priceWidth +
+                       priceSidePrinted + priceClip + priceAttachment +
+                       priceColour + priceAccessory;
+
      alert("Detalle de precios:\n" +
       "Material: " + pricePerMaterial + "\n" +
       "Tipo de Lanyard: " + priceLanyardType + "\n" +
