@@ -3,6 +3,7 @@ class PreviewArtworkManualClass {
     var openBackgroundColour = document.getElementById("open-background-colour");
 
     openBackgroundColour.addEventListener("click", function(){
+      customizeLanyard.setCurrentSectionOpen(9);
       customizeLanyard.openBackgroundColour();
     });
   }
