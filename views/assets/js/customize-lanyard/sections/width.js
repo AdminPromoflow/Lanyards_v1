@@ -101,7 +101,7 @@ class Width {
   }
 
   updatePriceWidthIndividual(index) {
-    alert("individual" + index);
+  //  alert("individual" + index);
     const priceDataWidth = document.querySelectorAll(".priceDataWidth");
 
     for (var i = 0; i < priceDataWidth.length; i++) {
@@ -210,7 +210,7 @@ class Width {
   }
 
   refreshWidth(){
-    alert("indexSelected:" + this.getWidthSelectedIndex());
+  //  alert("indexSelected:" + this.getWidthSelectedIndex());
   // alert(this.getWidthSelected() + this.getWidthSelectedIndex());
     // this.searchDataWidthSelected(this.getWidthSelected(), this.getWidthSelectedIndex());
       // this.updatePriceWidth(this.getWidthSelectedIndex());
