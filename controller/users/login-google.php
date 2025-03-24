@@ -102,7 +102,12 @@ class ApiHandlerLoginGoogle
                     exit;
                   }
 
+                  echo json_encode(array(
+                      "google_login" => true,
+                      "info" => "ejemplo1"
+                  ));
 
+                  exit;
                 // Check if the 'code' parameter exists in the query string
                 if (isset($queryParams['code'])) {
 
@@ -114,12 +119,7 @@ class ApiHandlerLoginGoogle
                       if (isset($token['error']) || !isset($token['access_token'])) {
                           throw new Exception("Error fetching access token: " . json_encode($token));
                       }
-                      echo json_encode(array(
-                          "google_login" => true,
-                          "info" => "ejemplo8"
-                      ));
 
-                      exit;
                       // Establecer el token de acceso en el cliente
                       $client->setAccessToken($token['access_token']);
 
