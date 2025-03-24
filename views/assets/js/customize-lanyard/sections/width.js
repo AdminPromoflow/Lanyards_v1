@@ -90,7 +90,7 @@ class Width {
     previewLanyardType.showSelectedPreviewtTemplate();
 
     //this.showSelectedWidth();
-    this.ejemplo();
+    this.ejemplo(index);
     this.refreshWidth();
     oneTwoEndsClass.refreshLanyardType();
     sidePrintedClass.refreshSidePrintedData()
@@ -99,8 +99,8 @@ class Width {
   //  artworkClass.changeWidthRightPanel();
 
   }
-  ejemplo(){
-    alert("buenas");
+  ejemplo(index){
+    alert(index);
   }
   updatePriceWidth(index) {
     alert(index);
