@@ -90,7 +90,7 @@ class Width {
     previewLanyardType.showSelectedPreviewtTemplate();
 
     //this.showSelectedWidth();
-    this.ejemplo(index);
+    this.updatePriceWidthIndividual(index);
     this.refreshWidth();
     oneTwoEndsClass.refreshLanyardType();
     sidePrintedClass.refreshSidePrintedData()
@@ -99,11 +99,8 @@ class Width {
   //  artworkClass.changeWidthRightPanel();
 
   }
-  ejemplo(index){
-    alert(index);
-  }
-  updatePriceWidth(index) {
-    alert(index);
+
+  updatePriceWidthIndividual(index) {
     const priceDataWidth = document.querySelectorAll(".priceDataWidth");
 
     for (var i = 0; i < priceDataWidth.length; i++) {
@@ -216,6 +213,7 @@ class Width {
     // this.searchDataWidthSelected(this.getWidthSelected(), this.getWidthSelectedIndex());
       // this.updatePriceWidth(this.getWidthSelectedIndex());
     chargingClass.hideShowchargin(true);
+    this.updatePriceWidthIndividual(this.getWidthSelectedIndex());
     this.updateWidth();
     this.updatePriceWidth();
     this.showSelectedWidth();
