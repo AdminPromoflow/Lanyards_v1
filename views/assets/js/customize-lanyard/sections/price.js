@@ -161,7 +161,7 @@ class Price {
      +  priceClass.getPriceSidePrinted() + priceClass.getPriceClip()
      + priceClass.getPriceAttachment() + priceClass.getPriceColour()
      + priceClass.getPriceAccessory();
-     var pricePerMaterial = priceClass.getPricePerMaterialWithAmount();
+     /*var pricePerMaterial = priceClass.getPricePerMaterialWithAmount();
       var priceLanyardType = priceClass.getPriceLanyardType();
       var priceWidth = priceClass.getPriceWidth();
       var priceSidePrinted = priceClass.getPriceSidePrinted();
@@ -183,7 +183,7 @@ class Price {
       "Adjunto: " + priceAttachment + "\n" +
       "Color: " + priceColour + "\n" +
       "Accesorio: " + priceAccessory + "\n" +
-      "\nTotal: " + totalPrice);
+      "\nTotal: " + totalPrice);*/
     // Update the inner HTML of pricePerLanyard element to display the price with currency symbol.
     pricePerLanyard.innerHTML = "£" + totalPrice.toFixed(2);
   }
