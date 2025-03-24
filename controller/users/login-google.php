@@ -101,16 +101,16 @@ class ApiHandlerLoginGoogle
                     echo json_encode(array( "google_login" => false));
                     exit;
                   }
-                  echo json_encode(array(
-                      "google_login" => true,
-                      "info" => "ejemplo5"
-                  ));
 
-                  exit;
 
                 // Check if the 'code' parameter exists in the query string
                 if (isset($queryParams['code'])) {
+                  echo json_encode(array(
+                      "google_login" => true,
+                      "info" => "ejemplo6"
+                  ));
 
+                  exit;
                   try {
                       // Obtener el token de acceso usando el código de autorización
                       $token = $client->fetchAccessTokenWithAuthCode($queryParams['code']);
