@@ -257,12 +257,18 @@ class CustomizeLanyard {
 
      if (artworkManualClass.getArtworkManual() == "manual"){
        //this.openText();
-       if (!menuClass.getActiveSession()) {
-         this.openProvidedInformation();
-       }
-       else {
-         //this.setCurrentSectionOpen(13);
-         this.openProvidedInformation();
+       if (menuClass.getActiveSession() && this.actionNextOrPrevious == "next") {
+        this.setCurrentSectionOpen(14);
+        this.openProvidedInformation();
+
+      }
+
+
+
+       else if (menuClass.getActiveSession() && this.actionNextOrPrevious == "preview") {
+         //alert("entramos a preview");
+        this.setCurrentSectionOpen(12);
+        this.openArtworkFinal();
 
        }
   //  artworkManualClass.containerBoxesArtworkManual();
@@ -402,12 +408,7 @@ class CustomizeLanyard {
 
   openProvidedInformation(){
 
-    if (menuClass.getActiveSession() && this.actionNextOrPrevious == "next") {
-     this.setCurrentSectionOpen(14);}
-    else if (menuClass.getActiveSession() && this.actionNextOrPrevious == "preview") {
-      alert("entramos a preview");
-     this.setCurrentSectionOpen(12);
-    }
+
     classPreviewLogin.showLoginPreview("none");
     previewCheckout.showPreviewCheckout("none");
     previewProvidedInformation.showProvidedInformationPreview('flex');
