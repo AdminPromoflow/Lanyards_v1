@@ -2,7 +2,7 @@ class PreviewProvidedInformation {
   constructor() {
   }
   showProvidedInformationPreview(action){
-    alert( "hello" );
+    alert( action );
     const previewProvidedInformationContainer = document.getElementById("preview-provided-information-container");
 
 

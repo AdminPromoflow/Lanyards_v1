@@ -405,6 +405,7 @@ class CustomizeLanyard {
     if (menuClass.getActiveSession() && this.actionNextOrPrevious == "next") {
      this.setCurrentSectionOpen(14);}
     else if (menuClass.getActiveSession() && this.actionNextOrPrevious == "preview") {
+      alert("entramos a preview");
      this.setCurrentSectionOpen(12);
     }
     classPreviewLogin.showLoginPreview("none");
