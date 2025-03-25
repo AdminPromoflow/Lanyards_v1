@@ -247,7 +247,7 @@ class CustomizeLanyard {
   //  artworkManualClass.containerBoxesArtworkManual();
     }
     else {
-      //alert("Seleccionaste Artwork")
+      this.openLogin();
     }
    }
    else if (this.currentSectionOpen == 14) {
@@ -258,7 +258,7 @@ class CustomizeLanyard {
   //  artworkManualClass.containerBoxesArtworkManual();
     }
     else {
-      //alert("Seleccionaste Artwork")
+      this.openProvidedInformation();
     }
    }
    else if (this.currentSectionOpen == 15) {
@@ -269,7 +269,7 @@ class CustomizeLanyard {
   //  artworkManualClass.containerBoxesArtworkManual();
     }
     else {
-      //alert("Seleccionaste Artwork")
+      this.openCheckout();
     }
    }
   }
