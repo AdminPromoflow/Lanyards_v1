@@ -189,6 +189,7 @@ class CustomizeLanyard {
    }
 
    else if (this.currentSectionOpen == 9) {
+     alert(artworkManualClass.getArtworkManual());
      if (artworkManualClass.getArtworkManual() == "manual"){
        this.openBackgroundColour();
     }
