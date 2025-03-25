@@ -240,7 +240,7 @@ class CustomizeLanyard {
         this.openArtWorkManual();
       }
       else if (!menuClass.getActiveSession() && this.actionNextOrPrevious == "preview") {
-        this.setCurrentSectionOpen(9);
+        this.setCurrentSectionOpen(16);
         this.openArtwork();
       }
     }
@@ -397,7 +397,6 @@ class CustomizeLanyard {
   }
 
   openArtwork(){
-alert(this.currentSectionOpen);
 
     artworkClass.showHideArtwork(true);
     artworkPreviewClass.showHidePreviewArtwork(true);
