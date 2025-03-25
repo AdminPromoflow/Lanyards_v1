@@ -2,9 +2,10 @@ class PreviewProvidedInformation {
   constructor() {
   }
   showProvidedInformationPreview(action){
+    alert( "hello" );
     const previewProvidedInformationContainer = document.getElementById("preview-provided-information-container");
 
-     
+
     previewProvidedInformationContainer.style.display = action;
   }
 }

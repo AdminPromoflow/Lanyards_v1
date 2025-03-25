@@ -241,7 +241,7 @@ class CustomizeLanyard {
   //  artworkManualClass.containerBoxesArtworkManual();
     }
     else {
-      //alert("Seleccionaste Artwork")
+      this.openArtworkFinal();
     }
    }
    else if (this.currentSectionOpen == 13) {
