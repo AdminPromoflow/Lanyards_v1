@@ -397,7 +397,7 @@ class CustomizeLanyard {
   }
 
   openArtwork(){
-
+alert(this.currentSectionOpen);
 
     artworkClass.showHideArtwork(true);
     artworkPreviewClass.showHidePreviewArtwork(true);
