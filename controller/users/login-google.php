@@ -114,12 +114,7 @@ class ApiHandlerLoginGoogle
                       if (isset($token['error']) || !isset($token['access_token'])) {
                           throw new Exception("Error fetching access token: " . json_encode($token));
                       }
-                      echo json_encode(array(
-                          "google_login" => true,
-                          "info" => "ejemplo9"
-                      ));
 
-                      exit;
                       // Establecer el token de acceso en el cliente
                       $client->setAccessToken($token['access_token']);
 
@@ -128,6 +123,13 @@ class ApiHandlerLoginGoogle
                       $google_account_info = $google_oauth->userinfo->get();
                       $email = $google_account_info->email;
                       $name = $google_account_info->name;
+
+                      echo json_encode(array(
+                          "google_login" => true,
+                          "info" => "ejemplo10"
+                      ));
+
+                      exit;
 
                 //      $_SESSION['logging_with_google'] = false;
                       // Enviar respuesta exitosa con los datos del usuario
