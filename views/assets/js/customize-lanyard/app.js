@@ -188,7 +188,7 @@ class CustomizeLanyard {
        this.openBackgroundColour();
     }
     else {
-      this.setCurrentSectionOpen(17);
+      this.setCurrentSectionOpen(16);
         this.openArtwork();
     }
    }
