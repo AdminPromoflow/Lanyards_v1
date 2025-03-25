@@ -112,16 +112,16 @@ class CustomizeLanyard {
   handlePreviewClick() {
     if (this.currentSectionOpen > 0) {
       this.currentSectionOpen--;
+      this.actionNextOrPrevious = "preview";
       this.changePreviewNextSection();
-        this.actionNextOrPrevious = "preview";
 
     }
   }
 
   handleNextClick() {
     this.currentSectionOpen++;
+    this.actionNextOrPrevious = "next";
     this.changePreviewNextSection();
-      this.actionNextOrPrevious = "next";
 
   }
 
