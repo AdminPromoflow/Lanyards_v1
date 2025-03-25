@@ -261,6 +261,10 @@ class CustomizeLanyard {
       this.setCurrentSectionOpen(12);
       this.openArtworkFinal();
      }
+     else if (!menuClass.getActiveSession() && this.actionNextOrPrevious == "preview") {
+       this.setCurrentSectionOpen(9);
+       this.openArtwork();
+     }
      else {
        this.setCurrentSectionOpen(14);
        this.openProvidedInformation();
