@@ -353,17 +353,13 @@ class CustomizeLanyard {
   }
 
   openArtwork(){
-    if (typeof artworkClass !== "undefined") {
-        alert("La clase artworkClass existe.");
-    } else {
-        alert("La clase artworkClass NO existe.");
-    }
 
-    //artworkClass.showHideArtwork(true);
-    /*artworkPreviewClass.showHidePreviewArtwork(true);
+
+    artworkClass.showHideArtwork(true);
+    artworkPreviewClass.showHidePreviewArtwork(true);
     previewLanyardType.showTypeLanyardPreview("none");
     previewArtworkManualClass.showArtworkManualPreview("none");
-    this.showCurrentSection(this.currentSectionOpen);*/
+    this.showCurrentSection(this.currentSectionOpen);
     // alert("hola2");
   }
 
