@@ -234,7 +234,7 @@ class CustomizeLanyard {
   //  artworkManualClass.containerBoxesArtworkManual();
     }
     else {
-      if (menuClass.getActiveSession() && this.actionNextOrPrevious == "preview") {
+      if (this.actionNextOrPrevious == "preview") {
         this.setCurrentSectionOpen(8);
         this.openArtWorkManual();
       }
