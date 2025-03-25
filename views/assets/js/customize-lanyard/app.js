@@ -244,7 +244,6 @@ class CustomizeLanyard {
        this.openLogin();
      }
      else {
-       this.setCurrentSectionOpen(14);
        this.openProvidedInformation();
 
      }
@@ -402,6 +401,8 @@ class CustomizeLanyard {
     previewLanyardType.showTypeLanyardPreview("none");
     this.showCurrentSection(this.currentSectionOpen);
     this.showNext(true);
+    if (!menuClass.getActiveSession()) {
+    this.setCurrentSectionOpen(14);}
   }
   openCheckout(){
     this.showNext(false);
