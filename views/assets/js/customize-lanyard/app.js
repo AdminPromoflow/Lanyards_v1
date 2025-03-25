@@ -292,7 +292,6 @@ class CustomizeLanyard {
       this.openCheckout();
     }
    }
-   alert(this.currentSectionOpen);
   }
 
   // Métodos adicionales según sea necesario
