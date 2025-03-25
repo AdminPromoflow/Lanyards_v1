@@ -240,7 +240,7 @@ class CustomizeLanyard {
     }
    }
    else if (this.currentSectionOpen == 13) {
-     if (menuClass.getActiveSession()) {
+     if (!menuClass.getActiveSession()) {
        this.openLogin();
      }
      else {
