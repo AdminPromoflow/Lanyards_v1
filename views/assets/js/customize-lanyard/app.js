@@ -261,7 +261,7 @@ class CustomizeLanyard {
        if (menuClass.getActiveSession() && this.actionNextOrPrevious == "next") {
         this.setCurrentSectionOpen(14);
         this.openProvidedInformation();
-
+        alert("next");
       }
 
 
@@ -270,6 +270,7 @@ class CustomizeLanyard {
          //alert("entramos a preview");
         this.setCurrentSectionOpen(12);
         this.openArtworkFinal();
+        alert("preview");
 
        }
   //  artworkManualClass.containerBoxesArtworkManual();
