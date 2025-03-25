@@ -60,7 +60,6 @@ class Artwork {
 
   }
   showHideArtwork(active){
-    alert("Artwork.js 63")
     if (active) {
       artworkPHPClass.style.display = "flex";
       sidePrintedClass.getSidePrintedSelected();
