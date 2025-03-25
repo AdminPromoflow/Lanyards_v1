@@ -124,12 +124,6 @@ class ApiHandlerLoginGoogle
                       $email = $google_account_info->email;
                       $name = $google_account_info->name;
 
-                      echo json_encode(array(
-                          "google_login" => true,
-                          "info" => "ejemplo10"
-                      ));
-
-                      exit;
 
                 //      $_SESSION['logging_with_google'] = false;
                       // Enviar respuesta exitosa con los datos del usuario
