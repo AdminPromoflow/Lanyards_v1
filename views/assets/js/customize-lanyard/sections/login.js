@@ -17,7 +17,7 @@ class Classlogin2 {
       if (this.validateEmail() && this.validatePassword()) {
         const url = "../../controller/users/login.php"; // API endpoint for login
         const data = {
-          action: "login",
+          action: "login", 
           emailLogin: login2Email.value,
           passwordLogin: login2Password.value
         };

@@ -223,7 +223,7 @@ class CustomizeLanyard {
   //  artworkManualClass.containerBoxesArtworkManual();
     }
     else {
-      this.openLogin();
+      //this.openLogin();
 
     }
    }
@@ -241,15 +241,9 @@ class CustomizeLanyard {
    }
    else if (this.currentSectionOpen == 13) {
 
-     if (artworkManualClass.getArtworkManual() == "manual"){
-       //this.openText();
-    this.openLogin();
-  //  artworkManualClass.containerBoxesArtworkManual();
-    }
-    else {
+
       this.openLogin();
     }
-   }
    else if (this.currentSectionOpen == 14) {
 
      if (artworkManualClass.getArtworkManual() == "manual"){

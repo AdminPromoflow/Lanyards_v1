@@ -16,7 +16,7 @@ class Menu {
       container_logout.style.display = 'none';
       var scrollTop = dadCustomizeLanyard.scrollTop;
       if (scrollTop > seventyVH) {
-        menu.style.display = "none";
+        menu.style.display = "none"; 
       }
       else {
         menu.style.display = "flex";
