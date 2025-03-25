@@ -387,6 +387,7 @@ class CustomizeLanyard {
     artworkPreviewClass.showHidePreviewArtwork(false);
     previewLanyardType.showTypeLanyardPreview("flex");
     classPreviewLogin.showLoginPreview("none");
+    previewProvidedInformation.showProvidedInformationPreview('none');
     this.showCurrentSection(this.currentSectionOpen);
     classRegister.openRegister(false);
   }
