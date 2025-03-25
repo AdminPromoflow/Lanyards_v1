@@ -139,10 +139,10 @@ class Login {
 
           // Muestra la respuesta si es un JSON válido
           if (data.google_login) {
-            alert(data.google_login + "hii");  // Puedes mostrar la respuesta en consola para verificarla
+          //  alert(data.google_login + "hii");  // Puedes mostrar la respuesta en consola para verificarla
 
               // Si 'google_login' es verdadero, maneja el inicio de sesión exitoso
-              menuClass.setActiveSession(data.message);
+              menuClass.setActiveSession(data.google_login);
               menuClass.loginOrLogout();
           } else {
               // Si no es exitoso, puedes manejar el error de inicio de sesión aquí
