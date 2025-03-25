@@ -3,6 +3,7 @@ class CustomizeLanyard {
     this.jsonLanyards = "";
     this.noColours = "one-colour";
     this.currentSectionOpen = 0;
+    this.actionNextOrPrevious = "";
 
     // Suponiendo que closeCustomizeLanyard, preview y next están definidos en el contexto global
     this.initializeEventListeners();
@@ -112,12 +113,16 @@ class CustomizeLanyard {
     if (this.currentSectionOpen > 0) {
       this.currentSectionOpen--;
       this.changePreviewNextSection();
+        this.actionNextOrPrevious = "preview";
+
     }
   }
 
   handleNextClick() {
     this.currentSectionOpen++;
     this.changePreviewNextSection();
+      this.actionNextOrPrevious = "next";
+
   }
 
   getCurrentSectionOpen() {
@@ -395,14 +400,18 @@ class CustomizeLanyard {
   }
 
   openProvidedInformation(){
+
+    if (menuClass.getActiveSession() && this.actionNextOrPrevious = "next") {
+     this.setCurrentSectionOpen(14);}
+    else if (menuClass.getActiveSession() && this.actionNextOrPrevious = "preview") {
+     this.setCurrentSectionOpen(12);
+    }
     classPreviewLogin.showLoginPreview("none");
     previewCheckout.showPreviewCheckout("none");
     previewProvidedInformation.showProvidedInformationPreview('flex');
     previewLanyardType.showTypeLanyardPreview("none");
     this.showCurrentSection(this.currentSectionOpen);
     this.showNext(true);
-    if (!menuClass.getActiveSession()) {
-    this.setCurrentSectionOpen(14);}
   }
   openCheckout(){
     this.showNext(false);
