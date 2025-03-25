@@ -263,28 +263,22 @@ class CustomizeLanyard {
     }
    else if (this.currentSectionOpen == 14) {
 
-     if (artworkManualClass.getArtworkManual() == "manual"){
        //this.openText();
        if (menuClass.getActiveSession() && this.actionNextOrPrevious == "next") {
         this.setCurrentSectionOpen(14);
         this.openProvidedInformation();
-        alert("next");
       }
 
-
-
        else if (menuClass.getActiveSession() && this.actionNextOrPrevious == "preview") {
+         this.openProvidedInformation();
          //alert("entramos a preview");
-        this.setCurrentSectionOpen(12);
-        this.openArtworkFinal();
-        alert("preview");
+        //this.setCurrentSectionOpen(12);
+        //this.openArtworkFinal();
+        //alert("preview");
 
        }
   //  artworkManualClass.containerBoxesArtworkManual();
-    }
-    else {
-      this.openProvidedInformation();
-    }
+
    }
    else if (this.currentSectionOpen == 15) {
 
