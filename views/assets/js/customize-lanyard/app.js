@@ -401,9 +401,9 @@ class CustomizeLanyard {
 
   openProvidedInformation(){
 
-    if (menuClass.getActiveSession() && this.actionNextOrPrevious = "next") {
+    if (menuClass.getActiveSession() && this.actionNextOrPrevious == "next") {
      this.setCurrentSectionOpen(14);}
-    else if (menuClass.getActiveSession() && this.actionNextOrPrevious = "preview") {
+    else if (menuClass.getActiveSession() && this.actionNextOrPrevious == "preview") {
      this.setCurrentSectionOpen(12);
     }
     classPreviewLogin.showLoginPreview("none");
