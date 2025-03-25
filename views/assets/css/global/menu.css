@@ -94,6 +94,8 @@
   display: none;
 }
 .container_logout h3{
+  position: relative;
+  width: 100%;
   text-align: center;
   color: white;
   font-weight: 300;
