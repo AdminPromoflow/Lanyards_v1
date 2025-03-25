@@ -252,8 +252,6 @@ class CustomizeLanyard {
        //alert("entramos a preview");
       this.setCurrentSectionOpen(12);
       this.openArtworkFinal();
-      alert("preview hola");
-
      }
      else {
        this.setCurrentSectionOpen(14);
@@ -291,7 +289,6 @@ class CustomizeLanyard {
       this.openCheckout();
     }
    }
-   alert(this.currentSectionOpen);
   }
 
   // Métodos adicionales según sea necesario
