@@ -16,7 +16,7 @@ class Menu {
       container_logout.style.display = 'none';
       var scrollTop = dadCustomizeLanyard.scrollTop;
       if (scrollTop > seventyVH) {
-        menu.style.display = "none"; 
+        menu.style.display = "none";
       }
       else {
         menu.style.display = "flex";
@@ -113,6 +113,7 @@ class Menu {
         return response.json(); // Parse the response as JSON
       })
       .then(parsedData => {
+        alert(JSON.stringify(parsedData));
         // Validate if the response contains the expected 'message' key
         if (typeof parsedData.message === "undefined") {
           throw new Error("Invalid response format: 'message' key missing.");
