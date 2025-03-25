@@ -304,7 +304,10 @@ class CustomizeLanyard {
   //  artworkManualClass.containerBoxesArtworkManual();
     }
     else {
-      this.openCheckout();
+      if (!menuClass.getActiveSession() && this.actionNextOrPrevious == "preview") {
+        this.setCurrentSectionOpen(8);
+        this.openArtwork();
+      }
     }
    }
    alert(this.currentSectionOpen);
