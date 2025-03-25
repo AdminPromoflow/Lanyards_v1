@@ -238,7 +238,7 @@ class CustomizeLanyard {
         this.setCurrentSectionOpen(8);
         this.openArtWorkManual();
       }
-      if (!menuClass.getActiveSession() && this.actionNextOrPrevious == "preview") {
+      else if (!menuClass.getActiveSession() && this.actionNextOrPrevious == "preview") {
         this.setCurrentSectionOpen(9);
         this.openArtwork();
       }
