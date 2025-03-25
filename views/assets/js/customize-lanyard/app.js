@@ -278,6 +278,11 @@ class CustomizeLanyard {
         //alert("preview");
 
        }
+       else if (!menuClass.getActiveSession() && this.actionNextOrPrevious == "next") {
+         this.setCurrentSectionOpen(14);
+         this.openProvidedInformation();
+       }
+
   //  artworkManualClass.containerBoxesArtworkManual();
 
    }
