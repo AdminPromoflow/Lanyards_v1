@@ -248,6 +248,13 @@ class CustomizeLanyard {
      if (!menuClass.getActiveSession()) {
        this.openLogin();
      }
+     else if (menuClass.getActiveSession() && this.actionNextOrPrevious == "preview") {
+       //alert("entramos a preview");
+      this.setCurrentSectionOpen(12);
+      this.openArtworkFinal();
+      alert("preview hola");
+
+     }
      else {
        this.setCurrentSectionOpen(14);
        this.openProvidedInformation();
