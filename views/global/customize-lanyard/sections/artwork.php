@@ -1,4 +1,19 @@
-<link rel="stylesheet" href="../../views/assets/css/global/customize-lanyard/sections/artwork.css">
+<?php
+// Ruta de los archivos
+$artworkCssPath = "../../views/assets/css/global/customize-lanyard/sections/artwork.css";
+$artworkJsPath = "../../views/assets/js/customize-lanyard/sections/artwork.js";
+
+// Función para obtener la fecha de modificación de un archivo
+function getArtworkFileTime($artworkFile) {
+    return file_exists($artworkFile) ? filemtime($artworkFile) : false;
+}
+
+// Obtener timestamps
+$artworkCssTime = getArtworkFileTime($artworkCssPath);
+$artworkJsTime = getArtworkFileTime($artworkJsPath);
+?>
+
+<link rel="stylesheet" href="<?php echo $artworkCssPath . '?v=' . $artworkCssTime; ?>">
 <section class=" artworkSection section" id="artworkPHPClass">
   <h2 class="name-section-customize-lanyard">Artwork</h2>
   <br>
@@ -166,4 +181,4 @@
   </div>
 
 </section>
-<script src="../../views/assets/js/customize-lanyard/sections/artwork.js" type="text/javascript"></script>
+<script src="<?php echo $artworkJsPath . '?v=' . $artworkJsTime; ?>" type="text/javascript"></script>
