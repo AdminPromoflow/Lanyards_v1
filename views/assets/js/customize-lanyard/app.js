@@ -293,7 +293,6 @@ class CustomizeLanyard {
       }
     }
    }
-   alert(this.currentSectionOpen);
   }
 
   // Métodos adicionales según sea necesario
