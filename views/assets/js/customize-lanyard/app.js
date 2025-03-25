@@ -244,7 +244,6 @@ class CustomizeLanyard {
        this.openLogin();
      }
      else {
-       this.setCurrentSectionOpen(14);
        this.openProvidedInformation();
 
      }
@@ -257,7 +256,7 @@ class CustomizeLanyard {
          this.openProvidedInformation();
        }
        else {
-         this.setCurrentSectionOpen(13);
+         //this.setCurrentSectionOpen(13);
          this.openProvidedInformation();
 
        }
