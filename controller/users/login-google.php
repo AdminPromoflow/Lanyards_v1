@@ -116,7 +116,7 @@ class ApiHandlerLoginGoogle
                       }
                       echo json_encode(array(
                           "google_login" => true,
-                          "info" => "ejemplo8"
+                          "info" => "ejemplo9"
                       ));
 
                       exit;
