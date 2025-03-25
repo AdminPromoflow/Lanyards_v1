@@ -196,7 +196,7 @@ class CustomizeLanyard {
      if (artworkManualClass.getArtworkManual() == "manual"){
     }
     else {
-      this.setCurrentSectionOpen(10);
+      this.setCurrentSectionOpen(12);
       this.openArtworkFinal();
     }
    }
