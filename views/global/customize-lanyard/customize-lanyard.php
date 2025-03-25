@@ -66,6 +66,7 @@ $customize_lanyard_js = "../../views/assets/js/customize-lanyard/app.js";
       <?php include "../../views/global/customize-lanyard/sections/login.php"; ?>
       <?php include "../../views/global/customize-lanyard/sections/provided_information.php"; ?>
       <?php include "../../views/global/customize-lanyard/sections/checkout.php"; ?>
+      <?php include "../../views/global/customize-lanyard/sections/artwork.php" ?>
 
       <div class="container_buttons_next_preview">
         <button id="preview" type="button">Preview</button>
