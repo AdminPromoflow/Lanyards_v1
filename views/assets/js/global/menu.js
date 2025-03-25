@@ -119,7 +119,7 @@ class Menu {
         }
 
         // Update the active session and handle login/logout logic
-        this.setActiveSession(parsedData.message);
+        loginClass.setActiveSession(parsedData.message);
         this.loginOrLogout();
       })
       .catch(error => {
@@ -132,7 +132,7 @@ class Menu {
 
   loginOrLogout() {
     // Assume that this.getActiveSession() returns true (active session) or false (no session)
-    const activeSession = this.getActiveSession();
+    const activeSession = loginClass.getActiveSession();
 
     // Ensure openLogin and openLogoutClass are defined
     if (!openLogin || !openLogoutClass) {
@@ -149,15 +149,6 @@ class Menu {
       element.style.display = activeSession ? 'flex' : 'none'; // Show or hide logout buttons
     });
   }
-
-
-  getActiveSession() {
-        return this.activeSession;
-    }
-
-  setActiveSession(activeSession) {
-        this.activeSession = activeSession;
-    }
 
     processUserLogout() {
       // Prepare the URL and data to process the logout action

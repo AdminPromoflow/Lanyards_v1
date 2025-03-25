@@ -143,6 +143,7 @@ class Login {
 
               // Si 'google_login' es verdadero, maneja el inicio de sesión exitoso
               menuClass.setActiveSession(data.google_login);
+
               menuClass.loginOrLogout();
           } else {
               // Si no es exitoso, puedes manejar el error de inicio de sesión aquí
@@ -154,7 +155,13 @@ class Login {
       });
   }
 
+  getActiveSession() {
+        return this.activeSession;
+    }
 
+  setActiveSession(activeSession) {
+        this.activeSession = activeSession;
+    }
 
   // Function to make the AJAX request
   makeAjaxRequestLogin() {
