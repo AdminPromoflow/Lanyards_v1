@@ -240,9 +240,14 @@ class CustomizeLanyard {
     }
    }
    else if (this.currentSectionOpen == 13) {
+     if (menuClass.getActiveSession()) {
+       this.openLogin();
+     }
+     else {
+       this.setCurrentSectionOpen(14);
+       this.openProvidedInformation();
 
-
-      this.openLogin();
+     }
     }
    else if (this.currentSectionOpen == 14) {
 

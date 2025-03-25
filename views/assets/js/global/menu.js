@@ -113,7 +113,7 @@ class Menu {
         return response.json(); // Parse the response as JSON
       })
       .then(parsedData => {
-        alert(JSON.stringify(parsedData));
+        //alert(JSON.stringify(parsedData));
         // Validate if the response contains the expected 'message' key
         if (typeof parsedData.message === "undefined") {
           throw new Error("Invalid response format: 'message' key missing.");
