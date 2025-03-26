@@ -8,13 +8,13 @@ class ApiHandlerRegisterGoogle
             // Check if "action" exists in the query parameters
             if (isset($_GET['action'])) {
                 $action = $_GET['action'];
-                header('Content-Type: application/json');
-                echo json_encode(array("message" => true, "google_register" => true));
-                exit;
+                //header('Content-Type: application/json');
+                //echo json_encode(array("message" => true, "google_register" => true));
+                //exit;
 
                 // Perform actions based on the request
                 switch ($action) {
-                    case "RegisterGoogle":
+                    case "registerGoogle":
                         $this->handleRegisterGoogle();
                         break;
                     case "validationRegisterGoogle":
