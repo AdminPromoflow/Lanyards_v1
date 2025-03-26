@@ -92,7 +92,7 @@ class ApiHandlerRegister {
             }
             else {
               if (session_status() != PHP_SESSION_NONE) {
-                  session_destroy();
+                  session_unset();
               }
               echo json_encode(["message" => "0"]);
             }
