@@ -175,6 +175,9 @@ class ApiHandlerLoginGoogle
       //$data->signupCategory = "normal";
       // Crear una instancia de ApiHandlerRegister
         $apiHandlerEx = new ApiHandlerRegister();
+        header('Content-Type: application/json');
+        echo json_encode(array("mensaje" => "Acabamos, descansito3"));
+
       //  $apiHandlerEx->ejemplo();
       }
       else {
