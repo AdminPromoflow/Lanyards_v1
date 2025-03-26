@@ -212,7 +212,8 @@ class Register {
           return response.text(); // You can use .json() if expecting a JSON response
       })
       .then(data => {
-        window.location.href = data;
+        alert(JSON.stringify(data));
+        //window.location.href = data;
         //  alert("The registration has been successful. Now you can log in."); // Display the data from the response
           // Optionally, redirect based on the data received
         //  location.reload();
