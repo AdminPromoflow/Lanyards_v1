@@ -136,7 +136,7 @@ class Login {
           return response.json(); // Analiza la respuesta como JSON
       })
       .then(data => {
-        alert(JSON.stringify(data));
+        //alert(JSON.stringify(data));
 
           // Muestra la respuesta si es un JSON válido
           if (data.google_login) {
@@ -154,7 +154,6 @@ class Login {
           }
            else {
               // Si no es exitoso, puedes manejar el error de inicio de sesión aquí
-              alert("entramos en un lugar raro");
           }
       })
       .catch(error => {
