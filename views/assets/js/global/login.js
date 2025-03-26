@@ -158,8 +158,10 @@ class Login {
           }
 
            else {
-             menuClass.setActiveSession(data.google_login);
-             menuClass.loginOrLogout();          }
+             //menuClass.setActiveSession(data.google_login);
+            // menuClass.loginOrLogout();
+
+           }
       })
       .catch(error => {
         //  alert("Error: " + error.message); // Maneja errores de red o análisis
