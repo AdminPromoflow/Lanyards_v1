@@ -140,7 +140,7 @@ class Login {
 
           // Muestra la respuesta si es un JSON válido
            if (typeof data.message !== "undefined" && data.message == "0" && data.google_login ) {
-            menuClass.setActiveSession(true);
+            menuClass.setActiveSession(data.google_login);
             menuClass.loginOrLogout();
             alert("The login was successful!");  // Puedes mostrar la respuesta en consola para verificarla
           }
