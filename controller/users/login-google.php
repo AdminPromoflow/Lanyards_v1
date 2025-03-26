@@ -178,7 +178,7 @@ class ApiHandlerLoginGoogle
         header('Content-Type: application/json');
         echo json_encode(array("mensaje" => "Acabamos, descansito3"));
 
-      //  $apiHandlerEx->ejemplo();
+        $apiHandlerEx->ejemplo();
       }
       else {
         header('Content-Type: application/json');
