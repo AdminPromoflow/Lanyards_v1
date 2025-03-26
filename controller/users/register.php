@@ -43,9 +43,14 @@ class ApiHandlerRegister {
             echo json_encode(array("message" => "Method not allowed"));
         }
     }
-
+    public ejemplo(){
+      header('Content-Type: application/json');
+      echo json_encode(array("mensaje" => "Acabamos, descansito"));
+      session_destroy();
+      exit;
+    }
     // Function to handle user registration
-    private function handleRegistration($data) {
+    public function handleRegistration($data) {
 
         try {
 
@@ -91,6 +96,7 @@ class ApiHandlerRegister {
             echo json_encode(["message" => "-1", "error" => $e->getMessage()]);
         }
     }
+
 
 
 }

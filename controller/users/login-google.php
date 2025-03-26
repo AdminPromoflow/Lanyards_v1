@@ -164,16 +164,25 @@ class ApiHandlerLoginGoogle
         }
       }
     elseif (isset($_SESSION['registering_with_google']) && $_SESSION['registering_with_google'] === true) {
-        header('Content-Type: application/json');
-        echo json_encode(array("mensaje" => "acabamos de entrar a register con google"));
-        session_destroy();
-        exit;
+      //  header('Content-Type: application/json');
+        //echo json_encode(array("mensaje" => "acabamos de entrar a register con google"));
+      //  session_destroy();
+      //  exit;
+      //$data = new stdClass();
+      //$data->action = "register";
+    //  $data->nameRegister = "Juan";
+    //  $data->emailRegister = "juan@example.com";
+    //  $data->passwordRegister = "123456";
+      //$data->signupCategory = "normal";
+      $apiHandler = new ApiHandlerRegister();
+      $apiHandler->ejemplo();
       }
       else {
         header('Content-Type: application/json');
         echo json_encode(array("google_login" => false));
         exit;
       }
+
     }
   /*private function validateGoogleLogin() {
     // Google OAuth initial configuration
