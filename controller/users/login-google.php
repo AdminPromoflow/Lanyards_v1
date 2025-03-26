@@ -174,8 +174,9 @@ class ApiHandlerLoginGoogle
     //  $data->emailRegister = "juan@example.com";
     //  $data->passwordRegister = "123456";
       //$data->signupCategory = "normal";
-      $apiHandler = new ApiHandlerRegister();
-      $apiHandler->ejemplo();
+      // Crear una instancia de ApiHandlerRegister
+        $apiHandler = new ApiHandlerRegister();
+        $apiHandler->ejemplo();
       }
       else {
         header('Content-Type: application/json');
