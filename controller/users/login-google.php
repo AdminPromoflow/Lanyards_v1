@@ -65,6 +65,7 @@ class ApiHandlerLoginGoogle
       if (session_status() === PHP_SESSION_NONE) {
           session_start();
       }
+      if (isset($_SESSION['logging_with_google']) && $_SESSION['logging_with_google'] === true) {
 
 
         // Configuración inicial de Google OAuth
@@ -80,7 +81,6 @@ class ApiHandlerLoginGoogle
         $client->addScope("email");
         $client->addScope("profile");
 
-        if (isset($_SESSION['logging_with_google']) && $_SESSION['logging_with_google'] === true) {
 
 
         // Check if the HTTP_REFERER is set in the server variables

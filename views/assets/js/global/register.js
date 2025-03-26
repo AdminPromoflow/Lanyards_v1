@@ -222,6 +222,7 @@ class Register {
           console.error("Error:", error); // Log any errors to the console
       });
   }
+  
 }
 // Get DOM elements for the register
 const openRegisterFromLogin = document.getElementById("openRegisterFromLogin");
