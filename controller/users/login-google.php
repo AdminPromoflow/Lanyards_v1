@@ -166,7 +166,6 @@ class ApiHandlerLoginGoogle
     elseif (isset($_SESSION['registering_with_google']) && $_SESSION['registering_with_google'] === true) {
 
 
-
               // Configuración inicial de Google OAuth
               $clientID = '1022332881668-587bktseqso57k6m2dmpfao53vasg83b.apps.googleusercontent.com';
               $clientSecret = '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';
@@ -227,14 +226,48 @@ class ApiHandlerLoginGoogle
                             $_SESSION['name'] = $name;
 
 
+
                             $data = new stdClass();
                             $data->nameRegister = $_SESSION['name'];
                             $data->emailRegister = $_SESSION['email'];
                             $data->passwordRegister = "zQ8@r*W9vJp2#bL!";
                             $data->signupCategory = "google";
                             // Crear una instancia de ApiHandlerRegister
-                            $apiHandlerEx = new ApiHandlerRegister();
-                            $apiHandlerEx->handleRegistration($data);
+                              $apiHandlerEx = new ApiHandlerRegister();
+                              $apiHandlerEx->handleRegistration($data);
+
+                        } catch (Exception $e) {
+                            // Enviar respuesta de error con detalles
+                            header('Content-Type: application/json');
+                            echo json_encode([
+                                "google_login" => false,
+                                "error" => $e->getMessage()
+                            ]);
+                            exit;
+                        }
+
+                      }
+                  }
+                  else {
+                    header('Content-Type: application/json');
+                    echo json_encode(array("google_login" => false));
+                    exit;
+                  }
+              }
+              else {
+                header('Content-Type: application/json');
+                echo json_encode(array("google_login" => false));
+                exit;
+              }
+
+
+
+
+
+
+
+
+
       }
       else {
         header('Content-Type: application/json');
