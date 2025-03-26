@@ -164,14 +164,77 @@ class ApiHandlerLoginGoogle
         }
       }
     elseif (isset($_SESSION['registering_with_google']) && $_SESSION['registering_with_google'] === true) {
-      $data = new stdClass();
-      $data->nameRegister = $_SESSION['name'];
-      $data->emailRegister = $_SESSION['email'];
-      $data->passwordRegister = "zQ8@r*W9vJp2#bL!";
-      $data->signupCategory = "google";
-      // Crear una instancia de ApiHandlerRegister
-        $apiHandlerEx = new ApiHandlerRegister();
-        $apiHandlerEx->handleRegistration($data);
+
+
+
+              // Configuración inicial de Google OAuth
+              $clientID = '1022332881668-587bktseqso57k6m2dmpfao53vasg83b.apps.googleusercontent.com';
+              $clientSecret = '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';
+              $redirectUri = 'https://lanyardsforyou.com/views/home/index.php';
+
+              // Crear cliente de Google
+              $client = new Google_Client();
+              $client->setClientId($clientID);
+              $client->setClientSecret($clientSecret);
+              $client->setRedirectUri($redirectUri);
+              $client->addScope("email");
+              $client->addScope("profile");
+
+
+
+              // Check if the HTTP_REFERER is set in the server variables
+              if (isset($_SERVER['HTTP_REFERER'])) {
+
+                  $refererUrl = $_SERVER['HTTP_REFERER'];
+
+                  // Parse the referer URL to get its components
+                  $urlComponents = parse_url($refererUrl);
+
+                  // Check if a query string exists in the URL components
+                  if (isset($urlComponents['query'])) {
+                      // Parse the query string into an associative array
+                      parse_str($urlComponents['query'], $queryParams);
+
+                        if (!isset($queryParams['code'])) {
+                          header('Content-Type: application/json');
+                          echo json_encode(array( "google_login" => false));
+                          exit;
+                        }
+
+
+                      // Check if the 'code' parameter exists in the query string
+                      if (isset($queryParams['code'])) {
+
+                        try {
+                            // Obtener el token de acceso usando el código de autorización
+                            $token = $client->fetchAccessTokenWithAuthCode($queryParams['code']);
+
+                            // Verificar si hubo un error en la respuesta
+                            if (isset($token['error']) || !isset($token['access_token'])) {
+                                throw new Exception("Error fetching access token: " . json_encode($token));
+                            }
+
+                            // Establecer el token de acceso en el cliente
+                            $client->setAccessToken($token['access_token']);
+
+                            // Obtener la información del usuario
+                            $google_oauth = new Google_Service_Oauth2($client);
+                            $google_account_info = $google_oauth->userinfo->get();
+                            $email = $google_account_info->email;
+                            $name = $google_account_info->name;
+
+                            $_SESSION['email'] = $email;
+                            $_SESSION['name'] = $name;
+
+
+                            $data = new stdClass();
+                            $data->nameRegister = $_SESSION['name'];
+                            $data->emailRegister = $_SESSION['email'];
+                            $data->passwordRegister = "zQ8@r*W9vJp2#bL!";
+                            $data->signupCategory = "google";
+                            // Crear una instancia de ApiHandlerRegister
+                            $apiHandlerEx = new ApiHandlerRegister();
+                            $apiHandlerEx->handleRegistration($data);
       }
       else {
         header('Content-Type: application/json');
