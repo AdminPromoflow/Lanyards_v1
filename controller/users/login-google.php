@@ -163,7 +163,7 @@ class ApiHandlerLoginGoogle
           exit;
         }
       }
-      if (isset($_SESSION['registering_with_google']) && $_SESSION['registering_with_google'] === true) {
+    elseif (isset($_SESSION['registering_with_google']) && $_SESSION['registering_with_google'] === true) {
         header('Content-Type: application/json');
         echo json_encode(array("mensaje" => "acabamos de entrar a register con google"));
         exit;
