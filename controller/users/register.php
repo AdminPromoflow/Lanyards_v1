@@ -64,7 +64,7 @@ class ApiHandlerRegister {
 
 
             if (!$validatedData) {
-                echo json_encode(["message" => "0"]); // Validation failed (user may exist)
+                echo json_encode(["message" => "0", "ha" => "acá pasa algo raro"]); // Validation failed (user may exist)
                 return;
             }
 
