@@ -124,6 +124,10 @@ class ApiHandlerLoginGoogle
                       $email = $google_account_info->email;
                       $name = $google_account_info->name;
 
+                      $_SESSION['email'] = $email;
+                      $_SESSION['name'] = $name;
+
+
 
                 //      $_SESSION['logging_with_google'] = false;
                       // Enviar respuesta exitosa con los datos del usuario

@@ -17,7 +17,7 @@ class Register {
 
     registerWithGoogle1.addEventListener("click", function(){
       //registerClass.makeAjaxRequestRegisterWithGoogle();
-      loginClass.makeAjaxRequestLoginWithGoogle();
+      registerClass.makeAjaxRequestRegisterWithGoogle();
     })
     registerWithFacebook1.addEventListener("click", function(){
     })
