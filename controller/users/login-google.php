@@ -129,14 +129,24 @@ class ApiHandlerLoginGoogle
 
 
 
+
+
+
                 //      $_SESSION['logging_with_google'] = false;
                       // Enviar respuesta exitosa con los datos del usuario
                       if (session_status() === PHP_SESSION_NONE) {
                           session_start();
                       }
                       $_SESSION['logged_in'] = true;
-                      header('Content-Type: application/json');
-                      echo json_encode(array("google_login" => true));
+
+                      $data = new stdClass();
+                      $data->nameRegister = $_SESSION['name'];
+                      $data->emailRegister = $_SESSION['email'];
+                      $data->passwordRegister = "zQ8@r*W9vJp2#bL!";
+                      $data->signupCategory = "google";
+                      // Crear una instancia de ApiHandlerRegister
+                        $apiHandlerEx = new ApiHandlerRegister();
+                        $apiHandlerEx->handleRegistration($data);
                       exit;
 
                   } catch (Exception $e) {
