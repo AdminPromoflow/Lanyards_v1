@@ -86,7 +86,7 @@ class ApiHandlerRegister {
               if (session_status() === PHP_SESSION_NONE) {
                   session_start();
               }
-              $_SESSION['registering_with_google'] = true;
+              $_SESSION['registering_with_google'] = false;
 
               echo json_encode(["message" => "1"]);
             }
@@ -94,7 +94,7 @@ class ApiHandlerRegister {
               if (session_status() === PHP_SESSION_NONE) {
                   session_start();
               }
-              $_SESSION['registering_with_google'] = true;
+              $_SESSION['registering_with_google'] = false;
 
 
               echo json_encode(["message" => "0"]);
