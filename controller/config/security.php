@@ -5,16 +5,23 @@ class Security {
 
         // Check if fields are not empty
         if (empty($username) || empty($email) || empty($password)) {
+          echo json_encode(["message" => "0", "ha" => "acá pasa algo muy raro 1"]); // Validation failed (user may exist)
+
             return false;
+
         }
 
         // Check email format
        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+         echo json_encode(["message" => "0", "ha" => "acá pasa algo muy raro 2"]); // Validation failed (user may exist)
+
             return $email;
         }
 
         // Check if the username already exists in the database
         if (self::usernameExistsInDatabase($email)) {
+          echo json_encode(["message" => "0", "ha" => "acá pasa algo muy raro 3"]); // Validation failed (user may exist)
+
             return false;
         }
 
