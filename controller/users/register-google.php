@@ -13,6 +13,9 @@ class ApiHandlerRegisterGoogle
                 // Perform actions based on the request
                 switch ($action) {
                     case "RegisterGoogle":
+                    header('Content-Type: application/json');
+                    echo json_encode(array("message" => true, "google_register" => true));
+                    exit;
                         $this->handleRegisterGoogle();
                         break;
                     case "validationRegisterGoogle":
@@ -225,9 +228,7 @@ class ApiHandlerRegisterGoogle
 
 
 }
-  header('Content-Type: application/json');
-  echo json_encode(array("message" => true, "google_register" => true));
-  exit;
+
 require_once '../../controller/assets/lib/composer/vendor/autoload.php';
 //require_once '../../controller/users/session-user.php';
 
