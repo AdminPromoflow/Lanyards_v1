@@ -88,7 +88,7 @@ class ApiHandlerRegister {
               }
               $_SESSION['registering_with_google'] = false;
 
-              echo json_encode(["message" => "1"]);
+              echo json_encode(["message" => "1", "google_login" => false]);
             }
             else {
               if (session_status() === PHP_SESSION_NONE) {
@@ -97,7 +97,7 @@ class ApiHandlerRegister {
               $_SESSION['registering_with_google'] = false;
 
 
-              echo json_encode(["message" => "0"]);
+              echo json_encode(["message" => "0", "google_login" => false]);
             }
             // Send registration email
 
