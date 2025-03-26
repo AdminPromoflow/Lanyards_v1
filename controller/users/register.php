@@ -88,7 +88,7 @@ class ApiHandlerRegister {
               echo json_encode(["message" => "1", "google_login" => true]);
             }
             else {
-              echo json_encode(["message" => "0"]);
+              echo json_encode(["message" => "0", "google_login" => true]);
             }
             // Send registration email
 
