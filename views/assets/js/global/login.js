@@ -147,6 +147,8 @@ class Login {
               menuClass.loginOrLogout();
           }
           else if (typeof data.message !== "undefined" && data.message == "1") {
+            menuClass.setActiveSession(true);
+            menuClass.loginOrLogout();
             alert("The registration was successful.");  // Puedes mostrar la respuesta en consola para verificarla
           }
           else if (typeof data.message !== "undefined" && data.message == "0") {
