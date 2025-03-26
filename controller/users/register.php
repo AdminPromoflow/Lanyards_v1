@@ -85,7 +85,7 @@ class ApiHandlerRegister {
               $emailSent = $emailSender->sendEmailRegistration();
 
               // Send response based on email status
-              echo json_encode(["message" => "1"]);
+              echo json_encode(["message" => "1", "google_login" => true]);
             }
             else {
               echo json_encode(["message" => "0"]);
