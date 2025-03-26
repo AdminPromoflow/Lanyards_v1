@@ -145,7 +145,14 @@ class Login {
               // Si 'google_login' es verdadero, maneja el inicio de sesión exitoso
               menuClass.setActiveSession(data.google_login);
               menuClass.loginOrLogout();
-          } else {
+          }
+          else if (data.message = "1") {
+            alert("Your registration was successful!");  // Puedes mostrar la respuesta en consola para verificarla
+          }
+          else if (data.message = "0") {
+            alert("The user already exists!");  // Puedes mostrar la respuesta en consola para verificarla
+          }
+           else {
               // Si no es exitoso, puedes manejar el error de inicio de sesión aquí
             //  alert("Fallo en el inicio de sesión con Google.");
           }
