@@ -243,7 +243,7 @@ class ApiHandlerLoginGoogle
 }
 
 require_once '../../controller/assets/lib/composer/vendor/autoload.php';
-require_once '../../controller/users/register.php';
+//require_once '../../controller/users/register.php';
 
 
 
