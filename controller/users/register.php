@@ -94,7 +94,7 @@ class ApiHandlerRegister {
             }
             else {
               if (session_status() != PHP_SESSION_NONE) {
-                  session_unset();
+                unset($_SESSION['registering_with_google']);
               }
               echo json_encode(["message" => "0"]);
             }
