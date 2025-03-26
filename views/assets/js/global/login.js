@@ -146,11 +146,11 @@ class Login {
               menuClass.setActiveSession(data.google_login);
               menuClass.loginOrLogout();
           }
-          else if (data.message = "1") {
-            alert("Your registration was terrible!");  // Puedes mostrar la respuesta en consola para verificarla
+          else if (typeof data.message !== "undefined" && data.message = "1") {
+            alert("Your registration was successful!");  // Puedes mostrar la respuesta en consola para verificarla
           }
-          else if (data.message = "0") {
-            alert("The user already exists!!!");  // Puedes mostrar la respuesta en consola para verificarla
+          else if (typeof data.message !== "undefined" && data.message = "0") {
+            alert("The user already exists!");  // Puedes mostrar la respuesta en consola para verificarla
           }
            else {
               // Si no es exitoso, puedes manejar el error de inicio de sesión aquí
