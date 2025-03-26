@@ -2,7 +2,9 @@
 class ApiHandlerRegisterGoogle
 {
     public function handleRequest() {
-
+      header('Content-Type: application/json');
+      echo json_encode(array("message" => true, "google_register" => true));
+      exit;
 
         // Check if a GET request was received
         if ($_SERVER["REQUEST_METHOD"] == "GET") {
@@ -13,9 +15,6 @@ class ApiHandlerRegisterGoogle
                 // Perform actions based on the request
                 switch ($action) {
                     case "RegisterGoogle":
-                    header('Content-Type: application/json');
-                    echo json_encode(array("message" => true, "google_register" => true));
-                    exit;
                         $this->handleRegisterGoogle();
                         break;
                     case "validationRegisterGoogle":
