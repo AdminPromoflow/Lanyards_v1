@@ -234,8 +234,6 @@ class ApiHandlerLoginGoogle
                               $apiHandlerEx = new ApiHandlerRegister();
                               $apiHandlerEx->handleRegistration($data);
 
-                              
-
                         } catch (Exception $e) {
                             // Enviar respuesta de error con detalles
                             header('Content-Type: application/json');

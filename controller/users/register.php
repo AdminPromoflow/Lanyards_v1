@@ -83,19 +83,20 @@ class ApiHandlerRegister {
               $emailSender->setRecipientPassword($data->passwordRegister);
 
               $emailSent = $emailSender->sendEmailRegistration();
-              session_start();
-
-              if (isset($_SESSION['registering_with_google'])) {
-                  unset($_SESSION['registering_with_google']);
+              if (session_status() === PHP_SESSION_NONE) {
+                  session_start();
               }
+              $_SESSION['registering_with_google'] = true;
 
-              // Send response based on email status
               echo json_encode(["message" => "1"]);
             }
             else {
-              if (session_status() != PHP_SESSION_NONE) {
-                unset($_SESSION['registering_with_google']);
+              if (session_status() === PHP_SESSION_NONE) {
+                  session_start();
               }
+              $_SESSION['registering_with_google'] = true;
+
+
               echo json_encode(["message" => "0"]);
             }
             // Send registration email
