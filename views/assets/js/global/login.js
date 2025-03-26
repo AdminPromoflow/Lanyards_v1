@@ -142,7 +142,7 @@ class Login {
           if (data.google_login) {
           //  alert(data.google_login + "hii");  // Puedes mostrar la respuesta en consola para verificarla
 
-              // Si 'google_login' es verdadero, maneja el inicio de sesión exitoso
+          alert("The login was successful.!");  // Puedes mostrar la respuesta en consola para verificarla
               menuClass.setActiveSession(data.google_login);
               menuClass.loginOrLogout();
           }
