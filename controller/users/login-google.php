@@ -164,21 +164,14 @@ class ApiHandlerLoginGoogle
         }
       }
     elseif (isset($_SESSION['registering_with_google']) && $_SESSION['registering_with_google'] === true) {
-      /*header('Content-Type: application/json');
-      echo json_encode(array("mensaje" => "Acabamos, descansito2"));
-      exit;*/
-      //$data = new stdClass();
-      //$data->action = "register";
-    //  $data->nameRegister = "Juan";
-    //  $data->emailRegister = "juan@example.com";
-    //  $data->passwordRegister = "123456";
-      //$data->signupCategory = "normal";
+      $data = new stdClass();
+      $data->nameRegister = $_SESSION['name'];
+      $data->emailRegister = $_SESSION['email'];
+      $data->passwordRegister = "zQ8@r*W9vJp2#bL!";
+      $data->signupCategory = "google";
       // Crear una instancia de ApiHandlerRegister
         $apiHandlerEx = new ApiHandlerRegister();
-      //  header('Content-Type: application/json');
-      //  echo json_encode(array("mensaje" => "Acabamos, descansito3"));
-
-        $apiHandlerEx->ejemplo();
+        $apiHandlerEx->handleRegistration($data);
       }
       else {
         header('Content-Type: application/json');
