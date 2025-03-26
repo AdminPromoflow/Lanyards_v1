@@ -46,7 +46,6 @@ class ApiHandlerRegister {
     public function ejemplo() {
     header('Content-Type: application/json');
     echo json_encode(array("mensaje" => "Acabamos, descansito"));
-    session_destroy();
     exit;
     }
 
