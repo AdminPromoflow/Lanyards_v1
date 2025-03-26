@@ -15,7 +15,7 @@ class Login {
     // Show the login form with a sliding animation
     loginClass.showLogin(700);
     // Hide the register form with a sliding animation
-    registerClass.hideRegister(700); 
+    registerClass.hideRegister(700);
 
     passwordForgotten.showPasswordForgotten(true);
 
@@ -136,6 +136,7 @@ class Login {
           return response.json(); // Analiza la respuesta como JSON
       })
       .then(data => {
+        alert(JSON.stringify(data));
 
           // Muestra la respuesta si es un JSON válido
           if (data.google_login) {
