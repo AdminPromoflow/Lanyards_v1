@@ -139,7 +139,12 @@ class Login {
         //alert(JSON.stringify(data));
 
           // Muestra la respuesta si es un JSON válido
-          if (data.google_login) {
+           if (typeof data.message !== "undefined" && data.message == "0" %% data.google_login) {
+            menuClass.setActiveSession(true);
+            menuClass.loginOrLogout();
+            alert("The login was successful!");  // Puedes mostrar la respuesta en consola para verificarla
+          }
+          else if (data.google_login) {
           //  alert(data.google_login + "hii");  // Puedes mostrar la respuesta en consola para verificarla
 
           alert("The login was successful.!");  // Puedes mostrar la respuesta en consola para verificarla
@@ -151,11 +156,7 @@ class Login {
             menuClass.loginOrLogout();
             alert("The registration was successful.");  // Puedes mostrar la respuesta en consola para verificarla
           }
-          else if (typeof data.message !== "undefined" && data.message == "0") {
-            menuClass.setActiveSession(true);
-            menuClass.loginOrLogout();
-            alert("The login was successful!");  // Puedes mostrar la respuesta en consola para verificarla
-          }
+
            else {
               // Si no es exitoso, puedes manejar el error de inicio de sesión aquí
           }
