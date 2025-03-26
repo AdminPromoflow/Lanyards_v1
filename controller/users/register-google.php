@@ -2,15 +2,15 @@
 class ApiHandlerRegisterGoogle
 {
     public function handleRequest() {
-      header('Content-Type: application/json');
-      echo json_encode(array("message" => true, "google_register" => true));
-      exit;
 
         // Check if a GET request was received
         if ($_SERVER["REQUEST_METHOD"] == "GET") {
             // Check if "action" exists in the query parameters
             if (isset($_GET['action'])) {
                 $action = $_GET['action'];
+                header('Content-Type: application/json');
+                echo json_encode(array("message" => true, "google_register" => true));
+                exit;
 
                 // Perform actions based on the request
                 switch ($action) {
