@@ -154,7 +154,7 @@ class Login {
           }
            else {
               // Si no es exitoso, puedes manejar el error de inicio de sesión aquí
-            //  alert("Fallo en el inicio de sesión con Google.");
+              alert("entramos en un lugar raro");
           }
       })
       .catch(error => {
