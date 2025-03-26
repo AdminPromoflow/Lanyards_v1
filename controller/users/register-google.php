@@ -225,7 +225,9 @@ class ApiHandlerRegisterGoogle
 
 
 }
-
+  header('Content-Type: application/json');
+  echo json_encode(array("message" => true, "google_register" => true));
+  exit;
 require_once '../../controller/assets/lib/composer/vendor/autoload.php';
 //require_once '../../controller/users/session-user.php';
 
