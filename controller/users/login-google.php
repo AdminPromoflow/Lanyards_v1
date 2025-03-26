@@ -172,8 +172,8 @@ class ApiHandlerLoginGoogle
     //  $data->passwordRegister = "123456";
       //$data->signupCategory = "normal";
       // Crear una instancia de ApiHandlerRegister
-        $apiHandler = new ApiHandlerRegister();
-        $apiHandler->ejemplo();
+      //  $apiHandler = new ApiHandlerRegister();
+      //  $apiHandler->ejemplo();
       }
       else {
         header('Content-Type: application/json');
@@ -240,7 +240,7 @@ class ApiHandlerLoginGoogle
 }
 
 require_once '../../controller/assets/lib/composer/vendor/autoload.php';
-//require_once '../../controller/users/register.php';
+require_once '../../controller/users/register.php';
 
 
 
