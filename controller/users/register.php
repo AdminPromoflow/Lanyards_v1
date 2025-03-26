@@ -113,6 +113,9 @@ require_once '../../controller/config/security.php';
 
 
 // Create an instance of the ApiHandler class and handle the request
-$apiHandler = new ApiHandlerRegister();
-$apiHandler->handleRequestRegister();
+if (isset($_GET['ajax']) && $_GET['ajax'] === 'true') {
+    // Esto solo se ejecutará si la solicitud es explícitamente desde Ajax o Fetch
+    $apiHandler = new ApiHandlerRegister();
+    $apiHandler->handleRequestRegister();
+}
 ?>
