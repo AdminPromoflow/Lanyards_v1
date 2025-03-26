@@ -83,11 +83,17 @@ class ApiHandlerRegister {
               $emailSender->setRecipientPassword($data->passwordRegister);
 
               $emailSent = $emailSender->sendEmailRegistration();
+              if (session_status() != PHP_SESSION_NONE) {
+                  session_destroy();
+              }
 
               // Send response based on email status
               echo json_encode(["message" => "1"]);
             }
             else {
+              if (session_status() != PHP_SESSION_NONE) {
+                  session_destroy();
+              }
               echo json_encode(["message" => "0"]);
             }
             // Send registration email

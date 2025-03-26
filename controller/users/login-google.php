@@ -225,8 +225,6 @@ class ApiHandlerLoginGoogle
                             $_SESSION['email'] = $email;
                             $_SESSION['name'] = $name;
 
-
-
                             $data = new stdClass();
                             $data->nameRegister = $_SESSION['name'];
                             $data->emailRegister = $_SESSION['email'];
@@ -235,6 +233,8 @@ class ApiHandlerLoginGoogle
                             // Crear una instancia de ApiHandlerRegister
                               $apiHandlerEx = new ApiHandlerRegister();
                               $apiHandlerEx->handleRegistration($data);
+
+                              
 
                         } catch (Exception $e) {
                             // Enviar respuesta de error con detalles
