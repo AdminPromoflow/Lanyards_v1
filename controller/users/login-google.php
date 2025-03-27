@@ -250,18 +250,12 @@ class ApiHandlerLoginGoogle
                               $apiHandlerEx->handleRegistration($data);
 
                         } catch (Exception $e) {
-                          $_SESSION['logged_in'] = true;
-
                             // Enviar respuesta de error con detalles
                             header('Content-Type: application/json');
                             echo json_encode([
                                 "google_login" => false,
-                                "error" => $_SESSION['email']
+                                "error" => $e->getMessage()
                             ]);
-
-
-
-
                             exit;
                         }
 
