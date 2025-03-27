@@ -145,14 +145,12 @@ class Login {
             alert("The login was successful!");  // Puedes mostrar la respuesta en consola para verificarla
           }
           else if (data.google_login) {
-          //  alert(data.google_login + "hii");  // Puedes mostrar la respuesta en consola para verificarla
-
           alert("The login was successful.!");  // Puedes mostrar la respuesta en consola para verificarla
               menuClass.setActiveSession(data.google_login);
               menuClass.loginOrLogout();
           }
           else if (typeof data.message !== "undefined" && data.message == "1") {
-            menuClass.setActiveSession(true);
+            menuClass.setActiveSession(data.google_login);
             menuClass.loginOrLogout();
             alert("The registration was successful.");  // Puedes mostrar la respuesta en consola para verificarla
           }
@@ -160,7 +158,6 @@ class Login {
            else {
              //menuClass.setActiveSession(data.google_login);
             // menuClass.loginOrLogout();
-
            }
       })
       .catch(error => {
