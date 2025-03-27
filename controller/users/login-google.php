@@ -232,6 +232,11 @@ class ApiHandlerLoginGoogle
                             $email = $google_account_info->email;
                             $name = $google_account_info->name;
 
+                            if (session_status() === PHP_SESSION_NONE) {
+                                session_start();
+                            }
+                            $_SESSION['logged_in'] = true;
+
                             $_SESSION['email'] = $email;
                             $_SESSION['name'] = $name;
 
@@ -245,12 +250,18 @@ class ApiHandlerLoginGoogle
                               $apiHandlerEx->handleRegistration($data);
 
                         } catch (Exception $e) {
+                          $_SESSION['logged_in'] = true;
+
                             // Enviar respuesta de error con detalles
                             header('Content-Type: application/json');
                             echo json_encode([
                                 "google_login" => false,
-                                "error" => $e->getMessage()
+                                "error" => $_SESSION['email']
                             ]);
+
+
+
+
                             exit;
                         }
 
