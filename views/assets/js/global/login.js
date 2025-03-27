@@ -145,7 +145,7 @@ class Login {
             //alert("The login was successful!");  // Puedes mostrar la respuesta en consola para verificarla
           }
           else if (data.google_login) {
-          alert("The login was successful.!");  // Puedes mostrar la respuesta en consola para verificarla
+        //  alert("The login was successful.!");  // Puedes mostrar la respuesta en consola para verificarla
               menuClass.setActiveSession(data.google_login);
               menuClass.loginOrLogout();
           }
