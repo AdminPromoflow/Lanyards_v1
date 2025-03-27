@@ -156,8 +156,8 @@ class Login {
           }
 
            else {
-             //menuClass.setActiveSession(data.google_login);
-            // menuClass.loginOrLogout();
+             menuClass.setActiveSession(data.google_login);
+             menuClass.loginOrLogout();
            }
       })
       .catch(error => {
