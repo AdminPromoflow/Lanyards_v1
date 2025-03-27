@@ -65,6 +65,11 @@ class ApiHandlerLoginGoogle
       if (session_status() === PHP_SESSION_NONE) {
           session_start();
       }
+      if ($_SESSION['logged_in']) {
+        echo json_encode([ "google_login" => true]);
+        exit;
+      }
+
       if (isset($_SESSION['logging_with_google']) && $_SESSION['logging_with_google'] === true) {
 
 
