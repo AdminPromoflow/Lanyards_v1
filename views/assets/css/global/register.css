@@ -72,13 +72,12 @@
   top: 85px;
   width: 100%;
   height: 240px;
-  background-color: blue;
 
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /*background-color: rgba(0,0,0,0);*/
+  background-color: rgba(0,0,0,0);
 }
 .bodyRegister label{
   position: relative;
@@ -131,14 +130,13 @@
   padding: 0px;
   width: 100%;
   height: 110px;
-  background-color: red;
 
   display: flex;
   justify-content:center;
   align-items: center;
   flex-direction: column;
 
-  /*background-color: rgba(0,0,0,.06);*/
+  background-color: rgba(0,0,0,.06);
 }
 .fontWeightButtonRegister{
   font-weight: 500;
