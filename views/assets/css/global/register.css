@@ -89,7 +89,8 @@
   font-size: 1.1em;
   font-weight: 300;
 }
-.bodyRegister a{
+
+.bodyRegister label{
   position: relative;
   text-align:left;
   color: white;
