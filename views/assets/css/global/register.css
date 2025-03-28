@@ -89,6 +89,13 @@
   font-size: 1.1em;
   font-weight: 300;
 }
+.bodyRegister a{
+  margin-bottom: 6px;
+  border-radius: 5px;
+  padding: 3px 10px;;
+  font-size: 1em;
+  background: rgba(255 , 255 , 255 , .8);
+}
 .bodyRegister input{
   margin-bottom: 6px;
   border-radius: 5px;
