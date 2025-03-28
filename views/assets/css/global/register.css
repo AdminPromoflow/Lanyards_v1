@@ -92,11 +92,9 @@
 
 .bodyRegister label{
   position: relative;
-  text-align:left;
   color: white;
-  margin: 10px 0;
-  white-space: nowrap;
-  background-color: red;
+  margin: 0;
+  background-color: green;
 
   font-size: 1.1em;
   font-weight: 300;
