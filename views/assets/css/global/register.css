@@ -5,6 +5,10 @@
   transform: translate(-50%, -50%);
   transition: .7s cubic-bezier(0.68, -0.55, 0.27, 1.55);
   z-index: 13;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .containerRegister{
   width: 350px;
