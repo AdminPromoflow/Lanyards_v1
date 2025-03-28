@@ -134,14 +134,6 @@ class ApiHandlerLoginGoogle
 
 
 
-                      header('Content-Type: application/json');
-                      echo json_encode([
-                          "google_login" => false,
-                          "message" => $validatedData
-                      ]);
-                      exit;
-
-
                 //      $_SESSION['logging_with_google'] = false;
                       // Enviar respuesta exitosa con los datos del usuario
 
@@ -151,6 +143,15 @@ class ApiHandlerLoginGoogle
                           $data->emailRegister,
                           $data->passwordRegister
                       );
+
+
+                      header('Content-Type: application/json');
+                      echo json_encode([
+                          "google_login" => false,
+                          "message" => $validatedData
+                      ]);
+                      exit;
+
 
                       if (!$validatedData) {
                           echo json_encode(["message" => "0", "ha" => "acá pasa algo raro".$data->nameRegister.$data->emailRegister.$data->passwordRegister]); // Validation failed (user may exist)
