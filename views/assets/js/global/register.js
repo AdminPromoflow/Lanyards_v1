@@ -40,6 +40,9 @@ class Register {
         registerClass.makeAjaxRequestRegister();
       }
     });
+    aceptTermsConditions.addEventListener("click", function(){
+      alert("hi");
+    })
   }
 
   // Method to open the register form
@@ -224,6 +227,7 @@ class Register {
   }
 
 }
+
 // Get DOM elements for the register
 const openRegisterFromLogin = document.getElementById("openRegisterFromLogin");
 const closeRegister = document.getElementById("closeRegister");
@@ -236,6 +240,7 @@ const passwordRegister = document.getElementById("passwordRegister");
 
 const registerWithGoogle1 = document.getElementById("registerWithGoogle1");
 const registerWithFacebook1 = document.getElementById("registerWithFacebook1");
+const aceptTermsConditions = document.getElementById("acept_terms_conditions");
 
 
 
