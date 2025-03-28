@@ -83,9 +83,6 @@
   position: relative;
   text-align: center;
   color: white;
-  top: 5px 0;
-  margin-top: 15px;
-  margin-bottom: 5px;
 
   font-size: 1.1em;
   font-weight: 300;
@@ -94,12 +91,10 @@
   margin-bottom: 5px;
 }
 .bodyRegister label:nth-child(5){
-  position: relative;
-  color: white;
   margin: 0;
 
-  font-size: 1em;
-  font-weight: 300;
+  font-size: 0.9em;
+  font-weight: 200;
 }
 .bodyRegister a{
   color: white;
