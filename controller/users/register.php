@@ -106,8 +106,6 @@ class ApiHandlerRegister {
         }
     }
 
-
-
 }
 // Include required files
 
