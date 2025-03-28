@@ -111,6 +111,7 @@
   background: rgba(255 , 255 , 255 , .8);
 }
 .bodyRegister button{
+  position: relative;
   padding: 4px 14px;
   z-index: 10;
   font-size: 1.1em;
