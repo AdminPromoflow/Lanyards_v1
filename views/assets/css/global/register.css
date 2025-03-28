@@ -130,7 +130,7 @@
   color: rgba(0 , 0 , 0 , .5);
 }
 .footerRegister{
-  position: absolute;
+  position: relative;
   top: 330px;
   padding: 0px;
   width: 100%;
