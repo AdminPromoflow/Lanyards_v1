@@ -116,7 +116,6 @@
   color: black;
   background-color: #B3C7BF;
   cursor: pointer;
-  top: 25px;
 }
 .bodyRegister input::placeholder{
   position: relative;
