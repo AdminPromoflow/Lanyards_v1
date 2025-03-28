@@ -89,12 +89,12 @@
   font-size: 1.1em;
   font-weight: 300;
 }
-.bodyRegister a{
+.bodyRegister label a{
   position: relative;
   text-align:left;
   color: white;
   margin: 10px 0;
-
+  white-space: nowrap;
 
   font-size: 1.1em;
   font-weight: 300;
