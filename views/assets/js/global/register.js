@@ -34,15 +34,13 @@ class Register {
     // Add an event listener to the registration button
     submitBtnRegister.addEventListener("click", function () {
       // Call validation functions and display error or success messages
-      if (registerClass.validateName() && registerClass.validateEmail() && registerClass.validatePassword()) {
+      if (registerClass.validateName() && registerClass.validateEmail() && registerClass.validatePassword() && registerClass.validateTermsConditions()) {
         chargingClass.hideShowchargin(true);
         // Make the AJAX request
         registerClass.makeAjaxRequestRegister();
       }
     });
-    aceptTermsConditions.addEventListener("click", function(){
-      alert("hi");
-    })
+
   }
 
   // Method to open the register form
@@ -103,6 +101,16 @@ class Register {
 
     return true; // Validation passes
   }
+
+  // terms and Conditions
+  validateTermsConditions() {
+      if (!aceptTermsConditions.checked) {
+          alert("Please accept the Terms and Conditions.");
+          return false; // Evita que el formulario se envíe
+      }
+
+        return true; // Permite el envío si está marcado
+      }
 
   // Email validation function
   validateEmail() {

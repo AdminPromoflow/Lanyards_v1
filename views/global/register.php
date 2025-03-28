@@ -25,8 +25,8 @@ $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
       <input type="text" id="nameRegister" placeholder="Name">
       <input type="text" id="emailRegister" placeholder="Email">
       <input type="password" id="passwordRegister" placeholder="Password">
-      <label id="acept_terms_conditions">
-        <input type="checkbox" name="terms" required>
+      <label>
+        <input id="acept_terms_conditions" type="checkbox" name="terms" required>
           I agree to the <a href="../../views/terms_conditions/index.php" target="_blank">Terms and Conditions</a>.
         </label>
       <button type="button" id="submitBtnRegister"><strong class="fontWeightButtonRegister">Register</strong></button>
