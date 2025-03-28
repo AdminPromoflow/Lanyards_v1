@@ -90,7 +90,9 @@
   font-size: 1.1em;
   font-weight: 300;
 }
-
+.bodyRegister label:nth-child(1){
+  margin: 5px 0px;
+}
 .bodyRegister label:nth-child(5){
   position: relative;
   color: white;
