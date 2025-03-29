@@ -182,6 +182,8 @@ class ApiHandlerLoginGoogle
                           "google_login" => false,
                           "error" => $e->getMessage()
                       ]);
+                      echo json_encode(array("google_login" => false, "message" => $e->getMessage(), "logging_with_google" => $_SESSION['logging_with_google']));
+
                       exit;
                   }
 
@@ -189,13 +191,14 @@ class ApiHandlerLoginGoogle
             }
             else {
               header('Content-Type: application/json');
-              echo json_encode(array("google_login" => false));
+              echo json_encode(array("google_login" => false, "message" => "error 401", "logging_with_google" => $_SESSION['logging_with_google']));
               exit;
+
             }
         }
         else {
           header('Content-Type: application/json');
-          echo json_encode(array("google_login" => false));
+          echo json_encode(array("google_login" => false, "message" => "error 402", "logging_with_google" => $_SESSION['logging_with_google']));
           exit;
         }
       }
