@@ -101,7 +101,7 @@ class ApiHandlerLoginGoogle
 
                   if (!isset($queryParams['code'])) {
                     header('Content-Type: application/json');
-                    echo json_encode(array("google_login" => false, "message" => "Error finding the code" => $_SESSION['logging_with_google']));
+                    echo json_encode(array("google_login" => false, "message" => "Error finding the code", $_SESSION['logging_with_google']));
                     exit;
                   }
 
