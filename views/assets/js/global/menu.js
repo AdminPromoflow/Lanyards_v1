@@ -166,7 +166,7 @@ class Menu {
       const data = {
         action: "processUserLogout" // Action to process logout
       };
-
+ 
       // Make a fetch request to the given URL with the specified data
       fetch(url, {
         method: "POST", // Set the request method to POST
