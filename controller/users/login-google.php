@@ -59,15 +59,12 @@ class ApiHandlerLoginGoogle
         echo $client->createAuthUrl();
     }
 
-
-
     private function validateGoogleLogin() {
 
       if (session_status() === PHP_SESSION_NONE) {
           session_start();
       }
-      echo json_encode(["logging_with_google" => $_SESSION['logging_with_google']]);
-      exit;
+      
       if ($_SESSION['logged_in']) {
         echo json_encode([ "google_login" => true, "logging_with_google" => $_SESSION['logging_with_google']]);
         exit;
