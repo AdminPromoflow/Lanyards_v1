@@ -56,7 +56,7 @@ class ApiHandlerRegisterGoogle
         if (session_status() === PHP_SESSION_NONE) {
             session_start();
         }
-        $_SESSION['googleAuthStatus'] = true;
+        $_SESSION['logging_with_google'] = true;
 
         echo $client->createAuthUrl();
     }
