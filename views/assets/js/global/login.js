@@ -136,10 +136,21 @@ class Login {
           return response.json(); // Analiza la respuesta como JSON
       })
       .then(data => {
-        alert(JSON.stringify(data));
+        //alert(JSON.stringify(data));
 
+        if (data.google_login) {
+      //  alert("The login was successful.!");  // Puedes mostrar la respuesta en consola para verificarla
+            menuClass.setActiveSession(data.google_login);
+            menuClass.loginOrLogout();
+            alert("The user is already logged in.");
+        }
+        else if (!data.google_login) {
+          menuClass.setActiveSession(data.google_login);
+          menuClass.loginOrLogout();
+          alert("The user is not logged in.");
+        }
           // Muestra la respuesta si es un JSON válido
-           if (typeof data.message !== "undefined" && data.message == "0" && data.google_login ) {
+          /* if (typeof data.message !== "undefined" && data.message == "0" && data.google_login ) {
             menuClass.setActiveSession(data.google_login);
             menuClass.loginOrLogout();
             //alert("The login was successful!");  // Puedes mostrar la respuesta en consola para verificarla
@@ -158,7 +169,7 @@ class Login {
            else {
              menuClass.setActiveSession(data.google_login);
              menuClass.loginOrLogout();
-           }
+           }*/
       })
       .catch(error => {
         //  alert("Error: " + error.message); // Maneja errores de red o análisis
