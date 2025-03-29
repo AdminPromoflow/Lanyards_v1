@@ -62,7 +62,7 @@ class ApiHandlerLoginGoogle
 
 
     private function validateGoogleLogin() {
-      echo json_encode([ "google_login" => false, "logging_with_google" => $_SESSION['logging_with_google']]);
+      echo json_encode(["logging_with_google" => $_SESSION['logging_with_google']]);
       exit;
       if (session_status() === PHP_SESSION_NONE) {
           session_start();
