@@ -96,8 +96,6 @@ class ApiHandlerLoginGoogle
             // Parse the referer URL to get its components
             $urlComponents = parse_url($refererUrl);
 
-            // Check if a query string exists in the URL components
-            if (isset($urlComponents['query'])) {
                 // Parse the query string into an associative array
                 parse_str($urlComponents['query'], $queryParams);
 
@@ -188,13 +186,7 @@ class ApiHandlerLoginGoogle
                   }
 
                 }
-            }
-            else {
-              header('Content-Type: application/json');
-              echo json_encode(array("google_login" => false, "message" => "error 401", "logging_with_google" => $_SESSION['logging_with_google']));
-              exit;
-
-            }
+            
         }
         else {
           header('Content-Type: application/json');
