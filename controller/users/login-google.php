@@ -176,7 +176,7 @@ class ApiHandlerLoginGoogle
                               "google_login" => true,
                               "message" => "The user has successfully logged in."
                           ]);
-                          unset($_SESSION['logging_with_google']);
+                          unset($_SESSION['logging_with_google']); 
                           exit;
                       }
 

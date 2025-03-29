@@ -136,12 +136,12 @@ class Login {
           return response.json(); // Analiza la respuesta como JSON
       })
       .then(data => {
-        //alert(JSON.stringify(data));
+        alert(JSON.stringify(data));
 
         if (data.google_login) {
             menuClass.setActiveSession(data.google_login);
             menuClass.loginOrLogout();
-            alert("The user is already logged in.");
+            alert("The user has logged in.");
         }
         else if (!data.google_login) {
           menuClass.setActiveSession(data.google_login);
