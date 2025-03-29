@@ -66,7 +66,7 @@ class ApiHandlerLoginGoogle
           session_start();
       }
       if ($_SESSION['logged_in']) {
-        echo json_encode([ "google_login" => true]);
+        echo json_encode([ "google_login" => true, "logging_with_google" => $_SESSION['logging_with_google']]);
         exit;
       }
 
@@ -176,7 +176,7 @@ class ApiHandlerLoginGoogle
                               "google_login" => true,
                               "message" => "The user has successfully logged in."
                           ]);
-                          unset($_SESSION['logging_with_google']); 
+                          unset($_SESSION['logging_with_google']);
                           exit;
                       }
 
@@ -209,7 +209,7 @@ class ApiHandlerLoginGoogle
 
       else {
         header('Content-Type: application/json');
-        echo json_encode(array("google_login" => false));
+        echo json_encode(array("google_login" => false, "logging_with_google" => $_SESSION['logging_with_google']));
         exit;
       }
 
