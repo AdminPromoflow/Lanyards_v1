@@ -64,9 +64,9 @@ class ApiHandlerLoginGoogle
       if (session_status() === PHP_SESSION_NONE) {
           session_start();
       }
-      
+
       if ($_SESSION['logged_in']) {
-        echo json_encode([ "google_login" => true, "logging_with_google" => $_SESSION['logging_with_google']]);
+        echo json_encode(array("google_login" => true, "message" => "The user has logged in", "logging_with_google" => $_SESSION['logging_with_google']));
         exit;
       }
 
@@ -160,10 +160,7 @@ class ApiHandlerLoginGoogle
                           if ($apiHandlerEx->handleRegistration($data)) {
                             $_SESSION['logged_in'] = true;
                             header('Content-Type: application/json');
-                            echo json_encode([
-                                "google_login" => true,
-                                "message" => "The user has successfully registered and logged in."
-                            ]);
+                            echo json_encode(array("google_login" => true, "message" => "The user has successfully registered and logged in", "logging_with_google" => $_SESSION['logging_with_google']));
                             unset($_SESSION['logging_with_google']);
                             exit;
                           }
@@ -172,10 +169,7 @@ class ApiHandlerLoginGoogle
                         // true
                           $_SESSION['logged_in'] = true;
                           header('Content-Type: application/json');
-                          echo json_encode([
-                              "google_login" => true,
-                              "message" => "The user has successfully logged in."
-                          ]);
+                          echo json_encode(array("google_login" => true, "message" => "The user has successfully logged in", "logging_with_google" => $_SESSION['logging_with_google']));
                           unset($_SESSION['logging_with_google']);
                           exit;
                       }
@@ -209,7 +203,7 @@ class ApiHandlerLoginGoogle
 
       else {
         header('Content-Type: application/json');
-        echo json_encode(array("google_login" => false, "logging_with_google" => $_SESSION['logging_with_google']));
+        echo json_encode(array("google_login" => false, "message" => "The user is not logged in", "logging_with_google" => $_SESSION['logging_with_google']));
         exit;
       }
 
