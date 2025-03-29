@@ -158,6 +158,7 @@ class ApiHandlerLoginGoogle
 
 
                           if ($apiHandlerEx->handleRegistration($data)) {
+                            $_SESSION['logged_in'] = true;
                             header('Content-Type: application/json');
                             echo json_encode([
                                 "google_login" => true,
@@ -169,7 +170,6 @@ class ApiHandlerLoginGoogle
                       }
                       elseif ($validatedData) {
                         // true
-                      
                           $_SESSION['logged_in'] = true;
                           header('Content-Type: application/json');
                           echo json_encode([
