@@ -145,30 +145,40 @@ class ApiHandlerLoginGoogle
                       );
 
 
-                      header('Content-Type: application/json');
-                      echo json_encode([
-                          "google_login" => false,
-                          "message" => $validatedData
-                      ]);
-                      exit;
-
 
                       if (!$validatedData) {
-                          echo json_encode(["message" => "0", "ha" => "acá pasa algo raro".$data->nameRegister.$data->emailRegister.$data->passwordRegister]); // Validation failed (user may exist)
-                          exit;
+                        //false
+                        $_SESSION['logged_in'] = true;
+                        header('Content-Type: application/json');
+                        echo json_encode([
+                            "google_login" => true,
+                            "message" => "The user has successfully logged in."
+                        ]);
+                        unset($_SESSION['logging_with_google']);
+                        exit;
+                      }
+                      elseif ($validatedData) {
+                        // true
+                        $data = new stdClass();
+                        $data->nameRegister = $_SESSION['name'];
+                        $data->emailRegister = $_SESSION['email'];
+                        $data->passwordRegister = "zQ8@r*W9vJp2#bL!";
+                        $data->signupCategory = "google";
+                        // Crear una instancia de ApiHandlerRegister
+                          $apiHandlerEx = new ApiHandlerRegister();
+
+
+                          if ($apiHandlerEx->handleRegistration($data)) {
+                            header('Content-Type: application/json');
+                            echo json_encode([
+                                "google_login" => true,
+                                "message" => "The user has successfully registered and logged in."
+                            ]);
+                            unset($_SESSION['logging_with_google']);
+                            exit;
+                          }
                       }
 
-                      $_SESSION['logged_in'] = true;
-
-                      $data = new stdClass();
-                      $data->nameRegister = $_SESSION['name'];
-                      $data->emailRegister = $_SESSION['email'];
-                      $data->passwordRegister = "zQ8@r*W9vJp2#bL!";
-                      $data->signupCategory = "google";
-                      // Crear una instancia de ApiHandlerRegister
-                        $apiHandlerEx = new ApiHandlerRegister();
-                        $apiHandlerEx->handleRegistration($data);
-                      exit;
 
                   } catch (Exception $e) {
                       // Enviar respuesta de error con detalles
