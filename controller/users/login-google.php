@@ -54,7 +54,7 @@ class ApiHandlerLoginGoogle
         if (session_status() === PHP_SESSION_NONE) {
             session_start();
         }
-        $_SESSION['logging_with_google'] = true;
+        $_SESSION['googleAuthStatus'] = true;
 
         echo $client->createAuthUrl();
     }
@@ -70,7 +70,7 @@ class ApiHandlerLoginGoogle
         exit;
       }
 
-      elseif (isset($_SESSION['logging_with_google']) && $_SESSION['logging_with_google'] === true) {
+      elseif (isset($_SESSION['googleAuthStatus']) && $_SESSION['googleAuthStatus'] === true) {
 
 
         // Configuración inicial de Google OAuth
@@ -134,7 +134,7 @@ class ApiHandlerLoginGoogle
 
 
 
-                //      $_SESSION['logging_with_google'] = false;
+                //      $_SESSION['googleAuthStatus'] = false;
                       // Enviar respuesta exitosa con los datos del usuario
 
                       $security = new Security();
@@ -164,7 +164,7 @@ class ApiHandlerLoginGoogle
                                 "google_login" => true,
                                 "message" => "The user has successfully registered and logged in."
                             ]);
-                            unset($_SESSION['logging_with_google']);
+                            unset($_SESSION['googleAuthStatus']);
                             exit;
                           }
                       }
@@ -176,7 +176,7 @@ class ApiHandlerLoginGoogle
                               "google_login" => true,
                               "message" => "The user has successfully logged in."
                           ]);
-                          unset($_SESSION['logging_with_google']);
+                          unset($_SESSION['googleAuthStatus']);
                           exit;
                       }
 
