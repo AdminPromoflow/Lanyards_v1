@@ -90,7 +90,8 @@ class ApiHandlerLoginGoogle
 
         // Check if the HTTP_REFERER is set in the server variables
         if (isset($_SERVER['HTTP_REFERER'])) {
-
+            echo json_encode(array("google_login" => false, "message" => $_GET['code'], $_SESSION['logging_with_google']));
+            exit;
                   if (!isset($_GET['code'])) {
                     header('Content-Type: application/json');
                     echo json_encode(array("google_login" => false, "message" => "Error finding the code", $_SESSION['logging_with_google']));
