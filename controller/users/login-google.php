@@ -169,7 +169,7 @@ class ApiHandlerLoginGoogle
                   } catch (Exception $e) {
                       // Enviar respuesta de error con detalles
                       header('Content-Type: application/json');
-                      echo json_encode(array("google_login" => false, "message" => $e->getMessage(), "logging_with_google" => $_SESSION['logging_with_google']));
+                      echo json_encode(array("google_login" => false, "message" => "error 401 ".$e->getMessage(), "logging_with_google" => $_SESSION['logging_with_google']));
                       exit;
                   }
 
