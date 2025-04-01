@@ -147,10 +147,8 @@ class ApiHandlerLoginGoogle
                       // Enviar respuesta exitosa con los datos del usuario
 
                       $security = new Security();
-                      $validatedData = $security->validateUserData(
-                          $data->nameRegister,
-                          $data->emailRegister,
-                          $data->passwordRegister
+                      $validatedData = $security->usernameExistsInDatabase(
+                          $data->emailRegister
                       );
 
                       /*header('Content-Type: application/json');
