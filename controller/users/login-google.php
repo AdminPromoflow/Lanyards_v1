@@ -92,7 +92,8 @@ class ApiHandlerLoginGoogle
         if (isset($_SERVER['HTTP_REFERER'])) {
 
 
-
+          echo json_encode(array("google_login" => true, "code" => $_GET['code'], "logging_with_google" => $_SESSION['logging_with_google']));
+          exit;
                   if (!isset($_GET['code'])) {
                     header('Content-Type: application/json');
                     echo json_encode(array("google_login" => false, "message" => "Error finding the code", $_SESSION['logging_with_google']));
@@ -100,8 +101,7 @@ class ApiHandlerLoginGoogle
                   }
 
 
-                  echo json_encode(array("google_login" => true, "message" => "The user has logged in 6", "logging_with_google" => $_SESSION['logging_with_google']));
-                  exit;
+
 
 
                 // Check if the 'code' parameter exists in the query string
