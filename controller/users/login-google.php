@@ -86,13 +86,12 @@ class ApiHandlerLoginGoogle
         $client->addScope("email");
         $client->addScope("profile");
 
-        echo json_encode(array("google_login" => true, "message" => "The user has logged in 3", "logging_with_google" => $_SESSION['logging_with_google']));
-        exit;
+
 
         // Check if the HTTP_REFERER is set in the server variables
         if (isset($_SERVER['HTTP_REFERER'])) {
-            echo json_encode(array("google_login" => false, "message" => $_GET['code'], $_SESSION['logging_with_google']));
-            exit;
+          echo json_encode(array("google_login" => true, "message" => "The user has logged in 4", "logging_with_google" => $_SESSION['logging_with_google']));
+          exit;
                   if (!isset($_GET['code'])) {
                     header('Content-Type: application/json');
                     echo json_encode(array("google_login" => false, "message" => "Error finding the code", $_SESSION['logging_with_google']));
