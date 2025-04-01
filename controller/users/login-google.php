@@ -92,7 +92,7 @@ class ApiHandlerLoginGoogle
         if (isset($_SERVER['HTTP_REFERER'])) {
 
 
-          echo json_encode(array("google_login" => true, "code" => $_GET['code'], "logging_with_google" => $_SESSION['logging_with_google']));
+          echo json_encode(array("google_login" => true, "code" => $_SERVER['HTTP_REFERER'], "logging_with_google" => $_SESSION['logging_with_google']));
           exit;
                   if (!isset($_GET['code'])) {
                     header('Content-Type: application/json');
