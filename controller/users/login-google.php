@@ -153,7 +153,9 @@ class ApiHandlerLoginGoogle
                           $data->passwordRegister
                       );
 
-
+                      header('Content-Type: application/json');
+                      echo json_encode(array("google_login" => true, "message" => "The user has successfully registered and logged in", "Validate database" => "antes del if".$validatedData));
+                      exit;
 
                       if ($validatedData == false) {
                         //false
