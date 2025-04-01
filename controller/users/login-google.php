@@ -51,7 +51,7 @@ class ApiHandlerLoginGoogle
         $client->setRedirectUri($redirectUri);
         $client->addScope("email");
         $client->addScope("profile");
-        if (session_status() === PHP_SESSION_NONE){
+        if (session_status() === PHP_SESSION_NONE) {
             session_start();
         }
         $_SESSION['logging_with_google'] = true;
@@ -86,9 +86,8 @@ class ApiHandlerLoginGoogle
         $client->addScope("email");
         $client->addScope("profile");
 
-
-
-
+        echo json_encode(array("google_login" => true, "message" => "The user has logged in", "logging_with_google" => $_SESSION['logging_with_google']));
+        exit;
 
         // Check if the HTTP_REFERER is set in the server variables
         if (isset($_SERVER['HTTP_REFERER'])) {
@@ -103,8 +102,6 @@ class ApiHandlerLoginGoogle
 
                 // Check if the 'code' parameter exists in the query string
                 if (isset($_GET['code'])) {
-                  echo json_encode(array("message" => "The user has logged in 3", "logging_with_google" => $_SESSION['logging_with_google']));
-                  exit;
 
                   try {
                       // Obtener el token de acceso usando el código de autorización
