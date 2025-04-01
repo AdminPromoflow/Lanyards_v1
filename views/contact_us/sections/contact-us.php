@@ -30,8 +30,8 @@ $jsVersion = $jsFile && file_exists($jsFile) ? filemtime($jsFile) : time();
 <script type="text/javascript">
   var map = L.map('map3').setView([50.859644, -1.320230], 10);
 
-
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+  //POSTAL CODE
+/*  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
   // Usar Nominatim (API de OSM) para geocodificación inversa
   fetch(`https://nominatim.openstreetmap.org/reverse?lat=50.859644&lon=-1.320230&format=json`)
@@ -43,7 +43,7 @@ $jsVersion = $jsFile && file_exists($jsFile) ? filemtime($jsFile) : time();
     })
     .catch(error => console.log('Error al obtener el código postal:', error));
 
-
+*/
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
