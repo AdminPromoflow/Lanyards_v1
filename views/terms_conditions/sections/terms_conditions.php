@@ -70,23 +70,22 @@
 <h2>Ownership and Risk</h2>
 <p>Risk transfers to the buyer upon delivery, but Lanyards For You retains ownership until full payment is received. In case of non-payment, we reserve the right to reclaim the products.</p>
 
-<h2>Security Policy</h2>
-<p>At Lanyards For You, we are committed to protecting the privacy and security of our users. When users create an account or use third-party login services such as Facebook and Google, we only collect essential information, such as name and email address. All passwords are securely stored using encryption, ensuring that your credentials are protected at all times.</p>
-<p>Currently, we do not employ active monitoring systems to detect unauthorised access, but we follow best security practices to protect the information of our users. We do not use cookies nor track users' behaviour on our website.</p>
-<p>It is important to note that, in the future, we may integrate third-party providers, such as promoflow.net, to process orders. In this case, we ensure that any information shared with these providers will be handled with the same confidentiality and security measures we implement internally.</p>
-<p>We strive to provide a secure and transparent environment for our users, and remain committed to continuously improving our security practices.</p>
-
-
 <h2>Liability</h2>
 <p>Our liability for any loss or damage resulting from product supply is limited to the value of the goods. We are not responsible for indirect or consequential losses.</p>
 
 <h2>Force Majeure</h2>
 <p>We are not liable for failure to fulfil obligations due to circumstances beyond our control, such as strikes, natural disasters, war, fire, flood, or supplier issues.</p>
 
+<h2>Security Policy</h2>
+<p>At Lanyards For You, we are committed to protecting the privacy and security of our users. When users create an account or use third-party login services such as Facebook and Google, we only collect essential information, such as name and email address. All passwords are securely stored using encryption, ensuring that your credentials are protected at all times.</p>
+<p>Currently, we do not employ active monitoring systems to detect unauthorised access, but we follow best security practices to protect the information of our users. We do not use cookies nor track users' behaviour on our website.</p>
+<p>It is important to note that, in the future, we may integrate third-party providers, such as promoflow.net, to process orders. In this case, we ensure that any information shared with these providers will be handled with the same confidentiality and security measures we implement internally.</p>
+<p>We strive to provide a secure and transparent environment for our users, and remain committed to continuously improving our security practices.</p>
+
 <h2>Customer Communication</h2>
 <p>We may contact customers via email regarding website updates or changes in products and services.</p>
 
-<p>For any enquiries regarding these terms and conditions, please contact us at [email] or [phone number].</p>
+<p>For any enquiries regarding these terms and conditions, please contact us at ian@kan-do-it.com or +44 0 7979 591888.</p>
 <button class="back_home_from_terms_conditions buttom_terms_conditions" type="button" name="button">Home</button>
 </section>
 <script src="<?php echo $jsFile_terms_conditions . '?v=' . $jsVersion_terms_conditions; ?>" type="text/javascript"></script>

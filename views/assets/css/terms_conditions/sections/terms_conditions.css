@@ -30,8 +30,8 @@
 }
 .link_terms_conditions img {
   position: relative;
-  height: 60%;
-
+  height: 60px;
+  widows: 65px;
 }
 .link_terms_conditions h4 {
   color: white;
