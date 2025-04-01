@@ -141,16 +141,9 @@ class ApiHandlerLoginGoogle
                       $_SESSION['email'] = $email;
                       $_SESSION['name'] = $name;
 
-
-
-                //      $_SESSION['logging_with_google'] = false;
-                      // Enviar respuesta exitosa con los datos del usuario
-
                       $security = new Security();
 
                       $validatedData = ($security->usernameExistsInDatabase($email) == 1) ? true : false;
-
-
 
 
                       if ($validatedData == false) {
@@ -160,9 +153,8 @@ class ApiHandlerLoginGoogle
                         $data->emailRegister = $_SESSION['email'];
                         $data->passwordRegister = "zQ8@r*W9vJp2#bL!";
                         $data->signupCategory = "google";
-                        // Crear una instancia de ApiHandlerRegister
-                          $apiHandlerEx = new ApiHandlerRegister();
 
+                          $apiHandlerEx = new ApiHandlerRegister();
 
                           if ($apiHandlerEx->handleRegistration($data)) {
                             $_SESSION['logged_in'] = true;
