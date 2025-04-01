@@ -86,7 +86,7 @@ class ApiHandlerLoginGoogle
         $client->addScope("email");
         $client->addScope("profile");
 
-        echo json_encode(array("google_login" => true, "message" => "The user has logged in", "logging_with_google" => $_SESSION['logging_with_google']));
+        echo json_encode(array("google_login" => true, "message" => "The user has logged in 3", "logging_with_google" => $_SESSION['logging_with_google']));
         exit;
 
         // Check if the HTTP_REFERER is set in the server variables
