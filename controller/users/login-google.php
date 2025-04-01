@@ -153,7 +153,7 @@ class ApiHandlerLoginGoogle
 
 
                       header('Content-Type: application/json');
-                      echo json_encode(array("google_login" => true, "message" => "The user has successfully registered and logged in", "Validate database" => "Segundo if".$validatedData));
+                      echo json_encode(array("google_login" => false, "message" => "The user has successfully registered and logged in", "Validate database" => "Segundo if".$validatedData));
                       exit;
 
 
