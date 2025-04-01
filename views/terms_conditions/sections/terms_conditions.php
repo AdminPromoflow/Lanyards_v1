@@ -70,6 +70,13 @@
 <h2>Ownership and Risk</h2>
 <p>Risk transfers to the buyer upon delivery, but Lanyards For You retains ownership until full payment is received. In case of non-payment, we reserve the right to reclaim the products.</p>
 
+<h2>Security Policy</h2>
+<p>At Lanyards For You, we are committed to protecting the privacy and security of our users. When users create an account or use third-party login services such as Facebook and Google, we only collect essential information, such as name and email address. All passwords are securely stored using encryption, ensuring that your credentials are protected at all times.</p>
+<p>Currently, we do not employ active monitoring systems to detect unauthorised access, but we follow best security practices to protect the information of our users. We do not use cookies nor track users' behaviour on our website.</p>
+<p>It is important to note that, in the future, we may integrate third-party providers, such as promoflow.net, to process orders. In this case, we ensure that any information shared with these providers will be handled with the same confidentiality and security measures we implement internally.</p>
+<p>We strive to provide a secure and transparent environment for our users, and remain committed to continuously improving our security practices.</p>
+
+
 <h2>Liability</h2>
 <p>Our liability for any loss or damage resulting from product supply is limited to the value of the goods. We are not responsible for indirect or consequential losses.</p>
 
