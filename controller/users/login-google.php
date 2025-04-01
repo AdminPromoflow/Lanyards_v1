@@ -100,8 +100,6 @@ class ApiHandlerLoginGoogle
 
                 // Check if the 'code' parameter exists in the query string
                 if (isset($_GET['code'])) {
-                  echo json_encode(array("google_login" => true, "message" => "The user has logged in 4", "logging_with_google" => $_SESSION['logging_with_google']));
-                  exit;
                   try {
                       // Obtener el token de acceso usando el código de autorización
                       $token = $client->fetchAccessTokenWithAuthCode($_GET['code']);
@@ -110,6 +108,12 @@ class ApiHandlerLoginGoogle
                       if (isset($token['error']) || !isset($token['access_token'])) {
                           throw new Exception("Error fetching access token: " . json_encode($token));
                       }
+
+
+
+                      echo json_encode(array("google_login" => true, "message" => "The user has logged in 5", "logging_with_google" => $_SESSION['logging_with_google']));
+                      exit;
+
 
                       // Establecer el token de acceso en el cliente
                       $client->setAccessToken($token['access_token']);
