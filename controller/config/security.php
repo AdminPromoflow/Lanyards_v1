@@ -13,7 +13,7 @@ class Security {
         // Check email format
        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
-            return false;
+            return $email;
         }
 
         // Check if the username already exists in the database

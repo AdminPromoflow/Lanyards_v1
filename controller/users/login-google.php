@@ -148,7 +148,9 @@ class ApiHandlerLoginGoogle
 
                       $security = new Security();
                       $validatedData = $security->usernameExistsInDatabase(
-                          $data->emailRegister
+                          $data->nameRegister,
+                          $data->emailRegister,
+                          $data->passwordRegister
                       );
 
                       /*header('Content-Type: application/json');
