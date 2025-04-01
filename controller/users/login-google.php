@@ -148,9 +148,14 @@ class ApiHandlerLoginGoogle
 
                       $security = new Security();
                       $validatedData = $security->usernameExistsInDatabase(
-                        
                           $data->emailRegister
                       );
+
+
+                      header('Content-Type: application/json');
+                      echo json_encode(array("google_login" => true, "message" => "The user has successfully registered and logged in", "Validate database" => "Segundo if".$validatedData));
+                      exit;
+
 
 
 
