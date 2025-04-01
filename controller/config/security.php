@@ -34,7 +34,7 @@ class Security {
         ];
     }
 
-    private static function usernameExistsInDatabase($email) {
+    public static function usernameExistsInDatabase($email) {
         $connection = new Database();
         $user = new Users($connection);
         $user->setEmail($email);
