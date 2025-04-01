@@ -159,7 +159,7 @@ class ApiHandlerLoginGoogle
                         //false
                         $_SESSION['logged_in'] = true;
                         header('Content-Type: application/json');
-                        echo json_encode(array("google_login" => true, "message" => "The user has successfully logged in", "logging_with_google" => $_SESSION['logging_with_google']));
+                        echo json_encode(array("google_login" => true, "message" => "The user has successfully logged in", "validate database" => "Primer if".$validatedData));
                         unset($_SESSION['logging_with_google']);
                         exit;
                       }
@@ -177,7 +177,7 @@ class ApiHandlerLoginGoogle
                           if ($apiHandlerEx->handleRegistration($data)) {
                             $_SESSION['logged_in'] = true;
                             header('Content-Type: application/json');
-                            echo json_encode(array("google_login" => true, "message" => "The user has successfully registered and logged in", "logging_with_google" => $_SESSION['logging_with_google']));
+                            echo json_encode(array("google_login" => true, "message" => "The user has successfully registered and logged in", "Validate database" => "Segundo if".$validatedData));
                             unset($_SESSION['logging_with_google']);
                             exit;
                           }
