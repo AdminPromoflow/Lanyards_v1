@@ -147,15 +147,13 @@ class ApiHandlerLoginGoogle
                       // Enviar respuesta exitosa con los datos del usuario
 
                       $security = new Security();
-                      $validatedData = $security->usernameExistsInDatabase(
+                      $validatedData = $security->validateUserData(
                           $data->nameRegister,
                           $data->emailRegister,
                           $data->passwordRegister
                       );
 
-                      /*header('Content-Type: application/json');
-                      echo json_encode(array("google_login" => true, "message" => "The user has successfully registered and logged in", "Validate database" => "antes del if".$validatedData));
-                      exit;*/
+                      
 
                       if ($validatedData == false) {
                         //false
