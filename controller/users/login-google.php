@@ -157,6 +157,14 @@ class ApiHandlerLoginGoogle
 
                       if (!$validatedData) {
                         //false
+                        $_SESSION['logged_in'] = true;
+                        header('Content-Type: application/json');
+                        echo json_encode(array("google_login" => true, "message" => "The user has successfully logged in", "logging_with_google" => $_SESSION['logging_with_google']));
+                        unset($_SESSION['logging_with_google']);
+                        exit;
+                      }
+                      elseif ($validatedData) {
+                        // true
                         $data = new stdClass();
                         $data->nameRegister = $_SESSION['name'];
                         $data->emailRegister = $_SESSION['email'];
@@ -173,14 +181,6 @@ class ApiHandlerLoginGoogle
                             unset($_SESSION['logging_with_google']);
                             exit;
                           }
-                      }
-                      elseif ($validatedData) {
-                        // true
-                          $_SESSION['logged_in'] = true;
-                          header('Content-Type: application/json');
-                          echo json_encode(array("google_login" => true, "message" => "The user has successfully logged in", "logging_with_google" => $_SESSION['logging_with_google']));
-                          unset($_SESSION['logging_with_google']);
-                          exit;
                       }
 
 
