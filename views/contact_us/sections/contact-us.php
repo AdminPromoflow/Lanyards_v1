@@ -29,6 +29,22 @@ $jsVersion = $jsFile && file_exists($jsFile) ? filemtime($jsFile) : time();
 <!-- JavaScript para el mapa -->
 <script type="text/javascript">
   var map = L.map('map3').setView([50.859644, -1.320230], 10);
+
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+  // Usar Nominatim (API de OSM) para geocodificación inversa
+  fetch(`https://nominatim.openstreetmap.org/reverse?lat=50.859644&lon=-1.320230&format=json`)
+    .then(response => response.json())
+    .then(data => {
+      alert(data);
+      // Mostrar el código postal en la consola
+      alert('Código Postal: ' + data.address.postcode);
+    })
+    .catch(error => console.log('Error al obtener el código postal:', error));
+
+
+
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
