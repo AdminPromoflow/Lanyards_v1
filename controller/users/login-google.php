@@ -51,7 +51,7 @@ class ApiHandlerLoginGoogle
         $client->setRedirectUri($redirectUri);
         $client->addScope("email");
         $client->addScope("profile");
-        if (session_status() === PHP_SESSION_NONE) {
+        if (session_status() === PHP_SESSION_NONE){
             session_start();
         }
         $_SESSION['logging_with_google'] = true;
@@ -71,7 +71,8 @@ class ApiHandlerLoginGoogle
       }
 
       elseif (isset($_SESSION['logging_with_google']) && $_SESSION['logging_with_google'] === true) {
-
+        echo json_encode(array("message" => "The user has logged in", "logging_with_google" => $_SESSION['logging_with_google']));
+        exit;
 
         // Configuración inicial de Google OAuth
         $clientID = '1022332881668-587bktseqso57k6m2dmpfao53vasg83b.apps.googleusercontent.com';
