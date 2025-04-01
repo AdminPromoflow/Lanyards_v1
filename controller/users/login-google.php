@@ -92,9 +92,18 @@ class ApiHandlerLoginGoogle
         if (isset($_SERVER['HTTP_REFERER'])) {
 
 
-          echo json_encode(array("google_login" => true, "code" => $_SERVER['HTTP_REFERER'], "logging_with_google" => $_SESSION['logging_with_google']));
-          exit;
-                  if (!isset($_GET['code'])) {
+                  $referer = $_SERVER['HTTP_REFERER'];
+
+                  // Parsear la URL y extraer la cadena de consulta
+                  $parsed_url = parse_url($referer);
+                  parse_str($parsed_url['query'], $query_params);
+
+                  // Obtener el valor del parámetro 'code'
+                  $code = isset($query_params['code']) ? $query_params['code'] : null;
+
+
+
+                  if (!isset($code)) {
                     header('Content-Type: application/json');
                     echo json_encode(array("google_login" => false, "message" => "Error finding the code", $_SESSION['logging_with_google']));
                     exit;
@@ -105,10 +114,10 @@ class ApiHandlerLoginGoogle
 
 
                 // Check if the 'code' parameter exists in the query string
-                if (isset($_GET['code'])) {
+                if (isset($code)) {
                   try {
                       // Obtener el token de acceso usando el código de autorización
-                      $token = $client->fetchAccessTokenWithAuthCode($_GET['code']);
+                      $token = $client->fetchAccessTokenWithAuthCode($code);
 
                       // Verificar si hubo un error en la respuesta
                       if (isset($token['error']) || !isset($token['access_token'])) {
