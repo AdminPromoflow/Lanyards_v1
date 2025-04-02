@@ -1,6 +1,7 @@
 // Define a class called "Login"
 class Login {
   constructor() {
+    this.makeAjaxRequestValidateGoogleLogin();
 
     this.appId = '615665997605768';
     this.initFacebookSDK();
@@ -79,7 +80,6 @@ class Login {
     });
 
 
-    this.makeAjaxRequestValidateGoogleLogin();
 
   }
 
