@@ -141,6 +141,8 @@ class Login {
         if (data.google_login) {
             menuClass.setActiveSession(data.google_login);
             menuClass.loginOrLogout();
+          //  window.location.href = "https://lanyardsforyou.com/views/home/index.php";
+
             //alert(data.message);
         }
         else if (!data.google_login) {
@@ -148,7 +150,6 @@ class Login {
           menuClass.loginOrLogout();
           //alert(data.message);
         }
-        window.location.href = "https://lanyardsforyou.com/views/home/index.php";
 
       })
       .catch(error => {
