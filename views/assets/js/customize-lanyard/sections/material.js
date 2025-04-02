@@ -4,8 +4,7 @@ class Material {
   constructor() {
     // Initialize the materialSelected property to "Tubular".
     this.materialSelected = "Tubular";
-    containersArrowDownMaterial.style.display = 'block';
-
+    containersBoxesMaterial.scrollTop = 0;
     // Initialize an empty object to store JSON materials.
     var jsonMaterials = {};
 
