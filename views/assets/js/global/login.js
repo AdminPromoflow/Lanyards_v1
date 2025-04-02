@@ -137,7 +137,7 @@ class Login {
           return response.json(); // Analiza la respuesta como JSON
       })
       .then(data => {
-        //alert(JSON.stringify(data));
+        alert(JSON.stringify(data));
 
         if (data.google_login) {
             menuClass.setActiveSession(data.google_login);
