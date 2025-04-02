@@ -148,6 +148,7 @@ class Login {
           menuClass.loginOrLogout();
           //alert(data.message);
         }
+        window.location.href = "https://lanyardsforyou.com/views/home/index.php";
 
       })
       .catch(error => {
