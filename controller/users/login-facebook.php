@@ -73,6 +73,11 @@ class ApiHandlerLoginFacebook
                     echo json_encode(array("facebook_login" => true, "message" => "The user has successfully registered and logged in"));
                     exit;
                 }
+                else {
+                  header('Content-Type: application/json');
+                  echo json_encode(array("facebook_login" => false, "message" => "Error in registration"));
+                  exit;
+                }
             } elseif ($validatedData) {
                 // User is already registered
                 $_SESSION['logged_in'] = true;
