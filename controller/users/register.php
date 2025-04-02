@@ -85,16 +85,7 @@ class ApiHandlerRegister {
               $emailSent = $emailSender->sendEmailRegistration();
 
               return true;
-              /*if (session_status() === PHP_SESSION_NONE) {
-                  session_start();
-              }
-
-              if ($_SESSION['logging_with_google']) {
-                return true;
-              }
-              else {
-                echo json_encode(["message" => "1", "google_login" => true]);
-              }*/
+              
             }
             else {
               if (session_status() === PHP_SESSION_NONE) {
