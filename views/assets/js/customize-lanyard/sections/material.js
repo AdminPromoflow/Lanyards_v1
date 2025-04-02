@@ -8,7 +8,7 @@ class Material {
     var jsonMaterials = {};
 
     // Call the method to check arrow visibility based on scroll position.
-  //  this.checkArrowVisibility();
+    //this.checkArrowVisibility();
     // Add a scroll event listener to check arrow visibility when scrolling.
     containersBoxesMaterial.addEventListener('scroll', this.checkArrowVisibility);
 
