@@ -141,12 +141,12 @@ class Login {
         if (data.google_login) {
             menuClass.setActiveSession(data.google_login);
             menuClass.loginOrLogout();
-            alert(data.message);
+            //alert(data.message);
         }
         else if (!data.google_login) {
           menuClass.setActiveSession(data.google_login);
           menuClass.loginOrLogout();
-          alert(data.message);
+          //alert(data.message);
         }
 
       })
@@ -368,7 +368,7 @@ class Login {
               menuClass.loginOrLogout();
               //alert(data.message);
           }
-          location.reload(); 
+          location.reload();
       })
       .catch(error => {
           // Handle any network or parsing errors
