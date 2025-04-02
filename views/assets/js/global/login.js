@@ -115,7 +115,6 @@ class Login {
   }
 
   makeAjaxRequestValidateGoogleLogin() {
-    alert("raro pero al menos estamos entrando");
 
       // Define la URL y los datos a enviar
       const url = "../../controller/users/login-google.php";
@@ -138,7 +137,7 @@ class Login {
           return response.json(); // Analiza la respuesta como JSON
       })
       .then(data => {
-        alert(JSON.stringify(data));
+        //alert(JSON.stringify(data));
 
         if (data.google_login) {
             menuClass.setActiveSession(data.google_login);
@@ -155,7 +154,7 @@ class Login {
 
       })
       .catch(error => {
-          alert("Error: " + error.message); // Maneja errores de red o análisis
+          //alert("Error: " + error.message); // Maneja errores de red o análisis
       });
   }
 
