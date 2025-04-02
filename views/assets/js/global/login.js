@@ -318,6 +318,7 @@ class Login {
     console.log('statusChangeCallback', response);
 
     if (response.status === 'connected') {
+      alert("Estamos entrando en facebook check en login.js line 321");
       this.testAPI();
       location.reload();
     } else {
