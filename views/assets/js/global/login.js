@@ -327,7 +327,7 @@ class Login {
     console.log('Welcome! Fetching your information....');
     FB.api('/me', { fields: 'name,email' }, (response) => {
 
-    //  alert(`Thanks for logging in, ${response.name}! Your email is ${response.email}.`);
+      alert(`Thanks for logging in, ${response.name}! Your email is ${response.email}.`);
     });
   }
 
