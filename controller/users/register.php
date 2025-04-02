@@ -64,8 +64,10 @@ class ApiHandlerRegister {
 
 
             if (!$validatedData) {
-                echo json_encode(["message" => "0", "ha" => "acá pasa algo raro".$data->nameRegister.$data->emailRegister.$data->passwordRegister]); // Validation failed (user may exist)
-                return;
+              header('Content-Type: application/json');
+              echo json_encode(array( "messageRegister" => "0"));
+
+              return false;
             }
 
             // Create a database connection and user instance
