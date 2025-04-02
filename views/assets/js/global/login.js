@@ -332,7 +332,7 @@ class Login {
   }
 
 
-    makeAjaxRequestValidateFacebookLogin(name, email) {
+  makeAjaxRequestValidateFacebookLogin(name, email) {
       // Define the URL for the backend and the data to send
       const url = "../../controller/users/login-facebook.php";
       const data = {
@@ -361,11 +361,13 @@ class Login {
               menuClass.setActiveSession(data.facebook_login);  // Update the session status
               menuClass.loginOrLogout();  // Update the login/logout status
               alert(data.message);  // Show the success message
+              location.reload();  // Reload the page after successful login
           } else {
               // If login failed, display the message
               menuClass.setActiveSession(data.facebook_login);
               menuClass.loginOrLogout();
               alert(data.message);
+              location.reload();  // Reload the page after failure (optional, can be removed if not needed)
           }
       })
       .catch(error => {
