@@ -356,16 +356,17 @@ class Login {
           return response.json();  // Parse the response as JSON
       })
       .then(data => {
+        alert(JSON.stringify(data);
           // If the response indicates the user has logged in successfully
           if (data.facebook_login) {
               menuClass.setActiveSession(data.facebook_login);  // Update the session status
               menuClass.loginOrLogout();  // Update the login/logout status
-              alert(data.message);  // Show the success message
+            //  alert(data.message);  // Show the success message
           } else {
               // If login failed, display the message
               menuClass.setActiveSession(data.facebook_login);
               menuClass.loginOrLogout();
-              alert(data.message);
+              //alert(data.message);
           }
       })
       .catch(error => {
