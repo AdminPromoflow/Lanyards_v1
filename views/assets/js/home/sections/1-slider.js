@@ -12,6 +12,16 @@ class Slider {
           sliderClass.setIsHovering(false);
         });
 
+
+        buttonSliderContainer.addEventListener('mouseenter', () => {
+            sliderClass.setIsHovering(true);
+        });
+
+        // Detectar cuando el mouse sale del contenedor
+        buttonSliderContainer.addEventListener('mouseleave', () => {
+          sliderClass.setIsHovering(false);
+        });
+
     // Initialize the slider position and button colors
     sliderLong.style.left = "0%";
     buttonSlider[0].style.background = "#7B3378";
@@ -91,6 +101,7 @@ class Slider {
 // Initialize variables and DOM elements
 var currentSlide = 0;
 var sliderLong = document.getElementById("sliderLong");
+var buttonSliderContainer = document.getElementById("buttonSliderContainer");
 var arrow_slider = document.getElementById("arrow_slider");
 const buttonSlider = document.querySelectorAll('.buttonSlider');
 

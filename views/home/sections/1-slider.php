@@ -66,7 +66,7 @@ $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
     </div>
   </div>
 
-  <div class="buttonSliderContainer">
+  <div id="buttonSliderContainer" class="buttonSliderContainer">
     <div class="buttonSlider"></div>
     <div class="buttonSlider"></div>
     <div class="buttonSlider"></div>
