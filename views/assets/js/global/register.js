@@ -175,7 +175,7 @@ class Register {
       alert(JSON.stringify(data));
       chargingClass.hideShowchargin(false); // Hide loading indicator
 
-      switch (data.message) {
+      switch (data.messageRegister) {
         case "1":
           alert("Successful registration. Welcome to our community!");
           loginClass.showLogin(700);

@@ -83,11 +83,15 @@ class ApiHandlerRegister {
               $emailSender->setRecipientPassword($data->passwordRegister);
 
               $emailSent = $emailSender->sendEmailRegistration();
-
+              header('Content-Type: application/json');
+              echo json_encode(array( "messageRegister" => "1"));
               return true;
 
             }
             else {
+              header('Content-Type: application/json');
+              echo json_encode(array( "messageRegister" => "0"));
+
               return false;
             }
             // Send registration email
