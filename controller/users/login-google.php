@@ -91,9 +91,7 @@ class ApiHandlerLoginGoogle
         if (isset($_SERVER['HTTP_REFERER'])) {
 
 
-                  $referer = $_SERVER['HTTP_REFERER'];
-
-                  // Parsear la URL y extraer la cadena de consulta
+                  $referer = urldecode($_SERVER['HTTP_REFERER']);  // Decodifica la URL
                   $parsed_url = parse_url($referer);
                   parse_str($parsed_url['query'], $query_params);
 
@@ -104,7 +102,7 @@ class ApiHandlerLoginGoogle
 
                   if (!isset($code)) {
                     header('Content-Type: application/json');
-                    echo json_encode(array("google_login" => false, "message" => "Code parameter not found", "referer" => $_SERVER['HTTP_REFERER']));
+                    echo json_encode(array("google_login" => false, "message" => "Code parameter not found", "referer" => $_SERVER['HTTP_REFERER']."the code is: ".$_GET["code"]));
                     exit;
                   }
 
