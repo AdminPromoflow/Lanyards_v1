@@ -295,7 +295,7 @@ class Login {
         version: 'v6.0',
       });
 
-      this.checkLoginState();
+      //this.checkLoginState();
     };
 
     this.loadFacebookSDK();
