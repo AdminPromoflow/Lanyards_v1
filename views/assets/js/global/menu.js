@@ -166,7 +166,7 @@ class Menu {
       const data = {
         action: "processUserLogout" // Action to process logout
       };
- 
+
       // Make a fetch request to the given URL with the specified data
       fetch(url, {
         method: "POST", // Set the request method to POST
@@ -192,7 +192,7 @@ class Menu {
         .then(data => {
           // If logout is successful, reload the page
           chargingClass.hideShowchargin(false);
-
+          loginClass.logoutFacebook();
           alert("Successfully logged out.");
           window.location.href = "https://lanyardsforyou.com/views/home/index.php";
         })
