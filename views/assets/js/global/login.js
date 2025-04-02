@@ -368,6 +368,7 @@ class Login {
               menuClass.loginOrLogout();
               //alert(data.message);
           }
+          location.reload(); 
       })
       .catch(error => {
           // Handle any network or parsing errors
