@@ -102,7 +102,7 @@ class ApiHandlerLoginGoogle
 
                   if (!isset($code)) {
                     header('Content-Type: application/json');
-                    echo json_encode(array("google_login" => false, "message" => "Code parameter not found", "referer" => $_SERVER['HTTP_REFERER']."the code is: ".var_dump($_GET)));
+                    echo json_encode(array("google_login" => false, "message" => "Code parameter not found", "referer" => $_SERVER['HTTP_REFERER']."the code is: "));
                     exit;
                   }
 
