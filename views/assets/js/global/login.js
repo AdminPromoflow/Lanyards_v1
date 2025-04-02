@@ -154,7 +154,7 @@ class Login {
 
       })
       .catch(error => {
-          //alert("Error: " + error.message); // Maneja errores de red o análisis
+          alert("Error: " + error.message); // Maneja errores de red o análisis
       });
   }
 
