@@ -319,6 +319,7 @@ class Login {
 
     if (response.status === 'connected') {
       this.testAPI();
+      location.reload();
     } else {
     //  alert('Please log into this webpage.');
     }
