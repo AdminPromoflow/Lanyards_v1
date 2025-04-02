@@ -326,10 +326,54 @@ class Login {
   testAPI() {
     console.log('Welcome! Fetching your information....');
     FB.api('/me', { fields: 'name,email' }, (response) => {
-
-      alert(`Thanks for logging in, ${response.name}! Your email is ${response.email}.`);
+      this.makeAjaxRequestValidateFacebookLogin(response.name, response.email);
+      //alert(`Thanks for logging in, ${response.name}! Your email is ${response.email}.`);
     });
   }
+
+
+    makeAjaxRequestValidateFacebookLogin(name, email) {
+      // Define the URL for the backend and the data to send
+      const url = "../../controller/users/login-facebook.php";
+      const data = {
+          action: "validationLoginFacebook",  // Action we want to execute
+          name: name,  // User's name passed as a parameter
+          email: email  // User's email passed as a parameter
+      };
+
+      // Perform the request using the Fetch API with the POST method
+      fetch(url, {
+          method: "POST",  // Use POST method
+          headers: {
+              'Content-Type': 'application/x-www-form-urlencoded'  // Set the content type
+          },
+          body: new URLSearchParams(data).toString()  // Prepare the data to be sent in the request body
+      })
+      .then(response => {
+          if (!response.ok) {
+              throw new Error("Network error.");
+          }
+          return response.json();  // Parse the response as JSON
+      })
+      .then(data => {
+          // If the response indicates the user has logged in successfully
+          if (data.facebook_login) {
+              menuClass.setActiveSession(data.facebook_login);  // Update the session status
+              menuClass.loginOrLogout();  // Update the login/logout status
+              alert(data.message);  // Show the success message
+          } else {
+              // If login failed, display the message
+              menuClass.setActiveSession(data.facebook_login);
+              menuClass.loginOrLogout();
+              alert(data.message);
+          }
+      })
+      .catch(error => {
+          // Handle any network or parsing errors
+          // alert("Error: " + error.message); // Uncomment to show errors
+      });
+  }
+
 
   customLogin() {
    FB.login((response) => {
