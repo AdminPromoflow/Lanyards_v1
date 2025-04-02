@@ -286,7 +286,6 @@ class Material {
     // Refresh the material display and related components.
     this.refreshMaterial();
     oneTwoEndsClass.refreshLanyardType();
-
     widthClass.refreshWidth();
     sidePrintedClass.refreshSidePrintedData();
     colourClass.updateColourQuantity();

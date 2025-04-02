@@ -326,11 +326,14 @@ class SidePrinted {
 
 
 
-    this.setSidePrintedSelected(sidePrinted);
+    /*this.setSidePrintedSelected(sidePrinted);
     this.showSelectedSidePrinted();
-    this.updatePriceSidePrinted();
+    this.updatePriceSidePrinted();*/
 
-    priceClass.setAmountSelected(priceClass.getAmountSelected());
+    this.refreshSidePrintedData()
+    colourClass.updateColourQuantity();
+    clipClass.updateClip();
+
     previewSidePrinted.showSelectedPreviewtTemplate();
 
   }

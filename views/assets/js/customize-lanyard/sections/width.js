@@ -87,13 +87,13 @@ class Width {
     this.setWidthSelectedIndex(index);
     //artworkPreviewClass.changeAllSettingsWidth();
 
-    previewLanyardType.showSelectedPreviewtTemplate();
 
     //this.showSelectedWidth();
     // this.updatePriceWidthIndividual(index);
+    previewLanyardType.showSelectedPreviewtTemplate();
 
-    this.refreshWidth();
     oneTwoEndsClass.refreshLanyardType();
+    this.refreshWidth();
     sidePrintedClass.refreshSidePrintedData()
     colourClass.updateColourQuantity();
     clipClass.updateClip();

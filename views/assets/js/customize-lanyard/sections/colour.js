@@ -132,8 +132,12 @@ class ColourClass {
 
 
   searchDataColourSelected(coloursQuantity, index){
+
     this.setColourSelected(coloursQuantity);
-    this.showSelectedColour();
+
+    this.updateColourQuantity();
+
+
 
     previewColourClass.showSelectedPreviewtColour();
     this.getPriceClipSelected(index);

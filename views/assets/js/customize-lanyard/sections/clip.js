@@ -96,7 +96,10 @@ class ClipClass {
   }
 
   searchDataClipSelected(data, index) {
+
     clipClass.setClipSelected(data);
+    this.updateClip();
+
     clipClass.showSelectedClip();
     clipClass.getPriceClipSelected(index);
     priceClass.setAmountSelected(priceClass.getAmountSelected());
