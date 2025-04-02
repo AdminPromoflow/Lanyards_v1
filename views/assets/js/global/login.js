@@ -115,6 +115,8 @@ class Login {
   }
 
   makeAjaxRequestValidateGoogleLogin() {
+    alert("raro pero al menos estamos entrando");
+
       // Define la URL y los datos a enviar
       const url = "../../controller/users/login-google.php";
       const data = {
@@ -358,7 +360,7 @@ class Login {
           return response.json();  // Parse the response as JSON
       })
       .then(data => {
-        alert(JSON.stringify(data) + "otro");
+      //  alert(JSON.stringify(data) + "otro");
           // If the response indicates the user has logged in successfully
           if (data.facebook_login) {
               menuClass.setActiveSession(data.facebook_login);  // Update the session status
