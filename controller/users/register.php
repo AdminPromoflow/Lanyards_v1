@@ -43,11 +43,7 @@ class ApiHandlerRegister {
             echo json_encode(array("message" => "Method not allowed"));
         }
     }
-    public function ejemplo() {
-    header('Content-Type: application/json');
-    echo json_encode(array("mensaje" => "Acabamos, descansito"));
-    exit;
-    }
+
 
     // Function to handle user registration
     public function handleRegistration($data) {
@@ -85,14 +81,14 @@ class ApiHandlerRegister {
               $emailSender->setRecipientPassword($data->passwordRegister);
 
               $emailSent = $emailSender->sendEmailRegistration();
-              header('Content-Type: application/json');
-              echo json_encode(array( "messageRegister" => "1"));
+              //header('Content-Type: application/json');
+              ///echo json_encode(array( "messageRegister" => "1"));
               return true;
 
             }
             else {
-              header('Content-Type: application/json');
-              echo json_encode(array( "messageRegister" => "0"));
+            //  header('Content-Type: application/json');
+            //  echo json_encode(array( "messageRegister" => "0"));
 
               return false;
             }
