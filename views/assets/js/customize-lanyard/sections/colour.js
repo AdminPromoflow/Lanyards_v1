@@ -151,9 +151,9 @@ class ColourClass {
       return this.colourSelectedIndex;
   }
   updateColourQuantity(){
-    this.getPriceColourSelected();
     this.createColour();
     this.showSelectedColour();
+    this.getPriceColourSelected();
 
     previewColourClass.showSelectedPreviewtColour();
     //previewColourClass.showColourPreview("none");

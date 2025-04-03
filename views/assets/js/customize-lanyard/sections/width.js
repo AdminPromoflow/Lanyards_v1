@@ -224,8 +224,8 @@ class Width {
     this.updateWidth();
 
     this.updatePriceWidth();
-    this.updatePriceWidthIndividual();
     this.showSelectedWidth();
+    this.updatePriceWidthIndividual();
 
     chargingClass.hideShowchargin(false);
   }

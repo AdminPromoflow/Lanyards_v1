@@ -284,12 +284,13 @@ class Material {
 
   // Method to refresh the selected material and its display.
   refreshMaterial(){
-    this.getPriceDivsMaterialSelected();
     this.setOriginValuesAfteMaterial();
     this.showSelectedMaterial(); // Display the selected material.
     this.updatePriceMaterial(); // Update the material prices.
     previewMaterial.showSelectedPreviewtMaterial(this.getMaterialSelected()); // Show preview of selected material.
     chargingClass.hideShowchargin(false); // Hide loading animation.
+    this.getPriceDivsMaterialSelected();
+
   }
   getPriceDivsMaterialSelected(){
 
