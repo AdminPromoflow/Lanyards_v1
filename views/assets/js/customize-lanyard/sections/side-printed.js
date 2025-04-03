@@ -168,7 +168,6 @@ class SidePrinted {
     this.showSelectedSidePrinted();
     this.updateEachPriceSidePrinted();
     previewSidePrinted.showSelectedPreviewtTemplate();
-    previewSidePrinted.showSelectedPreviewtTemplate();
 
   }
 
@@ -343,6 +342,7 @@ class SidePrinted {
   showSelectedSidePrinted() {
     // Get the selected side printed value
     var data = sidePrintedClass.getSidePrintedSelected();
+    alert(data);
 
     // Select all elements with the class "container_boxes_side_printed"
     const containerBoxesSidePrinted = document.querySelectorAll(".container_boxes_side_printed");
