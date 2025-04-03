@@ -97,6 +97,8 @@ class Width {
     sidePrintedClass.refreshSidePrintedData()
     colourClass.updateColourQuantity();
     clipClass.updateClip();
+    priceClass.changePricePerLanyard();
+
   //  artworkClass.changeWidthRightPanel();
 
   }

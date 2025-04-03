@@ -290,6 +290,8 @@ class Material {
     sidePrintedClass.refreshSidePrintedData();
     colourClass.updateColourQuantity();
     clipClass.updateClip();
+    priceClass.changePricePerLanyard();
+
   }
 
   // Method to refresh the selected material and its display.
@@ -298,7 +300,6 @@ class Material {
     this.showSelectedMaterial(); // Display the selected material.
     this.updatePriceMaterial(); // Update the material prices.
     previewMaterial.showSelectedPreviewtMaterial(this.getMaterialSelected()); // Show preview of selected material.
-    priceClass.changePricePerLanyard();
     chargingClass.hideShowchargin(false); // Hide loading animation.
   }
 

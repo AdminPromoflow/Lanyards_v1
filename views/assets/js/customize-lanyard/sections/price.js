@@ -54,7 +54,6 @@ class Price {
         colourClass.updateColourQuantity();
         clipClass.updateClip();
 
-
       }
     });
 

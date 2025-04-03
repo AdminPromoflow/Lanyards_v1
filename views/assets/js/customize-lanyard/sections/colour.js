@@ -130,6 +130,7 @@ class ColourClass {
     this.setColourSelected(coloursQuantity);
 
     this.updateColourQuantity();
+    priceClass.changePricePerLanyard();
 
 
 
