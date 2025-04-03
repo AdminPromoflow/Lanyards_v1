@@ -184,7 +184,7 @@ class ApiHandlerLoginGoogle
                       // Enviar respuesta de error con detalles
                       header('Content-Type: application/json');
                       echo json_encode(array("google_login" => false, "message" => "error 401 ".$e->getMessage(), "logging_with_google" => $_SESSION['logging_with_google']));
-                      
+
                       exit;
                   }
 
@@ -217,7 +217,6 @@ require_once '../../controller/config/security.php';
 
 
 
-//controller/assets/lib/vendor/autoload.php
 $apiHandlerLoginGoogle = new ApiHandlerLoginGoogle();
 $apiHandlerLoginGoogle->handleRequest();
 ?>
