@@ -130,9 +130,11 @@ class ColourClass {
     this.setColourSelected(coloursQuantity);
 
     this.updateColourQuantity();
-    priceClass.changePricePerLanyard();
     previewColourClass.showSelectedPreviewtColour();
     this.getPriceClipSelected(index);
+
+
+    priceClass.changePricePerLanyard();
 
   //  colourSelectorClass.showColourSelector();
   previewColourClass.showColourPreview("flex");
