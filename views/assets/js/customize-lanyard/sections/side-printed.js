@@ -164,6 +164,7 @@ class SidePrinted {
 
 
   refreshSidePrintedData(){
+    this.getPriceSidePrintedSelected();
     this.createSidePrinted();
     this.showSelectedSidePrinted();
     this.updateEachPriceSidePrinted();
@@ -293,7 +294,6 @@ class SidePrinted {
 
 
     this.setSidePrintedSelectedIndex(index);
-    this.getPriceSidePrintedSelected();
 
 
 

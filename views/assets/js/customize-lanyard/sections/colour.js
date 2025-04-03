@@ -129,9 +129,12 @@ class ColourClass {
 
     this.setColourSelected(coloursQuantity);
 
+    this.setColourSelectedIndex(index);
+
     this.updateColourQuantity();
     previewColourClass.showSelectedPreviewtColour();
-    this.getPriceClipSelected(index);
+
+
 
 
     priceClass.changePricePerLanyard();
@@ -140,8 +143,15 @@ class ColourClass {
   previewColourClass.showColourPreview("flex");
 
   }
-  updateColourQuantity(){
+  setColourSelectedIndex(value) {
+    this.colourSelectedIndex = value;
+  }
 
+  getColourSelectedIndex() {
+      return this.colourSelectedIndex;
+  }
+  updateColourQuantity(){
+    this.getPriceColourSelected();
     this.createColour();
     this.showSelectedColour();
 
@@ -280,7 +290,8 @@ updatePriceColour() {
 }
 
 
-  getPriceClipSelected(index){
+  getPriceColourSelected(){
+    let index = this.getColourSelectedIndex();
   const priceDataColour = document.querySelectorAll(".priceDataColour");
   for (var i = 0; i < priceDataColour.length; i++) {
 
