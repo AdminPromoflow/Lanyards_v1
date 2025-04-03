@@ -138,8 +138,11 @@ class Login {
       })
       .then(data => {
       //  alert(JSON.stringify(data));
-
-        if (data.google_login) {
+        if (data.googleCodeFound = false) {
+          alert(data.googleCodeFound);
+          window.location.href = "https://lanyardsforyou.com/views/home/index.php";
+        }
+        else if (data.google_login) {
             menuClass.setActiveSession(data.google_login);
             menuClass.loginOrLogout();
           //  window.location.href = "https://lanyardsforyou.com/views/home/index.php";

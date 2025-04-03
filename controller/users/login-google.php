@@ -102,7 +102,7 @@ class ApiHandlerLoginGoogle
 
                   if (!isset($code)) {
                     header('Content-Type: application/json');
-                    echo json_encode(array("google_login" => false, "message" => "Code parameter not found", "referer" => $_SERVER['HTTP_REFERER']."the code is: "));
+                    echo json_encode(array("google_login" => false, "googleCodeFound" = false,  "message" => "Your Google settings prevent login or registration. Please sign in or register using your email, name, and password."));
                     unset($_SESSION['logging_with_google']);
                     exit;
                   }
