@@ -63,10 +63,14 @@ class Price {
           amountLanyardsRange.value = this.value;
 
           priceClass.setAmountSelected(amountLanyards.value);
-          material.updatePriceMaterial();
-          widthClass.updatePriceWidth();
-          sidePrintedClass.updatePriceSidePrinted();
-          colourClass.updatePriceColour();
+
+
+          material.refreshMaterial();
+          oneTwoEndsClass.refreshLanyardType();
+          widthClass.refreshWidth();
+          sidePrintedClass.refreshSidePrintedData();
+          colourClass.updateColourQuantity();
+          clipClass.updateClip();
 
     });
   }
