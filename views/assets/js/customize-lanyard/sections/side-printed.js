@@ -291,6 +291,24 @@ class SidePrinted {
   searchDataSidePrintedSelected(sidePrinted, index) {
     this.setSidePrintedSelected(sidePrinted);
 
+    this.getPriceSidePrintedSelected(index);
+
+
+
+    /*this.setSidePrintedSelected(sidePrinted);
+    this.showSelectedSidePrinted();
+    this.updatePriceSidePrinted();*/
+
+    this.refreshSidePrintedData()
+    colourClass.updateColourQuantity();
+    clipClass.updateClip();
+    priceClass.changePricePerLanyard();
+
+    previewSidePrinted.showSelectedPreviewtTemplate();
+
+  }
+
+  getPriceSidePrintedSelected(index){
     const priceDataSidePrinted = document.querySelectorAll(".priceDataSidePrinted");
 
 
@@ -318,23 +336,7 @@ class SidePrinted {
         }
       }
     }
-
-
-
-    /*this.setSidePrintedSelected(sidePrinted);
-    this.showSelectedSidePrinted();
-    this.updatePriceSidePrinted();*/
-
-    this.refreshSidePrintedData()
-    colourClass.updateColourQuantity();
-    clipClass.updateClip();
-    priceClass.changePricePerLanyard();
-
-    previewSidePrinted.showSelectedPreviewtTemplate();
-
   }
-
-
   showSelectedSidePrinted() {
     // Get the selected side printed value
     var data = sidePrintedClass.getSidePrintedSelected();

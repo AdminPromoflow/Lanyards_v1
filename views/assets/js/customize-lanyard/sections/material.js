@@ -266,19 +266,7 @@ class Material {
   // Method to search for a selected material and update the price.
   searchDataMaterialSelected(materialSelected) {
     chargingClass.hideShowchargin(true); // Show loading animation.
-    const pricesDataMaterialElements = document.querySelectorAll('.pricesDataMaterial');
-    let dataMaterialElements = document.querySelectorAll('.dataMaterial');
 
-    for (let i = 0; i < dataMaterialElements.length; i++) {
-      let material = dataMaterialElements[i].innerText;
-      if (material == materialSelected) {
-        let number = pricesDataMaterialElements[i].innerText;
-        let price = number.match(/\d+(\.\d+)?/)[0];
-        // Update the price class with the selected material's price.
-        priceClass.setPricePerMaterialWithAmount(price);
-        priceClass.changePricePerLanyard();
-      }
-    }
 
     // Set the selected material.
     this.setMaterialSelected(materialSelected);
@@ -296,11 +284,28 @@ class Material {
 
   // Method to refresh the selected material and its display.
   refreshMaterial(){
+    this.getPriceDivsMaterialSelected();
     this.setOriginValuesAfteMaterial();
     this.showSelectedMaterial(); // Display the selected material.
     this.updatePriceMaterial(); // Update the material prices.
     previewMaterial.showSelectedPreviewtMaterial(this.getMaterialSelected()); // Show preview of selected material.
     chargingClass.hideShowchargin(false); // Hide loading animation.
+  }
+  getPriceDivsMaterialSelected(){
+
+    const pricesDataMaterialElements = document.querySelectorAll('.pricesDataMaterial');
+    let dataMaterialElements = document.querySelectorAll('.dataMaterial');
+    let materialSelected = this.getMaterialSelected();
+    for (let i = 0; i < dataMaterialElements.length; i++) {
+      let material = dataMaterialElements[i].innerText;
+      if (material == materialSelected) {
+        let number = pricesDataMaterialElements[i].innerText;
+        let price = number.match(/\d+(\.\d+)?/)[0];
+        // Update the price class with the selected material's price.
+        priceClass.setPricePerMaterialWithAmount(price);
+        priceClass.changePricePerLanyard();
+      }
+    }
   }
 
   setOriginValuesAfteMaterial() {
