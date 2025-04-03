@@ -293,7 +293,7 @@ class SidePrinted {
   }
 
   searchDataSidePrintedSelected(sidePrinted, index) {
-    //alert(sidePrinted);
+    alert(sidePrinted);
 
     const priceDataSidePrinted = document.querySelectorAll(".priceDataSidePrinted");
 
