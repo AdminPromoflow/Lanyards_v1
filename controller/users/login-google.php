@@ -103,6 +103,7 @@ class ApiHandlerLoginGoogle
                   if (!isset($code)) {
                     header('Content-Type: application/json');
                     echo json_encode(array("google_login" => false, "message" => "Code parameter not found", "referer" => $_SERVER['HTTP_REFERER']."the code is: "));
+                    unset($_SESSION['logging_with_google']);
                     exit;
                   }
 
@@ -183,6 +184,7 @@ class ApiHandlerLoginGoogle
                       // Enviar respuesta de error con detalles
                       header('Content-Type: application/json');
                       echo json_encode(array("google_login" => false, "message" => "error 401 ".$e->getMessage(), "logging_with_google" => $_SESSION['logging_with_google']));
+                      
                       exit;
                   }
 
