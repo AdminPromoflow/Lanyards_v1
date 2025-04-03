@@ -97,6 +97,13 @@ class ClipClass {
 
   searchDataClipSelected(data, index) {
 
+
+    material.refreshMaterial();
+    oneTwoEndsClass.refreshLanyardType();
+    widthClass.refreshWidth();
+    sidePrintedClass.refreshSidePrintedData();
+    colourClass.updateColourQuantity();
+
     clipClass.setClipSelected(data);
     this.updateClip();
 

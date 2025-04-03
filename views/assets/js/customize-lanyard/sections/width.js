@@ -32,7 +32,7 @@ class Width {
   createWidth(data, index){
 
     containersBoxesWidth.innerHTML +=
-        '<div class="container_boxes_width"   onclick="widthClass.searchDataWidthSelected(\'' + data['width']  + '\', \' '+ index +'  \');">'+
+        '<div class="container_boxes_width"   onclick="widthClass.(\'' + data['width']  + '\', \' '+ index +'  \');">'+
           '<img src="../../'+data["imgLink"]+'" alt="">'+
           '<h4 class="dataWidth">'+data["width"]+'</h4>'+
           '<h3 class="priceDataWidth">+£0 per unit</h3>'+
@@ -92,6 +92,7 @@ class Width {
     // this.updatePriceWidthIndividual(index);
     previewLanyardType.showSelectedPreviewtTemplate();
 
+    material.refreshMaterial();
     oneTwoEndsClass.refreshLanyardType();
     this.refreshWidth();
     sidePrintedClass.refreshSidePrintedData()

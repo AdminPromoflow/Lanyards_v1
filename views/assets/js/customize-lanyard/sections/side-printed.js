@@ -301,6 +301,12 @@ class SidePrinted {
     this.showSelectedSidePrinted();
     this.updatePriceSidePrinted();*/
 
+
+
+    material.refreshMaterial();
+    oneTwoEndsClass.refreshLanyardType();
+    widthClass.refreshWidth();
+
     this.refreshSidePrintedData()
     colourClass.updateColourQuantity();
     clipClass.updateClip();

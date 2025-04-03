@@ -131,6 +131,13 @@ class ColourClass {
 
     this.setColourSelectedIndex(index);
 
+
+
+    material.refreshMaterial();
+    oneTwoEndsClass.refreshLanyardType();
+    widthClass.refreshWidth();
+    sidePrintedClass.refreshSidePrintedData();
+    clipClass.updateClip();
     this.updateColourQuantity();
     previewColourClass.showSelectedPreviewtColour();
 
