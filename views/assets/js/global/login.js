@@ -139,7 +139,7 @@ class Login {
       .then(data => {
         //alert(JSON.stringify(data));
         if (data.googleCodeFound == false) {
-          alert(data.googleCodeFound);
+          alert(data.message);
           window.location.href = "https://lanyardsforyou.com/views/home/index.php";
         }
         else if (data.google_login) {
