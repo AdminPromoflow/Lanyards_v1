@@ -266,10 +266,6 @@ class SidePrinted {
       }
   }
 
-
-
-
-
   cleanSidePrinted(){
 
     containerBoxSidePrinted.innerHTML = "";
