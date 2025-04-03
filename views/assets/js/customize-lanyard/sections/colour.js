@@ -156,7 +156,7 @@ class ColourClass {
     this.showSelectedColour();
 
     previewColourClass.showSelectedPreviewtColour();
-    previewColourClass.showColourPreview("none");
+    //previewColourClass.showColourPreview("none");
   }
   showSelectedColour() {
     // Get the selected colour value
