@@ -103,7 +103,8 @@ class Width {
 
   }
 
-  updatePriceWidthIndividual(index) {
+  updatePriceWidthIndividual() {
+    let index = this.getWidthSelectedIndex();
   //  alert("individual" + index);
     const priceDataWidth = document.querySelectorAll(".priceDataWidth");
 
@@ -220,10 +221,12 @@ class Width {
     // this.searchDataWidthSelected(this.getWidthSelected(), this.getWidthSelectedIndex());
       // this.updatePriceWidth(this.getWidthSelectedIndex());
     chargingClass.hideShowchargin(true);
-    this.updateWidth();
-    this.updatePriceWidth();
-    this.updatePriceWidthIndividual(this.getWidthSelectedIndex());
     this.showSelectedWidth();
+    this.updateWidth();
+
+    this.updatePriceWidth();
+    this.updatePriceWidthIndividual();
+
     chargingClass.hideShowchargin(false);
   }
 

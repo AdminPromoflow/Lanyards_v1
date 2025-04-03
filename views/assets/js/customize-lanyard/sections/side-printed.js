@@ -291,7 +291,9 @@ class SidePrinted {
   searchDataSidePrintedSelected(sidePrinted, index) {
     this.setSidePrintedSelected(sidePrinted);
 
-    this.getPriceSidePrintedSelected(index);
+
+    this.setSidePrintedSelectedIndex(index);
+    this.getPriceSidePrintedSelected();
 
 
 
@@ -308,7 +310,16 @@ class SidePrinted {
 
   }
 
-  getPriceSidePrintedSelected(index){
+  setSidePrintedSelectedIndex(value) {
+    this.sidePrintedSelectedIndex = value;
+  }
+
+  getSidePrintedSelectedIndex() {
+      return this.sidePrintedSelectedIndex;
+  }
+
+  getPriceSidePrintedSelected(){
+    let index = this.getSidePrintedSelectedIndex();
     const priceDataSidePrinted = document.querySelectorAll(".priceDataSidePrinted");
 
 
