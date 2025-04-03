@@ -30,9 +30,14 @@ class Price {
         amountLanyards.value = this.value;
 
         priceClass.setAmountSelected(amountLanyardsRange.value);
-        material.updatePriceMaterial();
-        widthClass.updatePriceWidth();
-        colourClass.updatePriceColour();
+
+
+        material.refreshMaterial();
+        oneTwoEndsClass.refreshLanyardType();
+        widthClass.refreshWidth();
+        sidePrintedClass.refreshSidePrintedData();
+        colourClass.updateColourQuantity();
+        clipClass.updateClip();
 
       }
       else {
@@ -40,10 +45,14 @@ class Price {
         amountLanyards.value = 1;
 
         priceClass.setAmountSelected(amountLanyardsRange.value);
-        material.updatePriceMaterial();
-        widthClass.updatePriceWidth();
-        sidePrintedClass.updatePriceSidePrinted();
-        colourClass.updatePriceColour();
+
+
+        material.refreshMaterial();
+        oneTwoEndsClass.refreshLanyardType();
+        widthClass.refreshWidth();
+        sidePrintedClass.refreshSidePrintedData();
+        colourClass.updateColourQuantity();
+        clipClass.updateClip();
 
 
       }
