@@ -204,17 +204,12 @@ class ApiHandlerLoginGoogle
         echo json_encode(array("google_login" => false, "message" => "The user is not logged in", "logging_with_google" => $_SESSION['logging_with_google']));
         exit;
       }
-
     }
-
-
 }
 
 require_once '../../controller/assets/lib/composer/vendor/autoload.php';
 require_once '../../controller/users/register.php';
 require_once '../../controller/config/security.php';
-
-
 
 
 $apiHandlerLoginGoogle = new ApiHandlerLoginGoogle();

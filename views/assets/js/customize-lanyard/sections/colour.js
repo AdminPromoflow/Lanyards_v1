@@ -15,6 +15,8 @@ class ColourClass {
   createColour(){
       let priceDataColourResult = this.updateEachPriceColour();
 
+      alert(JSON.stringify(priceDataColourResult));
+
   //  let firstPrice = priceDataColourResult[0].price;
     containersBoxesColour.innerHTML = "";
     var sidePrintedSelected = sidePrintedClass.getSidePrintedSelected();
