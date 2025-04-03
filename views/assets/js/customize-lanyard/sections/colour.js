@@ -131,12 +131,8 @@ class ColourClass {
 
     this.updateColourQuantity();
     priceClass.changePricePerLanyard();
-
-
-
     previewColourClass.showSelectedPreviewtColour();
     this.getPriceClipSelected(index);
-
 
   //  colourSelectorClass.showColourSelector();
 
