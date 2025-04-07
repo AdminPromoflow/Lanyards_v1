@@ -33,7 +33,7 @@ class SidePrinted {
       const width = json[iSelectedMaterial].materials.width;
       const selectedWidth = widthClass.getWidthSelected();
       const iSelectedWidth = width.findIndex(w => w.width === selectedWidth);
-
+      alert(this.getSidePrintedSelected());
       if (iSelectedWidth !== -1) {
         const sidePrinted = json[iSelectedMaterial]?.materials?.width[iSelectedWidth]?.sidePrinted;
         const sidePrintedSelected = sidePrintedClass.getSidePrintedSelected();
@@ -45,6 +45,7 @@ class SidePrinted {
         } else if (iSelectedSidePrinted === -1) {  // Si el sidePrinted seleccionado no coincide con ninguno disponible
           this.setSidePrintedSelected(sidePrinted[0].noSides);  // Selecciona el primer sidePrinted disponible
           this.setSidePrintedSelectedIndex(0);
+
         }
       }
     }
