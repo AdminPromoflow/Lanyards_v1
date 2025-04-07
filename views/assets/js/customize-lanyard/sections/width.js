@@ -12,6 +12,7 @@ class Width {
   getWidthSelected() {
     return this.widthSelected;
   }
+
   setWidthSelectedIndex(value) {
     this.widthSelectedIndex = value;
   }
@@ -19,7 +20,6 @@ class Width {
   getWidthSelectedIndex() {
       return this.widthSelectedIndex;
   }
-
 
   setJsonWidth(jsonWidth) {
     this.jsonWidth = jsonWidth;
@@ -62,7 +62,6 @@ class Width {
       }
     }
   }
-
 
   updateWidth() {
       var json = customizeLanyard.getJsonLanyards();
@@ -124,6 +123,7 @@ class Width {
         }
     }
 }
+
   updatePriceWidth() {
       // Get the JSON lanyards data.
       var json = customizeLanyard.getJsonLanyards();

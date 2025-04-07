@@ -1,5 +1,6 @@
 // Define a class named Material.
 class Material {
+  
   // Constructor method for initializing the Material class.
   constructor() {
     // Initialize the materialSelected property to "Tubular".
@@ -292,6 +293,7 @@ class Material {
     this.getPriceDivsMaterialSelected();
 
   }
+
   getPriceDivsMaterialSelected(){
 
     const pricesDataMaterialElements = document.querySelectorAll('.pricesDataMaterial');
@@ -348,6 +350,7 @@ class Material {
       }
     });
   }
+
 }
 
 // Get the container element for materials by its ID.
