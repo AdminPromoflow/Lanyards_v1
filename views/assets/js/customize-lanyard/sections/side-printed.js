@@ -34,13 +34,14 @@ class SidePrinted {
       const selectedWidth = widthClass.getWidthSelected();
       const iSelectedWidth = width.findIndex(w => w.width === selectedWidth);
       if (iSelectedWidth !== -1) {
-        alert("Entre a width");
 
         const sidePrinted = json[iSelectedMaterial]?.materials?.width[iSelectedWidth]?.sidePrinted;
         const sidePrintedSelected = sidePrintedClass.getSidePrintedSelected();
         const iSelectedSidePrinted = sidePrinted.findIndex(s => s.noSides === sidePrintedSelected);
         // Cambiar la lógica para `sidePrinted`
         if (this.getSidePrintedSelected() === undefined) {  // Si no se ha seleccionado un sidePrinted
+          alert("Entre a undefined side printed");
+
           this.setSidePrintedSelectedIndex(0);
           this.setSidePrintedSelected(sidePrinted[0].noSides);  // Selecciona el primer sidePrinted disponible
         } else if (iSelectedSidePrinted === -1) {  // Si el sidePrinted seleccionado no coincide con ninguno disponible
