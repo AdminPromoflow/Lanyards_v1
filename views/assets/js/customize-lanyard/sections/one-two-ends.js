@@ -106,6 +106,7 @@ class OneTwoEnds {
   }
 
   refreshLanyardType(){
+    this.autoSelectLanyardType();
     this.updateLanyardType();
     this.showSelectedOneTwoEnds();
 

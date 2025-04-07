@@ -165,12 +165,12 @@ class SidePrinted {
 }
 
   refreshSidePrintedData(){
+    this.autoSelectSidePrinted();
     this.createSidePrinted();
     this.showSelectedSidePrinted();
     this.updateEachPriceSidePrinted();
     previewSidePrinted.showSelectedPreviewtTemplate();
     this.getPriceSidePrintedSelected();
-
   }
 
   updatePriceSidePrinted() {
