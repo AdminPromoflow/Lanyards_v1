@@ -311,6 +311,27 @@ class Material {
       }
   }
 
+  // Method to highlight the selected material by setting its border.
+  showSelectedMaterial() {
+      const containerBoxesMaterial = document.querySelectorAll(".container_boxes_material"); // Get all material container elements.
+      const material = this.getMaterialSelected(); // Get the selected material.
+
+      // Set the border of all material containers to transparent to reset previous selections.
+      containerBoxesMaterial.forEach(container => {
+        container.style.border = "2px solid transparent";
+      });
+
+      // Iterate through each material container to highlight the selected one.
+      containerBoxesMaterial.forEach(container => {
+        const dataMaterial = container.querySelector(".dataMaterial"); // Get the material name from the container.
+
+        // If the material matches the selected one, highlight its border with a white color.
+        if (dataMaterial.textContent === material) {
+          container.style.border = "2px solid white"; // Set the border to white for the selected material.
+        }
+      });
+  }
+
 
 /*  setOriginValuesAfteMaterial() {
     oneTwoEndsClass.autoSelectLanyardType();
@@ -331,26 +352,6 @@ class Material {
     }
 }*/
 
-// Method to highlight the selected material by setting its border.
-showSelectedMaterial() {
-    const containerBoxesMaterial = document.querySelectorAll(".container_boxes_material"); // Get all material container elements.
-    const material = this.getMaterialSelected(); // Get the selected material.
-
-    // Set the border of all material containers to transparent to reset previous selections.
-    containerBoxesMaterial.forEach(container => {
-      container.style.border = "2px solid transparent";
-    });
-
-    // Iterate through each material container to highlight the selected one.
-    containerBoxesMaterial.forEach(container => {
-      const dataMaterial = container.querySelector(".dataMaterial"); // Get the material name from the container.
-
-      // If the material matches the selected one, highlight its border with a white color.
-      if (dataMaterial.textContent === material) {
-        container.style.border = "2px solid white"; // Set the border to white for the selected material.
-      }
-    });
-}
 
 
 }
