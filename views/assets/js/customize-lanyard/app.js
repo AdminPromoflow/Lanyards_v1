@@ -306,6 +306,7 @@ class CustomizeLanyard {
 
    }
    openLanyardType(){
+     alert("309 app.js");
      previewAccessoriesClass.showAccessoriesPreview("flex");
      previewLanyardType.showTypeLanyardPreview("flex");
 
