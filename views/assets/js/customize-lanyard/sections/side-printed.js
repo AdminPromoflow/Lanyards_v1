@@ -51,7 +51,7 @@ class SidePrinted {
       }
 
     }
-    this.updatePriceSidePrinted();
+    //this.updatePriceSidePrinted();
   //  this.showSelectedSidePrinted();
   }
 
