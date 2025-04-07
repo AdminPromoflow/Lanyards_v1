@@ -84,7 +84,6 @@ class Home {
      */
     openLanyard() {
         // Set default amount and update material prices
-        material.setOriginValuesAfteMaterial();
 
         priceClass.setAmountSelected(1000);
 
