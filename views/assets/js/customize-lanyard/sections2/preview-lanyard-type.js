@@ -150,6 +150,7 @@ class PreviewLanyardType {
     }
   }
   showTypeLanyardPreview(action){
+    alert("hah");
     previewLanyardTypeContainer.style.display = action;
   }
 }

@@ -306,7 +306,6 @@ class CustomizeLanyard {
 
    }
    openLanyardType(){
-     alert("Que pasa!");
      previewAccessoriesClass.showAccessoriesPreview("flex");
      previewLanyardType.showTypeLanyardPreview("flex");
 
