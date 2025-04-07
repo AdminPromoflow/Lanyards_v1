@@ -3,8 +3,6 @@ class PreviewMaterial {
     //  this.showMaterialPreview("flex");
   }
   showSelectedPreviewtMaterial(data){
-
-    var data = material.getMaterialSelected();
     var json = customizeLanyard.getJsonLanyards();
     var materialSelected = data;
 
