@@ -305,9 +305,11 @@ class CustomizeLanyard {
      this.showPreview(false);
    }
    openLanyardType(){
-    // alert("309 app.js");
+    //
      previewAccessoriesClass.showAccessoriesPreview("flex");
      previewMaterial.showMaterialPreview("none");
+
+     alert("309 app.js");
 
      previewLanyardType.showSelectedPreviewtTemplate();
      previewLanyardType.showTypeLanyardPreview("flex");
