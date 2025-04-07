@@ -301,22 +301,19 @@ class CustomizeLanyard {
      previewMaterial.showMaterialPreview("flex");
      previewLanyardType.showTypeLanyardPreview("none");
      previewArtworkManualClass.showArtworkManualPreview("none");
-     this.showPreview(false);
      this.showCurrentSection(this.currentSectionOpen);
-
+     this.showPreview(false);
    }
    openLanyardType(){
-     alert("309 app.js");
+    // alert("309 app.js");
      previewAccessoriesClass.showAccessoriesPreview("flex");
+     previewMaterial.showMaterialPreview("none");
+
+     previewLanyardType.showSelectedPreviewtTemplate();
      previewLanyardType.showTypeLanyardPreview("flex");
 
-     previewMaterial.showMaterialPreview("none");
-     previewLanyardType.showSelectedPreviewtTemplate();
-
      this.showCurrentSection(this.currentSectionOpen);
-
      this.showPreview(true);
-
    }
    openWidth(){
      this.showCurrentSection(this.currentSectionOpen);

@@ -3,7 +3,7 @@ class PreviewLanyardType {
 
   }
   showSelectedPreviewtTemplate(){
-
+    alert("6 preview lanyard type.js");
     var typeLanyard = oneTwoEndsClass.getTypeLanyardSelected();
     var width = widthClass.getWidthSelected();
 
@@ -150,7 +150,6 @@ class PreviewLanyardType {
     }
   }
   showTypeLanyardPreview(action){
-    alert("hah");
     previewLanyardTypeContainer.style.display = action;
   }
 }
