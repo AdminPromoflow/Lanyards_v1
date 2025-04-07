@@ -40,17 +40,15 @@ class SidePrinted {
         const iSelectedSidePrinted = sidePrinted.findIndex(s => s.noSides === sidePrintedSelected);
         // Cambiar la lógica para `sidePrinted`
         if (this.getSidePrintedSelected() === undefined) {  // Si no se ha seleccionado un sidePrinted
-
+          this.setSidePrintedSelectedIndex(0);
           this.setSidePrintedSelected(sidePrinted[0].noSides);  // Selecciona el primer sidePrinted disponible
         } else if (iSelectedSidePrinted === -1) {  // Si el sidePrinted seleccionado no coincide con ninguno disponible
           this.setSidePrintedSelected(sidePrinted[0].noSides);  // Selecciona el primer sidePrinted disponible
+          this.setSidePrintedSelectedIndex(0);
         }
       }
     }
   }
-
-
-
 
   updateEachPriceSidePrinted() {
    var json = customizeLanyard.getJsonLanyards();
@@ -161,8 +159,6 @@ class SidePrinted {
    return priceDataSidePrintedResult; // Retorna la variable con los precios filtrados
 }
 
-
-
   refreshSidePrintedData(){
     this.createSidePrinted();
     this.showSelectedSidePrinted();
@@ -172,8 +168,7 @@ class SidePrinted {
 
   }
 
-
-   updatePriceSidePrinted() {
+  updatePriceSidePrinted() {
       // Get the JSON lanyards data.
       var json = customizeLanyard.getJsonLanyards();
 
@@ -271,6 +266,7 @@ class SidePrinted {
 
     containerBoxSidePrinted.innerHTML = "";
   }
+
   drawSidePrintedAvailable(data, index){
   // alert(JSON.stringify(data));
     var imgLink;
