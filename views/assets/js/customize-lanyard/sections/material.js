@@ -1,6 +1,6 @@
 // Define a class named Material.
 class Material {
-  
+
   // Constructor method for initializing the Material class.
   constructor() {
     // Initialize the materialSelected property to "Tubular".
@@ -268,30 +268,26 @@ class Material {
   searchDataMaterialSelected(materialSelected) {
     chargingClass.hideShowchargin(true); // Show loading animation.
 
-
     // Set the selected material.
     this.setMaterialSelected(materialSelected);
 
     // Refresh the material display and related components.
     this.refreshMaterial();
+
     oneTwoEndsClass.refreshLanyardType();
     widthClass.refreshWidth();
     sidePrintedClass.refreshSidePrintedData();
     colourClass.updateColourQuantity();
     clipClass.updateClip();
     priceClass.changePricePerLanyard();
-
   }
 
   // Method to refresh the selected material and its display.
   refreshMaterial(){
-    this.setOriginValuesAfteMaterial();
     this.showSelectedMaterial(); // Display the selected material.
-    this.updatePriceMaterial(); // Update the material prices.
-    previewMaterial.showSelectedPreviewtMaterial(this.getMaterialSelected()); // Show preview of selected material.
-    chargingClass.hideShowchargin(false); // Hide loading animation.
+    this.updatePriceMaterial(); // Update each of the material prices.
     this.getPriceDivsMaterialSelected();
-
+    previewMaterial.showSelectedPreviewtMaterial(this.getMaterialSelected()); // Show preview of selected material.
   }
 
   getPriceDivsMaterialSelected(){
@@ -311,7 +307,7 @@ class Material {
     }
   }
 
-  setOriginValuesAfteMaterial() {
+/*  setOriginValuesAfteMaterial() {
     oneTwoEndsClass.autoSelectLanyardType();
     widthClass.autoSelectWidth();
     sidePrintedClass.autoSelectSidePrinted();
@@ -328,7 +324,7 @@ class Material {
     } else {
         console.error("Material seleccionado no encontrado en el JSON.");
     }
-}
+}*/
 
   // Method to highlight the selected material by setting its border.
   showSelectedMaterial() {
