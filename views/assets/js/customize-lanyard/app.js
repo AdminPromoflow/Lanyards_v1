@@ -308,15 +308,11 @@ class CustomizeLanyard {
      previewAccessoriesClass.showAccessoriesPreview("flex");
      previewMaterial.showMaterialPreview("none");
 
-
-
-
      this.showCurrentSection(this.currentSectionOpen);
      this.showPreview(true);
-     
+
      previewLanyardType.showSelectedPreviewtTemplate();
      previewLanyardType.showTypeLanyardPreview("flex");
-     alert("309 app.js");
    }
    openWidth(){
      this.showCurrentSection(this.currentSectionOpen);
