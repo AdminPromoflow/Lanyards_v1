@@ -1,6 +1,5 @@
 class PreviewMaterial {
   constructor() {
-    //  this.showMaterialPreview("flex");
   }
   showSelectedPreviewtMaterial(data){
     var json = customizeLanyard.getJsonLanyards();

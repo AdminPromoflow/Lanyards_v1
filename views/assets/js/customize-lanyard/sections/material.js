@@ -266,46 +266,51 @@ class Material {
 
   // Method to search for a selected material and update the price.
   searchDataMaterialSelected(materialSelected) {
-    chargingClass.hideShowchargin(true); // Show loading animation.
+      // Set the selected material.
+      this.setMaterialSelected(materialSelected);
 
-    // Set the selected material.
-    this.setMaterialSelected(materialSelected);
+      // Refresh the material display and update related components.
+      this.refreshMaterial();
 
-    // Refresh the material display and related components.
-    this.refreshMaterial();
-
-    oneTwoEndsClass.refreshLanyardType();
-    widthClass.refreshWidth();
-    sidePrintedClass.refreshSidePrintedData();
-    colourClass.updateColourQuantity();
-    clipClass.updateClip();
-    priceClass.changePricePerLanyard();
+      oneTwoEndsClass.refreshLanyardType(); // Refresh the lanyard type selection.
+      widthClass.refreshWidth(); // Update the width of the material.
+      sidePrintedClass.refreshSidePrintedData(); // Refresh the side printed data.
+      colourClass.updateColourQuantity(); // Update the colour quantity for the material.
+      clipClass.updateClip(); // Update the clip settings for the material.
+      priceClass.changePricePerLanyard(); // Change the price per lanyard based on the selected material.
   }
+
 
   // Method to refresh the selected material and its display.
   refreshMaterial(){
-    this.showSelectedMaterial(); // Display the selected material.
-    this.updatePriceMaterial(); // Update each of the material prices.
-    this.getPriceDivsMaterialSelected();
-    previewMaterial.showSelectedPreviewtMaterial(this.getMaterialSelected()); // Show preview of selected material.
+      this.showSelectedMaterial(); // Display a line around the box where the material is selected.
+      this.updatePriceMaterial(); // Update all materials based on the selected prices.
+      this.getPriceDivsMaterialSelected(); // Update the main price for the selected material.
+      previewMaterial.showSelectedPreviewtMaterial(this.getMaterialSelected()); // Show preview of the selected material.
   }
 
   getPriceDivsMaterialSelected(){
 
-    const pricesDataMaterialElements = document.querySelectorAll('.pricesDataMaterial');
-    let dataMaterialElements = document.querySelectorAll('.dataMaterial');
-    let materialSelected = this.getMaterialSelected();
-    for (let i = 0; i < dataMaterialElements.length; i++) {
-      let material = dataMaterialElements[i].innerText;
-      if (material == materialSelected) {
-        let number = pricesDataMaterialElements[i].innerText;
-        let price = number.match(/\d+(\.\d+)?/)[0];
-        // Update the price class with the selected material's price.
-        priceClass.setPricePerMaterialWithAmount(price);
-        priceClass.changePricePerLanyard();
+      const pricesDataMaterialElements = document.querySelectorAll('.pricesDataMaterial'); // Get all elements with material prices.
+      let dataMaterialElements = document.querySelectorAll('.dataMaterial'); // Get all elements with material data.
+      let materialSelected = this.getMaterialSelected(); // Get the selected material.
+
+      // Loop through each material and find the selected one.
+      for (let i = 0; i < dataMaterialElements.length; i++) {
+        let material = dataMaterialElements[i].innerText; // Get the material name from the element.
+
+        // If the material matches the selected material, update the price.
+        if (material == materialSelected) {
+          let number = pricesDataMaterialElements[i].innerText; // Get the price associated with the selected material.
+          let price = number.match(/\d+(\.\d+)?/)[0]; // Extract the numeric value from the price string.
+
+          // Update the price class with the selected material's price.
+          priceClass.setPricePerMaterialWithAmount(price);
+          priceClass.changePricePerLanyard(); // Update the price per lanyard.
+        }
       }
-    }
   }
+
 
 /*  setOriginValuesAfteMaterial() {
     oneTwoEndsClass.autoSelectLanyardType();
@@ -326,26 +331,27 @@ class Material {
     }
 }*/
 
-  // Method to highlight the selected material by setting its border.
-  showSelectedMaterial() {
-    const containerBoxesMaterial = document.querySelectorAll(".container_boxes_material");
-    const material = this.getMaterialSelected();
+// Method to highlight the selected material by setting its border.
+showSelectedMaterial() {
+    const containerBoxesMaterial = document.querySelectorAll(".container_boxes_material"); // Get all material container elements.
+    const material = this.getMaterialSelected(); // Get the selected material.
 
-    // Set the border of all material containers to transparent.
+    // Set the border of all material containers to transparent to reset previous selections.
     containerBoxesMaterial.forEach(container => {
       container.style.border = "2px solid transparent";
     });
 
     // Iterate through each material container to highlight the selected one.
     containerBoxesMaterial.forEach(container => {
-      const dataMaterial = container.querySelector(".dataMaterial");
+      const dataMaterial = container.querySelector(".dataMaterial"); // Get the material name from the container.
 
-      // If the material matches the selected one, highlight the border.
+      // If the material matches the selected one, highlight its border with a white color.
       if (dataMaterial.textContent === material) {
-        container.style.border = "2px solid white";
+        container.style.border = "2px solid white"; // Set the border to white for the selected material.
       }
     });
-  }
+}
+
 
 }
 
