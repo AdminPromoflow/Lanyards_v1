@@ -66,7 +66,7 @@ class ClipClass {
 
   drawClipAvailable(data, index){
   //  alert(JSON.stringify(data));
-  var imgClip ;
+  var imgClip;
   if (oneTwoEndsClass.getTypeLanyardSelected() == "one-end") {
       imgClip = data["imgLinkOneEnd"];
   }
@@ -76,7 +76,7 @@ class ClipClass {
   else {
     imgClip = data["imgLinkOneEnd"];
   }
-  alert(imgClip);
+//  alert(imgClip);
 
 
   //alert(data["imgLinkTwoEnd"]);
@@ -84,7 +84,7 @@ class ClipClass {
     containers_boxes_clip.innerHTML +=
     '<div class="container_boxes_clip"  onclick="clipClass.searchDataClipSelected(\'' + data["name"]  + '\', \' '+ index +'  \');"  >' +
         '<h3 class="dataClip">'+data["name"]+' </h3>' +
-        '<img class="imgClip" src="../../'+imgClip+'" alt="">' +
+        '<img class="imgClip" src="../../views/assets/img/global/customize-lanyard/sections/clip/two-ends/dog_clip.png" alt="">' +
         '<h4 class="priceDataClip">+£'+data["price"]+' per unit</h4>' +
       '</div>'
     ;
