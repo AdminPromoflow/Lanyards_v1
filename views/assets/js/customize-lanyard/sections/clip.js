@@ -73,6 +73,7 @@ class ClipClass {
   else {
     imgClip = data["imgLinkTwoEnd"];
   }
+  alert(data["imgLinkTwoEnd"]);
 
     containers_boxes_clip.innerHTML +=
     '<div class="container_boxes_clip"  onclick="clipClass.searchDataClipSelected(\'' + data["name"]  + '\', \' '+ index +'  \');"  >' +
