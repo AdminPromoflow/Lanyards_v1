@@ -15,7 +15,7 @@ $clip_images = [
     "slide_clip.png"
 ];
 
-$img_path_base = "../../views/assets/img/global/customize-lanyard/sections/clip/";
+$img_path_base = "../../views/assets/img/global/customize-lanyard/sections/clip/one-end/";
 ?>
 
 <link rel="stylesheet" href="<?php echo $clip_css . '?v=' . clip_filemtime($clip_css); ?>">
