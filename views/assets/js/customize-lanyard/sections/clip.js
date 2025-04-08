@@ -70,7 +70,7 @@ class ClipClass {
   if (oneTwoEndsClass.getTypeLanyardSelected() == "one-end") {
       imgClip = data["imgLinkOneEnd"];
   }
-  else {
+  else if(oneTwoEndsClass.getTypeLanyardSelected() == "two-end") {
     imgClip = data["imgLinkTwoEnd"];
   }
   alert(data["imgLinkTwoEnd"]);
