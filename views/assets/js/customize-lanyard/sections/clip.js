@@ -76,6 +76,8 @@ class ClipClass {
   else {
     imgClip = data["imgLinkOneEnd"];
   }
+  alert(imgClip);
+
 
   //alert(data["imgLinkTwoEnd"]);
 
