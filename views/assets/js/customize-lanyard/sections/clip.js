@@ -64,31 +64,28 @@ class ClipClass {
 
 
 
-  drawClipAvailable(data, index){
-  //  alert(JSON.stringify(data));
-  var imgClip;
-  if (oneTwoEndsClass.getTypeLanyardSelected() == "one-end") {
+  drawClipAvailable(data, index) {
+    // Se obtiene la URL de la imagen dependiendo del tipo de lanyard seleccionado
+    var imgClip;
+    const typeLanyard = oneTwoEndsClass.getTypeLanyardSelected();
+
+    if (typeLanyard === "one-end") {
       imgClip = data["imgLinkOneEnd"];
-  }
-  else if(oneTwoEndsClass.getTypeLanyardSelected() == "two-end") {
-    imgClip = data["imgLinkTwoEnd"];
-  }
-  else {
-    imgClip = data["imgLinkOneEnd"];
-  }
-//  alert(imgClip);
+    } else if (typeLanyard === "two-end") {
+      imgClip = data["imgLinkTwoEnd"];
+    } else {
+      imgClip = data["imgLinkOneEnd"];
+    }
 
-
-  //alert(data["imgLinkTwoEnd"]);
-
+    // Se utiliza 'index' correctamente y se arreglan las comillas en el evento 'onclick'
     containers_boxes_clip.innerHTML +=
-    '<div class="container_boxes_clip"  onclick="clipClass.searchDataClipSelected(\'' + data["name"]  + '\', \' '+ index +'  \');"  >' +
-        '<h3 class="dataClip">'+data["name"]+' </h3>' +
-        '<img class="imgClip" src="../../views/assets/img/global/customize-lanyard/sections/clip/two-ends/dog_clip.png" alt="">' +
-        '<h4 class="priceDataClip">+£'+data["price"]+' per unit</h4>' +
-      '</div>'
-    ;
+      `<div class="container_boxes_clip" onclick="clipClass.searchDataClipSelected('${data["name"]}', '${index}');">
+        <h3 class="dataClip">${data["name"]}</h3>
+        <img class="imgClip" src="../../${imgClip}" alt="${data["name"]} clip image">
+        <h4 class="priceDataClip">+£${data["price"]} per unit</h4>
+      </div>`;
   }
+
   updateClip(){
     // Clean the clip options
     clipClass.cleanClip();
