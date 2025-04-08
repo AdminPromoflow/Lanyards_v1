@@ -7,10 +7,12 @@ $clip_css = "../../views/assets/css/global/customize-lanyard/sections/clip.css";
 $clip_js = "../../views/assets/js/customize-lanyard/sections/clip.js";
 
 $clip_images = [
-    "crab_hook.png",
-    "crocodile_clip.png",
     "dog_clip.png",
-    "dog_clip.png"
+    "swvel_clip.png",
+    "crocodile_clip.png",
+    "metal_j_hook.png",
+    "crab_hook.png",
+    "slide_clip.png"
 ];
 
 $img_path_base = "../../views/assets/img/global/customize-lanyard/sections/clip/";

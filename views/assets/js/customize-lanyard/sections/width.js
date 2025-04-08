@@ -87,8 +87,6 @@ class Width {
     //artworkPreviewClass.changeAllSettingsWidth();
 
 
-    //this.showSelectedWidth();
-    // this.updatePriceWidthIndividual(index);
     previewLanyardType.showSelectedPreviewtTemplate();
 
     material.refreshMaterial();
@@ -217,18 +215,11 @@ class Width {
   }
 
   refreshWidth(){
-  //  alert("indexSelected:" + this.getWidthSelectedIndex());
-  // alert(this.getWidthSelected() + this.getWidthSelectedIndex());
-    // this.searchDataWidthSelected(this.getWidthSelected(), this.getWidthSelectedIndex());
-      // this.updatePriceWidth(this.getWidthSelectedIndex());
-    chargingClass.hideShowchargin(true);
     this.updateWidth();
     this.autoSelectWidth();
     this.updatePriceWidth();
     this.showSelectedWidth();
     this.updatePriceWidthIndividual();
-
-    chargingClass.hideShowchargin(false);
   }
 
   cleanWidth(){

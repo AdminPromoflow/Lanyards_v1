@@ -280,7 +280,6 @@ class Material {
       priceClass.changePricePerLanyard(); // Change the price per lanyard based on the selected material.
   }
 
-
   // Method to refresh the selected material and its display.
   refreshMaterial(){
       this.showSelectedMaterial(); // Display a line around the box where the material is selected.
@@ -332,11 +331,7 @@ class Material {
       });
   }
 
-
 /*  setOriginValuesAfteMaterial() {
-
-
-
     var json = customizeLanyard.getJsonLanyards();
     var selectedMaterial = material.getMaterialSelected();
 
@@ -350,8 +345,6 @@ class Material {
         console.error("Material seleccionado no encontrado en el JSON.");
     }
 }*/
-
-
 
 }
 
