@@ -73,6 +73,7 @@ class ClipClass {
   else if(oneTwoEndsClass.getTypeLanyardSelected() == "two-end") {
     imgClip = data["imgLinkTwoEnd"];
   }
+
   alert(data["imgLinkTwoEnd"]);
 
     containers_boxes_clip.innerHTML +=
@@ -89,6 +90,8 @@ class ClipClass {
 
     // Get the available clip options
     let clipAvailable = clipClass.getDataClipAvailable();
+
+    alert(JSON.stringify(clipAvailable));
 
     // Iterate through the available clip options and draw them
     for (var i = 0; i < clipAvailable.length; i++) {

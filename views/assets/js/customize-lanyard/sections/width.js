@@ -80,12 +80,9 @@ class Width {
   }
 
   searchDataWidthSelected(width, index) {
-
     // Set the selected material.
     this.setWidthSelected(width);
     this.setWidthSelectedIndex(index);
-    //artworkPreviewClass.changeAllSettingsWidth();
-
 
     previewLanyardType.showSelectedPreviewtTemplate();
 
@@ -96,9 +93,6 @@ class Width {
     colourClass.updateColourQuantity();
     clipClass.updateClip();
     priceClass.changePricePerLanyard();
-
-  //  artworkClass.changeWidthRightPanel();
-
   }
 
   updatePriceWidthIndividual() {
