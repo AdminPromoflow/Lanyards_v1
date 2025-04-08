@@ -84,7 +84,7 @@ class ClipClass {
     containers_boxes_clip.innerHTML +=
     '<div class="container_boxes_clip"  onclick="clipClass.searchDataClipSelected(\'' + data["name"]  + '\', \' '+ index +'  \');"  >' +
         '<h3 class="dataClip">'+data["name"]+' </h3>' +
-        '<img class="imgClip" src="https://lanyardsforyou.com/assets/img/${imgClip}" alt="${data["name"]} clip image">' +
+        '<img class="imgClip" src="https://lanyardsforyou.com/assets/img/' + imgClip  + '" alt="">' +
         '<h4 class="priceDataClip">+£'+data["price"]+' per unit</h4>' +
       '</div>'
     ;
