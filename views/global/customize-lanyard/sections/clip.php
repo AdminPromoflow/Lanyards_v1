@@ -15,7 +15,7 @@ $clip_images = [
     "slide_clip.png"
 ];
 
-$img_path_base = "../../views/assets/img/global/customize-lanyard/sections/clip/one-end/";
+$img_path_base = "../../views/assets/img/global/customize-lanyard/sections/clip/";
 ?>
 
 <link rel="stylesheet" href="<?php echo $clip_css . '?v=' . clip_filemtime($clip_css); ?>">
@@ -27,14 +27,14 @@ $img_path_base = "../../views/assets/img/global/customize-lanyard/sections/clip/
   <br>
   <div id="containers_boxes_clip" class="containers_boxes_clip">
 
-    <?php foreach ($clip_images as $img) :
-        $img_path = $img_path_base . $img;
+    <!--<?php //foreach ($clip_images as $img) :
+      //  $img_path = $img_path_base . $img;
     ?>
       <div class="container_boxes_clip">
         <h3 class="priceDataClip">+£0 per unit</h3>
         <img class="imgClip" src="<?php echo $img_path . '?v=' . clip_filemtime($img_path); ?>" alt="">
       </div>
-    <?php endforeach; ?>
+    <?php //endforeach; ?>-->
 
   </div>
 </section>
