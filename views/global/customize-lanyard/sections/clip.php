@@ -6,16 +6,16 @@ function clip_filemtime($file) {
 $clip_css = "../../views/assets/css/global/customize-lanyard/sections/clip.css";
 $clip_js = "../../views/assets/js/customize-lanyard/sections/clip.js";
 
-$clip_images = [
+/*$clip_images = [
     "dog_clip.png",
     "swvel_clip.png",
     "crocodile_clip.png",
     "metal_j_hook.png",
     "crab_hook.png",
     "slide_clip.png"
-];
+];*/
 
-$img_path_base = "../../views/assets/img/global/customize-lanyard/sections/clip/";
+//$img_path_base = "../../views/assets/img/global/customize-lanyard/sections/clip/";
 ?>
 
 <link rel="stylesheet" href="<?php echo $clip_css . '?v=' . clip_filemtime($clip_css); ?>">
