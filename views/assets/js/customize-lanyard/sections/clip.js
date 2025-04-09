@@ -38,13 +38,9 @@ class ClipClass {
       var data = this.getDataClipAvailable();
       var existClip = false;
       data.forEach((element, i) => {
-        if (element["name"] == this.getClipSelected()) {
+        if (element["name"]+"" == this.getClipSelected()+"") {
           alert("bien");
           existClip = true;
-        }
-        else {
-          alert("re bien pero no");
-          existClip = false;
         }
       });
 
