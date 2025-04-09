@@ -30,6 +30,8 @@ class ClipClass {
 
     this.showSelectedClip();
 
+    this.getPriceClipSelected();
+
   }
 
   getDataClipAvailable(){
@@ -106,7 +108,7 @@ class ClipClass {
     '<div class="container_boxes_clip"  onclick="clipClass.searchDataClipSelected(\'' + data["name"]  + '\', \' '+ index +'  \');"  >' +
         '<h3 class="dataClip">'+data["name"]+' </h3>' +
         '<!--<img class="imgClip" src="https://lanyardsforyou.com/assets/img/' + imgClip  + '" alt="">-->' +
-        '<h4 class="priceDataClip">'+noClips+' +£'+ data["price"] +' per unit</h4>' +
+        '<h4 class="priceDataClip">+£'+ data["price"] +' per unit</h4>' +
       '</div>'
     ;
   }
@@ -132,8 +134,6 @@ class ClipClass {
   }
 
   searchDataClipSelected(data, index) {
-    alert("The index is:" + index);
-
     material.refreshMaterial();
     oneTwoEndsClass.refreshLanyardType();
     widthClass.refreshWidth();
@@ -142,7 +142,7 @@ class ClipClass {
 
     this.setClipSelected(data);
     this.setIndexClipSelected(index);
-    //this.getPriceClipSelected(index);
+    //
     this.refreshClip();
 
 
@@ -152,7 +152,9 @@ class ClipClass {
     previewClip.showPreviewSelectedClip(data);
   }
 
-  getPriceClipSelected(index){
+  getPriceClipSelected(){
+
+    var index = this.getIndexClipSelected();
     const priceDataClip = document.querySelectorAll(".priceDataClip");
 
     for (var i = 0; i < priceDataClip.length; i++) {
