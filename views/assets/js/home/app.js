@@ -92,7 +92,7 @@ class Home {
         widthClass.refreshWidth();
         sidePrintedClass.refreshSidePrintedData();
         colourClass.updateColourQuantity();
-        clipClass.updateClip();
+        clipClass.refreshClip();
 
 
         // Open the customization panel
@@ -115,7 +115,7 @@ class Home {
         widthClass.refreshWidth();
         sidePrintedClass.refreshSidePrintedData()
         colourClass.updateColourQuantity();
-        clipClass.updateClip();
+        clipClass.refreshClip();
 
 
 
