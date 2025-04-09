@@ -174,10 +174,8 @@ class ClipClass {
 
   showSelectedClip() {
       // Get the selected clip and convert it to a string
-      var data = clipClass.getClipSelected() + "";
-      // Select all elements with the class "container_boxes_clip"
-      const container_boxes_clip = document.querySelectorAll(".container_boxes_clip");
-      // Select all elements with the class "dataClip"
+    /*  var data = clipClass.getClipSelected() + "";
+          // Select all elements with the class "dataClip"
       const dataClip = document.querySelectorAll(".dataClip");
 
       // Initialize index to -1 to handle cases where no match is found
@@ -198,7 +196,12 @@ class ClipClass {
               index = i;
               break;
           }
-      }
+      }*/
+
+
+
+      // Select all elements with the class "container_boxes_clip"
+      const container_boxes_clip = document.querySelectorAll(".container_boxes_clip");
 
       // Iterate through all container_boxes_clip elements
       for (let i = 0; i < container_boxes_clip.length; i++) {
