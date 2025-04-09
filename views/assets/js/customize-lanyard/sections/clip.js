@@ -80,7 +80,7 @@ class ClipClass {
 
 
   drawClipAvailable(data, index){
-  //  alert(JSON.stringify(data));
+    alert(oneTwoEndsClass.getTypeLanyardSelected());
   var imgClip;
   var price;
   if (oneTwoEndsClass.getTypeLanyardSelected() == "one-end") {
