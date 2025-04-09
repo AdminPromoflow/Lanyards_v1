@@ -112,7 +112,7 @@ class ClipClass {
       '</div>'
     ;
   }
-  updateClip(){
+/*  updateClip(){
     // Clean the clip options
     clipClass.cleanClip();
 
@@ -124,7 +124,7 @@ class ClipClass {
     for (var i = 0; i < clipAvailable.length; i++) {
       clipClass.drawClipAvailable(clipAvailable[i], i);
     }
-  }
+  }*/
   getIndexClipSelected(){
     return this.indexClipSelected;
   }
