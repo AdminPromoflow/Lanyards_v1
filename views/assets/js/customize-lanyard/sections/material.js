@@ -275,7 +275,7 @@ class Material {
       widthClass.refreshWidth(); // Update the width of the material.
       sidePrintedClass.refreshSidePrintedData(); // Refresh the side printed data.
       colourClass.updateColourQuantity(); // Update the colour quantity for the material.
-      clipClass.updateClip(); // Update the clip settings for the material.
+      clipClass.refreshClip(); // Update the clip settings for the material.
       priceClass.changePricePerLanyard(); // Change the price per lanyard based on the selected material.
   }
 
