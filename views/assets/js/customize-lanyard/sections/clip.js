@@ -2,6 +2,7 @@ class ClipClass {
 
   constructor() {
     this.clipSelected = "dog_clip";
+    this.indexClipSelected = 0;
   }
 
   setClipSelected(value) {
@@ -122,6 +123,13 @@ class ClipClass {
       clipClass.drawClipAvailable(clipAvailable[i], i);
     }
   }
+  getIndexClipSelected(){
+    return this.indexClipSelected;
+  }
+  setIndexClipSelected(index){
+   this.indexClipSelected = index;
+
+  }
 
   searchDataClipSelected(data, index) {
     alert("The index is:" + index);
@@ -133,7 +141,8 @@ class ClipClass {
     colourClass.updateColourQuantity();
 
     this.setClipSelected(data);
-    this.getPriceClipSelected(index);
+    this.setIndexClipSelected(index);
+    //this.getPriceClipSelected(index);
     this.refreshClip();
 
 
@@ -202,7 +211,7 @@ class ClipClass {
 
       // Select all elements with the class "container_boxes_clip"
       const container_boxes_clip = document.querySelectorAll(".container_boxes_clip");
-    //  var index = this.
+      var index = this.getIndexClipSelected();
       // Iterate through all container_boxes_clip elements
       for (let i = 0; i < container_boxes_clip.length; i++) {
           // If the index matches, set a white border
