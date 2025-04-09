@@ -80,21 +80,21 @@ class ClipClass {
 
 
   drawClipAvailable(data, index){
-    alert(oneTwoEndsClass.getTypeLanyardSelected());
+  //  alert(oneTwoEndsClass.getTypeLanyardSelected());
   var imgClip;
-  var price;
+  var noClips;
   if (oneTwoEndsClass.getTypeLanyardSelected() == "one-end") {
       imgClip = data["imgLinkOneEnd"];
-      price = data["price"];
+      noClips = "";
   }
   else if(oneTwoEndsClass.getTypeLanyardSelected() == "two-end") {
     imgClip = data["imgLinkTwoEnd"];
-    price = data["price"]*2;
+    noClips = "2 *";
 
   }
   else {
     imgClip = data["imgLinkOneEnd"];
-    price = data["price"];
+    noClips = "";
   }
 //  alert(imgClip);
 
@@ -105,7 +105,7 @@ class ClipClass {
     '<div class="container_boxes_clip"  onclick="clipClass.searchDataClipSelected(\'' + data["name"]  + '\', \' '+ index +'  \');"  >' +
         '<h3 class="dataClip">'+data["name"]+' </h3>' +
         '<!--<img class="imgClip" src="https://lanyardsforyou.com/assets/img/' + imgClip  + '" alt="">-->' +
-        '<h4 class="priceDataClip">+£'+ price +' per unit</h4>' +
+        '<h4 class="priceDataClip">'+noClips+' +£'+ data["price"] +' per unit</h4>' +
       '</div>'
     ;
   }
