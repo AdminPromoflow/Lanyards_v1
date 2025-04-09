@@ -45,7 +45,7 @@ class Width {
     var existWidth = false;
     var index = 0;
 
-
+    alert(["width"]+" " + this.getWidthSelected()+" ");
     data.forEach((element, i) => {
       if (element["width"]+"" == this.getWidthSelected()+"") {
         existWidth = true;
@@ -346,7 +346,6 @@ class Width {
   showSelectedWidth(){
 
     var width = widthClass.getWidthSelected();
-    alert(width);
 
     const containerBoxesWidth = document.querySelectorAll(".container_boxes_width");
 
