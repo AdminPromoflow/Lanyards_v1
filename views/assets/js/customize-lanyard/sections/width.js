@@ -160,7 +160,7 @@ class Width {
       priceDataWidthFinal.push({
            width: element.width,
            imgLink: element.imgLink,
-           price: element.price - firstPrice
+           price: (element.price - firstPrice).toFixed(2)
         }
       )
     });
