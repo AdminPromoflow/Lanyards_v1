@@ -346,6 +346,7 @@ class Width {
   showSelectedWidth(){
 
     var width = widthClass.getWidthSelected();
+    alert(width);
 
     const containerBoxesWidth = document.querySelectorAll(".container_boxes_width");
 
