@@ -151,6 +151,21 @@ class Width {
         }
     }
 
+    let priceDataWidthFinal = [];
+    priceDataWidthFinal.length = 0;
+    var firstPrice = priceDataWidthResult[0]["price"];
+
+    priceDataWidthResult.forEach((element, i) => {
+
+      priceDataWidthFinal.push({
+           width: element.width,
+           imgLink: element.imgLink,
+           price: element.price - firstPrice
+        }
+      )
+    });
+
+
     return priceDataWidthResult;
 
   }
