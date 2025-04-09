@@ -99,8 +99,7 @@ class OneTwoEnds {
     priceClass.setPriceLanyardType(priceLanyardType);
     priceClass.changePricePerLanyard();
 
-    clipClass.updateClip(); // Update the clip settings for the material.
-
+    clipClass.refreshClip(); // Update the clip settings for the material.
 
     previewLanyardType.showSelectedPreviewtTemplate();
   }

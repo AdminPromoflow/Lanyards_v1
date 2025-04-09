@@ -16,6 +16,21 @@ class ClipClass {
     containers_boxes_clip.innerHTML = "";
   }
 
+  refreshClip(){
+    this.cleanClip();
+
+    // Get the available clip options
+    let clipAvailable = this.getDataClipAvailable();
+
+    // Iterate through the available clip options and draw them
+    for (var i = 0; i < clipAvailable.length; i++) {
+      this.drawClipAvailable(clipAvailable[i], i);
+    }
+
+    this.showSelectedClip();
+
+  }
+
   getDataClipAvailable(){
       var json = customizeLanyard.getJsonLanyards();
       var materialSelected = material.getMaterialSelected();
@@ -67,14 +82,19 @@ class ClipClass {
   drawClipAvailable(data, index){
   //  alert(JSON.stringify(data));
   var imgClip;
+  var price;
   if (oneTwoEndsClass.getTypeLanyardSelected() == "one-end") {
       imgClip = data["imgLinkOneEnd"];
+      price = data["price"];
   }
   else if(oneTwoEndsClass.getTypeLanyardSelected() == "two-end") {
     imgClip = data["imgLinkTwoEnd"];
+    price = data["price"]*2;
+
   }
   else {
     imgClip = data["imgLinkOneEnd"];
+    price = data["price"];
   }
 //  alert(imgClip);
 
@@ -112,11 +132,13 @@ class ClipClass {
     sidePrintedClass.refreshSidePrintedData();
     colourClass.updateColourQuantity();
 
-    clipClass.setClipSelected(data);
-    this.updateClip();
+    this.setClipSelected(data);
+    this.getPriceClipSelected(index);
+    this.refreshClip();
 
-    clipClass.showSelectedClip();
-    clipClass.getPriceClipSelected(index);
+
+
+
     priceClass.setAmountSelected(priceClass.getAmountSelected());
     previewClip.showPreviewSelectedClip(data);
   }
