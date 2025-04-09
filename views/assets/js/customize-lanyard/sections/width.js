@@ -166,7 +166,7 @@ class Width {
     });
 
 
-    return priceDataWidthResult;
+    return priceDataWidthFinal;
 
   }
 
