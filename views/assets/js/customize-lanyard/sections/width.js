@@ -41,7 +41,21 @@ class Width {
   }
 
   autoSelectWidth() {
-    const json = customizeLanyard.getJsonLanyards();  // Get the lanyard JSON data
+    var data = this.getDataWidthAvalaible();
+    var existWidth = false;
+    var index = 0;
+
+    alert(JSON.stringify(data));
+
+    /*data.forEach((element, i) => {
+      if (element["name"]+"" == this.getClipSelected()+"") {
+        existWidth = true;
+        index = i;
+      }
+    });*/
+
+
+  /*  const json = customizeLanyard.getJsonLanyards();  // Get the lanyard JSON data
     const selectedMaterial = material.getMaterialSelected();  // Get the selected material
     const i = json.findIndex(item => item.materials.material === selectedMaterial);  // Find the index of the selected material
 
@@ -60,7 +74,17 @@ class Width {
         this.searchDataWidthSelected(width[0].width, 0);
         this.setWidthSelectedIndex(0);
       }
-    }
+    }*/
+  }
+
+  getDataWidthAvalaible(){
+    var json = customizeLanyard.getJsonLanyards();
+    var materialSelected = material.getMaterialSelected();
+
+    // Busca el material seleccionado y obtiene la lista de width
+    var data = json.find(item => item.materials.material === materialSelected)?.materials.width || [];
+
+    return data;
   }
 
   updateWidth() {
@@ -209,11 +233,12 @@ class Width {
   }
 
   refreshWidth(){
-    this.updateWidth();
+    this.cleanWidth();
     this.autoSelectWidth();
+  /*  this.updateWidth();
     this.updatePriceWidth();
     this.showSelectedWidth();
-    this.updatePriceWidthIndividual();
+    this.updatePriceWidthIndividual();*/
   }
 
   cleanWidth(){
