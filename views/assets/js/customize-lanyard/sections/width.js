@@ -332,9 +332,10 @@ class Width {
     for (var i = 0; i < widthAvailable.length; i++) {
       this.drawWidthAvailable(widthAvailable[i], i);
     }
+    this.showSelectedWidth();
+
   /*  this.updateWidth();
     this.updatePriceWidth();
-    this.showSelectedWidth();
     this.updatePriceWidthIndividual();*/
   }
 

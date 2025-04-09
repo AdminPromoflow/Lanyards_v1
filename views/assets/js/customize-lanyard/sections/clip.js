@@ -149,7 +149,6 @@ class ClipClass {
   }
   setIndexClipSelected(index){
    this.indexClipSelected = index;
-
   }
 
   searchDataClipSelected(data, index) {
