@@ -45,7 +45,7 @@ class Width {
     var existWidth = false;
     var index = 0;
 
-    alert(["width"]+" " + this.getWidthSelected()+" ");
+    alert(element["width"]+" " + this.getWidthSelected()+" ");
     data.forEach((element, i) => {
       if (element["width"]+"" == this.getWidthSelected()+"") {
         existWidth = true;
