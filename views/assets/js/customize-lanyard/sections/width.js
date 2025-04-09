@@ -29,13 +29,13 @@ class Width {
    return this.jsonWidth;
  }
 
-  createWidth(data, index){
+  drawWidthAvailable(data, index){
 
     containersBoxesWidth.innerHTML +=
         '<div class="container_boxes_width"   onclick="widthClass.searchDataWidthSelected(\'' + data['width']  + '\', \' '+ index +'  \');">'+
           '<img src="../../'+data["imgLink"]+'" alt="">'+
           '<h4 class="dataWidth">'+data["width"]+'</h4>'+
-          '<h3 class="priceDataWidth">+£0 per unit</h3>'+
+          '<h3 class="priceDataWidth">+£'+data["price"]+' per unit</h3>'+
         '</div>'
     ;
   }
@@ -45,14 +45,22 @@ class Width {
     var existWidth = false;
     var index = 0;
 
-    alert(JSON.stringify(data));
 
-    /*data.forEach((element, i) => {
-      if (element["name"]+"" == this.getClipSelected()+"") {
+    data.forEach((element, i) => {
+      if (element["width"]+"" == this.getWidthSelected()+"") {
         existWidth = true;
         index = i;
       }
-    });*/
+    });
+
+    if (existWidth) {
+      this.setIndexClipSelected(index);
+    }
+    else {
+      this.setIndexClipSelected(0);
+    }
+
+
 
 
   /*  const json = customizeLanyard.getJsonLanyards();  // Get the lanyard JSON data
@@ -318,6 +326,12 @@ class Width {
   refreshWidth(){
     this.cleanWidth();
     this.autoSelectWidth();
+
+    let widthAvailable = this.getDataWidthAvalaible();
+    // Iterate through the available clip options and draw them
+    for (var i = 0; i < widthAvailable.length; i++) {
+      this.drawWidthAvailable(widthAvailable[i], i);
+    }
   /*  this.updateWidth();
     this.updatePriceWidth();
     this.showSelectedWidth();
