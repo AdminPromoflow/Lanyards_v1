@@ -106,7 +106,8 @@ class OneTwoEnds {
 
   }
   initializeValues(){
-    
+    clipClass.setIndexClipSelected(0);
+
   }
   cleanOneTwoEnds(){
     containersBoxesOneTwoEnds.innerHTML = "";
