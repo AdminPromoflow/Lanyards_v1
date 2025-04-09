@@ -47,14 +47,12 @@ class Width {
 
     data.forEach((element, i) => {
       if (element["width"]+"" == this.getWidthSelected()+"") {
-      //  alert(element["width"]+" " + this.getWidthSelected()+" ");
 
         existWidth = true;
         index = i;
       }
     });
 
-    alert(existWidth);
 
     if (existWidth) {
       this.setWidthSelectedIndex(index);
@@ -354,14 +352,14 @@ class Width {
 
     const dataWidth = document.querySelectorAll(".dataWidth");
 
-    var index;
+    var index = this.getWidthSelectedIndex();
 
-   for (var i = 0; i < dataWidth.length; i++) {
+   /*for (var i = 0; i < dataWidth.length; i++) {
 
      if (dataWidth[i].textContent == width) {
        index = i;
      }
-   }
+   }*/
 
     for (var i = 0; i < containerBoxesWidth.length; i++) {
       if (index == i) {
