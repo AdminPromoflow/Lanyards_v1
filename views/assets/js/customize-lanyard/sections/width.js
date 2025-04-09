@@ -78,13 +78,46 @@ class Width {
   }
 
   getDataWidthAvalaible(){
+    // Suponiendo que ya tienes estos valores
     var json = customizeLanyard.getJsonLanyards();
     var materialSelected = material.getMaterialSelected();
+    var amountSelected = priceClass.getAmountSelected();
 
-    // Busca el material seleccionado y obtiene la lista de width
+    // Busca el material seleccionado y obtiene la lista de widths
     var data = json.find(item => item.materials.material === materialSelected)?.materials.width || [];
 
-    return data;
+    // Filtra el ancho (width) seleccionado y obtiene los valores de precio según el amountSelected
+    var result = data.map(widthItem => {
+      return widthItem.sidePrinted.flatMap(side => {
+        return side.noColours.flatMap(colour => {
+          // Filtramos el precio que esté dentro del rango de amountSelected
+          const validAmounts = colour.amount.filter(amountRange => {
+            const amount = parseInt(amountSelected, 10); // Aseguramos que el amountSelected sea un número
+            return amount >= parseInt(amountRange['min-amount'], 10) && amount <= parseInt(amountRange['max-amount'], 10);
+          });
+
+          if (validAmounts.length > 0) {
+            // Si hay precios dentro del rango, los devolvemos
+            return validAmounts.map(filteredAmount => ({
+              width: widthItem.width,
+              imgLink: widthItem.imgLink,
+              price: filteredAmount.price
+            }));
+          } else {
+            // Si no hay precios dentro del rango, tomamos el precio del último rango
+            const lastAmountRange = colour.amount[colour.amount.length - 1];
+            return [{
+              width: widthItem.width,
+              imgLink: widthItem.imgLink,
+              price: lastAmountRange.price
+            }];
+          }
+        });
+      });
+    }).flat();
+
+    return result;
+
   }
 
   updateWidth() {
