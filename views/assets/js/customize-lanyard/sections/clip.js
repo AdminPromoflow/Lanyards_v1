@@ -18,11 +18,12 @@ class ClipClass {
   }
 
   refreshClip(){
+
     this.cleanClip();
+    this.autoSelectClip();
 
     // Get the available clip options
     let clipAvailable = this.getDataClipAvailable();
-
     // Iterate through the available clip options and draw them
     for (var i = 0; i < clipAvailable.length; i++) {
       this.drawClipAvailable(clipAvailable[i], i);
