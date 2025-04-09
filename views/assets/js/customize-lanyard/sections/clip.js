@@ -34,6 +34,10 @@ class ClipClass {
 
   }
 
+  autoSelectClip(){
+      var data = this.getDataClipAvailable();
+      alert(JSON.stringify(data));
+  }
   getDataClipAvailable(){
       var json = customizeLanyard.getJsonLanyards();
       var materialSelected = material.getMaterialSelected();

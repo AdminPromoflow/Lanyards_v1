@@ -106,7 +106,8 @@ class OneTwoEnds {
 
   }
   initializeValues(){
-    clipClass.setIndexClipSelected(0);
+    clipClass.autoSelectClip();
+
 
   }
   cleanOneTwoEnds(){
