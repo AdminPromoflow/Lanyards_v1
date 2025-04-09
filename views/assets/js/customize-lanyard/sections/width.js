@@ -54,10 +54,10 @@ class Width {
     });
 
     if (existWidth) {
-      this.setIndexClipSelected(index);
+      this.setWidthSelectedIndex(index);
     }
     else {
-      this.setIndexClipSelected(0);
+      this.setWidthSelectedIndex(0);
     }
 
 
