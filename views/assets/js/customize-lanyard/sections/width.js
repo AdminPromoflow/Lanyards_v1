@@ -56,9 +56,11 @@ class Width {
 
     if (existWidth) {
       this.setWidthSelectedIndex(index);
+
     }
     else {
       this.setWidthSelectedIndex(0);
+      this.setWidthSelected("10mm");
     }
 
 
