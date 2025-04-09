@@ -124,7 +124,7 @@ class ClipClass {
   }
 
   searchDataClipSelected(data, index) {
-
+    alert("The index is:" + index);
 
     material.refreshMaterial();
     oneTwoEndsClass.refreshLanyardType();
@@ -202,7 +202,7 @@ class ClipClass {
 
       // Select all elements with the class "container_boxes_clip"
       const container_boxes_clip = document.querySelectorAll(".container_boxes_clip");
-
+    //  var index = this.
       // Iterate through all container_boxes_clip elements
       for (let i = 0; i < container_boxes_clip.length; i++) {
           // If the index matches, set a white border
