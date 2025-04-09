@@ -86,6 +86,9 @@ class Home {
         // Set default amount and update material prices
 
         priceClass.setAmountSelected(1000);
+        widthClass.setWidthSelected("10mm");
+
+
 
         material.refreshMaterial();
         oneTwoEndsClass.refreshLanyardType();
