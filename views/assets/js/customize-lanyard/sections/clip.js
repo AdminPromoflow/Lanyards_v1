@@ -36,12 +36,19 @@ class ClipClass {
 
   autoSelectClip(){
       var data = this.getDataClipAvailable();
+      var existClip = false;
       data.forEach((element, i) => {
-        alert(element["name"]);
-
+        if (element["name"] == this.getClipSelected()) {
+          alert("bien");
+          existClip = true;
+        }
+        else {
+          alert("re bien pero no");
+          existClip = false;
+        }
       });
 
-      alert(JSON.stringify(data));
+      alert(existClip);
   }
   getDataClipAvailable(){
       var json = customizeLanyard.getJsonLanyards();
