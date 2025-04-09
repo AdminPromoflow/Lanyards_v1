@@ -78,45 +78,86 @@ class Width {
   }
 
   getDataWidthAvalaible(){
-    // Suponiendo que ya tienes estos valores
+    // Get the JSON lanyards data.
     var json = customizeLanyard.getJsonLanyards();
+
+    // Get the selected material.
     var materialSelected = material.getMaterialSelected();
+
+    // Get the selected amount.
     var amountSelected = priceClass.getAmountSelected();
 
-    // Busca el material seleccionado y obtiene la lista de widths
-    var data = json.find(item => item.materials.material === materialSelected)?.materials.width || [];
+    // Ensure the priceDataWidthResult array is empty before use.
+    let priceDataWidthResult = [];
+    priceDataWidthResult.length = 0; // Clear if it contains previous data.
 
-    // Filtra el ancho (width) seleccionado y obtiene los valores de precio según el amountSelected
-    var result = data.map(widthItem => {
-      return widthItem.sidePrinted.flatMap(side => {
-        return side.noColours.flatMap(colour => {
-          // Filtramos el precio que esté dentro del rango de amountSelected
-          const validAmounts = colour.amount.filter(amountRange => {
-            const amount = parseInt(amountSelected, 10); // Aseguramos que el amountSelected sea un número
-            return amount >= parseInt(amountRange['min-amount'], 10) && amount <= parseInt(amountRange['max-amount'], 10);
-          });
+    // Filter the data for the selected material.
+    var jsonMaterial = json.find(item => item.materials.material === materialSelected);
+    if (!jsonMaterial) return; // Exit if the material is not found.
 
-          if (validAmounts.length > 0) {
-            // Si hay precios dentro del rango, los devolvemos
-            return validAmounts.map(filteredAmount => ({
-              width: widthItem.width,
-              imgLink: widthItem.imgLink,
-              price: filteredAmount.price
-            }));
-          } else {
-            // Si no hay precios dentro del rango, tomamos el precio del último rango
-            const lastAmountRange = colour.amount[colour.amount.length - 1];
-            return [{
-              width: widthItem.width,
-              imgLink: widthItem.imgLink,
-              price: lastAmountRange.price
-            }];
-          }
-        });
-      });
-    }).flat();
+    const widths = jsonMaterial.materials.width; // Get available widths.
 
-    return result;
+    // Iterate through the widths of the selected material.
+    for (let j = 0; j < widths.length; j++) {
+        const width = widths[j].width; // Store each width.
+
+        // Get the first noSides (position 0).
+        const sidePrinted = widths[j].sidePrinted;
+        if (!sidePrinted || sidePrinted.length === 0) continue; // Skip if there is no data.
+        const noSides = sidePrinted[0].noSides; // Use only the first position (minimum).
+
+        // Get the first noColours (position 0) within the first noSides.
+        const noColours = sidePrinted[0].noColours;
+        if (!noColours || noColours.length === 0) continue; // Skip if there is no data.
+        const noColour = noColours[0].noColour; // Use only the first position (minimum).
+
+        // Get the values of minAmount, maxAmount, and price within the first noColour.
+        const amounts = noColours[0].amount;
+        if (!amounts || amounts.length === 0) continue; // Skip if there is no data.
+
+        let priceCaptured = false; // Flag to avoid duplicates.
+
+        for (let m = 0; m < amounts.length; m++) {
+            const minAmount = Number(amounts[m]['min-amount']);
+            const maxAmount = Number(amounts[m]['max-amount']);
+            const price = Number(amounts[m].price);
+
+            // If amountSelected is within the minAmount - maxAmount range, store it.
+            if (amountSelected >= minAmount && amountSelected <= maxAmount) {
+                priceDataWidthResult.push({
+                    width,
+                    noSides,
+                    noColour,
+                    minAmount,
+                    amountSelected,
+                    maxAmount,
+                    price
+                });
+                priceCaptured = true; // Mark that the correct price has been captured.
+                break; // Stop iterating once the correct price is found.
+            }
+        }
+
+        // If amountSelected is greater than all available ranges, capture the highest interval price.
+        if (!priceCaptured) {
+            let highestIndex = amounts.length - 1; // Last index.
+            let highestMinAmount = Number(amounts[highestIndex]['min-amount']);
+            let highestMaxAmount = Number(amounts[highestIndex]['max-amount']);
+            let highestPrice = Number(amounts[highestIndex].price);
+
+            priceDataWidthResult.push({
+                width,
+                noSides,
+                noColour,
+                minAmount: highestMinAmount,
+                amountSelected,
+                maxAmount: highestMaxAmount,
+                price: highestPrice
+            });
+        }
+    }
+
+    return priceDataWidthResult;
 
   }
 
