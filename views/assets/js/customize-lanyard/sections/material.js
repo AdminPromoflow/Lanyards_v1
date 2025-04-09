@@ -271,7 +271,6 @@ class Material {
 
       // Refresh the material display and update related components.
       this.refreshMaterial();
-
       oneTwoEndsClass.refreshLanyardType(); // Refresh the lanyard type selection.
       widthClass.refreshWidth(); // Update the width of the material.
       sidePrintedClass.refreshSidePrintedData(); // Refresh the side printed data.

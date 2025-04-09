@@ -95,10 +95,13 @@ class OneTwoEnds {
 
     oneTwoEndsClass.setTypeLanyardSelected(typeLanyardType);
     oneTwoEndsClass.showSelectedOneTwoEnds();
-    previewLanyardType.showSelectedPreviewtTemplate();
 
     priceClass.setPriceLanyardType(priceLanyardType);
-    priceClass.changePricePerLanyard()
+    priceClass.changePricePerLanyard();
+
+    clipClass.updateClip(); // Update the clip settings for the material.
+
+
     previewLanyardType.showSelectedPreviewtTemplate();
   }
   cleanOneTwoEnds(){
