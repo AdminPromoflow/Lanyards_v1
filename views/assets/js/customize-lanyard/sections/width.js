@@ -100,6 +100,8 @@ class Width {
     // Iterate through the widths of the selected material.
     for (let j = 0; j < widths.length; j++) {
         const width = widths[j].width; // Store each width.
+        const imgLink = widths[j].imgLink; // Store each width.
+
 
         // Get the first noSides (position 0).
         const sidePrinted = widths[j].sidePrinted;
@@ -126,6 +128,7 @@ class Width {
             if (amountSelected >= minAmount && amountSelected <= maxAmount) {
                 priceDataWidthResult.push({
                     width,
+                    imgLink,
                     price
                 });
                 priceCaptured = true; // Mark that the correct price has been captured.
@@ -142,6 +145,7 @@ class Width {
 
             priceDataWidthResult.push({
                 width,
+                imgLink,
                 price: highestPrice
             });
         }
