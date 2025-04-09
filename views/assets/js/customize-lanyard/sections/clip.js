@@ -36,6 +36,11 @@ class ClipClass {
 
   autoSelectClip(){
       var data = this.getDataClipAvailable();
+      data.forEach((element, i) => {
+        alert(element["name"]);
+
+      });
+
       alert(JSON.stringify(data));
   }
   getDataClipAvailable(){
