@@ -126,11 +126,6 @@ class Width {
             if (amountSelected >= minAmount && amountSelected <= maxAmount) {
                 priceDataWidthResult.push({
                     width,
-                    noSides,
-                    noColour,
-                    minAmount,
-                    amountSelected,
-                    maxAmount,
                     price
                 });
                 priceCaptured = true; // Mark that the correct price has been captured.
@@ -147,11 +142,6 @@ class Width {
 
             priceDataWidthResult.push({
                 width,
-                noSides,
-                noColour,
-                minAmount: highestMinAmount,
-                amountSelected,
-                maxAmount: highestMaxAmount,
                 price: highestPrice
             });
         }
