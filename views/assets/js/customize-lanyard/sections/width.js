@@ -47,12 +47,14 @@ class Width {
 
     data.forEach((element, i) => {
       if (element["width"]+"" == this.getWidthSelected()+"") {
-        alert(element["width"]+" " + this.getWidthSelected()+" ");
+      //  alert(element["width"]+" " + this.getWidthSelected()+" ");
 
         existWidth = true;
         index = i;
       }
     });
+
+    alert(existWidth);
 
     if (existWidth) {
       this.setWidthSelectedIndex(index);
