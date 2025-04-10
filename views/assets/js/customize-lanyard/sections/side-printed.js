@@ -143,7 +143,7 @@ class SidePrinted {
     for (var i = 0; i < sidePrintedAvailable.length; i++) {
       this.drawSidePrintedAvailable(sidePrintedAvailable[i], i);
     }
-    
+
     this.showSelectedSidePrinted();
     this.updatePriceSidePrintedIndividual();
     previewSidePrinted.showSelectedPreviewtTemplate();
@@ -268,7 +268,7 @@ class SidePrinted {
     widthClass.refreshWidth();
 
     this.refreshSidePrintedData()
-    colourClass.updateColourQuantity();
+    colourClass.refreshColourQuantity();
     clipClass.updateClip();
     priceClass.changePricePerLanyard();
 

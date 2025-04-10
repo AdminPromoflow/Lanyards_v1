@@ -94,7 +94,7 @@ class Home {
         oneTwoEndsClass.refreshLanyardType();
         widthClass.refreshWidth();
         sidePrintedClass.refreshSidePrintedData();
-        colourClass.updateColourQuantity();
+        colourClass.refreshColourQuantity();
         clipClass.refreshClip();
 
 
@@ -117,7 +117,7 @@ class Home {
         oneTwoEndsClass.refreshLanyardType();
         widthClass.refreshWidth();
         sidePrintedClass.refreshSidePrintedData()
-        colourClass.updateColourQuantity();
+        colourClass.refreshColourQuantity();
         clipClass.refreshClip();
 
 

@@ -208,7 +208,7 @@ class Width {
     oneTwoEndsClass.refreshLanyardType();
     this.refreshWidth();
     sidePrintedClass.refreshSidePrintedData()
-    colourClass.updateColourQuantity();
+    colourClass.refreshColourQuantity();
     clipClass.refreshClip();
     priceClass.changePricePerLanyard();
   }
