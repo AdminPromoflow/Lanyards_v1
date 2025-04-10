@@ -210,7 +210,7 @@ getDataColourQuantityAvalaible() {
 
 
   searchDataColourSelected(coloursQuantity, index){
-    alert("buenas");
+
     this.setColourSelected(coloursQuantity);
 
     this.setColourSelectedIndex(index);
@@ -241,6 +241,7 @@ getDataColourQuantityAvalaible() {
       return this.colourSelectedIndex;
   }
   refreshColourQuantity(){
+    alert("Entramos 1");
     this.cleanColourQuantity();
     this.autoSelectColourQuantity();
 
