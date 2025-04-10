@@ -269,10 +269,12 @@ class SidePrinted {
       const priceDataSidePrinted = document.querySelectorAll(".priceDataSidePrinted");
 
       // Update the price display for each element.
-      for (var i = 0; i < priceDataSidePrinted.length; i++) {
+    /*  for (var i = 0; i < priceDataSidePrinted.length; i++) {
           let totalPriceSidePrinted = priceDataSidePrintedResult[i].price - priceDataSidePrintedResult[0].price;
           priceDataSidePrinted[i].innerHTML = "£" + Math.abs(totalPriceSidePrinted.toFixed(2)) + " per unit.";
-      }
+      }*/
+
+      return priceDataSidePrintedResult;
   }
 
   cleanSidePrinted(){
