@@ -10,18 +10,7 @@ class SidePrinted {
   getSidePrintedSelected() {
     return this.sidePrintedSelected;
   }
-  createSidePrinted(){
 
-    // Clean the side printed options
-
-
-    // Get the available side printed options
-    let sidePrintedAvailable = this.updateEachPriceSidePrinted();
-    // Iterate through the available side printed options and draw them
-    for (var i = 0; i < sidePrintedAvailable.length; i++) {
-      this.drawSidePrintedAvailable(sidePrintedAvailable[i], i);
-    }
-  }
 
   autoSelectSidePrinted() {
     var data = this.getDataSidePrintedAvalaible();
@@ -155,7 +144,13 @@ class SidePrinted {
       this.drawSidePrintedAvailable(sidePrintedAvailable[i], i);
     }
 
-  /*  this.createSidePrinted();
+    this.showSelectedSidePrinted();
+    this.updatePriceSidePrintedIndividual();
+
+
+    previewSidePrinted.showSelectedPreviewtTemplate();
+
+  /*
     this.showSelectedSidePrinted();
     this.updateEachPriceSidePrinted();
     previewSidePrinted.showSelectedPreviewtTemplate();
@@ -297,7 +292,7 @@ class SidePrinted {
       return this.sidePrintedSelectedIndex;
   }
 
-  getPriceSidePrintedSelected(){
+  updatePriceSidePrintedIndividual(){
     let index = this.getSidePrintedSelectedIndex();
     const priceDataSidePrinted = document.querySelectorAll(".priceDataSidePrinted");
 
