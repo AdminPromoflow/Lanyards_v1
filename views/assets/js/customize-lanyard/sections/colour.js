@@ -217,13 +217,12 @@ getDataColourQuantityAvalaible() {
 
 
 
-    material.refreshMaterial();
+    /*material.refreshMaterial();
     oneTwoEndsClass.refreshLanyardType();
     widthClass.refreshWidth();
     sidePrintedClass.refreshSidePrintedData();
-    clipClass.refreshClip();
+    clipClass.refreshClip();*/
     this.refreshColourQuantity();
-    previewColourClass.showSelectedPreviewtColour();
 
 
 
@@ -254,13 +253,8 @@ getDataColourQuantityAvalaible() {
     this.showSelectedColour();
 
     this.updatePriceColourIndividual();
-    
     previewColourClass.showSelectedPreviewtColour();
 
-  /*  this.createColour();
-
-    */
-    //previewColourClass.showColourPreview("none");
   }
 
   drawColourQuantityvailable(data, index){
