@@ -36,16 +36,16 @@ class SidePrinted {
       }
     });
 
-    alert(JSON.stringify(data[0]["noSides"]));
     if (existSidePrinted) {
       this.setSidePrintedSelectedIndex(index);
 
     }
     else {
       this.setSidePrintedSelectedIndex(0);
-      //this.setSidePrintedSelected(data[0]["noSides"]);
+      this.setSidePrintedSelected(data[0]["noSides"]);
     }
 
+    alert(this.getSidePrintedSelected());
 
 
 
