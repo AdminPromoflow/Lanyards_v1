@@ -336,12 +336,10 @@ class Width {
       this.drawWidthAvailable(widthAvailable[i], i);
     }
     this.showSelectedWidth();
+    this.updatePriceWidthIndividual();
     previewLanyardType.showSelectedPreviewtTemplate()
 
-    this.updatePriceWidthIndividual();
-  /*  this.updateWidth();
-    this.updatePriceWidth();
-    */
+
   }
 
   cleanWidth(){

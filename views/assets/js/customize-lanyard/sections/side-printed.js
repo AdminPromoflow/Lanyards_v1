@@ -13,11 +13,10 @@ class SidePrinted {
   createSidePrinted(){
 
     // Clean the side printed options
-    this.cleanSidePrinted();
 
 
     // Get the available side printed options
-    let sidePrintedAvailable = this.updateEachPriceSidePrinted();
+    let sidePrintedAvailable = this.getAllPricesSidePrinted();
     // Iterate through the available side printed options and draw them
     for (var i = 0; i < sidePrintedAvailable.length; i++) {
       this.drawSidePrintedAvailable(sidePrintedAvailable[i], i);
@@ -25,7 +24,13 @@ class SidePrinted {
   }
 
   autoSelectSidePrinted() {
-    const json = customizeLanyard.getJsonLanyards();
+    var data = this.getAllPricesSidePrinted();
+    var existSidePrinted = false;
+    var index = 0;
+
+    alert(JSON.stringify(data));
+
+  /*  const json = customizeLanyard.getJsonLanyards();
     const selectedMaterial = material.getMaterialSelected();
     const iSelectedMaterial = json.findIndex(item => item.materials.material === selectedMaterial);
     if (iSelectedMaterial !== -1) {
@@ -51,11 +56,10 @@ class SidePrinted {
       }
 
     }
-    //this.updatePriceSidePrinted();
-  //  this.showSelectedSidePrinted();
+  */
   }
 
-  updateEachPriceSidePrinted() {
+  getAllPricesSidePrinted() {
    var json = customizeLanyard.getJsonLanyards();
    var materialSelected = material.getMaterialSelected();
    var widthSelected = widthClass.getWidthSelected();
@@ -165,15 +169,18 @@ class SidePrinted {
 }
 
   refreshSidePrintedData(){
+    this.cleanSidePrinted();
+
+
     this.autoSelectSidePrinted();
-    this.createSidePrinted();
+  /*  this.createSidePrinted();
     this.showSelectedSidePrinted();
-    this.updateEachPriceSidePrinted();
+    this.getAllPricesSidePrinted();
     previewSidePrinted.showSelectedPreviewtTemplate();
-    this.getPriceSidePrintedSelected();
+    this.getPriceSidePrintedSelected();*/
   }
 
-  updatePriceSidePrinted() {
+/*  updatePriceSidePrinted() {
       // Get the JSON lanyards data.
       var json = customizeLanyard.getJsonLanyards();
 
@@ -266,7 +273,7 @@ class SidePrinted {
           priceDataSidePrinted[i].innerHTML = "£" + Math.abs(totalPriceSidePrinted.toFixed(2)) + " per unit.";
       }
   }
-
+*/
   cleanSidePrinted(){
 
     containerBoxSidePrinted.innerHTML = "";
@@ -295,13 +302,6 @@ class SidePrinted {
 
 
     this.setSidePrintedSelectedIndex(index);
-
-
-
-    /*this.setSidePrintedSelected(sidePrinted);
-    this.showSelectedSidePrinted();
-    this.updatePriceSidePrinted();*/
-
 
 
     material.refreshMaterial();
@@ -390,7 +390,6 @@ class SidePrinted {
       }
     }
   }
-
 }
 
 
