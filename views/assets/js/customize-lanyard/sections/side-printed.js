@@ -259,18 +259,12 @@ class SidePrinted {
   }
 
   drawSidePrintedAvailable(data, index){
-    var imgLink;
-    if (this.getSidePrintedSelected() == "one-side") {
-      imgLink = "views/assets/img/global/customize-lanyard/sections/side-printed/one-side.png";
-    }
-    else {
-      imgLink = "views/assets/img/global/customize-lanyard/sections/side-printed/two-side.png";
-    }
+
     containerBoxSidePrinted.innerHTML +=
     '<div class="container_boxes_side_printed" onclick="sidePrintedClass.searchDataSidePrintedSelected(\'' + data.noSides + '\', \' '+ index +'  \');">' +
         '<h3 class="priceDataSidePrinted">+£'+data["price"]+' per unit</h3>' +
         '<h4 class="data_side_printed">'+ data["noSides"]+'</h4>' +
-        '<img src="../../'+ imgLink +'" alt="">' +
+        '<img src="../../views/assets/img/global/customize-lanyard/sections/side-printed/'+ data["noSides"]+'".png alt="">' +
       '</div>'
     ;
   }
