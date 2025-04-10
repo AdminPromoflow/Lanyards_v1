@@ -216,7 +216,6 @@ getDataColourQuantityAvalaible() {
     this.setColourSelectedIndex(index);
 
 
-    alert(this.getColourSelectedIndex());
 
     /*material.refreshMaterial();
     oneTwoEndsClass.refreshLanyardType();
@@ -257,7 +256,7 @@ getDataColourQuantityAvalaible() {
 
   drawColourQuantityvailable(data, index){
     containersBoxesColour.innerHTML += `
-    <div class="container_boxes_colour" onclick='colourClass.searchDataColourSelected("full-colour", "0");'>
+    <div class="container_boxes_colour" onclick='colourClass.searchDataColourSelected("${data["noColour"]}", "${index}");'>
       <h4 class="dataColour">${data["noColour"]}</h4>
       <h3 class="priceDataColour">£ ${data["price"]} per unit</h3>
     </div>`;
