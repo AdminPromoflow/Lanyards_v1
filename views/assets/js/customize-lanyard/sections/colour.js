@@ -12,8 +12,11 @@ class ColourClass {
   getColourSelected() {
       return this.colourSelected;
   }
+  cleanColourQuantity(){
+    containersBoxesColour.innerHTML = "";
+  }
   createColour(){
-      let priceDataColourResult = this.updateEachPriceColour();
+    /*  let priceDataColourResult = this.updateEachPriceColour();
 
       //alert(JSON.stringify(priceDataColourResult));
 
@@ -37,10 +40,10 @@ class ColourClass {
             <h4 class="dataColour">full-colour</h4>
             <h3 class="priceDataColour">£ ${priceDataColourResult[0].price} per unit</h3>
           </div>`;
-  }
+  }*/
 
   }
-  updateEachPriceColour() {
+  getDataColourQuantityAvalaible() {
       var json = customizeLanyard.getJsonLanyards();
 
       var materialSelected = material.getMaterialSelected();
@@ -137,8 +140,8 @@ class ColourClass {
     oneTwoEndsClass.refreshLanyardType();
     widthClass.refreshWidth();
     sidePrintedClass.refreshSidePrintedData();
-    clipClass.updateClip();
-    this.updateColourQuantity();
+    clipClass.refreshClip();
+    this.refreshColourQuantity();
     previewColourClass.showSelectedPreviewtColour();
 
 
@@ -157,13 +160,25 @@ class ColourClass {
   getColourSelectedIndex() {
       return this.colourSelectedIndex;
   }
-  updateColourQuantity(){
-    this.createColour();
+  refreshColourQuantity(){
+    this.cleanColourQuantity();
+    this.autoSelectColourQuantity();
+
+
+
+  /*  this.createColour();
     this.showSelectedColour();
     this.getPriceColourSelected();
 
-    previewColourClass.showSelectedPreviewtColour();
+    previewColourClass.showSelectedPreviewtColour();*/
     //previewColourClass.showColourPreview("none");
+  }
+  autoSelectColourQuantity(){
+    var data = this.getDataColourQuantityAvalaible();
+    var existWidth = false;
+    var index = 0;
+
+    alert(JSON.stringify(data));
   }
   showSelectedColour() {
     // Get the selected colour value

@@ -337,9 +337,7 @@ class Width {
     }
     this.showSelectedWidth();
     this.updatePriceWidthIndividual();
-    previewLanyardType.showSelectedPreviewtTemplate()
-
-
+    previewLanyardType.showSelectedPreviewtTemplate();
   }
 
   cleanWidth(){
