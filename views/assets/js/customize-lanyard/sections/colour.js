@@ -16,7 +16,7 @@ class ColourClass {
     containersBoxesColour.innerHTML = "";
   }
   createColour(){
-    /*  let priceDataColourResult = this.updateEachPriceColour();
+      let priceDataColourResult = this.updateEachPriceColour();
 
       //alert(JSON.stringify(priceDataColourResult));
 
@@ -40,7 +40,7 @@ class ColourClass {
             <h4 class="dataColour">full-colour</h4>
             <h3 class="priceDataColour">£ ${priceDataColourResult[0].price} per unit</h3>
           </div>`;
-  }*/
+  }
 
   }
 /*  getDataColourQuantityAvalaible() {
@@ -245,8 +245,11 @@ getDataColourQuantityAvalaible() {
     this.cleanColourQuantity();
     this.autoSelectColourQuantity();
 
+    let coloursQuantityAvailable = this.getDataColourQuantityAvalaible();
 
-
+    for (var i = 0; i < coloursQuantityAvailable.length; i++) {
+      this.drawColourQuantityvailable(coloursQuantityAvailable[i], i);
+    }
   /*  this.createColour();
     this.showSelectedColour();
     this.getPriceColourSelected();
@@ -254,13 +257,35 @@ getDataColourQuantityAvalaible() {
     previewColourClass.showSelectedPreviewtColour();*/
     //previewColourClass.showColourPreview("none");
   }
+
+  drawColourQuantityvailable(data, index){
+    containersBoxesColour.innerHTML += `
+    <div class="container_boxes_colour" onclick='colourClass.searchDataColourSelected("full-colour", "0");'>
+      <h4 class="dataColour">'${data["noColour"]}'</h4>
+      <h3 class="priceDataColour">£ '${data["price"]}' per unit</h3>
+    </div>`;
+  }
   autoSelectColourQuantity(){
     var data = this.getDataColourQuantityAvalaible();
-    var existWidth = false;
+    var existColourQuantity = false;
     var index = 0;
 
-    alert(JSON.stringify(data));
+    data.forEach((element, i) => {
+      if (element["noColour"]+"" == this.getColourSelected()+"") {
 
+        existWidth = true;
+        index = i;
+      }
+    });
+
+
+    if (existColourQuantity) {
+      this.setColourSelectedIndex(index);
+    }
+    else {
+      this.setColourSelectedIndex(0);
+      this.setWidthSelected(data[0]["noColour"]);
+    }
   }
   showSelectedColour() {
     // Get the selected colour value
