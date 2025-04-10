@@ -36,14 +36,14 @@ class SidePrinted {
       }
     });
 
-    alert(existSidePrinted);
+    alert(data[0]);
     if (existSidePrinted) {
       this.setSidePrintedSelectedIndex(index);
 
     }
     else {
       this.setSidePrintedSelectedIndex(0);
-      this.setWidthSelected(data[0]["noSides"]);
+      //this.setSidePrintedSelected(data[0]["noSides"]);
     }
 
 
