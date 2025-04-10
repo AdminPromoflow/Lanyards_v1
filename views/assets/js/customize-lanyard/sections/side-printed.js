@@ -25,10 +25,28 @@ class SidePrinted {
 
   autoSelectSidePrinted() {
     var data = this.getDataSidePrintedAvalaible();
-    var existWidth = false;
+    var existSidePrinted = false;
     var index = 0;
 
-    alert(JSON.stringify(data));
+    data.forEach((element, i) => {
+      if (element["noSides"]+"" == this.getSidePrintedSelected()+"") {
+
+        existSidePrinted = true;
+        index = i;
+      }
+    });
+
+    alert(existSidePrinted);
+    if (existSidePrinted) {
+      this.setSidePrintedSelectedIndex(index);
+
+    }
+    else {
+      this.setSidePrintedSelectedIndex(0);
+      this.setWidthSelected(data[0]["noSides"]);
+    }
+
+
 
 
   /*  const json = customizeLanyard.getJsonLanyards();
@@ -171,8 +189,6 @@ class SidePrinted {
 
   refreshSidePrintedData(){
     this.cleanSidePrinted();
-
-
     this.autoSelectSidePrinted();
   /*  this.createSidePrinted();
     this.showSelectedSidePrinted();
@@ -266,10 +282,10 @@ class SidePrinted {
 
 
       // Get the elements to display price data.
-      const priceDataSidePrinted = document.querySelectorAll(".priceDataSidePrinted");
+    /*  const priceDataSidePrinted = document.querySelectorAll(".priceDataSidePrinted");
 
       // Update the price display for each element.
-    /*  for (var i = 0; i < priceDataSidePrinted.length; i++) {
+      for (var i = 0; i < priceDataSidePrinted.length; i++) {
           let totalPriceSidePrinted = priceDataSidePrintedResult[i].price - priceDataSidePrintedResult[0].price;
           priceDataSidePrinted[i].innerHTML = "£" + Math.abs(totalPriceSidePrinted.toFixed(2)) + " per unit.";
       }*/
