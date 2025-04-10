@@ -286,25 +286,13 @@ getDataColourQuantityAvalaible() {
   showSelectedColour() {
     // Get the selected colour value
     var data = colourClass.getColourSelected();
-    alert("Entramos 2");
 
     // Select all elements with the class "container_boxes_colour"
     const containerBoxesColour = document.querySelectorAll(".container_boxes_colour");
     // Select all elements with the class "data_colour"
     const dataColour = document.querySelectorAll(".dataColour");
 
-    // Initialize index variable to -1
-    var index = -1;
-    // Iterate through all elements in dataColour
-    for (var i = 0; i < dataColour.length; i++) {
-      // If the text content of the current element matches the selected data
-      if (dataColour[i].textContent == data) {
-        // Set the index to the current position
-        index = i;
-        // Exit the loop once the matching element is found
-        break;
-      }
-    }
+    var index = this.getColourSelectedIndex();
 
     // Iterate through all elements in containerBoxesColour
     for (var i = 0; i < containerBoxesColour.length; i++) {
