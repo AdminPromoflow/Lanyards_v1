@@ -46,7 +46,7 @@ class SidePrinted {
     }
   }
 
-  updateEachPriceSidePrinted() {
+  /*updateEachPriceSidePrinted() {
    var json = customizeLanyard.getJsonLanyards();
    var materialSelected = material.getMaterialSelected();
    var widthSelected = widthClass.getWidthSelected();
@@ -97,12 +97,7 @@ class SidePrinted {
 
                                            if (existingIndex === -1) {
                                                priceDataSidePrintedResult.push({
-                                                   material,
-                                                   width,
                                                    noSides,
-                                                   noColour,
-                                                   minAmount,
-                                                   maxAmount,
                                                    price: pricePerSidePrinted
                                                });
                                            } else {
@@ -123,12 +118,7 @@ class SidePrinted {
 
                                            if (existingIndex === -1) {
                                                priceDataSidePrintedResult.push({
-                                                   material,
-                                                   width,
                                                    noSides,
-                                                   noColour,
-                                                   minAmount: highestMinAmount,
-                                                   maxAmount: highestMaxAmount,
                                                    price: highestPrice
                                                });
                                            } else {
@@ -154,7 +144,7 @@ class SidePrinted {
 
    return priceDataSidePrintedResult; // Retorna la variable con los precios filtrados
 }
-
+*/
   refreshSidePrintedData(){
     this.cleanSidePrinted();
     this.autoSelectSidePrinted();
@@ -226,10 +216,6 @@ class SidePrinted {
               if (amountSelected >= minAmount && amountSelected <= maxAmount) {
                   priceDataSidePrintedResult.push({
                       noSides,
-                      noColour,
-                      minAmount,
-                      amountSelected,
-                      maxAmount,
                       price
                   });
                   priceCaptured = true; // Indicate that the correct price has been captured.
@@ -246,10 +232,6 @@ class SidePrinted {
 
               priceDataSidePrintedResult.push({
                   noSides,
-                  noColour,
-                  minAmount: highestMinAmount,
-                  amountSelected,
-                  maxAmount: highestMaxAmount,
                   price: highestPrice
               });
           }
@@ -274,9 +256,8 @@ class SidePrinted {
   }
 
   drawSidePrintedAvailable(data, index){
-   alert(JSON.stringify(data));
-  /*  var imgLink;
-    if (data == "one-side") {
+    var imgLink;
+    if (this.getSidePrintedSelected() == "one-side") {
       imgLink = "views/assets/img/global/customize-lanyard/sections/side-printed/one-side.png";
     }
     else {
@@ -284,11 +265,11 @@ class SidePrinted {
     }
     containerBoxSidePrinted.innerHTML +=
     '<div class="container_boxes_side_printed" onclick="sidePrintedClass.searchDataSidePrintedSelected(\'' + data.noSides + '\', \' '+ index +'  \');">' +
-        '<h3 class="priceDataSidePrinted">+£'+data.price+' per unit</h3>' +
-        '<h4 class="data_side_printed">'+ data.noSides+'</h4>' +
+        '<h3 class="priceDataSidePrinted">+£'+data["price"]+' per unit</h3>' +
+        '<h4 class="data_side_printed">'+ data["noSides"]+'</h4>' +
         '<img src="../../'+ imgLink +'" alt="">' +
       '</div>'
-    ;*/
+    ;
   }
 
   searchDataSidePrintedSelected(sidePrinted, index) {
