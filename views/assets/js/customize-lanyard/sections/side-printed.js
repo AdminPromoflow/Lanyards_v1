@@ -36,7 +36,7 @@ class SidePrinted {
       }
     });
 
-    alert(data[0]);
+    alert(JSON.stringify(data[0]));
     if (existSidePrinted) {
       this.setSidePrintedSelectedIndex(index);
 
