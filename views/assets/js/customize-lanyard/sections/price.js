@@ -36,8 +36,8 @@ class Price {
         oneTwoEndsClass.refreshLanyardType();
         widthClass.refreshWidth();
         sidePrintedClass.refreshSidePrintedData();
-        colourClass.updateColourQuantity();
-        clipClass.updateClip();
+        colourClass.refreshColourQuantity();
+        clipClass.refreshClip();
 
       }
       else {
@@ -51,8 +51,8 @@ class Price {
         oneTwoEndsClass.refreshLanyardType();
         widthClass.refreshWidth();
         sidePrintedClass.refreshSidePrintedData();
-        colourClass.updateColourQuantity();
-        clipClass.updateClip();
+        colourClass.refreshColourQuantity();
+        clipClass.refreshClip();
 
       }
     });
@@ -69,8 +69,8 @@ class Price {
           oneTwoEndsClass.refreshLanyardType();
           widthClass.refreshWidth();
           sidePrintedClass.refreshSidePrintedData();
-          colourClass.updateColourQuantity();
-          clipClass.updateClip();
+          colourClass.refreshColourQuantity();
+          clipClass.refreshClip();
 
     });
   }
