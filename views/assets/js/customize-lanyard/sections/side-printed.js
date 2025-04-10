@@ -237,17 +237,20 @@ class SidePrinted {
           }
       }
 
+      let priceDataSidePrintedFinal = [];
+      priceDataSidePrintedFinal.length = 0;
+      var firstPrice = priceDataSidePrintedResult[0]["price"];
 
-      // Get the elements to display price data.
-    /*  const priceDataSidePrinted = document.querySelectorAll(".priceDataSidePrinted");
+      priceDataSidePrintedResult.forEach((element, i) => {
 
-      // Update the price display for each element.
-      for (var i = 0; i < priceDataSidePrinted.length; i++) {
-          let totalPriceSidePrinted = priceDataSidePrintedResult[i].price - priceDataSidePrintedResult[0].price;
-          priceDataSidePrinted[i].innerHTML = "£" + Math.abs(totalPriceSidePrinted.toFixed(2)) + " per unit.";
-      }*/
+        priceDataSidePrintedFinal.push({
+             noSides: element.noSides,
+             price: (element.price - firstPrice).toFixed(2)
+          }
+        )
+      });
 
-      return priceDataSidePrintedResult;
+      return priceDataSidePrintedFinal;
   }
 
   cleanSidePrinted(){
