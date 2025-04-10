@@ -156,7 +156,7 @@ class ClipClass {
     oneTwoEndsClass.refreshLanyardType();
     widthClass.refreshWidth();
     sidePrintedClass.refreshSidePrintedData();
-    colourClass.updateColourQuantity();
+    colourClass.refreshColourQuantity();
 
     this.setClipSelected(data);
     this.setIndexClipSelected(index);
