@@ -247,9 +247,9 @@ getDataColourQuantityAvalaible() {
 
     let coloursQuantityAvailable = this.getDataColourQuantityAvalaible();
 
-    /*for (var i = 0; i < coloursQuantityAvailable.length; i++) {
+    for (var i = 0; i < coloursQuantityAvailable.length; i++) {
       this.drawColourQuantityvailable(coloursQuantityAvailable[i], i);
-    }*/
+    }
   /*  this.createColour();
     this.showSelectedColour();
     this.getPriceColourSelected();
