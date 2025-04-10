@@ -216,6 +216,7 @@ getDataColourQuantityAvalaible() {
     this.setColourSelectedIndex(index);
 
 
+    alert(this.getColourSelectedIndex());
 
     /*material.refreshMaterial();
     oneTwoEndsClass.refreshLanyardType();
@@ -429,13 +430,7 @@ updatePriceColour() {
 }
 
 
-recalculateColourData(){
-  this.createColour();
-  this.showSelectedColour();
 
-  previewColourClass.showSelectedPreviewtColour();
-  previewColourClass.showColourPreview("none");
-}
 }
 
 
