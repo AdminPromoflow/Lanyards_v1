@@ -43,7 +43,7 @@ class ColourClass {
   }*/
 
   }
-  getDataColourQuantityAvalaible() {
+/*  getDataColourQuantityAvalaible() {
       var json = customizeLanyard.getJsonLanyards();
 
       var materialSelected = material.getMaterialSelected();
@@ -91,12 +91,7 @@ class ColourClass {
 
                                       if (Number(amountSelected) >= Number(minAmount) && Number(amountSelected) <= Number(maxAmount)) {
                                           priceDataColourResult.push({
-                                              material,
-                                              width,
-                                              noSides,
                                               noColour,
-                                              minAmount,
-                                              maxAmount,
                                               price: pricePerColour
                                           });
                                       }
@@ -123,7 +118,93 @@ class ColourClass {
 
       return priceDataColourResult; // Retorna la variable con los precios filtrados
   }
+*/
+getDataColourQuantityAvalaible() {
+    var json = customizeLanyard.getJsonLanyards();
+    var materialSelected = material.getMaterialSelected();
+    var widthSelected = widthClass.getWidthSelected();
+    var amountSelected = priceClass.getAmountSelected();
+    var sidePrintedSelected = sidePrintedClass.getSidePrintedSelected();
+    let priceDataColourResult = [];
 
+    // Iterando a través del JSON de materiales
+    for (let i = 0; i < json.length; i++) {
+        const material = json[i].materials.material;
+
+        if (material == materialSelected) {
+            const widths = json[i].materials.width;
+
+            for (let j = 0; j < widths.length; j++) {
+                const width = widths[j].width;
+
+                if (width == widthSelected) {
+                    const sidePrinted = widths[j].sidePrinted;
+
+                    for (let k = 0; k < sidePrinted.length; k++) {
+                        const noSides = sidePrinted[k].noSides;
+
+                        if (noSides == sidePrintedSelected) {
+                            const noColours = sidePrinted[k].noColours;
+
+                            for (let l = 0; l < noColours.length; l++) {
+                                const noColour = noColours[l].noColour;
+
+                                const amounts = noColours[l].amount;
+
+                                let found = false;  // Indicador para saber si encontramos un rango válido
+                                let maxAmountRange = null;  // Guardamos el rango máximo en caso de que no encontremos ninguno
+
+                                for (let m = 0; m < amounts.length; m++) {
+                                    const minAmount = amounts[m]['min-amount'];
+                                    const maxAmount = amounts[m]['max-amount'];
+                                    const pricePerColour = amounts[m].price;
+
+                                    // Comprobamos si el amountSelected está dentro de los rangos
+                                    if (Number(amountSelected) >= Number(minAmount) && Number(amountSelected) <= Number(maxAmount)) {
+                                        priceDataColourResult.push({
+                                            noColour,
+                                            price: pricePerColour
+                                        });
+                                        found = true;
+                                        break;  // Terminamos el bucle porque ya encontramos el rango adecuado
+                                    }
+
+                                    // Si amountSelected es mayor que maxAmount, guardamos el rango
+                                    if (Number(amountSelected) > Number(maxAmount)) {
+                                        maxAmountRange = {
+                                            noColour,
+                                            price: pricePerColour
+                                        };
+                                    }
+                                }
+
+                                // Si no encontramos un rango adecuado, agregamos el rango máximo con la misma estructura
+                                if (!found && maxAmountRange) {
+                                    priceDataColourResult.push({
+                                        noColour: maxAmountRange.noColour,
+                                        price: maxAmountRange.price
+                                    });
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Ajustar precios restando el precio base
+    if (priceDataColourResult.length > 0) {
+        let basePrice = parseFloat(priceDataColourResult[0].price);
+
+        priceDataColourResult = priceDataColourResult.map(item => ({
+            ...item,
+            price: parseFloat((item.price - basePrice).toFixed(2))
+        }));
+    }
+
+    return priceDataColourResult; // Retorna la variable con los precios filtrados
+}
 
 
 
@@ -179,6 +260,7 @@ class ColourClass {
     var index = 0;
 
     alert(JSON.stringify(data));
+
   }
   showSelectedColour() {
     // Get the selected colour value
