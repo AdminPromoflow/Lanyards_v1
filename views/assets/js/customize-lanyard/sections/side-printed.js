@@ -44,38 +44,6 @@ class SidePrinted {
       this.setSidePrintedSelectedIndex(0);
       this.setSidePrintedSelected(data[0]["noSides"]);
     }
-
-    alert(this.getSidePrintedSelected());
-
-
-
-  /*  const json = customizeLanyard.getJsonLanyards();
-    const selectedMaterial = material.getMaterialSelected();
-    const iSelectedMaterial = json.findIndex(item => item.materials.material === selectedMaterial);
-    if (iSelectedMaterial !== -1) {
-
-      const width = json[iSelectedMaterial].materials.width;
-      const selectedWidth = widthClass.getWidthSelected();
-      const iSelectedWidth = width.findIndex(w => w.width === selectedWidth);
-      if (iSelectedWidth !== -1) {
-
-        const sidePrinted = json[iSelectedMaterial]?.materials?.width[iSelectedWidth]?.sidePrinted;
-        const sidePrintedSelected = sidePrintedClass.getSidePrintedSelected();
-        const iSelectedSidePrinted = sidePrinted.findIndex(s => s.noSides === sidePrintedSelected);
-        // Cambiar la lógica para `sidePrinted`
-        if (this.getSidePrintedSelected() === undefined) {  // Si no se ha seleccionado un sidePrinted
-
-          this.setSidePrintedSelectedIndex(0);
-          this.setSidePrintedSelected(sidePrinted[0].noSides);  // Selecciona el primer sidePrinted disponible
-        } else if (iSelectedSidePrinted === -1) {  // Si el sidePrinted seleccionado no coincide con ninguno disponible
-          this.setSidePrintedSelected(sidePrinted[0].noSides);  // Selecciona el primer sidePrinted disponible
-          this.setSidePrintedSelectedIndex(0);
-
-        }
-      }
-
-    }
-  */
   }
 
   updateEachPriceSidePrinted() {
@@ -190,6 +158,13 @@ class SidePrinted {
   refreshSidePrintedData(){
     this.cleanSidePrinted();
     this.autoSelectSidePrinted();
+
+    let sidePrintedAvailable = this.getDataSidePrintedAvalaible();
+
+    for (var i = 0; i < sidePrintedAvailable.length; i++) {
+      this.drawSidePrintedAvailable(sidePrintedAvailable[i], i);
+    }
+
   /*  this.createSidePrinted();
     this.showSelectedSidePrinted();
     this.updateEachPriceSidePrinted();
@@ -299,8 +274,8 @@ class SidePrinted {
   }
 
   drawSidePrintedAvailable(data, index){
-  // alert(JSON.stringify(data));
-    var imgLink;
+   alert(JSON.stringify(data));
+  /*  var imgLink;
     if (data == "one-side") {
       imgLink = "views/assets/img/global/customize-lanyard/sections/side-printed/one-side.png";
     }
@@ -313,7 +288,7 @@ class SidePrinted {
         '<h4 class="data_side_printed">'+ data.noSides+'</h4>' +
         '<img src="../../'+ imgLink +'" alt="">' +
       '</div>'
-    ;
+    ;*/
   }
 
   searchDataSidePrintedSelected(sidePrinted, index) {
