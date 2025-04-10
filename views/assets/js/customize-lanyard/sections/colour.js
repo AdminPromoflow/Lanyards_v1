@@ -250,11 +250,16 @@ getDataColourQuantityAvalaible() {
     for (var i = 0; i < coloursQuantityAvailable.length; i++) {
       this.drawColourQuantityvailable(coloursQuantityAvailable[i], i);
     }
-  /*  this.createColour();
-    this.showSelectedColour();
-    this.getPriceColourSelected();
 
-    previewColourClass.showSelectedPreviewtColour();*/
+    this.showSelectedColour();
+
+    this.updatePriceColourIndividual();
+    
+    previewColourClass.showSelectedPreviewtColour();
+
+  /*  this.createColour();
+
+    */
     //previewColourClass.showColourPreview("none");
   }
 
@@ -419,7 +424,7 @@ updatePriceColour() {
 }
 
 
-  getPriceColourSelected(){
+  updatePriceColourIndividual(){
     let index = this.getColourSelectedIndex();
   const priceDataColour = document.querySelectorAll(".priceDataColour");
   for (var i = 0; i < priceDataColour.length; i++) {
