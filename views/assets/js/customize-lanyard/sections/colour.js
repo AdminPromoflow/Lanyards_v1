@@ -210,7 +210,7 @@ getDataColourQuantityAvalaible() {
 
 
   searchDataColourSelected(coloursQuantity, index){
-
+    alert("buenas");
     this.setColourSelected(coloursQuantity);
 
     this.setColourSelectedIndex(index);
@@ -249,12 +249,9 @@ getDataColourQuantityAvalaible() {
     for (var i = 0; i < coloursQuantityAvailable.length; i++) {
       this.drawColourQuantityvailable(coloursQuantityAvailable[i], i);
     }
-
     this.showSelectedColour();
-
     this.updatePriceColourIndividual();
     previewColourClass.showSelectedPreviewtColour();
-
   }
 
   drawColourQuantityvailable(data, index){
@@ -321,7 +318,7 @@ getDataColourQuantityAvalaible() {
     }
 }
 
-
+/*
 updatePriceColour() {
     // Get the JSON lanyards data.
     var json = customizeLanyard.getJsonLanyards();
@@ -417,7 +414,7 @@ updatePriceColour() {
     }
 }
 
-
+*/
   updatePriceColourIndividual(){
     let index = this.getColourSelectedIndex();
   const priceDataColour = document.querySelectorAll(".priceDataColour");
