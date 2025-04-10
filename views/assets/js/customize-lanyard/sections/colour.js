@@ -241,7 +241,6 @@ getDataColourQuantityAvalaible() {
       return this.colourSelectedIndex;
   }
   refreshColourQuantity(){
-    alert("Entramos 1");
     this.cleanColourQuantity();
     this.autoSelectColourQuantity();
 
@@ -287,6 +286,7 @@ getDataColourQuantityAvalaible() {
   showSelectedColour() {
     // Get the selected colour value
     var data = colourClass.getColourSelected();
+    alert("Entramos 2");
 
     // Select all elements with the class "container_boxes_colour"
     const containerBoxesColour = document.querySelectorAll(".container_boxes_colour");
