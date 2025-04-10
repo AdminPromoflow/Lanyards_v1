@@ -269,7 +269,7 @@ class SidePrinted {
 
     this.refreshSidePrintedData()
     colourClass.refreshColourQuantity();
-    clipClass.updateClip();
+    clipClass.refreshClip();
     priceClass.changePricePerLanyard();
 
     previewSidePrinted.showSelectedPreviewtTemplate();

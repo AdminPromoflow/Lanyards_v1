@@ -284,7 +284,7 @@ getDataColourQuantityAvalaible() {
     }
     else {
       this.setColourSelectedIndex(0);
-      this.setWidthSelected(data[0]["noColour"]);
+      this.setColourSelected(data[0]["noColour"]);
     }
   }
   showSelectedColour() {
