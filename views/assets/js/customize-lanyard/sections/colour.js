@@ -261,8 +261,8 @@ getDataColourQuantityAvalaible() {
   drawColourQuantityvailable(data, index){
     containersBoxesColour.innerHTML += `
     <div class="container_boxes_colour" onclick='colourClass.searchDataColourSelected("full-colour", "0");'>
-      <h4 class="dataColour">'${data["noColour"]}'</h4>
-      <h3 class="priceDataColour">£ '${data["price"]}' per unit</h3>
+      <h4 class="dataColour">${data["noColour"]}</h4>
+      <h3 class="priceDataColour">£ ${data["price"]} per unit</h3>
     </div>`;
   }
   autoSelectColourQuantity(){
