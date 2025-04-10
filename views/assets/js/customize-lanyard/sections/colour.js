@@ -273,7 +273,7 @@ getDataColourQuantityAvalaible() {
     data.forEach((element, i) => {
       if (element["noColour"]+"" == this.getColourSelected()+"") {
 
-        existWidth = true;
+        existColourQuantity = true;
         index = i;
       }
     });
