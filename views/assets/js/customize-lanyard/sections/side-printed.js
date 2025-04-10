@@ -16,7 +16,7 @@ class SidePrinted {
 
 
     // Get the available side printed options
-    let sidePrintedAvailable = this.getAllPricesSidePrinted();
+    let sidePrintedAvailable = this.updateEachPriceSidePrinted();
     // Iterate through the available side printed options and draw them
     for (var i = 0; i < sidePrintedAvailable.length; i++) {
       this.drawSidePrintedAvailable(sidePrintedAvailable[i], i);
@@ -24,11 +24,12 @@ class SidePrinted {
   }
 
   autoSelectSidePrinted() {
-    var data = this.getAllPricesSidePrinted();
-    var existSidePrinted = false;
+    var data = this.getDataSidePrintedAvalaible();
+    var existWidth = false;
     var index = 0;
 
     alert(JSON.stringify(data));
+
 
   /*  const json = customizeLanyard.getJsonLanyards();
     const selectedMaterial = material.getMaterialSelected();
@@ -59,7 +60,7 @@ class SidePrinted {
   */
   }
 
-  getAllPricesSidePrinted() {
+  updateEachPriceSidePrinted() {
    var json = customizeLanyard.getJsonLanyards();
    var materialSelected = material.getMaterialSelected();
    var widthSelected = widthClass.getWidthSelected();
@@ -175,12 +176,12 @@ class SidePrinted {
     this.autoSelectSidePrinted();
   /*  this.createSidePrinted();
     this.showSelectedSidePrinted();
-    this.getAllPricesSidePrinted();
+    this.updateEachPriceSidePrinted();
     previewSidePrinted.showSelectedPreviewtTemplate();
     this.getPriceSidePrintedSelected();*/
   }
 
-/*  updatePriceSidePrinted() {
+  getDataSidePrintedAvalaible() {
       // Get the JSON lanyards data.
       var json = customizeLanyard.getJsonLanyards();
 
@@ -273,7 +274,7 @@ class SidePrinted {
           priceDataSidePrinted[i].innerHTML = "£" + Math.abs(totalPriceSidePrinted.toFixed(2)) + " per unit.";
       }
   }
-*/
+
   cleanSidePrinted(){
 
     containerBoxSidePrinted.innerHTML = "";
