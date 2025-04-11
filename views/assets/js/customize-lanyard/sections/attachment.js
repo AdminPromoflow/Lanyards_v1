@@ -7,11 +7,11 @@ class AttachmentClass {
     //alert(this.getAttachmentSelected() );
   }
   searchDataAttachmentSelected(attachment, index, price){
-    attachmentClass.setAttachmentSelected(attachment);
-    attachmentClass.showSelectedAttachment();
-    attachmentPreviewClass.showSelectedPreviewtTemplate();
-    priceClass.setPriceAttachment(price);
-    priceClass.changePricePerLanyard();
+  //  attachmentClass.setAttachmentSelected(attachment);
+  //  attachmentClass.showSelectedAttachment();
+  //  attachmentPreviewClass.showSelectedPreviewtTemplate();
+  //  priceClass.setPriceAttachment(price);
+  //  priceClass.changePricePerLanyard();
   }
 
   showSelectedAttachment() {
