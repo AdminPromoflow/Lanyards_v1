@@ -5,7 +5,7 @@ class AttachmentClass {
   searchDataAttachmentSelected(attachment, index, price){
     attachmentClass.setAttachmentSelected(attachment);
     attachmentClass.showSelectedAttachment();
-    showSelectedPreviewTemplate.showSelectedPreviewTemplate();
+    previewLanyardType.showSelectedPreviewTemplate();
     priceClass.setPriceAttachment(price);
     priceClass.changePricePerLanyard();
   }
