@@ -46,7 +46,7 @@ class Artwork {
                         //alert("Triste porque no se que tengo mal");
 
 
-                      //artworkPreviewClassFinal.assignArtworkToLanyard(img.src, i);
+                      artworkPreviewClassFinal.assignArtworkToLanyard(img.src, i);
                     } else {
                         alert('La imagen debe tener al menos 1287px de ancho y 54px de alto.');
                     }
