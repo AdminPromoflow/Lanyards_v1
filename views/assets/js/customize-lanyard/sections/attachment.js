@@ -11,7 +11,7 @@ class AttachmentClass {
     attachmentClass.showSelectedAttachment();
   //  attachmentPreviewClass.showSelectedPreviewtTemplate();
     priceClass.setPriceAttachment(price);
-  //  priceClass.changePricePerLanyard();
+    priceClass.changePricePerLanyard();
   }
 
   showSelectedAttachment() {
