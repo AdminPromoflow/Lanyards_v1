@@ -41,9 +41,9 @@ class Artwork {
                         // Si las dimensiones son correctas o mayores, establecer la imagen como fondo
 
                         imageArtworkRigthSection[i].style.backgroundImage = 'url("' + img.src + '")';
-                        alert("Triste porque no se que tengo mal");
-                        //artworkPreviewClass.uploadArtwork(img.src, i);
+                        artworkPreviewClass.uploadArtwork(img.src, i);
 
+                        alert("Triste porque no se que tengo mal");
 
 
                       //artworkPreviewClassFinal.assignArtworkToLanyard(img.src, i);
