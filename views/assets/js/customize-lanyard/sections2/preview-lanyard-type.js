@@ -6,7 +6,6 @@ class PreviewLanyardType {
     var typeLanyard = oneTwoEndsClass.getTypeLanyardSelected();
     var width = widthClass.getWidthSelected();
 
-    alert(typeLanyard + width);
     if (typeLanyard == "one-end") {
 
       if (width == "25mm") {
@@ -23,6 +22,8 @@ class PreviewLanyardType {
         twoSide30mm.style.display = "none";
       }
       else if (width == "10mm") {
+        alert(typeLanyard + width);
+
         oneSide10mm.style.display = "flex";
         oneSide15mm.style.display = "none";
         oneSide20mm.style.display = "none";
