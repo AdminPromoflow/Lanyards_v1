@@ -24,8 +24,8 @@ class PreviewLanyardType {
       else if (width == "10mm") {
         alert(typeLanyard + width);
 
-        oneSide10mm.style.display = "flex";
-      /*  oneSide15mm.style.display = "none";
+        /*oneSide10mm.style.display = "flex";
+        oneSide15mm.style.display = "none";
         oneSide20mm.style.display = "none";
         oneSide25mm.style.display = "none";
         oneSide30mm.style.display = "none";
