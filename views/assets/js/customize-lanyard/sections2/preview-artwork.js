@@ -16,10 +16,11 @@ class ArtworkPreviewClass {
     }
   }
   uploadArtwork(image,index){
+    alert("Las dimensiones de la imágen son: " + img.width +
+  "de ancho y " + img.height + "de alto y entramos 2");
 
       lanyardArtwork[index].style.backgroundImage = 'url("' + image + '")';
-      alert("Las dimensiones de la imágen son: " + img.width +
-    "de ancho y " + img.height + "de alto y entramos 2");
+
   }
   borderWhite(active){
     for (var i = 0; i < boxPreviewArtwork.length; i++) {
