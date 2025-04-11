@@ -43,7 +43,7 @@ class Artwork {
                         imageArtworkRigthSection[i].style.backgroundImage = 'url("' + img.src + '")';
                         artworkPreviewClass.uploadArtwork(img.src, i);
 
-                        alert("Triste porque no se que tengo mal");
+                        //alert("Triste porque no se que tengo mal");
 
 
                       //artworkPreviewClassFinal.assignArtworkToLanyard(img.src, i);

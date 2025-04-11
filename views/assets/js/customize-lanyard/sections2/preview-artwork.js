@@ -16,8 +16,8 @@ class ArtworkPreviewClass {
     }
   }
   uploadArtwork(image,index){
-    alert("Las dimensiones de la imágen son: " + img.width +
-  "de ancho y " + img.height + "de alto y entramos 2");
+    alert("Las dimensiones de la imágen son: " + image.width +
+  "de ancho y " + image.height + "de alto y entramos 2");
 
       lanyardArtwork[index].style.backgroundImage = 'url("' + image + '")';
   }
