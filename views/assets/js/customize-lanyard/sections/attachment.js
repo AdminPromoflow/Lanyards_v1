@@ -9,7 +9,7 @@ class AttachmentClass {
   searchDataAttachmentSelected(attachment, index, price){
     attachmentClass.setAttachmentSelected(attachment);
     attachmentClass.showSelectedAttachment();
-  //  attachmentPreviewClass.showSelectedPreviewtTemplate();
+    attachmentPreviewClass.showSelectedPreviewtTemplate();
   //  priceClass.setPriceAttachment(price);
   //  priceClass.changePricePerLanyard();
   }
