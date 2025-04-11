@@ -20,7 +20,6 @@ class ArtworkPreviewClass {
   "de ancho y " + img.height + "de alto y entramos 2");
 
       lanyardArtwork[index].style.backgroundImage = 'url("' + image + '")';
-
   }
   borderWhite(active){
     for (var i = 0; i < boxPreviewArtwork.length; i++) {
