@@ -7,8 +7,8 @@ class AttachmentClass {
     //alert(this.getAttachmentSelected() );
   }
   searchDataAttachmentSelected(attachment, index, price){
-  //  attachmentClass.setAttachmentSelected(attachment);
-  //  attachmentClass.showSelectedAttachment();
+    attachmentClass.setAttachmentSelected(attachment);
+    attachmentClass.showSelectedAttachment();
   //  attachmentPreviewClass.showSelectedPreviewtTemplate();
   //  priceClass.setPriceAttachment(price);
   //  priceClass.changePricePerLanyard();
