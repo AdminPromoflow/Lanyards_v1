@@ -37,13 +37,14 @@ class Artwork {
 
 
                       if (img.width >= 12 && img.height >= 4) {
-                        alert("Las dimensiones de la imágen son: " + img.width +
-                      "de ancho y " + img.height + "de alto y entramos");
+
                         // Si las dimensiones son correctas o mayores, establecer la imagen como fondo
 
                         imageArtworkRigthSection[i].style.backgroundImage = 'url("' + img.src + '")';
 
                         artworkPreviewClass.uploadArtwork(img.src, i);
+
+
 
                       artworkPreviewClassFinal.assignArtworkToLanyard(img.src, i);
                     } else {
