@@ -6,6 +6,7 @@ class PreviewLanyardType {
     var typeLanyard = oneTwoEndsClass.getTypeLanyardSelected();
     var width = widthClass.getWidthSelected();
 
+    alert(typeLanyard + width);
     if (typeLanyard == "one-end") {
 
       if (width == "25mm") {
