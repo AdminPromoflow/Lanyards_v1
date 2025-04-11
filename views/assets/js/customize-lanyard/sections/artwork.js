@@ -31,7 +31,7 @@ class Artwork {
                 img.onload = function() {
 
                 //  alert(img.src);
-                    console.log('Dimensiones de la imagen:', img.width, img.height);
+                  //  console.log('Dimensiones de la imagen:', img.width, img.height);
                     // Validar dimensiones mínimas de la imagen
                     //if (img.width >= 1287 && img.height >= 54) {
 
@@ -42,9 +42,6 @@ class Artwork {
 
                         imageArtworkRigthSection[i].style.backgroundImage = 'url("' + img.src + '")';
                         artworkPreviewClass.uploadArtwork(img.src, i);
-
-                        //alert("Triste porque no se que tengo mal");
-
 
                       artworkPreviewClassFinal.assignArtworkToLanyard(img.src, i);
                     } else {
