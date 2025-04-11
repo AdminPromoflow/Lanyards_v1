@@ -1,71 +1,49 @@
 class AttachmentPreviewClass {
-  constructor() {
+  constructor() {}
 
-  }
-  showSelectedPreviewtTemplate(){
-    var attachmentSelected =  attachmentClass.getAttachmentSelected();
-
+  showSelectedPreviewTemplate() {
+    const attachmentSelected = attachmentClass.getAttachmentSelected();
     const standar = document.querySelectorAll(".standar");
     const attachment = document.querySelectorAll(".attachment");
     const attachmentThing = document.querySelectorAll(".attachmentThing");
 
+    const showElements = (elements, display) => {
+      elements.forEach(el => el.style.display = display);
+    };
 
-  if (attachmentSelected == "None") {
-    for (let i = 0; i < standar.length; i++) {
-      standar[i].style.display = "block";
-    }
-    for (var i = 0; i < attachment.length; i++) {
-      attachment[i].style.display = "none";
-    }
+    const setAttachmentImage = (src) => {
+      attachmentThing.forEach(el => {
+        el.style.display = "block";
+        el.innerHTML = `<img class="imgattachment" src="${src}" alt="">`;
+      });
+    };
 
-    for (var i = 0; i < attachmentThing.length; i++) {
-      attachmentThing[i].style.display = "none";
-    }
+    switch (attachmentSelected) {
+      case "None":
+        showElements(standar, "block");
+        showElements(attachment, "none");
+        showElements(attachmentThing, "none");
+        break;
 
-  }
-  else if (attachmentSelected == "Black") {
-    for (let i = 0; i < standar.length; i++) {
-      standar[i].style.display = "none";
-    }
-    for (var i = 0; i < attachment.length; i++) {
-      attachment[i].style.display = "block";
-    }
-    for (var i = 0; i < attachmentThing.length; i++) {
-      attachmentThing[i].style.display = "block";
-      attachmentThing[i].innerHTML =
-      '<img class="imgattachment" src="../../views/assets/img/global/customize-lanyard/sections/attachment/quick-release-black.png" alt="">';
-    }
-    }
-  else if (attachmentSelected == "Plastic colour") {
-    for (let i = 0; i < standar.length; i++) {
-      standar[i].style.display = "none";
-    }
-    for (var i = 0; i < attachment.length; i++) {
-      attachment[i].style.display = "block";
-    }
-    for (var i = 0; i < attachmentThing.length; i++) {
-      attachmentThing[i].style.display = "block";
-      attachmentThing[i].innerHTML =
-      '<img class="imgattachment" src="../../views/assets/img/global/customize-lanyard/sections/attachment/quick-release-plastics-colour.png" alt="">';
+      case "Black":
+        showElements(standar, "none");
+        showElements(attachment, "block");
+        setAttachmentImage("../../views/assets/img/global/customize-lanyard/sections/attachment/quick-release-black.png");
+        break;
 
-    }
-  }
-  else if (attachmentSelected == "Metal") {
-    for (let i = 0; i < standar.length; i++) {
-      standar[i].style.display = "none";
-    }
-    for (var i = 0; i < attachment.length; i++) {
-      attachment[i].style.display = "block";
-    }
-    for (var i = 0; i < attachmentThing.length; i++) {
-      attachmentThing[i].style.display = "block";
-      attachmentThing[i].innerHTML =
-      '<img class="imgattachment" src="../../views/assets/img/global/customize-lanyard/sections/attachment/quick-release-metal.png" alt="">';
+      case "Plastic colour":
+        showElements(standar, "none");
+        showElements(attachment, "block");
+        setAttachmentImage("../../views/assets/img/global/customize-lanyard/sections/attachment/quick-release-plastics-colour.png");
+        break;
 
+      case "Metal":
+        showElements(standar, "none");
+        showElements(attachment, "block");
+        setAttachmentImage("../../views/assets/img/global/customize-lanyard/sections/attachment/quick-release-metal.png");
+        break;
     }
-  }
-
-
   }
 }
+
 const attachmentPreviewClass = new AttachmentPreviewClass();
