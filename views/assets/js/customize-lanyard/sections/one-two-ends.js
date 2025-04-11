@@ -114,7 +114,7 @@ class OneTwoEnds {
     this.updateLanyardType();
     this.showSelectedOneTwoEnds();
 
-    previewLanyardType.showSelectedPreviewtTemplate();
+    previewLanyardType.showSelectedPreviewTemplate();
   }
 
 }
