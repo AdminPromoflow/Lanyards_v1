@@ -17,11 +17,6 @@ class Price {
     amountLanyardsRange.value = 1000;
     amountLanyards.value = 1000;
 
-
-
-
-
-
     // Event listener for input changes on amountLanyards element.
     amountLanyards.addEventListener('input', function(event) {
       this.value = this.value.replace(/\D/g, '');
@@ -173,36 +168,9 @@ class Price {
      +  priceClass.getPriceSidePrinted() + priceClass.getPriceClip()
      + priceClass.getPriceAttachment() + priceClass.getPriceColour()
      + priceClass.getPriceAccessory();
-     /*var pricePerMaterial = priceClass.getPricePerMaterialWithAmount();
-      var priceLanyardType = priceClass.getPriceLanyardType();
-      var priceWidth = priceClass.getPriceWidth();
-      var priceSidePrinted = priceClass.getPriceSidePrinted();
-      var priceClip = priceClass.getPriceClip();
-      var priceAttachment = priceClass.getPriceAttachment();
-      var priceColour = priceClass.getPriceColour();
-      var priceAccessory = priceClass.getPriceAccessory();
-
-      var totalPrice = pricePerMaterial + priceLanyardType + priceWidth +
-                       priceSidePrinted + priceClip + priceAttachment +
-                       priceColour + priceAccessory;
-
-     alert("Detalle de precios:\n" +
-      "Material: " + pricePerMaterial + "\n" +
-      "Tipo de Lanyard: " + priceLanyardType + "\n" +
-      "Ancho: " + priceWidth + "\n" +
-      "Impresión: " + priceSidePrinted + "\n" +
-      "Clip: " + priceClip + "\n" +
-      "Adjunto: " + priceAttachment + "\n" +
-      "Color: " + priceColour + "\n" +
-      "Accesorio: " + priceAccessory + "\n" +
-      "\nTotal: " + totalPrice);*/
     // Update the inner HTML of pricePerLanyard element to display the price with currency symbol.
     pricePerLanyard.innerHTML = "£" + totalPrice.toFixed(2);
   }
-
-
-
-
 
 }
 

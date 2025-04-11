@@ -2,7 +2,7 @@ class PreviewLanyardType {
   constructor() {
 
   }
-  showSelectedPreviewtTemplate(){
+  showSelectedPreviewTemplate(){
     var typeLanyard = oneTwoEndsClass.getTypeLanyardSelected();
     var width = widthClass.getWidthSelected();
 

@@ -1,15 +1,11 @@
 class AttachmentClass {
   constructor() {
     this.attachmentSelected = "none";
-
-
-
-    //alert(this.getAttachmentSelected() );
   }
   searchDataAttachmentSelected(attachment, index, price){
     attachmentClass.setAttachmentSelected(attachment);
     attachmentClass.showSelectedAttachment();
-    attachmentPreviewClass.showSelectedPreviewtTemplate();
+    attachmentPreviewClass.showSelectedPreviewTemplate();
     priceClass.setPriceAttachment(price);
     priceClass.changePricePerLanyard();
   }
@@ -17,7 +13,6 @@ class AttachmentClass {
   showSelectedAttachment() {
     // Get the selected attachment value
     var data = attachmentClass.getAttachmentSelected();
-
     // Select all elements with the class "container_boxes_attachment"
     const containerBoxesAttachment = document.querySelectorAll(".container_boxes_attachment");
     // Select all elements with the class "data_attachment"
