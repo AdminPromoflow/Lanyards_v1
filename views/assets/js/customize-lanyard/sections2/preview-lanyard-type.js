@@ -22,10 +22,10 @@ class PreviewLanyardType {
         twoSide30mm.style.display = "none";
       }
       else if (width == "10mm") {
-        alert(typeLanyard + width);
+        alert(typeLanyard + width + "hah");
 
-        /*oneSide10mm.style.display = "flex";*/
-        oneSide15mm.style.display = "none";
+        oneSide10mm.style.display = "flex";
+      /*  oneSide15mm.style.display = "none";
         oneSide20mm.style.display = "none";
         oneSide25mm.style.display = "none";
         oneSide30mm.style.display = "none";
@@ -34,7 +34,7 @@ class PreviewLanyardType {
         twoSide15mm.style.display = "none";
         twoSide20mm.style.display = "none";
         twoSide25mm.style.display = "none";
-        twoSide30mm.style.display = "none";
+        twoSide30mm.style.display = "none";*/
       }
       else if (width == "15mm") {
         oneSide10mm.style.display = "none";
