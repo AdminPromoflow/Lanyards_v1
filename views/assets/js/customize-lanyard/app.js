@@ -311,7 +311,7 @@ class CustomizeLanyard {
      this.showCurrentSection(this.currentSectionOpen);
      this.showPreview(true);
 
-     previewLanyardType.showSelectedPreviewtTemplate();
+     previewLanyardType.showSelectedPreviewTemplate();
      previewLanyardType.showTypeLanyardPreview("flex");
    }
    openWidth(){
@@ -325,7 +325,7 @@ class CustomizeLanyard {
    }
    openAttachment(){
      previewLanyardType.showTypeLanyardPreview("flex");
-     previewLanyardType.showSelectedPreviewtTemplate();
+     previewLanyardType.showSelectedPreviewTemplate();
      previewColourClass.showColourPreview("none");
      previewAccessoriesClass.showAccessoriesPreview("none");
      previewAccessoriesClass.showAccessoriesPreview("flex");
