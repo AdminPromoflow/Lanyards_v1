@@ -41,12 +41,12 @@ class Artwork {
                         // Si las dimensiones son correctas o mayores, establecer la imagen como fondo
 
                         imageArtworkRigthSection[i].style.backgroundImage = 'url("' + img.src + '")';
+                        alert("Triste porque no se que tengo mal");
+                        //artworkPreviewClass.uploadArtwork(img.src, i);
 
-                        artworkPreviewClass.uploadArtwork(img.src, i);
 
 
-
-                      artworkPreviewClassFinal.assignArtworkToLanyard(img.src, i);
+                      //artworkPreviewClassFinal.assignArtworkToLanyard(img.src, i);
                     } else {
                         alert('La imagen debe tener al menos 1287px de ancho y 54px de alto.');
                     }
