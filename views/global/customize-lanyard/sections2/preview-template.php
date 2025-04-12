@@ -15,9 +15,44 @@ $jsFilemtime = getPreviewTemplateFilemtime($jsFilePath);
 
 
 <link rel="stylesheet" href="<?php echo $cssFilePath; ?>?v=<?php echo $cssFilemtime; ?>">
-<section id="preview-template-class" class="preview-template-class">
-  <div class="container-preview-template">
 
+<section id="preview-template-class" class="preview-template-class">
+
+
+
+
+
+
+
+
+
+  <div class="container-preview-template">
+    <div class="left-super-lanyard left-super-lanyard-one-end-10mm">
+
+    </div>
+    <div class="right-super-lanyard">
+
+    </div>
+    <div class="center-super-lanyard">
+
+    </div>
   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </section>
 <script src="<?php echo $jsFilePath; ?>?v=<?php echo $jsFilemtime; ?>" type="text/javascript"></script>
