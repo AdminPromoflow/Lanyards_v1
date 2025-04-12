@@ -90,7 +90,7 @@
 
 
 
-/* 20mm */
+/* 25mm */
 .left-super-lanyard-one-end-25mm {
   position: absolute;
   height: 5.7cm;
@@ -146,3 +146,149 @@
 }
 
 /**/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.left-super-lanyard-two-end-10mm {
+  position: absolute;
+  height: 5.7cm;
+  width: 0.09cm;
+  top: 50%;
+  left: 46.2%;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.right-super-lanyard-two-end-10mm {
+  position: absolute;
+  height: 5.7cm;
+  width: 0.09cm;
+  top: 50%;
+  left: calc(100% - 46.2%);
+  background-color: white;
+  border: 1px solid black;
+}
+
+
+
+/* 15mm */
+.left-super-lanyard-two-end-15mm {
+  position: absolute;
+  height: 5.7cm;
+  width: 0.165cm;
+  top: 50%;
+  left: 41.90%;
+  background-color: white;
+  border: 1px solid black;
+  transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
+}
+
+.right-super-lanyard-two-end-15mm {
+  position: absolute;
+  height: 5.7cm;
+  width: 0.165cm;
+  top: 50%;
+  right: 41.90%;
+  background-color: white;
+  border: 1px solid black;
+  transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
+}
+
+
+
+
+
+
+/* 20mm */
+.left-super-lanyard-two-end-20mm {
+  position: absolute;
+  height: 5.7cm;
+  width: 0.24cm;
+  top: 50%;
+  left: 40.50%;
+  background-color: white;
+  border: 1px solid black;
+  transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
+}
+
+.right-super-lanyard-two-end-20mm {
+  position: absolute;
+  height: 5.7cm;
+  width: 0.24cm;
+  top: 50%;
+  right: 40.50%;
+  background-color: white;
+  border: 1px solid black;
+  transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
+}
+
+
+
+
+
+
+/* 25mm */
+.left-super-lanyard-two-end-25mm {
+  position: absolute;
+  height: 5.7cm;
+  width: 0.315cm;
+  top: 50%;
+  left: 38.88%;
+  background-color: white;
+  border: 1px solid black;
+  transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
+}
+
+.right-super-lanyard-two-end-25mm {
+  position: absolute;
+  height: 5.7cm;
+  width: 0.315cm;
+  top: 50%;
+  right: 38.91%;
+  background-color: white;
+  border: 1px solid black;
+  transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
+}
+
+
+
+
+
+
+
+
+
+
+/* 30mm */
+.left-super-lanyard-two-end-30mm {
+  position: absolute;
+  height: 5.7cm;
+  width: 0.39cm;
+  top: 50%;
+  left: 37.25%;
+  background-color: white;
+  border: 1px solid black;
+  transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
+}
+
+.right-super-lanyard-two-end-30mm {
+  position: absolute;
+  height: 5.7cm;
+  width: 0.39cm;
+  top: 50%;
+  right: 37.25%;
+  background-color: white;
+  border: 1px solid black;
+  transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
+}
