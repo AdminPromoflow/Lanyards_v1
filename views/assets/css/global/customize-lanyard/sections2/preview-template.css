@@ -14,7 +14,7 @@
   height: 5.7cm;
   width: 0.09cm;
   top: 50%;
-  left: 55%;
+  left: 50%;
   background-color: white;
   border: 1px solid black;
   transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
@@ -25,7 +25,7 @@
   height: 5.7cm;
   width: 0.09cm;
   top: 50%;
-  left: calc(100% - 55%);
+  left: calc(100% - 50%);
   background-color: white;
   border: 1px solid black;
   transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
