@@ -18,5 +18,5 @@
   left: 41.6%;
   background-color: white;
   border: 1px solid black;
-/*  transform:  skewX(7.5deg) perspective(7.5vw);*/
+  transform:  skewX(7.5deg) perspective(7.5vw);
 }
