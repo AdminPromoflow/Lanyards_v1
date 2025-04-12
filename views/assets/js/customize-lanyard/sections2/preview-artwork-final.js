@@ -212,9 +212,8 @@ class ArtworkPreviewClassFinal {
 
     if (active == 0) {
     //  alert(active + image + "mejorando");
-      drawOsNormalLeft20mm.style.background = "red";
       // Utiliza la variable declarada en el scope global
-      drawOsNormalLeft20mm.innerHTML = `<img src="${image}" alt="">`;
+      drawOsNormalLeft20mm.innerHTML = `<img src="${image}" alt="" style="transform: rotate(90deg); transition: transform 0.3s;">`;
 
     }
      else if (active == 1) {
