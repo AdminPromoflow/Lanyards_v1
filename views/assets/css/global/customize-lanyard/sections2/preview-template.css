@@ -12,10 +12,10 @@
 .left-super-lanyard-one-end-10mm{
 
   position: absolute;
-  height: 1cm;
-  width: 2.8%;
+  height: 3.8cm;
+  width: 0.6cm;
   top: 2.8%;
-  left: 0.6cm;
+  left: 41.6%;
   background-color: white;
   border: 1px solid black;
 /*  transform:  skewX(7.5deg) perspective(7.5vw);*/
