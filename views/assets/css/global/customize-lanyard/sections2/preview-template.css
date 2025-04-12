@@ -41,7 +41,7 @@
   left: 46.2%;
   background-color: white;
   border: 1px solid black;
-  transform:  /*skewX(7.5deg) perspective(7.5vw)*/ translateY(-50%);
+  transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
 }
 
 .right-super-lanyard-one-end-30mm {
@@ -52,7 +52,7 @@
   right: 46.2%;
   background-color: white;
   border: 1px solid black;
-  transform: /* skewX(-7.5deg) perspective(7.5vw)*/ translateY(-50%);
+  transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
 }
 
 /**/
