@@ -38,6 +38,10 @@ class Artwork {
 
                       if (img.width >= 12 && img.height >= 4) {
 
+                        if (img.width > img.height) {
+                          alert("Tenemos que rotar la imágen");
+                        }
+
                         // Si las dimensiones son correctas o mayores, establecer la imagen como fondo
 
                         imageArtworkRigthSection[i].style.backgroundImage = 'url("' + img.src + '")';
