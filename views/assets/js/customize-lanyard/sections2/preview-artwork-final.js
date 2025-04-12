@@ -35,7 +35,7 @@ class ArtworkPreviewClassFinal {
     this.emptyAllDrawExcept15mm();
     }
     else if (widthSelected == "20mm") {
-      alert("Entramos a 20mm");
+
       this.drawOneSide20mm(image, active);
       this.emptyAllDrawExcept20mm();
     }
@@ -212,6 +212,7 @@ class ArtworkPreviewClassFinal {
     if (active == 0) {
       // Utiliza la variable declarada en el scope global
       drawOsNormalLeft20mm.innerHTML = `<img src="${image}" alt="">`;
+      alert(image + active + "mejorando");
 
     }
      else if (active == 1) {
