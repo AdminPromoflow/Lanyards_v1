@@ -128,7 +128,7 @@
   height: 5.7cm;
   width: 0.39cm;
   top: 50%;
-  left: 37.25%;
+  left: 10.3%;
   background-color: white;
   border: 1px solid black;
   transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
@@ -139,7 +139,7 @@
   height: 5.7cm;
   width: 0.39cm;
   top: 50%;
-  right: 37.25%;
+  right: 11.3%;
   background-color: white;
   border: 1px solid black;
   transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
