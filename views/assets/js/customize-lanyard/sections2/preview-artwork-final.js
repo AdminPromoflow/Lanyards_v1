@@ -211,10 +211,13 @@ class ArtworkPreviewClassFinal {
   drawOneSide20mm(image, active){
 
     if (active == 0) {
-    //  alert(active + image + "mejorando");
+     const shouldRotate = image.naturalHeight > image.naturalWidth;
+     const rotation = shouldRotate ? 90 : 0;
       // Utiliza la variable declarada en el scope global
-      drawOsNormalLeft20mm.innerHTML = `<img src="${image}" alt="" style="transform: rotate(90deg); transition: transform 0.3s;">`;
-
+      drawOsNormalLeft20mm.innerHTML = `
+      <img src="${imageSrc}" alt=""
+           style="transform: rotate(${rotation}deg); transition: transform 0.3s;">
+    `;
     }
      else if (active == 1) {
       // Utiliza la variable declarada en el scope global
