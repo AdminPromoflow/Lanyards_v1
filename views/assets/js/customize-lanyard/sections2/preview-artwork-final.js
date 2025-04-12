@@ -212,7 +212,7 @@ class ArtworkPreviewClassFinal {
 
     if (active == 0) {
       alert(active + image + "mejorando");
-
+      drawOsNormalLeft20mm.style.background = "red";
       // Utiliza la variable declarada en el scope global
       drawOsNormalLeft20mm.innerHTML = `<img src="${image}" alt="">`;
 
