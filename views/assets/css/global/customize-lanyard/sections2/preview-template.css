@@ -1,16 +1,15 @@
-.container-preview-template{
+.container-preview-template {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 20%;
+  left: 30%;
+  transform: translateX(-50%);
   height: 5.7cm;
   width: 200px;
   background: rgba(255, 0, 0, .35);
 }
 
 /* 10mm */
-.left-super-lanyard-one-end-10mm{
-
+.left-super-lanyard-one-end-10mm {
   position: absolute;
   height: 5.7cm;
   width: 0.09cm;
@@ -21,7 +20,7 @@
   transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
 }
 
-.right-super-lanyard-one-end-10mm{
+.right-super-lanyard-one-end-10mm {
   position: absolute;
   height: 5.7cm;
   width: 0.09cm;
