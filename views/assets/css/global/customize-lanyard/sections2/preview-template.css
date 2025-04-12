@@ -14,8 +14,8 @@
   position: absolute;
   height: 5.7cm;
   width: 0.09cm;
-  top: 5.8%;
-  left: 37.6%;
+  top: 7.5%;
+  left: 39%;
   background-color: white;
   border: 1px solid black;
   transform:  skewX(7.5deg) perspective(7.5vw);
