@@ -14,9 +14,9 @@
   position: absolute;
   height: 5.7cm;
   width: 0.09cm;
-  top: 8%;
+  top: 50%;
   left: 39.25%;
   background-color: white;
   border: 1px solid black;
-  transform:  skewX(7.5deg) perspective(7.5vw);
+  transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
 }
