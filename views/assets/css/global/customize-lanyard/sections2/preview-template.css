@@ -271,189 +271,47 @@
 
 
 
-
-/* 30mm */
-.left-super-lanyard-two-end-30mm {
+.center-super-lanyard-one-end-10mm-attachment{
   position: absolute;
-  height: 100%;
-  width: 0.39cm;
-  top: 50%;
-  left: 10.75%;
-  background-color: rgba(85, 35 , 100, 1);
-
-  transform:   translateY(-50%);
-}
-
-.right-super-lanyard-two-end-30mm {
-  position: absolute;
-  height: 100%;
-  width: 0.39cm;
-  top: 50%;
-  right: 10.6%;
-  background-color: rgba(85, 35 , 100, 1);
-
-  transform:   translateY(-50%);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 10mm */
-.left-super-lanyard-one-end-10mm-attachment {
-  position: absolute;
-  height: 100%;
-  width: 0.09cm;
-  top: 50%;
-  left: 46.2%;
-  background-color: rgba(85, 35 , 100, 1);
-
-  transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
-}
-
-.right-super-lanyard-one-end-10mm-attachment {
-  position: absolute;
-  height: 100%;
-  width: 0.09cm;
-  top: 50%;
-  left: calc(100% - 46.2%);
-  background-color: rgba(85, 35 , 100, 1);
-
-  transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
-  overflow: hidden;
-}
-.center-super-lanyard-one-end-10mm-attachment {
-  position: absolute;
-  height: 30%;
-  width: 0.09cm;
-  bottom: 0%;
+  height: 23.2%;
+  width: 2.8%;
+  top: 47.8%;
   left: 50%;
-  background-color: rgba(85, 35 , 100, 1);
+  transform: translateX(-50%);
+  background-color: white;
+  border: 1px solid black;
+  z-index: 1;
+  overflow: hidden;
+}
+.left-super-lanyard-one-end-10mm-attachment{
+  position: absolute;
+  height: 44.3%;
+  width: 2.8%;
+  top: 3.1%;
+  left: 41.6%;
+  background-color: white;
+  border: 1px solid black;
+  transform:  skewX(11.3deg) perspective(11.3vw);
+  overflow: hidden;
+}
 
+.right-super-lanyard-one-end-10mm-attachment{
+  position: absolute;
+  height: 44.3%;
+  width: 2.8%;
+  top: 3.1%;
+  left: 54.8%;
+  background-color: white;
+  border: 1px solid black;
+  transform:  skewX(-11.3deg) perspective(11.3vw);
   overflow: hidden;
 }
 
 
-/* 15mm */
-.left-super-lanyard-one-end-15mm-attachment {
-  position: absolute;
-  height: 100%;
-  width: 0.165cm;
-  top: 50%;
-  left: 41.90%;
-  background-color: rgba(85, 35 , 100, 1);
-
-  transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
-}
-.right-super-lanyard-one-end-15mm-attachment {
-  position: absolute;
-  height: 100%;
-  width: 0.165cm;
-  top: 50%;
-  right: 41.90%;
-  background-color: rgba(85, 35 , 100, 1);
-
-  transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
-}
-
-
-/* 20mm */
-.left-super-lanyard-one-end-20mm-attachment {
-  position: absolute;
-  height: 100%;
-  width: 0.24cm;
-  top: 50%;
-  left: 40.50%;
-  background-color: rgba(85, 35 , 100, 1);
-
-  transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
-}
-.right-super-lanyard-one-end-20mm-attachment {
-  position: absolute;
-  height: 100%;
-  width: 0.24cm;
-  top: 50%;
-  right: 40.50%;
-  background-color: rgba(85, 35 , 100, 1);
-
-  transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
-}
-
-
-/* 25mm */
-.left-super-lanyard-one-end-25mm-attachment {
-  position: absolute;
-  height: 100%;
-  width: 0.315cm;
-  top: 50%;
-  left: 38.88%;
-  background-color: rgba(85, 35 , 100, 1);
-
-  transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
-}
-
-.right-super-lanyard-one-end-25mm-attachment {
-  position: absolute;
-  height: 100%;
-  width: 0.315cm;
-  top: 50%;
-  right: 38.91%;
-  background-color: rgba(85, 35 , 100, 1);
-
-  transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
-}
 
 
 
-/* 30mm */
-.left-super-lanyard-one-end-30mm-attachment {
-  position: absolute;
-  height: 100%;
-  width: 0.39cm;
-  top: 50%;
-  left: 37.25%;
-  background-color: rgba(85, 35 , 100, 1);
 
-  transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
-}
-
-.right-super-lanyard-one-end-30mm-attachment {
-  position: absolute;
-  height: 100%;
-  width: 0.39cm;
-  top: 50%;
-  right: 37.25%;
-  background-color: rgba(85, 35 , 100, 1);
-
-  transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
-}
 
 
 /**/
