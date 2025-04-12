@@ -15,7 +15,7 @@
   width: 0.09cm;
   top: 50%;
   left: 46.2%;
-  background-color: rgba(128, 0 , 255);
+  background-color: rgba(85, 35 , 100, 1);
 
   transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
 }
@@ -26,7 +26,7 @@
   width: 0.09cm;
   top: 50%;
   left: calc(100% - 46.2%);
-  background-color: rgba(128, 0 , 255);
+  background-color: rgba(85, 35 , 100, 1);
 
   transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
   overflow: hidden;
@@ -41,7 +41,7 @@
   width: 0.165cm;
   top: 50%;
   left: 41.90%;
-  background-color: rgba(128, 0 , 255);
+  background-color: rgba(85, 35 , 100, 1);
 
   transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
 }
@@ -52,7 +52,7 @@
   width: 0.165cm;
   top: 50%;
   right: 41.90%;
-  background-color: rgba(128, 0 , 255);
+  background-color: rgba(85, 35 , 100, 1);
 
   transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
 }
@@ -69,7 +69,7 @@
   width: 0.24cm;
   top: 50%;
   left: 40.50%;
-  background-color: rgba(128, 0 , 255);
+  background-color: rgba(85, 35 , 100, 1);
 
   transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
 }
@@ -80,7 +80,7 @@
   width: 0.24cm;
   top: 50%;
   right: 40.50%;
-  background-color: rgba(128, 0 , 255);
+  background-color: rgba(85, 35 , 100, 1);
 
   transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
 }
@@ -97,7 +97,7 @@
   width: 0.315cm;
   top: 50%;
   left: 38.88%;
-  background-color: rgba(128, 0 , 255);
+  background-color: rgba(85, 35 , 100, 1);
 
   transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
 }
@@ -108,7 +108,7 @@
   width: 0.315cm;
   top: 50%;
   right: 38.91%;
-  background-color: rgba(128, 0 , 255);
+  background-color: rgba(85, 35 , 100, 1);
 
   transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
 }
@@ -129,7 +129,7 @@
   width: 0.39cm;
   top: 50%;
   left: 37.25%;
-  background-color: rgba(128, 0 , 255);
+  background-color: rgba(85, 35 , 100, 1);
 
   transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
 }
@@ -140,7 +140,7 @@
   width: 0.39cm;
   top: 50%;
   right: 37.25%;
-  background-color: rgba(128, 0 , 255);
+  background-color: rgba(85, 35 , 100, 1);
 
   transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
 }
@@ -166,7 +166,7 @@
   width: 0.09cm;
   top: 50%;
   left: 10.3%;
-  background-color: rgba(128, 0 , 255);
+  background-color: rgba(85, 35 , 100, 1);
 
   transform:   translateY(-50%);
 }
@@ -177,7 +177,7 @@
   width: 0.09cm;
   top: 50%;
   right: 11.3%;
-  background-color: rgba(128, 0 , 255);
+  background-color: rgba(85, 35 , 100, 1);
 
   transform:   translateY(-50%);
 }
@@ -191,7 +191,7 @@
   width: 0.165cm;
   top: 50%;
   left: 10.3%;
-  background-color: rgba(128, 0 , 255);
+  background-color: rgba(85, 35 , 100, 1);
 
   transform:   translateY(-50%);
 }
@@ -202,7 +202,7 @@
   width: 0.165cm;
   top: 50%;
   right: 11.3%;
-  background-color: rgba(128, 0 , 255);
+  background-color: rgba(85, 35 , 100, 1);
 
   transform:   translateY(-50%);
 }
@@ -219,7 +219,7 @@
   width: 0.24cm;
   top: 50%;
   left: 40.50%;
-  background-color: rgba(128, 0 , 255);
+  background-color: rgba(85, 35 , 100, 1);
 
   transform:   translateY(-50%);
 }
@@ -230,7 +230,7 @@
   width: 0.24cm;
   top: 50%;
   right: 40.50%;
-  background-color: rgba(128, 0 , 255);
+  background-color: rgba(85, 35 , 100, 1);
 
   transform:   translateY(-50%);
 }
@@ -247,7 +247,7 @@
   width: 0.315cm;
   top: 50%;
   left: 38.88%;
-  background-color: rgba(128, 0 , 255);
+  background-color: rgba(85, 35 , 100, 1);
 
   transform:   translateY(-50%);
 }
@@ -258,7 +258,7 @@
   width: 0.315cm;
   top: 50%;
   right: 38.91%;
-  background-color: rgba(128, 0 , 255);
+  background-color: rgba(85, 35 , 100, 1);
 
   transform:   translateY(-50%);
 }
@@ -279,7 +279,7 @@
   width: 0.39cm;
   top: 50%;
   left: 37.25%;
-  background-color: rgba(128, 0 , 255);
+  background-color: rgba(85, 35 , 100, 1);
 
   transform:   translateY(-50%);
 }
@@ -290,7 +290,7 @@
   width: 0.39cm;
   top: 50%;
   right: 37.25%;
-  background-color: rgba(128, 0 , 255);
+  background-color: rgba(85, 35 , 100, 1);
 
   transform:   translateY(-50%);
 }
