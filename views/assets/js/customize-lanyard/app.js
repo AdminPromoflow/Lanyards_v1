@@ -296,6 +296,10 @@ class CustomizeLanyard {
 
   // Métodos adicionales según sea necesario
    openMaterial(){
+     previewTemplate.togglePreviewTemplateClass("none");
+
+
+
      previewAccessoriesClass.showAccessoriesPreview("none");
 
      previewMaterial.showMaterialPreview("flex");
@@ -305,6 +309,10 @@ class CustomizeLanyard {
      this.showPreview(false);
    }
    openLanyardType(){
+     previewTemplate.togglePreviewTemplateClass("block");
+
+
+
      previewAccessoriesClass.showAccessoriesPreview("flex");
      previewMaterial.showMaterialPreview("none");
 
@@ -315,15 +323,24 @@ class CustomizeLanyard {
      previewLanyardType.showTypeLanyardPreview("flex");
    }
    openWidth(){
+     previewTemplate.togglePreviewTemplateClass("block");
+
      this.showCurrentSection(this.currentSectionOpen);
    }
    openSidePrinted(){
+     previewTemplate.togglePreviewTemplateClass("block");
+
      this.showCurrentSection(this.currentSectionOpen);
    }
    openClips(){
+     previewTemplate.togglePreviewTemplateClass("block");
+
      this.showCurrentSection(this.currentSectionOpen);
    }
    openAttachment(){
+     previewTemplate.togglePreviewTemplateClass("block");
+
+
      previewLanyardType.showTypeLanyardPreview("flex");
      previewLanyardType.showSelectedPreviewTemplate();
      previewColourClass.showColourPreview("none");
@@ -333,6 +350,10 @@ class CustomizeLanyard {
      this.showCurrentSection(this.currentSectionOpen);
    }
    openAccessories(){
+     previewTemplate.togglePreviewTemplateClass("block");
+
+
+
      this.showCurrentSection(this.currentSectionOpen);
      previewLanyardType.showTypeLanyardPreview("flex");
      previewColourClass.showColourPreview("none");
@@ -340,6 +361,9 @@ class CustomizeLanyard {
      previewAccessoriesClass.showAccessoriesPreview("flex");
    }
    openColourQuantity(){
+     previewTemplate.togglePreviewTemplateClass("block");
+
+
      previewArtworkManualClass.showArtworkManualPreview("none");
      previewLanyardType.showTypeLanyardPreview("none");
      previewAccessoriesClass.showAccessoriesPreview("none");
@@ -349,6 +373,9 @@ class CustomizeLanyard {
      this.showCurrentSection(this.currentSectionOpen);
    }
    openArtWorkManual(){
+     previewTemplate.togglePreviewTemplateClass("none");
+
+
      previewAccessoriesClass.showAccessoriesPreview("none");
 
      previewColourClass.showColourPreview("none");
@@ -362,6 +389,9 @@ class CustomizeLanyard {
 
    }
   openBackgroundColour() {
+    previewTemplate.togglePreviewTemplateClass("block");
+
+
     previewAccessoriesClass.showAccessoriesPreview("flex");
 
     previewArtworkManualClass.showArtworkManualPreview("none");
@@ -369,17 +399,24 @@ class CustomizeLanyard {
     this.showCurrentSection(this.currentSectionOpen);
   }
   openText(){
+    previewTemplate.togglePreviewTemplateClass("block");
+
     previewLanyardType.showTypeLanyardPreview("flex");
     previewArtworkManualClass.showArtworkManualPreview("none");
     this.showCurrentSection(this.currentSectionOpen);
   }
   openImage(){
+    previewTemplate.togglePreviewTemplateClass("block");
+
+
     previewLanyardType.showTypeLanyardPreview("flex");
     previewArtworkManualClass.showArtworkManualPreview("none");
     this.showCurrentSection(this.currentSectionOpen);
   }
 
   openArtwork(){
+    previewTemplate.togglePreviewTemplateClass("block");
+
 
     artworkClass.showHideArtwork(true);
     artworkPreviewClass.showHidePreviewArtwork(true);
@@ -390,6 +427,9 @@ class CustomizeLanyard {
   }
 
   openArtworkFinal(){
+    previewTemplate.togglePreviewTemplateClass("block");
+
+
     previewAccessoriesClass.showAccessoriesPreview("flex");
     artworkPreviewClass.showHidePreviewArtwork(false);
     previewLanyardType.showTypeLanyardPreview("flex");
@@ -400,6 +440,8 @@ class CustomizeLanyard {
   }
 
   openLogin(){
+    previewTemplate.togglePreviewTemplateClass("none");
+
     previewAccessoriesClass.showAccessoriesPreview("none");
     classPreviewLogin.showLoginPreview("flex");
     previewLanyardType.showTypeLanyardPreview("none");
@@ -408,6 +450,7 @@ class CustomizeLanyard {
   }
 
   openProvidedInformation(){
+    previewTemplate.togglePreviewTemplateClass("none");
 
 
     classPreviewLogin.showLoginPreview("none");
@@ -418,6 +461,8 @@ class CustomizeLanyard {
     this.showNext(true);
   }
   openCheckout(){
+    previewTemplate.togglePreviewTemplateClass("block");
+
     this.showNext(false);
     previewLanyardType.showTypeLanyardPreview("none");
     previewProvidedInformation.showProvidedInformationPreview('none');
