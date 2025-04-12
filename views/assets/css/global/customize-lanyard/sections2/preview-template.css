@@ -349,6 +349,16 @@
   transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
   overflow: hidden;
 }
+.center-super-lanyard-one-end-10mm-attachment {
+  position: absolute;
+  height: 40%;
+  width: 0.09cm;
+  top: 50%;
+  left: calc(100% - 46.2%);
+  background-color: rgba(85, 35 , 100, 1);
+
+  overflow: hidden;
+}
 
 
 /* 15mm */
