@@ -11,7 +11,7 @@
 /* 10mm */
 .left-super-lanyard-one-end-10mm {
   position: absolute;
-  height: 5.7cm;
+  height: 100%;
   width: 0.09cm;
   top: 50%;
   left: 46.2%;
@@ -22,7 +22,7 @@
 
 .right-super-lanyard-one-end-10mm {
   position: absolute;
-  height: 5.7cm;
+  height: 100%;
   width: 0.09cm;
   top: 50%;
   left: calc(100% - 46.2%);
@@ -37,7 +37,7 @@
 /* 15mm */
 .left-super-lanyard-one-end-15mm {
   position: absolute;
-  height: 5.7cm;
+  height: 100%;
   width: 0.165cm;
   top: 50%;
   left: 41.90%;
@@ -48,7 +48,7 @@
 
 .right-super-lanyard-one-end-15mm {
   position: absolute;
-  height: 5.7cm;
+  height: 100%;
   width: 0.165cm;
   top: 50%;
   right: 41.90%;
@@ -65,7 +65,7 @@
 /* 20mm */
 .left-super-lanyard-one-end-20mm {
   position: absolute;
-  height: 5.7cm;
+  height: 100%;
   width: 0.24cm;
   top: 50%;
   left: 40.50%;
@@ -76,7 +76,7 @@
 
 .right-super-lanyard-one-end-20mm {
   position: absolute;
-  height: 5.7cm;
+  height: 100%;
   width: 0.24cm;
   top: 50%;
   right: 40.50%;
@@ -93,7 +93,7 @@
 /* 25mm */
 .left-super-lanyard-one-end-25mm {
   position: absolute;
-  height: 5.7cm;
+  height: 100%;
   width: 0.315cm;
   top: 50%;
   left: 38.88%;
@@ -104,7 +104,7 @@
 
 .right-super-lanyard-one-end-25mm {
   position: absolute;
-  height: 5.7cm;
+  height: 100%;
   width: 0.315cm;
   top: 50%;
   right: 38.91%;
@@ -125,7 +125,7 @@
 /* 30mm */
 .left-super-lanyard-one-end-30mm {
   position: absolute;
-  height: 5.7cm;
+  height: 100%;
   width: 0.39cm;
   top: 50%;
   left: 37.25%;
@@ -136,7 +136,7 @@
 
 .right-super-lanyard-one-end-30mm {
   position: absolute;
-  height: 5.7cm;
+  height: 100%;
   width: 0.39cm;
   top: 50%;
   right: 37.25%;
@@ -162,7 +162,7 @@
 
 .left-super-lanyard-two-end-10mm {
   position: absolute;
-  height: 5.7cm;
+  height: 100%;
   width: 0.09cm;
   top: 50%;
   left: 10.3%;
@@ -173,7 +173,7 @@
 
 .right-super-lanyard-two-end-10mm {
   position: absolute;
-  height: 5.7cm;
+  height: 100%;
   width: 0.09cm;
   top: 50%;
   right: 11.3%;
@@ -187,7 +187,7 @@
 /* 15mm */
 .left-super-lanyard-two-end-15mm {
   position: absolute;
-  height: 5.7cm;
+  height: 100%;
   width: 0.165cm;
   top: 50%;
   left: 10.8%;
@@ -198,7 +198,7 @@
 
 .right-super-lanyard-two-end-15mm {
   position: absolute;
-  height: 5.7cm;
+  height: 100%;
   width: 0.165cm;
   top: 50%;
   right: 11.0%;
@@ -215,7 +215,7 @@
 /* 20mm */
 .left-super-lanyard-two-end-20mm {
   position: absolute;
-  height: 5.7cm;
+  height: 100%;
   width: 0.24cm;
   top: 50%;
   left: 40.50%;
@@ -226,7 +226,7 @@
 
 .right-super-lanyard-two-end-20mm {
   position: absolute;
-  height: 5.7cm;
+  height: 100%;
   width: 0.24cm;
   top: 50%;
   right: 40.50%;
@@ -243,7 +243,7 @@
 /* 25mm */
 .left-super-lanyard-two-end-25mm {
   position: absolute;
-  height: 5.7cm;
+  height: 100%;
   width: 0.315cm;
   top: 50%;
   left: 38.88%;
@@ -254,7 +254,7 @@
 
 .right-super-lanyard-two-end-25mm {
   position: absolute;
-  height: 5.7cm;
+  height: 100%;
   width: 0.315cm;
   top: 50%;
   right: 38.91%;
@@ -275,7 +275,7 @@
 /* 30mm */
 .left-super-lanyard-two-end-30mm {
   position: absolute;
-  height: 5.7cm;
+  height: 100%;
   width: 0.39cm;
   top: 50%;
   left: 37.25%;
@@ -286,7 +286,7 @@
 
 .right-super-lanyard-two-end-30mm {
   position: absolute;
-  height: 5.7cm;
+  height: 100%;
   width: 0.39cm;
   top: 50%;
   right: 37.25%;
