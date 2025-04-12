@@ -31,20 +31,12 @@
   transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
   overflow: hidden;
 }
-.center-super-lanyard-one-end-10mm {
-  position: absolute;
-  display: none;
-}
 
-
-
-
-
-/* 10mm */
-.left-super-lanyard-one-end-15mm {
+/* 30mm */
+.left-super-lanyard-one-end-30mm {
   position: absolute;
   height: 5.7cm;
-  width: 0.165cm;
+  width: 0.39cm;
   top: 50%;
   left: 46.2%;
   background-color: white;
@@ -52,10 +44,10 @@
   transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
 }
 
-.right-super-lanyard-one-end-15mm {
+.right-super-lanyard-one-end-30mm {
   position: absolute;
   height: 5.7cm;
-  width: 0.165cm;
+  width: 0.39cm;
   top: 50%;
   left: calc(100% - 46.2%);
   background-color: white;
@@ -63,8 +55,5 @@
   transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
   overflow: hidden;
 }
-.center-super-lanyard-one-end-15mm {
-  position: absolute;
-  display: none;
-}
+
 /**/
