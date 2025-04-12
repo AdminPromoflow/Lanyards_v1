@@ -361,7 +361,7 @@ class CustomizeLanyard {
      previewAccessoriesClass.showAccessoriesPreview("flex");
    }
    openColourQuantity(){
-     previewTemplate.togglePreviewTemplateClass("block");
+     previewTemplate.togglePreviewTemplateClass("none");
 
 
      previewArtworkManualClass.showArtworkManualPreview("none");
@@ -415,7 +415,7 @@ class CustomizeLanyard {
   }
 
   openArtwork(){
-    previewTemplate.togglePreviewTemplateClass("block");
+    previewTemplate.togglePreviewTemplateClass("none");
 
 
     artworkClass.showHideArtwork(true);

@@ -16,7 +16,7 @@ $jsFilemtime = getPreviewTemplateFilemtime($jsFilePath);
 
 <link rel="stylesheet" href="<?php echo $cssFilePath; ?>?v=<?php echo $cssFilemtime; ?>">
 <section id="preview-template-class" class="preview-template-class">
-  <div class="" style="position: relative; height: 20px; width: 20px; background: red;">
+  <div class="container-preview-template">
 
   </div>
 </section>
