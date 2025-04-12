@@ -165,7 +165,7 @@
   height: 5.7cm;
   width: 0.09cm;
   top: 50%;
-  left: 46.2%;
+  left: 10%;
   background-color: white;
   border: 1px solid black;
   transform:   translateY(-50%);
@@ -176,7 +176,7 @@
   height: 5.7cm;
   width: 0.09cm;
   top: 50%;
-  left: calc(100% - 46.2%);
+  right: 10%;
   background-color: white;
   border: 1px solid black;
   transform:   translateY(-50%);
