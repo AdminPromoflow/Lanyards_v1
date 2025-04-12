@@ -215,7 +215,7 @@ class ArtworkPreviewClassFinal {
      const rotation = shouldRotate ? 90 : 0;
       // Utiliza la variable declarada en el scope global
       drawOsNormalLeft20mm.innerHTML = `
-      <img src="${imageSrc}" alt=""
+      <img src="${image}" alt=""
            style="transform: rotate(${rotation}deg); transition: transform 0.3s;">
     `;
     }
