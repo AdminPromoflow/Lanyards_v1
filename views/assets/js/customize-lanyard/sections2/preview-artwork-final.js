@@ -26,8 +26,6 @@ const drawOsNormalRight30mmTP = document.getElementById("artwork-os-normal-right
 class ArtworkPreviewClassFinal {
   assignArtworkToLanyard(image, active) {
     var widthSelected = widthClass.getWidthSelected();
-    alert(active + widthSelected + " haha lo logramos 2" + image );
-    var widthSelected = widthClass.getWidthSelected();
     if (widthSelected == "10mm") {
         this.drawOneSide10mm(image, active);
         this.emptyAllDrawExcept10mm();
@@ -37,6 +35,7 @@ class ArtworkPreviewClassFinal {
     this.emptyAllDrawExcept15mm();
     }
     else if (widthSelected == "20mm") {
+      alert("Entramos a 20mm");
       this.drawOneSide20mm(image, active);
       this.emptyAllDrawExcept20mm();
     }
