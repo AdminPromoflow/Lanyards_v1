@@ -1,7 +1,7 @@
 .container-preview-template {
   position: absolute;
   top: 20%;
-  left: 30%;
+  left: 50%;
   transform: translateX(-50%);
   height: 5.7cm;
   width: 200px;
