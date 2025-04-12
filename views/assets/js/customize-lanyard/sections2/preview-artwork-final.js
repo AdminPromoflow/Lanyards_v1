@@ -209,9 +209,10 @@ class ArtworkPreviewClassFinal {
   }
   }
   drawOneSide20mm(image, active){
-    alert(image + active + "mejorando");
 
     if (active == 0) {
+      alert(active + image + "mejorando");
+
       // Utiliza la variable declarada en el scope global
       drawOsNormalLeft20mm.innerHTML = `<img src="${image}" alt="">`;
 
