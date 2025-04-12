@@ -211,8 +211,9 @@ class ArtworkPreviewClassFinal {
   drawOneSide20mm(image, active){
 
     if (active == 0) {
-      const shouldRotate = image.naturalWidth > image.naturalHeight;
-      const rotation = shouldRotate ? 90 : 0;
+      /*const shouldRotate = image.naturalWidth > image.naturalHeight;
+      const rotation = shouldRotate ? 90 : 0;*/
+      const rotation = 90;
       // Utiliza la variable declarada en el scope global
       drawOsNormalLeft20mm.innerHTML = `
       <img src="${image}" alt=""
