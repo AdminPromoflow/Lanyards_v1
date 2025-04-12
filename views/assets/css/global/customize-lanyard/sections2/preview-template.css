@@ -168,6 +168,7 @@
   left: 46.2%;
   background-color: white;
   border: 1px solid black;
+  transform:   translateY(-50%);
 }
 
 .right-super-lanyard-two-end-10mm {
@@ -178,6 +179,7 @@
   left: calc(100% - 46.2%);
   background-color: white;
   border: 1px solid black;
+  transform:   translateY(-50%);
 }
 
 
