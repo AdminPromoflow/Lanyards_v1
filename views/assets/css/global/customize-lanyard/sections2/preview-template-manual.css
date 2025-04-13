@@ -1,17 +1,7 @@
 
 
   /* Manual */
-      .container-preview-template{
-        position: absolute;
-        top: 23.5%;
-        left: 50%;
-        transform: translateX(-50%);
-        height: 6.75cm;
-        width: 100px;
-        background: rgba(0, 0, 255, .35);
-      /*  display: none;*/
-        display: none;
-      }
+  
 
       /* 10mm */
       .left-super-lanyard-one-end-10mm-manual {
