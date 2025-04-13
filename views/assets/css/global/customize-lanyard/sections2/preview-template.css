@@ -1,9 +1,9 @@
 
 
   /* Manual */
-      .container-preview-template-manual {
+      .container-preview-template{
         position: absolute;
-        top: 25%;
+        top: 27%;
         left: 50%;
         transform: translateX(-50%);
         height: 6.75cm;
