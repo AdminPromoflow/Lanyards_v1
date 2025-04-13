@@ -8,14 +8,15 @@
   background: rgba(0, 0, 255, .35);
   display: none;
 }
+
+
 .container-preview-template-second-side {
   position: absolute;
-  top: 30%;
-  left: 50%;
+  top: 27%;
+  left: 40%;
   height: 5.7cm;
   width: 100px;
   background: rgba(0, 255, 0, .35);
-
 }
 
 /* 10mm */
