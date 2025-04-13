@@ -8,12 +8,12 @@
         transform: translateX(-50%);
         height: 6.75cm;
         width: 100px;
-        background: rgba(0, 0, 255, .35);
+        background: rgba(0, 255, 255, .35);
       /*  display: none;*/
       }
 
       /* 10mm */
-      .left-super-lanyard-one-end-10mm-manual {
+      .left-super-lanyard-one-end-10mm {
         position: absolute;
         height: 100%;
         width: 0.09cm;
@@ -24,7 +24,7 @@
         transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
       }
 
-      .right-super-lanyard-one-end-10mm-manual {
+      .right-super-lanyard-one-end-10mm {
         position: absolute;
         height: 100%;
         width: 0.09cm;
@@ -39,7 +39,7 @@
 
 
       /* 15mm */
-      .left-super-lanyard-one-end-15mm-manual {
+      .left-super-lanyard-one-end-15mm {
         position: absolute;
         height: 100%;
         width: 0.165cm;
@@ -50,7 +50,7 @@
         transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
       }
 
-      .right-super-lanyard-one-end-15mm-manual {
+      .right-super-lanyard-one-end-15mm {
         position: absolute;
         height: 100%;
         width: 0.165cm;
@@ -67,7 +67,7 @@
 
 
       /* 20mm */
-      .left-super-lanyard-one-end-20mm-manual {
+      .left-super-lanyard-one-end-20mm {
         position: absolute;
         height: 100%;
         width: 0.24cm;
@@ -78,7 +78,7 @@
         transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
       }
 
-      .right-super-lanyard-one-end-20mm-manual {
+      .right-super-lanyard-one-end-20mm {
         position: absolute;
         height: 100%;
         width: 0.24cm;
@@ -95,7 +95,7 @@
 
 
       /* 25mm */
-      .left-super-lanyard-one-end-25mm-manual {
+      .left-super-lanyard-one-end-25mm {
         position: absolute;
         height: 100%;
         width: 0.315cm;
@@ -106,7 +106,7 @@
         transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
       }
 
-      .right-super-lanyard-one-end-25mm-manual {
+      .right-super-lanyard-one-end-25mm {
         position: absolute;
         height: 100%;
         width: 0.315cm;
@@ -127,7 +127,7 @@
 
 
 /* 30mm */
-.left-super-lanyard-one-end-30mm-manual {
+.left-super-lanyard-one-end-30mm {
   position: absolute;
   height: 100%;
   width: 0.39cm;
@@ -138,7 +138,7 @@
   transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
 }
 
-.right-super-lanyard-one-end-30mm-manual {
+.right-super-lanyard-one-end-30mm {
   position: absolute;
   height: 100%;
   width: 0.39cm;
@@ -164,7 +164,7 @@
 
 
 
-.left-super-lanyard-two-end-10mm-manual {
+.left-super-lanyard-two-end-10mm {
   position: absolute;
   height: 100%;
   width: 0.09cm;
@@ -175,7 +175,7 @@
   transform:   translateY(-50%);
 }
 
-.right-super-lanyard-two-end-10mm-manual {
+.right-super-lanyard-two-end-10mm {
   position: absolute;
   height: 100%;
   width: 0.09cm;
@@ -189,7 +189,7 @@
 
 
 /* 15mm */
-.left-super-lanyard-two-end-15mm-manual {
+.left-super-lanyard-two-end-15mm {
   position: absolute;
   height: 100%;
   width: 0.165cm;
@@ -200,7 +200,7 @@
   transform:   translateY(-50%);
 }
 
-.right-super-lanyard-two-end-15mm-manual {
+.right-super-lanyard-two-end-15mm {
   position: absolute;
   height: 100%;
   width: 0.165cm;
@@ -217,7 +217,7 @@
 
 
 /* 20mm */
-.left-super-lanyard-two-end-20mm-manual {
+.left-super-lanyard-two-end-20mm {
   position: absolute;
   height: 100%;
   width: 0.24cm;
@@ -228,7 +228,7 @@
   transform:   translateY(-50%);
 }
 
-.right-super-lanyard-two-end-20mm-manual {
+.right-super-lanyard-two-end-20mm {
   position: absolute;
   height: 100%;
   width: 0.24cm;
@@ -245,7 +245,7 @@
 
 
 /* 25mm */
-.left-super-lanyard-two-end-25mm-manual {
+.left-super-lanyard-two-end-25mm {
   position: absolute;
   height: 100%;
   width: 0.315cm;
@@ -256,7 +256,7 @@
   transform:   translateY(-50%);
 }
 
-.right-super-lanyard-two-end-25mm-manual {
+.right-super-lanyard-two-end-25mm {
   position: absolute;
   height: 100%;
   width: 0.315cm;
@@ -275,7 +275,7 @@
 
 
 
-.center-super-lanyard-one-end-10mm-attachment-manual{
+.center-super-lanyard-one-end-10mm-attachment{
   position: absolute;
   height: 21%;
   width: 0.09cm;
@@ -287,7 +287,7 @@
   z-index: 0;
   overflow: hidden;
 }
-.left-super-lanyard-one-end-10mm-attachment-manual{
+.left-super-lanyard-one-end-10mm-attachment{
   position: absolute;
   height: 67%;
   width: 0.09cm;
@@ -298,7 +298,7 @@
   transform:  skewX(11.3deg) perspective(11.3vw);
   z-index: 0;
 }
-.right-super-lanyard-one-end-10mm-attachment-manual{
+.right-super-lanyard-one-end-10mm-attachment{
   position: absolute;
   height: 67%;
   width: 0.09cm;
@@ -319,7 +319,7 @@
 
 
 
-.center-super-lanyard-one-end-15mm-attachment-manual{
+.center-super-lanyard-one-end-15mm-attachment{
   position: absolute;
   height: 17%;
   width: 0.165cm;
@@ -330,7 +330,7 @@
   border: 1px solid black;
   z-index: 0;
 }
-.left-super-lanyard-one-end-15mm-attachment-manual{
+.left-super-lanyard-one-end-15mm-attachment{
   position: absolute;
   height: 68.3%;
   width: 0.165cm;
@@ -341,7 +341,7 @@
   transform:  skewX(11.3deg) perspective(11.3vw);
   z-index: 0;
 }
-.right-super-lanyard-one-end-15mm-attachment-manual{
+.right-super-lanyard-one-end-15mm-attachment{
   position: absolute;
   height: 68.3%;
   width: 0.165cm;
@@ -365,7 +365,7 @@
 
 
 
-.center-super-lanyard-one-end-20mm-attachment-manual{
+.center-super-lanyard-one-end-20mm-attachment{
   position: absolute;
   height: 17%;
   width: 0.24cm;
@@ -376,7 +376,7 @@
   border: 1px solid black;
   z-index: 0;
 }
-.left-super-lanyard-one-end-20mm-attachment-manual{
+.left-super-lanyard-one-end-20mm-attachment{
   position: absolute;
   height: 68.3%;
   width: 0.24cm;
@@ -387,7 +387,7 @@
   transform:  skewX(11.3deg) perspective(11.3vw);
   z-index: 0;
 }
-.right-super-lanyard-one-end-20mm-attachment-manual{
+.right-super-lanyard-one-end-20mm-attachment{
   position: absolute;
   height: 68.3%;
   width: 0.24cm;
@@ -413,7 +413,7 @@
 
 
 
-.center-super-lanyard-one-end-25mm-attachment-manual{
+.center-super-lanyard-one-end-25mm-attachment{
   position: absolute;
   height: 10%;
   width: 0.315cm;
@@ -424,7 +424,7 @@
   border: 1px solid black;
   z-index: 0;
 }
-.left-super-lanyard-one-end-25mm-attachment-manual{
+.left-super-lanyard-one-end-25mm-attachment{
   position: absolute;
   height: 69.0%;
   width: 0.315cm;
@@ -435,7 +435,7 @@
   transform:  skewX(11.3deg) perspective(11.3vw);
   z-index: 0;
 }
-.right-super-lanyard-one-end-25mm-attachment-manual{
+.right-super-lanyard-one-end-25mm-attachment{
   position: absolute;
   height: 69.0%;
   width: 0.315cm;
@@ -459,7 +459,7 @@
 
 
 
-.center-super-lanyard-one-end-30mm-attachment-manual{
+.center-super-lanyard-one-end-30mm-attachment{
   position: absolute;
   height: 8.0%;
   width: 0.39cm;
@@ -470,7 +470,7 @@
   border: 1px solid black;
   z-index: 0;
 }
-.left-super-lanyard-one-end-30mm-attachment-manual{
+.left-super-lanyard-one-end-30mm-attachment{
   position: absolute;
   height: 68.8%;
   width: 0.39cm;
@@ -481,7 +481,7 @@
   transform:  skewX(11.3deg) perspective(11.3vw);
   z-index: 0;
 }
-.right-super-lanyard-one-end-30mm-attachment-manual{
+.right-super-lanyard-one-end-30mm-attachment{
   position: absolute;
   height: 68.8%;
   width: 0.39cm;
