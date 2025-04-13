@@ -29,6 +29,7 @@
           <div class="artwork-os-normal-right-20mm" id="artwork-os-normal-right-20mm">
           </div>
         </div>
+
         <!-- Container for two-sided printed lanyard -->
         <div class="container-one-side-25mm twoSidePrinted standar">
           <!-- Back clip section for the 20mm lanyard -->
@@ -38,7 +39,8 @@
           </div>
           <!-- Left side of the lanyard with background color -->
           <div class="one-end-normal-left-20mm backgroundColour">
-            <div class="draw-os-normal-left-20mm text-container draw-os-20mm"></div>
+            <div class="draw-os-normal-left-20mm text-container draw-os-20mm">
+            </div>
             <div class="artwork-os-normal-left-20mm-tp" id="artwork-os-normal-left-20mm-tp">
             </div>
           </div>
@@ -46,10 +48,10 @@
           <!-- Right side of the lanyard with background color -->
           <div class="one-end-normal-right-20mm backgroundColour">
             <div class="draw-os-normal-right-20mm text-container draw-os-20mm"></div>
-            <div class="artwork-os-normal-right-20mm-tp" id="artwork-os-normal-right-20mm-tp">
-            </div>
+            <div class="artwork-os-normal-right-20mm-tp" id="artwork-os-normal-right-20mm-tp"></div>
           </div>
         </div>
+
       </div>
 
       <?php include "../../views/global/customize-lanyard/sections2/Templates/one-side-with-attachment-20mm.php" ?>
