@@ -15,7 +15,7 @@
       .left-super-lanyard-one-end-10mm {
         position: absolute;
         height: 6.75cm;
-        width: 0.015cm;
+        width: 0.45cm;
         top: 50%;
         left: 46.2%;
         background-color: rgba(85, 35 , 100, 1);
@@ -26,7 +26,7 @@
       .right-super-lanyard-one-end-10mm {
         position: absolute;
         height: 6.75cm;
-        width: 0.015cm;
+        width: 0.45cm;
         top: 50%;
         left: calc(100% - 46.2%);
         background-color: rgba(85, 35 , 100, 1);
