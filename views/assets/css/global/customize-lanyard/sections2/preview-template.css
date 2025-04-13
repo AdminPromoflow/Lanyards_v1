@@ -317,7 +317,7 @@
 
 .center-super-lanyard-one-end-15mm-attachment{
   position: absolute;
-  height: 17%;
+  height: 20%;
   width: 0.165cm;
   bottom: 0%;
   left: 50%;
@@ -329,7 +329,7 @@
 }
 .left-super-lanyard-one-end-15mm-attachment{
   position: absolute;
-  height: 69%;
+  height: 68%;
   width: 0.165cm;
   top: 0%;
   left: 31.80%;
@@ -340,7 +340,7 @@
 }
 .right-super-lanyard-one-end-15mm-attachment{
   position: absolute;
-  height: 69%;
+  height: 68%;
   width: 0.165cm;
   top: 0%;
   right: 31.80%;
