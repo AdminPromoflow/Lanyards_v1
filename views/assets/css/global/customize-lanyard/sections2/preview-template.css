@@ -17,7 +17,7 @@
         height: 7.2cm;
         width: 0.16cm;
         top: 50%;
-        left: calc(50%);
+        left: 50%;
         background-color: rgba(85, 35 , 100, 1);
 
         transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
@@ -29,7 +29,7 @@
         width: 0.16cm;
         top: 50%;
 
-        right: calc(50%);
+        right: 50%;
 
         background-color: rgba(85, 35 , 100, 1);
 
