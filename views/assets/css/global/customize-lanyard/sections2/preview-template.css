@@ -6,6 +6,7 @@
   height: 5.7cm;
   width: 100px;
   background: rgba(0, 0, 255, .35);
+  display: none;
 }
 .container-preview-template-second-side {
   position: absolute;
@@ -13,7 +14,7 @@
   left: 50%;
   height: 5.7cm;
   width: 100px;
-  background: rgba(0, 0, 255, .35);
+  background: rgba(0, 255, 0, .35);
 
 }
 
