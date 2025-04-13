@@ -10,6 +10,9 @@
         background: rgba(0, 255, 0, .35);
       /*  display: none;*/
       }
+      .super-lanyard{
+        background: orange;
+      }
 
       /* 10mm */
       .left-super-lanyard-one-end-10mm {
