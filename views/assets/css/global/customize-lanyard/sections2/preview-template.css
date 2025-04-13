@@ -1,4 +1,4 @@
-.container-preview-template {
+.container-preview-template-first-side {
   position: absolute;
   top: 25%;
   left: 50%;
@@ -6,6 +6,15 @@
   height: 5.7cm;
   width: 100px;
   background: rgba(0, 0, 255, .35);
+}
+.container-preview-template-second-side {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  height: 5.7cm;
+  width: 100px;
+  background: rgba(0, 0, 255, .35);
+
 }
 
 /* 10mm */
