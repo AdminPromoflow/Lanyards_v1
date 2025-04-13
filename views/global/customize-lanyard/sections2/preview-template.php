@@ -29,13 +29,13 @@ $jsFilemtime = getPreviewTemplateFilemtime($jsFilePath);
   <div class="container-preview-template">
 
     <div class="super-lanyard-manual">
-      <div class="left-super-lanyard left-super-lanyard-one-end-10mm-manual">
+      <div class="left-super-lanyard left-super-lanyard-one-end-10mm">
 
       </div>
-      <div class="right-super-lanyard right-super-lanyard-one-end-10mm-manual">
+      <div class="right-super-lanyard right-super-lanyard-one-end-10mm">
 
       </div>
-      <div class="center-super-lanyard center-super-lanyard-one-end-10mm-manual">
+      <div class="center-super-lanyard center-super-lanyard-one-end-10mm">
 
       </div>
     </div>
