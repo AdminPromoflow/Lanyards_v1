@@ -1,6 +1,6 @@
 .container-preview-template-first-side {
   position: absolute;
-  top: 10%;
+  top: 0px;
   left: 50%;
   transform: translateX(-50%);
   height: 6.75cm;
