@@ -21,6 +21,7 @@
         background-color: rgba(85, 35 , 100, 1);
 
         transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
+        z-index: 3;
       }
 
       .right-super-lanyard-one-end-10mm {
@@ -34,7 +35,7 @@
         background-color: rgba(85, 35 , 100, 1);
 
         transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
-        overflow: hidden;
+        z-index: 3;
       }
 
 
