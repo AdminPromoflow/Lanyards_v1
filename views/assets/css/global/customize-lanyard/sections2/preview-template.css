@@ -11,6 +11,9 @@
       /*  display: none;*/
       }
       .super-lanyard{
+        position: relative;
+        height: 100%;
+        width: 100%;
         background: orange;
       }
 
