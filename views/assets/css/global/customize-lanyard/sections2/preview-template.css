@@ -285,10 +285,10 @@
 }
 .left-super-lanyard-one-end-10mm-attachment{
   position: absolute;
-  height: 60%;
+  height: 70%;
   width: 0.09cm;
   top: 0%;
-  left: 23%;
+  left: 27%;
   background-color: white;
   border: 1px solid black;
   transform:  skewX(11.3deg) perspective(11.3vw);
@@ -296,10 +296,10 @@
 }
 .right-super-lanyard-one-end-10mm-attachment{
   position: absolute;
-  height: 60%;
+  height: 70%;
   width: 0.09cm;
   top: 0%;
-  right: 23%;
+  right: 27%;
   background-color: white;
   border: 1px solid black;
   transform:  skewX(-11.3deg) perspective(11.3vw);
