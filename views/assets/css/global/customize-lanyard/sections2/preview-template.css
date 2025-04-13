@@ -1,9 +1,9 @@
 .container-preview-template-first-side {
   position: absolute;
-  top: 20%;
+  top: 19.8%;
   left: 50%;
   transform: translateX(-50%);
-  height: 7.3cm;
+  height: 7.1cm;
   width: 100px;
   background: rgba(0, 0, 255, .35);
 /*  display: none;*/
