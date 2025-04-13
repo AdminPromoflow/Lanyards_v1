@@ -275,7 +275,7 @@
   position: absolute;
   height: 23.2%;
   width: 0.09cm;
-  top: 47.8%;
+  top: 60%;
   left: 50%;
   transform: translateX(-50%);
   background-color: white;
@@ -288,7 +288,7 @@
   height: 44.3%;
   width: 0.09cm;
   top: 3.1%;
-  left: 41.6%;
+  left: 20%;
   background-color: white;
   border: 1px solid black;
   transform:  skewX(11.3deg) perspective(11.3vw);
@@ -299,7 +299,7 @@
   height: 44.3%;
   width: 0.09cm;
   top: 3.1%;
-  left: 54.8%;
+  right: 20%;
   background-color: white;
   border: 1px solid black;
   transform:  skewX(-11.3deg) perspective(11.3vw);
