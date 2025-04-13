@@ -444,4 +444,48 @@
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+.center-super-lanyard-one-end-30mm-attachment{
+  position: absolute;
+  height: 10%;
+  width: 0.315cm;
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  border: 1px solid black;
+  z-index: 0;
+}
+.left-super-lanyard-one-end-30mm-attachment{
+  position: absolute;
+  height: 69.0%;
+  width: 0.315cm;
+  top: 0%;
+  left: 27.7%;
+  background-color: white;
+  border: 1px solid black;
+  transform:  skewX(11.3deg) perspective(11.3vw);
+  z-index: 0;
+}
+.right-super-lanyard-one-end-30mm-attachment{
+  position: absolute;
+  height: 69.0%;
+  width: 0.315cm;
+  top: 0%;
+  right: 27.4%;
+  background-color: white;
+  border: 1px solid black;
+  transform:  skewX(-11.3deg) perspective(11.3vw);
+  z-index: 0;
+}
 /**/
