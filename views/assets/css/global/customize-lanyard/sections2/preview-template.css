@@ -40,20 +40,20 @@
       /* 15mm */
       .left-super-lanyard-one-end-15mm {
         position: absolute;
-        height: 6.75cm;
-        width: 0.015cm;
-        top: 50%;
-        left: 41.90%;
+        top: 0;
+        left: 29%;
+        height: 7.2cm;
+        width: 0.24cm;
         background-color: rgba(85, 35 , 100, 1);
         transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
       }
 
       .right-super-lanyard-one-end-15mm {
         position: absolute;
-        height: 6.75cm;
-        width: 0.015cm;
-        top: 50%;
-        right: 41.90%;
+        top: 0;
+        right: 29%;
+        height: 7.2cm;
+        width: 0.24cm;
         background-color: rgba(85, 35 , 100, 1);
         transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
       }
