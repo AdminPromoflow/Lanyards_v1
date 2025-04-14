@@ -118,23 +118,23 @@
   /* 30mm */
   /* 25mm */
   .left-super-lanyard-one-end-30mm-artwork {
-  position: absolute;
-  top: 0;
-  left: 24.5%;
-  height: 7.2cm;
-  width: 0.416cm;
-  background-color: rgba(0, 0 , 100, 1);
-  transform:  skewX(7.5deg) perspective(7.5vw) ;
+    position: absolute;
+    top: 0;
+    left: 24.5%;
+    height: 7.2cm;
+    width: 0.416cm;
+    background-color: rgba(0, 0 , 100, 1);
+    transform:  skewX(7.5deg) perspective(7.5vw) ;
   }
 
   .right-super-lanyard-one-end-30mm-artwork {
-  position: absolute;
-  top: 0;
-  right: 24.5%;
-  height: 7.2cm;
-  width: 0.416cm;
-  background-color: rgba(0, 0 , 100, 1);
-  transform:  skewX(-7.5deg) perspective(7.5vw) ;
+    position: absolute;
+    top: 0;
+    right: 24.5%;
+    height: 7.2cm;
+    width: 0.416cm;
+    background-color: rgba(0, 0 , 100, 1);
+    transform:  skewX(-7.5deg) perspective(7.5vw) ;
   }
 
   /**/
@@ -174,22 +174,22 @@
 
   /* 15mm */
   .left-super-lanyard-two-end-15mm-artwork {
-  position: absolute;
-  top: 0;
-  left: 11.5%;
-  height: 7.2cm;
-  width: 0.176cm;
-  background-color: rgba(0, 0 , 100, 1);
+    position: absolute;
+    top: 0;
+    left: 11.5%;
+    height: 7.2cm;
+    width: 0.176cm;
+    background-color: rgba(0, 0 , 100, 1);
 
   }
 
   .right-super-lanyard-two-end-15mm-artwork {
-  position: absolute;
-  top: 0;
-  right: 11.5%;
-  height: 7.2cm;
-  width: 0.176cm;
-  background-color: rgba(0, 0 , 100, 1);
+    position: absolute;
+    top: 0;
+    right: 11.5%;
+    height: 7.2cm;
+    width: 0.176cm;
+    background-color: rgba(0, 0 , 100, 1);
 
   }
 
@@ -200,22 +200,22 @@
 
   /* 20mm */
   .left-super-lanyard-two-end-20mm-artwork {
-  position: absolute;
-  top: 0;
-  left: 11.5%;
-  height: 7.2cm;
-  width: 0.256cm;
-  background-color: rgba(0, 0 , 100, 1);
+    position: absolute;
+    top: 0;
+    left: 11.5%;
+    height: 7.2cm;
+    width: 0.256cm;
+    background-color: rgba(0, 0 , 100, 1);
 
   }
 
   .right-super-lanyard-two-end-20mm-artwork {
-  position: absolute;
-  top: 0;
-  right: 11.5%;;
-  height: 7.2cm;
-  width: 0.256cm;
-  background-color: rgba(0, 0 , 100, 1);
+    position: absolute;
+    top: 0;
+    right: 11.5%;;
+    height: 7.2cm;
+    width: 0.256cm;
+    background-color: rgba(0, 0 , 100, 1);
 
   }
 
@@ -226,22 +226,22 @@
 
   /* 25mm */
   .left-super-lanyard-two-end-25mm-artwork {
-  position: absolute;
-  top: 0;
-  left: 11.1%;
-  height: 7.2cm;
-  width: 0.336cm;
-  background-color: rgba(0, 0 , 100, 1);
+    position: absolute;
+    top: 0;
+    left: 11.1%;
+    height: 7.2cm;
+    width: 0.336cm;
+    background-color: rgba(0, 0 , 100, 1);
 
   }
 
   .right-super-lanyard-two-end-25mm-artwork {
-  position: absolute;
-  top: 0;
-  right: 11.1%;
-  height: 7.2cm;
-  width: 0.336cm;
-  background-color: rgba(0, 0 , 100, 1);
+    position: absolute;
+    top: 0;
+    right: 11.1%;
+    height: 7.2cm;
+    width: 0.336cm;
+    background-color: rgba(0, 0 , 100, 1);
 
   }
 
@@ -252,12 +252,12 @@
 
   /* 25mm */
   .left-super-lanyard-two-end-30mm-artwork {
-  position: absolute;
-  top: 0;
-  left: 11%;
-  height: 7.2cm;
-  width: 0.416cm;
-  background-color: rgba(0, 0 , 100, 1);
+    position: absolute;
+    top: 0;
+    left: 11%;
+    height: 7.2cm;
+    width: 0.416cm;
+    background-color: rgba(0, 0 , 100, 1);
 
   }
 
@@ -364,38 +364,38 @@
 
 
     .left-super-lanyard-one-end-20mm-attachment-artwork{
-    position: absolute;
-    height: 4.5cm;
-    width: 0.256cm;
-    top: 0%;
-    left: 27.2%;
-    background-color: purple;
-    border: 1px solid black;
-    transform:  skewX(11.3deg) perspective(11.3vw);
-    z-index: 0;
+      position: absolute;
+      height: 4.5cm;
+      width: 0.256cm;
+      top: 0%;
+      left: 27.2%;
+      background-color: purple;
+      border: 1px solid black;
+      transform:  skewX(11.3deg) perspective(11.3vw);
+      z-index: 0;
     }
     .right-super-lanyard-one-end-20mm-attachment-artwork{
-    position: absolute;
-    height: 4.5cm;
-    width: 0.256cm;
-    top: 0%;
-    right: 27.2%;
-    background-color: purple;
-    border: 1px solid black;
-    transform:  skewX(-11.3deg) perspective(11.3vw);
-    z-index: 0;
+      position: absolute;
+      height: 4.5cm;
+      width: 0.256cm;
+      top: 0%;
+      right: 27.2%;
+      background-color: purple;
+      border: 1px solid black;
+      transform:  skewX(-11.3deg) perspective(11.3vw);
+      z-index: 0;
     }
     .center-super-lanyard-one-end-20mm-attachment-artwork{
-    position: absolute;
-    height: 2cm;
-    width: 0.256cm;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: purple;
-    border: 1px solid black;
-    z-index: 0;
-    overflow: hidden;
+      position: absolute;
+      height: 2cm;
+      width: 0.256cm;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: purple;
+      border: 1px solid black;
+      z-index: 0;
+      overflow: hidden;
     }
 
 
@@ -460,37 +460,37 @@
 
 
     .left-super-lanyard-one-end-30mm-attachment-artwork{
-    position: absolute;
-    height: 4.5cm;
-    width: 0.416cm;
-    top: 0%;
-    left: 24.2%;
-    background-color: purple;
-    border: 1px solid black;
-    transform:  skewX(11.3deg) perspective(11.3vw);
-    z-index: 0;
+      position: absolute;
+      height: 4.5cm;
+      width: 0.416cm;
+      top: 0%;
+      left: 24.2%;
+      background-color: purple;
+      border: 1px solid black;
+      transform:  skewX(11.3deg) perspective(11.3vw);
+      z-index: 0;
     }
     .right-super-lanyard-one-end-30mm-attachment-artwork{
-    position: absolute;
-    height: 4.5cm;
-    width: 0.416cm;
-    top: 0%;
-    right: 24.2%;
-    background-color: purple;
-    border: 1px solid black;
-    transform:  skewX(-11.3deg) perspective(11.3vw);
-    z-index: 0;
+      position: absolute;
+      height: 4.5cm;
+      width: 0.416cm;
+      top: 0%;
+      right: 24.2%;
+      background-color: purple;
+      border: 1px solid black;
+      transform:  skewX(-11.3deg) perspective(11.3vw);
+      z-index: 0;
     }
     .center-super-lanyard-one-end-30mm-attachment-artwork{
-    position: absolute;
-    height: 2cm;
-    width: 0.416cm;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: purple;
-    border: 1px solid black;
-    z-index: 0;
-    overflow: hidden;
+      position: absolute;
+      height: 2cm;
+      width: 0.416cm;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: purple;
+      border: 1px solid black;
+      z-index: 0;
+      overflow: hidden;
     }
     /**/
