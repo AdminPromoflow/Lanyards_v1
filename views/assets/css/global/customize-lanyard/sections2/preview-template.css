@@ -14,9 +14,7 @@
         position: relative;
         height: 100%;
         width: 100%;
-        background: orange;
       }
-
       /* 10mm */
       .left-super-lanyard-one-end-10mm {
         position: absolute;
@@ -26,8 +24,7 @@
         width: 0.16cm;
 
         background-color: rgba(85, 35 , 100, 1);
-
-        transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
+        /*transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);*/
       }
 
       .right-super-lanyard-one-end-10mm {
