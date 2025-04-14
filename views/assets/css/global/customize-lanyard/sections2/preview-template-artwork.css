@@ -319,9 +319,9 @@
     .left-super-lanyard-one-end-15mm-attachment-artwork{
       position: absolute;
       height: 4.5cm;
-      width: 0.24cm;
+      width: 0.176cm;
       top: 0%;
-      left: 27.5%;
+      left: 28.7%;
       background-color: purple;
       border: 1px solid black;
       transform:  skewX(11.3deg) perspective(11.3vw);
@@ -330,9 +330,9 @@
     .right-super-lanyard-one-end-15mm-attachment-artwork{
       position: absolute;
       height: 4.5cm;
-      width: 0.24cm;
+      width: 0.176cm;
       top: 0%;
-      right: 27.5%;
+      right: 28.7%;
       background-color: purple;
       border: 1px solid black;
       transform:  skewX(-11.3deg) perspective(11.3vw);
@@ -341,7 +341,7 @@
     .center-super-lanyard-one-end-15mm-attachment-artwork{
       position: absolute;
       height: 2cm;
-      width: 0.24cm;
+      width: 0.176cm;
       bottom: 0;
       left: 50%;
       transform: translateX(-50%);
