@@ -124,9 +124,9 @@
 .left-super-lanyard-one-end-30mm {
   position: absolute;
   top: 0;
-  left: 24.5%;
+  left: 23.3%;
   height: 7.2cm;
-  width: 0.4cm;
+  width: 0.48cm;
   background-color: rgba(85, 35 , 100, 1);
   transform:  skewX(7.5deg) perspective(7.5vw) ;
 }
@@ -134,9 +134,9 @@
 .right-super-lanyard-one-end-30mm {
   position: absolute;
   top: 0;
-  right: 24.5%;
+  right: 23.3%;
   height: 7.2cm;
-  width: 0.4cm;
+  width: 0.48cm;
   background-color: rgba(85, 35 , 100, 1);
   transform:  skewX(-7.5deg) perspective(7.5vw) ;
 }
