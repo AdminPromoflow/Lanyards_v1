@@ -60,10 +60,10 @@
       /* 20mm */
       .left-super-lanyard-one-end-20mm-manual {
         position: absolute;
-        height: 100%;
-        width: 0.24cm;
         top: 50%;
-        left: 40.50%;
+        left: 42.3%;
+        height: 6.08cm;
+        width: 0.256cm;
         background-color: white;
 
         transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
@@ -71,10 +71,10 @@
 
       .right-super-lanyard-one-end-20mm-manual {
         position: absolute;
-        height: 100%;
-        width: 0.24cm;
         top: 50%;
-        right: 40.50%;
+        right: 42.3%;
+        height: 6.08cm;
+        width: 0.256cm;
         background-color: white;
 
         transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
