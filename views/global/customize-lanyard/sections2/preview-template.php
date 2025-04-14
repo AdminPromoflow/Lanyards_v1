@@ -46,11 +46,11 @@ $jsFilemtime = getPreviewTemplateFilemtime($jsFilePath);
     <!-- Artwork mode lanyard preview layout (used when uploading custom artwork) -->
     <div class="super-lanyard-artwork">
       <!-- Left part of the artwork-mode lanyard -->
-      <div class="left-super-lanyard-artwork left-super-lanyard-one-end-10mm-artwork">
+      <div class="left-super-lanyard-artwork left-super-lanyard-one-end-15mm-artwork">
         <!-- Rendered artwork preview for the left segment -->
       </div>
       <!-- Right part of the artwork-mode lanyard -->
-      <div class="right-super-lanyard-artwork right-super-lanyard-one-end-10mm-artwork">
+      <div class="right-super-lanyard-artwork right-super-lanyard-one-end-15mm-artwork">
         <!-- Rendered artwork preview for the right segment -->
       </div>
       <!-- Center part of the artwork-mode lanyard -->

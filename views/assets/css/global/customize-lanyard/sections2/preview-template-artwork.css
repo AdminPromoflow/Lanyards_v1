@@ -30,13 +30,16 @@
     transform:  skewX(-7.5deg) perspective(7.5vw);
   }
 
+
+
+
   /* 15mm */
   .left-super-lanyard-one-end-15mm-artwork {
     position: absolute;
     top: 0;
-    left: 27.5%;
+    left: 28.7%;
     height: 7.2cm;
-    width: 0.24cm;
+    width: 0.176cm;
     background-color: rgba(0, 0 , 100, 1);
     transform:  skewX(7.5deg) perspective(7.5vw) ;
   }
@@ -44,9 +47,9 @@
   .right-super-lanyard-one-end-15mm-artwork {
     position: absolute;
     top: 0;
-    right: 27.5%;
+    right: 28.7%;
     height: 7.2cm;
-    width: 0.24cm;
+    width: 0.176cm;
     background-color: rgba(0, 0 , 100, 1);
     transform:  skewX(-7.5deg) perspective(7.5vw) ;
   }
