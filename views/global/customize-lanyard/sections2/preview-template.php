@@ -30,11 +30,11 @@ $jsFilemtime = getPreviewTemplateFilemtime($jsFilePath);
     <!-- Standard lanyard preview layout -->
     <div class="super-lanyard">
       <!-- Left part of the standard lanyard (for one-end, 10mm type) -->
-      <div class="left-super-lanyard left-super-lanyard-two-end-20mm">
+      <div class="left-super-lanyard left-super-lanyard-two-end-25mm">
         <!-- Rendered preview for the left segment -->
       </div>
       <!-- Right part of the standard lanyard (for one-end, 10mm type) -->
-      <div class="right-super-lanyard right-super-lanyard-two-end-20mm">
+      <div class="right-super-lanyard right-super-lanyard-two-end-25mm">
         <!-- Rendered preview for the right segment -->
       </div>
       <!-- Center part of the standard lanyard (typically the neck area) -->
@@ -46,11 +46,11 @@ $jsFilemtime = getPreviewTemplateFilemtime($jsFilePath);
     <!-- Manual mode lanyard preview layout (used when user adjusts elements manually) -->
     <div class="super-lanyard-manual">
       <!-- Left part of the manual-mode lanyard -->
-      <div class="left-super-lanyard left-super-lanyard-two-end-20mm-manual">
+      <div class="left-super-lanyard left-super-lanyard-two-end-25mm-manual">
         <!-- Rendered manual preview for the left segment -->
       </div>
       <!-- Right part of the manual-mode lanyard -->
-      <div class="right-super-lanyard right-super-lanyard-two-end-20mm-manual">
+      <div class="right-super-lanyard right-super-lanyard-two-end-25mm-manual">
         <!-- Rendered manual preview for the right segment -->
       </div>
       <!-- Center part of the manual-mode lanyard -->

@@ -234,10 +234,10 @@
 /* 25mm */
 .left-super-lanyard-two-end-25mm-manual {
   position: absolute;
-  height: 100%;
-  width: 0.315cm;
   top: 50%;
-  left: 10.75%;
+  left: 11.1%;
+  height: 6.08cm;
+  width: 0.336cm;
   background-color: white;
 
   transform:   translateY(-50%);
@@ -245,10 +245,10 @@
 
 .right-super-lanyard-two-end-25mm-manual {
   position: absolute;
-  height: 100%;
-  width: 0.315cm;
   top: 50%;
-  right: 10.4%;
+  right: 11.1%;
+  height: 6.08cm;
+  width: 0.336cm;
   background-color: white;
 
   transform:   translateY(-50%);
