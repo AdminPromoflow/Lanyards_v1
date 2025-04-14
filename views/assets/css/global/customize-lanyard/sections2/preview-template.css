@@ -64,7 +64,7 @@
 
 
       /* 20mm */
-      .left-super-lanyard-one-end-15mm {
+      .left-super-lanyard-one-end-20mm {
         position: absolute;
         top: 0;
         left: 27.5%;
@@ -74,7 +74,7 @@
         transform:  skewX(7.5deg) perspective(7.5vw) ;
       }
 
-      .right-super-lanyard-one-end-15mm {
+      .right-super-lanyard-one-end-20mm {
         position: absolute;
         top: 0;
         right: 27.5%;
