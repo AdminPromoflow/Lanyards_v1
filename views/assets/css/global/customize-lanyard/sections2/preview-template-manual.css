@@ -10,7 +10,7 @@
       /* 10mm */
       .left-super-lanyard-one-end-10mm-manual {
         position: absolute;
-        top: 0;
+        top: 50%;
         left: 30.2%;
         height: 6.8.2cm;
         width: 0.096cm;
@@ -20,7 +20,7 @@
 
       .right-super-lanyard-one-end-10mm-manual {
         position: absolute;
-        top: 0;
+        top: 50%;
         right: 30.2%;
         height: 6.8cm;
         width: 0.096cm;
