@@ -24,7 +24,7 @@
         width: 0.16cm;
 
         background-color: rgba(85, 35 , 100, 1);
-        /*transform:  skewX(7.5deg) perspective(7.5vw) ;*/
+        transform:  skewX(7.5deg) perspective(7.5vw) ;
       }
       .right-super-lanyard-one-end-10mm {
         position: absolute;
@@ -34,7 +34,7 @@
         width: 0.16cm;
 
         background-color: rgba(85, 35 , 100, 1);
-      /*  transform:  skewX(-7.5deg) perspective(7.5vw);*/
+        transform:  skewX(-7.5deg) perspective(7.5vw);
       }
 
       /* 15mm */
