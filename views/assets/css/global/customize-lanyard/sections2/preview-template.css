@@ -120,26 +120,25 @@
 
 
 /* 30mm */
+/* 25mm */
 .left-super-lanyard-one-end-30mm {
   position: absolute;
-  height: 6.75cm;
-  width: 0.015cm;
-  top: 50%;
-  left: 37.25%;
+  top: 0;
+  left: 24.5%;
+  height: 7.2cm;
+  width: 0.4cm;
   background-color: rgba(85, 35 , 100, 1);
-
-  transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
+  transform:  skewX(7.5deg) perspective(7.5vw) ;
 }
 
 .right-super-lanyard-one-end-30mm {
   position: absolute;
-  height: 6.75cm;
-  width: 0.015cm;
-  top: 50%;
-  right: 37.25%;
+  top: 0;
+  right: 24.5%;
+  height: 7.2cm;
+  width: 0.4cm;
   background-color: rgba(85, 35 , 100, 1);
-
-  transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
+  transform:  skewX(-7.5deg) perspective(7.5vw) ;
 }
 
 /**/
