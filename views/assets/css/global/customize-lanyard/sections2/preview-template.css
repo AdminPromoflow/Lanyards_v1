@@ -291,7 +291,7 @@
   top: 0%;
   left: 29%;
   background-color: white;
-  border: 1px solid black;
+
   transform:  skewX(11.3deg) perspective(11.3vw);
   z-index: 0;
 }
@@ -302,7 +302,7 @@
   top: 0%;
   right: 29%;
   background-color: white;
-  border: 1px solid black;
+
   transform:  skewX(-11.3deg) perspective(11.3vw);
   z-index: 0;
 }
@@ -314,7 +314,7 @@
   left: 50%;
   transform: translateX(-50%);
   background-color: white;
-  border: 1px solid black;
+
   z-index: 0;
   overflow: hidden;
 }
@@ -334,7 +334,7 @@
   top: 0%;
   left: 27.5%;
   background-color: white;
-  border: 1px solid black;
+
   transform:  skewX(11.3deg) perspective(11.3vw);
   z-index: 0;
 }
@@ -345,7 +345,7 @@
   top: 0%;
   right: 27.5%;
   background-color: white;
-  border: 1px solid black;
+
   transform:  skewX(-11.3deg) perspective(11.3vw);
   z-index: 0;
 }
@@ -357,7 +357,7 @@
   left: 50%;
   transform: translateX(-50%);
   background-color: white;
-  border: 1px solid black;
+
   z-index: 0;
   overflow: hidden;
 }
@@ -381,7 +381,7 @@
   top: 0%;
   left: 26%;
   background-color: white;
-  border: 1px solid black;
+
   transform:  skewX(11.3deg) perspective(11.3vw);
   z-index: 0;
 }
@@ -392,7 +392,7 @@
   top: 0%;
   right: 26%;
   background-color: white;
-  border: 1px solid black;
+
   transform:  skewX(-11.3deg) perspective(11.3vw);
   z-index: 0;
 }
@@ -404,7 +404,7 @@
   left: 50%;
   transform: translateX(-50%);
   background-color: white;
-  border: 1px solid black;
+
   z-index: 0;
   overflow: hidden;
 }
@@ -430,7 +430,7 @@
   top: 0%;
   left: 24.5%;
   background-color: white;
-  border: 1px solid black;
+
   transform:  skewX(11.3deg) perspective(11.3vw);
   z-index: 0;
 }
@@ -441,7 +441,7 @@
   top: 0%;
   right: 24.5%;
   background-color: white;
-  border: 1px solid black;
+
   transform:  skewX(-11.3deg) perspective(11.3vw);
   z-index: 0;
 }
@@ -453,7 +453,7 @@
   left: 50%;
   transform: translateX(-50%);
   background-color: white;
-  border: 1px solid black;
+
   z-index: 0;
   overflow: hidden;
 }
@@ -477,7 +477,7 @@
   top: 0%;
   left: 23%;
   background-color: white;
-  border: 1px solid black;
+
   transform:  skewX(11.3deg) perspective(11.3vw);
   z-index: 0;
 }
@@ -488,7 +488,7 @@
   top: 0%;
   right: 23%;
   background-color: white;
-  border: 1px solid black;
+
   transform:  skewX(-11.3deg) perspective(11.3vw);
   z-index: 0;
 }
@@ -500,7 +500,7 @@
   left: 50%;
   transform: translateX(-50%);
   background-color: white;
-  border: 1px solid black;
+
   z-index: 0;
   overflow: hidden;
 }
