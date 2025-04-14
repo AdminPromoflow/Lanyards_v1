@@ -38,7 +38,7 @@ $jsFilemtime = getPreviewTemplateFilemtime($jsFilePath);
         <!-- Rendered preview for the right segment -->
       </div>
       <!-- Center part of the standard lanyard (typically the neck area) -->
-      <div class="center-super-lanyard ">
+      <div class="center-super-lanyard center-super-lanyard-one-end-10mm-attachment">
         <!-- Rendered preview for the center segment -->
       </div>
     </div>

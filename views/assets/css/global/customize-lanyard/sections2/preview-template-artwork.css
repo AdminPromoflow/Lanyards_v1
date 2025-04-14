@@ -311,7 +311,6 @@
       background-color: purple;
       border: 1px solid black;
       z-index: 0;
-      display: none;
       overflow: hidden;
     }
 
