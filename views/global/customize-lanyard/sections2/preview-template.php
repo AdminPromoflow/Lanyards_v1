@@ -30,11 +30,11 @@ $jsFilemtime = getPreviewTemplateFilemtime($jsFilePath);
     <!-- Standard lanyard preview layout -->
     <div class="super-lanyard">
       <!-- Left part of the standard lanyard (for one-end, 10mm type) -->
-      <div class="left-super-lanyard left-super-lanyard-two-end-10mm">
+      <div class="left-super-lanyard left-super-lanyard-two-end-15mm">
         <!-- Rendered preview for the left segment -->
       </div>
       <!-- Right part of the standard lanyard (for one-end, 10mm type) -->
-      <div class="right-super-lanyard right-super-lanyard-two-end-10mm">
+      <div class="right-super-lanyard right-super-lanyard-two-end-15mm">
         <!-- Rendered preview for the right segment -->
       </div>
       <!-- Center part of the standard lanyard (typically the neck area) -->
@@ -46,11 +46,11 @@ $jsFilemtime = getPreviewTemplateFilemtime($jsFilePath);
     <!-- Artwork mode lanyard preview layout (used when uploading custom artwork) -->
     <div class="super-lanyard-artwork">
       <!-- Left part of the artwork-mode lanyard -->
-      <div class="left-super-lanyard-artwork left-super-lanyard-two-end-10mm-artwork">
+      <div class="left-super-lanyard-artwork left-super-lanyard-two-end-15mm-artwork">
         <!-- Rendered artwork preview for the left segment -->
       </div>
       <!-- Right part of the artwork-mode lanyard -->
-      <div class="right-super-lanyard-artwork right-super-lanyard-two-end-10mm-artwork">
+      <div class="right-super-lanyard-artwork right-super-lanyard-two-end-15mm-artwork">
         <!-- Rendered artwork preview for the right segment -->
       </div>
       <!-- Center part of the artwork-mode lanyard -->
