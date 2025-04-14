@@ -153,23 +153,21 @@
 
 
   .left-super-lanyard-two-end-10mm-artwork {
-  position: absolute;
-  top: 0;
-  left: 10%;
-  height: 7.2cm;
-  width: 0.16cm;
-  background-color: rgba(0, 0 , 100, 1);
-
+    position: absolute;
+    top: 0;
+    left: 10.3%;
+    height: 7.2cm;
+    width: 0.096cm;
+    background-color: rgba(0, 0 , 100, 1);
   }
 
   .right-super-lanyard-two-end-10mm-artwork {
-  position: absolute;
-  top: 0;
-  right: 10%;
-  height: 7.2cm;
-  width: 0.16cm;
-  background-color: rgba(0, 0 , 100, 1);
-
+    position: absolute;
+    top: 0;
+    right: 10.3%;
+    height: 7.2cm;
+    width: 0.096cm;
+    background-color: rgba(0, 0 , 100, 1);
   }
 
 
