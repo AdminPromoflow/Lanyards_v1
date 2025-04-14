@@ -207,20 +207,20 @@
 /* 20mm */
 .left-super-lanyard-two-end-20mm {
   position: absolute;
-  height: 6.75cm;
-  width: 0.015cm;
-  top: 50%;
-  left: 10.75%;
+  top: 0;
+  left: 10%;
+  height: 7.2cm;
+  width: 0.32cm;
   background-color: rgba(85, 35 , 100, 1);
 
 }
 
 .right-super-lanyard-two-end-20mm {
   position: absolute;
-  height: 6.75cm;
-  width: 0.015cm;
-  top: 50%;
-  right: 10.2%;
+  top: 0;
+  right: 10%;
+  height: 7.2cm;
+  width: 0.32cm;
   background-color: rgba(85, 35 , 100, 1);
 
 }
