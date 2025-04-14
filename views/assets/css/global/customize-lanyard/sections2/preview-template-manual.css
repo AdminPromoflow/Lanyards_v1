@@ -92,7 +92,7 @@
         left: 40.8%;
         height: 6.08cm;
         width: 0.336cm;
-        background-color: rgba(0, 0 , 100, 1);
+        background-color: white;
         transform:  skewX(7.5deg) perspective(7.5vw) ;
       }
 
@@ -102,7 +102,7 @@
         right: 40.8%;
         height: 6.08cm;
         width: 0.336cm;
-        background-color: rgba(0, 0 , 100, 1);
+        background-color: white;
         transform:  skewX(-7.5deg) perspective(7.5vw) ;
       }
 
