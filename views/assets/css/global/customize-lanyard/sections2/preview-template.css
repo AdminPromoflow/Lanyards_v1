@@ -158,24 +158,22 @@
 
 .left-super-lanyard-two-end-10mm {
   position: absolute;
-  height: 6.75cm;
-  width: 0.015cm;
-  top: 50%;
-  left: 10.3%;
+  top: 0;
+  left: 29%;
+  height: 7.2cm;
+  width: 0.16cm;
   background-color: rgba(85, 35 , 100, 1);
 
-  transform:   translateY(-50%);
 }
 
 .right-super-lanyard-two-end-10mm {
   position: absolute;
-  height: 6.75cm;
-  width: 0.015cm;
-  top: 50%;
-  right: 11.3%;
+  top: 0;
+  right: 29%;
+  height: 7.2cm;
+  width: 0.16cm;
   background-color: rgba(85, 35 , 100, 1);
 
-  transform:   translateY(-50%);
 }
 
 
@@ -189,7 +187,6 @@
   left: 10.8%;
   background-color: rgba(85, 35 , 100, 1);
 
-  transform:   translateY(-50%);
 }
 
 .right-super-lanyard-two-end-15mm {
@@ -200,7 +197,6 @@
   right: 11.0%;
   background-color: rgba(85, 35 , 100, 1);
 
-  transform:   translateY(-50%);
 }
 
 
@@ -217,7 +213,6 @@
   left: 10.75%;
   background-color: rgba(85, 35 , 100, 1);
 
-  transform:   translateY(-50%);
 }
 
 .right-super-lanyard-two-end-20mm {
@@ -228,7 +223,6 @@
   right: 10.2%;
   background-color: rgba(85, 35 , 100, 1);
 
-  transform:   translateY(-50%);
 }
 
 
@@ -245,7 +239,6 @@
   left: 10.75%;
   background-color: rgba(85, 35 , 100, 1);
 
-  transform:   translateY(-50%);
 }
 
 .right-super-lanyard-two-end-25mm {
@@ -256,7 +249,6 @@
   right: 10.4%;
   background-color: rgba(85, 35 , 100, 1);
 
-  transform:   translateY(-50%);
 }
 
 
@@ -273,7 +265,6 @@
   left: 10.75%;
   background-color: rgba(85, 35 , 100, 1);
 
-  transform:   translateY(-50%);
 }
 
 .right-super-lanyard-two-end-30mm {
@@ -284,7 +275,6 @@
   right: 10.4%;
   background-color: rgba(85, 35 , 100, 1);
 
-  transform:   translateY(-50%);
 }
 
 
