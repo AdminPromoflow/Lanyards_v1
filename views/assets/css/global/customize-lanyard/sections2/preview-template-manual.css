@@ -93,7 +93,7 @@
         height: 6.08cm;
         width: 0.336cm;
         background-color: white;
-        transform:  skewX(7.5deg) perspective(7.5vw) ;
+        transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
       }
 
       .right-super-lanyard-one-end-25mm-manual {
@@ -103,7 +103,7 @@
         height: 6.08cm;
         width: 0.336cm;
         background-color: white;
-        transform:  skewX(-7.5deg) perspective(7.5vw) ;
+        transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
       }
 
 
