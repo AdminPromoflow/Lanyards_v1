@@ -34,20 +34,20 @@
       /* 15mm */
       .left-super-lanyard-one-end-15mm-manual {
         position: absolute;
-        height: 100%;
-        width: 0.165cm;
-        top: 50%;
-        left: 41.90%;
+        top: 0;
+        left: 43.8%;
+        height: 6.08cm;
+        width: 0.176cm;
         background-color: white;
         transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
       }
 
       .right-super-lanyard-one-end-15mm-manual {
         position: absolute;
-        height: 100%;
-        width: 0.165cm;
-        top: 50%;
-        right: 41.90%;
+        top: 0;
+        right: 43.8%;
+        height: 6.08cm;
+        width: 0.176cm;
         background-color: white;
         transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
       }
