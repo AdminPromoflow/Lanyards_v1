@@ -43,22 +43,6 @@ $jsFilemtime = getPreviewTemplateFilemtime($jsFilePath);
       </div>
     </div>
 
-    <!-- Artwork mode lanyard preview layout (used when uploading custom artwork) -->
-    <div class="super-lanyard-artwork">
-      <!-- Left part of the artwork-mode lanyard -->
-      <div class="left-super-lanyard-artwork left-super-lanyard-one-end-30mm-attachment-artwork">
-        <!-- Rendered artwork preview for the left segment -->
-      </div>
-      <!-- Right part of the artwork-mode lanyard -->
-      <div class="right-super-lanyard-artwork right-super-lanyard-one-end-30mm-attachment-artwork">
-        <!-- Rendered artwork preview for the right segment -->
-      </div>
-      <!-- Center part of the artwork-mode lanyard -->
-      <div class="center-super-lanyard-artwork center-super-lanyard-one-end-30mm-attachment-artwork">
-        <!-- Rendered artwork preview for the center segment -->
-      </div>
-    </div>
-
     <!-- Manual mode lanyard preview layout (used when user adjusts elements manually) -->
     <div class="super-lanyard-manual">
       <!-- Left part of the manual-mode lanyard -->
@@ -70,10 +54,28 @@ $jsFilemtime = getPreviewTemplateFilemtime($jsFilePath);
         <!-- Rendered manual preview for the right segment -->
       </div>
       <!-- Center part of the manual-mode lanyard -->
-      <div class="center-super-lanyard center-super-lanyard-one-end-10mm-manual">
+      <div class="center-super-lanyard ">
         <!-- Rendered manual preview for the center segment -->
       </div>
     </div>
+
+    <!-- Artwork mode lanyard preview layout (used when uploading custom artwork) -->
+    <div class="super-lanyard-artwork">
+      <!-- Left part of the artwork-mode lanyard -->
+      <div class="left-super-lanyard-artwork left-super-lanyard-one-end-10mm">
+        <!-- Rendered artwork preview for the left segment -->
+      </div>
+      <!-- Right part of the artwork-mode lanyard -->
+      <div class="right-super-lanyard-artwork right-super-lanyard-one-end-10mm">
+        <!-- Rendered artwork preview for the right segment -->
+      </div>
+      <!-- Center part of the artwork-mode lanyard -->
+      <div class="center-super-lanyard-artwork ">
+        <!-- Rendered artwork preview for the center segment -->
+      </div>
+    </div>
+
+
 
 
 
