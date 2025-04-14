@@ -289,7 +289,7 @@
   height: 5cm;
   width: 0.16cm;
   top: 0%;
-  left: 31.80%;
+  left: 29%;
   background-color: white;
   border: 1px solid black;
   transform:  skewX(11.3deg) perspective(11.3vw);
@@ -300,7 +300,7 @@
   height: 5cm;
   width: 0.16cm;
   top: 0%;
-  right: 31.80%;
+  right: 29%;
   background-color: white;
   border: 1px solid black;
   transform:  skewX(-11.3deg) perspective(11.3vw);
