@@ -413,38 +413,38 @@
 
 
     .left-super-lanyard-one-end-25mm-attachment-artwork{
-    position: absolute;
-    height: 4.5cm;
-    width: 0.4cm;
-    top: 0%;
-    left: 24.5%;
-    background-color: purple;
-    border: 1px solid black;
-    transform:  skewX(11.3deg) perspective(11.3vw);
-    z-index: 0;
+      position: absolute;
+      height: 4.5cm;
+      width: 0.336cm;
+      top: 0%;
+      left: 24.5%;
+      background-color: purple;
+      border: 1px solid black;
+      transform:  skewX(11.3deg) perspective(11.3vw);
+      z-index: 0;
     }
     .right-super-lanyard-one-end-25mm-attachment-artwork{
-    position: absolute;
-    height: 4.5cm;
-    width: 0.4cm;
-    top: 0%;
-    right: 24.5%;
-    background-color: purple;
-    border: 1px solid black;
-    transform:  skewX(-11.3deg) perspective(11.3vw);
-    z-index: 0;
+      position: absolute;
+      height: 4.5cm;
+      width: 0.336cm;
+      top: 0%;
+      right: 24.5%;
+      background-color: purple;
+      border: 1px solid black;
+      transform:  skewX(-11.3deg) perspective(11.3vw);
+      z-index: 0;
     }
     .center-super-lanyard-one-end-25mm-attachment-artwork{
-    position: absolute;
-    height: 2cm;
-    width: 0.4cm;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: purple;
-    border: 1px solid black;
-    z-index: 0;
-    overflow: hidden;
+      position: absolute;
+      height: 2cm;
+      width: 0.336cm;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: purple;
+      border: 1px solid black;
+      z-index: 0;
+      overflow: hidden;
     }
 
 
