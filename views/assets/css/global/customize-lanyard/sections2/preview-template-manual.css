@@ -259,7 +259,7 @@
 
 
 /* 25mm */
-.left-super-lanyard-two-end-25mm-manual {
+.left-super-lanyard-two-end-30mm-manual {
   position: absolute;
   top: 50%;
   left: 11%;
@@ -270,7 +270,7 @@
   transform:   translateY(-50%);
 }
 
-.right-super-lanyard-two-end-25mm-manual {
+.right-super-lanyard-two-end-30mm-manual {
   position: absolute;
   top: 50%;
   right: 11%;
