@@ -311,8 +311,12 @@
       background-color: purple;
       border: 1px solid black;
       z-index: 0;
+      display: none;
       overflow: hidden;
     }
+
+
+
     .left-super-lanyard-one-end-15mm-attachment-artwork{
       position: absolute;
       height: 4.5cm;
