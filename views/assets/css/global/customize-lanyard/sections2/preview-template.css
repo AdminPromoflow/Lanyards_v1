@@ -1,5 +1,3 @@
-
-
       .container-preview-template{
         position: absolute;
         top: 20.0%;
@@ -15,8 +13,20 @@
         height: 100%;
         width: 100%;
       }
+
+
       /* 10mm */
-      .left-super-lanyard-one-end-10mm {
+      .left-super-lanyard-one-end-10mm{
+        position: absolute;
+        top: 0;
+        left: 0%;
+        height: 7.2cm;
+        width: 0.16cm;
+
+        background-color: rgba(85, 35 , 100, 1);
+        /*transform:  skewX(7.5deg) perspective(7.5vw) ;*/
+      }
+      .right-super-lanyard-one-end-10mm {
         position: absolute;
         top: 0;
         left: 5%;
@@ -24,23 +34,8 @@
         width: 0.16cm;
 
         background-color: rgba(85, 35 , 100, 1);
-        transform:  skewX(7.5deg) perspective(7.5vw) ;
+        transform:  skewX(-7.5deg) perspective(7.5vw);
       }
-
-      .right-super-lanyard-one-end-10mm {
-        position: absolute;
-        top: 50%;
-        left: 5%;
-        height: 7.2cm;
-        width: 0.16cm;
-
-        background-color: rgba(85, 35 , 100, 1);
-
-        transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
-        overflow: hidden;
-      }
-
-
 
       /* 15mm */
       .left-super-lanyard-one-end-15mm {
@@ -50,7 +45,6 @@
         top: 50%;
         left: 41.90%;
         background-color: rgba(85, 35 , 100, 1);
-
         transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
       }
 
@@ -61,7 +55,6 @@
         top: 50%;
         right: 41.90%;
         background-color: rgba(85, 35 , 100, 1);
-
         transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
       }
 
