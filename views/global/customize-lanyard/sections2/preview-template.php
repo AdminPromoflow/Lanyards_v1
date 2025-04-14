@@ -30,15 +30,15 @@ $jsFilemtime = getPreviewTemplateFilemtime($jsFilePath);
     <!-- Standard lanyard preview layout -->
     <div class="super-lanyard">
       <!-- Left part of the standard lanyard (for one-end, 10mm type) -->
-      <div class="left-super-lanyard left-super-lanyard-one-end-25mm-attachment">
+      <div class="left-super-lanyard left-super-lanyard-one-end-30mm-attachment">
         <!-- Rendered preview for the left segment -->
       </div>
       <!-- Right part of the standard lanyard (for one-end, 10mm type) -->
-      <div class="right-super-lanyard right-super-lanyard-one-end-25mm-attachment">
+      <div class="right-super-lanyard right-super-lanyard-one-end-30mm-attachment">
         <!-- Rendered preview for the right segment -->
       </div>
       <!-- Center part of the standard lanyard (typically the neck area) -->
-      <div class="center-super-lanyard center-super-lanyard-one-end-25mm-attachment">
+      <div class="center-super-lanyard center-super-lanyard-one-end-30mm-attachment">
         <!-- Rendered preview for the center segment -->
       </div>
     </div>
@@ -46,15 +46,15 @@ $jsFilemtime = getPreviewTemplateFilemtime($jsFilePath);
     <!-- Artwork mode lanyard preview layout (used when uploading custom artwork) -->
     <div class="super-lanyard-artwork">
       <!-- Left part of the artwork-mode lanyard -->
-      <div class="left-super-lanyard-artwork left-super-lanyard-one-end-25mm-attachment-artwork">
+      <div class="left-super-lanyard-artwork left-super-lanyard-one-end-30mm-attachment-artwork">
         <!-- Rendered artwork preview for the left segment -->
       </div>
       <!-- Right part of the artwork-mode lanyard -->
-      <div class="right-super-lanyard-artwork right-super-lanyard-one-end-25mm-attachment-artwork">
+      <div class="right-super-lanyard-artwork right-super-lanyard-one-end-30mm-attachment-artwork">
         <!-- Rendered artwork preview for the right segment -->
       </div>
       <!-- Center part of the artwork-mode lanyard -->
-      <div class="center-super-lanyard-artwork center-super-lanyard-one-end-25mm-attachment-artwork">
+      <div class="center-super-lanyard-artwork center-super-lanyard-one-end-30mm-attachment-artwork">
         <!-- Rendered artwork preview for the center segment -->
       </div>
     </div>
