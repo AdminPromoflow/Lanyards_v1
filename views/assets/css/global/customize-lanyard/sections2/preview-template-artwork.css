@@ -63,9 +63,9 @@
   .left-super-lanyard-one-end-20mm-artwork {
     position: absolute;
     top: 0;
-    left: 26.0%;
+    left: 27.2%;
     height: 7.2cm;
-    width: 0.32cm;
+    width: 0.256cm;
     background-color: rgba(0, 0 , 100, 1);
     transform:  skewX(7.5deg) perspective(7.5vw) ;
   }
@@ -73,9 +73,9 @@
   .right-super-lanyard-one-end-20mm-artwork {
     position: absolute;
     top: 0;
-    right: 26.0%;
+    right: 27.2%;
     height: 7.2cm;
-    width: 0.32cm;
+    width: 0.256cm;
     background-color: rgba(0, 0 , 100, 1);
     transform:  skewX(-7.5deg) perspective(7.5vw) ;
   }
