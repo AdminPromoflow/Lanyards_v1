@@ -86,7 +86,7 @@
 
 
       /* 25mm */
-      .left-super-lanyard-one-end-25mm-artwork {
+      .left-super-lanyard-one-end-25mm-manual {
         position: absolute;
         top: 50%;
         left: 40.8%;
@@ -96,7 +96,7 @@
         transform:  skewX(7.5deg) perspective(7.5vw) ;
       }
 
-      .right-super-lanyard-one-end-25mm-artwork {
+      .right-super-lanyard-one-end-25mm-manual {
         position: absolute;
         top: 50%;
         right: 40.8%;
