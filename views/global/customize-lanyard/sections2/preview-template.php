@@ -50,7 +50,7 @@ $jsFilemtime = getPreviewTemplateFilemtime($jsFilePath);
         <!-- Rendered artwork preview for the left segment -->
       </div>
       <!-- Right part of the artwork-mode lanyard -->
-      <div class="right-super-lanyard-artwork right-super-lanyard-one-end-305mm-artwork">
+      <div class="right-super-lanyard-artwork right-super-lanyard-one-end-30mm-artwork">
         <!-- Rendered artwork preview for the right segment -->
       </div>
       <!-- Center part of the artwork-mode lanyard -->
