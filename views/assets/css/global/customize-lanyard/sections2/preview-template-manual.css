@@ -34,7 +34,7 @@
       /* 15mm */
       .left-super-lanyard-one-end-15mm-manual {
         position: absolute;
-        top: 0;
+        top: 50%;
         left: 43.8%;
         height: 6.08cm;
         width: 0.176cm;
@@ -44,7 +44,7 @@
 
       .right-super-lanyard-one-end-15mm-manual {
         position: absolute;
-        top: 0;
+        top: 50%;
         right: 43.8%;
         height: 6.08cm;
         width: 0.176cm;
