@@ -294,7 +294,7 @@
   width: 0.096cm;
   top: 0.56cm;
   left: 32.2%;
-  background-color: rgba(255, 0, 0, .3);
+  background-color: purple;
   border: 1px solid black;
   transform:  skewX(11.3deg) perspective(11.3vw);
   z-index: 0;
@@ -305,7 +305,7 @@
   width: 0.096cm;
   top: 0.56cm;
   right: 32.2%;
-  background-color: rgba(255, 0, 0, .3);
+  background-color: purple;
   border: 1px solid black;
   transform:  skewX(-11.3deg) perspective(11.3vw);
   z-index: 0;
