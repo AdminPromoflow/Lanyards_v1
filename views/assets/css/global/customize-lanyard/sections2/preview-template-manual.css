@@ -384,7 +384,7 @@
   bottom: 0.56cm;
   left: 50%;
   transform: translateX(-50%);
-  background-color: white;
+  background-color: purple;
   border: 1px solid black;
   z-index: 0;
 }
@@ -393,8 +393,8 @@
   height: calc(4.5cm - 0.56cm);
   width: 0.24cm;
   top: 0.56cm;
-  left: 30.7%;
-  background-color: white;
+  left: 30%;
+  background-color: purple;
   border: 1px solid black;
   transform:  skewX(11.3deg) perspective(11.3vw);
   z-index: 0;
@@ -404,8 +404,8 @@
   height: calc(4.5cm - 0.56cm);
   width: 0.24cm;
   top: 0.56cm;
-  right: 30.7%;
-  background-color: white;
+  right: 30%;
+  background-color: purple;
   border: 1px solid black;
   transform:  skewX(-11.3deg) perspective(11.3vw);
   z-index: 0;
@@ -432,7 +432,7 @@
   bottom: 0.56cm;
   left: 50%;
   transform: translateX(-50%);
-  background-color: white;
+  background-color: purple;
   border: 1px solid black;
   z-index: 0;
 }
@@ -442,7 +442,7 @@
   width: 0.315cm;
   top: 0.56cm;
   left: 27.7%;
-  background-color: white;
+  background-color: purple;
   border: 1px solid black;
   transform:  skewX(11.3deg) perspective(11.3vw);
   z-index: 0;
@@ -453,7 +453,7 @@
   width: 0.315cm;
   top: 0.56cm;
   right: 27.4%;
-  background-color: white;
+  background-color: purple;
   border: 1px solid black;
   transform:  skewX(-11.3deg) perspective(11.3vw);
   z-index: 0;
@@ -478,7 +478,7 @@
   bottom: 0.56cm;
   left: 50%;
   transform: translateX(-50%);
-  background-color: white;
+  background-color: purple;
   border: 1px solid black;
   z-index: 0;
 }
@@ -488,7 +488,7 @@
   width: 0.39cm;
   top: 0.56cm;
   left: 25.6%;
-  background-color: white;
+  background-color: purple;
   border: 1px solid black;
   transform:  skewX(11.3deg) perspective(11.3vw);
   z-index: 0;
@@ -499,7 +499,7 @@
   width: 0.39cm;
   top: 0.56cm;
   right: 26.5%;
-  background-color: white;
+  background-color: purple;
   border: 1px solid black;
   transform:  skewX(-11.3deg) perspective(11.3vw);
   z-index: 0;
