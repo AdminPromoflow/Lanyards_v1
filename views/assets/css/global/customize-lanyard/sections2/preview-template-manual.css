@@ -290,9 +290,9 @@
 
 .left-super-lanyard-one-end-10mm-attachment-manual{
   position: absolute;
-  height: 4.5cm;
+  height: calc(4.5cm - 0.56cm);
   width: 0.096cm;
-  top: 0%;
+  top: 0.56cm;
   left: 30.2%;
   background-color: purple;
   border: 1px solid black;
@@ -301,7 +301,7 @@
 }
 .right-super-lanyard-one-end-10mm-attachment-manual{
   position: absolute;
-  height: 4.5cm;
+  height: calc(4.5cm - 0.56cm);
   width: 0.096cm;
   top: 0.56cm;
   right: 30.2%;
@@ -313,7 +313,7 @@
 
 .center-super-lanyard-one-end-10mm-attachment-manual{
   position: absolute;
-  height: 2cm;
+  height: calc(2cm - 0.56cm);
   width: 0.096cm;
   bottom: 0.56cm;
   left: 50%;
