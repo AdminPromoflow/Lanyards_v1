@@ -45,7 +45,6 @@ $jsFilemtime = getPreviewTemplateFilemtime($jsFilePath);
 
 
 
-    <!-- Artwork mode lanyard preview layout (used when uploading custom artwork) -->
 
 
 
