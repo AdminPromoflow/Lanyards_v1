@@ -427,7 +427,7 @@
 
 .center-super-lanyard-one-end-25mm-attachment-manual{
   position: absolute;
-  height: calc(2.5cm - 0.56cm);
+  height: calc(2cm - 0.56cm);
   width: 0.315cm;
   bottom: 0.56cm;
   left: 50%;
