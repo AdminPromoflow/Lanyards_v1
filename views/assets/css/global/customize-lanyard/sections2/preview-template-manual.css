@@ -393,7 +393,7 @@
   height: calc(4.5cm - 0.56cm);
   width: 0.24cm;
   top: 0.56cm;
-  left: 30.1%;
+  left: 30.7%;
   background-color: white;
   border: 1px solid black;
   transform:  skewX(11.3deg) perspective(11.3vw);
@@ -404,7 +404,7 @@
   height: calc(4.5cm - 0.56cm);
   width: 0.24cm;
   top: 0.56cm;
-  right: 31%;
+  right: 30.7%;
   background-color: white;
   border: 1px solid black;
   transform:  skewX(-11.3deg) perspective(11.3vw);
