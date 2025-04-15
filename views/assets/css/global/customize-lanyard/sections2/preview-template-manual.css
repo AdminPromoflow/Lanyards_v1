@@ -293,8 +293,8 @@
   height: calc(4.5cm - 0.56cm);
   width: 0.096cm;
   top: 0.56cm;
-  left: 30.2%;
-  background-color: purple;
+  left: 32.2%;
+  background-color: rgba(255, 0, 0, .3);
   border: 1px solid black;
   transform:  skewX(11.3deg) perspective(11.3vw);
   z-index: 0;
@@ -304,8 +304,8 @@
   height: calc(4.5cm - 0.56cm);
   width: 0.096cm;
   top: 0.56cm;
-  right: 30.2%;
-  background-color: purple;
+  right: 32.2%;
+  background-color: rgba(255, 0, 0, .3);
   border: 1px solid black;
   transform:  skewX(-11.3deg) perspective(11.3vw);
   z-index: 0;
