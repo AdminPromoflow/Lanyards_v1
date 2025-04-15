@@ -381,7 +381,7 @@
   position: absolute;
   height: 17%;
   width: 0.24cm;
-  bottom: 0%;
+  bottom: 0.56cm;
   left: 50%;
   transform: translateX(-50%);
   background-color: white;
@@ -390,9 +390,9 @@
 }
 .left-super-lanyard-one-end-20mm-attachment-manual{
   position: absolute;
-  height: 68.3%;
+  height: calc(4.5cm - 0.56cm);
   width: 0.24cm;
-  top: 0%;
+  top: 0.56cm;
   left: 30.1%;
   background-color: white;
   border: 1px solid black;
@@ -401,9 +401,9 @@
 }
 .right-super-lanyard-one-end-20mm-attachment-manual{
   position: absolute;
-  height: 68.3%;
+  height: calc(4.5cm - 0.56cm);
   width: 0.24cm;
-  top: 0%;
+  top: 0.56cm;
   right: 31%;
   background-color: white;
   border: 1px solid black;
@@ -429,7 +429,7 @@
   position: absolute;
   height: 10%;
   width: 0.315cm;
-  bottom: 0%;
+  bottom: 0.56cm;
   left: 50%;
   transform: translateX(-50%);
   background-color: white;
@@ -438,9 +438,9 @@
 }
 .left-super-lanyard-one-end-25mm-attachment-manual{
   position: absolute;
-  height: 69.0%;
+  height: calc(4.5cm - 0.56cm);
   width: 0.315cm;
-  top: 0%;
+  top: 0.56cm;
   left: 27.7%;
   background-color: white;
   border: 1px solid black;
@@ -449,9 +449,9 @@
 }
 .right-super-lanyard-one-end-25mm-attachment-manual{
   position: absolute;
-  height: 69.0%;
+  height: calc(4.5cm - 0.56cm);
   width: 0.315cm;
-  top: 0%;
+  top: 0.56cm;
   right: 27.4%;
   background-color: white;
   border: 1px solid black;
@@ -475,7 +475,7 @@
   position: absolute;
   height: 8.0%;
   width: 0.39cm;
-  bottom: 0%;
+  bottom: 0.56cm;
   left: 50%;
   transform: translateX(-50%);
   background-color: white;
@@ -484,9 +484,9 @@
 }
 .left-super-lanyard-one-end-30mm-attachment-manual{
   position: absolute;
-  height: 68.8%;
+  height: calc(4.5cm - 0.56cm);
   width: 0.39cm;
-  top: 0%;
+  top: 0.56cm;
   left: 25.6%;
   background-color: white;
   border: 1px solid black;
@@ -495,9 +495,9 @@
 }
 .right-super-lanyard-one-end-30mm-attachment-manual{
   position: absolute;
-  height: 68.8%;
+  height: calc(4.5cm - 0.56cm);
   width: 0.39cm;
-  top: 0%;
+  top: 0.56cm;
   right: 26.5%;
   background-color: white;
   border: 1px solid black;
