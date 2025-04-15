@@ -379,7 +379,7 @@
 
 .center-super-lanyard-one-end-20mm-attachment-manual{
   position: absolute;
-  height: 17%;
+  height: calc(2cm - 0.56cm);
   width: 0.24cm;
   bottom: 0.56cm;
   left: 50%;
