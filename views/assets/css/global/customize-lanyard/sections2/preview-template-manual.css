@@ -427,7 +427,7 @@
 
 .center-super-lanyard-one-end-25mm-attachment-manual{
   position: absolute;
-  height: 10%;
+  height: calc(3.5cm - 0.56cm);
   width: 0.315cm;
   bottom: 0.56cm;
   left: 50%;
@@ -441,7 +441,7 @@
   height: calc(4.5cm - 0.56cm);
   width: 0.315cm;
   top: 0.56cm;
-  left: 27.7%;
+  left: 28.7%;
   background-color: purple;
   border: 1px solid black;
   transform:  skewX(11.3deg) perspective(11.3vw);
@@ -452,7 +452,7 @@
   height: calc(4.5cm - 0.56cm);
   width: 0.315cm;
   top: 0.56cm;
-  right: 27.4%;
+  right: 28.4%;
   background-color: purple;
   border: 1px solid black;
   transform:  skewX(-11.3deg) perspective(11.3vw);
