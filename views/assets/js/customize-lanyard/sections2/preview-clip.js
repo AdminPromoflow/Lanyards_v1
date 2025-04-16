@@ -5,6 +5,7 @@ class PreviewClip {
 
   }
   togglePreviewClipClass(action) {
+    alert(action);
     this.previewClip.style.display = action;
   }
   showPreviewSelectedClip(data){

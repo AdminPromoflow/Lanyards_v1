@@ -10,8 +10,6 @@ class PreviewTemplate {
     };
     // Store the main preview container element
     this.previewContainer = document.getElementById("preview-template-class");
-
-
   }
 
   // Toggles the visibility of the preview container
