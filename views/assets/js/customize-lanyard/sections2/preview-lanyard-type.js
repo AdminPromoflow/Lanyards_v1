@@ -6,6 +6,7 @@ class PreviewLanyardType {
     var typeLanyard = oneTwoEndsClass.getTypeLanyardSelected();
     var width = widthClass.getWidthSelected();
     const attachmentSelected = attachmentClass.getAttachmentSelected();
+    this.cleanStyle();
     if (typeLanyard == "one-end") {
 
       if (attachmentSelected == "none") {
@@ -176,7 +177,9 @@ class PreviewLanyardType {
     }
   }
   cleanStyle(){
-    
+    leftSuperLanyard.removeAttribute("style");
+    rightSuperLanyard.removeAttribute("style");
+    centerSuperLanyard.removeAttribute("style");
   }
 
   showTypeLanyardPreview(action){
