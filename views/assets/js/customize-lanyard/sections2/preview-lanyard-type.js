@@ -5,7 +5,8 @@ class PreviewLanyardType {
   showSelectedPreviewTemplate(){
     var typeLanyard = oneTwoEndsClass.getTypeLanyardSelected();
     var width = widthClass.getWidthSelected();
-
+    const attachmentSelected = attachmentClass.getAttachmentSelected();
+    alert(attachmentSelected);
     if (typeLanyard == "one-end") {
 
       if (width == "25mm") {
@@ -149,6 +150,7 @@ class PreviewLanyardType {
       }
     }
   }
+
   showTypeLanyardPreview(action){
     previewLanyardTypeContainer.style.display = action;
   }

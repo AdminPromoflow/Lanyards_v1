@@ -75,10 +75,6 @@ $jsFilemtime = getPreviewTemplateFilemtime($jsFilePath);
       </div>
     </div>
 
-
-
-
-
   </div>
 
 </section>
