@@ -6,74 +6,77 @@ class PreviewLanyardType {
     var typeLanyard = oneTwoEndsClass.getTypeLanyardSelected();
     var width = widthClass.getWidthSelected();
     const attachmentSelected = attachmentClass.getAttachmentSelected();
-    alert(attachmentSelected);
     if (typeLanyard == "one-end") {
+      if (attachmentSelected == "none") {
+        if (width == "25mm") {
+          oneSide10mm.style.display = "none";
+          oneSide15mm.style.display = "none";
+          oneSide20mm.style.display = "none";
+          oneSide25mm.style.display = "flex";
+          oneSide30mm.style.display = "none";
 
-      if (width == "25mm") {
-        oneSide10mm.style.display = "none";
-        oneSide15mm.style.display = "none";
-        oneSide20mm.style.display = "none";
-        oneSide25mm.style.display = "flex";
-        oneSide30mm.style.display = "none";
+          twoSide10mm.style.display = "none";
+          twoSide15mm.style.display = "none";
+          twoSide20mm.style.display = "none";
+          twoSide25mm.style.display = "none";
+          twoSide30mm.style.display = "none";
+        }
+        else if (width == "10mm") {
 
-        twoSide10mm.style.display = "none";
-        twoSide15mm.style.display = "none";
-        twoSide20mm.style.display = "none";
-        twoSide25mm.style.display = "none";
-        twoSide30mm.style.display = "none";
+          oneSide10mm.style.display = "flex";
+          oneSide15mm.style.display = "none";
+          oneSide20mm.style.display = "none";
+          oneSide25mm.style.display = "none";
+          oneSide30mm.style.display = "none";
+
+          twoSide10mm.style.display = "none";
+          twoSide15mm.style.display = "none";
+          twoSide20mm.style.display = "none";
+          twoSide25mm.style.display = "none";
+          twoSide30mm.style.display = "none";
+        }
+        else if (width == "15mm") {
+          oneSide10mm.style.display = "none";
+          oneSide15mm.style.display = "flex";
+          oneSide20mm.style.display = "none";
+          oneSide25mm.style.display = "none";
+          oneSide30mm.style.display = "none";
+
+          twoSide10mm.style.display = "none";
+          twoSide15mm.style.display = "none";
+          twoSide20mm.style.display = "none";
+          twoSide25mm.style.display = "none";
+          twoSide30mm.style.display = "none";
+        }
+        else if (width == "20mm") {
+          oneSide10mm.style.display = "none";
+          oneSide15mm.style.display = "none";
+          oneSide20mm.style.display = "flex";
+          oneSide25mm.style.display = "none";
+          oneSide30mm.style.display = "none";
+
+          twoSide10mm.style.display = "none";
+          twoSide15mm.style.display = "none";
+          twoSide20mm.style.display = "none";
+          twoSide25mm.style.display = "none";
+          twoSide30mm.style.display = "none";
+        }
+        else if (width == "30mm") {
+          oneSide10mm.style.display = "none";
+          oneSide15mm.style.display = "none";
+          oneSide20mm.style.display = "none";
+          oneSide25mm.style.display = "none";
+          oneSide30mm.style.display = "flex";
+
+          twoSide10mm.style.display = "none";
+          twoSide15mm.style.display = "none";
+          twoSide20mm.style.display = "none";
+          twoSide25mm.style.display = "none";
+          twoSide30mm.style.display = "none";
+        }
       }
-      else if (width == "10mm") {
-
-        oneSide10mm.style.display = "flex";
-        oneSide15mm.style.display = "none";
-        oneSide20mm.style.display = "none";
-        oneSide25mm.style.display = "none";
-        oneSide30mm.style.display = "none";
-
-        twoSide10mm.style.display = "none";
-        twoSide15mm.style.display = "none";
-        twoSide20mm.style.display = "none";
-        twoSide25mm.style.display = "none";
-        twoSide30mm.style.display = "none";
-      }
-      else if (width == "15mm") {
-        oneSide10mm.style.display = "none";
-        oneSide15mm.style.display = "flex";
-        oneSide20mm.style.display = "none";
-        oneSide25mm.style.display = "none";
-        oneSide30mm.style.display = "none";
-
-        twoSide10mm.style.display = "none";
-        twoSide15mm.style.display = "none";
-        twoSide20mm.style.display = "none";
-        twoSide25mm.style.display = "none";
-        twoSide30mm.style.display = "none";
-      }
-      else if (width == "20mm") {
-        oneSide10mm.style.display = "none";
-        oneSide15mm.style.display = "none";
-        oneSide20mm.style.display = "flex";
-        oneSide25mm.style.display = "none";
-        oneSide30mm.style.display = "none";
-
-        twoSide10mm.style.display = "none";
-        twoSide15mm.style.display = "none";
-        twoSide20mm.style.display = "none";
-        twoSide25mm.style.display = "none";
-        twoSide30mm.style.display = "none";
-      }
-      else if (width == "30mm") {
-        oneSide10mm.style.display = "none";
-        oneSide15mm.style.display = "none";
-        oneSide20mm.style.display = "none";
-        oneSide25mm.style.display = "none";
-        oneSide30mm.style.display = "flex";
-
-        twoSide10mm.style.display = "none";
-        twoSide15mm.style.display = "none";
-        twoSide20mm.style.display = "none";
-        twoSide25mm.style.display = "none";
-        twoSide30mm.style.display = "none";
+      else {
+        alert("Ahí vamos");
       }
     }
     else if (typeLanyard == "two-end") {
