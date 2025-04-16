@@ -12,6 +12,9 @@ class PreviewLanyardType {
   }
 }
 
+const previewLanyardTypeContainer = document.getElementById("preview-lanyard-type-container");
+
+
 
 
 
