@@ -45,7 +45,7 @@ class PreviewTemplate {
 
     // Apply styles based on lanyard type and attachment mode
     if (type === "one-end") {
-      if (attachment === "none") {
+      if (attachment === "none" || attachment === "None") {
         this.applyNoAttachmentStyles(width, context); // Apply no-attachment styles
       } else {
         this.applyWithAttachmentStyles(width, context); // Apply with-attachment styles
