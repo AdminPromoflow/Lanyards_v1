@@ -177,9 +177,14 @@ class PreviewLanyardType {
     }
   }
   cleanStyle(){
-    leftSuperLanyard.removeAttribute("style");
-    rightSuperLanyard.removeAttribute("style");
-    centerSuperLanyard.removeAttribute("style");
+    document.addEventListener("DOMContentLoaded", function () {
+      // Aquí ya puedes acceder a todos los elementos del DOM
+      alert("DOM completamente cargado");
+      leftSuperLanyard.removeAttribute("style");
+      rightSuperLanyard.removeAttribute("style");
+      centerSuperLanyard.removeAttribute("style");
+    });
+
   }
 
   showTypeLanyardPreview(action){
