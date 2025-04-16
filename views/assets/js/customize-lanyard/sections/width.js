@@ -203,6 +203,8 @@ class Width {
     this.setWidthSelectedIndex(index);
 
     previewLanyardType.showSelectedPreviewTemplate();
+    previewTemplate.activateTemplate();
+
 
     material.refreshMaterial();
     oneTwoEndsClass.refreshLanyardType();
