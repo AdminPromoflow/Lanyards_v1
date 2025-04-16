@@ -28,49 +28,49 @@ $jsFilemtime = getPreviewTemplateFilemtime($jsFilePath);
   <div class="container-preview-template">
 
     <!-- Standard lanyard preview layout -->
-    <div class="super-lanyard">
+    <div class="super-lanyard" id="super-lanyard">
       <!-- Left part of the standard lanyard (for one-end, 10mm type) -->
-      <div class="left-super-lanyard left-super-lanyard-one-end-30mm">
+      <div class="left-super-lanyard left-super-lanyard-one-end-30mm" id="left-super-lanyard">
         <!-- Rendered preview for the left segment -->
       </div>
       <!-- Right part of the standard lanyard (for one-end, 10mm type) -->
-      <div class="right-super-lanyard right-super-lanyard-one-end-30mm">
+      <div class="right-super-lanyard right-super-lanyard-one-end-30mm" id="right-super-lanyard">
         <!-- Rendered preview for the right segment -->
       </div>
       <!-- Center part of the standard lanyard (typically the neck area) -->
-      <div class="center-super-lanyard center-super-lanyard-one-end-30mm">
+      <div class="center-super-lanyard center-super-lanyard-one-end-30mm" id="center-super-lanyard">
         <!-- Rendered preview for the center segment -->
       </div>
     </div>
 
     <!-- Manual mode lanyard preview layout (used when user adjusts elements manually) -->
-    <div class="super-lanyard-manual">
+    <div class="super-lanyard-manual" id="super-lanyard-manual">
       <!-- Left part of the manual-mode lanyard -->
-      <div class="left-super-lanyard left-super-lanyard-one-end-30mm-manual">
+      <div class="left-super-lanyard-manual left-super-lanyard-one-end-30mm-manual" id="left-super-lanyard-manual">
         <!-- Rendered manual preview for the left segment -->
       </div>
       <!-- Right part of the manual-mode lanyard -->
-      <div class="right-super-lanyard right-super-lanyard-one-end-30mm-manual">
+      <div class="right-super-lanyard-manual right-super-lanyard-one-end-30mm-manual" id="right-super-lanyard-manual">
         <!-- Rendered manual preview for the right segment -->
       </div>
       <!-- Center part of the manual-mode lanyard -->
-      <div class="center-super-lanyard center-super-lanyard-one-end-30mm-manual">
+      <div class="center-super-lanyard-manual center-super-lanyard-one-end-30mm-manual" id="center-super-lanyard-manual">
         <!-- Rendered manual preview for the center segment -->
       </div>
     </div>
 
     <!-- Artwork mode lanyard preview layout (used when uploading custom artwork) -->
-    <div class="super-lanyard-artwork">
+    <div class="super-lanyard-artwork" id="super-lanyard-artwork">
       <!-- Left part of the artwork-mode lanyard -->
-      <div class="left-super-lanyard-artwork ">
+      <div class="left-super-lanyard-artwork " id="left-super-lanyard-artwork">
         <!-- Rendered artwork preview for the left segment -->
       </div>
       <!-- Right part of the artwork-mode lanyard -->
-      <div class="right-super-lanyard-artwork ">
+      <div class="right-super-lanyard-artwork " id="right-super-lanyard-artwork">
         <!-- Rendered artwork preview for the right segment -->
       </div>
       <!-- Center part of the artwork-mode lanyard -->
-      <div class="center-super-lanyard-artwork ">
+      <div class="center-super-lanyard-artwork " id="center-super-lanyard-artwork">
         <!-- Rendered artwork preview for the center segment -->
       </div>
     </div>

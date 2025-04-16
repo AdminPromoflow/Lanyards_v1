@@ -7,8 +7,11 @@ class PreviewLanyardType {
     var width = widthClass.getWidthSelected();
     const attachmentSelected = attachmentClass.getAttachmentSelected();
     if (typeLanyard == "one-end") {
+
       if (attachmentSelected == "none") {
+
         if (width == "25mm") {
+
           oneSide10mm.style.display = "none";
           oneSide15mm.style.display = "none";
           oneSide20mm.style.display = "none";
@@ -20,6 +23,7 @@ class PreviewLanyardType {
           twoSide20mm.style.display = "none";
           twoSide25mm.style.display = "none";
           twoSide30mm.style.display = "none";
+
         }
         else if (width == "10mm") {
 
@@ -34,8 +38,10 @@ class PreviewLanyardType {
           twoSide20mm.style.display = "none";
           twoSide25mm.style.display = "none";
           twoSide30mm.style.display = "none";
+
         }
         else if (width == "15mm") {
+
           oneSide10mm.style.display = "none";
           oneSide15mm.style.display = "flex";
           oneSide20mm.style.display = "none";
@@ -76,7 +82,23 @@ class PreviewLanyardType {
         }
       }
       else {
-        alert("Ahí vamos");
+
+        if (width == "10mm") {
+
+        }
+        else if (width == "15mm") {
+
+        }
+        else if (width == "20mm") {
+
+        }
+        else if (width == "25mm") {
+
+        }
+        else if (width == "30mm") {
+
+        }
+
       }
     }
     else if (typeLanyard == "two-end") {
@@ -153,6 +175,9 @@ class PreviewLanyardType {
       }
     }
   }
+  cleanStyle(){
+    
+  }
 
   showTypeLanyardPreview(action){
     previewLanyardTypeContainer.style.display = action;
@@ -172,5 +197,16 @@ const twoSide15mm = document.getElementById("two-side-15mm");
 const twoSide20mm = document.getElementById("two-side-20mm");
 const twoSide25mm = document.getElementById("two-side-25mm");
 const twoSide30mm = document.getElementById("two-side-30mm");
+
+
+
+
+
+const superLanyard = document.getElementById("super-lanyard");
+const leftSuperLanyard = document.getElementById("left-super-lanyard");
+const rightSuperLanyard = document.getElementById("right-super-lanyard");
+const centerSuperLanyard = document.getElementById("center-super-lanyard");
+
+
 
 const previewLanyardType = new PreviewLanyardType();
