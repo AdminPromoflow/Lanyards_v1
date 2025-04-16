@@ -3,7 +3,7 @@ class PreviewLanyardType {
 
   }
   showSelectedPreviewTemplate(){
-    var typeLanyard = oneTwoEndsClass.getTypeLanyardSelected();
+  /*  var typeLanyard = oneTwoEndsClass.getTypeLanyardSelected();
     var width = widthClass.getWidthSelected();
     const attachmentSelected = attachmentClass.getAttachmentSelected();
     if (typeLanyard == "one-end") {
@@ -173,16 +173,16 @@ class PreviewLanyardType {
         twoSide25mm.style.display = "none";
         twoSide30mm.style.display = "flex";
       }
-    }
+    }*/
   }
 
 
   showTypeLanyardPreview(action){
-    previewLanyardTypeContainer.style.display = action;
+  //  previewLanyardTypeContainer.style.display = action;
   }
 }
 
-const previewLanyardTypeContainer = document.getElementById("preview-lanyard-type-container");
+/*const previewLanyardTypeContainer = document.getElementById("preview-lanyard-type-container");
 
 const oneSide10mm = document.getElementById("one-side-10mm");
 const oneSide15mm = document.getElementById("one-side-15mm");
@@ -196,7 +196,7 @@ const twoSide20mm = document.getElementById("two-side-20mm");
 const twoSide25mm = document.getElementById("two-side-25mm");
 const twoSide30mm = document.getElementById("two-side-30mm");
 
-
+*/
 
 
 

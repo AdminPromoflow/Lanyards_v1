@@ -1,3 +1,17 @@
+      .preview-template-class{
+        position: relative;
+        width: 90%;
+        height: 80%;
+        padding: 15px 0;
+
+        background-color: rgba(0, 0, 0, .12);
+        box-shadow: 0px 0px 2px black;
+
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+      }
       .container-preview-template{
         position: absolute;
         top: 20.0%;
