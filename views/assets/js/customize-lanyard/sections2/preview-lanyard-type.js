@@ -177,6 +177,7 @@ class PreviewLanyardType {
     }
   }
   cleanStyle(){
+    alert("Entramos");
     document.addEventListener("DOMContentLoaded", function () {
       // Aquí ya puedes acceder a todos los elementos del DOM
       alert("DOM completamente cargado");
