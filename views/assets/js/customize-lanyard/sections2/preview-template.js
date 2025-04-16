@@ -141,7 +141,7 @@ class PreviewTemplate {
   }
 
   // Helper function to add CSS classes to left, right, and centre elements
-  applyClassToGroup( leftClass = "", rightClass = "", centerClass = "") {
+  applyClassToGroup(leftClass = "", rightClass = "", centerClass = "") {
     const el = this.elements;
     // Add classes to left, right, and centre if provided
     if (leftClass) el.left.classList.add(leftClass);
