@@ -6,6 +6,8 @@ class AttachmentClass {
     attachmentClass.setAttachmentSelected(attachment);
     attachmentClass.showSelectedAttachment();
     attachmentPreviewClass.showSelectedPreviewTemplate();
+    previewTemplate.activateTemplate();
+
     priceClass.setPriceAttachment(price);
     priceClass.changePricePerLanyard();
   }
