@@ -7,7 +7,6 @@ class AttachmentClass {
     attachmentClass.showSelectedAttachment();
     attachmentPreviewClass.showSelectedPreviewTemplate();
     previewTemplate.activateTemplate();
-    alert(this.getAttachmentSelected());
 
     priceClass.setPriceAttachment(price);
     priceClass.changePricePerLanyard();
