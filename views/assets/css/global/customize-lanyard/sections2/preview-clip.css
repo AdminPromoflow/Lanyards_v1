@@ -1,9 +1,9 @@
 .container-preview-clip{
   position: absolute;
-  top: 20.0%;
+  top: 70%;
   left: 50%;
   transform: translateX(-50%);
-  height: 7.2cm;
+  height: 10cm;
   width: 100px;
   background-color: orange;
 }
