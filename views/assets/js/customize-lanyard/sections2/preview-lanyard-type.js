@@ -177,7 +177,17 @@ class PreviewLanyardType {
     }
   }
   cleanStyle(){
-    alert("Entramos");
+    if (leftSuperLanyard.complete) {
+      alert("El archivo ya está cargada.");
+    } else {
+      leftSuperLanyard.addEventListener("load", () => {
+        alert("El archivo se cargó después.");
+      });
+
+      leftSuperLanyard.addEventListener("error", () => {
+        alert("El archivo cargar la imagen.");
+      });
+    }
     document.addEventListener("DOMContentLoaded", function () {
       // Aquí ya puedes acceder a todos los elementos del DOM
       alert("DOM completamente cargado");
