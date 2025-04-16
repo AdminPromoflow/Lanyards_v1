@@ -31,10 +31,7 @@ class PreviewTemplate {
 
     this.previewContainer.style.display = action;
     if (action == "block") {
-      alert(action);
-
       this.activateTemplate();
-
     }
   }
 
