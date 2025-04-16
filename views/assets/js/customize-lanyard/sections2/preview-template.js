@@ -164,3 +164,4 @@ class PreviewTemplate {
     if (centerClass) group.center.classList.add(centerClass);
   }
 }
+const previewTemplate = new PreviewTemplate();
