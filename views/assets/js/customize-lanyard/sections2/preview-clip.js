@@ -1,5 +1,7 @@
 class PreviewClip {
   constructor() {
+    // Store the main preview container element
+    this.previewClip = document.getElementById("preview-clip-class");
 
   }
   togglePreviewClipClass(action) {

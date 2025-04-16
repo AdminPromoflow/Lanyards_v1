@@ -8,13 +8,14 @@ class PreviewTemplate {
         container: document.getElementById("super-lanyard"),
 
     };
+    // Store the main preview container element
+    this.previewContainer = document.getElementById("preview-template-class");
+
 
   }
 
   // Toggles the visibility of the preview container
   togglePreviewTemplateClass(action) {
-    // Store the main preview container element
-    this.previewContainer = document.getElementById("preview-template-class");
 
     this.previewContainer.style.display = action;
     if (action == "block") {
