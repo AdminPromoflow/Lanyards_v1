@@ -3,10 +3,9 @@ class PreviewClip {
     // Store the main preview container element
 
     this.previewClip = document.getElementById("preview-clip-class");
-    
+
   }
   togglePreviewClipClass(action) {
-    alert(action);
     this.previewClip.style.display = action;
   }
   showPreviewSelectedClip(data){
