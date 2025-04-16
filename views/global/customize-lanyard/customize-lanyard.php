@@ -9,7 +9,10 @@ function get_customize_lanyard_file_version($filePath) {
 
 $customize_lanyard_css = "../assets/css/global/customize-lanyard/style.css";
 $customize_lanyard_js = "../../views/assets/js/customize-lanyard/app.js";
+
 ?>
+<!-- Include JS with versioning -->
+<script src="<?php echo $customize_lanyard_js . '?v=' . get_customize_lanyard_file_version($customize_lanyard_js); ?>"></script>
 
 <!-- Link CSS with versioning -->
 <link rel="stylesheet" href="<?php echo $customize_lanyard_css . '?v=' . get_customize_lanyard_file_version($customize_lanyard_css); ?>">
@@ -76,6 +79,3 @@ $customize_lanyard_js = "../../views/assets/js/customize-lanyard/app.js";
     </div>
   </div>
 </section>
-
-<!-- Include JS with versioning -->
-<script src="<?php echo $customize_lanyard_js . '?v=' . get_customize_lanyard_file_version($customize_lanyard_js); ?>"></script>
