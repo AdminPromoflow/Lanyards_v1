@@ -8,6 +8,7 @@ class PreviewLanyardType {
 
 
   showTypeLanyardPreview(action){
+    previewLanyardTypeContainer.style.display = action;
   }
 }
 
