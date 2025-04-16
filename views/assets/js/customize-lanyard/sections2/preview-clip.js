@@ -2,6 +2,9 @@ class PreviewClip {
   constructor() {
 
   }
+  togglePreviewClipClass(action) {
+    this.previewClip.style.display = action;
+  }
   showPreviewSelectedClip(data){
     console.log(data);
     const os25_clip = document.querySelectorAll(".os25-clip");

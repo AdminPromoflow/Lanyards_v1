@@ -9,17 +9,18 @@ class PreviewTemplate {
 
     };
 
-    // Store the main preview container element
-    this.previewContainer = document.getElementById("preview-template-class");
   }
 
   // Toggles the visibility of the preview container
   togglePreviewTemplateClass(action) {
+    // Store the main preview container element
+    this.previewContainer = document.getElementById("preview-template-class");
 
     this.previewContainer.style.display = action;
     if (action == "block") {
       this.activateTemplate();
     }
+    previewClip.togglePreviewClipClass(action);
   }
 
   // Activates the appropriate template based on selected lanyard type, width, and attachment mode
