@@ -8,7 +8,7 @@ class PreviewLanyardType {
     const attachmentSelected = attachmentClass.getAttachmentSelected();
     if (typeLanyard == "one-end") {
 
-      if (attachmentSelected == "none") {
+      if (attachmentSelected == "none" || attachmentSelected == "None") {
 
         if (width == "25mm") {
 
