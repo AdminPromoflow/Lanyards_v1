@@ -501,4 +501,10 @@ var preview = document.getElementById("preview");
 var next = document.getElementById("next");
 var stateVisibilityPanelCustomeLanyard = false;
 
+const superLanyard = document.getElementById("super-lanyard");
+const leftSuperLanyard = document.getElementById("left-super-lanyard");
+const rightSuperLanyard = document.getElementById("right-super-lanyard");
+const centerSuperLanyard = document.getElementById("center-super-lanyard");
+
+
 const customizeLanyard = new CustomizeLanyard();

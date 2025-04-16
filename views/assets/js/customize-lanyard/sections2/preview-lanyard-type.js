@@ -221,10 +221,6 @@ const twoSide30mm = document.getElementById("two-side-30mm");
 
 
 
-const superLanyard = document.getElementById("super-lanyard");
-const leftSuperLanyard = document.getElementById("left-super-lanyard");
-const rightSuperLanyard = document.getElementById("right-super-lanyard");
-const centerSuperLanyard = document.getElementById("center-super-lanyard");
 
 
 
