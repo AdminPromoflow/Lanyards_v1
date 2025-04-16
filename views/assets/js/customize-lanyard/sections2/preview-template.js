@@ -28,7 +28,12 @@ class PreviewTemplate {
 
   // Toggles the visibility of the preview container
   togglePreviewTemplateClass(action) {
+
     this.previewContainer.style.display = action;
+    if (action == "display") {
+      this.activateTemplate();
+
+    }
   }
 
   // Activates the appropriate template based on selected lanyard type, width, and attachment mode
@@ -77,19 +82,19 @@ class PreviewTemplate {
     // Add appropriate classes based on the width
     switch (width) {
       case "10mm":
-        this.applyClassToGroup(group, "", "", "");
+        this.applyClassToGroup(group, "left-super-lanyard-one-end-10mm", "right-super-lanyard-one-end-10mm", "");
         break;
       case "15mm":
-        this.applyClassToGroup(group, "", "", "");
+        this.applyClassToGroup(group, "left-super-lanyard-one-end-15mm", "right-super-lanyard-one-end-15mm", "");
         break;
       case "20mm":
-        this.applyClassToGroup(group, "", "", "");
+        this.applyClassToGroup(group, "left-super-lanyard-one-end-20mm", "right-super-lanyard-one-end-20mm", "");
         break;
       case "25mm":
-        this.applyClassToGroup(group, "", "", "");
+        this.applyClassToGroup(group, "left-super-lanyard-one-end-25mm", "right-super-lanyard-one-end-25mm", "");
         break;
       case "30mm":
-        this.applyClassToGroup(group, "", "", "");
+        this.applyClassToGroup(group, "left-super-lanyard-one-end-30mm", "right-super-lanyard-one-end-30mm", "");
         break;
       default:
         console.warn("Unrecognised width in 'no-attachment' mode:", width);
@@ -106,19 +111,19 @@ class PreviewTemplate {
     // Add appropriate classes based on the width
     switch (width) {
       case "10mm":
-        this.applyClassToGroup(group, "", "", "");
+        this.applyClassToGroup(group, "left-super-lanyard-one-end-10mm-attachment", "right-super-lanyard-one-end-10mm-attachment", "center-super-lanyard-one-end-10mm-attachment");
         break;
       case "15mm":
-        this.applyClassToGroup(group, "", "", "");
+        this.applyClassToGroup(group, "left-super-lanyard-one-end-15mm-attachment", "right-super-lanyard-one-end-15mm-attachment", "center-super-lanyard-one-end-15mm-attachment");
         break;
       case "20mm":
-        this.applyClassToGroup(group, "", "", "");
+        this.applyClassToGroup(group, "left-super-lanyard-one-end-20mm-attachment", "right-super-lanyard-one-end-20mm-attachment", "center-super-lanyard-one-end-20mm-attachment");
         break;
       case "25mm":
-        this.applyClassToGroup(group, "", "", "");
+        this.applyClassToGroup(group, "left-super-lanyard-one-end-25mm-attachment", "right-super-lanyard-one-end-25mm-attachment", "center-super-lanyard-one-end-25mm-attachment");
         break;
       case "30mm":
-        this.applyClassToGroup(group, "", "", "");
+        this.applyClassToGroup(group, "left-super-lanyard-one-end-30mm-attachment", "right-super-lanyard-one-end-30mm-attachment", "center-super-lanyard-one-end-30mm-attachment");
         break;
       default:
         console.warn("Unrecognised width in 'with-attachment' mode:", width);
@@ -135,19 +140,19 @@ class PreviewTemplate {
     // Add appropriate classes for both left and right elements based on width
     switch (width) {
       case "10mm":
-        this.applyClassToGroup(group, "", "", "");
+        this.applyClassToGroup(group, "left-super-lanyard-two-end-10mm", "right-super-lanyard-two-end-10mm", "");
         break;
       case "15mm":
-        this.applyClassToGroup(group, "", "", "");
+        this.applyClassToGroup(group, "left-super-lanyard-two-end-15mm", "right-super-lanyard-two-end-15mm", "");
         break;
       case "20mm":
-        this.applyClassToGroup(group, "", "", "");
+        this.applyClassToGroup(group, "left-super-lanyard-two-end-20mm", "right-super-lanyard-two-end-20mm", "");
         break;
       case "25mm":
-        this.applyClassToGroup(group, "", "", "");
+        this.applyClassToGroup(group, "left-super-lanyard-two-end-25mm", "right-super-lanyard-two-end-25mm", "");
         break;
       case "30mm":
-        this.applyClassToGroup(group, "", "", "");
+        this.applyClassToGroup(group, "left-super-lanyard-two-end-30mm", "right-super-lanyard-two-end-30mm", "");
         break;
       default:
         console.warn("Unrecognised width in 'two-end' mode:", width);
