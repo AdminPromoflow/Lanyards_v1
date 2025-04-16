@@ -33,12 +33,12 @@ class PreviewTemplate {
     // Apply styles based on lanyard type and attachment mode
     if (type === "one-end") {
       if (attachment === "none" || attachment === "None") {
-        this.applyNoAttachmentStyles(width, context); // Apply no-attachment styles
+        this.applyNoAttachmentStyles(width); // Apply no-attachment styles
       } else {
-        this.applyWithAttachmentStyles(width, context); // Apply with-attachment styles
+        this.applyWithAttachmentStyles(width); // Apply with-attachment styles
       }
     } else if (type === "two-end") {
-      this.applyTwoEndStyles(width, context); // Apply two-end styles
+      this.applyTwoEndStyles(width); // Apply two-end styles
     }
   }
 
