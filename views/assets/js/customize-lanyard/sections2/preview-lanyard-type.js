@@ -6,7 +6,6 @@ class PreviewLanyardType {
     var typeLanyard = oneTwoEndsClass.getTypeLanyardSelected();
     var width = widthClass.getWidthSelected();
     const attachmentSelected = attachmentClass.getAttachmentSelected();
-    this.cleanStyle();
     if (typeLanyard == "one-end") {
 
       if (attachmentSelected == "none") {
@@ -176,27 +175,7 @@ class PreviewLanyardType {
       }
     }
   }
-  cleanStyle(){
-    if (leftSuperLanyard.complete) {
-      alert("El archivo ya está cargada.");
-    } else {
-      leftSuperLanyard.addEventListener("load", () => {
-        alert("El archivo se cargó después.");
-      });
 
-      leftSuperLanyard.addEventListener("error", () => {
-        alert("El archivo cargar la imagen.");
-      });
-    }
-    document.addEventListener("DOMContentLoaded", function () {
-      // Aquí ya puedes acceder a todos los elementos del DOM
-      alert("DOM completamente cargado");
-      leftSuperLanyard.removeAttribute("style");
-      rightSuperLanyard.removeAttribute("style");
-      centerSuperLanyard.removeAttribute("style");
-    });
-
-  }
 
   showTypeLanyardPreview(action){
     previewLanyardTypeContainer.style.display = action;
@@ -216,8 +195,6 @@ const twoSide15mm = document.getElementById("two-side-15mm");
 const twoSide20mm = document.getElementById("two-side-20mm");
 const twoSide25mm = document.getElementById("two-side-25mm");
 const twoSide30mm = document.getElementById("two-side-30mm");
-
-
 
 
 
