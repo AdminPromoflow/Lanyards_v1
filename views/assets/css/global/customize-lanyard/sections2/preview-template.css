@@ -42,17 +42,17 @@
 
       .top_left_clip-one-end-10mm{
         position: absolute;
-        top: -10%;
+        top: -5%;
         height: 0.3cm;
-        width: 0.15cm;
-        left: 15%;
+        width: 0.25cm;
+        left: 12%;
       }
       .top_right_clip-one-end-10mm{
         position: absolute;
-        top: -10%;
+        top: -5%;
         height: 0.3cm;
         width: 0.25cm;
-        right:  15%;
+        right:  12%;
       }
       /* 10mm */
       .left-super-lanyard-one-end-10mm{
