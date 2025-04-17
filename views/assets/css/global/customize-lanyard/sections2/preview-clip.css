@@ -76,3 +76,15 @@
   width: 17%;
   right: 5%;
 }
+
+
+.clip_two_ends_20mm_left{
+  height: 58.9%;
+  width: 22.1%;
+  left: 5%;
+}
+.clip_two_ends_20mm_right{
+  height: 58.9%;
+  width: 22.1%;
+  right: 5%;
+}
