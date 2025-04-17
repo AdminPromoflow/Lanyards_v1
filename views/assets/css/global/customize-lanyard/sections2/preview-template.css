@@ -162,11 +162,20 @@
 
 
       /* 25mm */
-      .top_left_clip-one-end-25mm{
-
+      .top_left_clip-one-end-25mm {
+        position: absolute;
+        bottom: 98.8%;
+        height: 0.50cm;
+        width: 0.48cm;
+        left: 7.3%;
       }
-      .top_right_clip-one-end-25mm{
 
+      .top_right_clip-one-end-25mm {
+        position: absolute;
+        bottom: 98.8%;
+        height: 0.50cm;
+        width: 0.48cm;
+        right: 5.8%;
       }
       .left-super-lanyard-one-end-25mm {
         position: absolute;
@@ -201,9 +210,20 @@
 
 /* 30mm */
 /* 25mm */
-.top_left_clip-one-end-30mm{
+.top_left_clip-one-end-30mm {
+  position: absolute;
+  bottom: 97.5%;
+  height: 0.58cm;
+  width: 0.57cm;
+  left: 6.1%;
 }
-.top_right_clip-one-end-30mm{
+
+.top_right_clip-one-end-30mm {
+  position: absolute;
+  bottom: 97.5%;
+  height: 0.58cm;
+  width: 0.57cm;
+  right: 4.5%;
 }
 .left-super-lanyard-one-end-30mm {
   position: absolute;
