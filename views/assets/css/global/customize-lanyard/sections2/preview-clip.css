@@ -18,23 +18,31 @@
   height: 100%;
 }
 
-.clip_one_ends_10mm{
+.clip_one_end_10mm{
   height: 40%;
   width: 15%;
+  display: none;
 }
-.clip_one_ends_15mm{
+.clip_one_end_15mm{
   height: 45.3%;
   width: 17%;
 }
-.clip_one_ends_20mm{
+.clip_one_end_20mm{
   height: 58.9%;
   width: 22.1%;
 }
-.clip_one_ends_25mm{
+.clip_one_end_25mm{
   height: 78%;
   width: 26%;
 }
-.clip_one_ends_30mm{
+.clip_one_end_30mm{
   height: 79%;
+  width: 30%;
+}
+
+
+
+.clip_two_ends_10mm{
+  height: 40%;
   width: 30%;
 }
