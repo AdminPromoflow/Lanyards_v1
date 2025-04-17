@@ -164,7 +164,7 @@
       /* 25mm */
       .top_left_clip-one-end-25mm {
         position: absolute;
-        bottom: 98.8%;
+        bottom: 100%;
         height: 0.50cm;
         width: 0.48cm;
         left: 7.3%;
@@ -172,7 +172,7 @@
 
       .top_right_clip-one-end-25mm {
         position: absolute;
-        bottom: 98.8%;
+        bottom: 100%;
         height: 0.50cm;
         width: 0.48cm;
         right: 5.8%;
