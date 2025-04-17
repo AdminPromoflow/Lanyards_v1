@@ -80,17 +80,17 @@
       /* 15mm */
       .top_left_clip-one-end-15mm{
         position: absolute;
-        bottom: 101.4%;
+        bottom: 101.2%;
         height: 0.35cm;
         width: 0.31cm;
-        left: 10.8%;
+        left: 10.5%;
       }
       .top_right_clip-one-end-15mm{
         position: absolute;
-        bottom: 101.4%;
+        bottom: 101.2%;
         height: 0.35cm;
         width: 0.31cm;
-        right:  9.5%;
+        right:  9.2%;
       }
       .left-super-lanyard-one-end-15mm {
         position: absolute;
