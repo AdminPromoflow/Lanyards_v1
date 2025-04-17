@@ -13,7 +13,7 @@ function preview_clip_asset_version($relativePath) {
 
 <section class="preview-clip-class" id="preview-clip-class">
   <div class="container-preview-clip">
-    <div class="clip clip_one_end_10mm" id="clip">
+    <div class="clip clip_one_ends_10mm" id="clip">
       <img src="<?php echo preview_clip_asset_version('/views/assets/img/global/customize-lanyard/sections2/clips/one-end/dog_clip.png'); ?>" alt="">
     </div>
   </div>
