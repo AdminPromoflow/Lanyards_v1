@@ -46,8 +46,10 @@ class PreviewClip {
   applyOneEndStyles(width, clipSelected) {
     if (!this.centerClip) return;
 
-    // Limpieza previa por si acaso
-    this.centerClip.className = "img-clip";
+    this.leftClip.style.display = "none";
+    this.rightClip.style.display = "none";
+    this.centerClip.style.display = "block";
+
 
     // Agregar clase correspondiente según el ancho
     switch (width) {
@@ -75,10 +77,10 @@ class PreviewClip {
   applyTwoEndStyles(width, clipSelected) {
     if (!this.leftClip || !this.rightClip) return;
 
-    // Limpiar clases anteriores
-    this.leftClip.className = "img-clip";
-    this.rightClip.className = "img-clip";
-
+    this.leftClip.style.display = "block";
+    this.rightClip.style.display = "block";
+    this.centerClip.style.display = "none";
+    
     // Agregar nuevas clases según el ancho
     switch (width) {
       case "10mm":
