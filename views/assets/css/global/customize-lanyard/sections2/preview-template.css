@@ -35,17 +35,24 @@
       .top_right_clip img{
         height: 100%;
         width: 100%;
-        
       }
 
 
 
 
       .top_left_clip-one-end-10mm{
-
+        position: absolute;
+        bottom: 90%;
+        height: 0.3cm;
+        left: 50%;
+        transform: translateX(-50%);
       }
       .top_right_clip-one-end-10mm{
-
+        position: absolute;
+        bottom: 90%;
+        height: 0.3cm;
+        left: 50%;
+        transform: translateX(-50%);
       }
       /* 10mm */
       .left-super-lanyard-one-end-10mm{
@@ -218,7 +225,10 @@
 
 
 
-
+.top_left_clip-two-end-10mm{
+}
+.top_right_clip-two-end-10mm{
+}
 .left-super-lanyard-two-end-10mm {
   position: absolute;
   top: 0;
@@ -244,6 +254,10 @@
 
 
 /* 15mm */
+.top_left_clip-two-end-15mm{
+}
+.top_right_clip-two-end-15mm{
+}
 .left-super-lanyard-two-end-15mm {
   position: absolute;
   top: 0;
@@ -272,6 +286,10 @@
 
 
 /* 20mm */
+.top_left_clip-two-end-20mm{
+}
+.top_right_clip-two-end-20mm{
+}
 .left-super-lanyard-two-end-20mm {
   position: absolute;
   top: 0;
@@ -300,6 +318,10 @@
 
 
 /* 25mm */
+.top_left_clip-two-end-25mm{
+}
+.top_right_clip-two-end-25mm{
+}
 .left-super-lanyard-two-end-25mm {
   position: absolute;
   top: 0;
@@ -328,6 +350,10 @@
 
 
 /* 25mm */
+.top_left_clip-two-end-30mm{
+}
+.top_right_clip-two-end-30mm{
+}
 .left-super-lanyard-two-end-30mm {
   position: absolute;
   top: 0;
