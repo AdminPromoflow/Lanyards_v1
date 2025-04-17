@@ -16,8 +16,9 @@ function preview_clip_asset_version($relativePath) {
     <div class="clip_one_end_10mm clip" id="clip">
       <img src="<?php echo preview_clip_asset_version('/views/assets/img/global/customize-lanyard/sections2/clips/one-end/dog_clip.png'); ?>" alt="">
     </div>
-    <div class="clip_two_ends_10mm clip" >
-      <img src="<?php echo preview_clip_asset_version('/views/assets/img/global/customize-lanyard/sections2/clips/two-ends/dog_clip.png'); ?>" alt="">
+    <div class="clip_two_ends_10mm clips" >
+      <img src="<?php echo preview_clip_asset_version('/views/assets/img/global/customize-lanyard/sections2/clips/one-end/dog_clip.png'); ?>" alt="">
+      <img src="<?php echo preview_clip_asset_version('/views/assets/img/global/customize-lanyard/sections2/clips/one-end/dog_clip.png'); ?>" alt="">
     </div>
   </div>
 </section>

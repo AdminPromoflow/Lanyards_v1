@@ -42,7 +42,15 @@
 
 
 
-.clip_two_ends_10mm{
-  height: 40%;
-  width: 90%;
+
+.clips{
+  position: absolute;
+  top: 0px;
+}
+.clips img{
+  height: 100%;
+}
+.clip_two_ends_10mm:nth-child(1){
+  width: 15%;
+  left: 5%;
 }
