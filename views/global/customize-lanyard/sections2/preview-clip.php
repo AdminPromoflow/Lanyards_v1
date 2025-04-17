@@ -12,7 +12,6 @@ function preview_clip_asset_version($relativePath) {
 <link rel="stylesheet" href="<?php echo preview_clip_asset_version('/views/assets/css/global/customize-lanyard/sections2/preview-clip.css'); ?>">
 <section class="preview-clip-class" id="preview-clip-class">
   <div class="container-preview-clip">
-    <h2>Lorem ipsum dolor sit amet,</h2>
   </div>
 </section>
 <script src="<?php echo preview_clip_asset_version('/views/assets/js/customize-lanyard/sections2/preview-clip.js'); ?>" type="text/javascript"></script>
