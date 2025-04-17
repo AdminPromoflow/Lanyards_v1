@@ -33,6 +33,8 @@ class ClipClass {
 
     this.getPriceClipSelected();
 
+    previewClip.showPreviewSelectedClip();
+
   }
 
   autoSelectClip(){
