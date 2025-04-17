@@ -5,7 +5,6 @@
   transform: translateX(-50%);
   height: 1.6cm;
   width: 100px;
-  background-color: rgba(0, 255, 0, .3);
 }
 .clip{
   position: absolute;
