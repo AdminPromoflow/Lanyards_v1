@@ -22,14 +22,14 @@ class PreviewClip {
     this.updateClipImagesSrc();
 
 
-    this.cleanStyle();
+    //this.cleanStyle();
 
 
-  /*  if (type === "one-end") {
+    if (type === "one-end") {
       this.applyOneEndStyles(width, clipSelected);
     } else if (type === "two-end") {
       this.applyTwoEndStyles(width, clipSelected);
-    }*/
+    }
   }
 
   updateClipImagesSrc() {
