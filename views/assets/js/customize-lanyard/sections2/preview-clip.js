@@ -22,7 +22,7 @@ class PreviewClip {
     this.updateClipImagesSrc();
 
 
-    //this.cleanStyle();
+    this.cleanStyle();
 
 
     if (type === "one-end") {
