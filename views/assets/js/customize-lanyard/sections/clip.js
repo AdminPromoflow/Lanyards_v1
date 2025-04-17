@@ -167,7 +167,7 @@ class ClipClass {
 
 
     priceClass.setAmountSelected(priceClass.getAmountSelected());
-    previewClip.showPreviewSelectedClip(data);
+    previewClip.showPreviewSelectedClip();
   }
 
   getPriceClipSelected(){

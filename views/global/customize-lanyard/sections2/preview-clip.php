@@ -13,13 +13,13 @@ function preview_clip_asset_version($relativePath) {
 
 <section class="preview-clip-class" id="preview-clip-class">
   <div class="container-preview-clip">
-    <div class="clip_one_end_10mm clip" id="clip">
+    <div class="clip_one_end_10mm clip" id="center_clip">
       <img src="<?php echo preview_clip_asset_version('/views/assets/img/global/customize-lanyard/sections2/clips/one-end/dog_clip.png'); ?>" alt="">
     </div>
-    <div class="clip_two_ends_30mm_left clips" >
+    <div class="clip_two_ends_30mm_left clips" id="left_clip">
       <img src="<?php echo preview_clip_asset_version('/views/assets/img/global/customize-lanyard/sections2/clips/one-end/dog_clip.png'); ?>" alt="">
     </div>
-    <div class="clip_two_ends_30mm_right clips" >
+    <div class="clip_two_ends_30mm_right clips" id="right_clip">
       <img src="<?php echo preview_clip_asset_version('/views/assets/img/global/customize-lanyard/sections2/clips/one-end/dog_clip0.png'); ?>" alt="">
     </div>
   </div>
