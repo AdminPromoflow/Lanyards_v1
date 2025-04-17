@@ -15,6 +15,7 @@ class PreviewClip {
   }
 
   showPreviewSelectedClip() {
+    alert("Al menos algo pasó");
     const type = oneTwoEndsClass.getTypeLanyardSelected();
     const width = widthClass.getWidthSelected();
     const clipSelected = clipClass.getClipSelected();
@@ -22,10 +23,6 @@ class PreviewClip {
     this.cleanStyle();
 
     this.updateClipImagesSrc();
-
-
-
-
 
     if (type === "one-end") {
       this.applyOneEndStyles(width, clipSelected);
