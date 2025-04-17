@@ -52,6 +52,8 @@
   width: 100%;
 
 }
+
+
 .clip_two_ends_10mm_left{
   height: 40%;
   width: 15%;
@@ -61,4 +63,16 @@
   height: 40%;
   width: 15%;
   right: 5%;
+}
+
+
+.clip_two_ends_15mm_left{
+  height: 45.3%;
+  width: 17%;
+  left: 6%;
+}
+.clip_two_ends_15mm_right{
+  height: 45.3%;
+  width: 17%;
+  right: 6%;
 }
