@@ -15,26 +15,31 @@ class PreviewClip {
   }
 
   showPreviewSelectedClip() {
-    alert("Al menos algo pasó");
     const type = oneTwoEndsClass.getTypeLanyardSelected();
     const width = widthClass.getWidthSelected();
     const clipSelected = clipClass.getClipSelected();
 
-    this.cleanStyle();
-
     this.updateClipImagesSrc();
+
+
+  /*  this.cleanStyle();
+
 
     if (type === "one-end") {
       this.applyOneEndStyles(width, clipSelected);
     } else if (type === "two-end") {
       this.applyTwoEndStyles(width, clipSelected);
-    }
+    }*/
   }
-  updateClipImagesSrc(){
-    this.centerClip.querySelector("img").src = "../../views/assets/img/global/customize-lanyard/sections2/clips/one-end/5.png";
-    this.centerClip.querySelector("img").src = "../../views/assets/img/global/customize-lanyard/sections2/clips/one-end/5.png";
-    this.centerClip.querySelector("img").src = "../../views/assets/img/global/customize-lanyard/sections2/clips/one-end/5.png";
+
+  updateClipImagesSrc() {
+    const newSrc = "../../views/assets/img/global/customize-lanyard/sections2/clips/one-end/5.png";
+
+    this.centerClip.querySelector("img").src = newSrc;
+    this.leftClip.querySelector("img").src = newSrc;
+    this.rightClip.querySelector("img").src = newSrc;
   }
+
 
 
 
