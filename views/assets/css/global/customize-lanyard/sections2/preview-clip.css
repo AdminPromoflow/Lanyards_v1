@@ -7,3 +7,10 @@
   width: 100px;
   background-color: green;
 }
+.clip_one_ends_10mm{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: orange;
+  height: 3.5cm;
+}
