@@ -9,6 +9,7 @@ class PreviewClip {
     this.previewClip.style.display = action;
   }
   showPreviewSelectedClip(data){
+    alert(data);
     console.log(data);
     const os25_clip = document.querySelectorAll(".os25-clip");
     const ts25_clip = document.querySelectorAll(".ts25-clip");

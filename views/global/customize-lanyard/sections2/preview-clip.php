@@ -22,8 +22,6 @@ function preview_clip_asset_version($relativePath) {
     <div class="clip_two_ends_30mm_right clips" >
       <img src="<?php echo preview_clip_asset_version('/views/assets/img/global/customize-lanyard/sections2/clips/one-end/dog_clip0.png'); ?>" alt="">
     </div>
-
-
   </div>
 </section>
 
