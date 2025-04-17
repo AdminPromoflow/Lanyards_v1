@@ -27,7 +27,26 @@
         width: 100%;
       }
 
+      .top_left_clip img{
+        height: 100%;
+        width: 100%;
 
+      }
+      .top_right_clip img{
+        height: 100%;
+        width: 100%;
+        
+      }
+
+
+
+
+      .top_left_clip-one-end-10mm{
+
+      }
+      .top_right_clip-one-end-10mm{
+
+      }
       /* 10mm */
       .left-super-lanyard-one-end-10mm{
         position: absolute;
@@ -50,7 +69,14 @@
         transform:  skewX(-7.5deg) perspective(7.5vw);
       }
 
+
       /* 15mm */
+      .top_left_clip-one-end-15mm{
+
+      }
+      .top_right_clip-one-end-15mm{
+
+      }
       .left-super-lanyard-one-end-15mm {
         position: absolute;
         top: 0;
@@ -79,6 +105,12 @@
 
 
       /* 20mm */
+      .top_left_clip-one-end-20mm{
+
+      }
+      .top_right_clip-one-end-20mm{
+
+      }
       .left-super-lanyard-one-end-20mm {
         position: absolute;
         top: 0;
@@ -107,6 +139,12 @@
 
 
       /* 25mm */
+      .top_left_clip-one-end-25mm{
+
+      }
+      .top_right_clip-one-end-25mm{
+
+      }
       .left-super-lanyard-one-end-25mm {
         position: absolute;
         top: 0;
@@ -140,6 +178,10 @@
 
 /* 30mm */
 /* 25mm */
+.top_left_clip-one-end-30mm{
+}
+.top_right_clip-one-end-30mm{
+}
 .left-super-lanyard-one-end-30mm {
   position: absolute;
   top: 0;

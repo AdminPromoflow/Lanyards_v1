@@ -29,6 +29,12 @@ $jsFilemtime = getPreviewTemplateFilemtime($jsFilePath);
 
     <!-- Standard lanyard preview layout -->
     <div class="super-lanyard" id="super-lanyard">
+      <div class="top_left_clip top_left_clip-one-end-30mm">
+        <img src="../../views/assets/img/global/customize-lanyard/sections2/preview_template/clip-neck-left.png" alt="">
+      </div>
+      <div class="top_right_clip top_right_clip-one-end-30mm">
+        <img src="../../views/assets/img/global/customize-lanyard/sections2/preview_template/clip-neck-right.png" alt="">
+      </div>
       <!-- Left part of the standard lanyard (for one-end, 10mm type) -->
       <div class="left-super-lanyard-one-end-30mm" id="left-super-lanyard">
         <!-- Rendered preview for the left segment -->
@@ -40,6 +46,7 @@ $jsFilemtime = getPreviewTemplateFilemtime($jsFilePath);
       <!-- Center part of the standard lanyard (typically the neck area) -->
       <div class="center-super-lanyard-one-end-30mm" id="center-super-lanyard">
         <!-- Rendered preview for the center segment -->
+
       </div>
     </div>
 
