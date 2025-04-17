@@ -42,14 +42,14 @@
 
       .top_left_clip-one-end-10mm{
         position: absolute;
-        bottom: 102%;
+        bottom: 101%;
         height: 0.3cm;
         width: 0.25cm;
         left: 10.5%;
       }
       .top_right_clip-one-end-10mm{
         position: absolute;
-        bottom: 102%;
+        bottom: 101%;
         height: 0.3cm;
         width: 0.25cm;
         right:  10%;
