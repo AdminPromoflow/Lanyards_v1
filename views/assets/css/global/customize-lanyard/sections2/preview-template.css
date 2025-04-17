@@ -44,12 +44,15 @@
         position: absolute;
         bottom: 90%;
         height: 0.3cm;
+        width: 0.1cm;
         left: 35%;
       }
       .top_right_clip-one-end-10mm{
         position: absolute;
         bottom: 90%;
         height: 0.3cm;
+        width: 0.1cm;
+
         right:  35%;
       }
       /* 10mm */
