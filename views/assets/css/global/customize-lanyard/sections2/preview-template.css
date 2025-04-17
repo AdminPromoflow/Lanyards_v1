@@ -42,16 +42,16 @@
 
       .top_left_clip-one-end-10mm{
         position: absolute;
-        bottom: 100%;
+        top: -1%;
         height: 0.3cm;
         width: 0.15cm;
         left: 15%;
       }
       .top_right_clip-one-end-10mm{
         position: absolute;
-        bottom: 100%;
+        top: -1%;
         height: 0.3cm;
-        width: 0.15cm;
+        width: 0.25cm;
         right:  15%;
       }
       /* 10mm */
