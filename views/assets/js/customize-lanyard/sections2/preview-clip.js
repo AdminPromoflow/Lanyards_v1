@@ -60,13 +60,13 @@ class PreviewClip {
         this.centerClip.classList.add("clip_one_end_15mm");
         break;
       case "20mm":
-        this.centerClip.classList.add("clip_one_end_15mm");
+        this.centerClip.classList.add("clip_one_end_20mm");
         break;
       case "25mm":
-        this.centerClip.classList.add("clip_one_end_15mm");
+        this.centerClip.classList.add("clip_one_end_25mm");
         break;
       case "30mm":
-        this.centerClip.classList.add("clip_one_end_15mm");
+        this.centerClip.classList.add("clip_one_end_30mm");
         break;
       // Podés seguir agregando más anchos acá...
       default:
@@ -80,7 +80,7 @@ class PreviewClip {
     this.leftClip.style.display = "block";
     this.rightClip.style.display = "block";
     this.centerClip.style.display = "none";
-    
+
     // Agregar nuevas clases según el ancho
     switch (width) {
       case "10mm":
