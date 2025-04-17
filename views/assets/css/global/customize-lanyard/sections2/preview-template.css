@@ -261,8 +261,18 @@
 
 
 .top_left_clip-two-end-10mm{
+  position: absolute;
+  bottom: 101.5%;
+  height: 0.3cm;
+  width: 0.25cm;
+  left: 10.8%;
 }
 .top_right_clip-two-end-10mm{
+  position: absolute;
+  bottom: 101.5%;
+  height: 0.3cm;
+  width: 0.25cm;
+  right:  9.5%;
 }
 .left-super-lanyard-two-end-10mm {
   position: absolute;
@@ -289,9 +299,20 @@
 
 
 /* 15mm */
+
 .top_left_clip-two-end-15mm{
+  position: absolute;
+  bottom: 101.1%;
+  height: 0.35cm;
+  width: 0.31cm;
+  left: 9.9%;
 }
 .top_right_clip-two-end-15mm{
+  position: absolute;
+  bottom: 101.1%;
+  height: 0.35cm;
+  width: 0.31cm;
+  right:  8.6%;
 }
 .left-super-lanyard-two-end-15mm {
   position: absolute;
@@ -321,9 +342,20 @@
 
 
 /* 20mm */
+
 .top_left_clip-two-end-20mm{
+  position: absolute;
+  bottom: 100.0%;
+  height: 0.43cm;
+  width: 0.4cm;
+  left: 8.5%;
 }
 .top_right_clip-two-end-20mm{
+  position: absolute;
+  bottom: 100.0%;
+  height: 0.43cm;
+  width: 0.4cm;
+  right: 7.0%;
 }
 .left-super-lanyard-two-end-20mm {
   position: absolute;
@@ -353,9 +385,20 @@
 
 
 /* 25mm */
+
 .top_left_clip-two-end-25mm{
+  position: absolute;
+  bottom: 100.0%;
+  height: 0.43cm;
+  width: 0.4cm;
+  left: 8.5%;
 }
 .top_right_clip-two-end-25mm{
+  position: absolute;
+  bottom: 100.0%;
+  height: 0.43cm;
+  width: 0.4cm;
+  right: 7.0%;
 }
 .left-super-lanyard-two-end-25mm {
   position: absolute;
@@ -385,10 +428,23 @@
 
 
 /* 25mm */
+
 .top_left_clip-two-end-30mm{
+  position: absolute;
+  bottom: 100%;
+  height: 0.6cm;
+  width: 0.55cm;
+  left: 6.2%;
 }
 .top_right_clip-two-end-30mm{
+  position: absolute;
+  bottom: 100%;
+  height: 0.6cm;
+  width: 0.55cm;
+  right: 4%;
 }
+
+
 .left-super-lanyard-two-end-30mm {
   position: absolute;
   top: 0;
@@ -417,6 +473,20 @@
 
 
 
+.top_left_clip-one-end-10mm-attachment{
+  position: absolute;
+  bottom: 101.5%;
+  height: 0.3cm;
+  width: 0.25cm;
+  left: 10.8%;
+}
+.top_right_clip-one-end-10mm-attachment{
+  position: absolute;
+  bottom: 101.5%;
+  height: 0.3cm;
+  width: 0.25cm;
+  right:  9.5%;
+}
 
 .left-super-lanyard-one-end-10mm-attachment{
   position: absolute;
@@ -460,6 +530,20 @@
 
 
 
+.top_left_clip-one-end-15mm-attachment{
+  position: absolute;
+  bottom: 101.1%;
+  height: 0.35cm;
+  width: 0.31cm;
+  left: 9.9%;
+}
+.top_right_clip-one-end-15mm-attachment{
+  position: absolute;
+  bottom: 101.1%;
+  height: 0.35cm;
+  width: 0.31cm;
+  right:  8.6%;
+}
 
 .left-super-lanyard-one-end-15mm-attachment{
   position: absolute;
@@ -507,6 +591,20 @@
 
 
 
+.top_left_clip-one-end-20mm-attachment{
+  position: absolute;
+  bottom: 100.0%;
+  height: 0.43cm;
+  width: 0.4cm;
+  left: 8.5%;
+}
+.top_right_clip-one-end-20mm-attachment{
+  position: absolute;
+  bottom: 100.0%;
+  height: 0.43cm;
+  width: 0.4cm;
+  right: 7.0%;
+}
 
 .left-super-lanyard-one-end-20mm-attachment{
   position: absolute;
@@ -556,6 +654,21 @@
 
 
 
+.top_left_clip-one-end-25mm-attachment {
+  position: absolute;
+  bottom: 100.0%;
+  height: 0.43cm;
+  width: 0.4cm;
+  left: 8.5%;
+}
+
+.top_right_clip-one-end-25mm-attachment {
+  position: absolute;
+  bottom: 100.0%;
+  height: 0.43cm;
+  width: 0.4cm;
+  right: 7.0%;
+}
 
 .left-super-lanyard-one-end-25mm-attachment{
   position: absolute;
@@ -603,7 +716,21 @@
 
 
 
+.top_left_clip-one-end-30mm-attachment {
+position: absolute;
+bottom: 100%;
+height: 0.6cm;
+width: 0.55cm;
+left: 6.2%;
+}
 
+.top_right_clip-one-end-30mm-attachment {
+position: absolute;
+bottom: 100%;
+height: 0.6cm;
+width: 0.55cm;
+right: 4%;
+}
 .left-super-lanyard-one-end-30mm-attachment{
   position: absolute;
   height: 4.5cm;
