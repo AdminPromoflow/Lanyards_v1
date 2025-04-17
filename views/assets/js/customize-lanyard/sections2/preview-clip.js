@@ -22,10 +22,10 @@ class PreviewClip {
     this.updateClipImagesSrc();
 
 
-  /*  this.cleanStyle();
+    this.cleanStyle();
 
 
-    if (type === "one-end") {
+  /*  if (type === "one-end") {
       this.applyOneEndStyles(width, clipSelected);
     } else if (type === "two-end") {
       this.applyTwoEndStyles(width, clipSelected);
@@ -108,14 +108,20 @@ class PreviewClip {
   }
 
   cleanStyle() {
-    const clips = [this.centerClip, this.leftClip, this.rightClip];
-    clips.forEach(el => {
-      if (el) {
-        el.removeAttribute("style");
-        el.className = "";
-      }
-    });
+  if (this.centerClip) {
+    this.centerClip.removeAttribute("style");
+    this.centerClip.className = "clip"; // mantiene solo la clase 'clip'
   }
+
+  const sideClips = [this.leftClip, this.rightClip];
+  sideClips.forEach(el => {
+    if (el) {
+      el.removeAttribute("style");
+      el.className = "clips"; // mantiene solo la clase 'clips'
+    }
+  });
+}
+
 }
 
 // Instanciación
