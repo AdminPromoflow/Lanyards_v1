@@ -20,7 +20,7 @@ $clip_js = "../../views/assets/js/customize-lanyard/sections/clip.js";
 
 <link rel="stylesheet" href="<?php echo $clip_css . '?v=' . clip_filemtime($clip_css); ?>">
 
-<section class="clip section">
+<section class="clip_section section">
   <h2 class="name-section-customize-lanyard">Clips</h2>
   <br>
   <p>Select one clip</p>
