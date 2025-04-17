@@ -12,9 +12,8 @@
   left: 50%;
   top: 0px;
   transform: translateX(-50%);
-  background: black;
-  height: 20%;
-  width: 10%;
+  height: 40%;
+  width: 20%;
 }
 .clip_one_ends_10mm img{
   width: 100%;
