@@ -34,10 +34,10 @@ $imgRightMtime = getPreviewTemplateFilemtime($imgRightPath);
 
     <!-- Standard lanyard preview layout -->
     <div class="super-lanyard" id="super-lanyard">
-      <div class="top_left_clip top_left_clip-one-end-30mm">
+      <div class="top_left_clip top_left_clip-one-end-30mm" id="top_left_clip">
         <img src="<?php echo $imgLeftPath . '?v=' . $imgLeftMtime; ?>" alt="">
       </div>
-      <div class="top_right_clip top_right_clip-one-end-30mm">
+      <div class="top_right_clip top_right_clip-one-end-30mm" id="top_right_clip">
         <img src="<?php echo $imgRightPath . '?v=' . $imgRightMtime; ?>" alt="">
       </div>
 
