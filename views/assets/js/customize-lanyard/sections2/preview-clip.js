@@ -17,7 +17,6 @@ class PreviewClip {
   showPreviewSelectedClip() {
     const type = oneTwoEndsClass.getTypeLanyardSelected();
     const width = widthClass.getWidthSelected();
-    const clipSelected = clipClass.getClipSelected();
 
     this.updateClipImagesSrc();
 
@@ -26,14 +25,16 @@ class PreviewClip {
 
 
     if (type === "one-end") {
-      this.applyOneEndStyles(width, clipSelected);
+      this.applyOneEndStyles(width);
     } else if (type === "two-end") {
-      this.applyTwoEndStyles(width, clipSelected);
+      this.applyTwoEndStyles(width);
     }
   }
 
   updateClipImagesSrc() {
-    const newSrc = "../../views/assets/img/global/customize-lanyard/sections2/clips/one-end/5.png";
+    const clipSelected = clipClass.getClipSelected();
+
+    const newSrc = "../../views/assets/img/global/customize-lanyard/sections2/clips/one-end/"+clipSelected+".png";
 
     this.centerClip.querySelector("img").src = newSrc;
     this.leftClip.querySelector("img").src = newSrc;
@@ -43,7 +44,7 @@ class PreviewClip {
 
 
 
-  applyOneEndStyles(width, clipSelected) {
+  applyOneEndStyles(width) {
     if (!this.centerClip) return;
 
     this.leftClip.style.display = "none";
@@ -74,7 +75,7 @@ class PreviewClip {
     }
   }
 
-  applyTwoEndStyles(width, clipSelected) {
+  applyTwoEndStyles(width) {
     if (!this.leftClip || !this.rightClip) return;
 
     this.leftClip.style.display = "block";
