@@ -49,8 +49,16 @@
 }
 .clips img{
   height: 100%;
+  width: 100%;
+
 }
-.clip_two_ends_10mm:nth-child(1){
+.clip_two_ends_10mm_left{
+  height: 40%;
   width: 15%;
   left: 5%;
+}
+.clip_two_ends_10mm_right{
+  height: 40%;
+  width: 15%;
+  right: 5%;
 }
