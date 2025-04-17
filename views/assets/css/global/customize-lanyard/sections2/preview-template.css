@@ -44,15 +44,13 @@
         position: absolute;
         bottom: 90%;
         height: 0.3cm;
-        left: 50%;
-        transform: translateX(-50%);
+        left: 35%;
       }
       .top_right_clip-one-end-10mm{
         position: absolute;
         bottom: 90%;
         height: 0.3cm;
-        left: 50%;
-        transform: translateX(-50%);
+        right:  35%;
       }
       /* 10mm */
       .left-super-lanyard-one-end-10mm{
