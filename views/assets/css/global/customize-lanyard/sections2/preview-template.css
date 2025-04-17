@@ -35,8 +35,8 @@
         left: 29%;
         height: 7.2cm;
         width: 0.16cm;
-
-        background-color: orange;
+        border: 1px solid black;
+        background-color: white;
         transform:  skewX(7.5deg) perspective(7.5vw) ;
       }
       .right-super-lanyard-one-end-10mm {
@@ -45,8 +45,8 @@
         right: 29%;
         height: 7.2cm;
         width: 0.16cm;
-
-        background-color: orange;
+        border: 1px solid black;
+        background-color: white;
         transform:  skewX(-7.5deg) perspective(7.5vw);
       }
 
@@ -57,7 +57,8 @@
         left: 27.5%;
         height: 7.2cm;
         width: 0.24cm;
-        background-color: orange;
+        border: 1px solid black;
+        background-color: white;
         transform:  skewX(7.5deg) perspective(7.5vw) ;
       }
 
@@ -67,7 +68,8 @@
         right: 27.5%;
         height: 7.2cm;
         width: 0.24cm;
-        background-color: orange;
+        border: 1px solid black;
+        background-color: white;
         transform:  skewX(-7.5deg) perspective(7.5vw) ;
       }
 
@@ -83,7 +85,8 @@
         left: 26.0%;
         height: 7.2cm;
         width: 0.32cm;
-        background-color: orange;
+        border: 1px solid black;
+        background-color: white;
         transform:  skewX(7.5deg) perspective(7.5vw) ;
       }
 
@@ -93,7 +96,8 @@
         right: 26.0%;
         height: 7.2cm;
         width: 0.32cm;
-        background-color: orange;
+        border: 1px solid black;
+        background-color: white;
         transform:  skewX(-7.5deg) perspective(7.5vw) ;
       }
 
@@ -109,7 +113,8 @@
         left: 24.5%;
         height: 7.2cm;
         width: 0.4cm;
-        background-color: orange;
+        border: 1px solid black;
+        background-color: white;
         transform:  skewX(7.5deg) perspective(7.5vw) ;
       }
 
@@ -119,7 +124,8 @@
         right: 24.5%;
         height: 7.2cm;
         width: 0.4cm;
-        background-color: orange;
+        border: 1px solid black;
+        background-color: white;
         transform:  skewX(-7.5deg) perspective(7.5vw) ;
       }
 
@@ -140,7 +146,8 @@
   left: 23.3%;
   height: 7.2cm;
   width: 0.48cm;
-  background-color: orange;
+  border: 1px solid black;
+  background-color: white;
   transform:  skewX(7.5deg) perspective(7.5vw) ;
 }
 
@@ -150,7 +157,8 @@
   right: 23.3%;
   height: 7.2cm;
   width: 0.48cm;
-  background-color: orange;
+  border: 1px solid black;
+  background-color: white;
   transform:  skewX(-7.5deg) perspective(7.5vw) ;
 }
 
@@ -175,7 +183,8 @@
   left: 10%;
   height: 7.2cm;
   width: 0.16cm;
-  background-color: orange;
+  border: 1px solid black;
+  background-color: white;
 
 }
 
@@ -185,7 +194,8 @@
   right: 10%;
   height: 7.2cm;
   width: 0.16cm;
-  background-color: orange;
+  border: 1px solid black;
+  background-color: white;
 
 }
 
@@ -198,7 +208,8 @@
   left: 10%;
   height: 7.2cm;
   width: 0.24cm;
-  background-color: orange;
+  border: 1px solid black;
+  background-color: white;
 
 }
 
@@ -208,7 +219,8 @@
   right: 10%;
   height: 7.2cm;
   width: 0.24cm;
-  background-color: orange;
+  border: 1px solid black;
+  background-color: white;
 
 }
 
@@ -224,7 +236,8 @@
   left: 10%;
   height: 7.2cm;
   width: 0.32cm;
-  background-color: orange;
+  border: 1px solid black;
+  background-color: white;
 
 }
 
@@ -234,7 +247,8 @@
   right: 10%;
   height: 7.2cm;
   width: 0.32cm;
-  background-color: orange;
+  border: 1px solid black;
+  background-color: white;
 
 }
 
@@ -250,7 +264,8 @@
   left: 10%;
   height: 7.2cm;
   width: 0.4cm;
-  background-color: orange;
+  border: 1px solid black;
+  background-color: white;
 
 }
 
@@ -260,7 +275,8 @@
   right: 10%;
   height: 7.2cm;
   width: 0.4cm;
-  background-color: orange;
+  border: 1px solid black;
+  background-color: white;
 
 }
 
@@ -276,7 +292,8 @@
   left: 10%;
   height: 7.2cm;
   width: 0.48cm;
-  background-color: orange;
+  border: 1px solid black;
+  background-color: white;
 
 }
 
@@ -286,7 +303,8 @@
   right: 10%;
   height: 7.2cm;
   width: 0.48cm;
-  background-color: orange;
+  border: 1px solid black;
+  background-color: white;
 
 }
 
@@ -303,7 +321,7 @@
   width: 0.16cm;
   top: 0%;
   left: 29%;
-  background-color: orange;
+  background-color: white;
   border: 1px solid black;
   transform:  skewX(11.3deg) perspective(11.3vw);
   z-index: 0;
@@ -314,7 +332,7 @@
   width: 0.16cm;
   top: 0%;
   right: 29%;
-  background-color: orange;
+  background-color: white;
   border: 1px solid black;
   transform:  skewX(-11.3deg) perspective(11.3vw);
   z-index: 0;
@@ -326,7 +344,7 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  background-color: orange;
+  background-color: white;
   border: 1px solid black;
   z-index: 0;
   overflow: hidden;
@@ -346,7 +364,7 @@
   width: 0.24cm;
   top: 0%;
   left: 27.5%;
-  background-color: orange;
+  background-color: white;
   border: 1px solid black;
   transform:  skewX(11.3deg) perspective(11.3vw);
   z-index: 0;
@@ -357,7 +375,7 @@
   width: 0.24cm;
   top: 0%;
   right: 27.5%;
-  background-color: orange;
+  background-color: white;
   border: 1px solid black;
   transform:  skewX(-11.3deg) perspective(11.3vw);
   z-index: 0;
@@ -369,7 +387,7 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  background-color: orange;
+  background-color: white;
   border: 1px solid black;
   z-index: 0;
   overflow: hidden;
@@ -393,7 +411,7 @@
   width: 0.32cm;
   top: 0%;
   left: 26%;
-  background-color: orange;
+  background-color: white;
   border: 1px solid black;
   transform:  skewX(11.3deg) perspective(11.3vw);
   z-index: 0;
@@ -404,7 +422,7 @@
   width: 0.32cm;
   top: 0%;
   right: 26%;
-  background-color: orange;
+  background-color: white;
   border: 1px solid black;
   transform:  skewX(-11.3deg) perspective(11.3vw);
   z-index: 0;
@@ -416,7 +434,7 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  background-color: orange;
+  background-color: white;
   border: 1px solid black;
   z-index: 0;
   overflow: hidden;
@@ -442,7 +460,7 @@
   width: 0.4cm;
   top: 0%;
   left: 24.5%;
-  background-color: orange;
+  background-color: white;
   border: 1px solid black;
   transform:  skewX(11.3deg) perspective(11.3vw);
   z-index: 0;
@@ -453,7 +471,7 @@
   width: 0.4cm;
   top: 0%;
   right: 24.5%;
-  background-color: orange;
+  background-color: white;
   border: 1px solid black;
   transform:  skewX(-11.3deg) perspective(11.3vw);
   z-index: 0;
@@ -465,7 +483,7 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  background-color: orange;
+  background-color: white;
   border: 1px solid black;
   z-index: 0;
   overflow: hidden;
@@ -489,7 +507,7 @@
   width: 0.48cm;
   top: 0%;
   left: 23%;
-  background-color: orange;
+  background-color: white;
   border: 1px solid black;
   transform:  skewX(11.3deg) perspective(11.3vw);
   z-index: 0;
@@ -500,7 +518,7 @@
   width: 0.48cm;
   top: 0%;
   right: 23%;
-  background-color: orange;
+  background-color: white;
   border: 1px solid black;
   transform:  skewX(-11.3deg) perspective(11.3vw);
   z-index: 0;
@@ -512,7 +530,7 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  background-color: orange;
+  background-color: white;
   border: 1px solid black;
   z-index: 0;
   overflow: hidden;
