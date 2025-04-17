@@ -8,17 +8,13 @@
   background-color: rgba(0, 255, 0, .3);
 }
 .clip{
+  
+}
+.clip_one_ends_10mm{
   position: absolute;
   left: 50%;
   top: 0px;
   transform: translateX(-50%);
-  
-}
-.clip_one_end_10mm{
   height: 40%;
   width: 15%;
-}
-.clip_one_ends_20mm{
-  height: 40%;
-  width: 18%;
 }
