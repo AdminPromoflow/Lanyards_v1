@@ -131,3 +131,13 @@
   width: 150px;
   background-color: gold;
 }
+
+.attachment-one-end{
+  background: green;
+}
+.attachment-two-end-left{
+  background: orange;
+}
+.attachment-two-end-right{
+  background: brown;
+}

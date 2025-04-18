@@ -1,6 +1,14 @@
 class AttachmentPreviewClass {
   constructor() {
     this.previewAttachmentClass = document.getElementById("preview-attachment-class");
+
+
+    this.containerAttachmentOneEnd = document.getElementById("container-attachment-one-end");
+    this.containerAttachmentTwoEnd = document.getElementById("container-attachment-two-end");
+
+
+
+
   }
 
   showSelectedPreviewTemplate() {
@@ -46,9 +54,46 @@ class AttachmentPreviewClass {
         break;
     }
   }
+
+
+
+
+
   togglePreviewAttachmentClass(action){
     this.previewAttachmentClass.style.display = action;
+    this.activateTemplate();
   }
+
+  activateTemplate() {
+    const type = oneTwoEndsClass.getTypeLanyardSelected(); // Get the selected lanyard type
+    const width = widthClass.getWidthSelected(); // Get the selected width
+    const attachment = attachmentClass.getAttachmentSelected(); // Get the selected attachment mode
+
+    this.cleanStyle(); // Clear any existing styles before applying new ones
+
+    // Apply styles based on lanyard type and attachment mode
+    if (type === "one-end") {
+      if (attachment === "none" || attachment === "None") {
+        this.containerAttachmentOneEnd.style.display = "none";
+        this.containerAttachmentTwoEnd.style.display = "none";
+      //  this.applyNoAttachmentStyles(width); // Apply no-attachment styles
+      }
+      else {
+        this.containerAttachmentOneEnd.style.display = "block";
+        this.containerAttachmentTwoEnd.style.display = "none";
+
+        //  this.applyWithAttachmentStyles(width); // Apply with-attachment styles
+
+      }
+    } else if (type === "two-end") {
+      this.containerAttachmentOneEnd.style.display = "block";
+      this.containerAttachmentTwoEnd.style.display = "none";
+      //this.applyTwoEndStyles(width); // Apply two-end styles
+    }
+  }
+
+
+
 }
 
 const attachmentPreviewClass = new AttachmentPreviewClass();
