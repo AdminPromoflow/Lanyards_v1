@@ -160,10 +160,11 @@
 
 .attachment-one-end-10mm{
   position: absolute;
+  top: 30%;
   left: 50%;
   transform: translateX(-50%);
-  height: 1cm;
-  width: 0.75cm;
+  height: 0.5cm;
+  width: 0.2cm;
 }
 
 
