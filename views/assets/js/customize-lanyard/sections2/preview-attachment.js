@@ -58,7 +58,7 @@ class AttachmentPreviewClass {
 
     // Validar si no es "none" (en cualquier formato)
     if (attachmentSelected.toLowerCase() !== "none") {
-      const newSrc = "../../views/assets/img/global/customize-lanyard/sections2/preview-attachment/${attachmentSelected}.png";
+      const newSrc = "../../views/assets/img/global/customize-lanyard/sections2/preview-attachment/"+attachmentSelected+".png";
       alert(newSrc);
 
       this.attachmentOneEnd.querySelector("img").src = newSrc;
