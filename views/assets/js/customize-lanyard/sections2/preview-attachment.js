@@ -40,24 +40,30 @@ class AttachmentPreviewClass {
   }
 
   updateClipImagesSrc() {
-    var attachmentSelected = attachmentClass.getAttachmentSelected();
-    if (attachmentSelected == "Plastic colour") {
-      attachmentSelected = "Plastic_colour";
+    let attachmentSelected = attachmentClass.getAttachmentSelected().trim();
+
+    // Normalizar casos específicos
+    switch (attachmentSelected.toLowerCase()) {
+      case "plastic colour":
+        attachmentSelected = "Plastic_colour";
+        break;
+      case "black":
+        attachmentSelected = "Black";
+        break;
+      // Puedes agregar más casos personalizados aquí si lo necesitas
     }
-    else if (attachmentSelected == "Black") {
-      attachmentSelected = "Black";
 
-    }
-
-    const newSrc = "../../views/assets/img/global/customize-lanyard/sections2/preview-attachment/" + attachmentSelected + ".png";
-
-    if (attachmentSelected != "none" && attachmentSelected != "None") {
+    // Validar si no es "none" (en cualquier formato)
+    if (attachmentSelected.toLowerCase() !== "none") {
+      const newSrc = `../../views/assets/img/global/customize-lanyard/sections2/preview-attachment/${attachmentSelected}.png`;
       alert(newSrc);
+
       this.attachmentOneEnd.querySelector("img").src = newSrc;
       this.attachmentTwoEndLeft.querySelector("img").src = newSrc;
       this.attachmentTwoEndRight.querySelector("img").src = newSrc;
     }
   }
+
 
   cleanStyle() {
     const elementsToClean = [
