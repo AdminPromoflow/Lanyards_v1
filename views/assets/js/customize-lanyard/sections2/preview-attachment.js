@@ -48,7 +48,7 @@ class AttachmentPreviewClass {
   updateClipImagesSrc() {
     const attachmentSelected = attachmentClass.getAttachmentSelected();
     const newSrc = "../../views/assets/img/global/customize-lanyard/sections2/preview-attachment/" + attachmentSelected + ".png";
-
+    alert(attachmentSelected);
     this.attachmentOneEnd.querySelector("img").src = newSrc;
     this.attachmentTwoEndLeft.querySelector("img").src = newSrc;
     this.attachmentTwoEndRight.querySelector("img").src = newSrc;
