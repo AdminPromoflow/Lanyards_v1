@@ -309,7 +309,7 @@
 }
 .top_right_clip-two-end-15mm{
   position: absolute;
-  bottom: 100/8%;
+  bottom: 100.8%;
   height: 0.35cm;
   width: 0.31cm;
   right:  9.0%;
@@ -345,17 +345,17 @@
 
 .top_left_clip-two-end-20mm{
   position: absolute;
-  bottom: 100.0%;
+  bottom: 99.7%;
   height: 0.43cm;
   width: 0.4cm;
-  left: 9.4%;
+  left: 9.8%;
 }
 .top_right_clip-two-end-20mm{
   position: absolute;
-  bottom: 100.0%;
+  bottom: 99.7%;
   height: 0.43cm;
   width: 0.4cm;
-  right: 7.9%;
+  right: 8.3%;
 }
 .left-super-lanyard-two-end-20mm {
   position: absolute;
@@ -391,14 +391,14 @@
   bottom: 99.3%;
   height: 0.5cm;
   width: 0.47cm;
-  left: 8.8%;
+  left: 9.4%;
 }
 .top_right_clip-two-end-25mm{
   position: absolute;
   bottom: 99.3%;
   height: 0.5cm;
   width: 0.47cm;
-  right: 7.3%;
+  right: 7.9%;
 }
 .left-super-lanyard-two-end-25mm {
   position: absolute;
