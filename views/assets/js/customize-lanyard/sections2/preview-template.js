@@ -21,9 +21,9 @@ class PreviewTemplate {
     if (action == "block") {
       this.activateTemplate();
     }
-    
+
     previewClip.togglePreviewClipClass(action);
-    previewAttachment.togglePreviewAttachmentClass(action);
+    attachmentPreviewClass.togglePreviewAttachmentClass(action);
 
   }
 
