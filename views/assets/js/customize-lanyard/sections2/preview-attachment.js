@@ -89,19 +89,19 @@ class AttachmentPreviewClass {
   applyStyles(width) {
     switch (width) {
       case "10mm":
-        this.applyClassToGroup("attachment-one-end-10mm", "", "");
+        this.applyClassToGroup("attachment-one-end-10mm", "attachment-two-end-10mm-left", "attachment-two-end-10mm-right");
         break;
       case "15mm":
-        this.applyClassToGroup("attachment-one-end-15mm", "", "");
+        this.applyClassToGroup("attachment-one-end-15mm", "attachment-two-end-15mm-left", "attachment-two-end-15mm-right");
         break;
       case "20mm":
-        this.applyClassToGroup("attachment-one-end-20mm", "", "");
+        this.applyClassToGroup("attachment-one-end-20mm", "attachment-two-end-20mm-left", "attachment-two-end-20mm-right");
         break;
       case "25mm":
-        this.applyClassToGroup("attachment-one-end-25mm", "", "");
+        this.applyClassToGroup("attachment-one-end-25mm", "attachment-two-end-25mm-left", "attachment-two-end-25mm-right");
         break;
       case "30mm":
-        this.applyClassToGroup("attachment-one-end-30mm", "", "");
+        this.applyClassToGroup("attachment-one-end-30mm", "attachment-two-end-30mm-left", "attachment-two-end-30mm-right");
         break;
       default:
         console.warn("Unrecognised width in 'one-end' mode:", width);

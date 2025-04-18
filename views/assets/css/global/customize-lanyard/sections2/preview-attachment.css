@@ -205,4 +205,87 @@
   height: 0.85cm;
   width: 0.48cm;
 }
+
+
+
+
+
+
+
+
+
+
+.attachment-two-end-10mm-left {
+  position: absolute;
+  height: 0.7cm;
+  width: 0.3cm;
+  left: 5%;
+}
+.attachment-two-end-10mm-right {
+  position: absolute;
+  height: 0.7cm;
+  width: 0.3cm;
+  right: 5%;
+}
+
+.attachment-two-end-15mm-left {
+  position: absolute;
+  height: 0.74cm;
+  width: 0.32cm;
+  left: 5%;
+
+}
+.attachment-two-end-15mm-right {
+  position: absolute;
+  height: 0.74cm;
+  width: 0.32cm;
+  right: 5%;
+
+}
+
+.attachment-two-end-20mm-left {
+  position: absolute;
+  height: 0.78cm;
+  width: 0.38cm;
+  left: 5%;
+
+}
+.attachment-two-end-20mm-right {
+  position: absolute;
+  height: 0.78cm;
+  width: 0.38cm;
+  right: 5%;
+
+}
+
+.attachment-two-end-25mm-left {
+  position: absolute;
+  height: 0.82cm;
+  width: 0.44cm;
+  left: 5%;
+
+}
+.attachment-two-end-25mm-right {
+  position: absolute;
+  height: 0.82cm;
+  width: 0.44cm;
+  right: 5%;
+
+}
+
+.attachment-two-end-30mm-left {
+  position: absolute;
+  height: 0.85cm;
+  width: 0.48cm;
+  left: 5%;
+
+}
+.attachment-two-end-30mm-right {
+  position: absolute;
+  height: 0.85cm;
+  width: 0.48cm;
+  right: 5%;
+
+}
+
 /**/
