@@ -12,10 +12,10 @@
     </div>
   </div>
   <div class="container-attachment-two-end" id="container-attachment-two-end">
-    <div id="attachment-two-end-left" class="">
+    <div id="attachment-two-end" class="">
       <img src="../../views/assets/img/global/customize-lanyard/sections2/preview-attachment/quick-release-black.png" alt="">
     </div>
-    <div id="attachment-two-end-right" class="">
+    <div id="attachment-two-end" class="">
       <img src="../../views/assets/img/global/customize-lanyard/sections2/preview-attachment/quick-release-black.png" alt="">
     </div>
   </div>
