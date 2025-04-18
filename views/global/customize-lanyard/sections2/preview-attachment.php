@@ -20,7 +20,6 @@
       <img src="../../views/assets/img/global/customize-lanyard/sections2/preview-attachment/quick-release-black.png" alt="">
     </div>
     <h1>two end</h1>
-
   </div>
 </section>
 

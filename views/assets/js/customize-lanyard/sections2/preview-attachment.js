@@ -74,17 +74,18 @@ class AttachmentPreviewClass {
     // Apply styles based on lanyard type and attachment mode
 
     if (attachment == "none" || attachment == "None") {
-      alert("No hay ningun attachment seleccionado");
-      //this.containerAttachmentOneEnd.style.display = "none";
-      //this.containerAttachmentTwoEnd.style.display = "none";
+      this.containerAttachmentOneEnd.style.display = "none";
+      this.containerAttachmentTwoEnd.style.display = "none";
     }
     else {
       if (type === "one-end") {
-        alert("He seleccionado un attachment con one end");
+        this.containerAttachmentOneEnd.style.display = "block";
+        this.containerAttachmentTwoEnd.style.display = "none";
 
       }
       else if (type === "two-end") {
-        alert("He seleccionado un attachment con two end");
+        this.containerAttachmentOneEnd.style.display = "none";
+        this.containerAttachmentTwoEnd.style.display = "block";
 
       }
     }
