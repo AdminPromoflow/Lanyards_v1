@@ -83,11 +83,10 @@ class AttachmentPreviewClass {
         this.containerAttachmentTwoEnd.style.display = "none";
 
         //  this.applyWithAttachmentStyles(width); // Apply with-attachment styles
-
       }
     } else if (type === "two-end") {
-      this.containerAttachmentOneEnd.style.display = "block";
-      this.containerAttachmentTwoEnd.style.display = "none";
+      this.containerAttachmentOneEnd.style.display = "none";
+      this.containerAttachmentTwoEnd.style.display = "block";
       //this.applyTwoEndStyles(width); // Apply two-end styles
     }
   }

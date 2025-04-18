@@ -6,18 +6,21 @@
 <link rel="stylesheet" href="<?= $preview_attachment_css ?>?<?= filemtime($preview_attachment_css) ?>">
 
 <section id="preview-attachment-class" class="preview-attachment-class">
-  <div id="container-attachment-one-end">
+  <div class="container-attachment-one-end" id="container-attachment-one-end">
     <div class="attachment-one-end">
       <img src="../../views/assets/img/global/customize-lanyard/sections2/preview-attachment/quick-release-black.png" alt="">
     </div>
+    <h1>one end</h1>
   </div>
-  <div id="container-attachment-two-end">
+  <div class="container-attachment-two-end" id="container-attachment-two-end">
     <div class="attachment-two-end-left">
       <img src="../../views/assets/img/global/customize-lanyard/sections2/preview-attachment/quick-release-black.png" alt="">
     </div>
     <div class="attachment-two-end-right">
       <img src="../../views/assets/img/global/customize-lanyard/sections2/preview-attachment/quick-release-black.png" alt="">
     </div>
+    <h1>two end</h1>
+
   </div>
 </section>
 

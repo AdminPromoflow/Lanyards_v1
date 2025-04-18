@@ -132,12 +132,10 @@
   background-color: gold;
 }
 
-.attachment-one-end{
-  background: green;
-}
-.attachment-two-end-left{
+
+.container-attachment-one-end{
   background: orange;
 }
-.attachment-two-end-right{
+.container-attachment-two-end{
   background: brown;
 }
