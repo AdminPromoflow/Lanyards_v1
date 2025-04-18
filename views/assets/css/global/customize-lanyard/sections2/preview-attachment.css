@@ -140,3 +140,29 @@
 .container-attachment-two-end{
   background: brown;
 }
+
+
+
+.attachment-one-end img{
+  height: 100%;
+  width: 100%;
+}
+.attachment-two-end-left img{
+  height: 100%;
+  width: 100%;
+}
+.attachment-two-end-right img{
+  height: 100%;
+  width: 100%;
+}
+
+
+
+.attachment-one-end-10mm{
+  height: 2cm;
+  width: 1.5cm;
+}
+
+
+
+/**/

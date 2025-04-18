@@ -7,16 +7,17 @@
 
 <section id="preview-attachment-class" class="preview-attachment-class">
   <div class="container-attachment-one-end" id="container-attachment-one-end">
-    <div class="attachment-one-end">
+    <div id="attachment-one-end" class="attachment-one-end-10mm">
+      <img src="../../views/assets/img/global/customize-lanyard/sections2/preview-attachment/quick-release-black.png" alt="">
     </div>
-    <h1>one end</h1>
   </div>
   <div class="container-attachment-two-end" id="container-attachment-two-end">
-    <div class="attachment-two-end-left">
+    <div id="attachment-two-end-left" class="">
+      <img src="../../views/assets/img/global/customize-lanyard/sections2/preview-attachment/quick-release-black.png" alt="">
     </div>
-    <div class="attachment-two-end-right">
+    <div id="attachment-two-end-right" class="">
+      <img src="../../views/assets/img/global/customize-lanyard/sections2/preview-attachment/quick-release-black.png" alt="">
     </div>
-    <h1>two end</h1>
   </div>
 </section>
 
