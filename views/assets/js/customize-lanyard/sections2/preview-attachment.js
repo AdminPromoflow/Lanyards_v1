@@ -69,7 +69,7 @@ class AttachmentPreviewClass {
     const width = widthClass.getWidthSelected(); // Get the selected width
     const attachment = attachmentClass.getAttachmentSelected(); // Get the selected attachment mode
 
-    this.cleanStyle(); // Clear any existing styles before applying new ones
+  //  this.cleanStyle(); // Clear any existing styles before applying new ones
 
     // Apply styles based on lanyard type and attachment mode
     if (type === "one-end") {
