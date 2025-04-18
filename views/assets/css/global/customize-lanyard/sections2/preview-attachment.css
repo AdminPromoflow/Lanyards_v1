@@ -284,7 +284,7 @@
   width: 0.44cm;
   top: 28%;
 
-  left: calc(3% + 0.032cm);
+  left: calc(23% + 0.032cm);
   z-index: 2;
 
 }
@@ -305,7 +305,7 @@
   height: 0.85cm;
   width: 0.48cm;
   top: 28%;
-  left: calc(3% + 0.032cm);
+  left: calc(23% + 0.032cm);
   z-index: 2;
 
 }
