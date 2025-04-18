@@ -47,8 +47,10 @@ class AttachmentPreviewClass {
   }
   updateClipImagesSrc() {
     const attachmentSelected = attachmentClass.getAttachmentSelected();
-    const newSrc = "../../views/assets/img/global/customize-lanyard/sections2/preview-attachment/" + attachmentSelected.replace(/\s+/g, "_") + ".png";
-    //alert(attachmentSelected);
+    if (attachmentSelected == "Plastic colour") {
+        attachmentSelected = "Plastic_colour";
+    }
+    const newSrc = "../../views/assets/img/global/customize-lanyard/sections2/preview-attachment/" + attachmentSelected + ".png";
 
     if (attachmentSelected != "none" && attachmentSelected != "None") {
       this.attachmentOneEnd.querySelector("img").src = newSrc;
