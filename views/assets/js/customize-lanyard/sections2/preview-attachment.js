@@ -63,8 +63,8 @@ class AttachmentPreviewClass {
 
     elementsToClean.forEach(element => {
       if (element) {
-        //element.removeAttribute("style");
-      //  element.className = "";
+        element.removeAttribute("style");
+        element.className = "";
       }
     });
   }
@@ -94,15 +94,14 @@ class AttachmentPreviewClass {
   }
 
   applyClassToGroup(attachmentOneEnd = "", attachmentTwoEndLeft = "", attachmentTwoEndRight = "") {
-    const el = [
-      this.attachmentOneEnd,
-      this.attachmentTwoEndLeft,
-      this.attachmentTwoEndRight
-    ];
 
-    if (attachmentOneEnd) el[0].classList.add(attachmentOneEnd);
-    if (attachmentTwoEndLeft) el[1].classList.add(attachmentTwoEndLeft);
-    if (attachmentTwoEndRight) el[2].classList.add(attachmentTwoEndRight);
+
+    this.attachmentOneEnd.classList.add(attachmentOneEnd);
+    this.attachmentTwoEndLeft.classList.add(attachmentTwoEndLeft);
+    this.attachmentTwoEndRight.classList.add(attachmentTwoEndRight);
+
+
+
   }
 }
 
