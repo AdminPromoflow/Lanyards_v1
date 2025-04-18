@@ -6,8 +6,8 @@ class AttachmentPreviewClass {
     this.containerAttachmentTwoEnd = document.getElementById("container-attachment-two-end");
 
     this.attachmentOneEnd = document.getElementById("attachment-one-end");
-    this.attachmentTwoEndLeft = document.getElementById("attachment-two-end-left");
-    this.attachmentTwoEndRight = document.getElementById("attachment-two-end-right");
+    this.attachmentTwoEndLeft = document.getElementById("attachment-two-end");
+    this.attachmentTwoEndRight = document.getElementById("attachment-two-end");
   }
 
   togglePreviewAttachmentClass(action) {
