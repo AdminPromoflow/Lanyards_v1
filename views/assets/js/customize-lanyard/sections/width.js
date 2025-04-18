@@ -204,6 +204,8 @@ class Width {
 
     previewLanyardType.showSelectedPreviewTemplate();
     previewTemplate.activateTemplate();
+    attachmentClass.refreshAttachment();
+  
 
 
     material.refreshMaterial();
