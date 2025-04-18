@@ -63,8 +63,8 @@ class AttachmentPreviewClass {
 
     elementsToClean.forEach(element => {
       if (element) {
-        element.removeAttribute("style");
-        element.className = "";
+        //element.removeAttribute("style");
+      //  element.className = "";
       }
     });
   }
