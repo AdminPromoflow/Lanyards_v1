@@ -5,7 +5,7 @@
 
 <link rel="stylesheet" href="<?= $preview_attachment_css ?>?<?= filemtime($preview_attachment_css) ?>">
 
-<section>
+<section id="preview-attachment-class" class="preview-attachment-class">
 
 </section>
 

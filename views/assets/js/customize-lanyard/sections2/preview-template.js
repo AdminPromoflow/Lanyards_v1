@@ -21,7 +21,10 @@ class PreviewTemplate {
     if (action == "block") {
       this.activateTemplate();
     }
+    
     previewClip.togglePreviewClipClass(action);
+    previewAttachment.togglePreviewAttachmentClass(action);
+
   }
 
   // Activates the appropriate template based on selected lanyard type, width, and attachment mode
@@ -119,7 +122,6 @@ class PreviewTemplate {
   // Apply styles for the "two-end" case based on width
   applyTwoEndStyles(width) {
 
-
     // Add appropriate classes for both left and right elements based on width
     switch (width) {
       case "10mm":
@@ -140,7 +142,6 @@ class PreviewTemplate {
       default:
         console.warn("Unrecognised width in 'two-end' mode:", width);
     }
-
 
     console.log(`Styles applied: two-end - ${width}`);
   }

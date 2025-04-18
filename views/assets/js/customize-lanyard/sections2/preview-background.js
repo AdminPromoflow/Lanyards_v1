@@ -33,6 +33,16 @@ class PreviewBackgroundClass {
     '</div>'
     ;
   }
+
+
+
+
+
+
+
+
+
+
 }
 const previewBackgroundContainer = document.getElementById("preview-artwork-manual-container");
 const previewBackgroundClass = new PreviewBackgroundClass();

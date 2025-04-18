@@ -1,5 +1,7 @@
 class AttachmentPreviewClass {
-  constructor() {}
+  constructor() {
+    this.previewAttachmentClass = document.getElementById("preview-attachment-class");
+  }
 
   showSelectedPreviewTemplate() {
     const attachmentSelected = attachmentClass.getAttachmentSelected();
@@ -43,6 +45,9 @@ class AttachmentPreviewClass {
         setAttachmentImage("../../views/assets/img/global/customize-lanyard/sections/attachment/quick-release-metal.png");
         break;
     }
+  }
+  togglePreviewAttachmentClass(action){
+    this.previewAttachmentClass.style.display = action;
   }
 }
 
