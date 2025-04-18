@@ -60,7 +60,7 @@ class AttachmentPreviewClass {
 
 
   togglePreviewAttachmentClass(action){
-    this.previewAttachmentClass.style.display = action;
+    //this.previewAttachmentClass.style.display = action;
     this.activateTemplate();
   }
 
