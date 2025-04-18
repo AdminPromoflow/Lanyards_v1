@@ -219,19 +219,26 @@
   position: absolute;
   height: 0.7cm;
   width: 0.3cm;
-  left: 5%;
+  top: 28%;
+
+  left: 25%;
+
 }
 .attachment-two-end-10mm-right {
   position: absolute;
   height: 0.7cm;
   width: 0.3cm;
-  right: 5%;
+  top: 28%;
+
+  right: 25%;
 }
 
 .attachment-two-end-15mm-left {
   position: absolute;
   height: 0.74cm;
   width: 0.32cm;
+  top: 28%;
+
   left: 5%;
 
 }
@@ -239,6 +246,8 @@
   position: absolute;
   height: 0.74cm;
   width: 0.32cm;
+  top: 28%;
+
   right: 5%;
 
 }
@@ -247,6 +256,8 @@
   position: absolute;
   height: 0.78cm;
   width: 0.38cm;
+  top: 28%;
+
   left: 5%;
 
 }
@@ -254,6 +265,8 @@
   position: absolute;
   height: 0.78cm;
   width: 0.38cm;
+  top: 28%;
+
   right: 5%;
 
 }
@@ -262,6 +275,8 @@
   position: absolute;
   height: 0.82cm;
   width: 0.44cm;
+  top: 28%;
+
   left: 5%;
 
 }
@@ -269,6 +284,8 @@
   position: absolute;
   height: 0.82cm;
   width: 0.44cm;
+  top: 28%;
+
   right: 5%;
 
 }
@@ -277,6 +294,8 @@
   position: absolute;
   height: 0.85cm;
   width: 0.48cm;
+  top: 28%;
+
   left: 5%;
 
 }
@@ -284,6 +303,8 @@
   position: absolute;
   height: 0.85cm;
   width: 0.48cm;
+  top: 28%;
+
   right: 5%;
 
 }
