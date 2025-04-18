@@ -185,4 +185,14 @@
   height: 0.78cm;
   width: 0.38cm;
 }
+
+
+.attachment-one-end-25mm{
+  position: absolute;
+  top: 28%;
+  left: 50%;
+  transform: translateX(-43%);
+  height: 0.82cm;
+  width: 0.44cm;
+}
 /**/
