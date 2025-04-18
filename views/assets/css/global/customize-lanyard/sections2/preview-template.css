@@ -163,18 +163,17 @@
       /* 25mm */
       .top_left_clip-one-end-25mm {
         position: absolute;
-        bottom: 99.6%;
+        bottom: 99.1%;
         height: 0.5cm;
         width: 0.47cm;
-        left: 7.9%;
+        left: 7.4%;
       }
 
       .top_right_clip-one-end-25mm {
         position: absolute;
-        bottom: 100.0%;
-        bottom: 99.6%;
+        bottom: 99.1%;
         width: 0.47cm;
-        right: 6.4%;
+        right: 5.9%;
       }
       .left-super-lanyard-one-end-25mm {
         position: absolute;
