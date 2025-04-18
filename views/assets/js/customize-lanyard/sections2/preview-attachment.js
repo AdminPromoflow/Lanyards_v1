@@ -44,6 +44,10 @@ class AttachmentPreviewClass {
     if (attachmentSelected == "Plastic colour") {
       attachmentSelected = "Plastic_colour";
     }
+    else if (attachmentSelected == "Black") {
+      attachmentSelected = "Black";
+
+    }
 
     const newSrc = "../../views/assets/img/global/customize-lanyard/sections2/preview-attachment/" + attachmentSelected + ".png";
 
