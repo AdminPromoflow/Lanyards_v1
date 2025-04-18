@@ -73,7 +73,7 @@ class AttachmentPreviewClass {
 
     // Apply styles based on lanyard type and attachment mode
 
-    if (attachment == "none" || attachment = "None") {
+    if (attachment == "none" || attachment == "None") {
       alert("No hay ningun attachment seleccionado");
       //this.containerAttachmentOneEnd.style.display = "none";
       //this.containerAttachmentTwoEnd.style.display = "none";
