@@ -8,7 +8,7 @@
 <section id="preview-attachment-class" class="preview-attachment-class">
   <div class="container-attachment-one-end" id="container-attachment-one-end">
     <div id="attachment-one-end" class="attachment-one-end-30mm">
-      <img class="" src="../../views/assets/img/global/customize-lanyard/sections2/preview-attachment/quick-release-black.png" alt="">
+      <img id="attachment-one-end-img" src="../../views/assets/img/global/customize-lanyard/sections2/preview-attachment/quick-release-black.png" alt="">
     </div>
   </div>
   <div class="container-attachment-two-end" id="container-attachment-two-end">
