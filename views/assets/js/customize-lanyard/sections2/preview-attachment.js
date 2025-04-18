@@ -52,7 +52,6 @@ class AttachmentPreviewClass {
     }
     const newSrc = "../../views/assets/img/global/customize-lanyard/sections2/preview-attachment/" + attachmentSelected + ".png";
 
-    alert(newSrc + "  hah   ");
     if (attachmentSelected != "none" && attachmentSelected != "None") {
       this.attachmentOneEnd.querySelector("img").src = newSrc;
       this.attachmentTwoEndLeft.querySelector("img").src = newSrc;
@@ -79,19 +78,19 @@ class AttachmentPreviewClass {
     // Reset all class assignments for this mode
     switch (width) {
       case "10mm":
-        this.applyClassToGroup("", "", "");
+        this.applyClassToGroup("attachment-one-end-10mm", "", "");
         break;
       case "15mm":
-        this.applyClassToGroup("", "", "");
+        this.applyClassToGroup("attachment-one-end-15mm", "", "");
         break;
       case "20mm":
-        this.applyClassToGroup("", "", "");
+        this.applyClassToGroup("attachment-one-end-20mm", "", "");
         break;
       case "25mm":
-        this.applyClassToGroup("", "", "");
+        this.applyClassToGroup("attachment-one-end-25mm", "", "");
         break;
       case "30mm":
-        this.applyClassToGroup("", "", "");
+        this.applyClassToGroup("attachment-one-end-30mm", "", "");
         break;
       default:
         console.warn("Unrecognised width in 'two-end' mode:", width);
