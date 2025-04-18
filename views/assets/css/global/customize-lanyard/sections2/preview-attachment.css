@@ -167,6 +167,13 @@
   width: 0.3cm;
 }
 
-
+.attachment-one-end-15mm{
+  position: absolute;
+  top: 28%;
+  left: 50%;
+  transform: translateX(-45%);
+  height: 0.72cm;
+  width: 0.32cm;
+}
 
 /**/
