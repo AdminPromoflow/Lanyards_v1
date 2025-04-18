@@ -62,8 +62,8 @@ class AttachmentPreviewClass {
       alert(newSrc);
 
       this.attachmentOneEnd.querySelector("img").src = newSrc;
-      this.attachmentTwoEndLeft.querySelector("img").src = newSrc;
-      this.attachmentTwoEndRight.querySelector("img").src = newSrc;
+      //this.attachmentTwoEndLeft.querySelector("img").src = newSrc;
+    //  this.attachmentTwoEndRight.querySelector("img").src = newSrc;
 
     }
   }
