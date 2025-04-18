@@ -15,10 +15,10 @@
   </div>
   <div class="container-attachment-two-end" id="container-attachment-two-end">
     <div id="attachment-two-end-left" class="">
-      <!-- <img class="" src="<?= $img_black ?>?<?= filemtime($img_black) ?>" alt=""> -->
+       <img class="" src="<?= $img_black ?>?<?= filemtime($img_black) ?>" alt="">
     </div>
     <div id="attachment-two-end-right" class="">
-      <!-- <img class="" src="<?= $img_black ?>?<?= filemtime($img_black) ?>" alt=""> -->
+       <img class="" src="<?= $img_black ?>?<?= filemtime($img_black) ?>" alt=""> 
     </div>
   </div>
 </section>
