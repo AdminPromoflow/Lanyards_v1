@@ -28,8 +28,11 @@ class AttachmentPreviewClass {
     } else {
       if (type === "one-end") {
         this.setAttachmentContainersDisplay("block", "none");
+        this.applyStyles(width);
       } else if (type === "two-end") {
         this.setAttachmentContainersDisplay("none", "block");
+        this.applyStyles(width);
+
       }
     }
   }
