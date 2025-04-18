@@ -48,6 +48,7 @@ class AttachmentPreviewClass {
     const newSrc = "../../views/assets/img/global/customize-lanyard/sections2/preview-attachment/" + attachmentSelected + ".png";
 
     if (attachmentSelected != "none" && attachmentSelected != "None") {
+      alert(newSrc);
       this.attachmentOneEnd.querySelector("img").src = newSrc;
       this.attachmentTwoEndLeft.querySelector("img").src = newSrc;
       this.attachmentTwoEndRight.querySelector("img").src = newSrc;
