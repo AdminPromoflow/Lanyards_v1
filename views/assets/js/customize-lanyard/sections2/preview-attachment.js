@@ -74,16 +74,21 @@ class AttachmentPreviewClass {
     // Apply styles based on lanyard type and attachment mode
 
     if (attachment == "none" || attachment == "None") {
+      alert("1");
       this.containerAttachmentOneEnd.style.display = "none";
       this.containerAttachmentTwoEnd.style.display = "none";
     }
     else {
       if (type === "one-end") {
+        alert("2");
+
         this.containerAttachmentOneEnd.style.display = "block";
         this.containerAttachmentTwoEnd.style.display = "none";
 
       }
       else if (type === "two-end") {
+        alert("3");
+
         this.containerAttachmentOneEnd.style.display = "none";
         this.containerAttachmentTwoEnd.style.display = "block";
 

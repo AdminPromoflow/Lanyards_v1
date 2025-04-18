@@ -3,15 +3,18 @@ class AttachmentClass {
     this.attachmentSelected = "none";
   }
   searchDataAttachmentSelected(attachment, index, price){
-    attachmentClass.setAttachmentSelected(attachment);
+    this.setAttachmentSelected(attachment);
+    this.refreshAttachment();
+
+    priceClass.setPriceAttachment(price);
+    priceClass.changePricePerLanyard();
+  }
+
+  refreshAttachment(){
     attachmentClass.showSelectedAttachment();
     attachmentPreviewClass.showSelectedPreviewTemplate();
     previewTemplate.activateTemplate();
     attachmentPreviewClass.activateTemplate();
-
-
-    priceClass.setPriceAttachment(price);
-    priceClass.changePricePerLanyard();
   }
 
   showSelectedAttachment() {
