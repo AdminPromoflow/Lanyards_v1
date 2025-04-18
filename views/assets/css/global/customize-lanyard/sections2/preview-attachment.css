@@ -302,8 +302,8 @@
 
 .attachment-two-end-30mm-left {
   position: absolute;
-  height: 0.86cm;
-  width: 0.5cm;
+  height: 0.88cm;
+  width: 0.55cm;
   top: 28%;
   left: calc(23% + 0.032cm);
   z-index: 2;
@@ -311,8 +311,8 @@
 }
 .attachment-two-end-30mm-right {
   position: absolute;
-  height: 0.86cm;
-  width: 0.5cm;
+  height: 0.88cm;
+  width: 0.55cm;
   top: 28%;
 
   right: calc(22.0% + 0.032cm);
