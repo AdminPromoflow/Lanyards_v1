@@ -96,7 +96,7 @@ class AttachmentPreviewClass {
   applyClassToGroup(attachmentOneEnd = "", attachmentTwoEndLeft = "", attachmentTwoEndRight = "") {
 
 
-    this.attachmentOneEnd.classList.add(attachmentOneEnd);
+    this.attachmentOneEnd.className = attachmentOneEnd;
     this.attachmentTwoEndLeft.classList.add(attachmentTwoEndLeft);
     this.attachmentTwoEndRight.classList.add(attachmentTwoEndRight);
 
