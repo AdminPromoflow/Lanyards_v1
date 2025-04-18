@@ -476,14 +476,14 @@
 .top_left_clip-one-end-10mm-attachment{
   position: absolute;
   bottom: 101.5%;
-  height: 0.5cm;
+  height: 0.3cm;
   width: 0.25cm;
   left: 11.7%;
 }
 .top_right_clip-one-end-10mm-attachment{
   position: absolute;
   bottom: 101.5%;
-  height: 0.5cm;
+  height: 0.3cm;
   width: 0.25cm;
   right:  10.4%;
 }
@@ -512,7 +512,7 @@
 }
 .center-super-lanyard-one-end-10mm-attachment{
   position: absolute;
-  height: 2cm;
+  height: 3cm;
   width: 0.16cm;
   bottom: 0;
   left: 50%;
