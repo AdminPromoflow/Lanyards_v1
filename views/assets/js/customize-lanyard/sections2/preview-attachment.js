@@ -88,7 +88,6 @@ class AttachmentPreviewClass {
       }
       else if (type === "two-end") {
         alert("3");
-
         this.containerAttachmentOneEnd.style.display = "none";
         this.containerAttachmentTwoEnd.style.display = "block";
 

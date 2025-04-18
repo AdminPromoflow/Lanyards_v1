@@ -100,6 +100,8 @@ class OneTwoEnds {
     priceClass.changePricePerLanyard();
 
     clipClass.refreshClip(); // Update the clip settings for the material.
+    attachmentClass.refreshAttachment();
+
 
     previewLanyardType.showSelectedPreviewTemplate();
 
