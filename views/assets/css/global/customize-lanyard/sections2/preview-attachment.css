@@ -263,7 +263,7 @@
   width: 0.38cm;
   top: 28%;
 
-  left: calc(22.8% + 0.08cm);
+  left: calc(22.8% + 0.06cm);
   z-index: 2;
 
 }
@@ -273,7 +273,7 @@
   width: 0.38cm;
   top: 28%;
 
-  right: calc(22.8% + 0.08cm);
+  right: calc(22.8% + 0.06cm);
   z-index: 2;
 
 }
