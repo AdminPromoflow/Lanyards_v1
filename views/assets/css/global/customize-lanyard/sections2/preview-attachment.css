@@ -129,8 +129,9 @@
   transform: translateX(-50%);
   height: 100px;
   width: 150px;
-  background-color: gold;
+  background-color: rgba(255, 255, 255, .2);
   display: none;
+  z-index: 2;
 }
 
 
@@ -221,7 +222,7 @@
   width: 0.3cm;
   top: 28%;
 
-  left: 20%;
+  left: 22.5%;
   z-index: 2;
 
 }
@@ -231,7 +232,7 @@
   width: 0.3cm;
   top: 28%;
 
-  right: 20%;
+  right: 22.5%;
   z-index: 2;
 }
 
