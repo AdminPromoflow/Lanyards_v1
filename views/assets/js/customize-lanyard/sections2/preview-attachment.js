@@ -10,26 +10,18 @@ class AttachmentPreviewClass {
     this.attachmentTwoEndRight = document.getElementById("attachment-two-end-right");
   }
 
-
-
-
-
-
-
-  togglePreviewAttachmentClass(action){
+  togglePreviewAttachmentClass(action) {
     this.previewAttachmentClass.style.display = action;
     this.activateTemplate();
   }
 
   activateTemplate() {
-    const type = oneTwoEndsClass.getTypeLanyardSelected(); // Get the selected lanyard type
-    const width = widthClass.getWidthSelected(); // Get the selected width
-    const attachment = attachmentClass.getAttachmentSelected(); // Get the selected attachment mode
+    const type = oneTwoEndsClass.getTypeLanyardSelected();
+    const width = widthClass.getWidthSelected();
+    const attachment = attachmentClass.getAttachmentSelected();
 
     this.updateClipImagesSrc();
-    this.cleanStyle(); // Clear any existing styles before applying new ones
-
-    // Apply styles based on lanyard type and attachment mode
+    this.cleanStyle();
 
     if (attachment === "none" || attachment === "None") {
       this.setAttachmentContainersDisplay("none", "none");
@@ -41,15 +33,18 @@ class AttachmentPreviewClass {
       }
     }
   }
+
   setAttachmentContainersDisplay(oneEndDisplay, twoEndDisplay) {
     this.containerAttachmentOneEnd.style.display = oneEndDisplay;
     this.containerAttachmentTwoEnd.style.display = twoEndDisplay;
   }
+
   updateClipImagesSrc() {
     var attachmentSelected = attachmentClass.getAttachmentSelected();
     if (attachmentSelected == "Plastic colour") {
-        attachmentSelected = "Plastic_colour";
+      attachmentSelected = "Plastic_colour";
     }
+
     const newSrc = "../../views/assets/img/global/customize-lanyard/sections2/preview-attachment/" + attachmentSelected + ".png";
 
     if (attachmentSelected != "none" && attachmentSelected != "None") {
@@ -58,8 +53,8 @@ class AttachmentPreviewClass {
       this.attachmentTwoEndRight.querySelector("img").src = newSrc;
     }
   }
+
   cleanStyle() {
-    // Clean styles and class names for specific elements
     const elementsToClean = [
       this.attachmentOneEnd,
       this.attachmentTwoEndLeft,
@@ -68,14 +63,13 @@ class AttachmentPreviewClass {
 
     elementsToClean.forEach(element => {
       if (element) {
-        element.removeAttribute("style"); // Remove inline styles
-        element.className = "";            // Remove all classes
+        element.removeAttribute("style");
+        element.className = "";
       }
     });
   }
 
   applyStyles(width) {
-    // Reset all class assignments for this mode
     switch (width) {
       case "10mm":
         this.applyClassToGroup("attachment-one-end-10mm", "", "");
@@ -93,11 +87,12 @@ class AttachmentPreviewClass {
         this.applyClassToGroup("attachment-one-end-30mm", "", "");
         break;
       default:
-        console.warn("Unrecognised width in 'two-end' mode:", width);
+        console.warn("Unrecognised width in 'one-end' mode:", width);
     }
 
-    console.log(`Styles applied: two-end - ${width}`);
+    console.log(`Styles applied: one-end - ${width}`);
   }
+
   applyClassToGroup(attachmentOneEnd = "", attachmentTwoEndLeft = "", attachmentTwoEndRight = "") {
     const el = [
       this.attachmentOneEnd,
@@ -105,19 +100,10 @@ class AttachmentPreviewClass {
       this.attachmentTwoEndRight
     ];
 
-    // Añadir clases a los elementos si los parámetros no están vacíos
     if (attachmentOneEnd) el[0].classList.add(attachmentOneEnd);
     if (attachmentTwoEndLeft) el[1].classList.add(attachmentTwoEndLeft);
     if (attachmentTwoEndRight) el[2].classList.add(attachmentTwoEndRight);
   }
-
-
-
-
-
-
-
-
 }
 
 const attachmentPreviewClass = new AttachmentPreviewClass();
