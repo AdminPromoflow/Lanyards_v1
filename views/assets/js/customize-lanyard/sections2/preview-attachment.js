@@ -46,7 +46,7 @@ class AttachmentPreviewClass {
     this.containerAttachmentTwoEnd.style.display = twoEndDisplay;
   }
   updateClipImagesSrc() {
-    const attachmentSelected = attachmentClass.getAttachmentSelected();
+    var attachmentSelected = attachmentClass.getAttachmentSelected();
     if (attachmentSelected == "Plastic colour") {
         attachmentSelected = "Plastic_colour";
     }
