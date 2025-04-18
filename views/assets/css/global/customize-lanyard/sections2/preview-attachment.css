@@ -222,6 +222,7 @@
   top: 28%;
 
   left: 25%;
+  z-index: 2;
 
 }
 .attachment-two-end-10mm-right {
@@ -231,6 +232,7 @@
   top: 28%;
 
   right: 25%;
+  z-index: 2;
 }
 
 .attachment-two-end-15mm-left {
@@ -240,6 +242,7 @@
   top: 28%;
 
   left: 5%;
+  z-index: 2;
 
 }
 .attachment-two-end-15mm-right {
@@ -249,6 +252,7 @@
   top: 28%;
 
   right: 5%;
+  z-index: 2;
 
 }
 
@@ -259,6 +263,7 @@
   top: 28%;
 
   left: 5%;
+  z-index: 2;
 
 }
 .attachment-two-end-20mm-right {
@@ -268,6 +273,7 @@
   top: 28%;
 
   right: 5%;
+  z-index: 2;
 
 }
 
@@ -278,6 +284,7 @@
   top: 28%;
 
   left: 5%;
+  z-index: 2;
 
 }
 .attachment-two-end-25mm-right {
@@ -287,6 +294,7 @@
   top: 28%;
 
   right: 5%;
+  z-index: 2;
 
 }
 
@@ -297,6 +305,7 @@
   top: 28%;
 
   left: 5%;
+  z-index: 2;
 
 }
 .attachment-two-end-30mm-right {
@@ -306,6 +315,7 @@
   top: 28%;
 
   right: 5%;
+  z-index: 2;
 
 }
 
