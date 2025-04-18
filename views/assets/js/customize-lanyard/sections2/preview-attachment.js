@@ -47,8 +47,8 @@ class AttachmentPreviewClass {
   }
   updateClipImagesSrc() {
     const attachmentSelected = attachmentClass.getAttachmentSelected();
-    const newSrc = "../../views/assets/img/global/customize-lanyard/sections2/preview-attachment/" + attachmentSelected + ".png";
-    alert(attachmentSelected);
+    const newSrc = "../../views/assets/img/global/customize-lanyard/sections2/preview-attachment/" + attachmentSelected.replace(/\s+/g, "_") + ".png";
+    //alert(attachmentSelected);
 
     if (attachmentSelected != "none" && attachmentSelected != "None") {
       this.attachmentOneEnd.querySelector("img").src = newSrc;
