@@ -84,6 +84,7 @@
   width: 90%;
   left: 50%;
   transform: translateX(-50%);
+  font-size: 1.1em;
   text-shadow: 1px 1px 2px black;
 }
 .artwork-manual-boxes img {
@@ -96,7 +97,7 @@
   font-weight: 300;
   color: rgba(255, 255, 255, .8);
   text-shadow: 1px 1px 2px black;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 
