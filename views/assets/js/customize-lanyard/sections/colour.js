@@ -152,12 +152,20 @@ class ColourClass {
       <h3 class="priceDataColour">£ ${data["price"]} per unit</h3>
     </div>`;
   }
-  showTextPrintedOption(){
-    const textColourQuantity = document.getElementById("text-colour-quantity");
-    const colourSelected = this.getColourSelected();
+  function showTextPrintedOption() {
+  const textColourQuantity = document.getElementById("text-colour-quantity");
+  const colourSelected = this.getColourSelected();
 
-    alert(colourSelected);
-  }
+  const messages = {
+    "one-colour": "The selected material uses screen print, including one background colour and up to two print colours. Please choose your preferred colours.",
+    "two-colour": "The selected material uses screen print, including one background colour and up to two print colours. Please choose your preferred colours.",
+    "full-colour": "The selected material uses dye sublimation, allowing unlimited colours and full-colour designs. Please click ‘Next’ to proceed with your artwork."
+  };
+
+  const defaultMessage = "Select the number of colours you want printed on your lanyard:";
+  textColourQuantity.innerHTML = messages[colourSelected] || defaultMessage;
+}
+
   autoSelectColourQuantity(){
     var data = this.getDataColourQuantityAvalaible();
     var existColourQuantity = false;
