@@ -74,7 +74,7 @@
   position: relative;
   height: 40px;
   width: 40px;
-  margin: 8px ;
+  margin: 0px 12px;
 }
 
 
@@ -95,7 +95,6 @@
 .artwork-manual-boxes h3{
   position: relative;
   margin: 0;
-  min-width: 150px;
   padding: 0;
   background: transparent!important;
   font-weight: 200;
