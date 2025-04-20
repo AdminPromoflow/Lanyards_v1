@@ -14,7 +14,7 @@ $jsFile_colour = "../../views/assets/js/customize-lanyard/sections/colour.js";
 <section class="colour section ">
   <h2 class="name-section-customize-lanyard">Colour Quantity</h2>
   <br>
-  <p>Select the number of colours you want printed on your lanyard:</p>
+  <p id="text-colour-quantity">Select the number of colours you want printed on your lanyard:</p>
   <br>
   <div id="containers_boxes_colour" class="containers_boxes_colour">
 

@@ -139,7 +139,9 @@ class ColourClass {
       this.drawColourQuantityvailable(coloursQuantityAvailable[i], i);
     }
     this.showSelectedColour();
+    this.showTextPrintedOption();
     this.updatePriceColourIndividual();
+
     previewColourClass.showSelectedPreviewtColour();
   }
 
@@ -150,7 +152,12 @@ class ColourClass {
       <h3 class="priceDataColour">£ ${data["price"]} per unit</h3>
     </div>`;
   }
+  showTextPrintedOption(){
+    const textColourQuantity = document.getElementById("text-colour-quantity");
+    const colourSelected = this.getColourSelected();
 
+    alert(colourSelected);
+  }
   autoSelectColourQuantity(){
     var data = this.getDataColourQuantityAvalaible();
     var existColourQuantity = false;
