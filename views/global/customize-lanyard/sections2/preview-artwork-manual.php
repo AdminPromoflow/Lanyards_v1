@@ -63,7 +63,10 @@ foreach ($imgFiles_previewArtworkManual as $key => $path) {
   <div id="preview-artwork-container" class="preview-artwork-container">
     <div class="preview-artwork-boxes">
       <h2>Artwork</h2>
-      <p>If you already have a design for your lanyard, select the artwork option</p>
+      <p>With the artwork option for screen printing, you can choose whether or
+        not to include a background colour and upload an image for each side.
+        If you selected double-sided printing, you will need to upload four
+        images—two for the front and two for the back.</p>
       <div class="preview-artwork-boxes-img">
         <img src="<?= $imgFiles_previewArtworkManual['artwork'] ?>" alt="Artwork">
       </div>
