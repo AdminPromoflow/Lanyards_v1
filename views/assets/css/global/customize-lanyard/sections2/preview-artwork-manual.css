@@ -95,6 +95,7 @@
 .artwork-manual-boxes h3{
   position: relative;
   margin: 0;
+  width: calc(100% - 50px);
   padding: 0;
   background: transparent!important;
   font-weight: 200;
