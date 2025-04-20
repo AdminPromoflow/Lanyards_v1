@@ -157,8 +157,8 @@ class ColourClass {
   const colourSelected = this.getColourSelected();
 
   const messages = {
-    "one-colour": "The selected material uses <strong> screen print</strong>, including one background colour and up to two print colours. <br><br>Please choose your preferred colours.",
-    "two-colour": "The selected material uses <strong> screen print</strong>, including one background colour and up to two print colours. <br><br>Please choose your preferred colours.",
+    "one-colour": "The selected material uses <strong>screen print</strong>, including one background colour and up to two print colours. <br><br>Please choose your preferred colours.",
+    "two-colour": "The selected material uses <strong>screen print</strong>, including one background colour and up to two print colours. <br><br>Please choose your preferred colours.",
     "full-colour": "The selected material uses <strong>dye sublimation</strong>, allowing unlimited colours and full-colour designs. <br><br>Please click ‘Next’ to proceed with your artwork."
   };
 
