@@ -80,7 +80,7 @@
 
 
 
-.artwork-manual-boxes:nth-child(2){
+.artwork-manual-boxes:nth-child(1){
   flex-grow: 10;
 }
 
