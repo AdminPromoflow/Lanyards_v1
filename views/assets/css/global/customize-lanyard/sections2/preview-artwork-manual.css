@@ -83,7 +83,11 @@
   height: 40px;
   width: 40px;
 }
-
+.artwork-manual-boxes h3 {
+  font-weight: 300;
+  color: white;
+  font-size: 1.1em;
+}
 
 
 
