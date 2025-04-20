@@ -47,7 +47,6 @@ foreach ($imgFiles_previewArtworkManual as $key => $path) {
       </div>
 
       <div class="preview-artwork-manual-boxes">
-        <div class="artwork-manual-boxes"></div>
         <div class="artwork-manual-boxes">
           <h3>Upload the lanyard logo</h3>
         </div>

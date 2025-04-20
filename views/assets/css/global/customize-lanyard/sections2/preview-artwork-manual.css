@@ -73,10 +73,18 @@
 .artwork-manual-boxes{
   position: relative;
   height: 40px;
-  width: 50px;
+  width: 40px;
   background-color: red;
   margin: 8px ;
 }
+
+
+
+.artwork-manual-boxes:nth-child(2){
+  flex-grow: 10;
+}
+
+
 
 
 .artwork-manual-boxes h1{
