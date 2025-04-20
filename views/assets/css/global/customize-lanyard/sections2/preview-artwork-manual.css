@@ -72,8 +72,9 @@
 
 .preview-artwork-manual-boxes{
   position: relative;
-  margin: 0 7px;
-  width: 100%;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
 
   background: orange;
 }
