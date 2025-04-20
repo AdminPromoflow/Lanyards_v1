@@ -152,7 +152,7 @@ class ColourClass {
       <h3 class="priceDataColour">£ ${data["price"]} per unit</h3>
     </div>`;
   }
-   showTextPrintedOption() {
+  showTextPrintedOption() {
   const textColourQuantity = document.getElementById("text-colour-quantity");
   const colourSelected = this.getColourSelected();
 
