@@ -77,7 +77,11 @@
   transform: translateX(-50%);
 
 }
-.preview-artwork-manual-boxes .artwork-manual-boxes:nth-child(2){
+.preview-manual-boxes p{
+  position: relative;
+  color: rgba(255, 255, 255, .8);
+  left: 50%;
+  transform: translateX(-50%);
 }
 .artwork-manual-boxes img {
   height: 40px;
