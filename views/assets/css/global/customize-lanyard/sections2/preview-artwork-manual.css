@@ -79,6 +79,10 @@
 .preview-artwork-manual-boxes .artwork-manual-boxes:nth-child(2){
   background-color: brown;
 }
+.artwork-manual-boxes img {
+  height: 40px;
+  width: 40px;
+}
 
 
 
