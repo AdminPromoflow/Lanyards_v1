@@ -72,6 +72,8 @@
 
 .artwork-manual-boxes{
   position: relative;
+  height: 40px;
+  width: 50px;
   margin: 8px ;
 }
 
