@@ -157,9 +157,9 @@ class ColourClass {
   const colourSelected = this.getColourSelected();
 
   const messages = {
-    "one-colour": "The selected material uses screen print, including one background colour and up to two print colours. <br>Please choose your preferred colours.",
-    "two-colour": "The selected material uses screen print, including one background colour and up to two print colours. <br>Please choose your preferred colours.",
-    "full-colour": "The selected material uses dye sublimation, allowing unlimited colours and full-colour designs. <br>Please click ‘Next’ to proceed with your artwork."
+    "one-colour": "The selected material uses screen print, including one background colour and up to two print colours. <br><br>Please choose your preferred colours.",
+    "two-colour": "The selected material uses screen print, including one background colour and up to two print colours. <br><br>Please choose your preferred colours.",
+    "full-colour": "The selected material uses dye sublimation, allowing unlimited colours and full-colour designs. <br><br>Please click ‘Next’ to proceed with your artwork."
   };
 
   const defaultMessage = "Select the number of colours you want printed on your lanyard:";
