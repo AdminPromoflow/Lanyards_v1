@@ -40,35 +40,7 @@
   width: 100%;
   background-color: gold!important;
 }
-.preview-artwork-boxes  {
-  position: relative;
-  width: 100%;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.preview-artwork-boxes h3 {
-  position: relative;
-  text-align: center;
-  width: 90%;
-  color: rgba(255, 255, 255, .7);
-  font-size: 1.2em;
-  font-weight: 300;
-
-  background: transparent!important;
-  text-shadow: 1px 1px 2px black;
-}
-.preview-artwork-boxes-img{
-  position: relative;
-  width: 90%;
-  left: 5%;
-}
-.preview-artwork-boxes-img img{
-  position: relative;
-  width: 100%;
-}
 
 .preview-artwork-manual-boxes{
   position: relative;
@@ -101,7 +73,16 @@
 }
 
 
-
+.preview-artwork-boxes p{
+  position: relative;
+  text-align: justify;
+  color: rgba(255, 255, 255, .8);
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1em;
+  text-shadow: 1px 1px 2px black;
+}
 
 
 .artwork-boxes{
