@@ -79,6 +79,7 @@
 }
 .preview-manual-boxes p{
   position: relative;
+  text-align: justify;
   color: rgba(255, 255, 255, .8);
   width: 90%;
   left: 50%;
