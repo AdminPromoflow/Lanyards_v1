@@ -82,6 +82,8 @@
 .artwork-manual-boxes img {
   height: 40px;
   width: 40px;
+  margin-left: 5px;
+
 }
 .artwork-manual-boxes h3 {
   font-weight: 300;
