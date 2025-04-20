@@ -72,8 +72,9 @@
 
 .preview-artwork-manual-boxes{
   position: relative;
-  padding: 2px;
+  margin: 0 7px;
   width: 100%;
+
   background: orange;
 }
 .preview-artwork-manual-boxes .artwork-manual-boxes:nth-child(2){
