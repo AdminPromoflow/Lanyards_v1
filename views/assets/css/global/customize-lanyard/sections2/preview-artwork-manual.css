@@ -87,7 +87,11 @@
   position: relative;
   background: green;
 }
-
+.preview-artwork-boxes-img img{
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
 
 .artwork-boxes{
   position: relative;
