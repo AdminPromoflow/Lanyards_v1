@@ -70,7 +70,12 @@
   width: 100%;
 }
 
-
+.preview-artwork-manual-boxes{
+  position: relative;
+  padding: 2px;
+  width: 100%;
+  background: orange;
+}
 
 
 
