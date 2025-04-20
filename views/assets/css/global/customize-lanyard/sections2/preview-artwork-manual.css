@@ -70,60 +70,13 @@
   width: 100%;
 }
 
-.artwork-manual-boxes{
-  position: relative;
-  height: 40px;
-  width: 40px;
-  margin: 0px 12px;
-}
-
-
-
-.artwork-manual-boxes:nth-child(1){
-  flex-grow: 10;
-}
 
 
 
 
-.artwork-manual-boxes h1{
-  position: relative;
-  margin: 0;
-  padding: 0;
-  font-size: 1.9em !important;
-}
-.artwork-manual-boxes h3{
-  position: relative;
-  margin: 0;
-  text-align: left;
-  min-width: 190px;
-  padding: 0;
-  background: transparent!important;
-  font-weight: 200;
-  text-shadow: 1px 1px 2px black;
 
-}
 
-.artwork-manual-boxes img{
-  filter: drop-shadow(1px 1px 2px black);
-}
 
-.preview-artwork-manual-boxes h3 {
-  position: relative;
-  text-align: center;
-  width: 40%;
-  left: 50%;
-  transform: translateX(-50%);
-  color: rgba(255, 255, 255, .7);
-  font-size: 1.2em;
-  font-weight: 400;
-  background-color: rgba(0, 0, 0, .1);
-}
-.preview-artwork-manual-boxes-img{
-  position: relative;
-  width: 40%;
-  height: 100%;
-}
 .artwork-boxes{
   position: relative;
   width: 70% !important;
