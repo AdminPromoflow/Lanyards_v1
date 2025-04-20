@@ -28,7 +28,7 @@ foreach ($imgFiles_previewArtworkManual as $key => $path) {
     <div class="preview-manual-boxes">
       <h2>Manual</h2>
       <p>Lanyards can be printed using screen print in one of two ways,
-        depending on your previous selection. The manual option allows you to choose text,
+        depending on your previous selection. <br>The manual option allows you to choose text,
         a background colour, and/or an image. This lets you personalise your lanyard with simple design elements.</p>
 
       <div id="open-background-colour" class="preview-artwork-manual-boxes">
