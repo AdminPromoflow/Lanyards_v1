@@ -76,6 +76,9 @@
   width: 100%;
   background: orange;
 }
+.preview-artwork-manual-boxes .artwork-manual-boxes:nth-child(2){
+  background-color: brown;
+}
 
 
 
