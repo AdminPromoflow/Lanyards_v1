@@ -31,7 +31,9 @@
   text-align: justify;
   font-weight: 300;
   font-size: 1em;
-  width: 100%;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
   color: white;
   margin: 0;
   padding: 0;
