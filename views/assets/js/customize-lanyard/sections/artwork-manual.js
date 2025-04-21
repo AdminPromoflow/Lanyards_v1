@@ -31,7 +31,10 @@ class ArtworkManualClass {
 
   }
 
+  refreshArtkworkManual(){
+    previewArtworkManualClass.showDescriptionPreview();
 
+  }
 
   showArtworkManual(){
 

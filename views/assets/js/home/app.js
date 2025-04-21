@@ -96,6 +96,8 @@ class Home {
         sidePrintedClass.refreshSidePrintedData();
         colourClass.refreshColourQuantity();
         clipClass.refreshClip();
+        artworkManualClass.refreshArtkworkManual();
+
 
 
         // Open the customization panel
@@ -119,6 +121,7 @@ class Home {
         sidePrintedClass.refreshSidePrintedData()
         colourClass.refreshColourQuantity();
         clipClass.refreshClip();
+        artworkManualClass.refreshArtkworkManual();
 
 
 
