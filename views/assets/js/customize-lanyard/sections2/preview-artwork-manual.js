@@ -19,14 +19,17 @@ class PreviewArtworkManualClass {
 
     const printingOptions = {
       sublimation: {
-        manual: "Sublimation lanyards can be set up manually. You can choose a background colour, add text, and upload one logo. The design will be mirrored on the reverse side of the lanyard.",
-        artwork: "With the artwork option, you can upload two images—one for each side. Each side is mirrored on the reverse. If your image has transparency, you can add a background colour."
+        manual: "<strong>Sublimation</strong> lanyards can be customised manually. You can select a background colour, add text, and upload one logo. The design will be mirrored on the reverse side of the lanyard.",
+        artwork: "With the <strong>sublimation</strong> artwork option, you can upload two images—one for each side. Each side is mirrored on the reverse. If your image has a transparent background, you can also add a background colour."
       },
       screenPrint: {
-        manual: "Lanyards can be printed using <strong>screen print</strong> in one of two ways, depending on your previous selection. <br>The manual option allows you to choose text, a background colour, and/or an image. This lets you personalise your lanyard with simple design elements.",
-        artwork: "With the artwork option for <strong>screen printing</strong>, you can choose whether or not to include a background colour and upload an image for each side. If you selected double-sided printing, you will need to upload four images—two for the front and two for the back."
+        manual: "<strong>Screen print</strong> lanyards can be customised manually. You can add text, choose a background colour, and upload a simple image – logo, personalised design. For double-sided printing, customise four sides in total.",
+        artwork: "With the <strong>screen print</strong> artwork option, you can upload one image per side. A background colour will always be included if your image has transparency. For double-sided printing, upload four images in total."
       }
     };
+
+
+
 
     const materialMap = {
       "Tubular": "screenPrint",
