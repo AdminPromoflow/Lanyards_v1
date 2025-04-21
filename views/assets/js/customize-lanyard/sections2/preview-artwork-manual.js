@@ -30,12 +30,12 @@ class PreviewArtworkManualClass {
     const materialSelected = material.getMaterialSelected();
 
     if (materialSelected == "Tubular" || materialSelected == "Ribbed Polyester" || materialSelected == "RPET Polyester" ) {
-      description_preview_artwork_manual[0].innerHTML = screen_print_option.sublimation_option.manual;
-      description_preview_artwork_manual[1].innerHTML = screen_print_option.sublimation_option.artwork;
+      description_preview_artwork_manual[0].innerHTML = printingOptions.sublimation_option.manual;
+      description_preview_artwork_manual[1].innerHTML = printingOptions.sublimation_option.artwork;
     }
     else if (materialSelected == "Dye Sub polyester" || materialSelected == "Dye Sub RPET" ) {
-      description_preview_artwork_manual[0].innerHTML = screen_print_option.screen_print_option.manual;
-      description_preview_artwork_manual[1].innerHTML = screen_print_option.screen_print_option.artwork;
+      description_preview_artwork_manual[0].innerHTML = printingOptions.screen_print_option.manual;
+      description_preview_artwork_manual[1].innerHTML = printingOptions.screen_print_option.artwork;
     }
 
   }
