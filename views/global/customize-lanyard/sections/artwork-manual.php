@@ -1,4 +1,13 @@
-<link rel="stylesheet" href="../../views/assets/css/global/customize-lanyard/sections/artwork-manual.css">
+<?php
+$artworkManualCssPath = '../../views/assets/css/global/customize-lanyard/sections/artwork-manual.css';
+$artworkManualJsPath = '../../views/assets/js/customize-lanyard/sections/artwork-manual.js';
+
+$artworkManualCssVersion = filemtime($artworkManualCssPath);
+$artworkManualJsVersion = filemtime($artworkManualJsPath);
+?>
+
+<link rel="stylesheet" href="<?= $artworkManualCssPath ?>?v=<?= $artworkManualCssVersion ?>">
+
 <section class="artwork-manual section" id="artworkManual">
   <h2 class="name-section-customize-lanyard">Artwork - Manual</h2>
   <br>
@@ -11,9 +20,7 @@
     <div class="container_boxes_artwork-manual">
       <h4>Artwork</h4>
     </div>
-
   </div>
 </section>
 
-
-<script src="../../views/assets/js/customize-lanyard/sections/artwork-manual.js"></script>
+<script src="<?= $artworkManualJsPath ?>?v=<?= $artworkManualJsVersion ?>"></script>
