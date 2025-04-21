@@ -13,33 +13,38 @@ class PreviewArtworkManualClass {
   showArtworkManualPreview(action){
     previewArtworkManualContainer.style.display = action;
   }
-  showDescriptionPreview(){
-    const description_preview_artwork_manual = document.querySelectorAll(".description_preview_artwork_manual");
+  showDescriptionPreview() {
+    const elements = document.querySelectorAll(".description_preview_artwork_manual");
+    if (elements.length < 2) return;
 
     const printingOptions = {
-      sublimation_option: {
+      sublimation: {
         manual: "Sublimation lanyards can be set up manually. You can choose a background colour, add text, and upload one logo. The design will be mirrored on the reverse side of the lanyard.",
         artwork: "With the artwork option, you can upload two images—one for each side. Each side is mirrored on the reverse. If your image has transparency, you can add a background colour."
       },
-      screen_print_option: {
+      screenPrint: {
         manual: "Lanyards can be printed using <strong>screen print</strong> in one of two ways, depending on your previous selection. <br>The manual option allows you to choose text, a background colour, and/or an image. This lets you personalise your lanyard with simple design elements.",
         artwork: "With the artwork option for <strong>screen printing</strong>, you can choose whether or not to include a background colour and upload an image for each side. If you selected double-sided printing, you will need to upload four images—two for the front and two for the back."
       }
     };
 
-    const materialSelected = material.getMaterialSelected();
+    const materialMap = {
+      "Tubular": "screenPrint",
+      "Ribbed Polyester": "screenPrint",
+      "RPET Polyester": "screenPrint",
+      "Dye Sub polyester": "sublimation",
+      "Dye Sub RPET": "sublimation"
+    };
 
-    if (materialSelected == "Tubular" || materialSelected == "Ribbed Polyester" || materialSelected == "RPET Polyester" ) {
-      description_preview_artwork_manual[0].innerHTML = printingOptions.screen_print_option.manual;
-      description_preview_artwork_manual[1].innerHTML = printingOptions.screen_print_option.artwork;
+    const selectedMaterial = material.getMaterialSelected();
+    const optionType = materialMap[selectedMaterial];
+
+    if (optionType) {
+      elements[0].innerHTML = printingOptions[optionType].manual;
+      elements[1].innerHTML = printingOptions[optionType].artwork;
     }
-    else if (materialSelected == "Dye Sub polyester" || materialSelected == "Dye Sub RPET" ) {
-      description_preview_artwork_manual[0].innerHTML = printingOptions.sublimation_option.manual;
-      description_preview_artwork_manual[1].innerHTML = printingOptions.sublimation_option.artwork;
-
-    }
-
   }
+
 
   showSelectedPreviewtColour(){
     var artworkManual = colourClass.getColourSelected();
