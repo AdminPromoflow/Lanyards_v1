@@ -113,12 +113,12 @@ class ArtworkManualClass {
     containerBoxesArtworkManual(){
       var artworkManualActive = artworkManualClass.getArtworkManual();
       if (artworkManualActive == "manual") {
-      containerBoxesArtworkManual[0].style.visibility = "hidden";
-      containerBoxesArtworkManual[1].style.visibility = "visible";
+      containerBoxesArtworkManual[0].style.display = "none";
+      containerBoxesArtworkManual[1].style.display = "block";
       }
       else {
-        containerBoxesArtworkManual[1].style.visibility = "hidden";
-        containerBoxesArtworkManual[0].style.visibility = "visible";
+        containerBoxesArtworkManual[1].style.display = "none";
+        containerBoxesArtworkManual[0].style.display = "block";
       }
 
     }
