@@ -173,7 +173,6 @@ class BackgroundClass {
         screenPrintBackgroundColour[i].style.display = "none";
       }
     }
-    alert("ahi vamos");
 
 
   }
