@@ -28,9 +28,6 @@ class PreviewArtworkManualClass {
       }
     };
 
-
-
-
     const materialMap = {
       "Tubular": "screenPrint",
       "Ribbed Polyester": "screenPrint",
