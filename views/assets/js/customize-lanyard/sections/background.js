@@ -165,11 +165,13 @@ class BackgroundClass {
 
     if (selectedMaterial == "Tubular" || selectedMaterial == "Ribbed Polyester" || selectedMaterial == "RPET Polyester" ) {
       for (var i = 0; i < screenPrintBackgroundColour.length; i++) {
-        screenPrintBackgroundColour[i].style.visibility = "visible";
+        screenPrintBackgroundColour[i].style.display = "flex";
       }
     }
     else if (selectedMaterial == "Dye Sub polyester" || selectedMaterial == "Dye Sub RPET") {
-      screenPrintBackgroundColour[i].style.visibility = "hidden";
+      for (var i = 0; i < screenPrintBackgroundColour.length; i++) {
+        screenPrintBackgroundColour[i].style.display = "none";
+      }
     }
     alert("ahi vamos");
 
