@@ -82,6 +82,7 @@
 .preview-artwork-boxes-img{
   position: relative;
   background-color: green;
+  width: 90%;
 }
 .preview-artwork-boxes-img img{
   position: relative;
