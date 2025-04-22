@@ -139,9 +139,10 @@ class BackgroundClass {
 
   // Change CSS properties to reflect the first selected background color.
   changeBackgroundColourSelectedFirstOption() {
-    alert("entramos");
     var colour = this.getBackgroundColourSelectedFirstOption();
     const backgroundColours = document.querySelectorAll(".background-colour");
+    alert(colour);
+
     for (var i = 0; i < backgroundColours.length; i++) {
       backgroundColours[i].style.background = colour;
     }
