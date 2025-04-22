@@ -89,6 +89,8 @@
 .preview-artwork-boxes-img img{
   position: relative;
   width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .artwork-boxes{
   position: relative;
