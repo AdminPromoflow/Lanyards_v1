@@ -51,15 +51,21 @@ class PreviewTemplate {
   cleanStyle() {
     const el = this.elements;
 
-    // Remove inline styles from each element in the group
-    Object.values(el).forEach(element => {
+    Object.entries(el).forEach(([key, element]) => {
       if (element) {
         element.removeAttribute("style");
-        element.className = "";
+
+        if (["left", "right", "center"].includes(key)) {
+          // Conservar solo la clase 'background-colour'
+          element.className = "background-colour";
+        } else {
+          // Eliminar todas las clases
+          element.className = "";
+        }
       }
     });
-
   }
+
 
   // Apply styles for the "no-attachment" case based on width
   applyNoAttachmentStyles(width) {
