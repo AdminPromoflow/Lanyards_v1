@@ -81,13 +81,12 @@
 }
 .preview-artwork-boxes-img{
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: green;
 }
 .preview-artwork-boxes-img img{
-  position: relative;
+  position: absolute;
   width: 70%;
+  left: 50%;
 }
 
 .artwork-boxes{
