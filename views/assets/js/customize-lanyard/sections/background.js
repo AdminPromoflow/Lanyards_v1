@@ -165,7 +165,7 @@ class BackgroundClass {
 
     if (selectedMaterial == "Tubular" || selectedMaterial == "Ribbed Polyester" || selectedMaterial == "RPET Polyester" ) {
       for (var i = 0; i < screenPrintBackgroundColour.length; i++) {
-        screenPrintBackgroundColour[i].style.display = "block";
+        screenPrintBackgroundColour[i].style.display = "flex";
       }
     }
     else if (selectedMaterial == "Dye Sub polyester" || selectedMaterial == "Dye Sub RPET") {
