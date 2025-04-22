@@ -84,11 +84,9 @@
   background-color: green;
 }
 .preview-artwork-boxes-img img{
-  position: absolute;
+  position: relative;
   width: 70%;
-  left: 50%;
 }
-
 .artwork-boxes{
   position: relative;
   width: 70% !important;
