@@ -171,6 +171,8 @@ class BackgroundClass {
     else if (selectedMaterial == "Dye Sub polyester" || selectedMaterial == "Dye Sub RPET") {
       screenPrintBackgroundColour[i].style.display = "none";
     }
+    alert("ahi vamos");
+
 
   }
 
