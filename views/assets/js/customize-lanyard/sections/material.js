@@ -277,6 +277,8 @@ class Material {
       colourClass.refreshColourQuantity(); // Update the colour quantity for the material.
       clipClass.refreshClip(); // Update the clip settings for the material.
       artworkManualClass.refreshArtkworkManual();
+      backgroundClass.refreshBackgroundColour();
+
 
       priceClass.changePricePerLanyard(); // Change the price per lanyard based on the selected material.
   }

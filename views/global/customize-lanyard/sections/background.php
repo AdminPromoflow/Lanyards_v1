@@ -26,11 +26,11 @@ $jsFile_background = "../../views/assets/js/customize-lanyard/sections/backgroun
   <br>
 
   <!-- Radio option for customizing background color if not in stock -->
-  <input type="radio" class="select-background-colour-option" id="backgroundColourSecondOption" name="option">
-  <label for="backgroundColourSecondOption">If your color isn't in stock, customize it for £25 more at checkout:</label>
+  <input type="radio" class="select-background-colour-option  screen_print_background_colour" id="backgroundColourSecondOption" name="option">
+  <label class="screen_print_background_colour" for="backgroundColourSecondOption">If your color isn't in stock, customize it for £25 more at checkout:</label>
   <br>
-  <div class="opacity-background-option-second-option opacity-option-background-selected"></div>
-  <input class="select-colour-second-option" id="optionColourBackground" type="color" value="#FFFFFF">
+  <div class="opacity-background-option-second-option opacity-option-background-selected screen_print_background_colour"></div>
+  <input  class="select-colour-second-option screen_print_background_colour" id="optionColourBackground" type="color" value="#FFFFFF">
 </section>
 
 <!-- JavaScript -->

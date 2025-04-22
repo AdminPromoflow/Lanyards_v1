@@ -125,6 +125,7 @@ class BackgroundClass {
     this.changeBackgroundColourSelectedFirstOption();
     this.selectColorBoxOfFirstOption(i);
   }
+
   selectColorBoxOfFirstOption(indexSelected){
     var pantoneColours = document.querySelectorAll(".pantoneColours");
 
@@ -133,15 +134,12 @@ class BackgroundClass {
     }
 
     pantoneColours[indexSelected].style.border = "3px solid blue";
-
-
   }
 
   // Change CSS properties to reflect the first selected background color.
   changeBackgroundColourSelectedFirstOption() {
     var colour = this.getBackgroundColourSelectedFirstOption();
     const backgroundColours = document.querySelectorAll(".background-colour");
-    alert(colour);
 
     for (var i = 0; i < backgroundColours.length; i++) {
       backgroundColours[i].style.background = colour;
@@ -157,20 +155,29 @@ class BackgroundClass {
     }
   }
 
-
-
   // Set the background value.
   setBackground(value) {
       this.background = value;
+  }
+  refreshBackgroundColour(){
+    const screenPrintBackgroundColour = document.querySelectorAll(".screen_print_background_colour");
+    const selectedMaterial = material.getMaterialSelected();
+
+    if (selectedMaterial == "Tubular" || selectedMaterial == "Ribbed Polyester" || selectedMaterial == "RPET Polyester" ) {
+      for (var i = 0; i < screenPrintBackgroundColour.length; i++) {
+        screenPrintBackgroundColour[i].style.display = "block";
+      }
+    }
+    else if (selectedMaterial == "Dye Sub polyester" || selectedMaterial == "Dye Sub RPET") {
+      screenPrintBackgroundColour[i].style.display = "none";
+    }
+
   }
 
   // Retrieve the background value.
   getBackground() {
       return this.background;
   }
-
-
-
 }
 
 const backgroundClass = new BackgroundClass();

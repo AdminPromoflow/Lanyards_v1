@@ -97,6 +97,7 @@ class Home {
         colourClass.refreshColourQuantity();
         clipClass.refreshClip();
         artworkManualClass.refreshArtkworkManual();
+        backgroundClass.refreshBackgroundColour();
 
 
 
@@ -122,6 +123,7 @@ class Home {
         colourClass.refreshColourQuantity();
         clipClass.refreshClip();
         artworkManualClass.refreshArtkworkManual();
+        backgroundClass.refreshBackgroundColour();
 
 
 
