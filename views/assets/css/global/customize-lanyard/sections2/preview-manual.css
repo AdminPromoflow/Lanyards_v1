@@ -39,7 +39,7 @@
         left: 43.8%;
         height: 6.08cm;
         width: 0.176cm;
-        background: rgba(255, 0, 0, 0.2);
+        background-color: rgba(0, 255, 0, 1);
         transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
       }
 
@@ -49,7 +49,7 @@
         right: 43.8%;
         height: 6.08cm;
         width: 0.176cm;
-        background: rgba(255, 0, 0, 0.2);
+        background-color: rgba(0, 255, 0, 1);
         transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
       }
 
@@ -65,7 +65,7 @@
         left: 42.3%;
         height: 6.08cm;
         width: 0.256cm;
-        background: rgba(255, 0, 0, 0.2);
+        background-color: rgba(0, 255, 0, 1);
         transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
       }
 
@@ -75,7 +75,7 @@
         right: 42.3%;
         height: 6.08cm;
         width: 0.256cm;
-        background: rgba(255, 0, 0, 0.2);
+        background-color: rgba(0, 255, 0, 1);
         transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
       }
 
@@ -87,7 +87,7 @@
         left: 40.8%;
         height: 6.08cm;
         width: 0.336cm;
-        background-color: white;
+        background-color: rgba(0, 255, 0, 1);
         transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
       }
 
@@ -97,7 +97,7 @@
         right: 40.8%;
         height: 6.08cm;
         width: 0.336cm;
-        background-color: white;
+        background-color: rgba(0, 255, 0, 1);
         transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
       }
 
