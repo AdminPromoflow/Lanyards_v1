@@ -27,6 +27,7 @@
 }
 .box_background_colour label{
   background: orange;
+  width: 80%;
 }
 .backgroundSection p{
   position: relative;
