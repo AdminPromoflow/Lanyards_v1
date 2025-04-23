@@ -16,7 +16,7 @@ function get_preview_manual_css_version() {
   <!-- Manual lanyard layout -->
   <div class="super-lanyard-manual" id="super-lanyard-manual">
     <div class="" id="left-super-lanyard-manual">
-      <div class="text">
+      <div class="text-lanyard">
         <h1>hola</h1>
       </div>
     </div>
