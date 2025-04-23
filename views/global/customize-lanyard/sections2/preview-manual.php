@@ -18,6 +18,7 @@ function get_preview_manual_css_version() {
     <div class="" id="left-super-lanyard-manual">
       <div class="text-lanyard">
         <h1>hola</h1>
+        <h1>hola</h1>
       </div>
     </div>
     <div class="" id="right-super-lanyard-manual"></div>
