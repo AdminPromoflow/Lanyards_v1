@@ -25,6 +25,19 @@ class PreviewTemplate {
     previewClip.togglePreviewClipClass(action);
     attachmentPreviewClass.togglePreviewAttachmentClass(action);
 
+    var artworkManualSelected = artworkManualClass.getArtworkManual();
+
+    if (artworkManualSelected == "manual") {
+      previewManual.togglePreviewManualClass(action);
+      //previewArtwork.togglePreviewManualClass("none");
+
+    }
+    else if (artworkManualSelected == "artwork") {
+      //previewArtwork.togglePreviewManualClass(action);
+      previewManual.togglePreviewManualClass("none");
+
+    }
+
   }
 
   // Activates the appropriate template based on selected lanyard type, width, and attachment mode
