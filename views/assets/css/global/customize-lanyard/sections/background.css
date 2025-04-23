@@ -26,7 +26,10 @@
   margin: 0px 0 5px 0;
 }
 .option_background_colour{
-  background-color: green;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
 .backgroundSection p{
   position: relative;
