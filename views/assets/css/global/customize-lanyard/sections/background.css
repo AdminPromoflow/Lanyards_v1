@@ -25,6 +25,9 @@
   padding-left: 10px;
   margin: 0px 0 5px 0;
 }
+.box_background_colour label{
+  background: orange;
+}
 .backgroundSection p{
   position: relative;
   text-align: left;
