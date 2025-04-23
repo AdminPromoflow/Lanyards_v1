@@ -504,12 +504,13 @@
 
 
 .text-lanyard{
-  width: 100%;
-  background: orange
+  display: inline-block;
 }
 .text-lanyard h1{
-  width: 100%;
+  display: inline-block;
   transform: rotate(90deg);
+  transform-origin: top left;
+  background-color: lightcoral;
 }
 
 
