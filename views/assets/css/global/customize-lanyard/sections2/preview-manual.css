@@ -18,7 +18,7 @@
         left: 45.3%;
         height: 6.08cm;
         width: 0.096cm;
-        background-color: rgba(0, 255, 0, 0.2);
+        background-color: rgba(0, 255, 0, 1);
         transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
       }
 
@@ -28,7 +28,7 @@
         right: 45.3%;
         height: 6.08cm;
         width: 0.096cm;
-        background-color: white;
+        background-color: rgba(0, 255, 0, 1);
         transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
         overflow: hidden;
       }
