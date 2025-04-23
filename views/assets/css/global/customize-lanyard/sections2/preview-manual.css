@@ -506,6 +506,8 @@
 .text-lanyard{
   min-height: 0.096cm;
   max-width: 0.096cm;
+  transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
+
   background: orange
 }
 
