@@ -7,7 +7,6 @@ function getPreviewTemplateFilemtime($filePath) {
 // File paths for CSS, JS and images
 $cssFilePath = '../../views/assets/css/global/customize-lanyard/sections2/preview-template.css';
 $cssFilePathArtwork = '../../views/assets/css/global/customize-lanyard/sections2/preview-template-artwork.css';
-$cssFilePathManual = '../../views/assets/css/global/customize-lanyard/sections2/preview-template-manual.css';
 $jsFilePath = '../../views/assets/js/customize-lanyard/sections2/preview-template.js';
 
 // File paths for images
@@ -17,7 +16,6 @@ $imgRightPath = '../../views/assets/img/global/customize-lanyard/sections2/previ
 // Get the last modified times
 $cssFilemtime = getPreviewTemplateFilemtime($cssFilePath);
 $cssFilemtimeArtwork = getPreviewTemplateFilemtime($cssFilePathArtwork);
-$cssFilemtimeManual = getPreviewTemplateFilemtime($cssFilePathManual);
 $jsFilemtime = getPreviewTemplateFilemtime($jsFilePath);
 $imgLeftMtime = getPreviewTemplateFilemtime($imgLeftPath);
 $imgRightMtime = getPreviewTemplateFilemtime($imgRightPath);
@@ -26,7 +24,6 @@ $imgRightMtime = getPreviewTemplateFilemtime($imgRightPath);
 <!-- Include CSS files -->
 <link rel="stylesheet" href="<?php echo $cssFilePath; ?>?v=<?php echo $cssFilemtime; ?>">
 <link rel="stylesheet" href="<?php echo $cssFilePathArtwork; ?>?v=<?php echo $cssFilemtimeArtwork; ?>">
-<link rel="stylesheet" href="<?php echo $cssFilePathManual; ?>?v=<?php echo $cssFilemtimeManual; ?>">
 
 <!-- Preview Template Section -->
 <section id="preview-template-class" class="preview-template-class">
