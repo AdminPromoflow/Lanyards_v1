@@ -508,7 +508,7 @@
 }
 .text-lanyard h1{
   display: inline-block;
-  transform: rotate(90deg);
+  transform: rotate(90deg) translateX(-500%);
   transform-origin: top left;
   background-color: lightcoral;
 }
