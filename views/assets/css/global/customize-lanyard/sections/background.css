@@ -157,8 +157,8 @@
 .opacity-background-option-first-option{
   position: absolute;
   width: 295px;
-  height: 90px;
-  top: 20px;
+  height: 120px;
+  top: 30px;
   left: 0px;
   background-color: rgba(0, 0, 0, .45);
   z-index: 3;
