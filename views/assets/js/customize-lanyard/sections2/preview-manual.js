@@ -7,5 +7,6 @@ class PreviewManual {
     this.previewManualSection.style.display = action;
   }
 }
-
-const previewManual = new PreviewManual();
+document.addEventListener("DOMContentLoaded", () => {
+  const previewManual = new PreviewManual();
+});
