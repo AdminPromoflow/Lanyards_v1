@@ -46,13 +46,6 @@ $imgRightMtime = getPreviewTemplateFilemtime($imgRightPath);
       <div class="center-super-lanyard-one-end-30mm background-colour" id="center-super-lanyard"></div>
     </div>
 
-    <!-- Manual lanyard layout -->
-    <div class="super-lanyard-manual" id="super-lanyard-manual">
-      <div class="left-super-lanyard-one-end-30mm-manual" id="left-super-lanyard-manual"></div>
-      <div class="right-super-lanyard-one-end-30mm-manual" id="right-super-lanyard-manual"></div>
-      <div class="center-super-lanyard-one-end-30mm-manual" id="center-super-lanyard-manual"></div>
-    </div>
-
     <!-- Artwork lanyard layout -->
     <div class="super-lanyard-artwork" id="super-lanyard-artwork">
       <div id="left-super-lanyard-artwork"></div>

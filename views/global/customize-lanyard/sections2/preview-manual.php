@@ -13,7 +13,12 @@ function get_preview_manual_css_version() {
 <link rel="stylesheet" href="../../views/assets/css/global/customize-lanyard/sections2/preview-manual.css?v=<?php echo get_preview_manual_css_version(); ?>">
 
 <section id="preview-manual-section">
-  <h1>Hola</h1>
+  <!-- Manual lanyard layout -->
+  <div class="super-lanyard-manual" id="super-lanyard-manual">
+    <div class="left-super-lanyard-one-end-30mm-manual" id="left-super-lanyard-manual"></div>
+    <div class="right-super-lanyard-one-end-30mm-manual" id="right-super-lanyard-manual"></div>
+    <div class="center-super-lanyard-one-end-30mm-manual" id="center-super-lanyard-manual"></div>
+  </div>
 </section>
 
 <script src="../../views/assets/js/customize-lanyard/sections2/preview-manual.js" type="text/javascript"></script>
