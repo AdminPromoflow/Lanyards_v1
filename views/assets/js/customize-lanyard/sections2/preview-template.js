@@ -70,7 +70,6 @@ class PreviewTemplate {
   // Apply styles for the "no-attachment" case based on width
   applyNoAttachmentStyles(width) {
 
-
     // Add appropriate classes based on the width
     switch (width) {
       case "10mm":
@@ -91,7 +90,6 @@ class PreviewTemplate {
       default:
         console.warn("Unrecognised width in 'no-attachment' mode:", width);
     }
-
 
     console.log(`Styles applied: no-attachment - ${width} `);
   }
