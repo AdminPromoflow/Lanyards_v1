@@ -1,5 +1,6 @@
 class PreviewManual {
   constructor() {
+    this.previewManualSection = document.getElementById("preview-manual-section");
 
   }
   togglePreviewManualClass(action) {
@@ -7,5 +8,4 @@ class PreviewManual {
   }
 }
 
-const previewManualSection = document.getElementById("preview-manual-section");
 const previewManual = new PreviewManual();
