@@ -16,6 +16,7 @@ class BackgroundClass {
     opacityOptionBackgroundSelected[0].style.display = "none";
     opacityOptionBackgroundSelected[1].style.display = "block";
 
+    const selectedMaterial = material.getMaterialSelected();
 
     // Attach click event listeners to all select type background color elements.
     for (let i = 0; i < selectTypeBackgroundColour.length; i++) {
