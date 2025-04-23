@@ -2,6 +2,6 @@
 <section id="preview-manual-section">
   <h1>Hola</h1>
 </section>
-<script src="views/assets/js/customize-lanyard/sections2/preview-manual.js" type="text/javascript">
+<script src="../../views/assets/js/customize-lanyard/sections2/preview-manual.js" type="text/javascript">
 
 </script>
