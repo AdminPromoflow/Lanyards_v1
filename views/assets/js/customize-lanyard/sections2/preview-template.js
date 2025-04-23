@@ -11,9 +11,9 @@ class PreviewTemplate {
     };
 
     this.manualElements = {
-        left: document.getElementById("left-super-lanyard"),
-        right: document.getElementById("right-super-lanyard"),
-        center: document.getElementById("center-super-lanyard")
+        left: document.getElementById("left-super-lanyard-manual"),
+        right: document.getElementById("right-super-lanyard-manual"),
+        center: document.getElementById("center-super-lanyard-manual")
     };
 
 
