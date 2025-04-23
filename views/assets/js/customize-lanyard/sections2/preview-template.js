@@ -1,6 +1,6 @@
 class PreviewTemplate {
   constructor() {
-    // Define the elements for preview, manual, and artwork containers and their child elements
+    // Define the elements for preview, manual, and artwork containers, along with their child elements
     document.addEventListener("DOMContentLoaded", () => {
           this.elements = {
             left: document.getElementById("left-super-lanyard"),
@@ -18,9 +18,12 @@ class PreviewTemplate {
           };
         });
 
-
     // Store the main preview container element
     this.previewContainer = document.getElementById("preview-template-class");
+  }
+
+  getElements() {
+    return this.elements;
   }
 
   // Toggles the visibility of the preview container
@@ -44,32 +47,31 @@ class PreviewTemplate {
     else if (artworkManualSelected == "artwork") {
       //previewArtwork.togglePreviewManualClass(action);
       previewManual.togglePreviewManualClass("none");
-
     }
-
   }
 
-  // Activates the appropriate template based on selected lanyard type, width, and attachment mode
+  // Activates the appropriate template based on the selected lanyard type, width, and attachment mode
   activateTemplate() {
-    const type = oneTwoEndsClass.getTypeLanyardSelected(); // Get the selected lanyard type
-    const width = widthClass.getWidthSelected(); // Get the selected width
-    const attachment = attachmentClass.getAttachmentSelected(); // Get the selected attachment mode
+    const type = oneTwoEndsClass.getTypeLanyardSelected(); // Retrieve the selected lanyard type
+    const width = widthClass.getWidthSelected(); // Retrieve the selected width
+    const attachment = attachmentClass.getAttachmentSelected(); // Retrieve the selected attachment mode
 
-    this.cleanStyle(); // Clear any existing styles before applying new ones
+    this.cleanStyle(); // Clear any existing inline styles or classes
     this.cleanStyleManual();
-    // Apply styles based on lanyard type and attachment mode
+
+    // Apply new styles based on the lanyard configuration
     if (type === "one-end") {
       if (attachment === "none" || attachment === "None") {
-        this.applyNoAttachmentStyles(width); // Apply no-attachment styles
+        this.applyNoAttachmentStyles(width); // Apply styles for lanyards without attachments
       } else {
-        this.applyWithAttachmentStyles(width); // Apply with-attachment styles
+        this.applyWithAttachmentStyles(width); // Apply styles for lanyards with attachments
       }
     } else if (type === "two-end") {
-      this.applyTwoEndStyles(width); // Apply two-end styles
+      this.applyTwoEndStyles(width); // Apply styles for two-ended lanyards
     }
   }
 
-  // Removes inline styles and classes from the specified context (preview, manual, or artwork)
+  // Removes any inline styles and resets classes for the preview elements
   cleanStyle() {
     const el = this.elements;
 
@@ -78,15 +80,17 @@ class PreviewTemplate {
         element.removeAttribute("style");
 
         if (["left", "right", "center"].includes(key)) {
-          // Conservar solo la clase 'background-colour'
+          // Retain only the background-colour class
           element.className = "background-colour";
         } else {
-          // Eliminar todas las clases
+          // Remove all CSS classes
           element.className = "";
         }
       }
     });
   }
+
+  // Clears styles and classes for the manual elements
   cleanStyleManual() {
     const elManual = this.manualElements;
 
@@ -97,10 +101,6 @@ class PreviewTemplate {
       }
     });
   }
-
-
-
-
 
   // Apply styles for the "no-attachment" case based on width
   applyNoAttachmentStyles(width) {
@@ -132,7 +132,6 @@ class PreviewTemplate {
     console.log(`Styles applied: no-attachment - ${width}`);
   }
 
-
   // Apply styles for the "with-attachment" case based on width
   applyWithAttachmentStyles(width) {
     switch (width) {
@@ -162,7 +161,6 @@ class PreviewTemplate {
 
     console.log(`Styles applied: with-attachment - ${width}`);
   }
-
 
   // Apply styles for the "two-end" case based on width
   applyTwoEndStyles(width) {
@@ -194,26 +192,26 @@ class PreviewTemplate {
     console.log(`Styles applied: two-end - ${width}`);
   }
 
-
-  // Helper function to add CSS classes to left, right, and centre elements
+  // Helper method to apply CSS classes to the main lanyard parts (left, right, centre, and clips)
   applyClassToGroup(leftClass = "", rightClass = "", centerClass = "", topLeftClip = "", topRightClip = "") {
     const el = this.elements;
 
-    // Add classes to left, right, center, top-left, and top-right if provided
+    // Apply CSS classes if specified
     if (leftClass) el.left.classList.add(leftClass);
     if (rightClass) el.right.classList.add(rightClass);
     if (centerClass) el.center.classList.add(centerClass);
     if (topLeftClip) el.top_left_clip.classList.add(topLeftClip);
     if (topRightClip) el.top_right_clip.classList.add(topRightClip);
   }
+
+  // Helper method to apply CSS classes to the manual preview lanyard parts
   applyClassToManualGroup(leftClass = "", rightClass = "", centerClass = "") {
     const el = this.manualElements;
-
 
     if (leftClass) el.left_manual.classList.add(leftClass);
     if (rightClass) el.right_manual.classList.add(rightClass);
     if (centerClass) el.center_manual.classList.add(centerClass);
   }
-
 }
+
 const previewTemplate = new PreviewTemplate();

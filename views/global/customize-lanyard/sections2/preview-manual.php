@@ -15,7 +15,11 @@ function get_preview_manual_css_version() {
 <section id="preview-manual-section">
   <!-- Manual lanyard layout -->
   <div class="super-lanyard-manual" id="super-lanyard-manual">
-    <div class="" id="left-super-lanyard-manual"></div>
+    <div class="" id="left-super-lanyard-manual">
+      <div class="text">
+
+      </div>
+    </div>
     <div class="" id="right-super-lanyard-manual"></div>
     <div class="" id="center-super-lanyard-manual"></div>
   </div>
