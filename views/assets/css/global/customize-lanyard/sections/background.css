@@ -28,6 +28,12 @@
 .box_background_colour label{
   background: orange;
   width: 80%;
+  display: inline-block;
+}
+.box_background_colour input{
+  background: green;
+  display: inline-block;
+
 }
 .backgroundSection p{
   position: relative;
