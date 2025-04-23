@@ -12,11 +12,14 @@ $jsFile_background = "../../views/assets/js/customize-lanyard/sections/backgroun
 <link rel="stylesheet" href="<?= $cssFile_background ?>?v=<?= asset_version_background($cssFile_background) ?>">
 
 <section class="backgroundSection section">
-  <h2 class="name-section-customize-lanyard">Background</h2>
+  <h2 class="">Background</h2>
   <div class="box_background_colour">
     <!-- Radio option for selecting preset background color -->
-    <input type="radio" class="select-background-colour-option" id="backgroundColourFirstOption" name="option" checked>
-    <label for="backgroundColourFirstOption">Select colour of the background:</label>
+    <div class="option_background_colour">
+      <input type="radio" class="select-background-colour-option" id="backgroundColourFirstOption" name="option" checked>
+      <label for="backgroundColourFirstOption">Select colour of the background:</label>
+    </div>
+
     <div class="opacity-background-option-first-option opacity-option-background-selected"></div>
     <div id="containers_boxes_background" class="containers_boxes_background">
       <div class="container_boxes_background" id="container_boxes_background">
@@ -29,10 +32,10 @@ $jsFile_background = "../../views/assets/js/customize-lanyard/sections/backgroun
 
   <div class="box_background_colour">
     <!-- Radio option for customizing background color if not in stock -->
-
-    <label class="screen_print_background_colour" for="backgroundColourSecondOption">
+    <div class="option_background_colour">
       <input type="radio" class="select-background-colour-option  screen_print_background_colour" id="backgroundColourSecondOption" name="option">
-      If your color isn't in stock, customize it for £25 more at checkout:</label>
+      <label class="screen_print_background_colour" for="backgroundColourSecondOption">If your color isn't in stock, customize it for £25 more at checkout:</label>
+    </div>
     <br>
     <div class="opacity-background-option-second-option opacity-option-background-selected screen_print_background_colour"></div>
     <input  class="select-colour-second-option screen_print_background_colour" id="optionColourBackground" type="color" value="#FFFFFF">
