@@ -3,8 +3,9 @@
   /* Manual */
       .super-lanyard-manual{
         position: absolute;
-        top: 0px;
-        left: 0px;
+        top: 10.0%;
+        left: 50%;
+        transform: translateX(-50%);
         height: 7.2cm;
         width: 100px;
         background-color: orange;
