@@ -11,6 +11,13 @@ class PreviewTemplate {
             top_right_clip: document.getElementById("top_right_clip")
           };
 
+          this.manualElements = {
+            left_manual: document.getElementById("left-super-lanyard-manual"),
+            right_manual: document.getElementById("right-super-lanyard-manual"),
+            center_manual: document.getElementById("center-super-lanyard-manual")
+          };
+        });
+
 
     // Store the main preview container element
     this.previewContainer = document.getElementById("preview-template-class");
@@ -49,7 +56,7 @@ class PreviewTemplate {
     const attachment = attachmentClass.getAttachmentSelected(); // Get the selected attachment mode
 
     this.cleanStyle(); // Clear any existing styles before applying new ones
-    previewManual.cleanStyleManual();
+    this.cleanStyleManual();
     // Apply styles based on lanyard type and attachment mode
     if (type === "one-end") {
       if (attachment === "none" || attachment === "None") {
@@ -80,7 +87,16 @@ class PreviewTemplate {
       }
     });
   }
+  cleanStyleManual() {
+    const elManual = this.manualElements;
 
+    Object.values(elManual).forEach(element => {
+      if (element) {
+        element.removeAttribute("style");
+        element.className = "";
+      }
+    });
+  }
 
 
 
@@ -91,23 +107,23 @@ class PreviewTemplate {
     switch (width) {
       case "10mm":
         this.applyClassToGroup("left-super-lanyard-one-end-10mm", "right-super-lanyard-one-end-10mm", "", "top_left_clip-one-end-10mm", "top_right_clip-one-end-10mm");
-        previewManual.applyClassToManualGroup("left-super-lanyard-one-end-10mm-manual", "right-super-lanyard-one-end-10mm-manual", "center-super-lanyard-one-end-10mm-manual");
+        this.applyClassToManualGroup("left-super-lanyard-one-end-10mm-manual", "right-super-lanyard-one-end-10mm-manual", "center-super-lanyard-one-end-10mm-manual");
         break;
       case "15mm":
         this.applyClassToGroup("left-super-lanyard-one-end-15mm", "right-super-lanyard-one-end-15mm", "", "top_left_clip-one-end-15mm", "top_right_clip-one-end-15mm");
-        previewManual.applyClassToManualGroup("left-super-lanyard-one-end-15mm-manual", "right-super-lanyard-one-end-15mm-manual", "center-super-lanyard-one-end-15mm-manual");
+        this.applyClassToManualGroup("left-super-lanyard-one-end-15mm-manual", "right-super-lanyard-one-end-15mm-manual", "center-super-lanyard-one-end-15mm-manual");
         break;
       case "20mm":
         this.applyClassToGroup("left-super-lanyard-one-end-20mm", "right-super-lanyard-one-end-20mm", "", "top_left_clip-one-end-20mm", "top_right_clip-one-end-20mm");
-        previewManual.applyClassToManualGroup("left-super-lanyard-one-end-20mm-manual", "right-super-lanyard-one-end-20mm-manual", "center-super-lanyard-one-end-20mm-manual");
+        this.applyClassToManualGroup("left-super-lanyard-one-end-20mm-manual", "right-super-lanyard-one-end-20mm-manual", "center-super-lanyard-one-end-20mm-manual");
         break;
       case "25mm":
         this.applyClassToGroup("left-super-lanyard-one-end-25mm", "right-super-lanyard-one-end-25mm", "", "top_left_clip-one-end-25mm", "top_right_clip-one-end-25mm");
-        previewManual.applyClassToManualGroup("left-super-lanyard-one-end-25mm-manual", "right-super-lanyard-one-end-25mm-manual", "center-super-lanyard-one-end-25mm-manual");
+        this.applyClassToManualGroup("left-super-lanyard-one-end-25mm-manual", "right-super-lanyard-one-end-25mm-manual", "center-super-lanyard-one-end-25mm-manual");
         break;
       case "30mm":
         this.applyClassToGroup("left-super-lanyard-one-end-30mm", "right-super-lanyard-one-end-30mm", "", "top_left_clip-one-end-30mm", "top_right_clip-one-end-30mm");
-        previewManual.applyClassToManualGroup("left-super-lanyard-one-end-30mm-manual", "right-super-lanyard-one-end-30mm-manual", "center-super-lanyard-one-end-30mm-manual");
+        this.applyClassToManualGroup("left-super-lanyard-one-end-30mm-manual", "right-super-lanyard-one-end-30mm-manual", "center-super-lanyard-one-end-30mm-manual");
         break;
       default:
         console.warn("Unrecognised width in 'no-attachment' mode:", width);
@@ -122,23 +138,23 @@ class PreviewTemplate {
     switch (width) {
       case "10mm":
         this.applyClassToGroup("left-super-lanyard-one-end-10mm-attachment", "right-super-lanyard-one-end-10mm-attachment", "center-super-lanyard-one-end-10mm-attachment", "top_left_clip-one-end-10mm-attachment", "top_right_clip-one-end-10mm-attachment");
-        previewManual.applyClassToManualGroup("left-super-lanyard-one-end-10mm-attachment-manual", "right-super-lanyard-one-end-10mm-attachment-manual", "center-super-lanyard-one-end-10mm-attachment-manual");
+        this.applyClassToManualGroup("left-super-lanyard-one-end-10mm-attachment-manual", "right-super-lanyard-one-end-10mm-attachment-manual", "center-super-lanyard-one-end-10mm-attachment-manual");
         break;
       case "15mm":
         this.applyClassToGroup("left-super-lanyard-one-end-15mm-attachment", "right-super-lanyard-one-end-15mm-attachment", "center-super-lanyard-one-end-15mm-attachment", "top_left_clip-one-end-15mm-attachment", "top_right_clip-one-end-15mm-attachment");
-        previewManual.applyClassToManualGroup("left-super-lanyard-one-end-15mm-attachment-manual", "right-super-lanyard-one-end-15mm-attachment-manual", "center-super-lanyard-one-end-15mm-attachment-manual");
+        this.applyClassToManualGroup("left-super-lanyard-one-end-15mm-attachment-manual", "right-super-lanyard-one-end-15mm-attachment-manual", "center-super-lanyard-one-end-15mm-attachment-manual");
         break;
       case "20mm":
         this.applyClassToGroup("left-super-lanyard-one-end-20mm-attachment", "right-super-lanyard-one-end-20mm-attachment", "center-super-lanyard-one-end-20mm-attachment", "top_left_clip-one-end-20mm-attachment", "top_right_clip-one-end-20mm-attachment");
-        previewManual.applyClassToManualGroup("left-super-lanyard-one-end-20mm-attachment-manual", "right-super-lanyard-one-end-20mm-attachment-manual", "center-super-lanyard-one-end-20mm-attachment-manual");
+        this.applyClassToManualGroup("left-super-lanyard-one-end-20mm-attachment-manual", "right-super-lanyard-one-end-20mm-attachment-manual", "center-super-lanyard-one-end-20mm-attachment-manual");
         break;
       case "25mm":
         this.applyClassToGroup("left-super-lanyard-one-end-25mm-attachment", "right-super-lanyard-one-end-25mm-attachment", "center-super-lanyard-one-end-25mm-attachment", "top_left_clip-one-end-25mm-attachment", "top_right_clip-one-end-25mm-attachment");
-        previewManual.applyClassToManualGroup("left-super-lanyard-one-end-25mm-attachment-manual", "right-super-lanyard-one-end-25mm-attachment-manual", "center-super-lanyard-one-end-25mm-attachment-manual");
+        this.applyClassToManualGroup("left-super-lanyard-one-end-25mm-attachment-manual", "right-super-lanyard-one-end-25mm-attachment-manual", "center-super-lanyard-one-end-25mm-attachment-manual");
         break;
       case "30mm":
         this.applyClassToGroup("left-super-lanyard-one-end-30mm-attachment", "right-super-lanyard-one-end-30mm-attachment", "center-super-lanyard-one-end-30mm-attachment", "top_left_clip-one-end-30mm-attachment", "top_right_clip-one-end-30mm-attachment");
-        previewManual.applyClassToManualGroup("left-super-lanyard-one-end-30mm-attachment-manual", "right-super-lanyard-one-end-30mm-attachment-manual", "center-super-lanyard-one-end-30mm-attachment-manual");
+        this.applyClassToManualGroup("left-super-lanyard-one-end-30mm-attachment-manual", "right-super-lanyard-one-end-30mm-attachment-manual", "center-super-lanyard-one-end-30mm-attachment-manual");
         break;
       default:
         console.warn("Unrecognised width in 'with-attachment' mode:", width);
@@ -153,23 +169,23 @@ class PreviewTemplate {
     switch (width) {
       case "10mm":
         this.applyClassToGroup("left-super-lanyard-two-end-10mm", "right-super-lanyard-two-end-10mm", "", "top_left_clip-two-end-10mm", "top_right_clip-two-end-10mm");
-        previewManual.applyClassToManualGroup("left-super-lanyard-two-end-10mm-manual", "right-super-lanyard-two-end-10mm-manual", "center-super-lanyard-two-end-10mm-manual");
+        this.applyClassToManualGroup("left-super-lanyard-two-end-10mm-manual", "right-super-lanyard-two-end-10mm-manual", "center-super-lanyard-two-end-10mm-manual");
         break;
       case "15mm":
         this.applyClassToGroup("left-super-lanyard-two-end-15mm", "right-super-lanyard-two-end-15mm", "", "top_left_clip-two-end-15mm", "top_right_clip-two-end-15mm");
-        previewManual.applyClassToManualGroup("left-super-lanyard-two-end-15mm-manual", "right-super-lanyard-two-end-15mm-manual", "center-super-lanyard-two-end-15mm-manual");
+        this.applyClassToManualGroup("left-super-lanyard-two-end-15mm-manual", "right-super-lanyard-two-end-15mm-manual", "center-super-lanyard-two-end-15mm-manual");
         break;
       case "20mm":
         this.applyClassToGroup("left-super-lanyard-two-end-20mm", "right-super-lanyard-two-end-20mm", "", "top_left_clip-two-end-20mm", "top_right_clip-two-end-20mm");
-        previewManual.applyClassToManualGroup("left-super-lanyard-two-end-20mm-manual", "right-super-lanyard-two-end-20mm-manual", "center-super-lanyard-two-end-20mm-manual");
+        this.applyClassToManualGroup("left-super-lanyard-two-end-20mm-manual", "right-super-lanyard-two-end-20mm-manual", "center-super-lanyard-two-end-20mm-manual");
         break;
       case "25mm":
         this.applyClassToGroup("left-super-lanyard-two-end-25mm", "right-super-lanyard-two-end-25mm", "", "top_left_clip-two-end-25mm", "top_right_clip-two-end-25mm");
-        previewManual.applyClassToManualGroup("left-super-lanyard-two-end-25mm-manual", "right-super-lanyard-two-end-25mm-manual", "center-super-lanyard-two-end-25mm-manual");
+        this.applyClassToManualGroup("left-super-lanyard-two-end-25mm-manual", "right-super-lanyard-two-end-25mm-manual", "center-super-lanyard-two-end-25mm-manual");
         break;
       case "30mm":
         this.applyClassToGroup("left-super-lanyard-two-end-30mm", "right-super-lanyard-two-end-30mm", "", "top_left_clip-two-end-30mm", "top_right_clip-two-end-30mm");
-        previewManual.applyClassToManualGroup("left-super-lanyard-two-end-30mm-manual", "right-super-lanyard-two-end-30mm-manual", "center-super-lanyard-two-end-30mm-manual");
+        this.applyClassToManualGroup("left-super-lanyard-two-end-30mm-manual", "right-super-lanyard-two-end-30mm-manual", "center-super-lanyard-two-end-30mm-manual");
         break;
       default:
         console.warn("Unrecognised width in 'two-end' mode:", width);
@@ -190,7 +206,14 @@ class PreviewTemplate {
     if (topLeftClip) el.top_left_clip.classList.add(topLeftClip);
     if (topRightClip) el.top_right_clip.classList.add(topRightClip);
   }
+  applyClassToManualGroup(leftClass = "", rightClass = "", centerClass = "") {
+    const el = this.manualElements;
 
+
+    if (leftClass) el.left_manual.classList.add(leftClass);
+    if (rightClass) el.right_manual.classList.add(rightClass);
+    if (centerClass) el.center_manual.classList.add(centerClass);
+  }
 
 }
 const previewTemplate = new PreviewTemplate();
