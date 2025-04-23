@@ -25,7 +25,7 @@ class BackgroundClass {
         if (i == 0) {
           backgroundClass.changeBackgroundColourSelectedFirstOption();
           opacityOptionBackgroundSelected[0].style.display = "none";
-          if (selectedMaterial == "Tubular" || selectedMaterial == "Ribbed Polyester" || selectedMaterial == "RPET Polyester" ) {
+          if (selectedMaterial == "Dye Sub polyester" || selectedMaterial == "Dye Sub RPET") {
            opacityOptionBackgroundSelected[1].style.display = "block";
           }
 
