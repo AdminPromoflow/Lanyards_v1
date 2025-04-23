@@ -505,9 +505,7 @@
 
 .text-lanyard{
   width: 100%;
-  transform: rotate(-90deg) translateX(-100%);
-  transform-origin: top left;
-
+  min-height: 40px;
   background: orange
 }
 
