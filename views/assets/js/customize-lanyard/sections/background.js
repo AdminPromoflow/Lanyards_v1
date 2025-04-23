@@ -24,7 +24,9 @@ class BackgroundClass {
         if (i == 0) {
           backgroundClass.changeBackgroundColourSelectedFirstOption();
           opacityOptionBackgroundSelected[0].style.display = "none";
-          opacityOptionBackgroundSelected[1].style.display = "block";
+          if (selectedMaterial == "Tubular" || selectedMaterial == "Ribbed Polyester" || selectedMaterial == "RPET Polyester" ) {
+           opacityOptionBackgroundSelected[1].style.display = "block";
+          }
 
         } else {
           backgroundClass.changeBackgroundColourSelectedSecondOption();
