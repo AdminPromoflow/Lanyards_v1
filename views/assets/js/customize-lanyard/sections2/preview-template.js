@@ -1,20 +1,22 @@
 class PreviewTemplate {
   constructor() {
     // Define the elements for preview, manual, and artwork containers and their child elements
-    this.elements = {
-        left: document.getElementById("left-super-lanyard"),
-        right: document.getElementById("right-super-lanyard"),
-        center: document.getElementById("center-super-lanyard"),
-        container: document.getElementById("super-lanyard"),
-        top_left_clip: document.getElementById("top_left_clip"),
-        top_right_clip: document.getElementById("top_right_clip")
-    };
+    document.addEventListener("DOMContentLoaded", () => {
+          this.elements = {
+            left: document.getElementById("left-super-lanyard"),
+            right: document.getElementById("right-super-lanyard"),
+            center: document.getElementById("center-super-lanyard"),
+            container: document.getElementById("super-lanyard"),
+            top_left_clip: document.getElementById("top_left_clip"),
+            top_right_clip: document.getElementById("top_right_clip")
+          };
 
-    this.manualElements = {
-        left_manual: document.getElementById("left-super-lanyard-manual"),
-        right_manual: document.getElementById("right-super-lanyard-manual"),
-        center_manual: document.getElementById("center-super-lanyard-manual")
-    };
+          this.manualElements = {
+            left_manual: document.getElementById("left-super-lanyard-manual"),
+            right_manual: document.getElementById("right-super-lanyard-manual"),
+            center_manual: document.getElementById("center-super-lanyard-manual")
+          };
+        });
 
 
     // Store the main preview container element
@@ -194,7 +196,6 @@ class PreviewTemplate {
   applyClassToManualGroup(leftClass = "", rightClass = "", centerClass = "") {
     const el = this.manualElements;
 
-    alert(leftClass + "  " + rightClass + "  " + centerClass);
 
     if (leftClass) el.left_manual.classList.add(leftClass);
     if (rightClass) el.right_manual.classList.add(rightClass);
