@@ -1,12 +1,11 @@
 class PreviewManual {
   constructor() {
-    this.previewManualSection = document.getElementById("preview-manual-section");
 
   }
   togglePreviewManualClass(action) {
-    this.previewManualSection.style.display = action;
+    previewManualSection.style.display = action;
   }
 }
-document.addEventListener("DOMContentLoaded", () => {
-  const previewManual = new PreviewManual();
-});
+
+const previewManualSection = document.getElementById("preview-manual-section");
+const previewManual = new PreviewManual();
