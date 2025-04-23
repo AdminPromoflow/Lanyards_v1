@@ -11,9 +11,9 @@ class PreviewTemplate {
     };
 
     this.manualElements = {
-        left: document.getElementById("left-super-lanyard-manual"),
-        right: document.getElementById("right-super-lanyard-manual"),
-        center: document.getElementById("center-super-lanyard-manual")
+        left_manual: document.getElementById("left-super-lanyard-manual"),
+        right_manual: document.getElementById("right-super-lanyard-manual"),
+        center_manual: document.getElementById("center-super-lanyard-manual")
     };
 
 
@@ -195,9 +195,9 @@ class PreviewTemplate {
     const el = this.manualElements;
 
     // Add classes to left, right, and center if provided
-    if (leftClass) el.left.classList.add(leftClass);
-    if (rightClass) el.right.classList.add(rightClass);
-    if (centerClass) el.center.classList.add(centerClass);
+    if (leftClass) el.left_manual.classList.add(leftClass);
+    if (rightClass) el.right_manual.classList.add(rightClass);
+    if (centerClass) el.center_manual.classList.add(centerClass);
   }
 
 }
