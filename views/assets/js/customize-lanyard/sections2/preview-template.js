@@ -194,10 +194,11 @@ class PreviewTemplate {
   applyClassToManualGroup(leftClass = "", rightClass = "", centerClass = "") {
     const el = this.manualElements;
 
+    alert(leftClass + "  " + rightClass + "  " + centerClass);
 
-    if (leftClass && el.left_manual) el.left_manual.classList.add(leftClass);
-    if (rightClass && el.right_manual) el.right_manual.classList.add(rightClass);
-    if (centerClass && el.center_manual) el.center_manual.classList.add(centerClass);
+    if (leftClass) el.left_manual.classList.add(leftClass);
+    if (rightClass) el.right_manual.classList.add(rightClass);
+    if (centerClass) el.center_manual.classList.add(centerClass);
   }
 
 }
