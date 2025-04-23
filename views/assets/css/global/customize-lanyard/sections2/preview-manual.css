@@ -7,7 +7,7 @@
         left: 50%;
         transform: translateX(-50%);
         height: 7.2cm;
-        width: 100px;
+        width: 90px;
         background: rgba(255, 0, 0, 0.2);
       }
 
@@ -67,7 +67,6 @@
         height: 6.08cm;
         width: 0.256cm;
         background: rgba(255, 0, 0, 0.2);
-
         transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
       }
 
@@ -78,13 +77,8 @@
         height: 6.08cm;
         width: 0.256cm;
         background: rgba(255, 0, 0, 0.2);
-
         transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
       }
-
-
-
-
 
 
       /* 25mm */
