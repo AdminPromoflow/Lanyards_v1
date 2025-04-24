@@ -513,7 +513,7 @@
 
 .text-lanyard h1 {
   display: inline-block;
-  transform: rotate(90deg) translate(-100%, 1%);
+  transform: rotate(90deg) translate(-100%, -20%);
   transform-origin: top left;
   margin: 0;
   padding: 0;
