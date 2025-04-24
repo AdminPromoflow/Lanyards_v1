@@ -165,6 +165,8 @@ class BackgroundClass {
 
 
   refreshBackgroundColour(){
+    alert("No se por qué rayos no estamos entrando!!!! hahahhaha");
+
     const screenPrintBackgroundColour = document.querySelectorAll(".screen_print_background_colour");
     const selectedMaterial = material.getMaterialSelected();
 
