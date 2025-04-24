@@ -505,23 +505,23 @@
 
 .text-lanyard {
   display: flex;
-  background: blue;
   flex-direction: column;
-  gap: 15px; /* Espacio entre textos rotados */
-  align-items: flex-start;
+  gap: 20px; /* espacio entre textos rotados */
+  align-items: center; /* <== centrado horizontal */
+  height: 100vh; /* opcional: solo si querés mostrarlo centrado en la pantalla */
+  justify-content: center; /* opcional: centrado vertical */
+  background-color: #f0f0f0;
 }
 
 .text-lanyard h1 {
   display: inline-block;
-  transform: rotate(90deg) translate(-100%, -100%);
+  transform: rotate(90deg) translateY(-100%);
   transform-origin: top left;
   margin: 0;
-  padding: 0;
-
   background-color: lightcoral;
   white-space: nowrap;
-  font-size: 3px;
 }
+
 
 
 
