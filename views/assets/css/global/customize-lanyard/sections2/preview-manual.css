@@ -527,19 +527,16 @@
 
 /* Rotado -90 grados (hacia la izquierda) */
 .rotate--90 {
-  transform: rotate(-90deg) translate(-100%, 50%);
   transform-origin: top left;
 }
 
 /* Rotado 90 grados (hacia la derecha) */
 .rotate-90 {
-  transform: rotate(90deg) skewX(7.5deg) perspective(7.5vw)  translate(0%, -150%);
   transform-origin: top left;
 }
 
 /* Rotado 180 grados (boca abajo) */
 .rotate-180 {
-  transform: rotate(180deg) translate(-100%, -100%);
   transform-origin: top left;
 }
 
