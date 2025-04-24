@@ -507,7 +507,7 @@
 .text-lanyard {
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Espacio entre textos rotados */
+  gap: 50px; /* Espacio entre textos rotados */
   align-items: flex-start;
 }
 
