@@ -175,7 +175,7 @@ class BackgroundClass {
 
       backgroundClass.changeBackgroundColourSelectedFirstOption();
     //  opacityOptionBackgroundSelected[0].style.display = "none";
-      opacityOptionBackgroundSelected[1].style.display = "block";
+      //opacityOptionBackgroundSelected[1].style.display = "block";
       document.getElementById('backgroundColourFirstOption').selected = true;
 
     }
