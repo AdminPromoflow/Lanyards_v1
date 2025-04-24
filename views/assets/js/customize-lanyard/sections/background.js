@@ -23,9 +23,10 @@ class BackgroundClass {
       selectTypeBackgroundColour[i].addEventListener("click", function(){
         // Toggle between the first and second background color option based on the element clicked.
         if (i == 0) {
-          backgroundClass.changeBackgroundColourSelectedFirstOption();
-          opacityOptionBackgroundSelected[0].style.display = "none";
+
           if (selectedMaterial == "Dye Sub polyester" || selectedMaterial == "Dye Sub RPET") {
+            backgroundClass.changeBackgroundColourSelectedFirstOption();
+            opacityOptionBackgroundSelected[0].style.display = "none";
            opacityOptionBackgroundSelected[1].style.display = "block";
           }
 
@@ -41,7 +42,7 @@ class BackgroundClass {
     backgroundColourSecondOption.addEventListener('change', function() {
       // Apply the selected color to the background and update the relevant class property.
       var customPicker = this.value;
-      alert(customPicker);
+
       backgroundClass.setBackgroundColourSelectedSecondOption(customPicker);
       backgroundClass.changeBackgroundColourSelectedSecondOption();
     });
