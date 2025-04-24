@@ -176,11 +176,6 @@ class BackgroundClass {
         screenPrintBackgroundColour[i].style.display = "none";
       }
     }
-
-
-
-
-
   }
   setBackgroundColourToLanyards(){
     const backgroundColour = document.querySelectorAll(".background-colour");
