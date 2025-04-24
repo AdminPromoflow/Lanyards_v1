@@ -511,7 +511,7 @@
   transform: rotate(90deg) translate(-100%, -100%);
   transform-origin: top left;
   background-color: lightcoral;
-  margin: 1px 0;
+  margin: 100% 0;
 }
 
 
