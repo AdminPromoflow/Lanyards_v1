@@ -506,17 +506,16 @@
 .text-lanyard {
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Espacio entre los elementos rotados */
-  background-color: #f0f0f0;
-  padding: 10px;
+  gap: 20px; /* Espacio entre textos rotados */
+  align-items: flex-start;
 }
 
 .text-lanyard h1 {
   display: inline-block;
-  transform: rotate(90deg);
+  transform: rotate(90deg) translateY(-100%);
   transform-origin: top left;
-  background-color: lightcoral;
   margin: 0;
+  background-color: lightcoral;
   white-space: nowrap;
 }
 
