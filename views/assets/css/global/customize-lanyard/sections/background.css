@@ -29,9 +29,15 @@
 .box_background_colour{
   position: relative;
   width: 100%;
+  background-color: orange;
 }
 
-
+.option_background_colour{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
 
 
 
@@ -43,12 +49,7 @@
 
 
 /*
-.option_background_colour{
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-}
+
 .backgroundSection p{
   position: relative;
   text-align: left;
@@ -149,17 +150,17 @@
 
 
 .containers_boxes_background::-webkit-scrollbar {
-    width: 13px; 
+    width: 13px;
 
 .containers_boxes_background::-webkit-scrollbar-thumb {
-    background: #091d2c; 
-    border-radius: 5px; 
-    border: 1px solid rgba(255, 255, 255, .5); 
+    background: #091d2c;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, .5);
 }
 
 .containers_boxes_background::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, .4); 
-    border-radius: 10px; 
+    background: rgba(255, 255, 255, .4);
+    border-radius: 10px;
 }
 
 .containers_boxes_background::-webkit-scrollbar-thumb:hover {
