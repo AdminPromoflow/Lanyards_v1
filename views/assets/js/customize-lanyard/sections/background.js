@@ -184,6 +184,7 @@ class BackgroundClass {
   }
   setBackgroundColour(){
     const backgroundColour = document.querySelectorAll(".background-colour");
+    alert(this.getBackground());
 
     for (var i = 0; i < backgroundColour.length; i++) {
       backgroundColour[i].style.display = this.getBackground();
