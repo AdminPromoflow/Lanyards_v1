@@ -17,12 +17,12 @@ function get_preview_manual_css_version() {
   <div class="super-lanyard-manual" id="super-lanyard-manual">
     <div class="" id="left-super-lanyard-manual">
       <div class="text-lanyard">
-        <h1>hola1</h1>
-        <h1>hola2</h1>
-        <h1>hola3</h1>
-        <h1>hola1</h1>
-        <h1>hola2</h1>
-        <h1>hola3</h1>
+        <h class="rotate-0 ">hola1</h1>
+        <h class="rotate-0 ">hola2</h1>
+        <h class="rotate-0 ">hola3</h1>
+        <h class="rotate-0 ">hola4</h1>
+        <h class="rotate-0 ">hola5</h1>
+        <h class="rotate-0 ">hola6</h1>
       </div>
     </div>
     <div class="" id="right-super-lanyard-manual"></div>
