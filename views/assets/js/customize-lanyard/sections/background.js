@@ -105,6 +105,8 @@ class BackgroundClass {
   // Set the first selected background color.
   setBackgroundColourSelectedFirstOption(value) {
     this.backgroundColourSelectedFirstOption = value;
+    this.setBackground(value) ;
+
   }
 
   // Retrieve the first selected background color.
@@ -115,6 +117,7 @@ class BackgroundClass {
   // Set the second selected background color.
   setBackgroundColourSelectedSecondOption(value) {
     this.backgroundColourSelectedSecondOption = value;
+    this.setBackground(value) ;
   }
 
   // Retrieve the second selected background color.
@@ -158,10 +161,7 @@ class BackgroundClass {
     }
   }
 
-  // Set the background value.
-  setBackground(value) {
-      this.background = value;
-  }
+
   refreshBackgroundColour(){
     const screenPrintBackgroundColour = document.querySelectorAll(".screen_print_background_colour");
     const selectedMaterial = material.getMaterialSelected();
@@ -182,7 +182,7 @@ class BackgroundClass {
 
 
   }
-  setBackgroundColour(){
+  setBackgroundColourToLanyards(){
     const backgroundColour = document.querySelectorAll(".background-colour");
     alert(this.getBackground());
 
@@ -194,6 +194,10 @@ class BackgroundClass {
   // Retrieve the background value.
   getBackground() {
       return this.background;
+  }
+  // Set the background value.
+  setBackground(value) {
+      this.background = value;
   }
 }
 

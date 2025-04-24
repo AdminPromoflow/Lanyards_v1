@@ -88,7 +88,7 @@ class PreviewTemplate {
         }
       }
     });
-    backgroundClass.setBackgroundColour();
+    backgroundClass.setBackgroundColourToLanyards();
 
 
   }
