@@ -13,7 +13,7 @@ class AttachmentClass {
   refreshAttachment(){
     attachmentClass.showSelectedAttachment();
   //  previewTemplate.activateTemplate();
-    //attachmentPreviewClass.activateTemplate();
+    attachmentPreviewClass.activateTemplate();
   }
 
   showSelectedAttachment() {
