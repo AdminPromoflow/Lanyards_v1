@@ -8,7 +8,7 @@
         transform: translateX(-50%);
         height: 7.2cm;
         width: 100px;
-      }
+}
 
       /* 10mm */
       .left-super-lanyard-one-end-10mm-manual {
@@ -20,7 +20,7 @@
         background-color: rgba(0, 255, 0, 1);
         transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
         overflow: hidden;
-      }
+}
 
       .right-super-lanyard-one-end-10mm-manual {
         position: absolute;
@@ -31,7 +31,7 @@
         background-color: rgba(0, 255, 0, 1);
         transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
         overflow: hidden;
-      }
+}
 
       /* 15mm */
       .left-super-lanyard-one-end-15mm-manual {
@@ -42,7 +42,8 @@
         width: 0.176cm;
         background-color: rgba(0, 255, 0, 1);
         transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
-      }
+        overflow: hidden;
+}
 
       .right-super-lanyard-one-end-15mm-manual {
         position: absolute;
@@ -52,7 +53,8 @@
         width: 0.176cm;
         background-color: rgba(0, 255, 0, 1);
         transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
-      }
+        overflow: hidden;
+}
 
 
 
@@ -68,7 +70,8 @@
         width: 0.256cm;
         background-color: rgba(0, 255, 0, 1);
         transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
-      }
+        overflow: hidden;
+}
 
       .right-super-lanyard-one-end-20mm-manual {
         position: absolute;
@@ -78,7 +81,8 @@
         width: 0.256cm;
         background-color: rgba(0, 255, 0, 1);
         transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
-      }
+        overflow: hidden;
+}
 
 
       /* 25mm */
@@ -90,7 +94,8 @@
         width: 0.336cm;
         background-color: rgba(0, 255, 0, 1);
         transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
-      }
+        overflow: hidden;
+}
 
       .right-super-lanyard-one-end-25mm-manual {
         position: absolute;
@@ -100,7 +105,8 @@
         width: 0.336cm;
         background-color: rgba(0, 255, 0, 1);
         transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
-      }
+        overflow: hidden;
+}
 
 
 
@@ -121,6 +127,7 @@
   background-color: white;
 
   transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
+  overflow: hidden;
 }
 
 .right-super-lanyard-one-end-30mm-manual {
@@ -132,6 +139,7 @@
   background-color: white;
 
   transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
+  overflow: hidden;
 }
 
 /**/
@@ -158,6 +166,7 @@
   background-color: white;
 
   transform:   translateY(-50%);
+  overflow: hidden;
 }
 
 .right-super-lanyard-two-end-10mm-manual {
@@ -169,6 +178,7 @@
   background-color: white;
 
   transform:   translateY(-50%);
+  overflow: hidden;
 }
 
 
@@ -182,6 +192,7 @@
   width: 0.176cm;
   background-color: white;
   transform:   translateY(-50%);
+  overflow: hidden;
 }
 
 .right-super-lanyard-two-end-15mm-manual {
@@ -192,6 +203,7 @@
   width: 0.176cm;
   background-color: white;
   transform:   translateY(-50%);
+  overflow: hidden;
 }
 
 
@@ -209,6 +221,7 @@
   background-color: white;
 
   transform:   translateY(-50%);
+overflow: hidden;
 }
 
 .right-super-lanyard-two-end-20mm-manual {
@@ -220,6 +233,7 @@
   background-color: white;
 
   transform:   translateY(-50%);
+overflow: hidden;
 }
 
 
@@ -237,6 +251,7 @@
   background-color: white;
 
   transform:   translateY(-50%);
+overflow: hidden;
 }
 
 .right-super-lanyard-two-end-25mm-manual {
@@ -248,6 +263,7 @@
   background-color: white;
 
   transform:   translateY(-50%);
+overflow: hidden;
 }
 
 
@@ -264,6 +280,7 @@
   background-color: white;
 
   transform:   translateY(-50%);
+overflow: hidden;
 }
 
 .right-super-lanyard-two-end-30mm-manual {
@@ -275,6 +292,7 @@
   background-color: white;
 
   transform:   translateY(-50%);
+overflow: hidden;
 }
 
 
@@ -294,6 +312,7 @@
   border: 1px solid black;
   transform:  skewX(11.3deg) perspective(11.3vw);
   z-index: 0;
+overflow: hidden;
 }
 .right-super-lanyard-one-end-10mm-attachment-manual{
   position: absolute;
@@ -305,6 +324,7 @@
   border: 1px solid black;
   transform:  skewX(-11.3deg) perspective(11.3vw);
   z-index: 0;
+overflow: hidden;
 }
 
 .center-super-lanyard-one-end-10mm-attachment-manual{
@@ -318,6 +338,7 @@
   border: 1px solid black;
   z-index: 0;
   overflow: hidden;
+overflow: hidden;
 }
 
 
@@ -337,6 +358,7 @@
   background-color: purple;
   border: 1px solid black;
   z-index: 0;
+overflow: hidden;
 }
 .left-super-lanyard-one-end-15mm-attachment-manual{
   position: absolute;
@@ -348,6 +370,7 @@
   border: 1px solid black;
   transform:  skewX(11.3deg) perspective(11.3vw);
   z-index: 0;
+overflow: hidden;
 }
 .right-super-lanyard-one-end-15mm-attachment-manual{
   position: absolute;
@@ -359,6 +382,7 @@
   border: 1px solid black;
   transform:  skewX(-11.3deg) perspective(11.3vw);
   z-index: 0;
+overflow: hidden;
 }
 
 
@@ -383,6 +407,7 @@
   background-color: purple;
   border: 1px solid black;
   z-index: 0;
+overflow: hidden;
 }
 .left-super-lanyard-one-end-20mm-attachment-manual{
   position: absolute;
@@ -394,6 +419,7 @@
   border: 1px solid black;
   transform:  skewX(11.3deg) perspective(11.3vw);
   z-index: 0;
+overflow: hidden;
 }
 .right-super-lanyard-one-end-20mm-attachment-manual{
   position: absolute;
@@ -405,6 +431,7 @@
   border: 1px solid black;
   transform:  skewX(-11.3deg) perspective(11.3vw);
   z-index: 0;
+overflow: hidden;
 }
 
 
@@ -431,6 +458,7 @@
   background-color: purple;
   border: 1px solid black;
   z-index: 0;
+overflow: hidden;
 }
 .left-super-lanyard-one-end-25mm-attachment-manual{
   position: absolute;
@@ -442,6 +470,7 @@
   border: 1px solid black;
   transform:  skewX(11.3deg) perspective(11.3vw);
   z-index: 0;
+overflow: hidden;
 }
 .right-super-lanyard-one-end-25mm-attachment-manual{
   position: absolute;
@@ -453,6 +482,7 @@
   border: 1px solid black;
   transform:  skewX(-11.3deg) perspective(11.3vw);
   z-index: 0;
+overflow: hidden;
 }
 
 
@@ -477,6 +507,7 @@
   background-color: purple;
   border: 1px solid black;
   z-index: 0;
+overflow: hidden;
 }
 .left-super-lanyard-one-end-30mm-attachment-manual{
   position: absolute;
@@ -488,6 +519,7 @@
   border: 1px solid black;
   transform:  skewX(11.3deg) perspective(11.3vw);
   z-index: 0;
+overflow: hidden;
 }
 .right-super-lanyard-one-end-30mm-attachment-manual{
   position: absolute;
@@ -499,6 +531,7 @@
   border: 1px solid black;
   transform:  skewX(-11.3deg) perspective(11.3vw);
   z-index: 0;
+overflow: hidden;
 }
 /**/
 
