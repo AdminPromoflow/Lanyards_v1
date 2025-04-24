@@ -12,8 +12,8 @@ class AttachmentClass {
 
   refreshAttachment(){
     attachmentClass.showSelectedAttachment();
-    previewTemplate.activateTemplate();
-    attachmentPreviewClass.activateTemplate();
+  //  previewTemplate.activateTemplate();
+    //attachmentPreviewClass.activateTemplate();
   }
 
   showSelectedAttachment() {
