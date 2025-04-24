@@ -124,7 +124,7 @@
   left: 39.6%;
   height: 6.08cm;
   width: 0.416cm;
-  background-color: white;
+
 
   transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
   overflow: hidden;
@@ -136,7 +136,7 @@
   right: 39.6%;
   height: 6.08cm;
   width: 0.416cm;
-  background-color: white;
+
 
   transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
   overflow: hidden;
@@ -163,7 +163,7 @@
   left: 11.2%;
   height: 6.08cm;
   width: 0.096cm;
-  background-color: white;
+
 
   transform:   translateY(-50%);
   overflow: hidden;
@@ -175,7 +175,7 @@
   right: 11.2%;
   height: 6.08cm;
   width: 0.096cm;
-  background-color: white;
+
 
   transform:   translateY(-50%);
   overflow: hidden;
@@ -190,7 +190,7 @@
   left: 11.4%;
   height: 6.08cm;
   width: 0.176cm;
-  background-color: white;
+
   transform:   translateY(-50%);
   overflow: hidden;
 }
@@ -201,7 +201,7 @@
   right: 11.4%;
   height: 6.08cm;
   width: 0.176cm;
-  background-color: white;
+
   transform:   translateY(-50%);
   overflow: hidden;
 }
@@ -218,7 +218,7 @@
   left: 11.1%;
   height: 6.08cm;
   width: 0.256cm;
-  background-color: white;
+
 
   transform:   translateY(-50%);
 overflow: hidden;
@@ -230,7 +230,7 @@ overflow: hidden;
   right: 11.1%;;
   height: 6.08cm;
   width: 0.256cm;
-  background-color: white;
+
 
   transform:   translateY(-50%);
 overflow: hidden;
@@ -248,7 +248,7 @@ overflow: hidden;
   left: 11.1%;
   height: 6.08cm;
   width: 0.336cm;
-  background-color: white;
+
 
   transform:   translateY(-50%);
 overflow: hidden;
@@ -260,7 +260,7 @@ overflow: hidden;
   right: 11.1%;
   height: 6.08cm;
   width: 0.336cm;
-  background-color: white;
+
 
   transform:   translateY(-50%);
 overflow: hidden;
@@ -277,7 +277,7 @@ overflow: hidden;
   left: 11%;
   height: 6.08cm;
   width: 0.416cm;
-  background-color: white;
+
 
   transform:   translateY(-50%);
 overflow: hidden;
@@ -289,7 +289,7 @@ overflow: hidden;
   right: 11%;
   height: 6.08cm;
   width: 0.416cm;
-  background-color: white;
+
 
   transform:   translateY(-50%);
 overflow: hidden;
@@ -308,7 +308,7 @@ overflow: hidden;
   width: 0.096cm;
   top: 0.56cm;
   left: 32.2%;
-  background-color: purple;
+
   border: 1px solid black;
   transform:  skewX(11.3deg) perspective(11.3vw);
   z-index: 0;
@@ -320,7 +320,7 @@ overflow: hidden;
   width: 0.096cm;
   top: 0.56cm;
   right: 32.2%;
-  background-color: purple;
+
   border: 1px solid black;
   transform:  skewX(-11.3deg) perspective(11.3vw);
   z-index: 0;
@@ -333,7 +333,7 @@ overflow: hidden;
   width: 0.096cm;
   bottom: 0.56cm;
   left: 50%;
-  background-color: purple;
+
   transform: translateX(-50%);
   border: 1px solid black;
   z-index: 0;
@@ -355,7 +355,7 @@ overflow: hidden;
   bottom: 0.56cm;
   left: 50%;
   transform: translateX(-50%);
-  background-color: purple;
+
   border: 1px solid black;
   z-index: 0;
 overflow: hidden;
@@ -366,7 +366,7 @@ overflow: hidden;
   width: 0.165cm;
   top: 0.56cm;
   left: 31%;
-  background-color: purple;
+
   border: 1px solid black;
   transform:  skewX(11.3deg) perspective(11.3vw);
   z-index: 0;
@@ -378,7 +378,7 @@ overflow: hidden;
   width: 0.165cm;
   top: 0.56cm;
   right: 31%;
-  background-color: purple;
+
   border: 1px solid black;
   transform:  skewX(-11.3deg) perspective(11.3vw);
   z-index: 0;
@@ -404,7 +404,7 @@ overflow: hidden;
   bottom: 0.56cm;
   left: 50%;
   transform: translateX(-50%);
-  background-color: purple;
+
   border: 1px solid black;
   z-index: 0;
 overflow: hidden;
@@ -415,7 +415,7 @@ overflow: hidden;
   width: 0.24cm;
   top: 0.56cm;
   left: 29.5%;
-  background-color: purple;
+
   border: 1px solid black;
   transform:  skewX(11.3deg) perspective(11.3vw);
   z-index: 0;
@@ -427,7 +427,7 @@ overflow: hidden;
   width: 0.24cm;
   top: 0.56cm;
   right: 29.5%;
-  background-color: purple;
+
   border: 1px solid black;
   transform:  skewX(-11.3deg) perspective(11.3vw);
   z-index: 0;
@@ -455,7 +455,7 @@ overflow: hidden;
   bottom: 0.56cm;
   left: 50%;
   transform: translateX(-50%);
-  background-color: purple;
+
   border: 1px solid black;
   z-index: 0;
 overflow: hidden;
@@ -466,7 +466,7 @@ overflow: hidden;
   width: 0.315cm;
   top: 0.56cm;
   left: 28.2%;
-  background-color: purple;
+
   border: 1px solid black;
   transform:  skewX(11.3deg) perspective(11.3vw);
   z-index: 0;
@@ -478,7 +478,7 @@ overflow: hidden;
   width: 0.315cm;
   top: 0.56cm;
   right: 28.2%;
-  background-color: purple;
+
   border: 1px solid black;
   transform:  skewX(-11.3deg) perspective(11.3vw);
   z-index: 0;
@@ -504,7 +504,7 @@ overflow: hidden;
   bottom: 0.56cm;
   left: 50%;
   transform: translateX(-50%);
-  background-color: purple;
+
   border: 1px solid black;
   z-index: 0;
 overflow: hidden;
@@ -515,7 +515,7 @@ overflow: hidden;
   width: 0.39cm;
   top: 0.56cm;
   left: 26.8%;
-  background-color: purple;
+
   border: 1px solid black;
   transform:  skewX(11.3deg) perspective(11.3vw);
   z-index: 0;
@@ -527,7 +527,7 @@ overflow: hidden;
   width: 0.39cm;
   top: 0.56cm;
   right: 26.8%;
-  background-color: purple;
+
   border: 1px solid black;
   transform:  skewX(-11.3deg) perspective(11.3vw);
   z-index: 0;
