@@ -56,7 +56,7 @@ class PreviewTemplate {
     const width = widthClass.getWidthSelected(); // Retrieve the selected width
     const attachment = attachmentClass.getAttachmentSelected(); // Retrieve the selected attachment mode
 
-  //  this.cleanStyle(); // Clear any existing inline styles or classes
+    this.cleanStyle(); // Clear any existing inline styles or classes
     this.cleanStyleManual();
 
     // Apply new styles based on the lanyard configuration
