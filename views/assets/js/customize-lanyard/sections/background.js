@@ -165,7 +165,6 @@ class BackgroundClass {
 
 
   refreshBackgroundColour(){
-    alert("No se por qué rayos no estamos entrando!!!! hahahhaha");
 
     const screenPrintBackgroundColour = document.querySelectorAll(".screen_print_background_colour");
     const selectedMaterial = material.getMaterialSelected();
@@ -174,12 +173,7 @@ class BackgroundClass {
       for (var i = 0; i < screenPrintBackgroundColour.length; i++) {
         screenPrintBackgroundColour[i].style.display = "block";
       }
-      document.getElementById('backgroundColourFirstOption').selected = true;
 
-      backgroundClass.setBackgroundColourSelectedSecondOption(this.getBackgroundColourSelectedFirstOption());
-
-      backgroundClass.changeBackgroundColourSelectedFirstOption();
-      alert("que hijuemadres");
     //  opacityOptionBackgroundSelected[0].style.display = "none";
       //opacityOptionBackgroundSelected[1].style.display = "block";
 
@@ -187,7 +181,15 @@ class BackgroundClass {
     else if (selectedMaterial == "Dye Sub polyester" || selectedMaterial == "Dye Sub RPET") {
       for (var i = 0; i < screenPrintBackgroundColour.length; i++) {
         screenPrintBackgroundColour[i].style.display = "none";
+
       }
+
+      document.getElementById('backgroundColourFirstOption').selected = true;
+
+      backgroundClass.setBackgroundColourSelectedSecondOption(this.getBackgroundColourSelectedFirstOption());
+
+      backgroundClass.changeBackgroundColourSelectedFirstOption();
+      alert("que hijuemadres");
     }
   }
   setBackgroundColourToLanyards(){
