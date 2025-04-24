@@ -178,6 +178,16 @@ class BackgroundClass {
     }
 
 
+
+
+
+  }
+  setBackgroundColour(){
+    const backgroundColour = document.querySelectorAll(".background-colour");
+
+    for (var i = 0; i < backgroundColour.length; i++) {
+      backgroundColour[i].style.display = this.getBackground();
+    }
   }
 
   // Retrieve the background value.

@@ -88,6 +88,9 @@ class PreviewTemplate {
         }
       }
     });
+    backgroundClass.setBackgroundColour();
+
+
   }
 
   // Clears styles and classes for the manual elements
