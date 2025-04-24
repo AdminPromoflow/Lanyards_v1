@@ -28,8 +28,6 @@ class BackgroundClass {
             backgroundClass.changeBackgroundColourSelectedFirstOption();
             opacityOptionBackgroundSelected[0].style.display = "none";
            opacityOptionBackgroundSelected[1].style.display = "block";
-           document.getElementById('backgroundColourFirstOption').selected = true;
-
           }
 
         } else {
@@ -174,6 +172,12 @@ class BackgroundClass {
       for (var i = 0; i < screenPrintBackgroundColour.length; i++) {
         screenPrintBackgroundColour[i].style.display = "block";
       }
+
+      backgroundClass.changeBackgroundColourSelectedFirstOption();
+      opacityOptionBackgroundSelected[0].style.display = "none";
+      opacityOptionBackgroundSelected[1].style.display = "block";
+      document.getElementById('backgroundColourFirstOption').selected = true;
+
     }
     else if (selectedMaterial == "Dye Sub polyester" || selectedMaterial == "Dye Sub RPET") {
       for (var i = 0; i < screenPrintBackgroundColour.length; i++) {
