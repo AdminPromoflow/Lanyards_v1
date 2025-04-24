@@ -506,7 +506,7 @@
 .text-lanyard {
   display: flex;
   flex-direction: column;
-  gap: 30px; /* espacio entre textos rotados */
+  gap: 20px; /* espacio entre textos rotados */
   align-items: center; /* <== centrado horizontal */
   justify-content: center; /* opcional: centrado vertical */
   background-color: black;
@@ -514,7 +514,7 @@
 
 .text-lanyard h1 {
   display: inline-block;
-  transform: rotate(-90deg) translate(-100%, 50%);
+  transform: rotate(90deg) translate(-100%, -100%);
   transform-origin: top left;
   margin: 0;
   padding: 0;
