@@ -184,7 +184,6 @@ class BackgroundClass {
   }
   setBackgroundColourToLanyards(){
     const backgroundColour = document.querySelectorAll(".background-colour");
-    alert(this.getBackground());
 
     for (var i = 0; i < backgroundColour.length; i++) {
       backgroundColour[i].style.background = this.getBackground();
