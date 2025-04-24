@@ -187,7 +187,7 @@ class BackgroundClass {
     alert(this.getBackground());
 
     for (var i = 0; i < backgroundColour.length; i++) {
-      backgroundColour[i].style.display = this.getBackground();
+      backgroundColour[i].style.background = this.getBackground();
     }
   }
 
