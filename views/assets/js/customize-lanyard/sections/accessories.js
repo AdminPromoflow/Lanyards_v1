@@ -40,22 +40,7 @@ class Accessories {
    }
 
    // Resalta el primer div dentro del subcontenedor seleccionado con un borde blanco
-  // subcontainersBoxesAccessories[i].querySelector("div").style.border = "2px solid white";
 
-   // Determina qué accesorio mostrar en el panel de vista previa según el índice
-   if (i === 1) {
-       //previewAccessoriesClass.showAccessoryOnThePreviewPanel(0);
-   } else if (i === 2) {
-       //previewAccessoriesClass.showAccessoryOnThePreviewPanel(3);
-   }
-   else if (i == 3) {
-    // previewAccessoriesClass.showAccessoryOnThePreviewPanel(6);
-
-   }
-   else if (i == 4) {
-    // previewAccessoriesClass.showAccessoryOnThePreviewPanel(11);
-
-   }
 
    // Alterna la visibilidad del subcontenedor seleccionado
    if (subcontainersBoxesAccessories[i].style.display === "flex") {
