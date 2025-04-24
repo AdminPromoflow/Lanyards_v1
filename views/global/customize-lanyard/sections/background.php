@@ -15,8 +15,8 @@ $jsFile_background = "../../views/assets/js/customize-lanyard/sections/backgroun
   <h2 class="">Background</h2>
   <div class="box_background_colour">
     <div class="option_background_colour">
-      <label for="">Hi 1</label>
       <input type="radio" name="option" value="" checked >
+      <label for="">Hi 1</label>
     </div>
   <!--  <div class="option_background_colour">
       <input type="radio" class="select-background-colour-option" id="backgroundColourFirstOption" name="option" checked>
@@ -34,8 +34,8 @@ $jsFile_background = "../../views/assets/js/customize-lanyard/sections/backgroun
 
   <div class="box_background_colour screen_print_background_colour">
     <div class="option_background_colour">
-      <label for="">Hi 2</label>
       <input type="radio" name="option" value="" checked >
+      <label for="">Hi 2</label>
     </div>
   <!--  <div class="option_background_colour">
       <input type="radio" class="select-background-colour-option  " id="backgroundColourSecondOption" name="option">
