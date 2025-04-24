@@ -506,9 +506,9 @@
 .text-lanyard {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  align-items: center;
-  justify-content: center;
+  gap: 30px; /* espacio entre textos rotados */
+  align-items: center; /* <== centrado horizontal */
+  justify-content: center; /* opcional: centrado vertical */
   background-color: black;
 }
 
@@ -518,6 +518,7 @@
   padding: 0;
   white-space: nowrap;
   background-color: lightcoral;
+  white-space: nowrap;
 }
 /* Sin rotación (0 grados) */
 .rotate-0 {
