@@ -1,7 +1,7 @@
 // Define a class to manage background color settings for an application interface.
 class BackgroundClass {
   constructor() {
-    const opacityOptionBackgroundSelected = document.querySelectorAll(".opacity-option-background-selected");
+    /*const opacityOptionBackgroundSelected = document.querySelectorAll(".opacity-option-background-selected");
 
     // Get the DOM element for the personalized background color picker.
     const backgroundColourSecondOption = document.getElementById("optionColourBackground");
@@ -100,7 +100,7 @@ class BackgroundClass {
           'onclick="backgroundClass.handleClickBackgroundColour(\'' + pantoneColors[i].html + '\', ' + i + ')">' +
           '<h3>' + pantoneColors[i].pantone + '</h3>' +
           '</div>';
-    }
+    }*/
 
   }
 
