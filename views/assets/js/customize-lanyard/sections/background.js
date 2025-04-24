@@ -41,6 +41,7 @@ class BackgroundClass {
     backgroundColourSecondOption.addEventListener('change', function() {
       // Apply the selected color to the background and update the relevant class property.
       var customPicker = this.value;
+      alert(customPicker);
       backgroundClass.setBackgroundColourSelectedSecondOption(customPicker);
       backgroundClass.changeBackgroundColourSelectedSecondOption();
     });
@@ -169,6 +170,7 @@ class BackgroundClass {
     if (selectedMaterial == "Tubular" || selectedMaterial == "Ribbed Polyester" || selectedMaterial == "RPET Polyester" ) {
       for (var i = 0; i < screenPrintBackgroundColour.length; i++) {
         screenPrintBackgroundColour[i].style.display = "block";
+        document.getElementById('backgroundColourFirstOption').selected = true;
       }
     }
     else if (selectedMaterial == "Dye Sub polyester" || selectedMaterial == "Dye Sub RPET") {
