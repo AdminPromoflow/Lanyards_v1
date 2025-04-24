@@ -19,6 +19,7 @@
         width: 0.096cm;
         background-color: rgba(0, 255, 0, 1);
         transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
+        overflow: hidden;
       }
 
       .right-super-lanyard-one-end-10mm-manual {
@@ -509,7 +510,6 @@
   gap: 30px; /* espacio entre textos rotados */
   align-items: center; /* <== centrado horizontal */
   justify-content: center; /* opcional: centrado vertical */
-  background-color: black;
 }
 
 .text-lanyard h1 {
