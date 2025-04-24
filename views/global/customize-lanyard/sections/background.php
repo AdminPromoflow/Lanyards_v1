@@ -14,8 +14,7 @@ $jsFile_background = "../../views/assets/js/customize-lanyard/sections/backgroun
 <section class="backgroundSection section">
   <h2 class="">Background</h2>
   <div class="box_background_colour">
-    <!-- Radio option for selecting preset background color -->
-    <div class="option_background_colour">
+  <!--  <div class="option_background_colour">
       <input type="radio" class="select-background-colour-option" id="backgroundColourFirstOption" name="option" checked>
       <label for="backgroundColourFirstOption">Select colour of the background:</label>
     </div>
@@ -23,22 +22,21 @@ $jsFile_background = "../../views/assets/js/customize-lanyard/sections/backgroun
     <div class="opacity-background-option-first-option opacity-option-background-selected"></div>
     <div id="containers_boxes_background" class="containers_boxes_background">
       <div class="container_boxes_background" id="container_boxes_background">
-        <!-- Container where dynamic background colors will be appended -->
       </div>
-    </div>
+    </div>-->
   </div>
 
   <br>
 
   <div class="box_background_colour screen_print_background_colour">
-    <!-- Radio option for customizing background color if not in stock -->
-    <div class="option_background_colour">
+  <!--  <div class="option_background_colour">
       <input type="radio" class="select-background-colour-option  " id="backgroundColourSecondOption" name="option">
       <label class="" for="backgroundColourSecondOption">If your color isn't in stock, customize it for £25 more at checkout:</label>
     </div>
     <br>
     <div class="opacity-background-option-second-option opacity-option-background-selected "></div>
     <input  class="select-colour-second-option " id="optionColourBackground" type="color" value="#FFFFFF">
+  -->
   </div>
 
 </section>

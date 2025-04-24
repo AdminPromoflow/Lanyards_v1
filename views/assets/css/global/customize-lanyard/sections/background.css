@@ -25,6 +25,24 @@
   padding-left: 10px;
   margin: 0px 0 5px 0;
 }
+
+.box_background_colour{
+  position: relative;
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 .option_background_colour{
   position: relative;
   display: flex;
@@ -42,12 +60,8 @@
   padding: 0;
   padding-left: 5px;
 }
-.backgroundSection{
-}
-.box_background_colour{
-  position: relative;
-  width: 100%;
-}
+
+
 
 .containers_boxes_background{
   position: relative;
@@ -80,7 +94,7 @@
   width: 70px;
   border: 2px solid black;
   margin: 5px;
-}/*
+}
 .backgroundFullColours{
   position: relative;
   height: 70px;
@@ -91,7 +105,7 @@
   position: absolute;
   height: 100%;
   width: 100%;
-}*/
+}
 .container_boxes_background h4{
   position: relative;
   color: white;
@@ -133,24 +147,23 @@
   font-size: 0.9em;
 }
 
-/* Estilo para la barra de desplazamiento en WebKit */
+
 .containers_boxes_background::-webkit-scrollbar {
-    width: 13px; /* Ancho de la barra de desplazamiento */
-}
+    width: 13px; 
 
 .containers_boxes_background::-webkit-scrollbar-thumb {
-    background: #091d2c; /* Color azul oscuro para la parte que se mueve */
-    border-radius: 5px; /* Radio de borde para hacerla redondeada */
-    border: 1px solid rgba(255, 255, 255, .5); /* Borde blanco para un contraste mejor */
+    background: #091d2c; 
+    border-radius: 5px; 
+    border: 1px solid rgba(255, 255, 255, .5); 
 }
 
 .containers_boxes_background::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, .4); /* Color gris oscuro para el fondo */
-    border-radius: 10px; /* Radio de borde para hacerla redondeada */
+    background: rgba(255, 255, 255, .4); 
+    border-radius: 10px; 
 }
 
 .containers_boxes_background::-webkit-scrollbar-thumb:hover {
-    background: #132735; /* Color más oscuro cuando el mouse está encima */
+    background: #132735;
 }
 .select-colour-second-option{
   position: relative;
@@ -177,7 +190,7 @@
   left: 0px;
   background-color: rgba(0, 0, 0, .3);
   z-index: 3;
-}
+}*/
 
 
 /**/
