@@ -20,6 +20,9 @@ function get_preview_manual_css_version() {
         <h1>hola1</h1>
         <h1>hola2</h1>
         <h1>hola3</h1>
+        <h1>hola1</h1>
+        <h1>hola2</h1>
+        <h1>hola3</h1>
       </div>
     </div>
     <div class="" id="right-super-lanyard-manual"></div>
