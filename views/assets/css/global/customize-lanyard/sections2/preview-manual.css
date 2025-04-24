@@ -503,15 +503,19 @@
 
 
 
-.text-lanyard{
+.text-lanyard {
   display: inline-block;
+  background-color: #f0f0f0;
+  padding: 10px;
 }
-.text-lanyard h1{
+
+.text-lanyard h1 {
   display: inline-block;
-  transform: rotate(90deg) translate(-100%, -100%);
+  transform: rotate(90deg);
   transform-origin: top left;
   background-color: lightcoral;
-  margin: 40% 0;
+  margin: 0; /* Quitamos el margen para evitar desplazamientos */
+  white-space: nowrap; /* Evita saltos de línea que cambien el tamaño */
 }
 
 
