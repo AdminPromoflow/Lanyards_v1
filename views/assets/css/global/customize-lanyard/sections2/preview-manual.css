@@ -533,7 +533,7 @@
 
 /* Rotado 90 grados (hacia la derecha) */
 .rotate-90 {
-  transform: rotate(90deg) translate(0%, -150%);
+  transform: rotate(90deg) skewX(7.5deg) perspective(7.5vw)  translate(0%, -150%);
   transform-origin: top left;
 }
 
