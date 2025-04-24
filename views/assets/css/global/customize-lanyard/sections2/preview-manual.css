@@ -527,7 +527,7 @@
 
 /* Rotado -90 grados (hacia la izquierda) */
 .rotate--90 {
-  transform: rotate(-90deg) translate(-100%, 50%);
+  transform: rotate(-90deg) translate(-100%, 35%);
   transform-origin: top left;
 }
 
