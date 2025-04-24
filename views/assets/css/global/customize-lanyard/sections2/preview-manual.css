@@ -510,7 +510,7 @@
   align-items: center; /* <== centrado horizontal */
   height: 100vh; /* opcional: solo si querés mostrarlo centrado en la pantalla */
   justify-content: center; /* opcional: centrado vertical */
-  background-color: #f0f0f0;
+  background-color: black;
 }
 
 .text-lanyard h1 {
