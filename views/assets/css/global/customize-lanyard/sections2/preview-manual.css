@@ -504,7 +504,9 @@
 
 
 .text-lanyard {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Espacio entre los elementos rotados */
   background-color: #f0f0f0;
   padding: 10px;
 }
@@ -514,10 +516,9 @@
   transform: rotate(90deg);
   transform-origin: top left;
   background-color: lightcoral;
-  margin: 0; /* Quitamos el margen para evitar desplazamientos */
-  white-space: nowrap; /* Evita saltos de línea que cambien el tamaño */
+  margin: 0;
+  white-space: nowrap;
 }
-
 
 
 
