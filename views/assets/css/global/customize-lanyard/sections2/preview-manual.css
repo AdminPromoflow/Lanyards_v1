@@ -508,7 +508,6 @@
   flex-direction: column;
   gap: 20px; /* espacio entre textos rotados */
   align-items: center; /* <== centrado horizontal */
-  height: 100vh; /* opcional: solo si querés mostrarlo centrado en la pantalla */
   justify-content: center; /* opcional: centrado vertical */
   background-color: black;
 }
