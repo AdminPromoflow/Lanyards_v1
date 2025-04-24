@@ -30,15 +30,15 @@ function get_preview_manual_css_version() {
     </div>
     <div class="" id="right-super-lanyard-manual">
       <div class="text-lanyard">
-        <h1 class="rotate--90 ">hola1</h1>
-        <h1 class="rotate--90 ">hola2</h1>
-        <h1 class="rotate--90 ">hola3</h1>
-        <h1 class="rotate--90 ">hola4</h1>
-        <h1 class="rotate--90 ">hola5</h1>
-        <h1 class="rotate--90 ">hola6</h1>
-        <h1 class="rotate--90 ">hola4</h1>
-        <h1 class="rotate--90 ">hola5</h1>
-        <h1 class="rotate--90 ">hola6</h1>
+        <h1 class="rotate-90 ">hola1</h1>
+        <h1 class="rotate-90 ">hola2</h1>
+        <h1 class="rotate-90 ">hola3</h1>
+        <h1 class="rotate-90 ">hola4</h1>
+        <h1 class="rotate-90 ">hola5</h1>
+        <h1 class="rotate-90 ">hola6</h1>
+        <h1 class="rotate-90 ">hola4</h1>
+        <h1 class="rotate-90 ">hola5</h1>
+        <h1 class="rotate-90 ">hola6</h1>
       </div>
     </div>
     <div class="" id="center-super-lanyard-manual"></div>
