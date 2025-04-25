@@ -10,7 +10,7 @@ class BackgroundClass {
 
     for (let i = 0; i < option_background_colour.length; i++) {
       option_background_colour[i].addEventListener("click", function(){
-        this.activateContainerBackground(i);
+        backgroundClass.activateContainerBackground(i);
       })
     }
 //option.selected = true;
@@ -128,7 +128,7 @@ class BackgroundClass {
         index = i;
       }
     }
-    
+
     containers_boxes_background[index].style.display = "block";
 
   }
