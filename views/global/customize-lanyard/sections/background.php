@@ -19,7 +19,6 @@ $jsFile_background = "../../views/assets/js/customize-lanyard/sections/backgroun
       <label for="option_background_checked_01">Select colour of the background:</label>
     </div>
     <div class="containers_boxes_background" id="container_boxes_background">
-      <h2>hola 1</h2>
     </div>
   <!--  <div class="option_background_colour">
       <input type="radio" class="select-background-colour-option" id="backgroundColourFirstOption" name="option" checked>

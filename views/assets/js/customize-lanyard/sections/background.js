@@ -58,9 +58,8 @@ class BackgroundClass {
 
     for (let i = 0; i < pantoneColors.length; i++) {
       containers_boxes_background[0].innerHTML +=
-          '<div class="pantoneColours" style="background-color:' + pantoneColors[i].html + ';" ' +
-          'onclick="backgroundClass.handleClickBackgroundColour(\'' + pantoneColors[i].html + '\', ' + i + ')">' +
-          '<h3>' + pantoneColors[i].pantone + "hola" + '</h3>' +
+          '<div class="pantoneColours" style="background-color:' + pantoneColors[i].html + ';" ' +'onclick="backgroundClass.handleClickBackgroundColour(\'' + pantoneColors[i].html + '\', ' + i + ')">' +
+            '<h3>' + pantoneColors[i].pantone + '</h3>' +
           '</div>';
     }
 //option.selected = true;
