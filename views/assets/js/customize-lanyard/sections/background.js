@@ -55,9 +55,9 @@ class BackgroundClass {
      { pantone: "478", html: "#6B3300" },
      { pantone: "471", html: "#E6CF6B" }
  ];
- 
+
     for (let i = 0; i < pantoneColors.length; i++) {
-      containerBoxesBackground.innerHTML +=
+      containers_boxes_background.innerHTML +=
           '<div class="pantoneColours" style="background-color:' + pantoneColors[i].html + ';" ' +
           'onclick="backgroundClass.handleClickBackgroundColour(\'' + pantoneColors[i].html + '\', ' + i + ')">' +
           '<h3>' + pantoneColors[i].pantone + '</h3>' +
