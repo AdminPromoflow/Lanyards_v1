@@ -13,7 +13,7 @@ class BackgroundClass {
         if (i == 0) {
           backgroundClass.changeBackgroundColourSelectedFirstOption();
         }
-        else {
+        else if (i == 1) {
           backgroundClass.changeBackgroundColourSelectedSecondOption();
         }
 
