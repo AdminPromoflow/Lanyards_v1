@@ -80,6 +80,31 @@
  }
 
 
+ .pantoneColours{
+   position: relative;
+   width: 106px;
+   padding: 4px 0;
+   margin: 4px;
+   border: 3px solid transparent;
+   background: orange;
+   transition: .4s;
+   box-shadow: 1px 1px 2px rgba(0,0,0,.3);
+ }
+ .pantoneColours:hover{
+   border: 2px solid rgba(0,0,0,.5);
+ }
+ .pantoneColours:active{
+   border: 2px solid rgba(0,0,0,1);
+ }
+ .pantoneColours h3{
+   position: relative;
+   text-align: center;
+   margin: 0;
+   padding: 0;
+   color: black;
+   font-weight: 500;
+   font-size: 0.9em;
+ }
 
 
 
