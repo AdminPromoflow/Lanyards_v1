@@ -41,7 +41,7 @@ $jsFile_background = "../../views/assets/js/customize-lanyard/sections/backgroun
       <label for="option_background_checked_02">If your color isn't in stock, customize it for £25 more at checkout:</label>
     </div>
     <div class="containers_boxes_background">
-      <h2>hola 2</h2>
+      <input  class="select-colour-second-option " id="optionColourBackground" type="color" value="#FFFFFF">
     </div>
   <!--  <div class="option_background_colour">
       <input type="radio" class="select-background-colour-option  " id="backgroundColourSecondOption" name="option">

@@ -104,7 +104,13 @@
    font-weight: 500;
    font-size: 0.9em;
  }
-
+ .select-colour-second-option{
+   position: relative;
+   height: 35px;
+   width: 90px;
+   left: 50%;
+   transform: translateX(-50%);
+ }
 
 
 
@@ -204,13 +210,7 @@
 
 
 
-.select-colour-second-option{
-  position: relative;
-  height: 35px;
-  width: 90px;
-  left: 50%;
-  transform: translateX(-50%);
-}
+
 
 .opacity-background-option-first-option{
   position: absolute;
