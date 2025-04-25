@@ -36,7 +36,7 @@ $jsFile_background = "../../views/assets/js/customize-lanyard/sections/backgroun
 
   <div class="box_background_colour screen_print_background_colour">
     <div class="option_background_colour">
-      <input class="option_background_checked" id="option_background_checked_02" type="radio" name="option" value="1" checked >
+      <input class="option_background_checked" id="option_background_checked_02" type="radio" name="option" value="1"  >
       <label for="option_background_checked_02">If your color isn't in stock, customize it for £25 more at checkout:</label>
     </div>
     <div class="containers_boxes_background">
