@@ -2,10 +2,10 @@
 class BackgroundClass {
   constructor() {
 
-    const containers_boxes_background = document.querySelectorAll(".containers_boxes_background");
+    const option_background_colour = document.querySelectorAll(".option_background_colour");
 
-    for (let i = 0; i < containers_boxes_background.length; i++) {
-      containers_boxes_background[i].addEventListener("click", function(){
+    for (let i = 0; i < option_background_colour.length; i++) {
+      option_background_colour[i].addEventListener("click", function(){
         alert("hjsl");
       })
     }
