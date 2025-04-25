@@ -253,7 +253,7 @@ class BackgroundClass {
 
   refreshBackgroundColour(){
 
-    const screenPrintBackgroundColour = document.querySelectorAll(".screen_print_background_colour");
+  /*  const screenPrintBackgroundColour = document.querySelectorAll(".screen_print_background_colour");
     const selectedMaterial = material.getMaterialSelected();
 
     if (selectedMaterial == "Tubular" || selectedMaterial == "Ribbed Polyester" || selectedMaterial == "RPET Polyester" ) {
@@ -261,8 +261,6 @@ class BackgroundClass {
         screenPrintBackgroundColour[i].style.display = "block";
       }
 
-    //  opacityOptionBackgroundSelected[0].style.display = "none";
-      //opacityOptionBackgroundSelected[1].style.display = "block";
 
     }
     else if (selectedMaterial == "Dye Sub polyester" || selectedMaterial == "Dye Sub RPET") {
@@ -276,7 +274,7 @@ class BackgroundClass {
       backgroundClass.setBackgroundColourSelectedSecondOption(this.getBackgroundColourSelectedFirstOption());
 
       backgroundClass.changeBackgroundColourSelectedFirstOption();
-    }
+    }*/
   }
   setBackgroundColourToLanyards(){
     const backgroundColour = document.querySelectorAll(".background-colour");
