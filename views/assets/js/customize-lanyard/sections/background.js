@@ -62,6 +62,16 @@ class BackgroundClass {
             '<h3>' + pantoneColors[i].pantone + '</h3>' +
           '</div>';
     }
+
+
+    const optionColourBackground = document.getElementById("optionColourBackground");
+    optionColourBackground.addEventListener('change', function() {
+      // Apply the selected color to the background and update the relevant class property.
+      var customPicker = this.value;
+
+      backgroundClass.setBackgroundColourSelectedSecondOption(customPicker);
+      backgroundClass.changeBackgroundColourSelectedSecondOption();
+    });
 //option.selected = true;
 
     /*const opacityOptionBackgroundSelected = document.querySelectorAll(".opacity-option-background-selected");
