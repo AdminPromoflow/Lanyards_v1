@@ -40,8 +40,11 @@
 
 .containers_boxes_background{
   position: relative;
-  width: 100%;
+  width: 95%;
   max-height: 150px;
+
+  left: 50%;
+  transform: translateX(-50%);
 
   overflow-y: scroll;
   overflow-x: hidden;
