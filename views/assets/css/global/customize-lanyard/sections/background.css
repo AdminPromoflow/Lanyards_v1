@@ -39,6 +39,31 @@
   flex-wrap: nowrap;
 }
 
+.containers_boxes_background{
+  position: relative;
+  width: 100%;
+  height: 50%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: green;
+}
+.containers_boxes_background::-webkit-scrollbar {
+    width: 13px;
+
+.containers_boxes_background::-webkit-scrollbar-thumb {
+    background: #091d2c;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, .5);
+}
+
+.containers_boxes_background::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, .4);
+    border-radius: 10px;
+}
+
+.containers_boxes_background::-webkit-scrollbar-thumb:hover {
+    background: #132735;
+}
 
 
 
@@ -64,13 +89,7 @@
 
 
 
-.containers_boxes_background{
-  position: relative;
-  width: 100%;
-  height: 50%;
-  overflow-y: scroll;
-  overflow-x: hidden;
-}
+
 
 .container_boxes_background{
   position: relative;
@@ -149,23 +168,7 @@
 }
 
 
-.containers_boxes_background::-webkit-scrollbar {
-    width: 13px;
 
-.containers_boxes_background::-webkit-scrollbar-thumb {
-    background: #091d2c;
-    border-radius: 5px;
-    border: 1px solid rgba(255, 255, 255, .5);
-}
-
-.containers_boxes_background::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, .4);
-    border-radius: 10px;
-}
-
-.containers_boxes_background::-webkit-scrollbar-thumb:hover {
-    background: #132735;
-}
 .select-colour-second-option{
   position: relative;
   height: 35px;
