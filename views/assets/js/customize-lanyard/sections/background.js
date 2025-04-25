@@ -1,6 +1,16 @@
 // Define a class to manage background color settings for an application interface.
 class BackgroundClass {
   constructor() {
+
+    const containers_boxes_background = document.querySelectorAll(".containers_boxes_background");
+
+    for (let i = 0; i < containers_boxes_background.length; i++) {
+      containers_boxes_background[i].addEventListener("click", function(){
+        alert("hjsl");
+      })
+    }
+
+
     /*const opacityOptionBackgroundSelected = document.querySelectorAll(".opacity-option-background-selected");
 
     // Get the DOM element for the personalized background color picker.
@@ -189,7 +199,6 @@ class BackgroundClass {
       backgroundClass.setBackgroundColourSelectedSecondOption(this.getBackgroundColourSelectedFirstOption());
 
       backgroundClass.changeBackgroundColourSelectedFirstOption();
-      alert("que hijuemadres");
     }
   }
   setBackgroundColourToLanyards(){
