@@ -10,6 +10,13 @@ class BackgroundClass {
     for (let i = 0; i < option_background_colour.length; i++) {
       option_background_colour[i].addEventListener("click", function(){
         backgroundClass.activateContainerBackground(i);
+        if (i == 0) {
+          backgroundClass.changeBackgroundColourSelectedFirstOption()l
+        }
+        else {
+          backgroundClass.changeBackgroundColourSelectedSecondOption()l
+        }
+
       })
     }
 
@@ -197,6 +204,7 @@ class BackgroundClass {
     if (backgroundContainers[containerIndex]) {
       backgroundContainers[containerIndex].style.display = "flex";
     }
+
   }
 
 
