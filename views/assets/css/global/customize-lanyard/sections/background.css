@@ -47,6 +47,12 @@
   overflow-x: hidden;
   background-color: green;
   padding: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 .containers_boxes_background::-webkit-scrollbar {
     width: 13px;
