@@ -5,11 +5,12 @@ class BackgroundClass {
     const option_background_colour = document.querySelectorAll(".option_background_colour");
     const containers_boxes_background = document.querySelectorAll(".containers_boxes_background");
 
-    for (let i = 0; i < option_background_colour.length; i++) {
-      containers_boxes_background[i].style.display = "none";
+    containers_boxes_background[0].style.display = "block";
 
+
+    for (let i = 0; i < option_background_colour.length; i++) {
       option_background_colour[i].addEventListener("click", function(){
-        containers_boxes_background[i].style.display = "block";
+        this.activateContainerBackground(i);
       })
     }
 //option.selected = true;
@@ -114,6 +115,21 @@ class BackgroundClass {
           '<h3>' + pantoneColors[i].pantone + '</h3>' +
           '</div>';
     }*/
+
+  }
+  activateContainerBackground(container){
+    const containers_boxes_background = document.querySelectorAll(".containers_boxes_background");
+
+    var index;
+
+    for (var i = 0; i < containers_boxes_background.length; i++) {
+      containers_boxes_background[i].style.display = "none";
+      if (container == i) {
+        index = i;
+      }
+    }
+    
+    containers_boxes_background[index].style.display = "block";
 
   }
 
