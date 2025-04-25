@@ -5,7 +5,7 @@ class BackgroundClass {
     const option_background_colour = document.querySelectorAll(".option_background_colour");
     const containers_boxes_background = document.querySelectorAll(".containers_boxes_background");
 
-    containers_boxes_background[0].style.display = "block";
+    containers_boxes_background[0].style.display = "flex";
 
     for (let i = 0; i < option_background_colour.length; i++) {
       option_background_colour[i].addEventListener("click", function(){
@@ -185,7 +185,7 @@ class BackgroundClass {
 
     // If the specified index is valid, display the corresponding container.
     if (backgroundContainers[containerIndex]) {
-      backgroundContainers[containerIndex].style.display = "block";
+      backgroundContainers[containerIndex].style.display = "flex";
     }
   }
 
