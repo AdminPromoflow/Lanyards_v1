@@ -3,13 +3,16 @@ class BackgroundClass {
   constructor() {
 
     const option_background_colour = document.querySelectorAll(".option_background_colour");
+    const option_background_checked = document.querySelectorAll(".option_background_checked");
+
+
 
     for (let i = 0; i < option_background_colour.length; i++) {
       option_background_colour[i].addEventListener("click", function(){
-        alert("hjsl");
+        option_background_checked[i].selected = true;
       })
     }
-
+//option.selected = true;
 
     /*const opacityOptionBackgroundSelected = document.querySelectorAll(".opacity-option-background-selected");
 
