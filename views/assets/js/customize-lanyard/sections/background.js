@@ -3,10 +3,13 @@ class BackgroundClass {
   constructor() {
 
     const option_background_colour = document.querySelectorAll(".option_background_colour");
+    const containers_boxes_background = document.querySelectorAll(".containers_boxes_background");
 
     for (let i = 0; i < option_background_colour.length; i++) {
+      containers_boxes_background[i].style.display = "none";
+
       option_background_colour[i].addEventListener("click", function(){
-      //  alert(i);
+        containers_boxes_background[i].style.display = "block";
       })
     }
 //option.selected = true;
