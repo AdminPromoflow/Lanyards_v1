@@ -6,10 +6,9 @@ class BackgroundClass {
     const option_background_checked = document.querySelectorAll(".option_background_checked");
 
 
-
     for (let i = 0; i < option_background_colour.length; i++) {
       option_background_colour[i].addEventListener("click", function(){
-        option_background_checked[i].selected = true;
+        option_background_checked[i].classList.add('selected');
       //  alert(i);
       })
     }

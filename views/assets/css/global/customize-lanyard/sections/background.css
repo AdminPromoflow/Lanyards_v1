@@ -67,7 +67,17 @@
 }
 
 
-
+.option {
+   padding: 5px;
+   border: 1px solid gray;
+   display: inline-block;
+   margin: 5px;
+   cursor: pointer;
+ }
+ .selected {
+   background-color: yellow;
+   font-weight: bold;
+ }
 
 
 
