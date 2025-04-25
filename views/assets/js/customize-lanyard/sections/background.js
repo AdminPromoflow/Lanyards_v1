@@ -251,6 +251,8 @@ class BackgroundClass {
   // Change CSS properties to reflect the first selected background color.
   changeBackgroundColourSelectedFirstOption() {
     var colour = this.getBackgroundColourSelectedFirstOption();
+    this.setBackground(colour);
+
     const backgroundColours = document.querySelectorAll(".background-colour");
 
     for (var i = 0; i < backgroundColours.length; i++) {
@@ -261,6 +263,8 @@ class BackgroundClass {
   // Change CSS properties to reflect the second selected background color.
   changeBackgroundColourSelectedSecondOption() {
     var colour = this.getBackgroundColourSelectedSecondOption();
+    this.setBackground(colour);
+
     const backgroundColours = document.querySelectorAll(".background-colour");
     for (var i = 0; i < backgroundColours.length; i++) {
       backgroundColours[i].style.background = colour;
