@@ -42,7 +42,7 @@
 .containers_boxes_background{
   position: relative;
   width: 100%;
-  max-height: 50%;
+  min-height: 50%;
 
   overflow-y: scroll;
   overflow-x: hidden;
@@ -96,6 +96,7 @@
    background: orange;
    transition: .4s;
    box-shadow: 1px 1px 2px rgba(0,0,0,.3);
+   cursor: pointer;
  }
  .pantoneColours:hover{
    border: 2px solid rgba(0,0,0,.5);
