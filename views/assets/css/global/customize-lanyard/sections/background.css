@@ -52,7 +52,7 @@
   padding: 5px;
 
   display: none;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
@@ -82,6 +82,7 @@
  .pantoneColours{
    position: relative;
    width: 106px;
+   margin: 5px;
    padding: 4px 0;
    border: 3px solid transparent;
    transition: .4s;
