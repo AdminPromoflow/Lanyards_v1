@@ -60,7 +60,7 @@ class BackgroundClass {
       containers_boxes_background.innerHTML +=
           '<div class="pantoneColours" style="background-color:' + pantoneColors[i].html + ';" ' +
           'onclick="backgroundClass.handleClickBackgroundColour(\'' + pantoneColors[i].html + '\', ' + i + ')">' +
-          '<h3>' + pantoneColors[i].pantone + '</h3>' +
+          '<h3>' + pantoneColors[i].pantone + "hola" + '</h3>' +
           '</div>';
     }
 //option.selected = true;
