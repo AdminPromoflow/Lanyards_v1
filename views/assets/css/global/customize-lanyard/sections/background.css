@@ -76,22 +76,11 @@
 }
 
 
-.option {
-   padding: 5px;
-   border: 1px solid gray;
-   display: inline-block;
-   margin: 5px;
-   cursor: pointer;
- }
- .selected {
-   background-color: yellow;
-   font-weight: bold;
- }
+
 
 
  .pantoneColours{
    position: relative;
-   display: inline-block;
    width: 106px;
    padding: 4px 0;
    border: 3px solid transparent;
