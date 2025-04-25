@@ -11,10 +11,10 @@ class BackgroundClass {
       option_background_colour[i].addEventListener("click", function(){
         backgroundClass.activateContainerBackground(i);
         if (i == 0) {
-          backgroundClass.changeBackgroundColourSelectedFirstOption()l
+          backgroundClass.changeBackgroundColourSelectedFirstOption();
         }
         else {
-          backgroundClass.changeBackgroundColourSelectedSecondOption()l
+          backgroundClass.changeBackgroundColourSelectedSecondOption();
         }
 
       })
