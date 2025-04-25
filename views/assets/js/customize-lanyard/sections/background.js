@@ -9,8 +9,8 @@ class BackgroundClass {
 
     for (let i = 0; i < option_background_colour.length; i++) {
       option_background_colour[i].addEventListener("click", function(){
-        option_background_checked[i].selected = true;
-        alert(i);
+        option_background_checked[i].value = i;
+      //  alert(i);
       })
     }
 //option.selected = true;
