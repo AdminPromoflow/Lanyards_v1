@@ -560,7 +560,7 @@ overflow: hidden;
   font-size: 6px;
   font-weight: 300;
   white-space: nowrap;
-  transform: rotate(180deg);
+  transform: rotate(180deg) scaleX(-1);;
 }
 
 .wrap_ex_1{
