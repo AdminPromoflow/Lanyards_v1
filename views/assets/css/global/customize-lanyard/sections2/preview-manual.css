@@ -344,7 +344,7 @@ overflow: hidden;
 
 .center-super-lanyard-one-end-15mm-attachment-manual{
   position: absolute;
-  height: calc(2cm - 0.56cm);
+  height: calc(2cm - 0.50cm);
   width: 0.165cm;
   bottom: 0.56cm;
   left: 50%;
@@ -359,7 +359,7 @@ overflow: hidden;
   height: calc(4.5cm - 0.56cm);
   width: 0.165cm;
   top: 0.56cm;
-  left: 31%;
+  left: 30.7%;
 
   border: 1px solid black;
   transform:  skewX(11.3deg) perspective(11.3vw);
@@ -371,7 +371,7 @@ overflow: hidden;
   height: calc(4.5cm - 0.56cm);
   width: 0.165cm;
   top: 0.56cm;
-  right: 31%;
+  right: 30.7%;
 
   border: 1px solid black;
   transform:  skewX(-11.3deg) perspective(11.3vw);
