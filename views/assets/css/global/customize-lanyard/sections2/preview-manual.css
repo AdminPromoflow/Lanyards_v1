@@ -559,7 +559,7 @@ overflow: hidden;
 .wrap_ex_0{
   position: relative;
   display: inline-block; /* Se ajusta al tamaño del contenido */
-  transform: rotate(90deg) translateY(-70%);
+  transform: rotate(90deg) translateY(-10%);
   transform-origin: top left;
   background-color: orange;
 }
