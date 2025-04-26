@@ -7,14 +7,13 @@ class PreviewManual {
 
     const textLanyard = textClass.getContentText();
     const times = textClass.getTimesText();
-    const numberWidthSelected = widthClass.getWidthSelected().match(/\d+/)[0];
 
     [this.text_lanyard_left, this.text_lanyard_right].forEach((el, index) => {
       if (el) {
         el.innerHTML = ""; // Limpia el contenido anterior
 
         const html = Array(times).fill(`
-          <div class="wrap_ex_${index} space_between_text_${numberWidthSelected}">
+          <div class="wrap_ex_${index} space_between_text">
             <h1>${textLanyard}</h1>
           </div>
         `).join('');

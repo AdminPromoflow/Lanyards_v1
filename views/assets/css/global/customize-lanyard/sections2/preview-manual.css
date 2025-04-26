@@ -581,21 +581,10 @@ overflow: hidden;
 }
 
 
-.space_between_text_10{
+.space_between_text{
   transform: rotate(90deg) translateY(-100%);
 }
-.space_between_text_15{
-  transform: rotate(90deg) translateY(-110%);
-}
-.space_between_text_20{
-  transform: rotate(90deg) translateY(-120%);
-}
-.space_between_text_25{
-  transform: rotate(90deg) translateY(-129%);
-}
-.space_between_text_30{
-  transform: rotate(90deg) translateY(-145%);
-}
+
 .wrap_ex_1 h1 {
   margin: 0;
   padding: 0;
