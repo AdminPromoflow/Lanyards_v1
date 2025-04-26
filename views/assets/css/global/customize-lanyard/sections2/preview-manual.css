@@ -560,8 +560,7 @@ overflow: hidden;
   font-size: 6px;
   font-weight: 300;
   white-space: nowrap;
-  transform: rotate(0deg) scaleY(-1,-1);;
-  writing-mode: vertical-rl;
+  transform: rotate(0deg) ;
 
 }
 
