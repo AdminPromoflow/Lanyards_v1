@@ -548,12 +548,12 @@ overflow: hidden;
 }
 
 .text-lanyard h1 {
-  display: inline-block;
+  display: block;
   margin: 0;
   padding: 0;
   font-size: 6px;
   font-weight: 300;
-  background-color: orange;
+  background-color: gold;
 }
 /* Sin rotación (0 grados) */
 .rotate-0 {
