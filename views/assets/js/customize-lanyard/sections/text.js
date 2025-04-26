@@ -17,7 +17,7 @@ class TextClass {
       if (textClass.getTimesText() <=20) {
         textClass.setTimesText(textClass.getTimesText() + 1);
         times = textClass.getTimesText();
-        labelRepeatText.innerHTML = `Repeat text ${times} time${times === 1 ? '' : 's'}.`;
+        labelRepeatText.innerHTML = `Repeat text ${textClass.getTimesText()} time${textClass.getTimesText() === 1 ? '' : 's'}.`;
       }
       else {
         alert("The maximum allowed number of repetitions is 20");
@@ -29,7 +29,7 @@ class TextClass {
       if (textClass.getTimesText() >=0) {
         textClass.setTimesText(textClass.getTimesText() - 1);
         times = textClass.getTimesText();
-        labelRepeatText.innerHTML = `Repeat text ${times} time${times === 1 ? '' : 's'}`;
+        labelRepeatText.innerHTML = `Repeat text ${textClass.getTimesText()} time${textClass.getTimesText() === 1 ? '' : 's'}.`;
       }
       else {
         alert("The minimum allowed number of repetitions is 0.");
