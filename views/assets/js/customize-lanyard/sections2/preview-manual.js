@@ -14,12 +14,13 @@ class PreviewManual {
         h1.textContent = textLanyard;
         element.appendChild(h1);
       }
+      const h1s = element.querySelectorAll("h1");
+        h1s.forEach(h1 => {
+          h1.classList.add("rotate-90");
+        });
     });
 
-    const h1s = element.querySelectorAll("h1");
-       h1s.forEach(h1 => {
-         h1.classList.add("rotate--90");
-       });
+
 
 
 
