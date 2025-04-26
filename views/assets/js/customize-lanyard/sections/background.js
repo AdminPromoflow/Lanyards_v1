@@ -5,9 +5,7 @@ class BackgroundClass {
     this.setBackgroundColourSelectedFirstOption("#ffffff");
     this.setBackgroundColourSelectedSecondOption("#ffffff");
 
-    var pantoneColours = document.querySelectorAll(".pantoneColours");
 
-    pantoneColours[0].style.border = "3px solid blue";
 
 
     const option_background_colour = document.querySelectorAll(".option_background_colour");
@@ -76,6 +74,9 @@ class BackgroundClass {
             '<h3>' + pantoneColors[i].pantone + '</h3>' +
           '</div>';
     }
+    var pantoneColours = document.querySelectorAll(".pantoneColours");
+
+    pantoneColours[0].style.border = "3px solid blue";
 
 
     const optionColourBackground = document.getElementById("optionColourBackground");
