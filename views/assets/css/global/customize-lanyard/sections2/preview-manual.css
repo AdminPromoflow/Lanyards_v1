@@ -553,17 +553,22 @@ overflow: hidden;
   padding: 0;
   font-size: 6px;
   font-weight: 300;
-  background-color: gold;
+
 }
 /* Sin rotación (0 grados) */
 .rotate-0 {
   transform: none;
 }
 
+.wrap_ex{
+  transform-origin: top left;
+  background-color: gold;
+  transform: rotate(90deg);
+}
+
 /* Rotado -90 grados (hacia la izquierda) */
 .rotate--90 {
   transform: rotate(90deg) translateX(50%);
-  transform-origin: center;
 }
 
 /* Rotado 90 grados (hacia la derecha) */
