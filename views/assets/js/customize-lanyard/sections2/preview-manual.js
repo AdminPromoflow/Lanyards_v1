@@ -4,7 +4,7 @@ class PreviewManual {
   }
   addTextToLanyard(){
     var textLanyard = textClass.getContentText();
-    //alert(textLanyard + "Lo estamos logrando");
+    alert(textLanyard + "Lo estamos logrando");
 
     const times = 7; // Cambia esto al número que necesites
 
