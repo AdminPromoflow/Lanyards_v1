@@ -539,7 +539,7 @@ overflow: hidden;
   background-color: green;
   display: flex;
   flex-direction: column;
-  gap: 8px; /* espacio entre textos rotados */
+  gap: 20px; /* espacio entre textos rotados */
   align-items: flex-start; /* <== centrado horizontal */
   justify-content: flex-start; /* opcional: centrado vertical */
   height: 100%;
