@@ -545,6 +545,7 @@ overflow: hidden;
   align-items: center;; /* <== centrado horizontal */
   justify-content: center; /* opcional: centrado vertical */
   flex-wrap: nowrap;
+  height: 100%;
 }
 
 .text-lanyard h1 {
