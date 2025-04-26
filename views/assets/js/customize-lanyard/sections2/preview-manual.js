@@ -7,7 +7,7 @@ class PreviewManual {
   }
   // Clears styles and classes for the manual elements
   cleanStyleManual() {
-    const elManual = this.manualElements;
+    const elManual = previewTemplate.getElements();
 
     Object.values(elManual).forEach(element => {
       if (element) {
