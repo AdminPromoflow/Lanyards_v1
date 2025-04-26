@@ -564,7 +564,7 @@ overflow: hidden;
 .wrap_ex_0 h1 {
   margin: 0;
   padding: 0;
-  height: 100%;
+  width: 100%;
 
   font-size: 6px;
   font-weight: 300;
@@ -588,7 +588,7 @@ overflow: hidden;
 .wrap_ex_1 h1 {
   margin: 0;
   padding: 0;
-  height: 100%;
+  width: 100%;
   font-size: 6px;
   font-weight: 300;
   white-space: nowrap;
