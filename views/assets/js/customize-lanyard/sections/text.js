@@ -11,13 +11,12 @@ class TextClass {
 
     const repeatTextBox = document.getElementById("repeat-text-box");
     const labelRepeatText = document.getElementById("label-repeat-text");
-
+    const times = textClass.getTimesText();
 
     repeatTextBox.addEventListener("click", function(){
       if (textClass.getTimesText() <=20) {
-        alert(textClass.getTimesText());
 
-        labelRepeatText.innerHTML = "Repeat text "+textClass.getTimesText()+" times"
+        labelRepeatText.innerHTML = `Repeat text ${times} time${times === 1 ? '' : 's'}.`;
       }
       else {
         alert("The maximum allowed number of repetitions is 20");
@@ -27,7 +26,7 @@ class TextClass {
     const decreaseTextBox = document.getElementById("decrease-text-box");
     decreaseTextBox.addEventListener("click", function(){
       if (textClass.getTimesText() >=0) {
-        labelRepeatText.innerHTML = "Repeat text "+textClass.getTimesText()+" times"
+        labelRepeatText.innerHTML = `Repeat text ${times} time${times === 1 ? '' : 's'}`;
       }
       else {
         alert("The minimum allowed number of repetitions is 0.");
