@@ -16,7 +16,7 @@ class TextClass {
     repeatTextBox.addEventListener("click", function(){
       if (textClass.getTimesText() <=20) {
 
-        labelRepeatText.innerHTML = "POR QUE?";
+        labelRepeatText.innerHTML = "POR QUE?" + textClass.getTimesText();
       }
       else {
         alert("The maximum allowed number of repetitions is 20");
@@ -26,7 +26,7 @@ class TextClass {
     const decreaseTextBox = document.getElementById("decrease-text-box");
     decreaseTextBox.addEventListener("click", function(){
       if (textClass.getTimesText() >=0) {
-        labelRepeatText.innerHTML = "HOLA TU";
+        labelRepeatText.innerHTML = "HOLA TU" + textClass.getTimesText();
       }
       else {
         alert("The minimum allowed number of repetitions is 0.");
