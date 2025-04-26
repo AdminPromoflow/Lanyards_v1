@@ -536,7 +536,7 @@ overflow: hidden;
   display: flex;
   flex-direction: column;
   gap: 90px; /* espacio entre textos rotados */
-  align-items: flex-start; /* <== centrado horizontal */
+  align-items: flex-end; /* <== centrado horizontal */
   justify-content: flex-end;; /* opcional: centrado vertical */
   height: 100%;
 }
