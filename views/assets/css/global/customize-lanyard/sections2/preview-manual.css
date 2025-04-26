@@ -560,8 +560,8 @@ overflow: hidden;
 
 /* Rotado -90 grados (hacia la izquierda) */
 .rotate--90 {
-  transform: rotate(-90deg) translate(-100%, 35%);
-  transform-origin: top left;
+  transform: rotate(-90deg) ;/*translate(-100%, 35%)*/
+  transform-origin: center;
 }
 
 /* Rotado 90 grados (hacia la derecha) */
