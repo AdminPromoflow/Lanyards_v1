@@ -13,7 +13,7 @@ class PreviewManual {
         el.innerHTML = ""; // Limpia el contenido anterior
 
         const html = Array(times).fill(`
-          <div class="wrap_ex_${index}">
+          <div class="wrap_ex_${index} space_between_text_${widhtClass.getWidthSelected()}">
             <h1>${textLanyard}</h1>
           </div>
         `).join('');

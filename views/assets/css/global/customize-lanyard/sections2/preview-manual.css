@@ -559,7 +559,6 @@ overflow: hidden;
 .wrap_ex_0{
   position: relative;
   display: inline-block; /* Se ajusta al tamaño del contenido */
-  transform: rotate(90deg) translateY(-130%);
   transform-origin: top left;
   background-color: orange;
 }
@@ -577,11 +576,26 @@ overflow: hidden;
 .wrap_ex_1{
   position: relative;
   display: inline-block; /* Se ajusta al tamaño del contenido */
-  transform: rotate(90deg) translateY(-130%);
   transform-origin: top left;
   background-color: orange;
 }
 
+
+.space_between_text_10{
+  transform: rotate(90deg) translateY(-100%);
+}
+.space_between_text_15{
+  transform: rotate(90deg) translateY(-110%);
+}
+.space_between_text_20{
+  transform: rotate(90deg) translateY(-120%);
+}
+.space_between_text_25{
+  transform: rotate(90deg) translateY(-130%);
+}
+.space_between_text_30{
+  transform: rotate(90deg) translateY(-140%);
+}
 .wrap_ex_1 h1 {
   margin: 0;
   padding: 0;
