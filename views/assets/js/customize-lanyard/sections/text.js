@@ -4,11 +4,6 @@ class TextClass {
     textInput.addEventListener('input', function() {
       textClass.setContentText(textInput.value);
       previewManual.addTextToLanyard();
-
-
-
-    //  previewTextClass.addModifyText(textInput.value);
-
     })
   /*const repeatTextBox = document.querySelectorAll(".repeat-text-box");
     const colourTextSelect = document.getElementById("colour-text-select");

@@ -6,6 +6,16 @@ class PreviewManual {
     var textLanyard = textClass.getContentText();
     alert(textLanyard + "Lo estamos logrando");
 
+    const times = 7; // Cambia esto al número que necesites
+
+    this.text_lanyard.forEach((element) => {
+      for (let i = 0; i < times; i++) {
+        const h1 = document.createElement("h1");
+        h1.textContent = textLanyard;
+        element.appendChild(h1);
+      }
+    });
+
   }
 
   togglePreviewManualClass(action) {
