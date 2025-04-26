@@ -12,10 +12,17 @@ class PreviewManual {
       for (let i = 0; i < times; i++) {
         const h1 = document.createElement("h1");
         h1.textContent = textLanyard;
-        h1.classList.add("rotate--90");
         element.appendChild(h1);
       }
     });
+
+    const h1s = element.querySelectorAll("h1");
+       h1s.forEach(h1 => {
+         h1.classList.add("rotate--90");
+       });
+      });
+
+
 
   }
 
