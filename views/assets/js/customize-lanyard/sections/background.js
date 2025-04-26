@@ -2,6 +2,9 @@
 class BackgroundClass {
   constructor() {
 
+    this.setBackgroundColourSelectedFirstOption("#ffffff");
+    this.setBackgroundColourSelectedSecondOption("#ffffff");
+
     const option_background_colour = document.querySelectorAll(".option_background_colour");
     const containers_boxes_background = document.querySelectorAll(".containers_boxes_background");
 
@@ -251,7 +254,6 @@ class BackgroundClass {
   changeBackgroundColourSelectedFirstOption() {
     var colour = this.getBackgroundColourSelectedFirstOption();
     this.setBackground(colour);
-    alert("Este es el first option" + colour);
 
 
     const backgroundColours = document.querySelectorAll(".background-colour");
@@ -265,7 +267,6 @@ class BackgroundClass {
   changeBackgroundColourSelectedSecondOption() {
     var colour = this.getBackgroundColourSelectedSecondOption();
     this.setBackground(colour);
-    alert("Este es el second option");
 
     const backgroundColours = document.querySelectorAll(".background-colour");
     for (var i = 0; i < backgroundColours.length; i++) {
