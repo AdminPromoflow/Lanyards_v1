@@ -17,6 +17,8 @@ class TextClass {
       if (textClass.getTimesText() <=19) {
         textClass.setTimesText(textClass.getTimesText() + 1);
         labelRepeatText.innerHTML = `Repeat text ${textClass.getTimesText()} time${textClass.getTimesText() === 1 ? '' : 's'}.`;
+        previewManual.addTextToLanyard();
+
       }
 
     })
@@ -26,6 +28,8 @@ class TextClass {
       if (textClass.getTimesText() >=0) {
         textClass.setTimesText(textClass.getTimesText() - 1);
         labelRepeatText.innerHTML = `Repeat text ${textClass.getTimesText()} time${textClass.getTimesText() === 1 ? '' : 's'}.`;
+        previewManual.addTextToLanyard();
+
       }
 
     })
