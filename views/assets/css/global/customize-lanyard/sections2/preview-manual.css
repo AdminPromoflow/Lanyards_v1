@@ -566,6 +566,7 @@ overflow: hidden;
   padding: 0;
   font-size: 6px;
   font-weight: 300;
+  white-space: nowrap;
 
 }
 /* Rotado -90 grados (hacia la izquierda) */
