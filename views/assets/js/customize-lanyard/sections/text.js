@@ -2,7 +2,7 @@ class TextClass {
   constructor() {
     const textInput = document.getElementById("textInput");
     textInput.addEventListener('input', function() {
-      alert("ay juemadre");
+      alert(textInput.value);
     //  previewTextClass.addModifyText(textInput.value);
 
     })
