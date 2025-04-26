@@ -534,7 +534,7 @@ overflow: hidden;
 .text-lanyard {
   background-color: green;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   gap: 90px; /* espacio entre textos rotados */
   align-items: flex-start; /* <== centrado horizontal */
   justify-content: flex-end; /* opcional: centrado vertical */
