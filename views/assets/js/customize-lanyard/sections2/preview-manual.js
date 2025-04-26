@@ -11,8 +11,8 @@ class PreviewManual {
       this.text_lanyard.forEach((el, index) => {
           el.innerHTML = ""; // 🔹 limpiar contenido previo
           el.innerHTML = Array(times).fill(`
-              <div class="wrap_ex_${index}">
-                  <h1>${textLanyard}</h1>
+              <div class="wrap_ex_">
+                  <h1>${textLanyard} (Index: ${index})</h1>
               </div>
           `).join('');
       });
