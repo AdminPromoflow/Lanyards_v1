@@ -543,6 +543,7 @@ overflow: hidden;
   gap: 30px; /* espacio entre textos rotados */
   align-items: center; /* <== centrado horizontal */
   justify-content: center; /* opcional: centrado vertical */
+  flex-wrap: nowrap;
 }
 
 .text-lanyard h1 {
