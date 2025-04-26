@@ -539,8 +539,8 @@ overflow: hidden;
   background-color: green;
   display: flex;
   flex-direction: column;
-  gap: 80px; /* espacio entre textos rotados */
-  align-items: center;; /* <== centrado horizontal */
+  gap: 8px; /* espacio entre textos rotados */
+  align-items: flex-start; /* <== centrado horizontal */
   justify-content: flex-start; /* opcional: centrado vertical */
   height: 100%;
 }
@@ -554,7 +554,7 @@ overflow: hidden;
 .wrap_ex{
   position: relative;
   display: inline-block; /* Se ajusta al tamaño del contenido */
-  transform: rotate(90deg) translateY(-75%);
+  transform: rotate(90deg) translateY(0%);
   transform-origin: top left;
   background-color: orange;
 
