@@ -20,7 +20,6 @@ class PreviewManual {
        h1s.forEach(h1 => {
          h1.classList.add("rotate--90");
        });
-      });
 
 
 
