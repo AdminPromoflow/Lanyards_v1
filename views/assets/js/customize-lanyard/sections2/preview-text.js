@@ -1,12 +1,13 @@
 class PreviewTextClass {
   constructor() {
-    this.textContent = "";
+    
+    /*this.textContent = "";
     this.colourText = "#000000";
-    this.fontFamily = "Arial, sans-serif";
+    this.fontFamily = "Arial, sans-serif";*/
 
   }
-  repeatText() {
-    
+  /*repeatText() {
+
     //  const textContainer = document.querySelectorAll(".text-container");
     var textContainer;
 
@@ -253,7 +254,7 @@ getFontFamily() {
 
   setFontFamily(newFontFamily) {
       this.fontFamily = newFontFamily;
-  }
+  }*/
 }
 
 

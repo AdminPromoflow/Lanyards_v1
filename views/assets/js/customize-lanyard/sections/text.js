@@ -1,6 +1,13 @@
 class TextClass {
   constructor() {
-    const repeatTextBox = document.querySelectorAll(".repeat-text-box");
+    const textInput = document.getElementById("textInput");
+    textInput.addEventListener('input', function() {
+      alert("ay juemadre");
+    //  previewTextClass.addModifyText(textInput.value);
+
+
+    })
+  /*  const repeatTextBox = document.querySelectorAll(".repeat-text-box");
     const colourTextSelect = document.getElementById("colour-text-select");
     const colourTextSelectContainer = document.getElementById("colour-text-select-container");
     var repeatTextBoxSelected = 0;
@@ -30,11 +37,11 @@ class TextClass {
 
          repeatTextBoxSelected = i;
 
-         /*for (var j = 0; j < repeatTextBox.length; j++) {
+         for (var j = 0; j < repeatTextBox.length; j++) {
            repeatTextBox[j].style.border = "2px solid transparent";
          }
          repeatTextBox[repeatTextBoxSelected].style.border = "2px solid white";
-          */
+
          if (h3Element == "+") {
            textClass.setRepeatText(textClass.getRepeatText() + 1);
            previewTextClass.repeatText();
@@ -249,11 +256,11 @@ class TextClass {
 
         }
       })
-    }
+    }*/
   }
 
 
-  // Content text
+  /*
   getContentText() {
     return this.contentText;
   }
@@ -360,7 +367,7 @@ class TextClass {
       typeTextSelectContainer.style.display = "none";
 
       previewTextClass.changeFontFamily(fontFamily);
-  }
+  }*/
 }
 
 
