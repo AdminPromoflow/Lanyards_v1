@@ -75,8 +75,7 @@ class BackgroundClass {
           '</div>';
     }
      this.pantoneColours = document.querySelectorAll(".pantoneColours");
-
-    this.pantoneColours[0].style.border = "3px solid blue";
+     this.pantoneColours[0].style.border = "3px solid blue";
 
 
     const optionColourBackground = document.getElementById("optionColourBackground");
@@ -289,11 +288,9 @@ class BackgroundClass {
       for (var i = 0; i < screenPrintBackgroundColour.length; i++) {
         screenPrintBackgroundColour[i].style.display = "block";
       }
-      document.getElementById('option_background_checked_01').selected = true;
-
-      backgroundClass.setBackgroundColourSelectedSecondOption(this.getBackgroundColourSelectedFirstOption());
-
-      backgroundClass.changeBackgroundColourSelectedFirstOption();
+      this.setBackgroundColourSelectedFirstOption("#ffffff");
+      this.setBackground("#ffffff");
+      this.changeBackgroundColourSelectedFirstOption();
 
 
     }
