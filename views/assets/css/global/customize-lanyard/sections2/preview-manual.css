@@ -546,24 +546,30 @@ overflow: hidden;
   justify-content: flex-start; /* opcional: centrado vertical */
   height: 100%;
 }
+.rotate-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: top left;
+}
 
-.text-lanyard h1 {
-  display: block;
+
+
+.rotate-wrapper h1 {
   margin: 0;
   padding: 0;
   font-size: 6px;
   font-weight: 300;
-  background-color: gold;
+  white-space: nowrap;
+  background: orange;
 }
 /* Sin rotación (0 grados) */
 .rotate-0 {
   transform: none;
 }
 
-/* Rotado -90 grados (hacia la izquierda) */
 .rotate--90 {
-  transform: rotate(90deg) translateX(50%);
-  transform-origin: center;
+  transform: rotate(-90deg);
 }
 
 /* Rotado 90 grados (hacia la derecha) */
