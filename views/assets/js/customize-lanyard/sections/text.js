@@ -2,7 +2,7 @@ class TextClass {
   constructor() {
     const textInput = document.getElementById("textInput");
     textInput.addEventListener('input', function() {
-      this.setContentText(textInput.value);
+      textClass.setContentText(textInput.value);
       previewManual.addTextToLanyard();
 
     //  previewTextClass.addModifyText(textInput.value);
