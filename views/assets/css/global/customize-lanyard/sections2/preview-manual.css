@@ -552,15 +552,22 @@ overflow: hidden;
   transform: rotate(90deg) translateY(-100%);
   transform-origin: top left;
   background-color: orange;
-
 }
-.wrap_ex h1 {
+.wrap_ex_0 h1 {
   margin: 0;
   padding: 0;
   font-size: 6px;
   font-weight: 300;
   white-space: nowrap;
   transform: rotate(180deg);
+}
+.wrap_ex_1 h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 6px;
+  font-weight: 300;
+  white-space: nowrap;
+  transform: rotate(0deg);
 }
 /* Rotado -90 grados (hacia la izquierda) */
 .rotate--90 {
