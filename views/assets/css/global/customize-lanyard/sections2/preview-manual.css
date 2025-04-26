@@ -541,8 +541,8 @@ overflow: hidden;
   background-color: green;
   display: flex;
   flex-direction: column;
-  gap: 30px; /* espacio entre textos rotados */
-  align-items: flex-start; /* <== centrado horizontal */
+  gap: 0px; /* espacio entre textos rotados */
+  align-items: center;; /* <== centrado horizontal */
   justify-content: center; /* opcional: centrado vertical */
   flex-wrap: nowrap;
 }
