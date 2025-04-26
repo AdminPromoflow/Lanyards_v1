@@ -16,7 +16,6 @@ class BackgroundClass {
         else if (i == 1) {
           backgroundClass.changeBackgroundColourSelectedSecondOption();
         }
-
       })
     }
 
@@ -252,6 +251,8 @@ class BackgroundClass {
   changeBackgroundColourSelectedFirstOption() {
     var colour = this.getBackgroundColourSelectedFirstOption();
     this.setBackground(colour);
+    alert("Este es el first option");
+
 
     const backgroundColours = document.querySelectorAll(".background-colour");
 
@@ -264,6 +265,7 @@ class BackgroundClass {
   changeBackgroundColourSelectedSecondOption() {
     var colour = this.getBackgroundColourSelectedSecondOption();
     this.setBackground(colour);
+    alert("Este es el second option");
 
     const backgroundColours = document.querySelectorAll(".background-colour");
     for (var i = 0; i < backgroundColours.length; i++) {
@@ -281,6 +283,11 @@ class BackgroundClass {
       for (var i = 0; i < screenPrintBackgroundColour.length; i++) {
         screenPrintBackgroundColour[i].style.display = "block";
       }
+      document.getElementById('backgroundColourFirstOption').selected = true;
+
+      backgroundClass.setBackgroundColourSelectedSecondOption(this.getBackgroundColourSelectedFirstOption());
+
+      backgroundClass.changeBackgroundColourSelectedFirstOption();
 
 
     }
@@ -290,11 +297,7 @@ class BackgroundClass {
 
       }
 
-  /*    document.getElementById('backgroundColourFirstOption').selected = true;
 
-      backgroundClass.setBackgroundColourSelectedSecondOption(this.getBackgroundColourSelectedFirstOption());
-
-      backgroundClass.changeBackgroundColourSelectedFirstOption();*/
     }
   }
   setBackgroundColourToLanyards(){
