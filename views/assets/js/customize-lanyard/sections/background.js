@@ -299,6 +299,7 @@ class BackgroundClass {
 
       }
       this.setBackgroundColourSelectedFirstOption("#ffffff");
+      this.pantoneColours[0].style.border = "3px solid blue";
       this.changeBackgroundColourSelectedFirstOption();
 
     }
