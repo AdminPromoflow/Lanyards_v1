@@ -3,10 +3,8 @@ class TextClass {
     const textInput = document.getElementById("textInput");
     textInput.addEventListener('input', function() {
       textClass.setContentText(textInput.value);
-      document.addEventListener("DOMContentLoaded", function () {
-        alert("sera que entramos??");
-        previewManual.addTextToLanyard();
-      });
+      previewManual.addTextToLanyard();
+
 
 
     //  previewTextClass.addModifyText(textInput.value);

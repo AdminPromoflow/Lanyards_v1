@@ -1,16 +1,11 @@
 <?php
-function get_preview_manual_css_version() {
-    $preview_manual_css_path = __DIR__ . "/../../views/assets/css/global/customize-lanyard/sections2/preview-manual.css";
-    if (file_exists($preview_manual_css_path)) {
-        $preview_manual_version = filemtime($preview_manual_css_path);
-    } else {
-        $preview_manual_version = time(); // Valor por defecto si no existe el archivo
-    }
-    return $preview_manual_version;
+function get_file_version($relative_path) {
+    $absolute_path = __DIR__ . '/' . $relative_path;
+    return file_exists($absolute_path) ? filemtime($absolute_path) : time();
 }
 ?>
 
-<link rel="stylesheet" href="../../views/assets/css/global/customize-lanyard/sections2/preview-manual.css?v=<?php echo get_preview_manual_css_version(); ?>">
+<link rel="stylesheet" href="../../views/assets/css/global/customize-lanyard/sections2/preview-manual.css?v=<?php echo get_file_version('../../views/assets/css/global/customize-lanyard/sections2/preview-manual.css'); ?>">
 
 <section id="preview-manual-section">
   <!-- Manual lanyard layout -->
@@ -31,4 +26,4 @@ function get_preview_manual_css_version() {
   </div>
 </section>
 
-<script src="../../views/assets/js/customize-lanyard/sections2/preview-manual.js" type="text/javascript"></script>
+<script src="../../views/assets/js/customize-lanyard/sections2/preview-manual.js?v=<?php echo get_file_version('../../views/assets/js/customize-lanyard/sections2/preview-manual.js'); ?>" type="text/javascript"></script>
