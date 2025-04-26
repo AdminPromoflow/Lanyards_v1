@@ -539,6 +539,7 @@ overflow: hidden;
   align-items: flex-start; /* <== centrado horizontal */
   justify-content: flex-end; /* opcional: centrado vertical */
   height: 100%;
+  transform: rotate(180deg);
 }
 
 /* Sin rotación (0 grados) */
