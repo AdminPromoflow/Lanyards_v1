@@ -74,7 +74,7 @@ class BackgroundClass {
             '<h3>' + pantoneColors[i].pantone + '</h3>' +
           '</div>';
     }
-    var pantoneColours = document.querySelectorAll(".pantoneColours");
+     this.pantoneColours = document.querySelectorAll(".pantoneColours");
 
     pantoneColours[0].style.border = "3px solid blue";
 
@@ -248,11 +248,11 @@ class BackgroundClass {
 
   selectColorBoxOfFirstOption(indexSelected){
 
-    for (var i = 0; i < pantoneColours.length; i++) {
-      pantoneColours[i].style.border = "3px solid transparent";
+    for (var i = 0; i < this.pantoneColours.length; i++) {
+      this.pantoneColours[i].style.border = "3px solid transparent";
     }
 
-    pantoneColours[indexSelected].style.border = "3px solid blue";
+    this.pantoneColours[indexSelected].style.border = "3px solid blue";
   }
 
   // Change CSS properties to reflect the first selected background color.
