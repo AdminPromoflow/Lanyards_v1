@@ -538,6 +538,7 @@ overflow: hidden;
 
 
 .text-lanyard {
+  background-color: green;
   display: flex;
   flex-direction: column;
   gap: 30px; /* espacio entre textos rotados */
