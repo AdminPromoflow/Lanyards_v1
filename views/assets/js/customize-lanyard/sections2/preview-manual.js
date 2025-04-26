@@ -5,7 +5,8 @@ class PreviewManual {
   addTextToLanyard() {
       this.text_lanyard = document.querySelectorAll(".text-lanyard");
       var textLanyard = textClass.getContentText();
-      var times = 3; // o usar getTimesText()
+      var times = textClass.getTimesText();
+
 
       this.text_lanyard.forEach(el => {
           el.innerHTML = ""; // 🔹 limpiar contenido previo
