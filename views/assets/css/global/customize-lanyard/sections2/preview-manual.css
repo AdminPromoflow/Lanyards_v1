@@ -393,7 +393,7 @@ overflow: hidden;
 
 .center-super-lanyard-one-end-20mm-attachment-manual{
   position: absolute;
-  height: calc(2cm - 0.56cm);
+  height: calc(2cm - 0.54cm);
   width: 0.24cm;
   bottom: 0.56cm;
   left: 50%;
@@ -408,24 +408,24 @@ overflow: hidden;
   height: calc(4.5cm - 0.56cm);
   width: 0.24cm;
   top: 0.56cm;
-  left: 29.5%;
+  left: 29.3%;
 
   border: 1px solid black;
   transform:  skewX(11.3deg) perspective(11.3vw);
   z-index: 0;
-overflow: hidden;
+  overflow: hidden;
 }
 .right-super-lanyard-one-end-20mm-attachment-manual{
   position: absolute;
   height: calc(4.5cm - 0.56cm);
   width: 0.24cm;
   top: 0.56cm;
-  right: 29.5%;
+  right: 29.3%;
 
   border: 1px solid black;
   transform:  skewX(-11.3deg) perspective(11.3vw);
   z-index: 0;
-overflow: hidden;
+  overflow: hidden;
 }
 
 
