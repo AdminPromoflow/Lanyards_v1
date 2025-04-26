@@ -7,7 +7,7 @@ class PreviewManual {
     var textLanyard = textClass.getContentText();
     //alert(textLanyard + "Lo estamos logrando");
 
-    const times = 7; // Cambia esto al número que necesites
+    const times = 2; // Cambia esto al número que necesites
 
     this.text_lanyard.forEach((container) => {
       container.querySelectorAll("h1").forEach(h1 => h1.remove());
