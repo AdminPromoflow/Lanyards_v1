@@ -1,5 +1,7 @@
 class TextClass {
   constructor() {
+    this.timesText = 3;
+
     const textInput = document.getElementById("textInput");
     textInput.addEventListener('input', function() {
       textClass.setContentText(textInput.value);
@@ -290,12 +292,12 @@ class TextClass {
   }
   setTimesText(newTimes) {
   if (typeof newTimes === 'number' && newTimes > 0) {
-      timesText = newTimes;
+      this.timesText = newTimes;
   }
   }
 
   getTimesText() {
-      return timesText;
+      return this.timesText;
   }
 
   /*

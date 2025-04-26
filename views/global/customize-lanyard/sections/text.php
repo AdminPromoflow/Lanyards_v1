@@ -22,7 +22,7 @@ $imgPath_text = "../../views/assets/img/global/customize-lanyard/sections/text/"
         <input id="textInput" type="text" name="" value="">
       </div>
       <div class="item-text">
-        <p id="label-repeat-text">Repeat text 1 time</p>
+        <p id="label-repeat-text">Repeat text 3 times</p>
         <div class="containr-repeat-text">
           <div class="repeat-text-box" id="decrease-text-box">
             <h3>-</h3>
