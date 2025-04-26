@@ -563,7 +563,7 @@ overflow: hidden;
   display: inline-block;
   transform-origin: top left;
   background-color: gold;
-  transform: rotate(90deg);
+  transform: rotate(-90deg);
 }
 
 /* Rotado -90 grados (hacia la izquierda) */
