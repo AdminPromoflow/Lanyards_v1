@@ -541,7 +541,7 @@ overflow: hidden;
   background-color: green;
   display: flex;
   flex-direction: column;
-  gap: 0px; /* espacio entre textos rotados */
+  gap: 20px; /* espacio entre textos rotados */
   align-items: center;; /* <== centrado horizontal */
   justify-content: flex-start; /* opcional: centrado vertical */
   flex-wrap: nowrap;
