@@ -260,6 +260,7 @@ class BackgroundClass {
     this.setBackground(colour);
 
 
+
     const backgroundColours = document.querySelectorAll(".background-colour");
 
     for (var i = 0; i < backgroundColours.length; i++) {
@@ -288,9 +289,7 @@ class BackgroundClass {
       for (var i = 0; i < screenPrintBackgroundColour.length; i++) {
         screenPrintBackgroundColour[i].style.display = "block";
       }
-      this.setBackgroundColourSelectedFirstOption("#ffffff");
-      this.setBackground("#ffffff");
-      this.changeBackgroundColourSelectedFirstOption();
+
 
 
     }
@@ -299,7 +298,8 @@ class BackgroundClass {
         screenPrintBackgroundColour[i].style.display = "none";
 
       }
-
+      this.setBackgroundColourSelectedFirstOption("#ffffff");
+      this.changeBackgroundColourSelectedFirstOption();
 
     }
   }
