@@ -16,7 +16,6 @@ class TextClass {
     repeatTextBox.addEventListener("click", function(){
       if (textClass.getTimesText() <=20) {
         textClass.setTimesText(textClass.getTimesText() + 1);
-        times = textClass.getTimesText();
         labelRepeatText.innerHTML = `Repeat text ${textClass.getTimesText()} time${textClass.getTimesText() === 1 ? '' : 's'}.`;
       }
       else {
@@ -28,7 +27,6 @@ class TextClass {
     decreaseTextBox.addEventListener("click", function(){
       if (textClass.getTimesText() >=0) {
         textClass.setTimesText(textClass.getTimesText() - 1);
-        times = textClass.getTimesText();
         labelRepeatText.innerHTML = `Repeat text ${textClass.getTimesText()} time${textClass.getTimesText() === 1 ? '' : 's'}.`;
       }
       else {
