@@ -15,6 +15,15 @@ function get_file_version($relative_path) {
         <div class="wrap_ex">
           <h1>Holacom oesta</h1>
         </div>
+        <div class="wrap_ex">
+          <h1>Holacom oesta</h1>
+        </div>
+        <div class="wrap_ex">
+          <h1>Holacom oesta</h1>
+        </div>
+        <div class="wrap_ex">
+          <h1>Holacom oesta</h1>
+        </div>
       </div>
     </div>
     <div class="" id="right-super-lanyard-manual">

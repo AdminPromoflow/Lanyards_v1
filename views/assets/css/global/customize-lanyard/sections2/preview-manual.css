@@ -554,13 +554,10 @@ overflow: hidden;
 }
 
 .wrap_ex{
-  position: absolute;
-   top: 0;
-   left: 0;
-   display: inline-block;
-   transform: rotate(90deg) translateY(-75%);
-   transform-origin: top left;
-   background-color: orange;
+  display: inline-block; /* Se ajusta al tamaño del contenido */
+  transform: rotate(90deg) translateY(-75%);
+  transform-origin: top left;
+  background-color: orange;
 
 }
 .wrap_ex h1 {
