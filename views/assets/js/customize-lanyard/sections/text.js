@@ -11,7 +11,7 @@ class TextClass {
 
     const repeatTextBox = document.getElementById("repeat-text-box");
     const labelRepeatText = document.getElementById("label-repeat-text");
-    const times = textClass.getTimesText();
+    const times = this.getTimesText();
 
     repeatTextBox.addEventListener("click", function(){
       if (textClass.getTimesText() <=20) {
