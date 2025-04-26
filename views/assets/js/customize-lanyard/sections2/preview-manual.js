@@ -8,7 +8,7 @@ class PreviewManual {
     const textLanyard = textClass.getContentText();
     const times = textClass.getTimesText();
 
-    alert(this.text_lanyard_left.offsetWidth + "   " + this.text_lanyard_right);
+    alert(this.text_lanyard_left.offsetWidth + "   " + this.text_lanyard_right.offsetWidth);
 
     [this.text_lanyard_left, this.text_lanyard_right].forEach((el, index) => {
       if (el) {
