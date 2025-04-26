@@ -76,7 +76,7 @@ class BackgroundClass {
     }
      this.pantoneColours = document.querySelectorAll(".pantoneColours");
 
-    pantoneColours[0].style.border = "3px solid blue";
+    this.pantoneColours[0].style.border = "3px solid blue";
 
 
     const optionColourBackground = document.getElementById("optionColourBackground");
