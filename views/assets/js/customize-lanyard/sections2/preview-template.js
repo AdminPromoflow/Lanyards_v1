@@ -57,7 +57,7 @@ class PreviewTemplate {
     const attachment = attachmentClass.getAttachmentSelected(); // Retrieve the selected attachment mode
 
     this.cleanStyle(); // Clear any existing inline styles or classes
-    this.cleanStyleManual();
+    previewManual.cleanStyleManual();
 
     // Apply new styles based on the lanyard configuration
     if (type === "one-end") {
@@ -93,17 +93,6 @@ class PreviewTemplate {
 
   }
 
-  // Clears styles and classes for the manual elements
-  cleanStyleManual() {
-    const elManual = this.manualElements;
-
-    Object.values(elManual).forEach(element => {
-      if (element) {
-        element.removeAttribute("style");
-        element.className = "";
-      }
-    });
-  }
 
   // Apply styles for the "no-attachment" case based on width
   applyNoAttachmentStyles(width) {
