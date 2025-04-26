@@ -559,8 +559,6 @@ overflow: hidden;
   display: inline-block; /* Se ajusta al tamaño del contenido */
   transform-origin: top left;
   background-color: orange;
-  left: -50%;
-  transform: rotate(90deg) translate(0%,-100%);
 }
 
 .wrap_ex_0 h1 {
@@ -568,7 +566,7 @@ overflow: hidden;
   padding: 0;
   width: 100%;
 
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 300;
   white-space: nowrap;
   transform: rotate(0deg) ;
@@ -580,18 +578,17 @@ overflow: hidden;
   display: inline-block; /* Se ajusta al tamaño del contenido */
   transform-origin: top left;
   background-color: orange;
-  left: -100%;
-  transform: rotate(90deg) translate(0%,-100%);
 }
 
 
 .space_between_text{
+  transform: rotate(90deg) translateY(-100%);
 }
 
 .wrap_ex_1 h1 {
   margin: 0;
   padding: 0;
-  font-size: 6px;
+  font-size: 10px;
   font-weight: 300;
   white-space: nowrap;
   transform: rotate(180deg) scale(-1, -1);;
