@@ -5,9 +5,8 @@ class TextClass {
       alert("ay juemadre");
     //  previewTextClass.addModifyText(textInput.value);
 
-
     })
-  /*  const repeatTextBox = document.querySelectorAll(".repeat-text-box");
+  /*const repeatTextBox = document.querySelectorAll(".repeat-text-box");
     const colourTextSelect = document.getElementById("colour-text-select");
     const colourTextSelectContainer = document.getElementById("colour-text-select-container");
     var repeatTextBoxSelected = 0;
