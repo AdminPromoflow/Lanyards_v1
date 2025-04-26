@@ -4,7 +4,7 @@ class PreviewManual {
   }
   addTextToLanyard(){
     var textLanyard = textClass.getContentText();
-    alert(textLanyard + "Lo estamos logrando");
+    //alert(textLanyard + "Lo estamos logrando");
 
     const times = 7; // Cambia esto al número que necesites
 
@@ -12,7 +12,7 @@ class PreviewManual {
       for (let i = 0; i < times; i++) {
         const h1 = document.createElement("h1");
         h1.textContent = textLanyard;
-        h1.classList.add("rotate--90");
+      //  h1.classList.add("rotate--90");
         element.appendChild(h1);
       }
     });
