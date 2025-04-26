@@ -12,14 +12,14 @@ function get_file_version($relative_path) {
   <div class="super-lanyard-manual" id="super-lanyard-manual">
     <div class="" id="left-super-lanyard-manual">
       <div class="text_lanyard_left" id="text_lanyard_left">
-
       </div>
     </div>
     <div class="" id="right-super-lanyard-manual">
       <div class="text_lanyard_right" id="text_lanyard_right">
       </div>
     </div>
-    <div class="" id="center-super-lanyard-manual"></div>
+    <div class="" id="center-super-lanyard-manual">
+    </div>
   </div>
 </section>
 

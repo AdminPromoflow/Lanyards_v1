@@ -539,7 +539,7 @@ overflow: hidden;
   align-items: flex-start; /* <== centrado horizontal */
   justify-content: flex-end; /* opcional: centrado vertical */
   height: 100%;
-  transform: rotate(0deg);
+  transform: rotate(0deg) scaleX(-1);
 }
 .text_lanyard_right {
   background-color: green;
