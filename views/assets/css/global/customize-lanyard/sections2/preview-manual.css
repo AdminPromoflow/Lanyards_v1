@@ -542,8 +542,8 @@ overflow: hidden;
   display: flex;
   flex-direction: column;
   gap: 30px; /* espacio entre textos rotados */
-  align-items: center; /* <== centrado horizontal */
-  justify-content: flex-start;; /* opcional: centrado vertical */
+  align-items: flex-start;; /* <== centrado horizontal */
+  justify-content: flex-start;;; /* opcional: centrado vertical */
   flex-wrap: nowrap;
 }
 
