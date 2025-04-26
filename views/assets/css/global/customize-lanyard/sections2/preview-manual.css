@@ -559,8 +559,8 @@ overflow: hidden;
   display: inline-block; /* Se ajusta al tamaño del contenido */
   transform-origin: top left;
   background-color: orange;
-  left: 50%;
-  transform: rotate(90deg) translate(-50%,-100%);
+  left: -50%;
+  transform: rotate(90deg) translate(50%,-100%);
 }
 
 .wrap_ex_0 h1 {
