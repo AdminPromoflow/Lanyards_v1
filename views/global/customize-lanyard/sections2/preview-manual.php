@@ -13,7 +13,7 @@ function get_file_version($relative_path) {
     <div class="" id="left-super-lanyard-manual">
       <div class="text-lanyard">
         <div class="wrap_ex">
-          <h1>Holacomoestas?</h1>
+          <h1>HolacomoestasHolacomoestasHolacomoestas?</h1>
         </div>
       </div>
     </div>
