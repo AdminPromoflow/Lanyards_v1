@@ -1,7 +1,7 @@
 class PreviewManual {
   constructor() {
   }
-  function addTextToLanyard() {
+  addTextToLanyard() {
     this.text_lanyard_left = document.getElementById("lanyard_left");
     this.text_lanyard_right = document.getElementById("lanyard_right");
 
