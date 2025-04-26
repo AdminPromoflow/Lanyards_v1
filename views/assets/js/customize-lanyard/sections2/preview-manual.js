@@ -7,7 +7,7 @@ class PreviewManual {
 
     const textLanyard = textClass.getContentText();
     const times = textClass.getTimesText();
-    const widhtSelected = widhtClass.getWidthSelected();
+    const widthSelected = widthClass.getWidthSelected();
 
     [this.text_lanyard_left, this.text_lanyard_right].forEach((el, index) => {
       if (el) {
