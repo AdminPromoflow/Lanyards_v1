@@ -3,33 +3,23 @@ class PreviewManual {
     this.text_lanyard = document.querySelectorAll(".text-lanyard");
   }
   addTextToLanyard(){
+  //  this.cleanTextToLanyard();
     var textLanyard = textClass.getContentText();
     //alert(textLanyard + "Lo estamos logrando");
 
     const times = 7; // Cambia esto al número que necesites
 
-    this.text_lanyard.forEach((element) => {
+    this.text_lanyard.forEach((container) => {
+      container.querySelectorAll("h1").forEach(h1 => h1.remove());
+
       for (let i = 0; i < times; i++) {
-        const h1 = document.createElement("h1");
-        h1.textContent = textLanyard;
-        element.appendChild(h1);
+        const heading = document.createElement("h1");
+        heading.textContent = textLanyard;
+        heading.classList.add("rotate-90");
+        container.appendChild(heading);
       }
 
     });
-
-    this.text_lanyard.forEach((element, i) => {
-
-      const h1s = element.querySelectorAll("h1");
-        h1s.forEach(h1 => {
-          h1.classList.add("rotate-90");
-        });
-
-
-    });
-
-
-
-
 
 
   }
