@@ -582,7 +582,7 @@ overflow: hidden;
 
 
 .space_between_text{
-  transform: rotate(90deg) translateY(-100%);
+  transform: rotate(90deg);
 }
 
 .wrap_ex_1 h1 {
