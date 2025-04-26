@@ -14,11 +14,19 @@ class PreviewManual {
         h1.textContent = textLanyard;
         element.appendChild(h1);
       }
+
+    });
+
+    this.text_lanyard.forEach((element, i) => {
+
       const h1s = element.querySelectorAll("h1");
         h1s.forEach(h1 => {
           h1.classList.add("rotate-90");
         });
+
+
     });
+
 
 
 

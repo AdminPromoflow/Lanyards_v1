@@ -12,12 +12,10 @@ function get_file_version($relative_path) {
   <div class="super-lanyard-manual" id="super-lanyard-manual">
     <div class="" id="left-super-lanyard-manual">
       <div class="text-lanyard">
-        <h1 class="rotate--90 ">hola1</h1>
       </div>
     </div>
     <div class="" id="right-super-lanyard-manual">
       <div class="text-lanyard">
-        <h1 class="rotate-90 ">hola1</h1> 
       </div>
     </div>
     <div class="" id="center-super-lanyard-manual"></div>
