@@ -251,7 +251,7 @@ class BackgroundClass {
   changeBackgroundColourSelectedFirstOption() {
     var colour = this.getBackgroundColourSelectedFirstOption();
     this.setBackground(colour);
-    alert("Este es el first option");
+    alert("Este es el first option" + colour);
 
 
     const backgroundColours = document.querySelectorAll(".background-colour");
