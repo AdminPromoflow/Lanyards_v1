@@ -544,7 +544,6 @@ overflow: hidden;
   gap: 20px; /* espacio entre textos rotados */
   align-items: center;; /* <== centrado horizontal */
   justify-content: flex-start; /* opcional: centrado vertical */
-  flex-wrap: nowrap;
   height: 100%;
 }
 
@@ -554,7 +553,6 @@ overflow: hidden;
   padding: 0;
   font-size: 6px;
   font-weight: 300;
-  white-space: nowrap;
   background-color: orange;
 }
 /* Sin rotación (0 grados) */
