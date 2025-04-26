@@ -243,25 +243,25 @@
 .left-super-lanyard-two-end-25mm-manual {
   position: absolute;
   top: 50%;
-  left: 11.1%;
+  left: 10.2%;
   height: 6.08cm;
   width: 0.336cm;
 
 
   transform:   translateY(-50%);
-overflow: hidden;
+  overflow: hidden;
 }
 
 .right-super-lanyard-two-end-25mm-manual {
   position: absolute;
   top: 50%;
-  right: 11.1%;
+  right: 10.2%;
   height: 6.08cm;
   width: 0.336cm;
 
 
   transform:   translateY(-50%);
-overflow: hidden;
+  overflow: hidden;
 }
 
 
