@@ -557,7 +557,7 @@ overflow: hidden;
 .wrap_ex_0{
   position: relative;
   display: inline-block; /* Se ajusta al tamaño del contenido */
-  transform-origin: 0% 50%;
+  transform-origin: 0% 100%;
   background-color: orange;
 }
 
