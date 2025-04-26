@@ -13,7 +13,7 @@ class TextClass {
     })
 
     const decreaseTextBox = document.getElementById("decrease-text-box");
-    repeatTextBox.addEventListener("click", function(){
+    decreaseTextBox.addEventListener("click", function(){
       alert("decrease");
     })
 
