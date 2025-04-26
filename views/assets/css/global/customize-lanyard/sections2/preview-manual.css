@@ -560,6 +560,7 @@ overflow: hidden;
 
 .wrap_ex{
   position: relative;
+  display: inline-block;
   transform-origin: top left;
   background-color: gold;
   transform: rotate(90deg);
