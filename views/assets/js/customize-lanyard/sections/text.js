@@ -8,13 +8,26 @@ class TextClass {
 
 
     const repeatTextBox = document.getElementById("repeat-text-box");
+    const labelRepeatText = document.getElementById("label-repeat-text");
+
+
     repeatTextBox.addEventListener("click", function(){
-      alert("repeat");
+      if (this.getTimesText() <=20) {
+        labelRepeatText.innerHTML = "Repeat text "+this.getTimesText()+" times"
+      }
+      else {
+        alert("The maximum allowed number of repetitions is 20");
+      }
     })
 
     const decreaseTextBox = document.getElementById("decrease-text-box");
     decreaseTextBox.addEventListener("click", function(){
-      alert("decrease");
+      if (this.getTimesText() >=0) {
+        labelRepeatText.innerHTML = "Repeat text "+this.getTimesText()+" times"
+      }
+      else {
+        alert("The minimum allowed number of repetitions is 0.");
+      }
     })
 
   /*const repeatTextBox = document.querySelectorAll(".repeat-text-box");
