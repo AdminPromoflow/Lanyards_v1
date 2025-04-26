@@ -552,9 +552,7 @@ overflow: hidden;
   transform: rotate(180deg);
 }
 /* Sin rotación (0 grados) */
-.rotate-0 {
-  transform: none;
-}
+
 
 .wrap_ex_0{
   position: relative;
@@ -566,6 +564,8 @@ overflow: hidden;
 .wrap_ex_0 h1 {
   margin: 0;
   padding: 0;
+  height: 100%;
+
   font-size: 6px;
   font-weight: 300;
   white-space: nowrap;
@@ -588,10 +588,14 @@ overflow: hidden;
 .wrap_ex_1 h1 {
   margin: 0;
   padding: 0;
+  height: 100%;
   font-size: 6px;
   font-weight: 300;
   white-space: nowrap;
   transform: rotate(180deg) scale(-1, -1);;
+}
+.rotate-0 {
+  transform: none;
 }
 /* Rotado -90 grados (hacia la izquierda) */
 .rotate--90 {
