@@ -15,7 +15,7 @@ class PreviewManual {
       for (let i = 0; i < times; i++) {
         const heading = document.createElement("h1");
         heading.textContent = textLanyard;
-        heading.classList.add("rotate--90");
+        heading.classList.add("rotate-180");
         container.appendChild(heading);
       }
 
