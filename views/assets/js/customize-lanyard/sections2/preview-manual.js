@@ -16,6 +16,9 @@ class PreviewManual {
     });
   }
 
+
+
+
   togglePreviewManualClass(action) {
     previewManualSection.style.display = action;
   }

@@ -24,10 +24,10 @@ $imgPath_text = "../../views/assets/img/global/customize-lanyard/sections/text/"
       <div class="item-text">
         <p id="label-repeat-text">Repeat text 1 time</p>
         <div class="containr-repeat-text">
-          <div class="repeat-text-box">
+          <div class="repeat-text-box" id="repeat-text-box">
             <h3>-</h3>
           </div>
-          <div class="repeat-text-box">
+          <div class="repeat-text-box" id="decrease-text-box">
             <h3>+</h3>
           </div>
         </div>

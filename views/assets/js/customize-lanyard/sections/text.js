@@ -4,7 +4,19 @@ class TextClass {
     textInput.addEventListener('input', function() {
       textClass.setContentText(textInput.value);
       previewManual.addTextToLanyard();
+    });
+
+
+    const repeatTextBox = document.getElementById("repeat-text-box");
+    repeatTextBox.addEventListener("click", function(){
+      alert("repeat");
     })
+
+    const decreaseTextBox = document.getElementById("decrease-text-box");
+    repeatTextBox.addEventListener("click", function(){
+      alert("decrease");
+    })
+
   /*const repeatTextBox = document.querySelectorAll(".repeat-text-box");
     const colourTextSelect = document.getElementById("colour-text-select");
     const colourTextSelectContainer = document.getElementById("colour-text-select-container");
@@ -262,6 +274,15 @@ class TextClass {
 
   setContentText(value) {
     this.contentText = value;
+  }
+  setTimesText(newTimes) {
+  if (typeof newTimes === 'number' && newTimes > 0) {
+      timesText = newTimes;
+  }
+  }
+
+  getTimesText() {
+      return timesText;
   }
 
   /*
