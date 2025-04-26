@@ -549,7 +549,7 @@ overflow: hidden;
 .wrap_ex{
   position: relative;
   display: inline-block; /* Se ajusta al tamaño del contenido */
-  transform: rotate(-90deg) translateY(100%);
+  transform: rotate(90deg) translateY(-100%);
   transform-origin: top left;
   background-color: orange;
 
