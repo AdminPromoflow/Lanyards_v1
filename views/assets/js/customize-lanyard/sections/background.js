@@ -161,7 +161,7 @@ class BackgroundClass {
       screenPrintBackgroundColour.forEach(elem => elem.style.display = "none");
 
       this.setBackgroundColourSelectedFirstOption("#ffffff");
-      this.pantoneColours[0].style.border = "3px solid blue";
+      this.selectColorBoxOfFirstOption(0);
       this.changeBackgroundColourSelectedFirstOption();
     }
   }
