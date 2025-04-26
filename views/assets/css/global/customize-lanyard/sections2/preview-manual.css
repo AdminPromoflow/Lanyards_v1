@@ -557,7 +557,7 @@ overflow: hidden;
 .wrap_ex_0{
   position: relative;
   display: inline-block; /* Se ajusta al tamaño del contenido */
-  transform-origin: top left;
+  transform-origin: 50% 0%;
   background-color: orange;
 }
 
@@ -576,7 +576,7 @@ overflow: hidden;
 .wrap_ex_1{
   position: relative;
   display: inline-block; /* Se ajusta al tamaño del contenido */
-  transform-origin: top left;
+  transform-origin: 50% 0%;
   background-color: orange;
 }
 
