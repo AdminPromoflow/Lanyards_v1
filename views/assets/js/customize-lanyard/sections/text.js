@@ -4,6 +4,7 @@ class TextClass {
     textInput.addEventListener('input', function() {
       textClass.setContentText(textInput.value);
       document.addEventListener("DOMContentLoaded", function () {
+        alert("sera que entramos??");
         previewManual.addTextToLanyard();
       });
 
