@@ -13,10 +13,10 @@ function get_file_version($relative_path) {
     <div class="" id="left-super-lanyard-manual">
       <div class="text-lanyard">
         <div class="wrap_ex">
-          <h1>Holacom oesta</h1>
+          <h1>Holacom oestaHolacom oestaHolacom oesta</h1>
         </div>
         <div class="wrap_ex">
-          <h1>Holacom oesta</h1>
+          <h1>Holacom oestaHolacom oestaHolacom oesta</h1>
         </div>
 
       </div>
