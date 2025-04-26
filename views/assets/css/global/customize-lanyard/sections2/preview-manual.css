@@ -323,7 +323,7 @@ overflow: hidden;
 
 .center-super-lanyard-one-end-10mm-attachment-manual{
   position: absolute;
-  height: calc(2cm - 0.50cm);
+  height: calc(2cm - 0.48cm);
   width: 0.096cm;
   bottom: 0.56cm;
   left: 50%;
