@@ -1,9 +1,9 @@
 class PreviewManual {
   constructor() {
   }
-  addTextToLanyard() {
-    this.text_lanyard_left = document.getElementById("lanyard_left");
-    this.text_lanyard_right = document.getElementById("lanyard_right");
+  ssaddTextToLanyard() {
+    this.text_lanyard_left = document.getElementById("text_lanyard_left");
+    this.text_lanyard_right = document.getElementById("text_lanyard_right");
 
     const textLanyard = textClass.getContentText();
     const times = textClass.getTimesText();
