@@ -488,12 +488,12 @@
   right:  10.4%;
 }
 
-.left-super-lanyard-one-end-10mm-attachment{
+.left-super-lanyard-one-end-10mm-attachment{/*+5*/
   position: absolute;
   height: 4.5cm;
   width: 0.16cm;
   top: 0%;
-  left: 28.8%;
+  left: 29.5%;
   background-color: white;
   border: 1px solid black;
   transform:  skewX(11.3deg) perspective(11.3vw);
@@ -504,7 +504,7 @@
   height: 4.5cm;
   width: 0.16cm;
   top: 0%;
-  right: 28.8%;
+  right: 29.5%;
   background-color: white;
   border: 1px solid black;
   transform:  skewX(-11.3deg) perspective(11.3vw);
@@ -550,7 +550,7 @@
   height: 4.5cm;
   width: 0.24cm;
   top: 0%;
-  left: 26.8%;
+  left: 27.5%;
   background-color: white;
   border: 1px solid black;
   transform:  skewX(11.3deg) perspective(11.3vw);
@@ -561,7 +561,7 @@
   height: 4.5cm;
   width: 0.24cm;
   top: 0%;
-  right: 26.8%;
+  right: 27.5%;
   background-color: white;
   border: 1px solid black;
   transform:  skewX(-11.3deg) perspective(11.3vw);
@@ -611,7 +611,7 @@
   height: 4.5cm;
   width: 0.32cm;
   top: 0%;
-  left: 25.2%;
+  left: 26%;
   background-color: white;
   border: 1px solid black;
   transform:  skewX(11.3deg) perspective(11.3vw);
@@ -622,7 +622,7 @@
   height: 4.5cm;
   width: 0.32cm;
   top: 0%;
-  right: 25.2%;
+  right: 26%;
   background-color: white;
   border: 1px solid black;
   transform:  skewX(-11.3deg) perspective(11.3vw);
@@ -672,7 +672,7 @@
   height: 4.5cm;
   width: 0.4cm;
   top: 0%;
-  left: 23.7%;
+  left: 24.5%;
   background-color: white;
   border: 1px solid black;
   transform:  skewX(11.3deg) perspective(11.3vw);
@@ -683,7 +683,7 @@
   height: 4.5cm;
   width: 0.4cm;
   top: 0%;
-  right: 23.7%;
+  right: 24.5%;
   background-color: white;
   border: 1px solid black;
   transform:  skewX(-11.3deg) perspective(11.3vw);
@@ -733,7 +733,7 @@ right: 4.2%;
   height: 4.5cm;
   width: 0.48cm;
   top: 0%;
-  left: 15.1%;
+  left: 23%;
   background-color: white;
   border: 1px solid black;
   transform:  skewX(11.3deg) perspective(11.3vw);
@@ -744,7 +744,7 @@ right: 4.2%;
   height: 4.5cm;
   width: 0.48cm;
   top: 0%;
-  right: 21.1%;
+  right: 23%;
   background-color: white;
   border: 1px solid black;
   transform:  skewX(-11.3deg) perspective(11.3vw);
