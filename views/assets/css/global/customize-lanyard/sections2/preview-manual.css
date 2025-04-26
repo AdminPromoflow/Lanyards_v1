@@ -542,7 +542,7 @@ overflow: hidden;
   display: flex;
   flex-direction: column;
   gap: 0px; /* espacio entre textos rotados */
-  align-items: center;; /* <== centrado horizontal */
+  align-items: flex-start; /* <== centrado horizontal */
   justify-content: center; /* opcional: centrado vertical */
   flex-wrap: nowrap;
   height: 100%;
