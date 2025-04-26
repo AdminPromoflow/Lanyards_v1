@@ -14,6 +14,7 @@ class TextClass {
 
 
     repeatTextBox.addEventListener("click", function(){
+      alert(textClass.getTimesText());
       if (textClass.getTimesText() <=20) {
         labelRepeatText.innerHTML = "Repeat text "+textClass.getTimesText()+" times"
       }
