@@ -2,25 +2,18 @@ class PreviewManual {
   constructor() {
     this.text_lanyard = document.querySelectorAll(".text-lanyard");
   }
-  addTextToLanyard(){
-  //  this.cleanTextToLanyard();
+  addTextToLanyard() {
+    this.text_lanyard = document.querySelectorAll(".text-lanyard");
     var textLanyard = textClass.getContentText();
-    //alert(textLanyard + "Lo estamos logrando");
+    var times = 3; //getTimesText(); // obtenemos el valor desde la función get
 
-    const times = 2; // Cambia esto al número que necesites
-
-    this.text_lanyard.forEach((container) => {
-      container.querySelectorAll("h1").forEach(h1 => h1.remove());
-
-      for (let i = 0; i < times; i++) {
-        const heading = document.createElement("h1");
-        heading.textContent = textLanyard;
-        heading.classList.add("rotate--90");
-        container.appendChild(heading);
-      }
+    this.text_lanyard.forEach(el => {
+        el.innerHTML = Array(times).fill(`
+            <div class="wrap_ex">
+                <h1>${textLanyard}</h1>
+            </div>
+        `).join('');
     });
-
-
   }
 
   togglePreviewManualClass(action) {
