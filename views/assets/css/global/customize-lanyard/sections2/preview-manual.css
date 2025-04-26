@@ -459,7 +459,7 @@ overflow: hidden;
   height: calc(4.5cm - 0.56cm);
   width: 0.315cm;
   top: 0.56cm;
-  left: 27.9%;
+  left: 28.2%;
 
   border: 1px solid black;
   transform:  skewX(11.3deg) perspective(11.3vw);
@@ -471,7 +471,7 @@ overflow: hidden;
   height: calc(4.5cm - 0.56cm);
   width: 0.315cm;
   top: 0.56cm;
-  right: 27.9%;
+  right: 28.2%;
 
   border: 1px solid black;
   transform:  skewX(-11.3deg) perspective(11.3vw);
