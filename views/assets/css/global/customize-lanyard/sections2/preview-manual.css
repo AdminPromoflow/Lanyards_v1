@@ -546,36 +546,34 @@ overflow: hidden;
 }
 
 .text-lanyard h1 {
-  /*display: inline-block;
+  display: inline-block;
   margin: 0;
   padding: 0;
   font-size: 6px;
   font-weight: 300;
-  white-space: nowrap;*/
-
-
-    position: absolute;
-   top: 50%;
-   left: 50%;
-   transform-origin: center;
-   white-space: nowrap; /* Evita que el texto se parta en varias líneas */
-   font-size: 12px; /* Ajusta según el diseño del lanyard */
+  white-space: nowrap;
 }
 /* Sin rotación (0 grados) */
-.rotate--90 {
-  transform: rotate(-90deg) translate(-50%, 50%);
-}
-
-.rotate-90 {
-  transform: rotate(90deg) translate(-50%, -50%);
-}
-
-.rotate-180 {
-  transform: rotate(180deg) translate(-50%, -50%);
-}
-
 .rotate-0 {
-  transform: translate(-50%, -50%);
+  transform: none;
+}
+
+/* Rotado -90 grados (hacia la izquierda) */
+.rotate--90 {
+  transform: rotate(-90deg) translate(-100%, 35%);
+  transform-origin: top left;
+}
+
+/* Rotado 90 grados (hacia la derecha) */
+.rotate-90 {
+  transform: rotate(90deg)  translate(0%, -135%);
+  transform-origin: top left;
+}
+
+/* Rotado 180 grados (boca abajo) */
+.rotate-180 {
+  transform: rotate(180deg) translate(-100%, -100%);
+  transform-origin: top left;
 }
 
 
