@@ -2,7 +2,9 @@ class TextClass {
   constructor() {
     const textInput = document.getElementById("textInput");
     textInput.addEventListener('input', function() {
-      alert(textInput.value);
+      this.setContentText(textInput.value);
+      previewManual.addTextToLanyard();
+
     //  previewTextClass.addModifyText(textInput.value);
 
     })
@@ -257,9 +259,6 @@ class TextClass {
       })
     }*/
   }
-
-
-  /*
   getContentText() {
     return this.contentText;
   }
@@ -267,6 +266,9 @@ class TextClass {
   setContentText(value) {
     this.contentText = value;
   }
+
+  /*
+
 
   // Repeat text
   getRepeatText() {

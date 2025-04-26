@@ -1,21 +1,17 @@
 class PreviewManual {
   constructor() {
+    this.text_lanyard = document.querySelectorAll(".text-lanyard");
+  }
+  addTextToLanyard(){
+    var textLanyard = textClass.getContentText();
+    alert(textLanyard + "Lo estamos logrando");
 
   }
+
   togglePreviewManualClass(action) {
     previewManualSection.style.display = action;
   }
-  // Clears styles and classes for the manual elements
-  cleanStyleManual() {
-    const elManual = previewTemplate.getElements();
 
-    Object.values(elManual).forEach(element => {
-      if (element) {
-        element.removeAttribute("style");
-        element.className = "";
-      }
-    });
-  }
 
 
 }
