@@ -556,7 +556,7 @@ overflow: hidden;
    top: 0;
    left: 0;
    display: inline-block;
-   transform: rotate(90deg) translateY(100%);
+   transform: rotate(90deg) translateY(-100%);
    transform-origin: top left;
    background-color: orange;
 
