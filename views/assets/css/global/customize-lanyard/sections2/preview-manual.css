@@ -29,7 +29,6 @@
         width: 0.096cm;
         background: white;
         transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
-        overflow: hidden;
 }
 
       /* 15mm */
@@ -553,6 +552,7 @@ overflow: hidden;
 }
 
 .wrap_ex{
+  position: relative;
   display: inline-block; /* Se ajusta al tamaño del contenido */
   transform: rotate(90deg) translateY(-75%);
   transform-origin: top left;
