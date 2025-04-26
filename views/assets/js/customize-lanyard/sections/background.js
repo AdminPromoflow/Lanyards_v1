@@ -283,7 +283,7 @@ class BackgroundClass {
       for (var i = 0; i < screenPrintBackgroundColour.length; i++) {
         screenPrintBackgroundColour[i].style.display = "block";
       }
-      document.getElementById('backgroundColourFirstOption').selected = true;
+      document.getElementById('option_background_checked_01').selected = true;
 
       backgroundClass.setBackgroundColourSelectedSecondOption(this.getBackgroundColourSelectedFirstOption());
 
