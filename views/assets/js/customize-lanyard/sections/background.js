@@ -5,6 +5,11 @@ class BackgroundClass {
     this.setBackgroundColourSelectedFirstOption("#ffffff");
     this.setBackgroundColourSelectedSecondOption("#ffffff");
 
+    var pantoneColours = document.querySelectorAll(".pantoneColours");
+
+    pantoneColours[0].style.border = "3px solid blue";
+
+
     const option_background_colour = document.querySelectorAll(".option_background_colour");
     const containers_boxes_background = document.querySelectorAll(".containers_boxes_background");
 
@@ -241,7 +246,6 @@ class BackgroundClass {
   }
 
   selectColorBoxOfFirstOption(indexSelected){
-    var pantoneColours = document.querySelectorAll(".pantoneColours");
 
     for (var i = 0; i < pantoneColours.length; i++) {
       pantoneColours[i].style.border = "3px solid transparent";
