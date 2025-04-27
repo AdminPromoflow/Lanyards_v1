@@ -36,22 +36,26 @@ class PreviewManual {
       }
     });
 
-    // Obtener las dimensiones de la clase dinámica wrap_ex_0 o wrap_ex_1
-    const wrapElement = document.querySelectorAll('.wrap_ex_0');
-
-    for (var i = 0; i < wrapElement.length; i++) {
-      // Obtener el ancho de text_lanyard_right
-      const rightWidth = text_lanyard_right.offsetWidth;
-
-      // Calcular y establecer la propiedad 'left'
-      wrapElement[i].style.left = `${rightWidth / 2}px`; // Convertir a px para unidades correctas
-
-      // Calcular y establecer la propiedad 'transform' para centrar el elemento
-      wrapElement[i].style.transform = `translateX(${-wrapElement[i].offsetWidth / 2}px)`; // Ajustar la posición
-    }
 
 
-    // Mostrar todo el mensaje en un solo alert
+
+
+    const rightWidth = text_lanyard_right.offsetWidth;
+
+    // Definir las clases a procesar
+    const classNames = ['.wrap_ex_0', '.wrap_ex_1'];
+
+    classNames.forEach(className => {
+      const wrapElements = document.querySelectorAll(className);
+
+      wrapElements.forEach(el => {
+        // Calcular y establecer la propiedad 'left'
+        el.style.left = `${rightWidth / 2}px`;
+
+        // Calcular y establecer la propiedad 'transform' para centrar el elemento
+        el.style.transform = `translateX(${-el.offsetWidth / 2}px)`;
+      });
+    });
   }
 
   //  alert("Max" + text_lanyard_right.offsetWidth + " Min " + wrapElement.offsetWidth);
