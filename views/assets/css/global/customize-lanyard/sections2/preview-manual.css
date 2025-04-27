@@ -559,7 +559,6 @@ overflow: hidden;
   display: inline-block; /* Se ajusta al tamaño del contenido */
   transform-origin: top left;
   background-color: orange;
-  right: 4px;
 }
 
 .wrap_ex_0 h1 {
@@ -579,7 +578,6 @@ overflow: hidden;
   display: inline-block; /* Se ajusta al tamaño del contenido */
   transform-origin: top left;
   background-color: orange;
-  right: 2px;
 }
 
 

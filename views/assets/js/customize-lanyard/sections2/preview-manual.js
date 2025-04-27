@@ -29,7 +29,7 @@ class PreviewManual {
         el.innerHTML = html;
 
         // Obtener las dimensiones de la clase dinámica wrap_ex_0 o wrap_ex_1
-        const wrapElement = document.querySelector(`.wrap_ex_${index}`);
+        const wrapElement = document.querySelector(`.wrap_ex_1`);
 
         // Asegúrate de que wrapElement está disponible
         if (wrapElement) {
