@@ -40,6 +40,7 @@ class PreviewManual {
     const wrapElement = document.querySelectorAll('.wrap_ex_0');
 
     for (var i = 0; i < wrapElement.length; i++) {
+      alert(text_lanyard_right.offsetWidth + "  " + wrapElement[i].offsetHeight);
       // Obtener el ancho de text_lanyard_right
       const rightWidth = text_lanyard_right.offsetWidth;
 
