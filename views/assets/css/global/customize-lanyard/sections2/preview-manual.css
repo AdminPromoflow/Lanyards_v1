@@ -542,7 +542,7 @@ overflow: hidden;
   flex-direction: column-reverse;
   gap: 20px; /* espacio entre textos rotados */
   align-items: flex-start; /* <== centrado horizontal */
-  justify-content: center; /* opcional: centrado vertical */
+  justify-content: flex-end; /* opcional: centrado vertical */
   height: 100%;
   transform: rotate(0deg);
 }
