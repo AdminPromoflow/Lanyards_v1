@@ -562,8 +562,7 @@ overflow: hidden;
 .wrap_text_0{
   position: relative;
   display: inline-block; /* Se ajusta al tamaño del contenido */
-  transform-origin: center center;
-
+  transform-origin: top left;
 }
 
 .wrap_text_0 h1 {
