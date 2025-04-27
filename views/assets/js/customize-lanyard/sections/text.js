@@ -500,6 +500,8 @@ class TextClass {
 
   changeFontFamilyText(name, fontFamily) {
       this.setFontFamilyText(fontFamily);
+      previewManual.changeFontFamilyText();
+
 
       const typeTextSelect = document.getElementById("type-text-select");
       const h3Element = typeTextSelect.querySelector('h3');
@@ -509,7 +511,6 @@ class TextClass {
       h3Element.innerHTML = name;
       typeTextSelectContainer.style.display = "none";
 
-    //  previewTextClass.changeFontFamily(fontFamily);
   }
   /*
 
