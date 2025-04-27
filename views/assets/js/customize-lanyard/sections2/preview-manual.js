@@ -60,7 +60,7 @@ class PreviewManual {
   changeFontFamilyText(){
     const wrap_ex = document.querySelectorAll(".wrap_ex_0, .wrap_ex_1");
     const text_wrap_ex = document.querySelectorAll("h1");
-    const fontFamilyText = textClass.getFontSizeText();
+    const fontFamilyText = textClass.getFontFamilyText();
 
     text_wrap_ex.forEach((text, i) => {
       text.style.fontFamily = fontFamily;
