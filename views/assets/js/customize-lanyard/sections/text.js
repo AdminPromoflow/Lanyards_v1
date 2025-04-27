@@ -114,6 +114,9 @@ class TextClass {
      { pantone: "478", html: "#6B3300" },
      { pantone: "471", html: "#E6CF6B" }
  ];
+    const colourTextSelectContainer = document.getElementById("colour-text-select-container");
+    colourTextSelectContainer.style.display = "none";
+
 
     for (let i = 0; i < pantoneColors.length; i++) {
       colourTextSelectContainer.innerHTML +=
