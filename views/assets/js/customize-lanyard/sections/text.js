@@ -1,7 +1,7 @@
 class TextClass {
   constructor() {
     this.timesText = 3;
-    this.spaceBetweenText = 30;
+    this.spaceBetweenText = 90;
 
     const textInput = document.getElementById("textInput");
     textInput.addEventListener('input', function() {
