@@ -499,8 +499,8 @@ class TextClass {
 
 
   changeFontFamilyText(name, fontFamily) {
-      this.setFontSizeText(fontFamily);
-      
+      this.setFontFamilyText(fontFamily);
+
       const typeTextSelect = document.getElementById("type-text-select");
       const h3Element = typeTextSelect.querySelector('h3');
       const typeTextSelectContainer = document.getElementById("type-text-select-container");
