@@ -203,7 +203,7 @@ class Width {
     this.setWidthSelectedIndex(index);
 
     previewLanyardType.showSelectedPreviewTemplate();
-  //  previewTemplate.activateTemplate();
+    previewTemplate.activateTemplate();
     attachmentClass.refreshAttachment();
 
 
@@ -215,7 +215,7 @@ class Width {
     colourClass.refreshColourQuantity();
     clipClass.refreshClip();
     priceClass.changePricePerLanyard();
-  //  previewManual.refreshTextLanyard();
+    previewManual.refreshTextLanyard();
 
   }
 

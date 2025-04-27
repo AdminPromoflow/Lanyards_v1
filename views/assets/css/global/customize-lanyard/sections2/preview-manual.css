@@ -603,8 +603,8 @@ overflow: hidden;
   background: orange;
 }
 .wrap_img_1 img{
-  height: 20px;
-  width: 20px;
+  height: 10px;
+  width: 10px;
   margin: 0;
   padding: 0;
   transform: rotate(180deg) scale(-1, -1);;
