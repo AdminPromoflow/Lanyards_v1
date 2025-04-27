@@ -1,6 +1,8 @@
 class PreviewManual {
   constructor() {
+
   }
+
   addTextToLanyard() {
     // Obtener los elementos del DOM
     this.text_lanyard_left = document.getElementById("text_lanyard_left");
@@ -22,17 +24,13 @@ class PreviewManual {
 
         // Crear el HTML repetido
         const html = Array(times).fill(`
-          <div class="wrap_ex_${index} space_between_text">
+          <div class="wrap_ex_${index}">
             <h1>${textLanyard}</h1>
           </div>
         `).join('');
 
         // Asignar el HTML al elemento
-        el.innerHTML = html;
-
-
-
-
+        el.innerHTML = html;      
       }
     });
 
@@ -59,6 +57,7 @@ class PreviewManual {
       wrapElements[i].style.transform = `rotate(90deg) translateY(calc(-100% + ${wrapElements[i].offsetHeight / 2}px))`;
     }
   }
+
   togglePreviewManualClass(action) {
     previewManualSection.style.display = action;
   }
