@@ -563,6 +563,8 @@ overflow: hidden;
   position: relative;
   display: inline-block; /* Se ajusta al tamaño del contenido */
   transform-origin: top left;
+  transform-origin: center center;
+
 }
 
 .wrap_text_0 h1 {
@@ -575,7 +577,6 @@ overflow: hidden;
   white-space: nowrap;
   transform: rotate(0deg) ;
   background-color: green;
-  transform-origin: center center;
 
 }
 
@@ -593,7 +594,6 @@ overflow: hidden;
   font-weight: 300;
   white-space: nowrap;
   transform: rotate(180deg) scale(-1, -1);
-  transform-origin: center center;
 
 }
 .wrap_img_0 {
