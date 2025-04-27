@@ -36,34 +36,21 @@ class PreviewManual {
       }
     });
 
-    // Obtener las dimensiones de la clase dinámica wrap_ex_0 o wrap_ex_1
-    const wrapElement = document.querySelectorAll('.wrap_ex_0');
+    // Obtener los elementos de .wrap_ex_0 y .wrap_ex_1
+const wrapElements = document.querySelectorAll('.wrap_ex_0, .wrap_ex_1');
 
-    for (var i = 0; i < wrapElement.length; i++) {
-      // Obtener el ancho de text_lanyard_right
-      const rightWidth = text_lanyard_right.offsetWidth;
+// Iterar sobre los elementos .wrap_ex_0 y .wrap_ex_1
+for (let i = 0; i < wrapElements.length; i++) {
+  // Obtener el ancho de text_lanyard_right
+  const rightWidth = text_lanyard_right.offsetWidth;
 
-      // Calcular y establecer la propiedad 'left'
-      wrapElement[i].style.left = `${rightWidth / 2}px`; // Convertir a px para unidades correctas
+  // Calcular y establecer la propiedad 'left'
+  wrapElements[i].style.left = `${rightWidth / 2}px`; // Convertir a px para unidades correctas
 
-      // Calcular y establecer la propiedad 'transform' para rotar y ajustar la posición
-      // Primero rotamos 90 grados y luego usamos translateX correctamente para mover el div
-      wrapElement[i].style.transform = `rotate(90deg) translateY(calc(-100% + ${wrapElement[i].offsetHeight / 2}px))`;
-    }
+  // Calcular y establecer la propiedad 'transform' para rotar y ajustar la posición
+  wrapElements[i].style.transform = `rotate(90deg) translateY(calc(-100% + ${wrapElements[i].offsetHeight / 2}px))`;
+}
 
-  /*  const wrapElement = document.querySelectorAll('.wrap_ex_1');
-
-    for (var i = 0; i < wrapElement.length; i++) {
-      // Obtener el ancho de text_lanyard_right
-      const rightWidth = text_lanyard_right.offsetWidth;
-
-      // Calcular y establecer la propiedad 'left'
-      wrapElement[i].style.left = `${rightWidth / 2}px`; // Convertir a px para unidades correctas
-
-      // Calcular y establecer la propiedad 'transform' para rotar y ajustar la posición
-      // Primero rotamos 90 grados y luego usamos translateY correctamente para mover el div
-      wrapElement[i].style.transform = `rotate(90deg) translateY(calc(-100% + ${wrapElement[i].offsetHeight / 2}px))`;
-    }*/
 
 //rotate(90deg) translateY(-100%)
 
