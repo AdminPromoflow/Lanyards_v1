@@ -601,11 +601,10 @@ overflow: hidden;
 }
 
 .wrap_img_0 img{
-  width: 100%;
 
 }
 .wrap_img_1 img{
-  height: 5px;
+  height: 2px;
 
 /*  transform: rotate(90deg) scale(-1, -1);;*/
 
