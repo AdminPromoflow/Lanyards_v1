@@ -7,6 +7,8 @@ class TextClass {
     this.fontFamilyText = "sans-serif";
     this.sizeText = 6;
     this.boldText = false;
+    this.italicText = false;
+
 
 
 
@@ -227,19 +229,44 @@ class TextClass {
 
 
 
-    const styling_text_box = document.getElementById("styling-text-box");
+    const styling_bold_text = document.getElementById("styling-bold-text");
 
 
-    styling_text_box.addEventListener("click", ()=>{
-      if (styling_text_box.style.border === "2px solid white") {
-        styling_text_box.style.border = "2px solid transparent";
+    styling_bold_text.addEventListener("click", ()=>{
+      if (styling_bold_text.style.border === "2px solid white") {
+        styling_bold_text.style.border = "2px solid transparent";
         textClass.setBoldText(false);
       } else {
-        styling_text_box.style.border = "2px solid white";
+        styling_bold_text.style.border = "2px solid white";
         textClass.setBoldText(true);
       }
 
       previewManual.changeBoldText();
+
+
+    });
+
+
+
+
+
+
+
+
+
+    const styling_italic_text = document.getElementById("styling-italic-text");
+
+
+    styling_italic_text.addEventListener("click", ()=>{
+      if (styling_italic_text.style.border === "2px solid white") {
+        styling_italic_text.style.border = "2px solid transparent";
+        textClass.setItalicText(false);
+      } else {
+        styling_italic_text.style.border = "2px solid white";
+        textClass.setItalicText(true);
+      }
+
+      previewManual.changeItalicText();
 
 
     });
@@ -543,12 +570,18 @@ class TextClass {
     return this.sizeText;
   }
 
-
   setBoldText(value){
     this.boldText = value;
   }
   getBoldText(){
     return this.boldText;
+  }
+
+  setItalicText(value){
+    this.italicText = value;
+  }
+  getItalicText(){
+    return this.italicText;
   }
 
   changeColourText(name, colour){

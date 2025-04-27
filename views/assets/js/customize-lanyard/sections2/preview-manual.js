@@ -90,6 +90,21 @@ class PreviewManual {
   }
 
 
+  changeItalicText(){
+    const text_wrap_ex = document.querySelectorAll(".wrap_ex_0 h1, .wrap_ex_1 h1");
+    const italicText = textClass.getItalicText();
+    var fontStyle = "normal";
+
+    fontStyle = italicText ? "italic" : "normal";
+
+    text_wrap_ex.forEach((text, i) => {
+      text.style.fontStyle = fontStyle;
+    });
+
+    this.centerTextLanyard();
+  }
+
+
   centerTextLanyard(){
     const wrapElements = document.querySelectorAll('.wrap_ex_0, .wrap_ex_1');
 
