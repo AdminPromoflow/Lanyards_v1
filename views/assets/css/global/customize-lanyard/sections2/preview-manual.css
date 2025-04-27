@@ -593,11 +593,16 @@ overflow: hidden;
   transform: rotate(180deg) scale(-1, -1);;
 }
 .wrap_img_0 {
+  position: relative;
+  display: inline-block; /* Se ajusta al tamaño del contenido */
+  transform-origin: top left;
   background: green;
 }
 
 .wrap_img_1 {
   position: relative;
+  display: inline-block; /* Se ajusta al tamaño del contenido */
+  transform-origin: top left;
   background: blue;
 }
 
