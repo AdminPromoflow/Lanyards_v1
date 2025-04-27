@@ -48,7 +48,7 @@ class PreviewManual {
 
       // Calcular y establecer la propiedad 'transform' para rotar y ajustar la posición
       // Primero rotamos 90 grados y luego usamos translateX correctamente para mover el div
-      wrapElement[i].style.transform = `rotate(90deg) translateX(calc(-100% + ${wrapElement[i].offsetHeight / 2}px))`;
+      wrapElement[i].style.transform = `rotate(90deg) translateY(calc(-100% + ${wrapElement[i].offsetHeight / 2}px))`;
     }
 
 //rotate(90deg) translateY(-100%)
