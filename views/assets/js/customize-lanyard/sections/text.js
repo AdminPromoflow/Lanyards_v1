@@ -129,6 +129,8 @@ class TextClass {
     }
 
 
+
+
   /*const repeatTextBox = document.querySelectorAll(".repeat-text-box");
     const colourTextSelect = document.getElementById("colour-text-select");
     const colourTextSelectContainer = document.getElementById("colour-text-select-container");
@@ -406,6 +408,9 @@ class TextClass {
 
 
   handleClickText(name, colour){
+    alert(name + "  " + colour);
+    colourTextSelectContainer.style.display = "none";
+
 
     //  previewTextClass.changeColour(colour);
       const colourTextSelect = document.getElementById("colour-text-select");
@@ -414,7 +419,6 @@ class TextClass {
 
       colourTextSelect.style.background = colour;
       h3Element.innerHTML = name;
-      colourTextSelectContainer.style.display = "none";
   }
   /*
 
