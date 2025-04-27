@@ -30,18 +30,13 @@ class PreviewManual {
         // Asignar el HTML al elemento
         el.innerHTML = html;
 
+
         // Obtener las dimensiones de la clase dinámica wrap_ex_0 o wrap_ex_1
         const wrapElement = document.querySelector(`.wrap_ex_${index}`);
 
-        if (wrapElement) {
-          // Concatenar las dimensiones al mensaje
-          dimensionsMessage += `Dimensiones de .wrap_ex_${index}:\n`;
-          dimensionsMessage += `Ancho: ${wrapElement.offsetWidth}px\n`;
-          dimensionsMessage += `Alto: ${wrapElement.offsetHeight}px\n\n`;
-        } else {
-          // Si no se encuentra el elemento, agregar una advertencia
-          dimensionsMessage += `No se encontró el elemento .wrap_ex_${index}\n\n`;
-        }
+        alert("Max" + text_lanyard_right.offsetWidth + " Min " + rapElement.offsetWidth);
+
+        w
       }
     });
 
