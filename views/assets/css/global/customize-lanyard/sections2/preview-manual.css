@@ -592,7 +592,10 @@ overflow: hidden;
   white-space: nowrap;
   transform: rotate(180deg) scale(-1, -1);;
 }
+.wrap_img_0 img{
+  width: 10px;
 
+}
 .wrap_img_1 img{
   transform: rotate(90deg) scale(-1, -1);;
 
