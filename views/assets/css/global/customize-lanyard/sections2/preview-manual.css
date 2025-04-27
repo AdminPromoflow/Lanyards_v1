@@ -602,8 +602,9 @@ overflow: hidden;
   transform-origin: top left;
   background: orange;
 }
-.wrap_img_1 h2{
-  font-size: 6px;
+.wrap_img_1 img{
+  height: 20px;
+  width: 2px;
 }
 
 /*
