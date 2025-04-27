@@ -610,19 +610,19 @@ overflow: hidden;
   width: 10px;
 
 }
-.a1{
+.a1 img{
   transform: rotate(30deg) ;
 }
-.a2{
+.a2 img{
   transform: rotate(60deg) ;
 }
-.a3{
+.a3 img{
   transform: rotate(90deg) ;
 }
-.a4{
+.a4 img{
   transform: rotate(120deg) ;
 }
-.a5{
+.a5 img{
   transform: rotate(1500deg) ;
 }
 .wrap_img_1 img{
