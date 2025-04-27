@@ -593,6 +593,8 @@ overflow: hidden;
   font-weight: 300;
   white-space: nowrap;
   transform: rotate(180deg) scale(-1, -1);
+  transform-origin: center center;
+
 }
 .wrap_img_0 {
   position: relative;
