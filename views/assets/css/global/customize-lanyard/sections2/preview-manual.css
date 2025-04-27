@@ -574,7 +574,6 @@ overflow: hidden;
   font-weight: 300;
   white-space: nowrap;
   transform: rotate(0deg) ;
-  background-color: orange;
 
 }
 
@@ -591,7 +590,7 @@ overflow: hidden;
   font-size: 6px;
   font-weight: 300;
   white-space: nowrap;
-  transform: rotate(180deg) scale(-1, -1);
+  transform: rotate(180deg) scale(-1, -1);;
 }
 .wrap_img_0 {
   position: relative;
@@ -614,7 +613,7 @@ overflow: hidden;
 
 .wrap_img_1 img{
   width: 10px;
-  transform: rotate(220deg) scale(-1, -1);
+  transform: rotate(180deg) scale(-1, -1);
 }
 
 /*

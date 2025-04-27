@@ -47,7 +47,6 @@ class PreviewManual {
   modifySpaceBetweenText(){
     this.text_lanyard_left.style.gap = textClass.getSpaceBetweenText() + "px";
     this.text_lanyard_right.style.gap = textClass.getSpaceBetweenText() + "px";
-    
   }
 
   changeColourText(){
@@ -126,7 +125,7 @@ class PreviewManual {
   }
 
   centerTextLanyard(){
-    const wrapElements = document.querySelectorAll('.wrap_text_0, .wrap_text_1, .wrap_img_0, .wrap_img_1');
+    const wrapElements = document.querySelectorAll('.wrap_text_0, .wrap_text_1, .wrap_text_0, .wrap_text_1');
 
     // Iterar sobre los elementos .wrap_text_0 y .wrap_text_1
     for (let i = 0; i < wrapElements.length; i++) {
