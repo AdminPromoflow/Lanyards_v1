@@ -45,10 +45,10 @@ class PreviewManual {
       const rightWidth = text_lanyard_right.offsetWidth;
 
       // Calcular y establecer la propiedad 'left'
-      wrapElement[i].style.left = `20px`; // Convertir a px para unidades correctas
+      wrapElement[i].style.left = `${rightWidth / 2}px`; // Convertir a px para unidades correctas
 
       // Calcular y establecer la propiedad 'transform' para centrar el elemento
-    //  wrapElement[i].style.transform = `rotate(90deg)  translate(0px, calc(-100% + 2px))`; // Ajustar la posición
+      wrapElement[i].style.transform = `rotate(90deg)  translateX(0px, calc(-100% + ${wrapElement[i].offsetHeight / 2}))`; // Ajustar la posición
     }
 //rotate(90deg) translateY(-100%)
 
