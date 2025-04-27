@@ -399,6 +399,20 @@ class TextClass {
   getSpaceBetweenText(){
     return this.spaceBetweenText;
   }
+
+
+
+  handleClickText(name, colour){
+
+    /*  previewTextClass.changeColour(colour);
+      const colourTextSelect = document.getElementById("colour-text-select");
+      const h3Element = colourTextSelect.querySelector('h3');
+      const colourTextSelectContainer = document.getElementById("colour-text-select-container");
+
+      colourTextSelect.style.background = colour;
+      h3Element.innerHTML = name;
+      colourTextSelectContainer.style.display = "none";*/
+  }
   /*
 
 
