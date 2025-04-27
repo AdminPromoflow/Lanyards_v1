@@ -562,7 +562,6 @@ overflow: hidden;
 .wrap_text_0{
   position: relative;
   display: inline-block; /* Se ajusta al tamaño del contenido */
-  transform-origin: top left;
   transform-origin: center center;
 
 }
