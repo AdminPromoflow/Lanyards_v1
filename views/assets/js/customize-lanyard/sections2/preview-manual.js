@@ -40,16 +40,17 @@ class PreviewManual {
     const wrapElement = document.querySelectorAll('.wrap_ex_0');
 
     for (var i = 0; i < wrapElement.length; i++) {
-      //alert(text_lanyard_right.offsetWidth/2 + "  " + -wrapElement[i].offsetHeight / 2);
       // Obtener el ancho de text_lanyard_right
       const rightWidth = text_lanyard_right.offsetWidth;
 
       // Calcular y establecer la propiedad 'left'
       wrapElement[i].style.left = `${rightWidth / 2}px`; // Convertir a px para unidades correctas
 
-      // Calcular y establecer la propiedad 'transform' para centrar el elemento
-      wrapElement[i].style.transform = `rotate(90deg)  translateX(0px, calc(-100% + ${wrapElement[i].offsetHeight / 2}px))`; // Ajustar la posición
+      // Calcular y establecer la propiedad 'transform' para rotar y ajustar la posición
+      // Primero rotamos 90 grados y luego usamos translateX correctamente para mover el div
+      wrapElement[i].style.transform = `rotate(90deg) translateX(calc(-100% + ${wrapElement[i].offsetHeight / 2}px))`;
     }
+
 //rotate(90deg) translateY(-100%)
 
     // Mostrar todo el mensaje en un solo alert
