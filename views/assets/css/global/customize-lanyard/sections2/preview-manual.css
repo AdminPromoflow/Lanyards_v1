@@ -598,8 +598,6 @@ overflow: hidden;
 }
 .wrap_img_1 {
   position: relative;
-  display: inline-block; /* Se ajusta al tamaño del contenido */
-  transform-origin: top left;
   background: orange;
 }
 .wrap_img_1 img{
