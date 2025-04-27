@@ -24,10 +24,10 @@ $imgPath_text = "../../views/assets/img/global/customize-lanyard/sections/text/"
       <div class="item-text">
         <p>Adjust the spacing between the text</p>
         <div class="containr-space-between-text">
-          <div class="space-between-text-box">
+          <div class="space-between-text-box" id="decrease_space_between_text">
             <img src="<?= $imgPath_text ?>minus.png?v=<?= asset_version_text($imgPath_text . 'minus.png') ?>" alt="">
           </div>
-          <div class="space-between-text-box">
+          <div class="space-between-text-box" id="increase_space_between_text">
             <img src="<?= $imgPath_text ?>plus.png?v=<?= asset_version_text($imgPath_text . 'plus.png') ?>" alt="">
           </div>
         </div>
