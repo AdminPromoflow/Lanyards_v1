@@ -57,6 +57,24 @@ class TextClass {
     })
 
 
+
+
+
+    const increase_space_between_text = document.getElementById("increase_space_between_text");
+    //const spaceBetweenText = this.getTimesText();
+
+    increase_space_between_text.addEventListener("click", function(){
+      if (true/*textClass.getTimesText() <=19*/) {
+        alert("Increase");
+      /*  textClass.setTimesText(textClass.getTimesText() + 1);
+        labelRepeatText.innerHTML = `Repeat text ${textClass.getTimesText()} time${textClass.getTimesText() === 1 ? '' : 's'}.`;
+        previewManual.addTextToLanyard();*/
+
+      }
+
+    })
+
+
   /*const repeatTextBox = document.querySelectorAll(".repeat-text-box");
     const colourTextSelect = document.getElementById("colour-text-select");
     const colourTextSelectContainer = document.getElementById("colour-text-select-container");
