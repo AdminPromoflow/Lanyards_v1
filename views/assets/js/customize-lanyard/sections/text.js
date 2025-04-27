@@ -7,7 +7,7 @@ class TextClass {
     const textInput = document.getElementById("textInput");
     textInput.addEventListener('input', function() {
       textClass.setContentText(textInput.value);
-      previewManual.addTextToLanyard();
+      previewManual.refreshTextLanyard();
     });
 
 
@@ -21,7 +21,7 @@ class TextClass {
       if (textClass.getTimesText() <=19) {
         textClass.setTimesText(textClass.getTimesText() + 1);
         labelRepeatText.innerHTML = `Repeat text ${textClass.getTimesText()} time${textClass.getTimesText() === 1 ? '' : 's'}.`;
-        previewManual.addTextToLanyard();
+        previewManual.refreshTextLanyard();
 
       }
     })
@@ -31,7 +31,7 @@ class TextClass {
       if (textClass.getTimesText() >=0) {
         textClass.setTimesText(textClass.getTimesText() - 1);
         labelRepeatText.innerHTML = `Repeat text ${textClass.getTimesText()} time${textClass.getTimesText() === 1 ? '' : 's'}.`;
-        previewManual.addTextToLanyard();
+        previewManual.refreshTextLanyard();
 
       }
 

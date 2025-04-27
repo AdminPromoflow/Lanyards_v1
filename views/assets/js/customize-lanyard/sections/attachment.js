@@ -14,6 +14,8 @@ class AttachmentClass {
     attachmentClass.showSelectedAttachment();
     previewTemplate.activateTemplate();
     attachmentPreviewClass.activateTemplate();
+    previewManual.refreshTextLanyard();
+
   }
 
   showSelectedAttachment() {

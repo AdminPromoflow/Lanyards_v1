@@ -3,7 +3,7 @@ class PreviewManual {
 
   }
 
-  addTextToLanyard() {
+  refreshTextLanyard() {
     // Obtener los elementos del DOM
     this.text_lanyard_left = document.getElementById("text_lanyard_left");
     this.text_lanyard_right = document.getElementById("text_lanyard_right");
