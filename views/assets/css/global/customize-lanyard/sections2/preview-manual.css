@@ -596,6 +596,7 @@ overflow: hidden;
 }
 
 .wrap_img_1 img{
+  transform: rotate(180deg) scale(-1, -1);;
 
 
 }
