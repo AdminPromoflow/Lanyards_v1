@@ -559,7 +559,7 @@ overflow: hidden;
   display: inline-block; /* Se ajusta al tamaño del contenido */
   transform-origin: top left;
   background-color: orange;
-  right: 4px;
+  right: 8px;
 }
 
 .wrap_ex_0 h1 {
