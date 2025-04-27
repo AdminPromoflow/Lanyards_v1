@@ -87,8 +87,7 @@ class PreviewManual {
     });
 
     this.centerTextLanyard();
-    this.changeItalicText();
-    this.changeUnderline();
+
   }
 
 
@@ -104,8 +103,7 @@ class PreviewManual {
     });
 
     this.centerTextLanyard();
-    this.changeBoldText();
-    thits.changeUnderline();
+
   }
 
 
@@ -122,8 +120,7 @@ class PreviewManual {
     });
 
     this.centerTextLanyard();
-    this.changeBoldText();
-    this.changeItalicText();
+
   }
 
 
