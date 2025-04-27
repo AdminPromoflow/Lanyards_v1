@@ -102,6 +102,8 @@ class PreviewManual {
       text.style.fontStyle = fontStyle;
     });
 
+    alert(textClass.getBoldText());
+
     this.centerTextLanyard();
 
   }
