@@ -1,7 +1,7 @@
 class TextClass {
   constructor() {
     this.timesText = 3;
-    this.spaceBetweenText;
+    this.spaceBetweenText = 20;
 
     const textInput = document.getElementById("textInput");
     textInput.addEventListener('input', function() {
@@ -43,14 +43,13 @@ class TextClass {
 
 
     const decrease_space_between_text = document.getElementById("decrease_space_between_text");
-    //const spaceBetweenText = this.getTimesText();
+    const increase_space_between_text = document.getElementById("increase_space_between_text");
+    const spaceBetweenText = this.getSpaceBetweenText();
 
     decrease_space_between_text.addEventListener("click", function(){
-      if (true/*textClass.getTimesText() <=19*/) {
-        alert("Decrease");
-      /*  textClass.setTimesText(textClass.getTimesText() + 1);
-        labelRepeatText.innerHTML = `Repeat text ${textClass.getTimesText()} time${textClass.getTimesText() === 1 ? '' : 's'}.`;
-        previewManual.addTextToLanyard();*/
+      if (true/*textClass.getSpaceBetweenText() <=19*/) {
+        textClass.setSpaceBetweenText(textClass.getSpaceBetweenText() - 1);
+        previewManual.modifySpaceBetweenText();
 
       }
 
@@ -60,15 +59,11 @@ class TextClass {
 
 
 
-    const increase_space_between_text = document.getElementById("increase_space_between_text");
-    //const spaceBetweenText = this.getTimesText();
 
     increase_space_between_text.addEventListener("click", function(){
-      if (true/*textClass.getTimesText() <=19*/) {
-        alert("Increase");
-      /*  textClass.setTimesText(textClass.getTimesText() + 1);
-        labelRepeatText.innerHTML = `Repeat text ${textClass.getTimesText()} time${textClass.getTimesText() === 1 ? '' : 's'}.`;
-        previewManual.addTextToLanyard();*/
+      if (true/*textClass.getSpaceBetweenText() <=19*/) {
+        textClass.setSpaceBetweenText(textClass.getSpaceBetweenText() + 1);
+        previewManual.modifySpaceBetweenText();
 
       }
 
@@ -342,10 +337,10 @@ class TextClass {
   getTimesText() {
       return this.timesText;
   }
-  setSpaceBetweenTextBox(value){
+  setSpaceBetweenText(value){
     this.spaceBetweenText = value;
   }
-  getSpaceBetweenTextBox(){
+  getSpaceBetweenText(){
     return this.spaceBetweenText;
   }
   /*

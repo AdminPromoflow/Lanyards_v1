@@ -30,18 +30,17 @@ class PreviewManual {
         `).join('');
 
         // Asignar el HTML al elemento
-        el.innerHTML = html;      
+        el.innerHTML = html;
       }
     });
 
     this.centerTextLanyard();
+    this.modifySpaceBetweenText();
   }
 
-  //  alert("Max" + text_lanyard_right.offsetWidth + " Min " + wrapElement.offsetWidth);
-
-
-
-
+  modifySpaceBetweenText(){
+    alert("entramos");
+  }
   centerTextLanyard(){
     const wrapElements = document.querySelectorAll('.wrap_ex_0, .wrap_ex_1');
 
