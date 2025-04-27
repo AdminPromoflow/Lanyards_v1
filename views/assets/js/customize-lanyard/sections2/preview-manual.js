@@ -37,11 +37,17 @@ class PreviewManual {
     });
 
     // Obtener las dimensiones de la clase dinámica wrap_ex_0 o wrap_ex_1
-    const wrapElement = document.querySelectorAll(`.wrap_ex_0`);
+    const wrapElement = document.querySelectorAll('.wrap_ex_0');
 
     for (var i = 0; i < wrapElement.length; i++) {
-      wrapElement[i].style.left = text_lanyard_right.offsetWidth/2;
-      wrapElement[i].style.transform = translateX(-wrapElement.offsetWidth/2);
+      // Obtener el ancho de text_lanyard_right
+      const rightWidth = text_lanyard_right.offsetWidth;
+
+      // Calcular y establecer la propiedad 'left'
+      wrapElement[i].style.left = `${rightWidth / 2}px`; // Convertir a px para unidades correctas
+
+      // Calcular y establecer la propiedad 'transform' para centrar el elemento
+      wrapElement[i].style.transform = `translateX(${-wrapElement[i].offsetWidth / 2}px)`; // Ajustar la posición
     }
 
 
