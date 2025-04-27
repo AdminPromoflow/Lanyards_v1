@@ -122,17 +122,17 @@
       /* 20mm */
       .top_left_clip-one-end-20mm{
         position: absolute;
-        bottom: 100.0%;
+        bottom: 99.6%;
         height: 0.43cm;
         width: 0.4cm;
-        left: 8.5%;
+        left: 8.9%;
       }
       .top_right_clip-one-end-20mm{
         position: absolute;
-        bottom: 100.0%;
+        bottom: 99.6%;
         height: 0.43cm;
         width: 0.4cm;
-        right: 7.0%;
+        right: 7.4%;
       }
       .left-super-lanyard-one-end-20mm {
         position: absolute;
