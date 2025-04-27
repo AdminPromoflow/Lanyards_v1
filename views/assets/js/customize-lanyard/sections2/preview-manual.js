@@ -87,7 +87,7 @@ class PreviewManual {
     });
 
     this.centerTextLanyard();
-    this.changeItalic();
+    this.changeItalicText();
     this.changeUnderline();
   }
 
