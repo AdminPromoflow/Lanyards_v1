@@ -48,15 +48,25 @@ class PreviewManual {
     const wrap_text_0 = document.querySelectorAll(".wrap_text_0");
 
     for (let i = 0; i < wrap_text_0.length; i++) {
-      // Usamos offsetWidth que da el ancho real del elemento (incluyendo padding y border)
+      // Asumimos que el ancho del contenedor es el valor inicial
       let width = wrap_text_0[i].offsetWidth;
-      wrap_text_0[i].style.height = `${width}px`; // Igualamos el alto al ancho
+
+      // Calculamos la diagonal para la rotación de 45 grados (usamos sqrt(2) para obtener la diagonal)
+      let adjustedHeight = width * Math.sqrt(2);
+
+      // Establecemos el alto igual al tamaño ajustado
+      wrap_text_0[i].style.height = `${adjustedHeight}px`;
+
+      // Aplicamos el transform con la rotación
+      wrap_text_0[i].style.transform = "rotate(45deg)";
     }
 
     alert(wrap_text_0[0].offsetHeight + "  " + wrap_text_0[0].offsetWidth);
+
     this.text_lanyard_left.style.gap = textClass.getSpaceBetweenText() + "px";
     this.text_lanyard_right.style.gap = textClass.getSpaceBetweenText() + "px";
   }
+
 
 
   changeColourText(){
