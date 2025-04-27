@@ -19,6 +19,8 @@
         width: 0.096cm;
         background: white;
         transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
+        overflow: hidden;
+
 }
 
       .right-super-lanyard-one-end-10mm-manual {
@@ -29,6 +31,8 @@
         width: 0.096cm;
         background: white;
         transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
+        overflow: hidden;
+
 }
 
       /* 15mm */
@@ -532,7 +536,7 @@ overflow: hidden;
 
 
 .text_lanyard_left {
-  background-color: green;
+  background-color: rgba(0,0,0,.2);
   display: flex;
   flex-direction: column-reverse;
   gap: 90px; /* espacio entre textos rotados */
@@ -542,7 +546,7 @@ overflow: hidden;
   transform: rotate(0deg);
 }
 .text_lanyard_right {
-  background-color: green;
+  background-color: rgba(0,0,0,.2);
   display: flex;
   flex-direction: column-reverse;
   gap: 90px; /* espacio entre textos rotados */
