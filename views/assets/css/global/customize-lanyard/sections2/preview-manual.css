@@ -577,7 +577,6 @@ overflow: hidden;
   position: relative;
   display: inline-block; /* Se ajusta al tamaño del contenido */
   transform-origin: top left;
-  background-color: orange;
 }
 
 
@@ -588,7 +587,7 @@ overflow: hidden;
 .wrap_ex_1 h1 {
   margin: 0;
   padding: 0;
-  font-size: 10px;
+  font-size: 6px;
   font-weight: 300;
   white-space: nowrap;
   transform: rotate(180deg) scale(-1, -1);;
