@@ -71,6 +71,8 @@ class PreviewManual {
     text_wrap_ex.forEach((text, i) => {
       text.style.fontSize = sizeText + "px";
     });
+
+    this.centerTextLanyard();
   }
 
 
