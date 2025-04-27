@@ -39,7 +39,8 @@ class PreviewManual {
   }
 
   modifySpaceBetweenText(){
-    alert("entramos");
+    this.text_lanyard_left.style.gap = textClass.getSpaceBetweenText() + "px";
+    this.text_lanyard_right.style.gap = textClass.getSpaceBetweenText() + "px";
   }
   centerTextLanyard(){
     const wrapElements = document.querySelectorAll('.wrap_ex_0, .wrap_ex_1');
