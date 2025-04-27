@@ -105,7 +105,7 @@ class OneTwoEnds {
 
     previewLanyardType.showSelectedPreviewTemplate();
 
-    previewTemplate.activateTemplate();
+    //previewTemplate.activateTemplate();
     //previewManual.refreshTextLanyard();
 
 
