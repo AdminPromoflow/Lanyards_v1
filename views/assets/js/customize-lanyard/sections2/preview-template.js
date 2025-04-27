@@ -100,7 +100,14 @@ class PreviewTemplate {
     Object.values(elManual).forEach(element => {
       if (element) {
         element.removeAttribute("style");
-        element.className = "";
+
+        if (["left", "right", "center"].includes(key)) {
+          // Retain only the background-colour class
+          element.className = "background-colour";
+        } else {
+          // Remove all CSS classes
+          element.className = "";
+        }
       }
     });
   }
