@@ -72,7 +72,6 @@
         width: 0.256cm;
 
         transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
-        overflow: hidden;
 }
 
       .right-super-lanyard-one-end-20mm-manual {
@@ -83,7 +82,6 @@
         width: 0.256cm;
 
         transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
-        overflow: hidden;
 }
 
 
