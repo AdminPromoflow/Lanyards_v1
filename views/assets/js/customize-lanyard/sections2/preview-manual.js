@@ -4,6 +4,14 @@ class PreviewManual {
   }
 
   refreshTextLanyard() {
+    this.addTextLanyard();
+    this.centerTextLanyard();
+    this.modifySpaceBetweenText();
+    this.changeColourText();
+    this.changeColourText();
+  }
+
+  addTextLanyard(){
     // Obtener los elementos del DOM
     this.text_lanyard_left = document.getElementById("text_lanyard_left");
     this.text_lanyard_right = document.getElementById("text_lanyard_right");
@@ -11,8 +19,6 @@ class PreviewManual {
     // Obtener el contenido y el número de repeticiones
     const textLanyard = textClass.getContentText();
     const times = textClass.getTimesText();
-
-
 
     let dimensionsMessage = ""; // Variable para almacenar las dimensiones
 
@@ -24,7 +30,7 @@ class PreviewManual {
 
         // Crear el HTML repetido
         const html = Array(times).fill(`
-          <div class="wrap_ex_${index}">
+          <div class="wrap_text_${index}">
             <h1>${textLanyard}</h1>
           </div>
         `).join('');
@@ -33,20 +39,15 @@ class PreviewManual {
         el.innerHTML = html;
       }
     });
-
-    this.centerTextLanyard();
-    this.modifySpaceBetweenText();
-    this.changeColourText();
-    this.changeColourText();
-
   }
 
   modifySpaceBetweenText(){
     this.text_lanyard_left.style.gap = textClass.getSpaceBetweenText() + "px";
     this.text_lanyard_right.style.gap = textClass.getSpaceBetweenText() + "px";
   }
+
   changeColourText(){
-    const text_wrap_ex = document.querySelectorAll(".wrap_ex_0 h1, .wrap_ex_1 h1");
+    const text_wrap_ex = document.querySelectorAll(".wrap_text_0 h1, .wrap_text_1 h1");
     const colourText = textClass.getColourText();
 
     text_wrap_ex.forEach((text, i) => {
@@ -56,7 +57,7 @@ class PreviewManual {
   }
 
   changeFontFamilyText(){
-    const text_wrap_ex = document.querySelectorAll(".wrap_ex_0 h1, .wrap_ex_1 h1");
+    const text_wrap_ex = document.querySelectorAll(".wrap_text_0 h1, .wrap_text_1 h1");
     const fontFamilyText = textClass.getFontFamilyText();
 
     text_wrap_ex.forEach((text, i) => {
@@ -65,7 +66,7 @@ class PreviewManual {
   }
 
   changeSizeText(){
-    const text_wrap_ex = document.querySelectorAll(".wrap_ex_0 h1, .wrap_ex_1 h1");
+    const text_wrap_ex = document.querySelectorAll(".wrap_text_0 h1, .wrap_text_1 h1");
     const sizeText = textClass.getSizeText();
 
     text_wrap_ex.forEach((text, i) => {
@@ -76,7 +77,7 @@ class PreviewManual {
   }
 
   changeBoldText(){
-    const text_wrap_ex = document.querySelectorAll(".wrap_ex_0 h1, .wrap_ex_1 h1");
+    const text_wrap_ex = document.querySelectorAll(".wrap_text_0 h1, .wrap_text_1 h1");
     const boldText = textClass.getBoldText();
     var fontWeight = 300;
 
@@ -90,9 +91,8 @@ class PreviewManual {
 
   }
 
-
   changeItalicText(){
-    const text_wrap_ex = document.querySelectorAll(".wrap_ex_0 h1, .wrap_ex_1 h1");
+    const text_wrap_ex = document.querySelectorAll(".wrap_text_0 h1, .wrap_text_1 h1");
     const italicText = textClass.getItalicText();
     var fontStyle = "normal";
 
@@ -104,14 +104,10 @@ class PreviewManual {
 
 
     this.centerTextLanyard();
-    this.changeBoldText();
-
   }
 
-
-
   changeUnderlineText(){
-    const text_wrap_ex = document.querySelectorAll(".wrap_ex_0 h1, .wrap_ex_1 h1");
+    const text_wrap_ex = document.querySelectorAll(".wrap_text_0 h1, .wrap_text_1 h1");
     const underlineText = textClass.getUnderlineText();
     var textDecoration = "none";
 
@@ -125,11 +121,10 @@ class PreviewManual {
 
   }
 
-
   centerTextLanyard(){
-    const wrapElements = document.querySelectorAll('.wrap_ex_0, .wrap_ex_1');
+    const wrapElements = document.querySelectorAll('.wrap_text_0, .wrap_text_1');
 
-    // Iterar sobre los elementos .wrap_ex_0 y .wrap_ex_1
+    // Iterar sobre los elementos .wrap_text_0 y .wrap_text_1
     for (let i = 0; i < wrapElements.length; i++) {
       // Obtener el ancho de text_lanyard_right
       const rightWidth = text_lanyard_right.offsetWidth;
@@ -145,8 +140,6 @@ class PreviewManual {
   togglePreviewManualClass(action) {
     previewManualSection.style.display = action;
   }
-
-
 
 }
 
