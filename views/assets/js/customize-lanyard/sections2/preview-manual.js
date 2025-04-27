@@ -105,6 +105,22 @@ class PreviewManual {
   }
 
 
+
+  changeUnderlineText(){
+    const text_wrap_ex = document.querySelectorAll(".wrap_ex_0 h1, .wrap_ex_1 h1");
+    const underlineText = textClass.getUnderlineText();
+    var textDecoration = "none";
+
+    textDecoration = underlineText ? "underline" : "none";
+
+    text_wrap_ex.forEach((text, i) => {
+      text.style.textDecoration = textDecoration;
+    });
+
+    this.centerTextLanyard();
+  }
+
+
   centerTextLanyard(){
     const wrapElements = document.querySelectorAll('.wrap_ex_0, .wrap_ex_1');
 

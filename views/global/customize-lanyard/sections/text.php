@@ -63,10 +63,10 @@ $imgPath_text = "../../views/assets/img/global/customize-lanyard/sections/text/"
           <div class="styling-text-box" id="styling-bold-text">
             <img src="<?= $imgPath_text ?>Bold.png?v=<?= asset_version_text($imgPath_text . 'Bold.png') ?>" alt="">
           </div>
-          <div class="styling-text-box">
+          <div class="styling-text-box" id="styling-italic-text">
             <img src="<?= $imgPath_text ?>Italic.png?v=<?= asset_version_text($imgPath_text . 'Italic.png') ?>" alt="">
           </div>
-          <div class="styling-text-box">
+          <div class="styling-text-box" id="styling-underline-text">
             <img src="<?= $imgPath_text ?>Underline.png?v=<?= asset_version_text($imgPath_text . 'Underline.png') ?>" alt="">
           </div>
         </div>

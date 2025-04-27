@@ -8,6 +8,7 @@ class TextClass {
     this.sizeText = 6;
     this.boldText = false;
     this.italicText = false;
+    this.underlineText = false;
 
 
 
@@ -274,6 +275,24 @@ class TextClass {
 
 
 
+
+
+    const styling_underline_text = document.getElementById("styling-underline-text");
+
+
+    styling_underline_text.addEventListener("click", ()=>{
+      if (styling_underline_text.style.border === "2px solid white") {
+        styling_underline_text.style.border = "2px solid transparent";
+        textClass.setUnderlineText(false);
+      } else {
+        styling_underline_text.style.border = "2px solid white";
+        textClass.setUnderlineText(true);
+      }
+
+      previewManual.changeUnderlineText();
+
+
+    });
 
   /*const repeatTextBox = document.querySelectorAll(".repeat-text-box");
     const colourTextSelect = document.getElementById("colour-text-select");
@@ -582,6 +601,14 @@ class TextClass {
   }
   getItalicText(){
     return this.italicText;
+  }
+
+
+  setUnderlineText(value){
+    this.underlineText = value;
+  }
+  getUnderlineText(){
+    return this.underlineText;
   }
 
   changeColourText(name, colour){
