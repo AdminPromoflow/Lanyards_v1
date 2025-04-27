@@ -1,7 +1,7 @@
 class TextClass {
   constructor() {
     this.timesText = 3;
-    this.spaceBetweenText = 10;
+    this.spaceBetweenText = 90;
 
     const textInput = document.getElementById("textInput");
     textInput.addEventListener('input', function() {
@@ -122,7 +122,7 @@ class TextClass {
     for (let i = 0; i < pantoneColors.length; i++) {
       colourTextSelectContainer.innerHTML +=
         '<div class="colour-text-select-boxes" style="background-color:' + pantoneColors[i].html + ';" ' +
-        'onclick="textClass.handleClickText(\'' + pantoneColors[i].pantone + '\', \'' + pantoneColors[i].html + '\')">' +
+        'onclick="textClass.changeColourText(\'' + pantoneColors[i].pantone + '\', \'' + pantoneColors[i].html + '\')">' +
         '<h3 class="name-colour-text-selected">' + pantoneColors[i].pantone + '</h3>' +
       //  '<img src="../../views/assets/img/global/customize-lanyard/sections/image/top.png" alt="">' +
 
@@ -181,7 +181,7 @@ class TextClass {
     for (let i = 0; i < fontStyles.length; i++) {
         typeTextSelectContainer.innerHTML +=
             '<div class="type-text-select-boxes" ' +
-            'onclick="textClass.handleClickTypeText(\'' + fontStyles[i].fontName + '\', \'' + fontStyles[i].fontFamily + '\')">' +
+            'onclick="textClass.changeFontFamilyText(\'' + fontStyles[i].fontName + '\', \'' + fontStyles[i].fontFamily + '\')">' +
             '<h3 class="name-colour-text-selected">' + fontStyles[i].fontName + '</h3>' +
             '</div>';
     }
@@ -465,9 +465,7 @@ class TextClass {
 
 
 
-  handleClickText(name, colour){
-    alert(name + "  " + colour);
-
+  changeColourText(name, colour){
 
     //  previewTextClass.changeColour(colour);
       const colourTextSelect = document.getElementById("colour-text-select");
@@ -481,7 +479,7 @@ class TextClass {
   }
 
 
-  handleClickTypeText(name, fontFamily) {
+  changeFontFamilyText(name, fontFamily) {
       const typeTextSelect = document.getElementById("type-text-select");
       const h3Element = typeTextSelect.querySelector('h3');
       const typeTextSelectContainer = document.getElementById("type-text-select-container");
