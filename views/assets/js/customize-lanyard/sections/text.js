@@ -141,8 +141,6 @@ class TextClass {
 
 
 
-    const typeTextSelectContainer = document.getElementById("type-text-select-container");
-    const typeTextSelect = document.getElementById("type-text-select");
 
     const fontStyles = [
         { fontName: "Arial", fontFamily: "Arial, sans-serif" },
@@ -176,6 +174,9 @@ class TextClass {
         { fontName: "Copperplate", fontFamily: "Copperplate, serif" },
         { fontName: "Papyrus", fontFamily: "Papyrus, fantasy" }
     ];
+    const typeTextSelectContainer = document.getElementById("type-text-select-container");
+    const typeTextSelect = document.getElementById("type-text-select");
+    typeTextSelectContainer.style.display = "none";
 
     for (let i = 0; i < fontStyles.length; i++) {
         typeTextSelectContainer.innerHTML +=
