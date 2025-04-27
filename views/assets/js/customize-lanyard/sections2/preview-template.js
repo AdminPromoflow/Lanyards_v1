@@ -97,7 +97,7 @@ class PreviewTemplate {
   cleanStyleManual() {
     const elManual = this.manualElements;
 
-    Object.values(elManual).forEach(key,element => {
+    Object.entries(elManual).forEach(([key, element]) => {
       if (element) {
         element.removeAttribute("style");
 
