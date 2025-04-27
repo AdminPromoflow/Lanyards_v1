@@ -49,13 +49,13 @@ class PreviewManual {
     this.text_lanyard_right.style.gap = textClass.getSpaceBetweenText() + "px";
     const wrap_text_0 = document.querySelectorAll(".wrap_text_0");
 
-    alert(wrap_text_0[0].offsetHeight + "  " + wrap_text_0.offsetWidth);
+    alert(wrap_text_0[0].offsetHeight + "  " + div.style.width);
 
     for (var i = 0; i < wrap_text_0.length; i++) {
       wrap_text_0[i].offsetHeight = wrap_text_0.offsetWidth;
     }
 
-    alert(wrap_text_0[0].offsetHeight + "  " + wrap_text_0.offsetWidth);
+  //  alert(wrap_text_0[0].offsetHeight + "  " + wrap_text_0.offsetWidth);
 
   }
 
