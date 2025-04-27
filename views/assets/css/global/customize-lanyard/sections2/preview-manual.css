@@ -597,8 +597,8 @@ overflow: hidden;
 }
 
 .wrap_img_1 {
+  position: relative;
   width: 5px;
-
   background: blue;
 }
 
