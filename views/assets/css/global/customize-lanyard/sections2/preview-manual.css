@@ -597,16 +597,18 @@ overflow: hidden;
 }
 
 .wrap_img_1 {
+  width: 5px;
+
   background: blue;
 }
 
 .wrap_img_0 img{
-
+  transform: rotate(0deg) ;
 }
 .wrap_img_1 img{
   width: 5px;
 
-/*  transform: rotate(90deg) scale(-1, -1);;*/
+  transform: rotate(90deg) scale(-1, -1);
 
 
 }
