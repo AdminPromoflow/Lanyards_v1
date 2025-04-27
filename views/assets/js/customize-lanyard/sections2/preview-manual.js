@@ -51,6 +51,20 @@ class PreviewManual {
       wrapElement[i].style.transform = `rotate(90deg) translateY(calc(-100% + ${wrapElement[i].offsetHeight / 2}px))`;
     }
 
+    const wrapElement = document.querySelectorAll('.wrap_ex_1');
+
+    for (var i = 0; i < wrapElement.length; i++) {
+      // Obtener el ancho de text_lanyard_right
+      const rightWidth = text_lanyard_right.offsetWidth;
+
+      // Calcular y establecer la propiedad 'left'
+      wrapElement[i].style.left = `${rightWidth / 2}px`; // Convertir a px para unidades correctas
+
+      // Calcular y establecer la propiedad 'transform' para rotar y ajustar la posición
+      // Primero rotamos 90 grados y luego usamos translateY correctamente para mover el div
+      wrapElement[i].style.transform = `rotate(90deg) translateY(calc(-100% + ${wrapElement[i].offsetHeight / 2}px))`;
+    }
+
 //rotate(90deg) translateY(-100%)
 
     // Mostrar todo el mensaje en un solo alert
