@@ -601,11 +601,14 @@ overflow: hidden;
 
 .wrap_img_1 {
   position: relative;
+  display: inline-block; /* Se ajusta al tamaño del contenido */
   transform-origin: top left;
   background: blue;
 }
 
 .wrap_img_0 img{
+  width: 50px;
+
   transform: rotate(0deg) ;
 }
 .wrap_img_1 img{
