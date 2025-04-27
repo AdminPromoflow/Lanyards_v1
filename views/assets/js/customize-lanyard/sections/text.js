@@ -134,6 +134,60 @@ class TextClass {
     });
 
 
+
+
+
+
+
+
+
+    const typeTextSelectContainer = document.getElementById("type-text-select-container");
+    const typeTextSelect = document.getElementById("type-text-select");
+
+    const fontStyles = [
+        { fontName: "Arial", fontFamily: "Arial, sans-serif" },
+        { fontName: "Verdana", fontFamily: "Verdana, sans-serif" },
+        { fontName: "Helvetica", fontFamily: "Helvetica, sans-serif" },
+        { fontName: "Tahoma", fontFamily: "Tahoma, sans-serif" },
+        { fontName: "Trebuchet MS", fontFamily: "Trebuchet MS, sans-serif" },
+        { fontName: "Times New Roman", fontFamily: "Times New Roman, serif" },
+        { fontName: "Georgia", fontFamily: "Georgia, serif" },
+        { fontName: "Garamond", fontFamily: "Garamond, serif" },
+        { fontName: "Courier New", fontFamily: "Courier New, monospace" },
+        { fontName: "Brush Script MT", fontFamily: "Brush Script MT, cursive" },
+        { fontName: "Lucida Console", fontFamily: "Lucida Console, monospace" },
+        { fontName: "Impact", fontFamily: "Impact, sans-serif" },
+        { fontName: "Comic Sans MS", fontFamily: "Comic Sans MS, cursive" },
+        { fontName: "Palatino Linotype", fontFamily: "Palatino Linotype, serif" },
+        { fontName: "Book Antiqua", fontFamily: "Book Antiqua, serif" },
+        { fontName: "Arial Black", fontFamily: "Arial Black, sans-serif" },
+        { fontName: "Lucida Sans Unicode", fontFamily: "Lucida Sans Unicode, sans-serif" },
+        { fontName: "Century Gothic", fontFamily: "Century Gothic, sans-serif" },
+        { fontName: "Franklin Gothic Medium", fontFamily: "Franklin Gothic Medium, sans-serif" },
+        { fontName: "Gill Sans", fontFamily: "Gill Sans, sans-serif" },
+        { fontName: "Futura", fontFamily: "Futura, sans-serif" },
+        { fontName: "Rockwell", fontFamily: "Rockwell, serif" },
+        { fontName: "Candara", fontFamily: "Candara, sans-serif" },
+        { fontName: "Optima", fontFamily: "Optima, sans-serif" },
+        { fontName: "Didot", fontFamily: "Didot, serif" },
+        { fontName: "Calisto MT", fontFamily: "Calisto MT, serif" },
+        { fontName: "Bodoni MT", fontFamily: "Bodoni MT, serif" },
+        { fontName: "Bookman", fontFamily: "Bookman, serif" },
+        { fontName: "Copperplate", fontFamily: "Copperplate, serif" },
+        { fontName: "Papyrus", fontFamily: "Papyrus, fantasy" }
+    ];
+
+    for (let i = 0; i < fontStyles.length; i++) {
+        typeTextSelectContainer.innerHTML +=
+            '<div class="type-text-select-boxes" ' +
+            'onclick="textClass.handleClickTypeText(\'' + fontStyles[i].fontName + '\', \'' + fontStyles[i].fontFamily + '\')">' +
+            '<h3 class="name-colour-text-selected">' + fontStyles[i].fontName + '</h3>' +
+            '</div>';
+    }
+
+    typeTextSelect.addEventListener("click", () => {
+      typeTextSelectContainer.style.display = typeTextSelectContainer.style.display === "block" ? "none" : "block";
+    });
   /*const repeatTextBox = document.querySelectorAll(".repeat-text-box");
     const colourTextSelect = document.getElementById("colour-text-select");
     const colourTextSelectContainer = document.getElementById("colour-text-select-container");
