@@ -123,7 +123,7 @@ class TextClass {
       colourTextSelectContainer.innerHTML +=
         '<div class="colour-text-select-boxes" style="background-color:' + pantoneColors[i].html + ';" ' +
         'onclick="textClass.changeColourText(\'' + pantoneColors[i].pantone + '\', \'' + pantoneColors[i].html + '\')">' +
-        '<h3 class="name-colour-text-selected">' + pantoneColors[i].pantone + '</h3>' +
+        '<h3 class="name-colour-text-selected" >' + pantoneColors[i].pantone + '</h3>' +
       //  '<img src="../../views/assets/img/global/customize-lanyard/sections/image/top.png" alt="">' +
 
         '</div>';
@@ -182,7 +182,7 @@ class TextClass {
         typeTextSelectContainer.innerHTML +=
             '<div class="type-text-select-boxes" ' +
             'onclick="textClass.changeFontFamilyText(\'' + fontStyles[i].fontName + '\', \'' + fontStyles[i].fontFamily + '\')">' +
-            '<h3 class="name-colour-text-selected">' + fontStyles[i].fontName + '</h3>' +
+            '<h3 class="name-colour-text-selected"  style="font-family: '+fontStyles[i].fontFamily+'"   >' + fontStyles[i].fontName + '</h3>' +
             '</div>';
     }
 
