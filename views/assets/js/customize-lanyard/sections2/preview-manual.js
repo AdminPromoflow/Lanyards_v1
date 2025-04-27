@@ -37,6 +37,8 @@ class PreviewManual {
     this.centerTextLanyard();
     this.modifySpaceBetweenText();
     this.changeColourText();
+    this.changeColourText();
+
   }
 
   modifySpaceBetweenText(){
@@ -56,8 +58,16 @@ class PreviewManual {
   }
 
   changeFontFamilyText(){
+    const wrap_ex = document.querySelectorAll(".wrap_ex_0, .wrap_ex_1");
+    const text_wrap_ex = document.querySelectorAll("h1");
+    const fontFamilyText = textClass.getFontSizeText();
 
+    text_wrap_ex.forEach((text, i) => {
+      text.style.fontFamily = fontFamily;
+    });
   }
+
+
   centerTextLanyard(){
     const wrapElements = document.querySelectorAll('.wrap_ex_0, .wrap_ex_1');
 

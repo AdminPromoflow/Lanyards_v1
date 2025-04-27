@@ -189,6 +189,12 @@ class TextClass {
     typeTextSelect.addEventListener("click", () => {
       typeTextSelectContainer.style.display = typeTextSelectContainer.style.display === "block" ? "none" : "block";
     });
+
+
+
+
+
+
   /*const repeatTextBox = document.querySelectorAll(".repeat-text-box");
     const colourTextSelect = document.getElementById("colour-text-select");
     const colourTextSelectContainer = document.getElementById("colour-text-select-container");
@@ -470,6 +476,13 @@ class TextClass {
     return this.colourText;
   }
 
+  setFontFamilyText(value){
+    this.fontFamilyText = value;
+  }
+  getFontFamilyText(){
+    return this.fontFamilyText;
+  }
+
   changeColourText(name, colour){
       this.setColourText(colour);
       previewManual.changeColourText();
@@ -486,6 +499,8 @@ class TextClass {
 
 
   changeFontFamilyText(name, fontFamily) {
+      this.setFontSizeText(fontFamily);
+      
       const typeTextSelect = document.getElementById("type-text-select");
       const h3Element = typeTextSelect.querySelector('h3');
       const typeTextSelectContainer = document.getElementById("type-text-select-container");
