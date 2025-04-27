@@ -601,7 +601,6 @@ overflow: hidden;
 
 .wrap_img_1 {
   position: relative;
-  display: inline-block; /* Se ajusta al tamaño del contenido */
   transform-origin: top left;
   background: blue;
 }
