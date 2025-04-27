@@ -138,6 +138,7 @@ class BackgroundClass {
     this.setBackground(colour);
 
     const backgroundElements = document.querySelectorAll(".background-colour");
+    alert(backgroundElements.length);
     backgroundElements.forEach(elem => elem.style.background = colour);
   }
 
