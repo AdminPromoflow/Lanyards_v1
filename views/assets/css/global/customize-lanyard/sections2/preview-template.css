@@ -80,14 +80,14 @@
       /* 15mm */
       .top_left_clip-one-end-15mm{
         position: absolute;
-        bottom: 101.3%;
+        bottom: 100.3%;
         height: 0.35cm;
         width: 0.31cm;
         left: 11.1%;
       }
       .top_right_clip-one-end-15mm{
         position: absolute;
-        bottom: 101.3%;
+        bottom: 100.3%;
         height: 0.35cm;
         width: 0.31cm;
         right:  9.8%;
