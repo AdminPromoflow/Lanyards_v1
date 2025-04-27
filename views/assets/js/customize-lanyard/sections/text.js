@@ -467,7 +467,6 @@ class TextClass {
 
   handleClickText(name, colour){
     alert(name + "  " + colour);
-    colourTextSelectContainer.style.display = "none";
 
 
     //  previewTextClass.changeColour(colour);
@@ -477,6 +476,21 @@ class TextClass {
 
       colourTextSelect.style.background = colour;
       h3Element.innerHTML = name;
+      colourTextSelectContainer.style.display = "none";
+
+  }
+
+
+  handleClickTypeText(name, fontFamily) {
+      const typeTextSelect = document.getElementById("type-text-select");
+      const h3Element = typeTextSelect.querySelector('h3');
+      const typeTextSelectContainer = document.getElementById("type-text-select-container");
+
+      typeTextSelect.style.fontFamily = fontFamily;
+      h3Element.innerHTML = name;
+      typeTextSelectContainer.style.display = "none";
+
+    //  previewTextClass.changeFontFamily(fontFamily);
   }
   /*
 
