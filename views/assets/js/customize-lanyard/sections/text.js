@@ -5,6 +5,8 @@ class TextClass {
     this.colourText = "black";
     this.fontFamilyText = "sans-serif";
     this.sizeText = 6;
+    this.boldText = false;
+
 
 
     const textInput = document.getElementById("textInput");
@@ -228,7 +230,13 @@ class TextClass {
 
 
     styling_text_box.addEventListener("click", ()=>{
-      styling_text_box.style.border = styling_text_box.style.border === "2px solid white" ? "2px solid transparent" : "2px solid white";
+      if (styling_text_box.style.border === "2px solid white") {
+        styling_text_box.style.border = "2px solid transparent";
+        textClass.setBoldText(false);
+      } else {
+        styling_text_box.style.border = "2px solid white";
+        textClass.setBoldText(false);
+      }
 
     });
 
@@ -529,6 +537,14 @@ class TextClass {
   }
   getSizeText(){
     return this.sizeText;
+  }
+
+
+  setBoldText(value){
+    this.boldText = value;
+  }
+  getBoldText(){
+    return this.boldText;
   }
 
   changeColourText(name, colour){

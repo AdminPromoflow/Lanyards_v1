@@ -75,6 +75,20 @@ class PreviewManual {
     this.centerTextLanyard();
   }
 
+  changeBoldText(){
+    const text_wrap_ex = document.querySelectorAll(".wrap_ex_0 h1, .wrap_ex_1 h1");
+    const boldText = textClass.getBoldText();
+    var fontWeight = 300;
+
+    fontWeight = boldText ? 500 : 300;
+
+    text_wrap_ex.forEach((text, i) => {
+      text.style.fontWeight = fontWeight;
+    });
+
+    this.centerTextLanyard();
+  }
+
 
   centerTextLanyard(){
     const wrapElements = document.querySelectorAll('.wrap_ex_0, .wrap_ex_1');
