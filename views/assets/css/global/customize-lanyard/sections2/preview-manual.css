@@ -569,6 +569,8 @@ overflow: hidden;
   position: relative;
   left: 50%;
   top: 50%;
+  height: 5px;
+  width: 5px;
   margin: 0;
   padding: 0;
 

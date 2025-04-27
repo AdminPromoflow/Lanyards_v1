@@ -54,11 +54,11 @@ class PreviewManual {
       const rect = wrap_text_0[i].getBoundingClientRect();
 
       // Establecemos las nuevas dimensiones (alto y ancho) después de la rotación
-      wrap_text_0[i].style.height = `${rect.height}px`;
-      wrap_text_0[i].style.width = `${rect.width}px`;
+    //  wrap_text_0[i].style.height = `${rect.height}px`;
+  //    wrap_text_0[i].style.width = `${rect.width}px`;
     }
 
-    alert(wrap_text_0[0].offsetHeight + "  " + wrap_text_0[0].offsetWidth);
+  //  alert(wrap_text_0[0].offsetHeight + "  " + wrap_text_0[0].offsetWidth);
 
     this.text_lanyard_left.style.gap = textClass.getSpaceBetweenText() + "px";
     this.text_lanyard_right.style.gap = textClass.getSpaceBetweenText() + "px";
