@@ -36,11 +36,27 @@ class PreviewManual {
 
     this.centerTextLanyard();
     this.modifySpaceBetweenText();
+    this.changeColourText();
   }
 
   modifySpaceBetweenText(){
     this.text_lanyard_left.style.gap = textClass.getSpaceBetweenText() + "px";
     this.text_lanyard_right.style.gap = textClass.getSpaceBetweenText() + "px";
+  }
+  changeColourText(){
+
+    const wrap_ex = document.querySelectorAll(".wrap_ex_0, .wrap_ex_1");
+    const text_wrap_ex = document.querySelectorAll("h1");
+    const colourText = textClass.getColourText();
+
+    text_wrap_ex.forEach((text, i) => {
+      text.style.color = colourText;
+    });
+
+  }
+
+  changeFontFamilyText(){
+
   }
   centerTextLanyard(){
     const wrapElements = document.querySelectorAll('.wrap_ex_0, .wrap_ex_1');

@@ -2,6 +2,7 @@ class TextClass {
   constructor() {
     this.timesText = 3;
     this.spaceBetweenText = 90;
+    this.colourText = "black";
 
     const textInput = document.getElementById("textInput");
     textInput.addEventListener('input', function() {
@@ -23,7 +24,6 @@ class TextClass {
         previewManual.addTextToLanyard();
 
       }
-
     })
 
     const decreaseTextBox = document.getElementById("decrease-text-box");
@@ -463,11 +463,17 @@ class TextClass {
     return this.spaceBetweenText;
   }
 
-
+  setColourText(value){
+    this.colourText = value;
+  }
+  getColourText(){
+    return this.colourText;
+  }
 
   changeColourText(name, colour){
+      this.setColourText(colour);
+      previewManual.changeColourText();
 
-    //  previewTextClass.changeColour(colour);
       const colourTextSelect = document.getElementById("colour-text-select");
       const h3Element = colourTextSelect.querySelector('h3');
       const colourTextSelectContainer = document.getElementById("colour-text-select-container");
