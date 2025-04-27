@@ -566,7 +566,7 @@ overflow: hidden;
 }
 
 .wrap_text_0 h1 {
-  position: relative;
+  position: absolute;
   left: 50%;
   top: 50%;
   height: 5px;
