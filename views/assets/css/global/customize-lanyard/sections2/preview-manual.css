@@ -575,6 +575,7 @@ overflow: hidden;
   white-space: nowrap;
   transform: rotate(0deg) ;
   background-color: green;
+  transform-origin: center center;
 
 }
 
