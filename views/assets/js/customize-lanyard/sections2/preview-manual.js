@@ -47,6 +47,7 @@ class PreviewManual {
   modifySpaceBetweenText(){
     this.text_lanyard_left.style.gap = textClass.getSpaceBetweenText() + "px";
     this.text_lanyard_right.style.gap = textClass.getSpaceBetweenText() + "px";
+    this.addTextLanyard();
   }
 
   changeColourText(){
