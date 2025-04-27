@@ -601,8 +601,8 @@ overflow: hidden;
   background: orange;
 }
 .wrap_img_1 img{
-  height: 5px;
-  width: 5px;
+  height: 50px;
+  width: 50px;
   margin: 0;
   padding: 0;
 }
