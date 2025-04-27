@@ -10,6 +10,8 @@ class TextClass {
     });
 
 
+
+
     const repeatTextBox = document.getElementById("repeat-text-box");
     const labelRepeatText = document.getElementById("label-repeat-text");
     const times = this.getTimesText();
@@ -56,12 +58,8 @@ class TextClass {
     })
 
 
-
-
-
-
     increase_space_between_text.addEventListener("click", function(){
-      if (true/*textClass.getSpaceBetweenText() <=19*/) {
+      if (textClass.getSpaceBetweenText() <=220) {
         console.log(textClass.getSpaceBetweenText())
         textClass.setSpaceBetweenText(textClass.getSpaceBetweenText() + 1);
         previewManual.modifySpaceBetweenText();
