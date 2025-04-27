@@ -48,7 +48,7 @@ class PreviewManual {
   changeColourText(){
 
     const wrap_ex = document.querySelectorAll(".wrap_ex_0, .wrap_ex_1");
-    const text_wrap_ex = document.querySelectorAll("h1");
+    const text_wrap_ex = document.querySelectorAll(".wrap_ex_0 h1, .wrap_ex_1 h1");
     const colourText = textClass.getColourText();
 
     text_wrap_ex.forEach((text, i) => {
@@ -59,7 +59,7 @@ class PreviewManual {
 
   changeFontFamilyText(){
     const wrap_ex = document.querySelectorAll(".wrap_ex_0, .wrap_ex_1");
-    const text_wrap_ex = document.querySelectorAll("h1");
+    const text_wrap_ex = document.querySelectorAll(".wrap_ex_0 h1, .wrap_ex_1 h1");
     const fontFamilyText = textClass.getFontFamilyText();
 
     text_wrap_ex.forEach((text, i) => {
