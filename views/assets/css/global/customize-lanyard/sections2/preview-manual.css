@@ -578,7 +578,7 @@ overflow: hidden;
   display: inline-block; /* Se ajusta al tamaño del contenido */
   transform-origin: top left;
   background-color: orange;
-  top: 5px;
+  right: 5px;
 }
 
 
