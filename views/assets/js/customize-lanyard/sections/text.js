@@ -52,7 +52,6 @@ class TextClass {
       if (textClass.getSpaceBetweenText() > 0) {
         textClass.setSpaceBetweenText(textClass.getSpaceBetweenText() - 1);
         previewManual.modifySpaceBetweenText();
-
       }
 
     })
@@ -67,6 +66,64 @@ class TextClass {
       }
 
     })
+
+
+
+
+
+
+
+    const pantoneColors = [
+     { pantone: "White", html: "#FFFFFF" },
+     { pantone: "Black", html: "#2D2926" },
+     { pantone: "425", html: "#585C5F" },
+     { pantone: "Cool Gray 6", html: "#A8AAAB" },
+     { pantone: "Yellow", html: "#FCE300" },
+     { pantone: "809", html: "#E4E400" },
+     { pantone: "1235", html: "#FFBF29" },
+     { pantone: "1355", html: "#FFCA84" },
+     { pantone: "142", html: "#F9C26D" },
+     { pantone: "Orange 021", html: "#FE5000" },
+     { pantone: "Bright Orange", html: "#FF7F2A" },
+     { pantone: "485", html: "#DA291C" },
+     { pantone: "1795", html: "#D93600" },
+     { pantone: "186", html: "#E4002B" },
+     { pantone: "Red 032", html: "#EF3340" },
+     { pantone: "201", html: "#920021" },
+     { pantone: "193", html: "#BF003D" },
+     { pantone: "208", html: "#930032" },
+     { pantone: "212", html: "#FF5C8A" },
+     { pantone: "226", html: "#FF006E" },
+     { pantone: "249", html: "#80004F" },
+     { pantone: "252", html: "#FF66CC" },
+     { pantone: "Purple", html: "#BB29BB" },
+     { pantone: "2607", html: "#8700BF" },
+     { pantone: "281", html: "#002147" },
+     { pantone: "Reflex Blue", html: "#001489" },
+     { pantone: "293", html: "#0033A0" },
+     { pantone: "289", html: "#001B3A" },
+     { pantone: "3015", html: "#005387" },
+     { pantone: "Process Blue", html: "#0084D1" },
+     { pantone: "3302", html: "#005258" },
+     { pantone: "3278", html: "#008C93" },
+     { pantone: "348", html: "#00A370" },
+     { pantone: "354", html: "#00B35A" },
+     { pantone: "361", html: "#00BF26" },
+     { pantone: "7481", html: "#1AB87A" },
+     { pantone: "382", html: "#AEDD00" },
+     { pantone: "478", html: "#6B3300" },
+     { pantone: "471", html: "#E6CF6B" }
+ ];
+
+    for (let i = 0; i < pantoneColors.length; i++) {
+      colourTextSelectContainer.innerHTML +=
+        '<div class="colour-text-select-boxes" style="background-color:' + pantoneColors[i].html + ';" ' +
+        'onclick="textClass.handleClickText(\'' + pantoneColors[i].pantone + '\', \'' + pantoneColors[i].html + '\')">' +
+        '<h3 class="name-colour-text-selected">' + pantoneColors[i].pantone + '</h3>' +
+      //  '<img src="../../views/assets/img/global/customize-lanyard/sections/image/top.png" alt="">' +
+
+        '</div>';
+    }
 
 
   /*const repeatTextBox = document.querySelectorAll(".repeat-text-box");
