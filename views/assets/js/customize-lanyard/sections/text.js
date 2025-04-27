@@ -115,6 +115,11 @@ class TextClass {
      { pantone: "471", html: "#E6CF6B" }
  ];
     const colourTextSelectContainer = document.getElementById("colour-text-select-container");
+    const colourTextSelect = document.getElementById("colour-text-select");
+
+
+
+
     //colourTextSelectContainer.style.display = "none";
 
 
@@ -128,7 +133,9 @@ class TextClass {
         '</div>';
     }
 
-
+    colourTextSelect.addEventListener("click", () => {
+      colourTextSelectContainer.style.display = colourTextSelectContainer.style.display === "block" ? "none" : "block";
+    });
 
 
   /*const repeatTextBox = document.querySelectorAll(".repeat-text-box");
