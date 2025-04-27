@@ -19,7 +19,6 @@
         width: 0.096cm;
         background: white;
         transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
-        overflow: hidden;
 
 }
 
@@ -31,7 +30,6 @@
         width: 0.096cm;
         background: white;
         transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
-        overflow: hidden;
 
 }
 
