@@ -10,6 +10,8 @@ class PreviewManual {
     const textLanyard = textClass.getContentText();
     const times = textClass.getTimesText();
 
+
+
     let dimensionsMessage = ""; // Variable para almacenar las dimensiones
 
     // Iterar sobre los elementos izquierdo y derecho
@@ -28,28 +30,23 @@ class PreviewManual {
         // Asignar el HTML al elemento
         el.innerHTML = html;
 
-        // Obtener las dimensiones de la clase dinámica wrap_ex_0 o wrap_ex_1
-        const wrapElement = document.querySelector(`.wrap_ex_1`);
 
-        // Asegúrate de que wrapElement está disponible
-        if (wrapElement) {
-          // Obtener el ancho de text_lanyard_right
-          const rightWidth = this.text_lanyard_right.offsetWidth;
 
-          // Mover el wrapElement en el eje X con respecto al tamaño de text_lanyard_right
-          wrapElement.style.position = "relative";  // Asegurarse de que el elemento esté posicionado
-          wrapElement.style.left = `${rightWidth / 2 - wrapElement.offsetWidth / 2}px`; // Centrado respecto a text_lanyard_right
 
-          // También podrías usar `transform` para moverlo en el eje X si prefieres una transformación CSS más fluida:
-          wrapElement.style.transform = `translateX(${rightWidth / 2 - wrapElement.offsetWidth / 2}px)`;
-        }
       }
     });
 
-    // Mostrar todo el mensaje en un solo alert (si es necesario)
-    alert(dimensionsMessage);
-  }
+    // Obtener las dimensiones de la clase dinámica wrap_ex_0 o wrap_ex_1
+    const wrapElement = document.querySelectorAll(`.wrap_ex_0`);
 
+    for (var i = 0; i < wrapElement.length; i++) {
+      wrapElement[i].style.left = text_lanyard_right.offsetWidth/2;
+      wrapElement[i].style.transform = translateX(-wrapElement.offsetWidth/2);
+    }
+
+
+    // Mostrar todo el mensaje en un solo alert
+  }
 
   //  alert("Max" + text_lanyard_right.offsetWidth + " Min " + wrapElement.offsetWidth);
 
