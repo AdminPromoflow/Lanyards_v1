@@ -74,10 +74,10 @@ $imgPath_text = "../../views/assets/img/global/customize-lanyard/sections/text/"
       <div class="item-text">
         <p>Adjust the text size</p>
         <div class="containr-size-text">
-          <div class="size-text-box">
+          <div class="size-text-box" id="decrease-size-text">
             <img src="<?= $imgPath_text ?>smaller.png?v=<?= asset_version_text($imgPath_text . 'smaller.png') ?>" alt="">
           </div>
-          <div class="size-text-box">
+          <div class="size-text-box" id="increase-size-text">
             <img src="<?= $imgPath_text ?>bigger.png?v=<?= asset_version_text($imgPath_text . 'bigger.png') ?>" alt="">
           </div>
         </div>

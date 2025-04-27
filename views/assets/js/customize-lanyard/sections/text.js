@@ -3,6 +3,9 @@ class TextClass {
     this.timesText = 3;
     this.spaceBetweenText = 90;
     this.colourText = "black";
+    this.fontFamilyText = "sans-serif";
+    this.sizeText = 6;
+
 
     const textInput = document.getElementById("textInput");
     textInput.addEventListener('input', function() {
@@ -193,6 +196,27 @@ class TextClass {
 
 
 
+
+
+
+
+
+
+
+    const increase_size_text = document.getElementById("increase-size-text");
+    const decrease_size_text = document.getElementById("decrease-size-text");
+
+    decrease_size_text.addEventListener("click", () => {
+      if (textClass.getSizeText() > 0) {
+        textClass.setSizeText(textClass.getSizeText() - 1);
+        previewManual.changeSizeText();
+      }
+    });
+
+    increase_size_text.addEventListener("click", () => {
+      textClass.setSizeText(textClass.getSizeText() + 1);
+      previewManual.changeSizeText();
+    });
 
 
   /*const repeatTextBox = document.querySelectorAll(".repeat-text-box");
@@ -481,6 +505,13 @@ class TextClass {
   }
   getFontFamilyText(){
     return this.fontFamilyText;
+  }
+
+  setSizeText(value){
+    this.sizeText = value;
+  }
+  getSizeText(){
+    return this.sizeText;
   }
 
   changeColourText(name, colour){

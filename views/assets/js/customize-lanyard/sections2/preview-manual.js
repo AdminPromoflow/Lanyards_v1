@@ -64,6 +64,15 @@ class PreviewManual {
     });
   }
 
+  changeSizeText(){
+    const text_wrap_ex = document.querySelectorAll(".wrap_ex_0 h1, .wrap_ex_1 h1");
+    const sizeText = textClass.getSizeText();
+
+    text_wrap_ex.forEach((text, i) => {
+      text.style.fontSize = sizeText + "px";
+    });
+  }
+
 
   centerTextLanyard(){
     const wrapElements = document.querySelectorAll('.wrap_ex_0, .wrap_ex_1');
