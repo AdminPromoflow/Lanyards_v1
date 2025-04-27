@@ -49,7 +49,6 @@ class PreviewManual {
 
     for (let i = 0; i < wrap_text_0.length; i++) {
       // Aplicamos la rotación
-      wrap_text_0[i].style.transform = "rotate(45deg)";
 
       // Obtenemos el tamaño del elemento rotado
       const rect = wrap_text_0[i].getBoundingClientRect();
