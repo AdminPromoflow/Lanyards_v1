@@ -10,14 +10,14 @@ function get_file_version($relative_path) {
 <section id="preview-manual-section">
   <!-- Manual lanyard layout -->
   <div class="super-lanyard-manual" id="super-lanyard-manual">
-    <div class="background-colour" id="left-super-lanyard-manual">
+    <div class="" id="left-super-lanyard-manual">
       <div class="text_lanyard_left" id="text_lanyard_left">
         <div class="wrap_img_0">
           <img src="../../views/assets/img/Test/arrow2.png" alt="">
         </div>
       </div>
     </div>
-    <div class="background-colour" id="right-super-lanyard-manual">
+    <div class="" id="right-super-lanyard-manual">
       <div class="text_lanyard_right" id="text_lanyard_right">
         <div class="wrap_img_1">
           <img src="../../views/assets/img/Test/arrow2.png" alt="">
@@ -30,7 +30,7 @@ function get_file_version($relative_path) {
         </div>
       </div>
     </div>
-    <div class="background-colour" id="center-super-lanyard-manual">
+    <div class="" id="center-super-lanyard-manual">
     </div>
   </div>
 </section>
