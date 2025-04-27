@@ -219,6 +219,23 @@ class TextClass {
     });
 
 
+
+
+
+
+
+    const styling_text_box = document.getElementById("styling-text-box");
+
+
+    styling_text_box.addEventListener("click", ()=>{
+      styling_text_box.style.border = styling_text_box.style.border === "2px solid white" ? "2px solid transparent" : "2px solid white";
+
+    });
+
+
+
+
+
   /*const repeatTextBox = document.querySelectorAll(".repeat-text-box");
     const colourTextSelect = document.getElementById("colour-text-select");
     const colourTextSelectContainer = document.getElementById("colour-text-select-container");
