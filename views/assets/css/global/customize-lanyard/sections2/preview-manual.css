@@ -594,12 +594,7 @@ overflow: hidden;
   white-space: nowrap;
   transform: rotate(180deg) scale(-1, -1);;
 }
-.wrap_img_1 {
-  position: relative;
-  display: inline-block; /* Se ajusta al tamaño del contenido */
-  transform-origin: top left;
-  background: orange;
-}
+
 .wrap_img_1 img{
   position: absolute;
   top: 0px;
