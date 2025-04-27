@@ -116,11 +116,7 @@ class TextClass {
  ];
     const colourTextSelectContainer = document.getElementById("colour-text-select-container");
     const colourTextSelect = document.getElementById("colour-text-select");
-
-
-
-
-    //colourTextSelectContainer.style.display = "none";
+    colourTextSelectContainer.style.display = "none";
 
 
     for (let i = 0; i < pantoneColors.length; i++) {
