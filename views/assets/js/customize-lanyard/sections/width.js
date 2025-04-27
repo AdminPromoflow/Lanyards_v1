@@ -215,7 +215,7 @@ class Width {
     colourClass.refreshColourQuantity();
     clipClass.refreshClip();
     priceClass.changePricePerLanyard();
-    previewManual.refreshTextLanyard();
+  //  previewManual.refreshTextLanyard();
 
   }
 
