@@ -20,7 +20,7 @@ function get_file_version($relative_path) {
     <div class="" id="right-super-lanyard-manual">
       <div class="text_lanyard_right" id="text_lanyard_right">
         <div class="wrap_img_1">
-
+          <h2>Hola tu como vas?</h2>
         </div>
       </div>
     </div>
