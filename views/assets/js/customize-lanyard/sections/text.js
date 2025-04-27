@@ -1,5 +1,6 @@
 class TextClass {
   constructor() {
+    this.contentText = "";
     this.timesText = 3;
     this.spaceBetweenText = 90;
     this.colourText = "black";
@@ -235,8 +236,11 @@ class TextClass {
         textClass.setBoldText(false);
       } else {
         styling_text_box.style.border = "2px solid white";
-        textClass.setBoldText(false);
+        textClass.setBoldText(true);
       }
+
+      previewManual.changeBoldText();
+
 
     });
 
