@@ -45,17 +45,18 @@ class PreviewManual {
   }
 
   modifySpaceBetweenText(){
-    this.text_lanyard_left.style.gap = textClass.getSpaceBetweenText() + "px";
-    this.text_lanyard_right.style.gap = textClass.getSpaceBetweenText() + "px";
+
     const wrap_text_0 = document.querySelectorAll(".wrap_text_0");
 
-    alert(wrap_text_0[0].offsetHeight + "  " + wrap_text_0[0].offsetWidth);
 
     for (var i = 0; i < wrap_text_0.length; i++) {
       wrap_text_0[i].style.height = wrap_text_0[i].getBoundingClientRect().width;
+
     }
 
-    //alert(wrap_text_0[0].offsetHeight + "  " + wrap_text_0[0].offsetWidth);
+    alert(wrap_text_0[0].offsetHeight + "  " + wrap_text_0[0].offsetWidth);
+    this.text_lanyard_left.style.gap = textClass.getSpaceBetweenText() + "px";
+    this.text_lanyard_right.style.gap = textClass.getSpaceBetweenText() + "px";
 
   }
 
