@@ -34,7 +34,7 @@ class PreviewManual {
         // Obtener las dimensiones de la clase dinámica wrap_ex_0 o wrap_ex_1
         const wrapElement = document.querySelector(`.wrap_ex_${index}`);
 
-        alert("Max" + text_lanyard_right.offsetWidth + " Min " + rapElement.offsetWidth);
+        alert("Max" + text_lanyard_right.offsetWidth + " Min " + wrapElement.offsetWidth);
 
         w
       }
