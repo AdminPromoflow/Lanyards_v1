@@ -44,26 +44,11 @@ class PreviewManual {
     });
   }
 
-  modifySpaceBetweenText() {
-    const wrap_text_0 = document.querySelectorAll(".wrap_text_0");
-
-    for (let i = 0; i < wrap_text_0.length; i++) {
-      // Aplicamos la rotación
-
-      // Obtenemos el tamaño del elemento rotado
-      const rect = wrap_text_0[i].getBoundingClientRect();
-
-      // Establecemos las nuevas dimensiones (alto y ancho) después de la rotación
-    //  wrap_text_0[i].style.height = `${rect.height}px`;
-  //    wrap_text_0[i].style.width = `${rect.width}px`;
-    }
-
-  //  alert(wrap_text_0[0].offsetHeight + "  " + wrap_text_0[0].offsetWidth);
-
+  modifySpaceBetweenText(){
     this.text_lanyard_left.style.gap = textClass.getSpaceBetweenText() + "px";
     this.text_lanyard_right.style.gap = textClass.getSpaceBetweenText() + "px";
+    
   }
-
 
   changeColourText(){
     const text_wrap_ex = document.querySelectorAll(".wrap_text_0 h1, .wrap_text_1 h1");
