@@ -203,7 +203,7 @@ class Width {
     this.setWidthSelectedIndex(index);
 
     previewLanyardType.showSelectedPreviewTemplate();
-    previewTemplate.activateTemplate();
+  //  previewTemplate.activateTemplate();
     attachmentClass.refreshAttachment();
 
 
