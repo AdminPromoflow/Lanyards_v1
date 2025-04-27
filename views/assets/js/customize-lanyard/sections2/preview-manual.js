@@ -52,7 +52,7 @@ class PreviewManual {
   //  alert(wrap_text_0[0].offsetHeight + "  " + wrap_text_0[0].getBoundingClientRect().width);
 
     for (var i = 0; i < wrap_text_0.length; i++) {
-      wrap_text_0[i].style.width = wrap_text_0[i].getBoundingClientRect().width;
+      wrap_text_0[i].style.height = wrap_text_0[i].getBoundingClientRect().width;
     }
 
   //  alert(wrap_text_0[0].offsetHeight + "  " + wrap_text_0[0].offsetWidth);
