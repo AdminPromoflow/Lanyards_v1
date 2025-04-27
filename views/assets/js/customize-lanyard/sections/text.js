@@ -1,7 +1,7 @@
 class TextClass {
   constructor() {
     this.timesText = 3;
-    this.spaceBetweenText = 90;
+    this.spaceBetweenText = 10;
 
     const textInput = document.getElementById("textInput");
     textInput.addEventListener('input', function() {
@@ -47,7 +47,7 @@ class TextClass {
     const spaceBetweenText = this.getSpaceBetweenText();
 
     decrease_space_between_text.addEventListener("click", function(){
-      if (true/*textClass.getSpaceBetweenText() <=19*/) {
+      if (textClass.getSpaceBetweenText() > 0) {
         textClass.setSpaceBetweenText(textClass.getSpaceBetweenText() - 1);
         previewManual.modifySpaceBetweenText();
 
@@ -62,6 +62,7 @@ class TextClass {
 
     increase_space_between_text.addEventListener("click", function(){
       if (true/*textClass.getSpaceBetweenText() <=19*/) {
+        console.log(textClass.getSpaceBetweenText())
         textClass.setSpaceBetweenText(textClass.getSpaceBetweenText() + 1);
         previewManual.modifySpaceBetweenText();
 
