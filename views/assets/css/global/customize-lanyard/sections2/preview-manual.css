@@ -597,6 +597,7 @@ overflow: hidden;
   display: inline-block; /* Se ajusta al tamaño del contenido */
   transform-origin: top left;
   background: green;
+  z-index: 3;
 }
 
 .wrap_img_1 {
