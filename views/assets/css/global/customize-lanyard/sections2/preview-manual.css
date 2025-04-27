@@ -558,7 +558,6 @@ overflow: hidden;
   position: relative;
   display: inline-block; /* Se ajusta al tamaño del contenido */
   transform-origin: top left;
-  background-color: orange;
 }
 
 .wrap_ex_0 h1 {
