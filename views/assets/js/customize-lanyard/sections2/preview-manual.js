@@ -47,7 +47,16 @@ class PreviewManual {
   modifySpaceBetweenText(){
     this.text_lanyard_left.style.gap = textClass.getSpaceBetweenText() + "px";
     this.text_lanyard_right.style.gap = textClass.getSpaceBetweenText() + "px";
-    this.addTextLanyard();
+    const wrap_text_0 = document.querySelectorAll(".wrap_text_0");
+
+    alert(wrap_text_0[0].offsetHeight + "  " + wrap_text_0.offsetWidth);
+
+    for (var i = 0; i < wrap_text_0.length; i++) {
+      wrap_text_0[i].offsetHeight = wrap_text_0.offsetWidth;
+    }
+
+    alert(wrap_text_0[0].offsetHeight + "  " + wrap_text_0.offsetWidth);
+
   }
 
   changeColourText(){
