@@ -601,6 +601,7 @@ overflow: hidden;
   background: orange;
 }
 .wrap_img_1 img{
+  position: relative;
   height: 50px;
   width: 50px;
   margin: 0;
