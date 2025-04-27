@@ -55,7 +55,7 @@ class PreviewManual {
       wrap_text_0[i].style.height = wrap_text_0[i].getBoundingClientRect().width;
     }
 
-  //  alert(wrap_text_0[0].offsetHeight + "  " + wrap_text_0[0].offsetWidth);
+    alert(wrap_text_0[0].offsetHeight + "  " + wrap_text_0[0].offsetWidth);
 
   }
 
