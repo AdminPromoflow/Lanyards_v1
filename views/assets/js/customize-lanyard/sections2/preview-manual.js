@@ -8,7 +8,6 @@ class PreviewManual {
     const textLanyard = textClass.getContentText();
     const times = textClass.getTimesText();
 
-    alert(this.text_lanyard_left.offsetWidth + "   " + this.text_lanyard_right.offsetWidth);
 
     [this.text_lanyard_left, this.text_lanyard_right].forEach((el, index) => {
       if (el) {
@@ -19,10 +18,13 @@ class PreviewManual {
             <h1>${textLanyard}</h1>
           </div>
         `).join('');
+        alert(document.querySelector(".wrap_ex_1").offsetWidth + "  " +
+      document.querySelector(".wrap_ex_1").offsetHeight);
 
         el.innerHTML = html;
       }
     });
+
   }
 
 
