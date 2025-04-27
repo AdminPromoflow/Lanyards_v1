@@ -48,7 +48,7 @@ class PreviewManual {
       //wrapElement[i].style.left = `${rightWidth / 2}px`; // Convertir a px para unidades correctas
 
       // Calcular y establecer la propiedad 'transform' para centrar el elemento
-      wrapElement[i].style.transform = `rotate(90deg)  translate(-20px, -100%)`; // Ajustar la posición
+      wrapElement[i].style.transform = `rotate(90deg)  translate(0px, calc(-100% + 20px))`; // Ajustar la posición
     }
 //rotate(90deg) translateY(-100%)
 
