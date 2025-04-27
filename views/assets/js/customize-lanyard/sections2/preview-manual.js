@@ -44,21 +44,20 @@ class PreviewManual {
     });
   }
 
-  modifySpaceBetweenText(){
-
+  modifySpaceBetweenText() {
     const wrap_text_0 = document.querySelectorAll(".wrap_text_0");
 
-
-    for (var i = 0; i < wrap_text_0.length; i++) {
-      wrap_text_0[i].style.height = wrap_text_0[i].getBoundingClientRect().width;
-
+    for (let i = 0; i < wrap_text_0.length; i++) {
+      // Usamos offsetWidth que da el ancho real del elemento (incluyendo padding y border)
+      let width = wrap_text_0[i].offsetWidth;
+      wrap_text_0[i].style.height = `${width}px`; // Igualamos el alto al ancho
     }
 
     alert(wrap_text_0[0].offsetHeight + "  " + wrap_text_0[0].offsetWidth);
     this.text_lanyard_left.style.gap = textClass.getSpaceBetweenText() + "px";
     this.text_lanyard_right.style.gap = textClass.getSpaceBetweenText() + "px";
-
   }
+
 
   changeColourText(){
     const text_wrap_ex = document.querySelectorAll(".wrap_text_0 h1, .wrap_text_1 h1");
