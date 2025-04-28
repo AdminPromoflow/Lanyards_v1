@@ -9,6 +9,7 @@ class PreviewManual {
     this.modifySpaceBetweenText();
     this.changeColourText();
     this.changeColourText();
+    this.modifySpaceAlongLanyard();
   }
 
   addTextLanyard() {
@@ -78,6 +79,9 @@ class PreviewManual {
     for (let i = 0; i < padding_text_top.length; i++) {
       padding_text_top[i].style.height = textClass.getSpaceAlongLanyard() + "px";
       padding_text_bottom[i].style.height = textClass.getSpaceAlongLanyard() + "px";
+      padding_text_top[i].style.background = backgroundClass.getBackground() ;
+      padding_text_bottom[i].style.background = backgroundClass.getBackground();
+
     }
   }
 
