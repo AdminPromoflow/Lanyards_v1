@@ -47,8 +47,6 @@ class PreviewManual {
     });
   }
 
-
-
   showPrintableArea(value){
     text_lanyard_left = document.getElementById("text_lanyard_left");
     text_lanyard_right = document.getElementById("text_lanyard_right");
@@ -84,7 +82,6 @@ class PreviewManual {
 
     }
   }
-
 
   changeColourText(){
     const text_wrap_ex = document.querySelectorAll(".wrap_text_0 h1, .wrap_text_1 h1");
@@ -180,6 +177,20 @@ class PreviewManual {
   togglePreviewManualClass(action) {
     previewManualSection.style.display = action;
   }
+
+  refreshTextLanyard() {
+    //this.addTextLanyard();
+  //  this.centerTextLanyard();
+  //  this.modifySpaceBetweenText();
+    //this.changeColourText();
+  //  this.changeColourText();
+  //  this.modifySpaceAlongLanyard();
+  }
+
+
+
+
+
 
 }
 
