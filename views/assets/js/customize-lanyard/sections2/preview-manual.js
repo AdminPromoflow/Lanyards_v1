@@ -178,7 +178,7 @@ class PreviewManual {
     previewManualSection.style.display = action;
   }
 
-  refreshTextLanyard() {
+  refreshImageLanyard() {
     alert("Al menos estamos entrando acá");
     //this.addTextLanyard();
   //  this.centerTextLanyard();
