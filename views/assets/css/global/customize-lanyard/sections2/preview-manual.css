@@ -710,12 +710,18 @@ overflow: hidden;
   background-color: orange;
 }
 .wrap_img_0 img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
   margin: 0;
   padding: 0;
   width: 100%;
   transform: rotate(0deg) ;
 }
 .wrap_img_1 img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
   margin: 0;
   padding: 0;
   width: 100%;
