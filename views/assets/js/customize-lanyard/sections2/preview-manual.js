@@ -180,7 +180,7 @@ class PreviewManual {
 
   refreshImageLanyard() {
     this.addImageLanyard();
-  //  this.centerTextLanyard();
+    this.centerTextLanyard();
   //  this.modifySpaceBetweenText();
     //this.changeColourText();
   //  this.changeColourText();
@@ -220,6 +220,22 @@ class PreviewManual {
         el.innerHTML = contentHTML;
       }
     });
+  }
+
+  centerImageLanyard(){
+    const wrapElements = document.querySelectorAll('.wrap_img_0, .wrap_img_1');
+
+    // Iterar sobre los elementos .wrap_text_0 y .wrap_text_1
+    for (let i = 0; i < wrapElements.length; i++) {
+      // Obtener el ancho de text_lanyard_right
+      const rightWidth = image_lanyard_right.offsetWidth;
+
+      // Calcular y establecer la propiedad 'left'
+      wrapElements[i].style.left = `${rightWidth / 2}px`; // Convertir a px para unidades correctas
+
+      // Calcular y establecer la propiedad 'transform' para rotar y ajustar la posición
+      wrapElements[i].style.transform = `rotate(90deg) translateY(calc(-100% + ${wrapElements[i].offsetHeight / 2}px))`;
+    }
   }
 
 
