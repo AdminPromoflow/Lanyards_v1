@@ -90,9 +90,6 @@
   flex-direction: row;
   flex-wrap: nowrap;
 }
-.item-text label{
-  background-color: green;
-}
 .item-text input[type="checkbox"] {
   transform: scale(1.5);   /* Aumenta el tamaño visual del checkbox */
   transform-origin: center;
