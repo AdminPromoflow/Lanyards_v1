@@ -22,8 +22,8 @@ $imgPath_text = "../../views/assets/img/global/customize-lanyard/sections/text/"
         <input id="textInput" type="text" name="" value="">
       </div>
       <div class="item-text">
-        <input class="" id="" type="checkbox" name="" value="" checked >
-        <label for="">Select to view the printable area:</label>
+        <input class="" id="printable_area" type="checkbox" name="" value="" checked >
+        <label for="printable_area">Select to view the printable area:</label>
       </div>
       <div class="item-text">
         <p>Adjust the spacing between the text</p>

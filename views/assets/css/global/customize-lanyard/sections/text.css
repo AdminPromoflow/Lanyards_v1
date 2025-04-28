@@ -88,6 +88,10 @@
   transform-origin: center;
   cursor: pointer;
 }
+
+.item-text label{
+  display: inline-block;
+}
 .containr-repeat-text{
   position: relative;
   padding: 5px;
