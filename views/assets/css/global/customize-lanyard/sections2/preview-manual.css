@@ -654,6 +654,8 @@ overflow: hidden;
 
 
 .img_lanyard_left {
+  position: absolute;
+  top: 0px;
   display: flex;
   flex-direction: column-reverse;
   gap: 20px; /* espacio entre textos rotados */
@@ -664,6 +666,8 @@ overflow: hidden;
   background-color: gold;
 }
 .img_lanyard_right {
+  position: absolute;
+  top: 0px;
   display: flex;
   flex-direction: column-reverse;
   gap: 20px; /* espacio entre textos rotados */
