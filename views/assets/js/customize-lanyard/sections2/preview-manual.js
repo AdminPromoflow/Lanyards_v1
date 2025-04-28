@@ -204,20 +204,20 @@ class PreviewManual {
 
         // Crear el HTML repetido
         const contentHTML = Array(times).fill(`
-          <div class="wrap_image_${index}">
+          <div class="wrap_img_${index}">
             <img src="../../views/assets/img/Test/arrow2.png" alt="">
           </div>
         `).join('');
 
         // Agregar divs de padding antes y después
-        const fullHTML = `
+        /*const fullHTML = `
           <div class="padding_image_top"></div>
           ${contentHTML}
           <div class="padding_image_bottom"></div>
-        `;
+        `;*/
 
         // Asignar el HTML al elemento
-        el.innerHTML = fullHTML;
+        el.innerHTML = contentHTML;
       }
     });
   }
