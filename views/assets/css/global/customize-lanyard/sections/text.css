@@ -89,7 +89,6 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  background-color: orange;
 }
 .item-text label{
   background-color: green;
