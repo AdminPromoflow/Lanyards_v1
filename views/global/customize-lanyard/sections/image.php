@@ -1,11 +1,11 @@
 <?php
-function getImageFileWithTimestamp($relativePath) {
-  $fullPath = __DIR__ . '/' . $relativePath;
-  return $relativePath . '?v=' . (file_exists($fullPath) ? filemtime($fullPath) : time());
+function asset_version($path) {
+    $fullPath = __DIR__ . '/' . $path;
+    return file_exists($fullPath) ? filemtime($fullPath) : time();
 }
 ?>
 
-<link rel="stylesheet" href="<?php echo getImageFileWithTimestamp('views/assets/css/global/customize-lanyard/sections/image.css'); ?>">
+<link rel="stylesheet" href="../../views/assets/css/global/customize-lanyard/sections/image.css?v=<?=asset_version('../../views/assets/css/global/customize-lanyard/sections/image.css')?>">
 
 <section class="image section">
   <h2>Image</h2>
@@ -16,6 +16,7 @@ function getImageFileWithTimestamp($relativePath) {
         <input type="file" id="imageUpload" name="imageUpload" style="display:none;" accept="image/*">
         <label for="imageUpload">Upload</label>
       </div>
+
       <div class="item-image">
         <p id="label-repeat-image">Repeat image 3 times</p>
         <div class="containr-repeat-image">
@@ -27,41 +28,45 @@ function getImageFileWithTimestamp($relativePath) {
           </div>
         </div>
       </div>
+
       <div class="item-image">
         <p>Adjust the image size</p>
         <div class="containr-size-image">
           <div class="size-image-box">
-            <img src="<?php echo getImageFileWithTimestamp('views/assets/img/global/customize-lanyard/sections/image/smaller.png'); ?>" alt="">
+            <img src="../../views/assets/img/global/customize-lanyard/sections/image/smaller.png?v=<?=asset_version('../../views/assets/img/global/customize-lanyard/sections/image/smaller.png')?>" alt="">
           </div>
           <div class="size-image-box">
-            <img src="<?php echo getImageFileWithTimestamp('views/assets/img/global/customize-lanyard/sections/image/bigger.png'); ?>" alt="">
+            <img src="../../views/assets/img/global/customize-lanyard/sections/image/bigger.png?v=<?=asset_version('../../views/assets/img/global/customize-lanyard/sections/image/bigger.png')?>" alt="">
           </div>
         </div>
       </div>
+
       <div class="item-image">
         <p>Adjust the spacing between the image</p>
         <div class="containr-space-between-image">
           <div class="space-between-image-box">
-            <img src="<?php echo getImageFileWithTimestamp('views/assets/img/global/customize-lanyard/sections/image/minus.png'); ?>" alt="">
+            <img src="../../views/assets/img/global/customize-lanyard/sections/image/minus.png?v=<?=asset_version('../../views/assets/img/global/customize-lanyard/sections/image/minus.png')?>" alt="">
           </div>
           <div class="space-between-image-box">
-            <img src="<?php echo getImageFileWithTimestamp('views/assets/img/global/customize-lanyard/sections/image/plus.png'); ?>" alt="">
+            <img src="../../views/assets/img/global/customize-lanyard/sections/image/plus.png?v=<?=asset_version('../../views/assets/img/global/customize-lanyard/sections/image/plus.png')?>" alt="">
           </div>
         </div>
       </div>
+
       <div class="item-image">
         <p>Adjust the rotation of the image.</p>
         <div class="containr-rotation-image">
           <div class="rotation-image-box">
-            <img src="<?php echo getImageFileWithTimestamp('views/assets/img/global/customize-lanyard/sections/image/rotation-left.png'); ?>" alt="">
+            <img src="../../views/assets/img/global/customize-lanyard/sections/image/rotation-left.png?v=<?=asset_version('../../views/assets/img/global/customize-lanyard/sections/image/rotation-left.png')?>" alt="">
           </div>
           <div class="rotation-image-box">
-            <img src="<?php echo getImageFileWithTimestamp('views/assets/img/global/customize-lanyard/sections/image/rotation-rigth.png'); ?>" alt="">
+            <img src="../../views/assets/img/global/customize-lanyard/sections/image/rotation-rigth.png?v=<?=asset_version('../../views/assets/img/global/customize-lanyard/sections/image/rotation-rigth.png')?>" alt="">
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
 
-<script src="<?php echo getImageFileWithTimestamp('views/assets/js/customize-lanyard/sections/image.js'); ?>" type="text/javascript"></script>
+<script src="../../views/assets/js/customize-lanyard/sections/image.js?v=<?=asset_version('../../views/assets/js/customize-lanyard/sections/image.js')?>"></script>
