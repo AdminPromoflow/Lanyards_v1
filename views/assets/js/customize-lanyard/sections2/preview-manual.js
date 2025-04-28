@@ -20,7 +20,6 @@ class PreviewManual {
     const textLanyard = textClass.getContentText();
     const times = textClass.getTimesText();
 
-    let dimensionsMessage = ""; // Variable para almacenar las dimensiones
 
     // Iterar sobre los elementos izquierdo y derecho
     [this.text_lanyard_left, this.text_lanyard_right].forEach((el, index) => {
@@ -39,6 +38,26 @@ class PreviewManual {
         el.innerHTML = html;
       }
     });
+  }
+
+  showPrintableArea(value){
+    text_lanyard_left = document.getElementById("text_lanyard_left");
+    text_lanyard_right = document.getElementById("text_lanyard_right");
+    text_lanyard_center = document.getElementById("text_lanyard_center");
+
+
+    if (value) {
+      [text_lanyard_left, text_lanyard_right, text_lanyard_center].forEach((element, index) => {
+        element.style.background = "rgba(0,0,0, .3)";
+      });
+    }
+    else {
+      [text_lanyard_left, text_lanyard_right, text_lanyard_center].forEach((element, index) => {
+        element.style.background = "rgba(0,0,0, 0)";
+      });
+    }
+
+
   }
 
   modifySpaceBetweenText(){

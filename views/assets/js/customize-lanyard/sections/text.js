@@ -26,9 +26,9 @@ class TextClass {
 
     printable_area.addEventListener('click', function() {
       if (printable_area.checked) {
-        alert('Checkbox está seleccionado');
+        previewManual.showPrintableArea(true);
       } else {
-        alert('Checkbox está desmarcado');
+        previewManual.showPrintableArea(false);
       }
     });
 
