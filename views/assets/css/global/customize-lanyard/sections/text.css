@@ -75,6 +75,7 @@
   margin: 0;
   padding: 0;
 }
+
 .item-text input[type="text"]{
   margin: 5px;
   padding-left: 5px;
@@ -82,15 +83,19 @@
   font-size: 1em;
   text-align: center;
 }
+
+.items-text:nth-child(2){
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.item-text label{
+}
 .item-text input[type="checkbox"] {
-  display: inline-block;
   transform: scale(1.5);   /* Aumenta el tamaño visual del checkbox */
   transform-origin: center;
   cursor: pointer;
-}
-
-.item-text label{
-  display: inline-block;
 }
 .containr-repeat-text{
   position: relative;
