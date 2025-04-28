@@ -706,7 +706,7 @@ overflow: hidden;
   display: inline-block; /* Se ajusta al tamaño del contenido */
   transform-origin: top left;
   width: 10px;
-  height: auto;
+  height: 10px;
   background-color: orange;
 }
 .wrap_img_0 img {

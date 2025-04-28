@@ -243,6 +243,8 @@ class PreviewManual {
     const size = imageClass.getImageSize();
     for (let i = 0; i < wrapElements.length; i++) {
       wrapElements[i].style.width = size + "px";
+      wrapElements[i].style.height = size + "px";
+
     }
   }
 
