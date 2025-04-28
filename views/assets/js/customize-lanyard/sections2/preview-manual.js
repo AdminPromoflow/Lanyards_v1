@@ -72,13 +72,15 @@ class PreviewManual {
   }
 
   modifySpaceAlongLanyard(){
-    padding_text_top = document.getElementById("padding_text_top");
-    padding_text_bottom = document.getElementById("padding_text_bottom");
+    padding_text_top = document.querySelectorAll(".padding_text_top");
+    padding_text_bottom = document.querySelectorAll(".padding_text_bottom");
 
 
+    for (var i = 0; i < padding_text_top.length; i++) {
+      padding_text_top[i].height = textClass.getSpaceAlongLanyard() + "px";
+      padding_text_bottom[i].height = textClass.getSpaceAlongLanyard() + "px";
+    }
 
-    padding_text_top.height = textClass.getSpaceAlongLanyard() + "px";
-    padding_text_bottom.height = textClass.getSpaceAlongLanyard() + "px";
   }
 
   changeColourText(){
