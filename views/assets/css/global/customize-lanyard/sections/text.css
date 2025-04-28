@@ -90,6 +90,7 @@
   position: relative;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 .item-text input[type="checkbox"] {
   transform: scale(1.5);   /* Aumenta el tamaño visual del checkbox */
