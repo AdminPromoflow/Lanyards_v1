@@ -23,7 +23,7 @@ class TextClass {
 
     const printable_area = document.getElementById("printable_area");
 
-
+    previewManual.showPrintableArea(false)
     printable_area.addEventListener('click', function() {
       if (printable_area.checked) {
         previewManual.showPrintableArea(true);

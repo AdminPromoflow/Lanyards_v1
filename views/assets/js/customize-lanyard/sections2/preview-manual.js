@@ -53,7 +53,7 @@ class PreviewManual {
     }
     else {
       [text_lanyard_left, text_lanyard_right, text_lanyard_center].forEach((element, index) => {
-        element.style.background = "rgba(0,0,0, 0)";
+        element.style.background = backgroundClass.getBackground();
       });
     }
 
