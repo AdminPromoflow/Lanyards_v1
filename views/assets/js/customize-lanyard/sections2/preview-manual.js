@@ -66,9 +66,8 @@ class PreviewManual {
   }
 
   modifySpaceAlongLanyard(){
-    alert(textClass.getSpaceAlongLanyard());
-    //this.text_lanyard_left.padding = textClass.getSpaceAlongLanyard() + "px";
-    //this.text_lanyard_right.style.gap = textClass.getSpaceAlongLanyard() + "px";
+    this.text_lanyard_left.padding = textClass.getSpaceAlongLanyard() + "px 0";
+    this.text_lanyard_right.style.gap = textClass.getSpaceAlongLanyard() + "px 0";
   }
 
   changeColourText(){
