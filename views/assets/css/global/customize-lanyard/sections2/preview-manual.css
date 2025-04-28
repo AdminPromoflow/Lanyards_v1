@@ -544,6 +544,9 @@ overflow: hidden;
   justify-content: flex-end; /* opcional: centrado vertical */
   height: 100%;
   transform: rotate(0deg);
+
+  padding: 70px 0;
+
 }
 .text_lanyard_right {
   display: flex;
@@ -553,6 +556,8 @@ overflow: hidden;
   justify-content: flex-end; /* opcional: centrado vertical */
   height: 100%;
   transform: rotate(180deg);
+
+  padding: 70px 0;
 }
 /* Sin rotación (0 grados) */
 

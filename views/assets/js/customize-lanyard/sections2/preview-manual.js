@@ -56,8 +56,6 @@ class PreviewManual {
         element.style.background = backgroundClass.getBackground();
       });
     }
-
-
   }
 
   modifySpaceBetweenText(){
