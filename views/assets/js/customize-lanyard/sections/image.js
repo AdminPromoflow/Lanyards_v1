@@ -9,6 +9,7 @@ class ImageClass {
       const times = this.getTimesImage();
 
       repeatImageBox.addEventListener("click", function(){
+        alert("entramos 1");
         if (imageClass.getTimesImage() <=19) {
           imageClass.setTimesImage(imageClass.getTimesImage() + 1);
           labelRepeatImage.innerHTML = `Repeat image ${imageClass.getTimesImage()} time${imageClass.getTimesImage() === 1 ? '' : 's'}.`;
@@ -20,6 +21,8 @@ class ImageClass {
       const decreaseImageBox = document.getElementById("decrease-image-box");
       decreaseImageBox.addEventListener("click", function(){
         if (imageClass.getTimesImage() >=0) {
+          alert("entramos 2");
+
           imageClass.setTimesImage(imageClass.getTimesImage() - 1);
           labelRepeatImage.innerHTML = `Repeat image ${imageClass.getTimesImage()} time${imageClass.getTimesImage() === 1 ? '' : 's'}.`;
           previewManual.refreshImageLanyard();
