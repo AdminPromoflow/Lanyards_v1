@@ -243,8 +243,8 @@ class PreviewManual {
     const wrapElements = document.querySelectorAll('.wrap_img_0, .wrap_img_1');
     const size = imageClass.getImageSize();
     for (let i = 0; i < wrapElements.length; i++) {
-      wrapElements[i].style.width = size + "px";
-    //  wrapElements[i].style.height = size + "px";
+    //  wrapElements[i].style.width = size + "px";
+      wrapElements[i].style.height = size + "px";
     }
   }
 
