@@ -48,7 +48,7 @@ class PreviewManual {
 
     if (value) {
       [text_lanyard_left, text_lanyard_right, text_lanyard_center].forEach((element, index) => {
-        element.style.background = "rgba(255,255,255, .9)";
+        element.style.background = "rgba(215,215,215, .9)";
       });
     }
     else {
@@ -63,6 +63,12 @@ class PreviewManual {
   modifySpaceBetweenText(){
     this.text_lanyard_left.style.gap = textClass.getSpaceBetweenText() + "px";
     this.text_lanyard_right.style.gap = textClass.getSpaceBetweenText() + "px";
+  }
+
+  modifySpaceAlongLanyard(){
+    alert(textClass.getSpaceAlongLanyard());
+    //this.text_lanyard_left.padding = textClass.getSpaceAlongLanyard() + "px";
+    //this.text_lanyard_right.style.gap = textClass.getSpaceAlongLanyard() + "px";
   }
 
   changeColourText(){

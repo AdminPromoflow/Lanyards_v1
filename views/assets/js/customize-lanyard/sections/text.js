@@ -4,6 +4,7 @@ class TextClass {
     this.contentText = "";
     this.timesText = 3;
     this.spaceBetweenText = 90;
+    this.spaceAlongLanyard = 0;
     this.colourText = "black";
     this.fontFamilyText = "sans-serif";
     this.sizeText = 6;
@@ -66,6 +67,12 @@ class TextClass {
 
 
 
+
+
+
+
+
+
     const decrease_space_between_text = document.getElementById("decrease_space_between_text");
     const increase_space_between_text = document.getElementById("increase_space_between_text");
     const spaceBetweenText = this.getSpaceBetweenText();
@@ -88,6 +95,39 @@ class TextClass {
       }
 
     })
+
+
+
+
+
+
+
+
+
+    const decrease_space_along_lanyard = document.getElementById("decrease_space_along_lanyard");
+    const increase_space_along_lanyard = document.getElementById("increase_space_along_lanyard");
+    //const spaceAlongLanyard = this.getSpaceAlongLanyard();
+
+    decrease_space_along_lanyard.addEventListener("click", function(){
+      if (this.getSpaceAlongLanyard() > 0) {
+        textClass.setSpaceAlongLanyard(textClass.getSpaceAlongLanyard() - 1);
+        previewManual.modifySpaceAlongLanyard();
+      }
+
+    })
+
+
+    increase_space_along_lanyard.addEventListener("click", function(){
+      if (this.getSpaceAlongLanyard() <=900) {
+        textClass.setSpaceAlongLanyard(textClass.getSpaceAlongLanyard() + 1);
+        previewManual.modifySpaceAlongLanyard();
+      }
+
+    })
+
+
+
+
 
 
 
@@ -330,6 +370,13 @@ class TextClass {
   }
   getSpaceBetweenText(){
     return this.spaceBetweenText;
+  }
+
+  getSpaceAlongLanyard(value){
+    this.spaceAlongLanyard = value;
+  }
+  getSpaceAlongLanyard(){
+    return this.spaceAlongLanyard;
   }
 
   setColourText(value){
