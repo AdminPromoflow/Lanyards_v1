@@ -21,7 +21,7 @@ $imgPath_text = "../../views/assets/img/global/customize-lanyard/sections/text/"
         <p>Type the text below, please.</p>
         <input id="textInput" type="text" name="" value="">
       </div>
-      <div class="item-text">
+      <div class="item-text inline-item-text">
         <input class="" id="printable_area" type="checkbox" name="" value="" checked >
         <label for="printable_area">Select to view the printable area:</label>
       </div>

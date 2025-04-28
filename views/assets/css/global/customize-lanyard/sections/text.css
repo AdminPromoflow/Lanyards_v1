@@ -84,7 +84,7 @@
   text-align: center;
 }
 
-.ontainers-text1:nth-child(2){
+.inline-item-text{
   position: relative;
   display: flex;
   flex-direction: row;
