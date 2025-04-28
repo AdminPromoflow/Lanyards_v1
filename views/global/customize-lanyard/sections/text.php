@@ -24,6 +24,7 @@ $imgPath_text = "../../views/assets/img/global/customize-lanyard/sections/text/"
       <div class="item-text inline-item-text">
         <input  id="printable_area" type="checkbox"   >
         <label for="printable_area">Select to view the printable area:</label>
+        <p>This will not be printed on the lanyard; it is only for visualising the printable area.</p>
       </div>
       <div class="item-text">
         <p>Adjust the spacing between the text</p>
