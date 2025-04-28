@@ -9,9 +9,20 @@
         <label for="imageUpload">Upload</label>
       </div>
       <div class="item-image">
+        <p id="label-repeat-image">Repeat image 3 times</p>
+        <div class="containr-repeat-image">
+          <div class="repeat-image-box" id="decrease-image-box">
+            <h3>-</h3>
+          </div>
+          <div class="repeat-image-box" id="repeat-image-box">
+            <h3>+</h3>
+          </div>
+        </div>
+      </div>
+      <div class="item-image">
         <p>Adjust the image size</p>
 
-        <div class="containr-size-image"> 
+        <div class="containr-size-image">
 
           <div class="size-image-box">
             <img src="../../views/assets/img/global/customize-lanyard/sections/image/smaller.png" alt="">

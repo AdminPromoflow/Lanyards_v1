@@ -179,6 +179,7 @@ class PreviewManual {
   }
 
   refreshTextLanyard() {
+    alert("Al menos estamos entrando acá");
     //this.addTextLanyard();
   //  this.centerTextLanyard();
   //  this.modifySpaceBetweenText();

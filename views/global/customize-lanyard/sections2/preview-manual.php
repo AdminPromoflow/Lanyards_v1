@@ -26,15 +26,6 @@ function get_file_version($relative_path) {
         <div class="wrap_img_0">
           <img src="../../views/assets/img/Test/arrow2.png" alt="">
         </div>
-        <div class="wrap_img_0">
-          <img src="../../views/assets/img/Test/arrow2.png" alt="">
-        </div>
-        <div class="wrap_img_0">
-          <img src="../../views/assets/img/Test/arrow2.png" alt="">
-        </div>
-        <div class="wrap_img_0">
-          <img src="../../views/assets/img/Test/arrow2.png" alt="">
-        </div>
       </div>
     </div>
     <div class="" id="right-super-lanyard-manual">
@@ -43,15 +34,6 @@ function get_file_version($relative_path) {
 
       </div>
       <div class="img_lanyard_right" id="img_lanyard_right">
-        <div class="wrap_img_1">
-          <img src="../../views/assets/img/Test/arrow2.png" alt="">
-        </div>
-        <div class="wrap_img_1">
-          <img src="../../views/assets/img/Test/arrow2.png" alt="">
-        </div>
-        <div class="wrap_img_1">
-          <img src="../../views/assets/img/Test/arrow2.png" alt="">
-        </div>
         <div class="wrap_img_1">
           <img src="../../views/assets/img/Test/arrow2.png" alt="">
         </div>
