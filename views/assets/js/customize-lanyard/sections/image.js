@@ -1,5 +1,7 @@
 class ImageClass {
     constructor() {
+      this.timesImage = 3;
+
 
 
       const repeatImageBox = document.getElementById("repeat-image-box");
@@ -103,6 +105,13 @@ class ImageClass {
             }
           })
         }*/
+    }
+
+    getTimesImage(){
+      return this.timesImage;
+    }
+    setTimesImage(value) {
+      this.timesImage = value;
     }
 
 
