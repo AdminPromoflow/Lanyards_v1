@@ -656,6 +656,7 @@ overflow: hidden;
 .img_lanyard_left {
   position: absolute;
   top: 0px;
+  left: 0px;
   display: flex;
   flex-direction: column-reverse;
   gap: 20px; /* espacio entre textos rotados */
@@ -668,6 +669,7 @@ overflow: hidden;
 .img_lanyard_right {
   position: absolute;
   top: 0px;
+  left: 0px;
   display: flex;
   flex-direction: column-reverse;
   gap: 20px; /* espacio entre textos rotados */
