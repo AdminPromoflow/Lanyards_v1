@@ -49,15 +49,11 @@ class PreviewManual {
     if (value) {
       [text_lanyard_left, text_lanyard_right, text_lanyard_center].forEach((element, index) => {
         element.style.background = "rgba(255,255,255, .9)";
-        element.style.border = "1px solid black";
-
       });
     }
     else {
       [text_lanyard_left, text_lanyard_right, text_lanyard_center].forEach((element, index) => {
         element.style.background = backgroundClass.getBackground();
-        element.style.border = "1px solid transparent";
-
       });
     }
 
