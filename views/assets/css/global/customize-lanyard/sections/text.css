@@ -82,6 +82,12 @@
   font-size: 1em;
   text-align: center;
 }
+.item-text input[type="checkbox"] {
+  display: inline-block;
+  transform: scale(1.5);   /* Aumenta el tamaño visual del checkbox */
+  transform-origin: center;
+  cursor: pointer;
+}
 .containr-repeat-text{
   position: relative;
   padding: 5px;
