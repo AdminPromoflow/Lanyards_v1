@@ -537,6 +537,11 @@ overflow: hidden;
 
 
 .text_lanyard_left {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column-reverse;
   gap: 20px; /* espacio entre textos rotados */
@@ -546,6 +551,11 @@ overflow: hidden;
   transform: rotate(0deg);
 }
 .text_lanyard_right {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column-reverse;
   gap: 20px; /* espacio entre textos rotados */
@@ -666,6 +676,7 @@ overflow: hidden;
   width: 100%;
   transform: rotate(0deg);
   background-color: gold;
+  display: none;
 }
 .img_lanyard_right {
   position: absolute;
@@ -681,6 +692,7 @@ overflow: hidden;
 
   transform: rotate(180deg);
   background-color: green;
+  display: none;
 }
 
 
