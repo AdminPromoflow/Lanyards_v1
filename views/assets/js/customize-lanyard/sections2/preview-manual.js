@@ -179,8 +179,7 @@ class PreviewManual {
   }
 
   refreshImageLanyard() {
-    alert("Al menos estamos entrando acá");
-    //this.addTextLanyard();
+    this.addImageLanyard();
   //  this.centerTextLanyard();
   //  this.modifySpaceBetweenText();
     //this.changeColourText();
@@ -188,6 +187,40 @@ class PreviewManual {
   //  this.modifySpaceAlongLanyard();
   }
 
+  addImageLanyard() {
+    // Obtener los elementos del DOM
+    this.image_lanyard_left = document.getElementById("image_lanyard_left");
+    this.image_lanyard_right = document.getElementById("image_lanyard_right");
+
+    // Obtener el contenido y el número de repeticiones
+    const imageLanyard = imageClass.getLinkImage();
+    const times = imageClass.getTimesImage();
+
+    // Iterar sobre los elementos izquierdo y derecho
+    [this.image_lanyard_left, this.image_lanyard_right].forEach((el, index) => {
+      if (el) {
+        // Limpiar el contenido previo
+        el.innerHTML = "";
+
+        // Crear el HTML repetido
+        const contentHTML = Array(times).fill(`
+          <div class="wrap_image_${index}">
+            <h1>${imageLanyard}</h1>
+          </div>
+        `).join('');
+
+        // Agregar divs de padding antes y después
+        const fullHTML = `
+          <div class="padding_image_top"></div>
+          ${contentHTML}
+          <div class="padding_image_bottom"></div>
+        `;
+
+        // Asignar el HTML al elemento
+        el.innerHTML = fullHTML;
+      }
+    });
+  }
 
 
 
