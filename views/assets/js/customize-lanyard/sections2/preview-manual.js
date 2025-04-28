@@ -48,7 +48,7 @@ class PreviewManual {
 
     if (value) {
       [text_lanyard_left, text_lanyard_right, text_lanyard_center].forEach((element, index) => {
-        element.style.background = "rgba(0,0,0, .3)";
+        element.style.background = "rgba(255,255,255, .9)";
       });
     }
     else {
