@@ -372,7 +372,7 @@ class TextClass {
     return this.spaceBetweenText;
   }
 
-  getSpaceAlongLanyard(value){
+  setSpaceAlongLanyard(value){
     this.spaceAlongLanyard = value;
   }
   getSpaceAlongLanyard(){
