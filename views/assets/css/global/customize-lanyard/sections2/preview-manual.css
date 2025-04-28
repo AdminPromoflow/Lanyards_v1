@@ -697,12 +697,16 @@ overflow: hidden;
   position: relative;
   display: inline-block; /* Se ajusta al tamaño del contenido */
   transform-origin: top left;
+  width: 10px;
+  height: 10px;
   background-color: purple;
 }
 .wrap_img_1{
   position: relative;
   display: inline-block; /* Se ajusta al tamaño del contenido */
   transform-origin: top left;
+  width: 10px;
+  height: 10px;
   background-color: orange;
 }
 .wrap_img_0 img {
