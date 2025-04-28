@@ -228,7 +228,7 @@ class PreviewManual {
     // Iterar sobre los elementos .wrap_text_0 y .wrap_text_1
     for (let i = 0; i < wrapElements.length; i++) {
       // Obtener el ancho de text_lanyard_right
-      const rightWidth = image_lanyard_right.offsetWidth;
+      const rightWidth = this.image_lanyard_right.offsetWidth;
 
       // Calcular y establecer la propiedad 'left'
       wrapElements[i].style.left = `${rightWidth / 2}px`; // Convertir a px para unidades correctas
