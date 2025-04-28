@@ -80,7 +80,6 @@
   position: relative;
   color: rgba(255, 255, 255, .8);
   min-width: 250px;
-  gap: 5px;
   font-size: 0.7em;
   text-align: center;
   font-weight: 300;
@@ -106,6 +105,8 @@
 .inline-item-text{
   position: relative;
   display: flex;
+  gap: 5px;
+
   flex-direction: row;
   flex-wrap: wrap;
 }
