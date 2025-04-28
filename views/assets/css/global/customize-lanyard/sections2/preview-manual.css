@@ -676,7 +676,6 @@ overflow: hidden;
   width: 100%;
   transform: rotate(0deg);
   background-color: gold;
-  display: none;
 }
 .img_lanyard_right {
   position: absolute;
@@ -692,20 +691,19 @@ overflow: hidden;
 
   transform: rotate(180deg);
   background-color: green;
-  display: none;
 }
 
 .wrap_img_0{
   position: relative;
   display: inline-block; /* Se ajusta al tamaño del contenido */
   transform-origin: top left;
-  background-color: gold;
+  background-color: purple;
 }
 .wrap_img_1{
   position: relative;
   display: inline-block; /* Se ajusta al tamaño del contenido */
   transform-origin: top left;
-  background-color: green;
+  background-color: orange;
 }
 .wrap_img_0 img {
   margin: 0;
