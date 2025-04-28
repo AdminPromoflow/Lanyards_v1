@@ -76,6 +76,16 @@
   margin: 0;
   padding: 0;
 }
+.inline-item-text p{
+  position: relative;
+  color: rgba(255, 255, 255, .8);
+  min-width: 250px;
+  font-size: 0.9em;
+  text-align: center;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+}
 .item-text label{
   position: relative;
   color: rgba(255, 255, 255, .8);
@@ -102,6 +112,7 @@
   transform: scale(1.5);   /* Aumenta el tamaño visual del checkbox */
   transform-origin: center;
   cursor: pointer;
+  margin-left: 4px;
 }
 .containr-repeat-text{
   position: relative;
