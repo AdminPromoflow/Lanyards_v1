@@ -205,7 +205,7 @@ class PreviewManual {
         // Crear el HTML repetido
         const contentHTML = Array(times).fill(`
           <div class="wrap_image_${index}">
-            <h1>${imageLanyard}</h1>
+            <img src="../../views/assets/img/Test/arrow2.png" alt="">
           </div>
         `).join('');
 
