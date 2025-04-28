@@ -614,12 +614,19 @@ overflow: hidden;
   transform: rotate(180deg) scale(-1, -1);
 }
 
-.padding_text{
+.padding_text_top{
   position: absolute;
   top: 0px;
   height: 60px;
   width: 100%;
   background-color: gold;
+}
+.padding_text_button{
+  position: absolute;
+  bottom: 0px;
+  height: 60px;
+  width: 100%;
+  background-color: red;
 }
 
 /*
