@@ -20,16 +20,28 @@ function get_file_version($relative_path) {
         </div>
 
       </div>
+
+      <div class="img_lanyard_left" id="img_lanyard_left">
+
+
+      </div>
+
+
     </div>
     <div class="" id="right-super-lanyard-manual">
       <div class="text_lanyard_right" id="text_lanyard_right">
 
 
       </div>
-    <div class="" id="center-super-lanyard-manual">
-      <div class="text_lanyard_center" id="text_lanyard_center">
+      <div class="img_lanyard_right" id="img_lanyard_right">
+
 
       </div>
+
+  </div>
+  <div class="" id="center-super-lanyard-manual">
+    <div class="text_lanyard_center" id="text_lanyard_center">
+
     </div>
   </div>
 </section>

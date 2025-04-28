@@ -613,7 +613,6 @@ overflow: hidden;
   width: 10px;
   transform: rotate(180deg) scale(-1, -1);
 }
-
 .padding_text_top{
   position: absolute;
   top: 0px;
@@ -654,7 +653,26 @@ overflow: hidden;
 
 
 
-
+.img_lanyard_left {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 20px; /* espacio entre textos rotados */
+  align-items: flex-start; /* <== centrado horizontal */
+  justify-content: flex-end; /* opcional: centrado vertical */
+  height: 100%;
+  transform: rotate(0deg);
+  background-color: gold;
+}
+.img_lanyard_right {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 20px; /* espacio entre textos rotados */
+  align-items: flex-start; /* <== centrado horizontal */
+  justify-content: flex-end; /* opcional: centrado vertical */
+  height: 100%;
+  transform: rotate(180deg);
+  background-color: green;
+}
 
 
 
