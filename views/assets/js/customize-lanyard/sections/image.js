@@ -20,8 +20,8 @@ class ImageClass {
 
       const decreaseImageBox = document.getElementById("decrease-image-box");
       decreaseImageBox.addEventListener("click", function(){
+        alert("entramos 2");
         if (imageClass.getTimesImage() >=0) {
-          alert("entramos 2");
 
           imageClass.setTimesImage(imageClass.getTimesImage() - 1);
           labelRepeatImage.innerHTML = `Repeat image ${imageClass.getTimesImage()} time${imageClass.getTimesImage() === 1 ? '' : 's'}.`;
