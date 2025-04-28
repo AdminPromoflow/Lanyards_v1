@@ -545,7 +545,7 @@ overflow: hidden;
   height: 100%;
   transform: rotate(0deg);
 
-  padding: 20px 0;
+  padding: 20px 0!important;
 
 }
 .text_lanyard_right {
@@ -558,7 +558,7 @@ overflow: hidden;
   transform: rotate(180deg);
 
 
-  padding: 20px 0;
+  padding: 20px 0!important;
 
 
 }
