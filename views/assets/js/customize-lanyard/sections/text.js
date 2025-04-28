@@ -60,7 +60,7 @@ class TextClass {
 
     decrease_space_between_text.addEventListener("click", function(){
       if (textClass.getSpaceBetweenText() > 0) {
-        textClass.setSpaceBetweenText(textClass.getSpaceBetweenText() - 7);
+        textClass.setSpaceBetweenText(textClass.getSpaceBetweenText() - 1);
         previewManual.modifySpaceBetweenText();
       }
 
@@ -70,7 +70,7 @@ class TextClass {
     increase_space_between_text.addEventListener("click", function(){
       if (textClass.getSpaceBetweenText() <=220) {
         console.log(textClass.getSpaceBetweenText())
-        textClass.setSpaceBetweenText(textClass.getSpaceBetweenText() + 7);
+        textClass.setSpaceBetweenText(textClass.getSpaceBetweenText() + 1);
         previewManual.modifySpaceBetweenText();
 
       }
