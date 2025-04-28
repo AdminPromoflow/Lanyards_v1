@@ -69,6 +69,7 @@
 .item-text p{
   position: relative;
   color: rgba(255, 255, 255, .8);
+  width: 100%;
   font-size: 1.09em;
   text-align: center;
   font-weight: 300;
