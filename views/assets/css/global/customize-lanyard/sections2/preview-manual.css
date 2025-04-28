@@ -617,8 +617,8 @@ overflow: hidden;
 .padding_text{
   position: absolute;
   top: 0px;
-  height: 100%;
-  width: 60px;
+  height: 60px;
+  width: 100%;
   background-color: gold;
 }
 
