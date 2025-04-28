@@ -615,14 +615,14 @@ overflow: hidden;
 }
 
 .padding_text_top{
-  position: relative;
+  position: absolute;
   top: 0px;
   height: 60px;
   width: 100%;
   background-color: gold;
 }
 .padding_text_bottom{
-  position: relative;
+  position: absolute;
   bottom: 0px;
   height: 60px;
   width: 100%;
