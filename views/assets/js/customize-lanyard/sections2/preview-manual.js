@@ -71,17 +71,16 @@ class PreviewManual {
     this.text_lanyard_right.style.gap = textClass.getSpaceBetweenText() + "px";
   }
 
-  modifySpaceAlongLanyard(){
-    padding_text_top = document.querySelectorAll(".padding_text_top");
-    padding_text_bottom = document.querySelectorAll(".padding_text_bottom");
+  modifySpaceAlongLanyard() {
+    const padding_text_top = document.querySelectorAll(".padding_text_top");
+    const padding_text_bottom = document.querySelectorAll(".padding_text_bottom");
 
-
-    for (var i = 0; i < padding_text_top.length; i++) {
-      padding_text_top[i].height = textClass.getSpaceAlongLanyard() + "px";
-      padding_text_bottom[i].height = textClass.getSpaceAlongLanyard() + "px";
+    for (let i = 0; i < padding_text_top.length; i++) {
+      padding_text_top[i].style.height = textClass.getSpaceAlongLanyard() + "px";
+      padding_text_bottom[i].style.height = textClass.getSpaceAlongLanyard() + "px";
     }
-
   }
+
 
   changeColourText(){
     const text_wrap_ex = document.querySelectorAll(".wrap_text_0 h1, .wrap_text_1 h1");
