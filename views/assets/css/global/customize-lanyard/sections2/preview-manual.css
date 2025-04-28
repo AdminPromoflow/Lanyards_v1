@@ -695,8 +695,33 @@ overflow: hidden;
   display: none;
 }
 
+.wrap_img_0{
+  position: relative;
+  display: inline-block; /* Se ajusta al tamaño del contenido */
+  transform-origin: top left;
+  background-color: gold;
+}
+.wrap_img_1{
+  position: relative;
+  display: inline-block; /* Se ajusta al tamaño del contenido */
+  transform-origin: top left;
+  background-color: green;
+}
+.wrap_img_0 img {
+  margin: 0;
+  padding: 0;
+  width: 100%;
 
 
+  transform: rotate(0deg) ;
+
+}
+.wrap_img_1 img {
+  margin: 0;
+  padding: 0;
+
+  transform: rotate(180deg) scale(-1, -1);;
+}
 
 
 
