@@ -21,6 +21,19 @@ class TextClass {
     });
 
 
+    const printable_area = document.getElementById("printable_area");
+
+
+    printable_area.addEventListener('click', function() {
+      if (printable_area.checked) {
+        alert('Checkbox está seleccionado');
+      } else {
+        alert('Checkbox está desmarcado');
+      }
+    });
+
+
+
 
 
     const repeatTextBox = document.getElementById("repeat-text-box");
