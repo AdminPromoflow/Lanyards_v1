@@ -72,8 +72,13 @@ class PreviewManual {
   }
 
   modifySpaceAlongLanyard(){
-    this.text_lanyard_left.padding = textClass.getSpaceAlongLanyard() + "px 0";
-    this.text_lanyard_right.padding = textClass.getSpaceAlongLanyard() + "px 0";
+    padding_text_top = document.getElementById("padding_text_top");
+    padding_text_bottom = document.getElementById("padding_text_bottom");
+
+
+
+    padding_text_top.height = textClass.getSpaceAlongLanyard() + "px";
+    padding_text_bottom.height = textClass.getSpaceAlongLanyard() + "px";
   }
 
   changeColourText(){

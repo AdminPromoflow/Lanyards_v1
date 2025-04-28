@@ -617,15 +617,13 @@ overflow: hidden;
 .padding_text_top{
   position: absolute;
   top: 0px;
-  height: 60px;
   width: 100%;
-  background-color: gold;
+  background-color: red;
   z-index: 2;
 }
 .padding_text_bottom{
   position: absolute;
   bottom: 0px;
-  height: 60px;
   width: 100%;
   background-color: red;
   z-index: 2;
