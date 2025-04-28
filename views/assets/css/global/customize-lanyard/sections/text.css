@@ -84,7 +84,7 @@
   text-align: center;
 }
 
-.items-text:nth-child(2){
+.ontainers-text1:nth-child(2){
   position: relative;
   display: flex;
   flex-direction: row;
