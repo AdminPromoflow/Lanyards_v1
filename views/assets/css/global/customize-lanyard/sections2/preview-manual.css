@@ -663,6 +663,7 @@ overflow: hidden;
   align-items: flex-start; /* <== centrado horizontal */
   justify-content: flex-end; /* opcional: centrado vertical */
   height: 100%;
+  width: 100%;
   transform: rotate(0deg);
   background-color: gold;
 }
@@ -676,6 +677,8 @@ overflow: hidden;
   align-items: flex-start; /* <== centrado horizontal */
   justify-content: flex-end; /* opcional: centrado vertical */
   height: 100%;
+  width: 100%;
+
   transform: rotate(180deg);
   background-color: green;
 }
