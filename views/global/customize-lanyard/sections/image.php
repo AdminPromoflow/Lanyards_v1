@@ -1,8 +1,10 @@
 <?php
-function getImageFileWithTimestamp($path) {
-  return $path . '?v=' . filemtime($_SERVER['DOCUMENT_ROOT'] . '/' . $path);
+function getImageFileWithTimestamp($relativePath) {
+  $fullPath = __DIR__ . '/' . $relativePath;
+  return $relativePath . '?v=' . (file_exists($fullPath) ? filemtime($fullPath) : time());
 }
 ?>
+
 <link rel="stylesheet" href="<?php echo getImageFileWithTimestamp('views/assets/css/global/customize-lanyard/sections/image.css'); ?>">
 
 <section class="image section">
