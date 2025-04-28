@@ -189,8 +189,8 @@ class PreviewManual {
 
   addImageLanyard() {
     // Obtener los elementos del DOM
-    this.image_lanyard_left = document.getElementById("image_lanyard_left");
-    this.image_lanyard_right = document.getElementById("image_lanyard_right");
+    this.image_lanyard_left = document.getElementById("img_lanyard_left");
+    this.image_lanyard_right = document.getElementById("img_lanyard_right");
 
     // Obtener el contenido y el número de repeticiones
     const imageLanyard = imageClass.getLinkImage();
