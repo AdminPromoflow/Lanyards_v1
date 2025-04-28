@@ -27,20 +27,25 @@ class PreviewManual {
         el.innerHTML = "";
 
         // Crear el HTML repetido
-        const html = Array(times).fill(`
+        const contentHTML = Array(times).fill(`
           <div class="wrap_text_${index}">
             <h1>${textLanyard}</h1>
           </div>
         `).join('');
 
-        // Asignar el HTML al elemento
-        el.innerHTML = html;
+        // Agregar divs de padding antes y después
+        const fullHTML = `
+          <div class="padding_text_top"></div>
+          ${contentHTML}
+          <div class="padding_text_bottom"></div>
+        `;
 
-        // Agregar clases solo al contenedor (no a los hijos)
-        el.classList.add("padding_text_top", "padding_text_bottom");
+        // Asignar el HTML al elemento
+        el.innerHTML = fullHTML;
       }
     });
   }
+
 
 
   showPrintableArea(value){
