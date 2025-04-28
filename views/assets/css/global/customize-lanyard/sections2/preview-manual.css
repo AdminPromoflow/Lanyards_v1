@@ -537,7 +537,6 @@ overflow: hidden;
 
 
 .text_lanyard_left {
-  background-color: rgba(0,0,0,.2);
   display: flex;
   flex-direction: column-reverse;
   gap: 20px; /* espacio entre textos rotados */
@@ -547,7 +546,6 @@ overflow: hidden;
   transform: rotate(0deg);
 }
 .text_lanyard_right {
-  background-color: rgba(0,0,0,.2);
   display: flex;
   flex-direction: column-reverse;
   gap: 20px; /* espacio entre textos rotados */
