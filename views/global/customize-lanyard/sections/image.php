@@ -32,10 +32,10 @@ function asset_version($path) {
       <div class="item-image">
         <p>Adjust the image size</p>
         <div class="containr-size-image">
-          <div class="size-image-box">
+          <div class="size-image-box" id="decrease-image-size">
             <img src="../../views/assets/img/global/customize-lanyard/sections/image/smaller.png?v=<?=asset_version('../../views/assets/img/global/customize-lanyard/sections/image/smaller.png')?>" alt="">
           </div>
-          <div class="size-image-box">
+          <div class="size-image-box" id="increase-image-size">
             <img src="../../views/assets/img/global/customize-lanyard/sections/image/bigger.png?v=<?=asset_version('../../views/assets/img/global/customize-lanyard/sections/image/bigger.png')?>" alt="">
           </div>
         </div>

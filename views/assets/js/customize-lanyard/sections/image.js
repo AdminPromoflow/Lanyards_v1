@@ -1,6 +1,8 @@
 class ImageClass {
     constructor() {
       this.timesImage = 3;
+      this.imageSize = 10;
+
 
 
 
@@ -32,6 +34,26 @@ class ImageClass {
 
 
 
+
+
+
+      const increaseImageSize = document.getElementById("increase-image-size");
+
+      increaseImageSize.addEventListener("click", function(){
+        if (imageClass.getImageSize() <=100) {
+          imageClass.setImageSize(imageClass.getImageSize() + 1);
+          previewManual.refreshImageLanyard();
+        }
+      })
+
+      const decreaseImageSize = document.getElementById("decrease-image-size");
+      decreaseImageSize.addEventListener("click", function(){
+        if (imageClass.getImageSize() >=0) {
+          imageClass.setImageSize(imageClass.getImageSize() - 1);
+          previewManual.refreshImageLanyard();
+        }
+
+      })
 
       /*  const imageInput = document.getElementById('imageUpload');
 
@@ -114,7 +136,7 @@ class ImageClass {
     setTimesImage(value) {
       this.timesImage = value;
     }
-    
+
     getLinkImage() {
         return this.linkImage;
     }
@@ -123,17 +145,20 @@ class ImageClass {
     }
 
 
+    getImageSize() {
+      return this.imageSize;
+    }
+
+    setImageSize(value) {
+      this.imageSize = value;
+    }
+
+
         // Link image
   /*
 
      // Size image
-     getSizeImage() {
-       return this.sizeImage;
-     }
 
-     setSizeImage(value) {
-       this.sizeImage = value;
-     }
 
      // Spacing between image
      getSpacingBetweenImage() {

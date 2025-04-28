@@ -181,6 +181,7 @@ class PreviewManual {
   refreshImageLanyard() {
     this.addImageLanyard();
     this.centerImageLanyard();
+    this.modifyImageSize();
   //  this.modifySpaceBetweenText();
     //this.changeColourText();
   //  this.changeColourText();
@@ -235,6 +236,13 @@ class PreviewManual {
 
       // Calcular y establecer la propiedad 'transform' para rotar y ajustar la posición
       wrapElements[i].style.transform = `rotate(90deg) translateY(calc(-100% + ${wrapElements[i].offsetHeight / 2}px))`;
+    }
+  }
+  modifyImageSize(){
+    const wrapElements = document.querySelectorAll('.wrap_img_0, .wrap_img_1');
+    const size = imageClass.getImageSize();
+    for (let i = 0; i < wrapElements.length; i++) {
+      wrapElements[i].style.width = size + "px";
     }
   }
 
