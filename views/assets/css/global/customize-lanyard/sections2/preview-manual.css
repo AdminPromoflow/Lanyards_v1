@@ -696,15 +696,14 @@ overflow: hidden;
 .wrap_img_0{
   position: relative;
   transform-origin: top left;
-  width: auto;
+  width: 10px;
   height: 10px;
-
   background-color: purple;
 }
 .wrap_img_1{
   position: relative;
   transform-origin: top left;
-  width: auto;
+  width: 10px;
   height: 10px;
   background-color: orange;
 }
