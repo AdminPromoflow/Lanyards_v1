@@ -33,9 +33,6 @@ class PreviewManual {
           <div class="wrap_text_${index}">
             <h1>${textLanyard}</h1>
           </div>
-          <div class="wrap_img_${index}">
-            <img src="../../views/assets/img/Test/arrow2.png" alt="">
-          </div>
         `).join('');
 
         // Asignar el HTML al elemento
@@ -125,7 +122,7 @@ class PreviewManual {
   }
 
   centerTextLanyard(){
-    const wrapElements = document.querySelectorAll('.wrap_text_0, .wrap_text_1, .wrap_text_0, .wrap_text_1');
+    const wrapElements = document.querySelectorAll('.wrap_text_0, .wrap_text_1');
 
     // Iterar sobre los elementos .wrap_text_0 y .wrap_text_1
     for (let i = 0; i < wrapElements.length; i++) {
