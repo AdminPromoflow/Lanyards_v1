@@ -11,7 +11,7 @@ class PreviewManual {
     this.changeColourText();
   }
 
-  addTextLanyard(){
+  addTextLanyard() {
     // Obtener los elementos del DOM
     this.text_lanyard_left = document.getElementById("text_lanyard_left");
     this.text_lanyard_right = document.getElementById("text_lanyard_right");
@@ -19,7 +19,6 @@ class PreviewManual {
     // Obtener el contenido y el número de repeticiones
     const textLanyard = textClass.getContentText();
     const times = textClass.getTimesText();
-
 
     // Iterar sobre los elementos izquierdo y derecho
     [this.text_lanyard_left, this.text_lanyard_right].forEach((el, index) => {
@@ -36,9 +35,13 @@ class PreviewManual {
 
         // Asignar el HTML al elemento
         el.innerHTML = html;
+
+        // Agregar clases solo al contenedor (no a los hijos)
+        el.classList.add("padding_text_top", "padding_text_bottom");
       }
     });
   }
+
 
   showPrintableArea(value){
     text_lanyard_left = document.getElementById("text_lanyard_left");
