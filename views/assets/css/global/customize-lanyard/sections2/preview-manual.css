@@ -695,7 +695,6 @@ overflow: hidden;
 
 .wrap_img_0{
   position: relative;
-  display: inline-block; /* Se ajusta al tamaño del contenido */
   transform-origin: top left;
   width: 10px;
   height: 10px;
@@ -703,7 +702,6 @@ overflow: hidden;
 }
 .wrap_img_1{
   position: relative;
-  display: inline-block; /* Se ajusta al tamaño del contenido */
   transform-origin: top left;
   width: 10px;
   height: 10px;
