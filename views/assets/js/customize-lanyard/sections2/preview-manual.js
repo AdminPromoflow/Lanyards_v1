@@ -180,7 +180,7 @@ class PreviewManual {
 
   refreshImageLanyard() {
     this.addImageLanyard();
-    this.centerTextLanyard();
+    this.centerImageLanyard();
   //  this.modifySpaceBetweenText();
     //this.changeColourText();
   //  this.changeColourText();
