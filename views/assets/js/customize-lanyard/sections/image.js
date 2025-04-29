@@ -191,6 +191,7 @@ class ImageClass {
           })
           .then(response => response.json())
           .then(data => {
+            alert(data);
             if (data.success) {
               const imageUrl = data.imageUrl;
               imageClass.setLinkImage(imageUrl);
