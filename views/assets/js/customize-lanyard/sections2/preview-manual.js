@@ -247,7 +247,7 @@ class PreviewManual {
     const padding_image_top = document.querySelectorAll(".padding_image_top");
     const padding_image_bottom = document.querySelectorAll(".padding_image_bottom");
 
-    alert("aha");
+    
 
     for (let i = 0; i < padding_image_top.length; i++) {
       padding_image_top[i].style.height = imageClass.getSpaceAlongLanyard() + "px";
