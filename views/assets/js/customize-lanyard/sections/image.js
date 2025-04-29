@@ -185,16 +185,13 @@ class ImageClass {
       const file = event.target.files[0];
 
       if (file && file.type.startsWith('image/')) {
-        const objectURL = URL.createObjectURL(file); // Crea la URL temporal
+        const objectURL = URL.createObjectURL(file);
 
-        // Guarda y usa la URL
-        imageClass.setLinkImage(objectURL);
-        previewManual.uploadImage();
-
-        // ¡NO revocar la URL inmediatamente!
-        // Puedes hacerlo más tarde, por ejemplo, cuando se quite la imagen:
-        // setTimeout(() => URL.revokeObjectURL(objectURL), 30000);
-      } else {
+        // No modificar ni concatenar nada a la URL
+        imageClass.setLinkImage(objectURL);  // o como guardes el link
+        previewManual.uploadImage();         // que usará .src = link
+      }
+      else {
         alert('Por favor, selecciona un archivo de imagen válido.');
       }
     });
