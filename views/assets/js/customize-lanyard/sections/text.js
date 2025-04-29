@@ -299,13 +299,13 @@ class TextClass {
     decrease_size_text.addEventListener("click", () => {
       if (textClass.getSizeText() > 0) {
         textClass.setSizeText(textClass.getSizeText() - 1);
-        previewManual.changeSizeText();
+        previewManual.refreshTextLanyard();
       }
     });
 
     increase_size_text.addEventListener("click", () => {
       textClass.setSizeText(textClass.getSizeText() + 1);
-      previewManual.changeSizeText();
+      previewManual.refreshTextLanyard();
     });
 
 
@@ -326,7 +326,7 @@ class TextClass {
         textClass.setBoldText(true);
       }
 
-      previewManual.changeBoldText();
+      previewManual.refreshTextLanyard();
 
 
     });
@@ -351,7 +351,7 @@ class TextClass {
         textClass.setItalicText(true);
       }
 
-      previewManual.changeItalicText();
+      previewManual.refreshTextLanyard();
 
 
     });
@@ -373,7 +373,7 @@ class TextClass {
         textClass.setUnderlineText(true);
       }
 
-      previewManual.changeUnderlineText();
+      previewManual.refreshTextLanyard();
 
 
     });

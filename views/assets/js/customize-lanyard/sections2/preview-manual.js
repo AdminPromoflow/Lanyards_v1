@@ -8,9 +8,13 @@ class PreviewManual {
     this.modifyTextPosition();
     this.centerTextLanyard();
     this.modifySpaceBetweenText();
-    this.changeColourText();
+    this.changeSizeText();
     this.changeColourText();
     this.modifySpaceAlongLanyard();
+    this.changeBoldText();
+    this.changeItalicText();
+    this.changeUnderlineText();
+
 
   }
 
