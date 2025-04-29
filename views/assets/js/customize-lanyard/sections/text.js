@@ -29,6 +29,8 @@ class TextClass {
       if (printable_area.checked) {
         textClass.setPrintableAreaText(true);
         previewManual.showPrintableAreaText();
+
+
       } else {
         textClass.setPrintableAreaText(false);
         previewManual.showPrintableAreaText();
@@ -422,6 +424,9 @@ class TextClass {
   }
 
   setPrintableAreaText(value){
+    const printable_area = document.getElementById("printable_area");
+
+    printable_area.checked = value;
     this.printableAreaText = value;
   }
   getPrintableAreaText(){

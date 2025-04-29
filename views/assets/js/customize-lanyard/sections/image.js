@@ -252,6 +252,9 @@ class ImageClass {
     }
 
     setPrintableAreaImage(value){
+      const printable_area_image = document.getElementById("printable_area_image");
+
+      printable_area_image.checked = value;
       this.printableAreaImage = value;
     }
     getPrintableAreaImage(){
