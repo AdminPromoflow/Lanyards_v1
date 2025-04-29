@@ -20,7 +20,7 @@ function asset_version($path) {
 
       <div class="item-image inline-item-image">
         <input  id="printable_area_image" type="checkbox"   >
-        <label for="printable_area_image">Select to view the printable image area:</label>
+        <label for="printable_area_image">View the printable image area:</label>
         <p>This will not be printed on the lanyard; it is only for visualising the printable area.</p>
       </div>
 
