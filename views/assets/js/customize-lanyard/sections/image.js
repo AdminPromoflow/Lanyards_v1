@@ -177,31 +177,38 @@ class ImageClass {
 
 
       const imageInput = document.getElementById('imageUpload');
-      const imageContainers = document.querySelectorAll('.imageContent');
 
-      // Inicializa la propiedad
-      this.linkImage = "";
-
-      // Agrega el event listener al input
       imageInput.addEventListener('change', function(event) {
-        const file = event.target.files[0]; // Captura el archivo seleccionado
+        const file = event.target.files[0];
 
-        if (file && file.type.startsWith('image/')) { // Verifica que sea una imagen
-          // Genera una URL temporal local con Blob
-          const objectURL = URL.createObjectURL(file);
+        if (file && file.type.startsWith('image/')) {
+          const formData = new FormData();
+          formData.append('image', file);
 
-          // Guarda el enlace de la imagen para usarlo después
-          imageClass.setLinkImage(objectURL);
+          fetch('upload.php', {
+            method: 'POST',
+            body: formData
+          })
+          .then(response => response.json())
+          .then(data => {
+            if (data.success) {
+              const imageUrl = data.imageUrl;
+              imageClass.setLinkImage(imageUrl); // Usa la URL desde el servidor
+              previewManual.uploadImage();       // Muestra la imagen
+            } else {
+              alert('Error al subir la imagen: ' + data.message);
+            }
+          })
+          .catch(err => {
+            console.error('Error en la subida:', err);
+            alert('Error en la conexión al subir imagen.');
+          });
 
-          // Llama a tu función para mostrar la imagen
-          previewManual.uploadImage();
-
-          // (Opcional) puedes liberar la URL después de un tiempo si ya no la necesitas
-          // setTimeout(() => URL.revokeObjectURL(objectURL), 10000); // por ejemplo después de 10 segundos
         } else {
-          alert('Por favor, selecciona un archivo de imagen.');
+          alert('Por favor, selecciona un archivo de imagen válido.');
         }
       });
+
 
 
 
