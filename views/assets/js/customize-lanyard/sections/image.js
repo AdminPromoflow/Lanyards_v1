@@ -185,17 +185,16 @@ class ImageClass {
           const formData = new FormData();
           formData.append('image', file);
 
-          fetch('controller/uploads/upload.php', {
+          fetch('upload.php', {
             method: 'POST',
             body: formData
           })
           .then(response => response.json())
           .then(data => {
-            alert(data);
             if (data.success) {
               const imageUrl = data.imageUrl;
-              imageClass.setLinkImage(imageUrl);
-              previewManual.uploadImage();
+              imageClass.setLinkImage(imageUrl); // Usa la URL desde el servidor
+              previewManual.uploadImage();       // Muestra la imagen
             } else {
               alert('Error al subir la imagen: ' + data.message);
             }
@@ -204,11 +203,11 @@ class ImageClass {
             console.error('Error en la subida:', err);
             alert('Error en la conexión al subir imagen.');
           });
+
         } else {
           alert('Por favor, selecciona un archivo de imagen válido.');
         }
       });
-
 
 
 
