@@ -37,7 +37,7 @@ function asset_version($path) {
         </div>
       </div>
 
-      <div class="item-image">
+    <!--  <div class="item-image">
         <p>Spacing along the lanyard edge</p>
         <div class="containr-space-between-image">
           <div class="space-between-image-box" id="decrease_space_along_lanyard_image">
@@ -47,7 +47,7 @@ function asset_version($path) {
             <img src="<?= $imgPath_text ?>plus.png?v=<?= asset_version_text($imgPath_text . 'plus.png') ?>" alt="">
           </div>
         </div>
-      </div>
+      </div>-->
 
       <div class="item-image">
         <p id="label-repeat-image">Repeat image</p>

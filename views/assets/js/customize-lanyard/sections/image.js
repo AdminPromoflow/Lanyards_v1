@@ -62,7 +62,7 @@ class ImageClass {
 
 
 
-      const decrease_space_along_lanyard = document.getElementById("decrease_space_along_lanyard_image");
+  /*    const decrease_space_along_lanyard = document.getElementById("decrease_space_along_lanyard_image");
       const increase_space_along_lanyard = document.getElementById("increase_space_along_lanyard_image");
       //const spaceAlongLanyard = this.getSpaceAlongLanyard();
 
@@ -81,7 +81,7 @@ class ImageClass {
           previewManual.modifySpaceAlongLanyardImage();
         }
 
-      })
+      })*/
 
 
 
