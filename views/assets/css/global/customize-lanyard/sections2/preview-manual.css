@@ -553,7 +553,7 @@ overflow: hidden;
 }
 .text_lanyard_right {
   position: absolute;
-  top: 50%;
+  top: -50%;
   left: 0px;
   height: 200%;
   width: 100%;
