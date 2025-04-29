@@ -547,9 +547,8 @@ overflow: hidden;
   gap: 20px; /* espacio entre textos rotados */
   align-items: flex-start; /* <== centrado horizontal */
   justify-content: flex-end; /* opcional: centrado vertical */
-  height: 1000px;
+  height: 200%;
   transform: rotate(0deg);
-  overflow: hidden;
 
 }
 .text_lanyard_right {
