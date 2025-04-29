@@ -14,8 +14,9 @@ function asset_version($path) {
       <div class="item-image">
         <p>Please upload your logo image.</p>
         <input type="file" id="imageUpload" name="imageUpload" style="display:none;" accept="image/*">
-        <label for="imageUpload">Upload</label>
+        <label class="upload_image_button" for="imageUpload">Upload</label>
       </div>
+
 
 
       <div class="item-image inline-item-image">

@@ -178,7 +178,15 @@
   border: 2px solid white;
 }
 
-
+.upload_image_button{
+  padding: 5px 4px;
+  z-index: 10;
+  font-size: calc(1vw + 1em);
+  font-weight: 200;
+  border-radius: 5px;
+  background: rgba(29,61,97,1);
+  cursor: pointer;
+}
 
 
 
