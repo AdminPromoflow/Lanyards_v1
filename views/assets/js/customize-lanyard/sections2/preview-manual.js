@@ -181,8 +181,9 @@ class PreviewManual {
   refreshImageLanyard() {
     this.addImageLanyard();
     this.modifyImageSize();
-    this.modifySpaceBetweenImage();
     this.modifyImageRotation();
+
+    this.modifySpaceBetweenImage();
 
 
     this.centerImageLanyard();
