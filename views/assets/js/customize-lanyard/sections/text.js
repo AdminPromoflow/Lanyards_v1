@@ -11,6 +11,7 @@ class TextClass {
     this.boldText = false;
     this.italicText = false;
     this.underlineText = false;
+    this.printableArea = false;
 
 
 
@@ -26,10 +27,11 @@ class TextClass {
 
     printable_area.addEventListener('click', function() {
       if (printable_area.checked) {
-        printable_area.checked = false;
-        previewManual.showPrintableArea(true);
+        previewManual.setPrintableAreaText(true);
+        previewManual.showPrintableAreaText();
       } else {
-        previewManual.showPrintableArea(false);
+        previewManual.setPrintableAreaText(true);
+        previewManual.showPrintableAreaText();
       }
     });
 
@@ -418,6 +420,14 @@ class TextClass {
   getUnderlineText(){
     return this.underlineText;
   }
+
+  setPrintableAreaText(value){
+    this.printableAreaText = value;
+  }
+  getPrintableAreaText(){
+    return this.printableAreaText;
+  }
+
 
   changeColourText(name, colour){
       this.setColourText(colour);
