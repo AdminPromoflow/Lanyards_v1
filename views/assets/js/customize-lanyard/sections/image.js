@@ -61,20 +61,18 @@ class ImageClass {
       //const spaceAlongLanyard = this.getSpaceAlongLanyard();
 
       decrease_space_along_lanyard.addEventListener("click", function(){
-        if (imageClass.getSpaceAlongLanyard() >= 900) {
-          imageClass.setSpaceAlongLanyard(imageClass.getSpaceAlongLanyard() + 1);
-
-          previewManual.refreshImageLanyard();
+        if (imageClass.getSpaceAlongLanyard() > 0) {
+          imageClass.setSpaceAlongLanyard(imageClass.getSpaceAlongLanyard() - 1);
+          previewManual.modifySpaceAlongLanyardImage();
         }
 
       })
 
 
       increase_space_along_lanyard.addEventListener("click", function(){
-        if (imageClass.getSpaceAlongLanyard() > 0) {
-          imageClass.setSpaceAlongLanyard(imageClass.getSpaceAlongLanyard() - 1);
-
-          previewManual.refreshImageLanyard();
+        if (imageClass.getSpaceAlongLanyard() <=900) {
+          imageClass.setSpaceAlongLanyard(imageClass.getSpaceAlongLanyard() + 1);
+          previewManual.modifySpaceAlongLanyardImage();
         }
 
       })

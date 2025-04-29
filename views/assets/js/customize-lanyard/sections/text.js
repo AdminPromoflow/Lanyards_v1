@@ -106,8 +106,8 @@ class TextClass {
     //const spaceAlongLanyard = this.getSpaceAlongLanyard();
 
     decrease_space_along_lanyard.addEventListener("click", function(){
-      if (textClass.getSpaceAlongLanyard() >= 900) {
-        textClass.setSpaceAlongLanyard(textClass.getSpaceAlongLanyard() + 1);
+      if (textClass.getSpaceAlongLanyard() > 0) {
+        textClass.setSpaceAlongLanyard(textClass.getSpaceAlongLanyard() - 1);
         previewManual.modifySpaceAlongLanyard();
       }
 
@@ -115,8 +115,8 @@ class TextClass {
 
 
     increase_space_along_lanyard.addEventListener("click", function(){
-      if (textClass.getSpaceAlongLanyard() > 0) {
-        textClass.setSpaceAlongLanyard(textClass.getSpaceAlongLanyard() - 1);
+      if (textClass.getSpaceAlongLanyard() <=900) {
+        textClass.setSpaceAlongLanyard(textClass.getSpaceAlongLanyard() + 1);
         previewManual.modifySpaceAlongLanyard();
       }
 
