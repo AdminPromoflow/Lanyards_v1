@@ -669,7 +669,7 @@ overflow: hidden;
   left: 0px;
   display: flex;
   flex-direction: column-reverse;
-  gap: 90px; /* espacio entre textos rotados */
+  gap: 20px; /* espacio entre textos rotados */
   align-items: flex-start; /* <== centrado horizontal */
   justify-content: flex-end; /* opcional: centrado vertical */
   height: 100%;
@@ -683,7 +683,7 @@ overflow: hidden;
   left: 0px;
   display: flex;
   flex-direction: column-reverse;
-  gap: 90px; /* espacio entre textos rotados */
+  gap: 20px; /* espacio entre textos rotados */
   align-items: flex-start; /* <== centrado horizontal */
   justify-content: flex-end; /* opcional: centrado vertical */
   height: 100%;
@@ -695,6 +695,7 @@ overflow: hidden;
 
 .wrap_img_0{
   position: relative;
+  display: inline-block; /* Se ajusta al tamaño del contenido */
   transform-origin: top left;
   width: 10px;
   height: 10px;
@@ -702,6 +703,7 @@ overflow: hidden;
 }
 .wrap_img_1{
   position: relative;
+  display: inline-block; /* Se ajusta al tamaño del contenido */
   transform-origin: top left;
   width: 10px;
   height: 10px;
