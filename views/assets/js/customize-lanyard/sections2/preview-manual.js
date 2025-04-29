@@ -211,8 +211,6 @@ class PreviewManual {
   }
 
   addImageLanyard() {
-    const link = imageClass.getLinkImage();
-
 
     // Obtener los elementos del DOM
     this.image_lanyard_left = document.getElementById("img_lanyard_left");
