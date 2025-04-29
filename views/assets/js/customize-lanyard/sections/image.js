@@ -13,8 +13,8 @@ class ImageClass {
       const increase_space_between_image = document.getElementById("increase_space_between_image");
 
       decrease_space_between_image.addEventListener("click", function(){
-        if (textClass.getSpaceBetweenImage() > 0) {
-          textClass.setSpaceBetweenImage(textClass.getSpaceBetweenImage() - 1);
+        if (imageClass.getSpaceBetweenImage() > 0) {
+          imageClass.setSpaceBetweenImage(imageClass.getSpaceBetweenImage() - 1);
           previewManual.modifySpaceBetweenImage();
         }
 
@@ -22,8 +22,8 @@ class ImageClass {
 
 
       increase_space_between_image.addEventListener("click", function(){
-        if (textClass.getSpaceBetweenImage() <=220) {
-          textClass.setSpaceBetweenImage(textClass.getSpaceBetweenImage() + 1);
+        if (imageClass.getSpaceBetweenImage() <=220) {
+          imageClass.setSpaceBetweenImage(imageClass.getSpaceBetweenImage() + 1);
           previewManual.modifySpaceBetweenImage();
 
         }
