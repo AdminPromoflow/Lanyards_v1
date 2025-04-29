@@ -179,14 +179,10 @@ class PreviewManual {
   }
 
   refreshImageLanyard() {
-    this.modifySpaceBetweenImage();
-
     this.addImageLanyard();
+    this.modifySpaceBetweenImage();
     this.modifyImageSize();
     this.modifyImageRotation();
-
-
-
     this.centerImageLanyard();
 
 
@@ -227,6 +223,26 @@ class PreviewManual {
       }
     });
   }
+
+
+  showPrintableAreaImage(value){
+    image_lanyard_left = document.getElementById("img_lanyard_left");
+    image_lanyard_right = document.getElementById("img_lanyard_right");
+    image_lanyard_center = document.getElementById("img_lanyard_center");
+
+
+    if (value) {
+      [image_lanyard_left, image_lanyard_right, image_lanyard_center].forEach((element, index) => {
+        element.style.background = "rgba(215,215,215, .9)";
+      });
+    }
+    else {
+      [image_lanyard_left, image_lanyard_right, image_lanyard_center].forEach((element, index) => {
+        element.style.background = backgroundClass.getBackground();
+      });
+    }
+  }
+
 
   centerImageLanyard(){
     const image_lanyard_left = document.getElementById("img_lanyard_left");

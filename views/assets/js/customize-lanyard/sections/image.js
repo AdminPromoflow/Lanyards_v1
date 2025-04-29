@@ -9,6 +9,23 @@ class ImageClass {
 
 
 
+      const printable_area_image = document.getElementById("printable_area_image");
+
+      printable_area_image.addEventListener('click', function() {
+        if (printable_area_image.checked) {
+          previewManual.showPrintableAreaImage(true);
+        } else {
+          previewManual.showPrintableAreaImage(false);
+        }
+      });
+
+
+
+
+
+
+
+
 
       const decrease_space_between_image = document.getElementById("decrease_space_between_image");
       const increase_space_between_image = document.getElementById("increase_space_between_image");
@@ -16,7 +33,7 @@ class ImageClass {
       decrease_space_between_image.addEventListener("click", function(){
         if (imageClass.getSpaceBetweenImage() > 0) {
           imageClass.setSpaceBetweenImage(imageClass.getSpaceBetweenImage() - 1);
-          previewManual.modifySpaceBetweenImage();
+          previewManual.refreshImageLanyard();
         }
 
       })
@@ -25,7 +42,7 @@ class ImageClass {
       increase_space_between_image.addEventListener("click", function(){
         if (imageClass.getSpaceBetweenImage() <=220) {
           imageClass.setSpaceBetweenImage(imageClass.getSpaceBetweenImage() + 1);
-          previewManual.modifySpaceBetweenImage();
+          previewManual.refreshImageLanyard();
 
         }
 

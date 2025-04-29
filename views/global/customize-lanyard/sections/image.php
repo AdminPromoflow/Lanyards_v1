@@ -17,6 +17,13 @@ function asset_version($path) {
         <label for="imageUpload">Upload</label>
       </div>
 
+
+      <div class="item-image inline-item-text">
+        <input  id="printable_area_image" type="checkbox"   >
+        <label for="printable_area_image">Select to view the printable area:</label>
+        <p>This will not be printed on the lanyard; it is only for visualising the printable area.</p>
+      </div>
+
       <div class="item-image">
         <p>Adjust the spacing between the image</p>
         <div class="containr-space-between-image">

@@ -75,7 +75,25 @@
   margin: 0;
   padding: 0;
 }
-.item-image label {
+.inline-item-image p{
+  position: relative;
+  color: rgba(255, 255, 255, .8);
+  min-width: 250px;
+  font-size: 0.7em;
+  text-align: center;
+  font-weight: 300;
+  margin: 0;
+  padding: 0 0 0 5px;
+}
+.inline-item-image{
+  position: relative;
+  display: flex;
+  gap: 5px;
+
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+/*.item-image label {
   margin: 10px 0px;
   padding: 4px 0px;
   min-width: 50%;
@@ -88,7 +106,7 @@
   font-weight: 300;
   transition: border 0.4s;
   box-shadow: 1px 1px 2px black;
-}
+}*/
 
 
 .containr-repeat-image{
