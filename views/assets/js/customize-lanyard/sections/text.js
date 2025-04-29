@@ -30,7 +30,7 @@ class TextClass {
         textClass.setPrintableAreaText(true);
         previewManual.showPrintableAreaText();
       } else {
-        textClass.setPrintableAreaText(true);
+        textClass.setPrintableAreaText(false);
         previewManual.showPrintableAreaText();
       }
     });
