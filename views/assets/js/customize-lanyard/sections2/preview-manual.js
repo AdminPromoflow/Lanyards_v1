@@ -55,7 +55,7 @@ class PreviewManual {
 
     if (value) {
       [text_lanyard_left, text_lanyard_right, text_lanyard_center].forEach((element, index) => {
-        element.style.background = "rgba(215,215,215, .9)";
+        element.style.background = "rgba(215,215,215, .3)";
       });
     }
     else {
@@ -231,7 +231,7 @@ class PreviewManual {
 
     if (value) {
       [image_lanyard_left, image_lanyard_right, image_lanyard_center].forEach((element, index) => {
-        element.style.background = "rgba(215,215,215, .9)";
+        element.style.background = "rgba(215,215,215, .3)";
       });
     }
 
