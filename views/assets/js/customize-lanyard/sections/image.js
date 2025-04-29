@@ -47,13 +47,10 @@ class ImageClass {
 
 
       const repeatImageBox = document.getElementById("repeat-image-box");
-      const labelRepeatImage = document.getElementById("label-repeat-image");
-      const times = this.getTimesImage();
 
       repeatImageBox.addEventListener("click", function(){
         if (imageClass.getTimesImage() <=19) {
           imageClass.setTimesImage(imageClass.getTimesImage() + 1);
-          labelRepeatImage.innerHTML = `Repeat image ${imageClass.getTimesImage()} time${imageClass.getTimesImage() === 1 ? '' : 's'}.`;
           previewManual.refreshImageLanyard();
 
         }
@@ -64,7 +61,6 @@ class ImageClass {
         if (imageClass.getTimesImage() >=0) {
 
           imageClass.setTimesImage(imageClass.getTimesImage() - 1);
-          labelRepeatImage.innerHTML = `Repeat image ${imageClass.getTimesImage()} time${imageClass.getTimesImage() === 1 ? '' : 's'}.`;
           previewManual.refreshImageLanyard();
 
         }

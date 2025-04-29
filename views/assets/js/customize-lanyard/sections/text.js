@@ -38,12 +38,10 @@ class TextClass {
 
     const repeatTextBox = document.getElementById("repeat-text-box");
     const labelRepeatText = document.getElementById("label-repeat-text");
-    const times = this.getTimesText();
 
     repeatTextBox.addEventListener("click", function(){
       if (textClass.getTimesText() <=19) {
         textClass.setTimesText(textClass.getTimesText() + 1);
-        labelRepeatText.innerHTML = `Repeat text ${textClass.getTimesText()} time${textClass.getTimesText() === 1 ? '' : 's'}.`;
         previewManual.refreshTextLanyard();
 
       }
@@ -53,7 +51,6 @@ class TextClass {
     decreaseTextBox.addEventListener("click", function(){
       if (textClass.getTimesText() >=0) {
         textClass.setTimesText(textClass.getTimesText() - 1);
-        labelRepeatText.innerHTML = `Repeat text ${textClass.getTimesText()} time${textClass.getTimesText() === 1 ? '' : 's'}.`;
         previewManual.refreshTextLanyard();
 
       }

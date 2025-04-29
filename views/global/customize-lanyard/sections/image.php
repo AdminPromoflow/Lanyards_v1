@@ -30,7 +30,7 @@ function asset_version($path) {
       </div>
 
       <div class="item-image">
-        <p id="label-repeat-image">Repeat image 3 times</p>
+        <p id="label-repeat-image">Repeat image</p>
         <div class="containr-repeat-image">
           <div class="repeat-image-box" id="decrease-image-box">
             <h3>-</h3>

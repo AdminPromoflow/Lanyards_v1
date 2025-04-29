@@ -185,9 +185,7 @@ class PreviewManual {
 
     this.centerImageLanyard();
 
-    
-    //this.changeColourText();
-  //  this.changeColourText();
+
   //  this.modifySpaceAlongLanyard();
   }
 
