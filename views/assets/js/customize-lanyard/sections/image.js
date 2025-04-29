@@ -191,9 +191,7 @@ class ImageClass {
 
                 reader.onload = function(e) {
                     const imgSrc = e.target.result; // Obtiene la URL del archivo leído
-                    /*for (var i = 0; i < imageContainers.length; i++) {
-                      imageContainers[i].style.backgroundImage = 'url("'+imgSrc+'")';
-                    }*/
+                
                     imageClass.setLinkImage(imgSrc);
                     previewManual.refreshImageLanyard();
 
