@@ -262,12 +262,12 @@ class PreviewManual {
     const wrapElementRight = document.querySelectorAll('.wrap_img_1 img');
 
     var rotation0 = imageClass.getImageRotation();
-    var rotation1 =  rotation0;
+    var rotation1 =  180 + rotation0;
 
 
     for (var i = 0; i < wrapElementLeft.length; i++) {
-      wrapElementLeft[i].style.transform = "rotate("+ rotation0 +"deg)"
-      wrapElementRight[i].style.transform = "rotate("+ rotation1 +"deg)"
+      wrapElementLeft[i].style.transform = "rotate(" + rotation0 + "deg)"
+      wrapElementRight[i].style.transform = "rotate(" + rotation1 + "deg) scale(-1, -1)"
     }
 
 
