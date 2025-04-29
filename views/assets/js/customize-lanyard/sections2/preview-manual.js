@@ -71,6 +71,7 @@ class PreviewManual {
   modifyTextPosition(){
     this.text_lanyard_left.style.top = textClass.getTextPosition() + "%";
     this.text_lanyard_right.style.top = textClass.getTextPosition() + "%";
+    console.log(textClass.getTextPosition());
   }
 
   modifySpaceBetweenText(){
