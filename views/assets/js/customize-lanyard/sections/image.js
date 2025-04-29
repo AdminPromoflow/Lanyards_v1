@@ -63,7 +63,7 @@ class ImageClass {
       decrease_space_along_lanyard.addEventListener("click", function(){
         if (imageClass.getSpaceAlongLanyard() > 0) {
           imageClass.setSpaceAlongLanyard(imageClass.getSpaceAlongLanyard() - 1);
-          previewManual.modifySpaceAlongLanyardImage();
+          previewManual.refreshImageLanyard();
         }
 
       })
@@ -72,7 +72,7 @@ class ImageClass {
       increase_space_along_lanyard.addEventListener("click", function(){
         if (imageClass.getSpaceAlongLanyard() <=900) {
           imageClass.setSpaceAlongLanyard(imageClass.getSpaceAlongLanyard() + 1);
-          previewManual.modifySpaceAlongLanyardImage();
+          previewManual.refreshImageLanyard();
         }
 
       })

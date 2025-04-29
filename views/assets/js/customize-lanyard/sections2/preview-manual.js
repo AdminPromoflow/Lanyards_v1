@@ -210,11 +210,11 @@ class PreviewManual {
         `).join('');
 
         // Agregar divs de padding antes y después
-        /*const fullHTML = `
+        const fullHTML = `
           <div class="padding_image_top"></div>
           ${contentHTML}
           <div class="padding_image_bottom"></div>
-        `;*/
+        `;
 
         // Asignar el HTML al elemento
         el.innerHTML = contentHTML;
