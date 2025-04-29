@@ -197,6 +197,7 @@ class PreviewManual {
     // Obtener el contenido y el número de repeticiones
     const imageLanyard = imageClass.getLinkImage();
     const times = imageClass.getTimesImage();
+    alert(times);
 
     // Iterar sobre los elementos izquierdo y derecho
     [this.image_lanyard_left, this.image_lanyard_right].forEach((el, index) => {
