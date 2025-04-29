@@ -188,28 +188,23 @@ class ImageClass {
         imageInput.addEventListener('change', function(event){
         //  const imageContainers = customizeLanyard.getLanyardsActive();
 
-        const file = event.target.files[0]; // Captura el archivo seleccionado
+          const file = event.target.files[0]; // Captura el archivo seleccionado
 
-          if (file && file.type.startsWith('image/')) { // Verifica que sea una imagen
-              const reader = new FileReader();
+            if (file && file.type.startsWith('image/')) { // Verifica que sea una imagen
+                const reader = new FileReader();
 
-              reader.onload = function(e) {
-                  const imgSrc = e.target.result; // Obtiene la URL del archivo leído
+                reader.onload = function(e) {
+                    const imgSrc = e.target.result; // Obtiene la URL del archivo leído
 
-                  // Validación básica para evitar errores por data URL vacía o corrupta
-                  if (imgSrc && imgSrc.startsWith("data:image") && imgSrc.length > 50) {
-                      imageClass.setLinkImage(imgSrc);
-                      previewManual.uploadImage(); // Tu función que aplica la imagen
-                  } else {
-                      console.error("Data URL inválida o incompleta:", imgSrc);
-                  }
-              };
+                    imageClass.setLinkImage(imgSrc);
+                    previewManual.uploadImage();
 
-              reader.readAsDataURL(file);
-          } else {
-              console.error("El archivo no es una imagen válida.");
-          }
+                };
 
+                reader.readAsDataURL(file); // Lee el contenido del archivo como una URL
+            } else {
+                alert('Por favor, selecciona un archivo de imagen.');
+            }
 
         });
 
