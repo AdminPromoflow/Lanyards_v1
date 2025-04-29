@@ -39,6 +39,9 @@ function get_file_version($relative_path) {
 
   </div>
   <div class="" id="center-super-lanyard-manual">
+    <div class="text_lanyard_center" id="text_lanyard_center">
+
+    </div>
     <div class="img_lanyard_center" id="img_lanyard_center">
 
     </div>
