@@ -176,6 +176,8 @@ class ImageClass {
 
 
 
+      const imageInput = document.getElementById('imageUpload');
+
       imageInput.addEventListener('change', function(event) {
         const file = event.target.files[0];
 
