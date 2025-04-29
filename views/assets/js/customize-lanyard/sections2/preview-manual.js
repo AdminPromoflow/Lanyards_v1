@@ -313,6 +313,7 @@ class PreviewManual {
       wrapElements[i].style.width = size + "px";
       wrapElements[i].style.height = size + "px";
     }
+    alert(wrapElements[0].style.width + "  " + wrapElements[0].style.height);
   }
 
   modifySpaceBetweenImage(){
