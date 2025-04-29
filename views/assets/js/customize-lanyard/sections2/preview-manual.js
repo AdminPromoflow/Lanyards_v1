@@ -330,9 +330,8 @@ class PreviewManual {
       wrapElementRight[i].style.transform = "rotate(" + rotation1 + "deg) scale(-1, -1)"
     }
   }
-  uploadImage() {
+   uploadImage() {
     const wrapElements = document.querySelectorAll('.wrap_img_0 img, .wrap_img_1 img');
-
     const link = imageClass.getLinkImage();
 
     if (!link) {
@@ -340,10 +339,14 @@ class PreviewManual {
       return;
     }
 
+    const timestamp = Date.now(); // genera un número único (como filemtime)
+    const versionedLink = link + '?v=' + timestamp;
+
     wrapElements.forEach(img => {
-      img.src = link;
+      img.src = versionedLink;
     });
   }
+
 
 
 
