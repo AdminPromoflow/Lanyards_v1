@@ -84,7 +84,7 @@ class TextClass {
 
 
     move_up_text.addEventListener("click", function(){
-      if (textClass.getTextPosition() <=100) {
+      if (textClass.getTextPosition() <4) {
         textClass.setTextPosition(textClass.getTextPosition() + 1);
         previewManual.refreshTextLanyard();
 
