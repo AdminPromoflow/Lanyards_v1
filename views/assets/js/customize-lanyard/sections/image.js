@@ -10,7 +10,11 @@ class ImageClass {
 
 
 
-      previewManual.addImageLanyard();
+
+
+      document.addEventListener("DOMContentLoaded", function () {
+        previewManual.addImageLanyard();
+      });
       const printable_area_image = document.getElementById("printable_area_image");
 
       printable_area_image.addEventListener('click', function() {
