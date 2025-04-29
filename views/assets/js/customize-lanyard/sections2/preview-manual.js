@@ -179,6 +179,7 @@ class PreviewManual {
   }
 
   refreshImageLanyard() {
+    this.uploadImage();
     this.addImageLanyard();
     this.modifySpaceBetweenImage();
     this.modifyImageSize();
@@ -188,6 +189,9 @@ class PreviewManual {
   }
 
   addImageLanyard() {
+    const link = imageClass.getLinkImage();
+
+
     // Obtener los elementos del DOM
     this.image_lanyard_left = document.getElementById("img_lanyard_left");
     this.image_lanyard_right = document.getElementById("img_lanyard_right");
@@ -205,7 +209,7 @@ class PreviewManual {
         // Crear el HTML repetido
         const contentHTML = Array(times).fill(`
           <div class="wrap_img_${index}">
-            <img src="../../views/assets/img/Test/arrow2.png" alt="">
+            <img src=${link}"" alt="">
           </div>
         `).join('');
 
@@ -307,9 +311,21 @@ class PreviewManual {
       wrapElementRight[i].style.transform = "rotate(" + rotation1 + "deg) scale(-1, -1)"
     }
   }
-  uploadImage(){
-    console.log(imageClass.getLinkImage());
+  uploadImage() {
+    const wrapElements = document.querySelectorAll('.wrap_img_0 img, .wrap_img_1 img');
+
+    const link = imageClass.getLinkImage();
+
+    if (!link) {
+      console.error('No se pudo obtener el enlace de la imagen.');
+      return;
+    }
+
+    wrapElements.forEach(img => {
+      img.src = link;
+    });
   }
+
 
 
 
