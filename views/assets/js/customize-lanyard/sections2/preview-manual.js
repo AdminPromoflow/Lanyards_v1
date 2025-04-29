@@ -259,7 +259,7 @@ class PreviewManual {
   }
   modifyImageRotation(){
     const wrapElementLeft = document.querySelectorAll('.wrap_img_0 img');
-    const wrapElementRight = document.querySelectorAll('.wrap_img_0 img');
+    const wrapElementRight = document.querySelectorAll('.wrap_img_1 img');
 
     var rotation0 = imageClass.getImageRotation();
     var rotation1 = 180 + rotation0;
