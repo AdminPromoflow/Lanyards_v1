@@ -2,7 +2,7 @@ class ImageClass {
     constructor() {
       this.timesImage = 3;
       this.imageSize = 10;
-      this.spaceBetweenImage = 90;
+      this.spaceBetweenImage = 20;
 
 
 
