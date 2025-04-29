@@ -188,8 +188,9 @@ class ImageClass {
                     /*for (var i = 0; i < imageContainers.length; i++) {
                       imageContainers[i].style.backgroundImage = 'url("'+imgSrc+'")';
                     }*/
+                    imageClass.setLinkImage(imgSrc);
                     previewManual.uploadImage();
-                    alert(imgSrc);
+
                 };
 
                 reader.readAsDataURL(file); // Lee el contenido del archivo como una URL
