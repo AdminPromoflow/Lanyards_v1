@@ -184,7 +184,6 @@ class ImageClass {
         if (file && file.type.startsWith('image/')) {
           const formData = new FormData();
           formData.append('image', file);
-          alert(JSON.stringify(file));
 
           fetch('controller/uploads/upload.php', {
             method: 'POST',

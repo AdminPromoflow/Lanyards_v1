@@ -1,5 +1,6 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['image'])) {
+  echo json_encode("entramos");exit;
     // Directorio actual (donde está upload.php)
     $uploadDir = __DIR__ . '/';
     $fileName = basename($_FILES['image']['name']);
