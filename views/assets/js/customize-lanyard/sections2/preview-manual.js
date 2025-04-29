@@ -306,9 +306,9 @@ class PreviewManual {
       wrapElementLeft[i].style.transform = "rotate(" + rotation0 + "deg)"
       wrapElementRight[i].style.transform = "rotate(" + rotation1 + "deg) scale(-1, -1)"
     }
-
-
-
+  }
+  uploadImage(){
+    alert(imageClass.getLinkImage());
   }
 
 

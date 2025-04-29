@@ -188,6 +188,7 @@ class ImageClass {
                     /*for (var i = 0; i < imageContainers.length; i++) {
                       imageContainers[i].style.backgroundImage = 'url("'+imgSrc+'")';
                     }*/
+                    previewManual.uploadImage();
                     alert(imgSrc);
                 };
 
