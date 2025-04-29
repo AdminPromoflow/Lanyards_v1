@@ -4,6 +4,7 @@ class ImageClass {
       this.imageSize = 10;
       this.spaceBetweenImage = 20;
       this.imageRotation = 0;
+      this.spaceAlongLanyard = 0;
 
 
 
@@ -51,6 +52,30 @@ class ImageClass {
 
 
 
+
+
+
+
+      const decrease_space_along_lanyard = document.getElementById("decrease_space_along_lanyard_image");
+      const increase_space_along_lanyard = document.getElementById("increase_space_along_lanyard_image");
+      //const spaceAlongLanyard = this.getSpaceAlongLanyard();
+
+      decrease_space_along_lanyard.addEventListener("click", function(){
+        if (imageClass.getSpaceAlongLanyard() > 0) {
+          imageClass.setSpaceAlongLanyard(imageClass.getSpaceAlongLanyard() - 1);
+          previewManual.modifySpaceAlongLanyardImage();
+        }
+
+      })
+
+
+      increase_space_along_lanyard.addEventListener("click", function(){
+        if (imageClass.getSpaceAlongLanyard() <=900) {
+          imageClass.setSpaceAlongLanyard(imageClass.getSpaceAlongLanyard() + 1);
+          previewManual.modifySpaceAlongLanyardImage();
+        }
+
+      })
 
 
 
@@ -246,7 +271,12 @@ class ImageClass {
       this.imageRotation = value;
     }
 
-
+    setSpaceAlongLanyard(value){
+      this.spaceAlongLanyard = value;
+    }
+    getSpaceAlongLanyard(){
+      return this.spaceAlongLanyard;
+    }
 
         // Link image
   /*

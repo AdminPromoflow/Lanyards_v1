@@ -728,7 +728,20 @@ overflow: hidden;
   transform: rotate(180deg) scale(-1, -1);;
 }
 
-
+.padding_image_top{
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  background-color: red;
+  z-index: 2;
+}
+.padding_image_bottom{
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  background-color: red;
+  z-index: 2;
+}
 
 
 /**/
