@@ -233,7 +233,7 @@ class PreviewManual {
         // Crear el HTML repetido
         const contentHTML = Array(times).fill(`
           <div class="wrap_img_${index}">
-            
+
           </div>
         `).join('');
 
@@ -302,7 +302,7 @@ class PreviewManual {
       wrapElements[i].style.left = `${rightWidth / 2}px`; // Convertir a px para unidades correctas
 
       // Calcular y establecer la propiedad 'transform' para rotar y ajustar la posición
-      wrapElements[i].style.transform = `rotate(90deg) translateY(calc(-100% + ${wrapElements[i].offsetHeight / 2}px))`;
+      wrapElements[i].style.transform = `rotate(90deg) translateY(calc(-100% + 0px))`;
     }
   }
 
