@@ -247,11 +247,11 @@ class PreviewManual {
     const padding_image_top = document.querySelectorAll(".padding_image_top");
     const padding_image_bottom = document.querySelectorAll(".padding_image_bottom");
 
-    for (let i = 0; i < padding_text_top.length; i++) {
+    for (let i = 0; i < padding_image_top.length; i++) {
       padding_image_top[i].style.height = imageClass.getSpaceAlongLanyard() + "px";
       padding_image_bottom[i].style.height = imageClass.getSpaceAlongLanyard() + "px";
 
-      
+
       padding_image_top[i].style.background = backgroundClass.getBackground() ;
       padding_image_bottom[i].style.background = backgroundClass.getBackground();
 
