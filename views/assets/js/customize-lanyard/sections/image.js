@@ -176,32 +176,28 @@ class ImageClass {
 
 
 
-      const imageInput = document.getElementById('imageUpload');
-      const imageContainers = document.querySelectorAll('.imageContent');
+    const imageInput = document.getElementById('imageUpload');
+    const imageContainers = document.querySelectorAll('.imageContent');
 
-      // Inicializa la propiedad
-      this.linkImage = "";
+    this.linkImage = "";
 
-      // Agrega el event listener al input
-      imageInput.addEventListener('change', function(event) {
-        const file = event.target.files[0]; // Captura el archivo seleccionado
+    imageInput.addEventListener('change', function(event) {
+      const file = event.target.files[0];
 
-        if (file && file.type.startsWith('image/')) { // Verifica que sea una imagen
-          // Genera una URL temporal local con Blob
-          const objectURL = URL.createObjectURL(file);
+      if (file && file.type.startsWith('image/')) {
+        const objectURL = URL.createObjectURL(file); // Crea la URL temporal
 
-          // Guarda el enlace de la imagen para usarlo después
-          imageClass.setLinkImage(objectURL);
+        // Guarda y usa la URL
+        imageClass.setLinkImage(objectURL);
+        previewManual.uploadImage();
 
-          // Llama a tu función para mostrar la imagen
-          previewManual.uploadImage();
-
-          // (Opcional) puedes liberar la URL después de un tiempo si ya no la necesitas
-          // setTimeout(() => URL.revokeObjectURL(objectURL), 10000); // por ejemplo después de 10 segundos
-        } else {
-          alert('Por favor, selecciona un archivo de imagen.');
-        }
-      });
+        // ¡NO revocar la URL inmediatamente!
+        // Puedes hacerlo más tarde, por ejemplo, cuando se quite la imagen:
+        // setTimeout(() => URL.revokeObjectURL(objectURL), 30000);
+      } else {
+        alert('Por favor, selecciona un archivo de imagen válido.');
+      }
+    });
 
 
 
