@@ -6,11 +6,11 @@ class ImageClass {
       this.imageRotation = 0;
       this.spaceAlongLanyard = 0;
       this.printableArea = false;
-      this.linkImage = "";
+      this.linkImage = "../../views/assets/img/Test/arrow2.png";
 
 
 
-
+      previewManual.addImageLanyard();
       const printable_area_image = document.getElementById("printable_area_image");
 
       printable_area_image.addEventListener('click', function() {
