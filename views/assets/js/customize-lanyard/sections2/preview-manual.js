@@ -88,6 +88,9 @@ class PreviewManual {
       padding_text_top[i].style.background = backgroundClass.getBackground() ;
       padding_text_bottom[i].style.background = backgroundClass.getBackground();
 
+      padding_text_top[i].style.top = textClass.getTextPosition() + "px";
+      padding_text_bottom[i].style.bottom = textClass.getTextPosition() + "px";
+
     }
   }
 
