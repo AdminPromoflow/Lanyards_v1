@@ -26,6 +26,7 @@ class TextClass {
 
     printable_area.addEventListener('click', function() {
       if (printable_area.checked) {
+        printable_area.checked = false;
         previewManual.showPrintableArea(true);
       } else {
         previewManual.showPrintableArea(false);
