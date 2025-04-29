@@ -182,6 +182,8 @@ class PreviewManual {
     this.addImageLanyard();
     this.modifyImageSize();
     this.modifySpaceBetweenImage();
+    this.modifyImageRotation();
+
 
     this.centerImageLanyard();
 
@@ -254,6 +256,22 @@ class PreviewManual {
 
     image_lanyard_left.style.gap = imageClass.getSpaceBetweenImage() + "px";
     image_lanyard_right.style.gap = imageClass.getSpaceBetweenImage() + "px";
+  }
+  modifyImageRotation(){
+    const wrapElementLeft = document.querySelectorAll('.wrap_img_0 img');
+    const wrapElementRight = document.querySelectorAll('.wrap_img_0 img');
+
+    var rotation0 = imageClass.getImageRotation();
+    var rotation1 = 180 + rotation0;
+
+
+    for (var i = 0; i < wrapElementLeft.length; i++) {
+      wrapElementLeft[i].style.transform = "rotate("+ rotation0 +"deg)"
+      wrapElementRight[i].style.transform = "rotate("+ rotation1 +"deg)"
+    }
+
+
+
   }
 
 

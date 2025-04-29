@@ -58,10 +58,10 @@ function asset_version($path) {
       <div class="item-image">
         <p>Adjust the rotation of the image.</p>
         <div class="containr-rotation-image">
-          <div class="rotation-image-box">
+          <div class="rotation-image-box" id="rotate_image_left">
             <img src="../../views/assets/img/global/customize-lanyard/sections/image/rotation-left.png?v=<?=asset_version('../../views/assets/img/global/customize-lanyard/sections/image/rotation-left.png')?>" alt="">
           </div>
-          <div class="rotation-image-box">
+          <div class="rotation-image-box" id="rotate_image_right">
             <img src="../../views/assets/img/global/customize-lanyard/sections/image/rotation-rigth.png?v=<?=asset_version('../../views/assets/img/global/customize-lanyard/sections/image/rotation-rigth.png')?>" alt="">
           </div>
         </div>

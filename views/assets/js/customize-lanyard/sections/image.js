@@ -3,6 +3,7 @@ class ImageClass {
       this.timesImage = 3;
       this.imageSize = 10;
       this.spaceBetweenImage = 20;
+      this.imageRotation = 0;
 
 
 
@@ -89,6 +90,31 @@ class ImageClass {
           previewManual.refreshImageLanyard();
         }
 
+      })
+
+
+
+
+
+
+
+
+
+
+
+
+      const rotate_image_left = document.getElementById("rotate_image_left");
+      const rotate_image_right = document.getElementById("rotate_image_right");
+
+      rotate_image_left.addEventListener("click", function(){
+          imageClass.setImageRotation(imageClass.getImageRotation() - 1);
+          previewManual.refreshImageLanyard();
+      })
+
+
+      rotate_image_right.addEventListener("click", function(){
+          imageClass.setImageRotation(imageClass.getImageRotation() + 1);
+          previewManual.refreshImageLanyard();
       })
 
       /*  const imageInput = document.getElementById('imageUpload');
@@ -191,9 +217,16 @@ class ImageClass {
     getSpaceBetweenImage(){
       return this.spaceBetweenImage;
     }
-
     setSpaceBetweenImage(value){
       this.spaceBetweenImage = value;
+    }
+
+    getImageRotation() {
+      return this.imageRotation;
+    }
+
+    setImageRotation(value) {
+      this.imageRotation = value;
     }
 
 
