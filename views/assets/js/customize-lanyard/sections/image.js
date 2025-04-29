@@ -17,6 +17,9 @@ class ImageClass {
         if (printable_area_image.checked) {
           imageClass.setPrintableAreaImage(true);
           previewManual.showPrintableAreaImage();
+
+          textClass.setPrintableAreaText(false);
+          previewManual.showPrintableAreaText();
         } else {
           imageClass.setPrintableAreaImage(false);
           previewManual.showPrintableAreaImage();
