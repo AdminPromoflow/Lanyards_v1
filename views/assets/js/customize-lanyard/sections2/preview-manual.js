@@ -180,8 +180,8 @@ class PreviewManual {
 
   refreshImageLanyard() {
     this.addImageLanyard();
-  //  this.modifyImageSize();
-  //  this.modifySpaceBetweenImage();
+    this.modifyImageSize();
+    this.modifySpaceBetweenImage();
 
   //  this.centerImageLanyard();
     //this.changeColourText();
@@ -197,7 +197,6 @@ class PreviewManual {
     // Obtener el contenido y el número de repeticiones
     const imageLanyard = imageClass.getLinkImage();
     const times = imageClass.getTimesImage();
-    alert(times);
 
     // Iterar sobre los elementos izquierdo y derecho
     [this.image_lanyard_left, this.image_lanyard_right].forEach((el, index) => {
@@ -242,19 +241,19 @@ class PreviewManual {
     }
   }
   modifyImageSize(){
-    /*const wrapElements = document.querySelectorAll('.wrap_img_0, .wrap_img_1');
+    const wrapElements = document.querySelectorAll('.wrap_img_0, .wrap_img_1');
     const size = imageClass.getImageSize();
     for (let i = 0; i < wrapElements.length; i++) {
       wrapElements[i].style.width = size + "px";
       wrapElements[i].style.height = size + "px";
-    }*/
+    }
   }
   modifySpaceBetweenImage(){
-    /*const image_lanyard_left = document.getElementById("img_lanyard_left");
+    const image_lanyard_left = document.getElementById("img_lanyard_left");
     const image_lanyard_right = document.getElementById("img_lanyard_right");
 
     image_lanyard_left.style.gap = imageClass.getSpaceBetweenImage() + "px";
-    image_lanyard_right.style.gap = imageClass.getSpaceBetweenImage() + "px";*/
+    image_lanyard_right.style.gap = imageClass.getSpaceBetweenImage() + "px";
   }
 
 
