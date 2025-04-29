@@ -690,7 +690,7 @@ overflow: hidden;
 }
 .wrap_img_0 img {
   position: absolute;
-  top: 50%;
+  top: -50%;
   left: 0px;
   margin: 0;
   padding: 0;
@@ -700,13 +700,13 @@ overflow: hidden;
 }
 .wrap_img_1 img {
   position: absolute;
-  top: 50%;
+  top: -50%;
   left: 0px;
   margin: 0;
   padding: 0;
   width: 100%;
   top: 50%;
-  transform: rotate(180deg) scale(-1, -1) translateY(-50%);
+  transform: rotate(180deg) scale(-1, -1) translateY(50%);
 }
 
 .padding_image_top{
