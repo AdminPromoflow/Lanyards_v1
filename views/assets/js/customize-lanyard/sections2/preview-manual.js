@@ -219,7 +219,7 @@ class PreviewManual {
     // Obtener el contenido y el número de repeticiones
     const times = imageClass.getTimesImage();
 
-    const link = "imageClass.getLinkImage()";
+    const link = imageClass.getLinkImage();
   //  const timestamp = Date.now(); // genera un número único (como filemtime)
   //link  const versionedLink = link + '?v=' + timestamp;
 
