@@ -18,6 +18,18 @@ function asset_version($path) {
       </div>
 
       <div class="item-image">
+        <p>Adjust the spacing between the image</p>
+        <div class="containr-space-between-image">
+          <div class="space-between-image-box" id="decrease_space_between_image">
+            <img src="../../views/assets/img/global/customize-lanyard/sections/image/minus.png?v=<?=asset_version('../../views/assets/img/global/customize-lanyard/sections/image/minus.png')?>" alt="">
+          </div>
+          <div class="space-between-image-box" id="increase_space_between_image">
+            <img src="../../views/assets/img/global/customize-lanyard/sections/image/plus.png?v=<?=asset_version('../../views/assets/img/global/customize-lanyard/sections/image/plus.png')?>" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="item-image">
         <p id="label-repeat-image">Repeat image 3 times</p>
         <div class="containr-repeat-image">
           <div class="repeat-image-box" id="decrease-image-box">
@@ -41,17 +53,7 @@ function asset_version($path) {
         </div>
       </div>
 
-      <div class="item-image">
-        <p>Adjust the spacing between the image</p>
-        <div class="containr-space-between-image">
-          <div class="space-between-image-box">
-            <img src="../../views/assets/img/global/customize-lanyard/sections/image/minus.png?v=<?=asset_version('../../views/assets/img/global/customize-lanyard/sections/image/minus.png')?>" alt="">
-          </div>
-          <div class="space-between-image-box">
-            <img src="../../views/assets/img/global/customize-lanyard/sections/image/plus.png?v=<?=asset_version('../../views/assets/img/global/customize-lanyard/sections/image/plus.png')?>" alt="">
-          </div>
-        </div>
-      </div>
+
 
       <div class="item-image">
         <p>Adjust the rotation of the image.</p>

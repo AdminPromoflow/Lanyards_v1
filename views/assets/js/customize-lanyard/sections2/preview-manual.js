@@ -181,9 +181,9 @@ class PreviewManual {
   refreshImageLanyard() {
     this.addImageLanyard();
     this.modifyImageSize();
+    this.modifySpaceBetweenImage();
 
     this.centerImageLanyard();
-  //  this.modifySpaceBetweenText();
     //this.changeColourText();
   //  this.changeColourText();
   //  this.modifySpaceAlongLanyard();
@@ -246,6 +246,10 @@ class PreviewManual {
       wrapElements[i].style.width = size + "px";
       wrapElements[i].style.height = size + "px";
     }
+  }
+  modifySpaceBetweenImage(){
+    this.image_lanyard_left.style.gap = imageClass.getSpaceBetweenImage() + "px";
+    this.image_lanyard_right.style.gap = imageClass.getSpaceBetweenImage() + "px";
   }
 
 
