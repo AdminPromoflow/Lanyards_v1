@@ -12,6 +12,7 @@ class TextClass {
     this.italicText = false;
     this.underlineText = false;
     this.printableArea = false;
+    this.textPosition = -50;
 
 
 
@@ -70,6 +71,34 @@ class TextClass {
 
 
 
+    const move_down_text = document.getElementById("move_down_text");
+    const move_up_text = document.getElementById("move_up_text");
+
+    move_down_text.addEventListener("click", function(){
+      if (textClass.getTextPosition() > -100) {
+        textClass.setTextPosition(textClass.getTextPosition() - 1);
+        previewManual.refreshTextLanyard();
+      }
+
+    })
+
+
+    move_up_text.addEventListener("click", function(){
+      if (textClass.getTextPosition() <=100) {
+        textClass.setTextPosition(textClass.getTextPosition() + 1);
+        previewManual.refreshTextLanyard();
+
+      }
+
+    })
+
+
+
+
+
+
+
+
 
 
 
@@ -83,7 +112,7 @@ class TextClass {
     decrease_space_between_text.addEventListener("click", function(){
       if (textClass.getSpaceBetweenText() > 0) {
         textClass.setSpaceBetweenText(textClass.getSpaceBetweenText() - 1);
-        previewManual.modifySpaceBetweenText();
+        previewManual.refreshTextLanyard();
       }
 
     })
@@ -91,9 +120,8 @@ class TextClass {
 
     increase_space_between_text.addEventListener("click", function(){
       if (textClass.getSpaceBetweenText() <=220) {
-        console.log(textClass.getSpaceBetweenText())
         textClass.setSpaceBetweenText(textClass.getSpaceBetweenText() + 1);
-        previewManual.modifySpaceBetweenText();
+        previewManual.refreshTextLanyard();
 
       }
 
@@ -434,6 +462,14 @@ class TextClass {
     return this.printableAreaText;
   }
 
+  setTextPosition(value){
+    this.textPosition = value;
+  }
+  getTextPosition(){
+    return this.textPosition;
+  }
+
+//
 
   changeColourText(name, colour){
       this.setColourText(colour);

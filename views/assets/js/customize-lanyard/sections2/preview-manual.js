@@ -5,11 +5,13 @@ class PreviewManual {
 
   refreshTextLanyard() {
     this.addTextLanyard();
+    this.modifyTextPosition();
     this.centerTextLanyard();
     this.modifySpaceBetweenText();
     this.changeColourText();
     this.changeColourText();
     this.modifySpaceAlongLanyard();
+
   }
 
   addTextLanyard() {
@@ -64,6 +66,11 @@ class PreviewManual {
         element.style.background = "rgba(215,215,215, 0)";
       });
     }
+  }
+
+  modifyTextPosition(){
+    this.text_lanyard_left.style.top = textClass.getTextPosition() + "%";
+    this.text_lanyard_right.style.top = textClass.getTextPosition() + "%";
   }
 
   modifySpaceBetweenText(){
