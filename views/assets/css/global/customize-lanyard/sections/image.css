@@ -93,6 +93,12 @@
   flex-direction: row;
   flex-wrap: wrap;
 }
+.item-image input[type="checkbox"] {
+  transform: scale(1.5);   /* Aumenta el tamaño visual del checkbox */
+  transform-origin: center;
+  cursor: pointer;
+  margin-left: 4px;
+}
 /*.item-image label {
   margin: 10px 0px;
   padding: 4px 0px;
