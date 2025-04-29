@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['image'])) {
     // Mueve el archivo subido a la carpeta correcta
     if (move_uploaded_file($_FILES['image']['tmp_name'], $targetPath)) {
         // Genera la URL accesible para el navegador
-        $imageUrl = 'controller/uploads/' . 'uploads/' . $fileName; // URL correcta
+        $imageUrl = '../../controller/uploads/' . 'uploads/' . $fileName; // URL correcta
 
         echo json_encode([
             'success' => true,
