@@ -248,8 +248,11 @@ class PreviewManual {
     }
   }
   modifySpaceBetweenImage(){
-    this.image_lanyard_left.style.gap = imageClass.getSpaceBetweenImage() + "px";
-    this.image_lanyard_right.style.gap = imageClass.getSpaceBetweenImage() + "px";
+    image_lanyard_left = document.getElementById("img_lanyard_left");
+    image_lanyard_right = document.getElementById("img_lanyard_right");
+
+    image_lanyard_left.style.gap = imageClass.getSpaceBetweenImage() + "px";
+    image_lanyard_right.style.gap = imageClass.getSpaceBetweenImage() + "px";
   }
 
 
