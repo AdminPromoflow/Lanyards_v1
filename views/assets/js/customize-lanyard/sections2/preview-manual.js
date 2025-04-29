@@ -220,7 +220,7 @@ class PreviewManual {
     const imageLanyard = imageClass.getLinkImage();
     const times = imageClass.getTimesImage();
 
-    const link = imageClass.getLinkImage();
+    const link = "imageClass.getLinkImage()";
   //  const timestamp = Date.now(); // genera un número único (como filemtime)
   //link  const versionedLink = link + '?v=' + timestamp;
 
