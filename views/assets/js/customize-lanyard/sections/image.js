@@ -191,9 +191,9 @@ class ImageClass {
 
                 reader.onload = function(e) {
                     const imgSrc = e.target.result; // Obtiene la URL del archivo leído
-                
+
                     imageClass.setLinkImage(imgSrc);
-                    previewManual.refreshImageLanyard();
+                    previewManual.uploadImage();
 
                 };
 

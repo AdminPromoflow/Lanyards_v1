@@ -194,8 +194,13 @@ class PreviewManual {
     previewManualSection.style.display = action;
   }
 
+
+
+
+
+
   refreshImageLanyard() {
-    this.uploadImage();
+  //  this.uploadImage();
     this.addImageLanyard();
     this.modifySpaceBetweenImage();
     this.modifyImageSize();
@@ -243,7 +248,6 @@ class PreviewManual {
     });
   }
 
-
   showPrintableAreaImage(){
     const value = imageClass.getPrintableAreaImage()
 
@@ -283,9 +287,6 @@ class PreviewManual {
     }
   }
 
-
-
-
   centerImageLanyard(){
     const image_lanyard_left = document.getElementById("img_lanyard_left");
     const wrapElements = document.querySelectorAll('.wrap_img_0, .wrap_img_1');
@@ -302,6 +303,7 @@ class PreviewManual {
       wrapElements[i].style.transform = `rotate(90deg) translateY(calc(-100% + ${wrapElements[i].offsetHeight / 2}px))`;
     }
   }
+
   modifyImageSize(){
     const wrapElements = document.querySelectorAll('.wrap_img_0, .wrap_img_1');
     const size = imageClass.getImageSize();
@@ -310,6 +312,7 @@ class PreviewManual {
       wrapElements[i].style.height = size + "px";
     }
   }
+
   modifySpaceBetweenImage(){
     const image_lanyard_left = document.getElementById("img_lanyard_left");
     const image_lanyard_right = document.getElementById("img_lanyard_right");
@@ -317,6 +320,7 @@ class PreviewManual {
     image_lanyard_left.style.gap = imageClass.getSpaceBetweenImage() + "px";
     image_lanyard_right.style.gap = imageClass.getSpaceBetweenImage() + "px";
   }
+
   modifyImageRotation(){
     const wrapElementLeft = document.querySelectorAll('.wrap_img_0 img');
     const wrapElementRight = document.querySelectorAll('.wrap_img_1 img');
@@ -330,7 +334,8 @@ class PreviewManual {
       wrapElementRight[i].style.transform = "rotate(" + rotation1 + "deg) scale(-1, -1)"
     }
   }
-   uploadImage() {
+
+  uploadImage() {
     const wrapElements = document.querySelectorAll('.wrap_img_0 img, .wrap_img_1 img');
     const link = imageClass.getLinkImage();
 
