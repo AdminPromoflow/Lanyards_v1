@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['image'])) {
 
     if (move_uploaded_file($_FILES['image']['tmp_name'], $targetPath)) {
         // Genera la URL accesible para el navegador
-        $imageUrl = 'controller/uploads/' . $fileName;
+        $imageUrl = '/' . $fileName;
 
         echo json_encode([
             'success' => true,
