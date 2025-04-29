@@ -18,7 +18,7 @@ class ImageClass {
           imageClass.setPrintableAreaImage(true);
           previewManual.showPrintableAreaImage();
         } else {
-          imageClass.setPrintableAreaImage(true);
+          imageClass.setPrintableAreaImage(false);
           previewManual.showPrintableAreaImage();
         }
       });
