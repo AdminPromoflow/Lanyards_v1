@@ -678,6 +678,7 @@ overflow: hidden;
   transform-origin: top left;
   width: 10px;
   height: 10px;
+  background: orange;
 }
 .wrap_img_1{
   position: relative;
@@ -685,6 +686,7 @@ overflow: hidden;
   transform-origin: top left;
   width: 10px;
   height: 10px;
+  background: gold;
 }
 .wrap_img_0 img {
   position: absolute;
