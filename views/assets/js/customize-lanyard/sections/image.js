@@ -10,7 +10,6 @@ class ImageClass {
 
 
 
-      previewManual.refreshImageLanyard();
 
       const printable_area_image = document.getElementById("printable_area_image");
 
