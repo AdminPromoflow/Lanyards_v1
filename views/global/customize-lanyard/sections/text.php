@@ -37,7 +37,7 @@ $imgPath_text = "../../views/assets/img/global/customize-lanyard/sections/text/"
           </div>
         </div>
       </div>
-      <!--<div class="item-text">
+      <div class="item-text">
         <p>Adjust the spacing between the text</p>
         <div class="containr-space-between-text">
           <div class="space-between-text-box" id="decrease_space_between_text">
@@ -47,8 +47,8 @@ $imgPath_text = "../../views/assets/img/global/customize-lanyard/sections/text/"
             <img src="<?= $imgPath_text ?>plus.png?v=<?= asset_version_text($imgPath_text . 'plus.png') ?>" alt="">
           </div>
         </div>
-      </div>-->
-      <div class="item-text">
+      </div>
+    <!--  <div class="item-text">
         <p>Spacing along the lanyard edge</p>
         <div class="containr-space-between-text">
           <div class="space-between-text-box" id="decrease_space_along_lanyard">
@@ -58,7 +58,7 @@ $imgPath_text = "../../views/assets/img/global/customize-lanyard/sections/text/"
             <img src="<?= $imgPath_text ?>plus.png?v=<?= asset_version_text($imgPath_text . 'plus.png') ?>" alt="">
           </div>
         </div>
-      </div>
+      </div> -->
       <div class="item-text">
         <p id="label-repeat-text">Repeat text</p>
         <div class="containr-repeat-text">

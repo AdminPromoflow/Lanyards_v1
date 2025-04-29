@@ -105,7 +105,7 @@ class TextClass {
 
 
 
-  /*  const decrease_space_between_text = document.getElementById("decrease_space_between_text");
+    const decrease_space_between_text = document.getElementById("decrease_space_between_text");
     const increase_space_between_text = document.getElementById("increase_space_between_text");
     const spaceBetweenText = this.getSpaceBetweenText();
 
@@ -125,7 +125,7 @@ class TextClass {
 
       }
 
-    })*/
+    })
 
 
 
@@ -135,7 +135,7 @@ class TextClass {
 
 
 
-    const decrease_space_along_lanyard = document.getElementById("decrease_space_along_lanyard");
+  /*  const decrease_space_along_lanyard = document.getElementById("decrease_space_along_lanyard");
     const increase_space_along_lanyard = document.getElementById("increase_space_along_lanyard");
     //const spaceAlongLanyard = this.getSpaceAlongLanyard();
 
@@ -154,7 +154,7 @@ class TextClass {
         previewManual.modifySpaceAlongLanyard();
       }
 
-    })
+    })*/
 
 
 
