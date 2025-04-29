@@ -222,6 +222,10 @@ class PreviewManual {
     const imageLanyard = imageClass.getLinkImage();
     const times = imageClass.getTimesImage();
 
+    const link = imageClass.getLinkImage();
+    const timestamp = Date.now(); // genera un número único (como filemtime)
+    const versionedLink = link + '?v=' + timestamp;
+
     // Iterar sobre los elementos izquierdo y derecho
     [this.image_lanyard_left, this.image_lanyard_right].forEach((el, index) => {
       if (el) {
@@ -231,7 +235,7 @@ class PreviewManual {
         // Crear el HTML repetido
         const contentHTML = Array(times).fill(`
           <div class="wrap_img_${index}">
-            <img src="../../views/assets/img/Test/arrow2.png" alt="">
+            <img src="${versionedLink}" alt="">
           </div>
         `).join('');
 
