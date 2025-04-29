@@ -19,7 +19,7 @@ function asset_version($path) {
 
 
       <div class="item-image inline-item-image">
-        <input  id="printable_area_image" type="checkbox"   >
+        <input  id="printable_area_image" type="checkbox">
         <label for="printable_area_image">View the printable image area:</label>
         <p>This will not be printed on the lanyard; it is only for visualising the printable area.</p>
       </div>
@@ -32,6 +32,18 @@ function asset_version($path) {
           </div>
           <div class="space-between-image-box" id="increase_space_between_image">
             <img src="../../views/assets/img/global/customize-lanyard/sections/image/plus.png?v=<?=asset_version('../../views/assets/img/global/customize-lanyard/sections/image/plus.png')?>" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="item-image">
+        <p>Spacing along the lanyard edge</p>
+        <div class="containr-space-between-image">
+          <div class="space-between-image-box" id="decrease_space_along_lanyard_image">
+            <img src="<?= $imgPath_text ?>minus.png?v=<?= asset_version_text($imgPath_text . 'minus.png') ?>" alt="">
+          </div>
+          <div class="space-between-image-box" id="increase_space_along_lanyard_image">
+            <img src="<?= $imgPath_text ?>plus.png?v=<?= asset_version_text($imgPath_text . 'plus.png') ?>" alt="">
           </div>
         </div>
       </div>

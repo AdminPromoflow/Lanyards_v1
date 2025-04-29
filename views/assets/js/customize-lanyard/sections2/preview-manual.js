@@ -236,12 +236,16 @@ class PreviewManual {
         element.style.background = "rgba(215,215,215, .9)";
       });
     }
+    
     else {
       [image_lanyard_left, image_lanyard_right, image_lanyard_center].forEach((element, index) => {
         element.style.background = backgroundClass.getBackground();
       });
     }
+
   }
+
+
 
 
   centerImageLanyard(){
