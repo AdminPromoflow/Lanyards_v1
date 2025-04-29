@@ -308,7 +308,7 @@ class PreviewManual {
     }
   }
   uploadImage(){
-    alert(imageClass.getLinkImage());
+    console.log(imageClass.getLinkImage());
   }
 
 
