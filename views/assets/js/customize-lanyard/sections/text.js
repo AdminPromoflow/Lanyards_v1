@@ -27,10 +27,10 @@ class TextClass {
 
     printable_area.addEventListener('click', function() {
       if (printable_area.checked) {
-        previewManual.setPrintableAreaText(true);
+        textClass.setPrintableAreaText(true);
         previewManual.showPrintableAreaText();
       } else {
-        previewManual.setPrintableAreaText(true);
+        textClass.setPrintableAreaText(true);
         previewManual.showPrintableAreaText();
       }
     });
