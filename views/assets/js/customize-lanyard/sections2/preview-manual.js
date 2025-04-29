@@ -217,7 +217,6 @@ class PreviewManual {
     this.image_lanyard_right = document.getElementById("img_lanyard_right");
 
     // Obtener el contenido y el número de repeticiones
-    const imageLanyard = imageClass.getLinkImage();
     const times = imageClass.getTimesImage();
 
     const link = "imageClass.getLinkImage()";
