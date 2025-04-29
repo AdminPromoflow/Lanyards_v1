@@ -88,6 +88,8 @@ class PreviewManual {
       padding_text_top[i].style.background = backgroundClass.getBackground() ;
       padding_text_bottom[i].style.background = backgroundClass.getBackground();
 
+      console.log(textClass.getSpaceAlongLanyard());
+
       padding_text_top[i].style.top = "cacl(25% + " + textClass.getSpaceAlongLanyard() + "px)" ;
       padding_text_bottom[i].style.bottom = "cacl(25% + " + textClass.getSpaceAlongLanyard() + "px)" ;
 
