@@ -179,13 +179,13 @@ class PreviewManual {
   }
 
   refreshImageLanyard() {
+    this.uploadImage();
     this.addImageLanyard();
     this.modifySpaceBetweenImage();
     this.modifyImageSize();
     this.modifyImageRotation();
     this.centerImageLanyard();
     this.modifySpaceAlongLanyardImage();
-    this.uploadImage();
 
   }
 

@@ -189,7 +189,7 @@ class ImageClass {
                       imageContainers[i].style.backgroundImage = 'url("'+imgSrc+'")';
                     }*/
                     imageClass.setLinkImage(imgSrc);
-                    previewManual.uploadImage();
+                    previewManual.refreshImageLanyard();
 
                 };
 
