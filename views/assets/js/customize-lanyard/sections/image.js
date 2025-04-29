@@ -15,10 +15,10 @@ class ImageClass {
 
       printable_area_image.addEventListener('click', function() {
         if (printable_area_image.checked) {
-          textClass.setPrintableAreaImage(true);
+          imageClass.setPrintableAreaImage(true);
           previewManual.showPrintableAreaImage();
         } else {
-          textClass.setPrintableAreaImage(true);
+          imageClass.setPrintableAreaImage(true);
           previewManual.showPrintableAreaImage();
         }
       });
