@@ -675,7 +675,6 @@ overflow: hidden;
   height: 100%;
   width: 100%;
   transform: rotate(0deg);
-  background-color: gold;
 }
 .img_lanyard_right {
   position: absolute;
@@ -690,7 +689,6 @@ overflow: hidden;
   width: 100%;
 
   transform: rotate(180deg);
-  background-color: green;
 }
 
 .wrap_img_0{
@@ -732,14 +730,12 @@ overflow: hidden;
   position: absolute;
   top: 0px;
   width: 100%;
-  background-color: red;
   z-index: 2;
 }
 .padding_image_bottom{
   position: absolute;
   bottom: 0px;
   width: 100%;
-  background-color: red;
   z-index: 2;
 }
 
