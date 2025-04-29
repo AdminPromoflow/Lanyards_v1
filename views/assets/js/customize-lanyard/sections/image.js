@@ -5,6 +5,7 @@ class ImageClass {
       this.spaceBetweenImage = 90;
       this.imageRotation = 0;
       this.spaceAlongLanyard = 0;
+      this.printableArea = false;
 
 
 
@@ -14,9 +15,11 @@ class ImageClass {
 
       printable_area_image.addEventListener('click', function() {
         if (printable_area_image.checked) {
-          previewManual.showPrintableAreaImage(true);
+          textClass.setPrintableAreaImage(true);
+          previewManual.showPrintableAreaImage();
         } else {
-          previewManual.showPrintableAreaImage(false);
+          textClass.setPrintableAreaImage(true);
+          previewManual.showPrintableAreaImage();
         }
       });
 
@@ -247,6 +250,14 @@ class ImageClass {
     getSpaceAlongLanyard(){
       return this.spaceAlongLanyard;
     }
+
+    setPrintableAreaImage(value){
+      this.printableAreaImage = value;
+    }
+    getPrintableAreaImage(){
+      return this.printableAreaImage;
+    }
+
 
         // Link image
   /*
