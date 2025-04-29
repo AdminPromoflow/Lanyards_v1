@@ -226,12 +226,13 @@ class PreviewManual {
   }
 
   centerImageLanyard(){
+    const image_lanyard_left = document.getElementById("img_lanyard_left");
     const wrapElements = document.querySelectorAll('.wrap_img_0, .wrap_img_1');
 
     // Iterar sobre los elementos .wrap_text_0 y .wrap_text_1
     for (let i = 0; i < wrapElements.length; i++) {
       // Obtener el ancho de text_lanyard_right
-      const rightWidth = this.image_lanyard_right.offsetWidth;
+      const rightWidth = image_lanyard_left.offsetWidth;
 
       // Calcular y establecer la propiedad 'left'
       wrapElements[i].style.left = `${rightWidth / 2}px`; // Convertir a px para unidades correctas
