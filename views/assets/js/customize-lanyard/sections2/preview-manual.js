@@ -179,13 +179,14 @@ class PreviewManual {
   }
 
   refreshImageLanyard() {
-    this.uploadImage();
     this.addImageLanyard();
     this.modifySpaceBetweenImage();
     this.modifyImageSize();
     this.modifyImageRotation();
     this.centerImageLanyard();
     this.modifySpaceAlongLanyardImage();
+    this.uploadImage();
+
   }
 
   addImageLanyard() {
@@ -209,7 +210,7 @@ class PreviewManual {
         // Crear el HTML repetido
         const contentHTML = Array(times).fill(`
           <div class="wrap_img_${index}">
-            <img src=${link}"" alt="">
+            <img src="../../views/assets/img/Test/arrow2.png" alt="">
           </div>
         `).join('');
 
