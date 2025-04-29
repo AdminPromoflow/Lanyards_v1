@@ -302,9 +302,9 @@ class PreviewManual {
       //wrapElements[i].style.height = `${rightWidth / 2}px`; // Convertir a px para unidades correctas
 
       // Calcular y establecer la propiedad 'transform' para rotar y ajustar la posición
-      wrapElements[i].style.top = rightWidth/2;
+    //  wrapElements[i].style.top = rightWidth/2;
 
-      wrapElements[i].style.transform = `rotate(90deg) translateY(calc(${wrapElements[i].style.height/2}))`;
+    //  wrapElements[i].style.transform = `rotate(90deg) translateY(calc(${wrapElements[i].style.height/2}))`;
     }
   }
 
