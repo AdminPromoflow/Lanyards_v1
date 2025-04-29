@@ -226,9 +226,9 @@ class PreviewManual {
 
 
   showPrintableAreaImage(value){
-    image_lanyard_left = document.getElementById("img_lanyard_left");
-    image_lanyard_right = document.getElementById("img_lanyard_right");
-    image_lanyard_center = document.getElementById("img_lanyard_center");
+    const image_lanyard_left = document.getElementById("img_lanyard_left");
+    const image_lanyard_right = document.getElementById("img_lanyard_right");
+    const image_lanyard_center = document.getElementById("img_lanyard_center");
 
 
     if (value) {
