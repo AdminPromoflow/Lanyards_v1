@@ -176,8 +176,6 @@ class ImageClass {
 
 
 
-      const imageInput = document.getElementById('imageUpload');
-
       imageInput.addEventListener('change', function(event) {
         const file = event.target.files[0];
 
@@ -185,7 +183,7 @@ class ImageClass {
           const formData = new FormData();
           formData.append('image', file);
 
-          fetch('../../controller/uploads/upload.php', {
+          fetch('controller/uploads/upload.php', {
             method: 'POST',
             body: formData
           })
@@ -193,8 +191,8 @@ class ImageClass {
           .then(data => {
             if (data.success) {
               const imageUrl = data.imageUrl;
-              imageClass.setLinkImage(imageUrl); // Usa la URL desde el servidor
-              previewManual.uploadImage();       // Muestra la imagen
+              imageClass.setLinkImage(imageUrl);
+              previewManual.uploadImage();
             } else {
               alert('Error al subir la imagen: ' + data.message);
             }
@@ -203,11 +201,11 @@ class ImageClass {
             console.error('Error en la subida:', err);
             alert('Error en la conexión al subir imagen.');
           });
-
         } else {
           alert('Por favor, selecciona un archivo de imagen válido.');
         }
       });
+
 
 
 

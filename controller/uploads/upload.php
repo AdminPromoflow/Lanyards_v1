@@ -1,16 +1,13 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['image'])) {
-    $uploadDir = __DIR__ . '/controller/uploads/';
+    // Directorio actual (donde está upload.php)
+    $uploadDir = __DIR__ . '/';
     $fileName = basename($_FILES['image']['name']);
     $targetPath = $uploadDir . $fileName;
 
-    // Asegúrate de que la carpeta existe
-    if (!is_dir($uploadDir)) {
-        mkdir($uploadDir, 0775, true);
-    }
-
+    // Mover el archivo subido
     if (move_uploaded_file($_FILES['image']['tmp_name'], $targetPath)) {
-        // Genera la URL accesible para el navegador
+        // URL relativa para devolver al frontend
         $imageUrl = 'controller/uploads/' . $fileName;
 
         echo json_encode([
