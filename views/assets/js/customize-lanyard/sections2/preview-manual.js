@@ -233,7 +233,7 @@ class PreviewManual {
         // Crear el HTML repetido
         const contentHTML = Array(times).fill(`
           <div class="wrap_img_${index}">
-
+            <img src="${link}" alt="">
           </div>
         `).join('');
 
