@@ -107,13 +107,13 @@ class ImageClass {
       const rotate_image_right = document.getElementById("rotate_image_right");
 
       rotate_image_left.addEventListener("click", function(){
-          imageClass.setImageRotation(imageClass.getImageRotation() - 1);
+          imageClass.setImageRotation(imageClass.getImageRotation() - 10);
           previewManual.refreshImageLanyard();
       })
 
 
       rotate_image_right.addEventListener("click", function(){
-          imageClass.setImageRotation(imageClass.getImageRotation() + 1);
+          imageClass.setImageRotation(imageClass.getImageRotation() + 10);
           previewManual.refreshImageLanyard();
       })
 
