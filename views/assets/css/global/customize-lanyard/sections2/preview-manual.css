@@ -303,7 +303,6 @@
   top: 0.56cm;
   left: 32.2%;
 
-  border: 1px solid black;
   transform:  skewX(11.3deg) perspective(11.3vw);
   z-index: 0;
 overflow: hidden;
@@ -315,7 +314,6 @@ overflow: hidden;
   top: 0.56cm;
   right: 32.2%;
 
-  border: 1px solid black;
   transform:  skewX(-11.3deg) perspective(11.3vw);
   z-index: 0;
 overflow: hidden;
@@ -329,7 +327,6 @@ overflow: hidden;
   left: 50%;
 
   transform: translateX(-50%);
-  border: 1px solid black;
   z-index: 0;
   overflow: hidden;
 overflow: hidden;
@@ -350,7 +347,6 @@ overflow: hidden;
   left: 50%;
   transform: translateX(-50%);
 
-  border: 1px solid black;
   z-index: 0;
 overflow: hidden;
 }
@@ -361,7 +357,6 @@ overflow: hidden;
   top: 0.56cm;
   left: 31%;
 
-  border: 1px solid black;
   transform:  skewX(11.3deg) perspective(11.3vw);
   z-index: 0;
 overflow: hidden;
@@ -373,7 +368,6 @@ overflow: hidden;
   top: 0.56cm;
   right: 31%;
 
-  border: 1px solid black;
   transform:  skewX(-11.3deg) perspective(11.3vw);
   z-index: 0;
 overflow: hidden;
@@ -399,7 +393,6 @@ overflow: hidden;
   left: 50%;
   transform: translateX(-50%);
 
-  border: 1px solid black;
   z-index: 0;
 overflow: hidden;
 }
@@ -410,7 +403,6 @@ overflow: hidden;
   top: 0.56cm;
   left: 29.5%;
 
-  border: 1px solid black;
   transform:  skewX(11.3deg) perspective(11.3vw);
   z-index: 0;
 overflow: hidden;
@@ -422,7 +414,6 @@ overflow: hidden;
   top: 0.56cm;
   right: 29.5%;
 
-  border: 1px solid black;
   transform:  skewX(-11.3deg) perspective(11.3vw);
   z-index: 0;
 overflow: hidden;
@@ -450,7 +441,6 @@ overflow: hidden;
   left: 50%;
   transform: translateX(-50%);
 
-  border: 1px solid black;
   z-index: 0;
   overflow: hidden;
 }
@@ -461,7 +451,6 @@ overflow: hidden;
   top: 0.56cm;
   left: 28.5%;
 
-  border: 1px solid black;
   transform:  skewX(11.3deg) perspective(11.3vw);
   z-index: 0;
   overflow: hidden;
@@ -473,7 +462,6 @@ overflow: hidden;
   top: 0.56cm;
   right: 28.5%;
 
-  border: 1px solid black;
   transform:  skewX(-11.3deg) perspective(11.3vw);
   z-index: 0;
 overflow: hidden;
@@ -499,7 +487,6 @@ overflow: hidden;
   left: 50%;
   transform: translateX(-50%);
 
-  border: 1px solid black;
   z-index: 0;
 overflow: hidden;
 }
@@ -510,7 +497,6 @@ overflow: hidden;
   top: 0.56cm;
   left: 26.7%;
 
-  border: 1px solid black;
   transform:  skewX(11.3deg) perspective(11.3vw);
   z-index: 0;
   overflow: hidden;
@@ -522,7 +508,6 @@ overflow: hidden;
   top: 0.56cm;
   right: 26.7%;
 
-  border: 1px solid black;
   transform:  skewX(-11.3deg) perspective(11.3vw);
   z-index: 0;
 overflow: hidden;

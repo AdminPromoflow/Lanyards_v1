@@ -176,37 +176,32 @@ class ImageClass {
 
 
 
-
       const imageInput = document.getElementById('imageUpload');
+      const imageContainers = document.querySelectorAll('.imageContent');
 
-        const imageContainers = document.querySelectorAll('.imageContent');
+      // Inicializa la propiedad
+      this.linkImage = "";
 
-         this.linkImage = "";
+      // Agrega el event listener al input
+      imageInput.addEventListener('change', function(event) {
+        const file = event.target.files[0]; // Captura el archivo seleccionado
 
+        if (file && file.type.startsWith('image/')) { // Verifica que sea una imagen
+          // Genera una URL temporal local con Blob
+          const objectURL = URL.createObjectURL(file);
 
-        // Add an event listener to the input file element
-        imageInput.addEventListener('change', function(event){
-        //  const imageContainers = customizeLanyard.getLanyardsActive();
+          // Guarda el enlace de la imagen para usarlo después
+          imageClass.setLinkImage(objectURL);
 
-          const file = event.target.files[0]; // Captura el archivo seleccionado
+          // Llama a tu función para mostrar la imagen
+          previewManual.uploadImage();
 
-            if (file && file.type.startsWith('image/')) { // Verifica que sea una imagen
-                const reader = new FileReader();
-
-                reader.onload = function(e) {
-                    const imgSrc = e.target.result; // Obtiene la URL del archivo leído
-
-                    imageClass.setLinkImage(imgSrc);
-                    previewManual.uploadImage();
-
-                };
-
-                reader.readAsDataURL(file); // Lee el contenido del archivo como una URL
-            } else {
-                alert('Por favor, selecciona un archivo de imagen.');
-            }
-
-        });
+          // (Opcional) puedes liberar la URL después de un tiempo si ya no la necesitas
+          // setTimeout(() => URL.revokeObjectURL(objectURL), 10000); // por ejemplo después de 10 segundos
+        } else {
+          alert('Por favor, selecciona un archivo de imagen.');
+        }
+      });
 
 
 

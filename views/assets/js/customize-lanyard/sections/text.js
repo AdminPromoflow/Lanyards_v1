@@ -372,10 +372,7 @@ class TextClass {
         styling_underline_text.style.border = "2px solid white";
         textClass.setUnderlineText(true);
       }
-
       previewManual.refreshTextLanyard();
-
-
     });
 
   }
