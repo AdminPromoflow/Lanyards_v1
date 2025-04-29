@@ -185,7 +185,7 @@ class ImageClass {
           const formData = new FormData();
           formData.append('image', file);
 
-          fetch('upload.php', {
+          fetch('../../controller/uploads/upload.php', {
             method: 'POST',
             body: formData
           })
