@@ -221,8 +221,8 @@ class PreviewManual {
     const times = imageClass.getTimesImage();
 
     const link = imageClass.getLinkImage();
-    const timestamp = Date.now(); // genera un número único (como filemtime)
-    const versionedLink = link + '?v=' + timestamp;
+  //  const timestamp = Date.now(); // genera un número único (como filemtime)
+  //link  const versionedLink = link + '?v=' + timestamp;
 
     // Iterar sobre los elementos izquierdo y derecho
     [this.image_lanyard_left, this.image_lanyard_right].forEach((el, index) => {
@@ -233,7 +233,7 @@ class PreviewManual {
         // Crear el HTML repetido
         const contentHTML = Array(times).fill(`
           <div class="wrap_img_${index}">
-            <img src="${versionedLink}" alt="">
+            <img src="${link}" alt="">
           </div>
         `).join('');
 
