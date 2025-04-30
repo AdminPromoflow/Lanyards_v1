@@ -188,7 +188,7 @@ class PreviewManual {
 
       wrapElements[i].style.left = "50%";
 
-      wrapElements[i].style.transform = `rotate(90deg) translateX(-50%)`;
+      wrapElements[i].style.transform = `rotate(90deg) translateY(-50%)`;
     }
   }
 
