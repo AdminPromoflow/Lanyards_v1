@@ -305,10 +305,10 @@ class CustomizeLanyard {
     }
     else {
       if (this.actionNextOrPrevious == "preview") {
-        alert("Acabamos de entrar a la seccion 15 para artwork y para preview");
-
-        this.setCurrentSectionOpen(9);
-        this.openArtWork();
+        //this.setCurrentSectionOpenArtwork(1);
+        this.openBackgroundColour();
+        this.setCurrentSectionOpen(8);
+        alert(this.getCurrentSectionOpenArtwork());
       }
       if (this.actionNextOrPrevious == "next") {
         this.setCurrentSectionOpen(15);
