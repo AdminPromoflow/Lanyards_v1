@@ -3,7 +3,7 @@ class TextClass {
   constructor() {
     this.contentText = "";
     this.timesText = 10;
-    this.spaceBetweenText = 90;
+    this.spaceBetweenText = 50;
     this.spaceAlongLanyard = 0;
     this.colourText = "black";
     this.fontFamilyText = "sans-serif";
