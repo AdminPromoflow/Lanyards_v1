@@ -277,8 +277,8 @@ class PreviewManual {
     const image_lanyard_right = document.getElementById("img_lanyard_right");
 
 
-    image_lanyard_left.style.top = textClass.getImagePosition() + "%";
-    image_lanyard_right.style.top = textClass.getImagePosition() + "%";
+    image_lanyard_left.style.top = imageClass.getImagePosition() + "%";
+    image_lanyard_right.style.top = imageClass.getImagePosition() + "%";
   }
 
   modifySpaceAlongLanyardImage() {
