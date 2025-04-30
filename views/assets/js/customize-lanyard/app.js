@@ -192,9 +192,17 @@ class CustomizeLanyard {
      if (artworkManualClass.getArtworkManual() == "manual"){
        this.openBackgroundColour();
     }
+
     else {
-      this.setCurrentSectionOpen(16);
-        this.openArtwork();
+      alert(this.currentSectionOpen);
+      if (true) {
+
+      }
+      else if (true) {
+        //this.setCurrentSectionOpen(16);
+          //this.openArtwork();
+      }
+
     }
    }
    else if (this.currentSectionOpen == 16) {
@@ -292,6 +300,8 @@ class CustomizeLanyard {
       }
     }
    }
+
+
   }
 
   // Métodos adicionales según sea necesario
