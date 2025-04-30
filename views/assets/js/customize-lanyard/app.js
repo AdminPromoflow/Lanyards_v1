@@ -262,7 +262,7 @@ class CustomizeLanyard {
     }
     else {
       if (menuClass.getActiveSession() && this.actionNextOrPrevious == "preview") {
-        this.setCurrentSectionOpen(9);
+        this.setCurrentSectionOpen(16);
         this.openArtWork();
       }
       else if (!menuClass.getActiveSession() && this.actionNextOrPrevious == "preview") {
