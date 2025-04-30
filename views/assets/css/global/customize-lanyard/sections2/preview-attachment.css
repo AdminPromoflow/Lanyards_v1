@@ -131,6 +131,7 @@
   width: 150px;
   display: none;
   z-index: 2;
+  background-color: orange;
 }
 
 
@@ -160,7 +161,7 @@
 
 .attachment-one-end-10mm{
   position: absolute;
-  top: 98%;
+  top: 28%;
   left: 50%;
   transform: translateX(-45%);
   height: 0.7cm;
