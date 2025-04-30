@@ -17,7 +17,7 @@
         left: 45.3%;
         height: 6.08cm;
         width: 0.096cm;
-
+        overflow: hidden;
         transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
 
 }
@@ -28,7 +28,7 @@
         right: 45.3%;
         height: 6.08cm;
         width: 0.096cm;
-
+        overflow: hidden;
         transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
 
 }
@@ -68,7 +68,7 @@
         left: 42.3%;
         height: 6.08cm;
         width: 0.256cm;
-
+        overflow: hidden;
         transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
 }
 
@@ -78,7 +78,7 @@
         right: 42.3%;
         height: 6.08cm;
         width: 0.256cm;
-
+        overflow: hidden;
         transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
 }
 
@@ -656,7 +656,7 @@ overflow: hidden;
   height: 200%;
   width: 100%;
   transform: rotate(0deg);
-  
+  overflow: hidden;
 }
 
 .img_lanyard_right {
@@ -672,6 +672,8 @@ overflow: hidden;
   width: 100%;
 
   transform: rotate(180deg);
+  overflow: hidden;
+
 }
 
 .wrap_img_0{
@@ -680,7 +682,6 @@ overflow: hidden;
   transform-origin: top left;
   width: 10px;
   height: 10px;
-  background: orange;
 }
 .wrap_img_1{
   position: relative;
@@ -688,7 +689,6 @@ overflow: hidden;
   transform-origin: top left;
   width: 10px;
   height: 10px;
-  background: gold;
 }
 .wrap_img_0 img {
   position: absolute;
