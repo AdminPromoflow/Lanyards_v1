@@ -305,7 +305,7 @@
 
   transform:  skewX(11.3deg) perspective(11.3vw);
   z-index: 0;
-overflow: hidden;
+  overflow: hidden;
 }
 .right-super-lanyard-one-end-10mm-attachment-manual{
   position: absolute;
@@ -316,7 +316,7 @@ overflow: hidden;
 
   transform:  skewX(-11.3deg) perspective(11.3vw);
   z-index: 0;
-overflow: hidden;
+  overflow: hidden;
 }
 
 .center-super-lanyard-one-end-10mm-attachment-manual{
