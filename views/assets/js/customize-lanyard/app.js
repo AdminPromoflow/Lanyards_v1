@@ -316,6 +316,7 @@ class CustomizeLanyard {
     }
    }
    else if (this.currentSectionOpen == 16) {
+     alert("Este es el div 16");
      if (menuClass.getActiveSession() && this.actionNextOrPrevious == "preview") {
       // alert(menuClass.getActiveSession());  // aca nunca entra
        this.setCurrentSectionOpen(8);
