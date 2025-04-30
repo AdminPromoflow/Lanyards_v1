@@ -511,7 +511,7 @@
   position: absolute;
   height: 0.8cm;
   width: 0.16cm;
-  bottom: calc(-0.8cm - 0.55cm);
+  bottom: calc(-0.8cm - 0.58cm);
   left: 50%;
   transform: translateX(-50%);
   background-color: white;
@@ -579,7 +579,7 @@
   position: absolute;
   height: 0.8cm;
   width: 0.24cm;
-  bottom: calc(-0.8cm + -0.69cm);
+  bottom: calc(-0.8cm + -0.65cm);
   left: 50%;
   transform: translateX(-50%);
   background-color: white;
