@@ -760,7 +760,7 @@
   position: absolute;
   height: 0.8cm;
   width: 0.48cm;
-  bottom: calc(-0.8cm + -0.95cm);
+  bottom: calc(-0.8cm + -0.99cm);
   left: 50%;
   transform: translateX(-50%);
   background-color: white;
