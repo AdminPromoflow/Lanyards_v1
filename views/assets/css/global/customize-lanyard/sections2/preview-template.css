@@ -484,27 +484,26 @@
   right:  12.4%;/*10.4%*/
 }
 
+
 .left-super-lanyard-one-end-10mm-attachment{/*+5*/
   position: absolute;
-  height: 4.5cm;
+  top: 0;
+  left: 29%;
+  height: 7.2cm;
   width: 0.16cm;
-  top: 0%;
-  left: 29.5%;
-  background-color: white;
   border: 1px solid black;
-  transform:  skewX(11.3deg) perspective(11.3vw);
-  z-index: 0;
+  background-color: white;
+  transform:  skewX(7.5deg) perspective(7.5vw) ;
 }
 .right-super-lanyard-one-end-10mm-attachment{
   position: absolute;
-  height: 4.5cm;
+  top: 0;
+  right: 29%;
+  height: 7.2cm;
   width: 0.16cm;
-  top: 0%;
-  right: 29.5%;
-  background-color: white;
   border: 1px solid black;
-  transform:  skewX(-11.3deg) perspective(11.3vw);
-  z-index: 0;
+  background-color: white;
+  transform:  skewX(-7.5deg) perspective(7.5vw);
 }
 .center-super-lanyard-one-end-10mm-attachment{
   position: absolute;
@@ -542,17 +541,17 @@
 
 .top_left_clip-one-end-15mm-attachment{
   position: absolute;
-  bottom: 101.5%;
-  height: 0.3cm;
-  width: 0.25cm;
-  left: 11.8%;
+  bottom: 100.68%;
+  height: 0.35cm;
+  width: 0.31cm;
+  left: 11.4%;
 }
 .top_right_clip-one-end-15mm-attachment{
   position: absolute;
-  bottom: 101.5%;
-  height: 0.3cm;
-  width: 0.25cm;
-  right:  10.5%;
+  bottom: 100.68%;
+  height: 0.35cm;
+  width: 0.31cm;
+  right:  11.2%;
 }
 
 .left-super-lanyard-one-end-15mm-attachment{
