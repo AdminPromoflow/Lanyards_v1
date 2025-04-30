@@ -443,6 +443,7 @@ class CustomizeLanyard {
     this.showCurrentSection(this.currentSectionOpen);
   }
   openText(){
+    alert("Al abrir text the currect section was " + this.currentSectionOpen);
     previewTemplate.togglePreviewTemplateClass("block");
 
     previewLanyardType.showTypeLanyardPreview("flex");
