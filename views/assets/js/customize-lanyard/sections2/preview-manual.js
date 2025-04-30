@@ -182,12 +182,9 @@ class PreviewManual {
       // Obtener el ancho de text_lanyard_right
       const rightWidth = text_lanyard_right.offsetWidth;
 
-      // Calcular y establecer la propiedad 'left'
-      wrapElements[i].style.left = `${rightWidth / 2}px`; // Convertir a px para unidades correctas
+      wrapElements[i].style.left = "50%";
 
-      // Calcular y establecer la propiedad 'transform' para rotar y ajustar la posición
-      wrapElements[i].style.transform = `rotate(90deg) translateY(calc(-100% + ${wrapElements[i].offsetHeight / 2}px))`;
-    }
+      wrapElements[i].style.transform = `translateX(-50%)`;    }
   }
 
   togglePreviewManualClass(action) {
