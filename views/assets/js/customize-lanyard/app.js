@@ -207,20 +207,25 @@ class CustomizeLanyard {
     else {
       if (this.getCurrentSectionOpenArtwork() == 0) {
         if (this.actionNextOrPrevious == "next") {
-          alert("Debimos haber entrado por acá");
           this.setCurrentSectionOpenArtwork(1);
           this.openBackgroundColour();
           this.setCurrentSectionOpen(8);
+        }
+        else if (this.actionNextOrPrevious == "preview") {
+          alert("Entramos a preview 0");
 
         }
 
       }
        else if (this.getCurrentSectionOpenArtwork() == 1){
          if (this.actionNextOrPrevious == "next") {
-
+           this.setCurrentSectionOpen(16);
+            this.openArtwork();
          }
-        this.setCurrentSectionOpen(16);
-         this.openArtwork();
+         else if(this.actionNextOrPrevious == "preview"){
+           alert("Entramos a preview 1");
+         }
+
       }
       alert(this.getCurrentSectionOpen() + "  " + this.getCurrentSectionOpenArtwork());
     //  this.setCurrentSectionOpen(16);
