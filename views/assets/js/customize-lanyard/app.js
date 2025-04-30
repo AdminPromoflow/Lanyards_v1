@@ -209,7 +209,7 @@ class CustomizeLanyard {
 
 
       if (this.getCurrentSectionOpenArtwork() == 0) {
-        this.setCurrentSectionOpen(8);
+        this.setCurrentSectionOpen(9);
         this.setCurrentSectionOpenArtwork(1);
 
         this.openBackgroundColour();
