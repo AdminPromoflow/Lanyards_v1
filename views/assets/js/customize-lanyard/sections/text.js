@@ -2,7 +2,7 @@ class TextClass {
 
   constructor() {
     this.contentText = "";
-    this.timesText = 3;
+    this.timesText = 5;
     this.spaceBetweenText = 90;
     this.spaceAlongLanyard = 0;
     this.colourText = "black";
