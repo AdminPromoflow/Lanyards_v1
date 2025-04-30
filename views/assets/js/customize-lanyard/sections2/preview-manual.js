@@ -306,7 +306,7 @@ class PreviewManual {
       // Calcular y establecer la propiedad 'transform' para rotar y ajustar la posición
       wrapElements[i].style.left = "50%";
 
-      wrapElements[i].style.transform = `translateY(-50%)`;
+      wrapElements[i].style.transform = `translateY(-200%)`;
     }
   }
 
