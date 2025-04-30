@@ -40,6 +40,8 @@ class ImageClass {
 
       move_down_image.addEventListener("click", function(){
         if (imageClass.getImagePosition() > -100) {
+          console.log(imageClass.getImagePosition());
+
           imageClass.setImagePosition(imageClass.getImagePosition() - 1);
           previewManual.refreshImageLanyard();
         }
@@ -49,6 +51,7 @@ class ImageClass {
 
       move_up_image.addEventListener("click", function(){
         if (imageClass.getImagePosition() <0) {
+          console.log(imageClass.getImagePosition());
           imageClass.setImagePosition(imageClass.getImagePosition() + 1);
           previewManual.refreshImageLanyard();
 
