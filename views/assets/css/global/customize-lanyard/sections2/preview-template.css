@@ -579,7 +579,7 @@
   position: absolute;
   height: 0.8cm;
   width: 0.24cm;
-  bottom: calc(-0.8cm -0.74cm);
+  bottom: calc(-0.8cm + -0.74cm);
   left: 50%;
   transform: translateX(-50%);
   background-color: white;
@@ -638,7 +638,7 @@
   position: absolute;
   height: 0.8cm;
   width: 0.32cm;
-  bottom: calc(-0.8cm -0.78cm);
+  bottom: calc(-0.8cm + -0.78cm);
   left: 50%;
   transform: translateX(-50%);
   background-color: white;
@@ -698,7 +698,7 @@
   position: absolute;
   height: 0.8cm;
   width: 0.4cm;
-  bottom: calc(-0.8cm -0.82cm);
+  bottom: calc(-0.8cm + -0.82cm);
   left: 50%;
   transform: translateX(-50%);
   background-color: white;
@@ -760,7 +760,7 @@
   position: absolute;
   height: 0.8cm;
   width: 0.48cm;
-  bottom: calc(-0.8cm -0.85cm);
+  bottom: calc(-0.8cm + -0.85cm);
   left: 50%;
   transform: translateX(-50%);
   background-color: white;
