@@ -292,7 +292,6 @@ class PreviewManual {
     const image_lanyard_left = document.getElementById("img_lanyard_left");
     const wrapElements = document.querySelectorAll('.wrap_img_0, .wrap_img_1');
 
-    alert(image_lanyard_left.offsetWidth + "  " + image_lanyard_left.offsetHeight);
 
     // Iterar sobre los elementos .wrap_text_0 y .wrap_text_1
     for (let i = 0; i < wrapElements.length; i++) {
@@ -305,9 +304,9 @@ class PreviewManual {
       //wrapElements[i].style.height = `${rightWidth / 2}px`; // Convertir a px para unidades correctas
 
       // Calcular y establecer la propiedad 'transform' para rotar y ajustar la posición
-      wrapElements[i].style.top = rightWidth/2;
+      wrapElements[i].style.top = rightWidth/2 + "px";
 
-      wrapElements[i].style.transform = `rotate(90deg) translateY(calc(${wrapElements[i].style.height/2}))`;
+      //wrapElements[i].style.transform = `rotate(90deg) translateY(calc(${wrapElements[i].style.height/2}))`;
     }
   }
 
