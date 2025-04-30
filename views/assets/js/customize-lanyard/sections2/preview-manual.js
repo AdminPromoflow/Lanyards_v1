@@ -204,7 +204,7 @@ class PreviewManual {
     this.addImageLanyard();
     this.modifySpaceBetweenImage();
     this.modifyImageSize();
-    //this.modifyImageRotation();
+    this.modifyImageRotation();
     this.centerImageLanyard();
     this.modifySpaceAlongLanyardImage();
 
@@ -335,8 +335,8 @@ class PreviewManual {
 
 
     for (var i = 0; i < wrapElementLeft.length; i++) {
-      wrapElementLeft[i].style.transform = "rotate(" + rotation0 + "deg)"
-      wrapElementRight[i].style.transform = "rotate(" + rotation1 + "deg) scale(-1, -1)"
+      wrapElementLeft[i].style.transform = " translateY(-50%) rotate(" + rotation0 + "deg)"
+      wrapElementRight[i].style.transform = "translateY(-50%) rotate(" + rotation1 + "deg) scale(-1, -1)"
     }
   }
 
