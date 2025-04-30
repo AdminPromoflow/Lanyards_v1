@@ -6,7 +6,6 @@ class CustomizeLanyard {
     this.actionNextOrPrevious = "";
     this.currentSectionOpenArtwork = 0;
 
-
     // Suponiendo que closeCustomizeLanyard, preview y next están definidos en el contexto global
     this.initializeEventListeners();
     this.showCurrentSection(this.currentSectionOpen);
@@ -135,7 +134,6 @@ class CustomizeLanyard {
     this.currentSectionOpen = newSection;
   }
 
-
   getCurrentSectionOpenArtwork() {
     return this.currentSectionOpenArtwork;
   }
@@ -143,7 +141,6 @@ class CustomizeLanyard {
   setCurrentSectionOpenArtwork(newSection) {
     this.currentSectionOpenArtwork = newSection;
   }
-
 
   setJsonLanyards(value) {
     this.jsonLanyards = value;
@@ -197,56 +194,33 @@ class CustomizeLanyard {
    }
    else if (this.currentSectionOpen == 8) {//Artwork - Manual
      this.openArtWorkManual();
-     this.setCurrentSectionOpenArtwork(0);
-
+     //artworkPreviewClass.showHidePreviewArtwork(false);
    }
 
    else if (this.currentSectionOpen == 9) {
      if (artworkManualClass.getArtworkManual() == "manual"){
        this.openBackgroundColour();
-
     }
-
     else {
-
-
       if (this.getCurrentSectionOpenArtwork() == 0) {
-        this.setCurrentSectionOpen(9);
-        this.setCurrentSectionOpenArtwork(1);
-
-        this.openBackgroundColour();
-
-        alert("if 1" + this.currentSectionOpen);
+        this.setCurrentSectionOpen(8);
       }
-      else if (this.getCurrentSectionOpenArtwork() == 1) {
+      if else (this.getCurrentSectionOpenArtwork() == 1){
         this.setCurrentSectionOpen(16);
-        this.openArtwork();
-
-        alert("if 1" + this.currentSectionOpen);
-
       }
+    //  this.setCurrentSectionOpen(16);
+      //  this.openArtwork();
+    }
+   }
 
-    }
-   }
-   else if (this.currentSectionOpen == 16) {
-     if (menuClass.getActiveSession() && this.actionNextOrPrevious == "preview") {
-       this.setCurrentSectionOpen(8);
-       this.openArtWorkManual();
-     }
-   }
-   else if (this.currentSectionOpen == 17) {
-     if (artworkManualClass.getArtworkManual() == "manual"){
-    }
-    else {
-      this.setCurrentSectionOpen(12);
-      this.openArtworkFinal();
-    }
-   }
    else if (this.currentSectionOpen == 10) {
 
      if (artworkManualClass.getArtworkManual() == "manual"){
-       alert(artworkManualClass.getArtworkManual());
+       //this.openArtWorkManual();
+       //artworkManualClass.containerBoxesArtworkManual()
         this.openText();
+      //  artworkManualClass.containerBoxesArtworkManual();
+
     }
     else {
 
@@ -257,6 +231,7 @@ class CustomizeLanyard {
    else if (this.currentSectionOpen == 11) {
 
      if (artworkManualClass.getArtworkManual() == "manual"){
+       //this.openText();
     this.openImage();
   //  artworkManualClass.containerBoxesArtworkManual();
     }
@@ -274,6 +249,7 @@ class CustomizeLanyard {
 
    else if (this.currentSectionOpen == 12) {
 
+       //this.openText();
     this.openArtworkFinal();
   //  artworkManualClass.containerBoxesArtworkManual();
    }
@@ -303,6 +279,7 @@ class CustomizeLanyard {
    else if (this.currentSectionOpen == 15) {
 
      if (artworkManualClass.getArtworkManual() == "manual"){
+       //this.openText();
     this.openCheckout();
   //  artworkManualClass.containerBoxesArtworkManual();
     }
@@ -317,8 +294,20 @@ class CustomizeLanyard {
       }
     }
    }
-
-
+   else if (this.currentSectionOpen == 16) {
+     if (menuClass.getActiveSession() && this.actionNextOrPrevious == "preview") {
+       this.setCurrentSectionOpen(8);
+       this.openArtWorkManual();
+     }
+   }
+   else if (this.currentSectionOpen == 17) {
+     if (artworkManualClass.getArtworkManual() == "manual"){
+    }
+    else {
+      this.setCurrentSectionOpen(12);
+      this.openArtworkFinal();
+    }
+   }
   }
 
   // Métodos adicionales según sea necesario
