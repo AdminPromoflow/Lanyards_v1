@@ -577,7 +577,7 @@
 }
 .center-super-lanyard-one-end-15mm-attachment{
   position: absolute;
-  height: 2.1cm;
+  height: 0.8cm;
   width: 0.24cm;
   bottom: calc(-0.8cm -0.74cm);
   left: 50%;
@@ -636,7 +636,7 @@
 }
 .center-super-lanyard-one-end-20mm-attachment{
   position: absolute;
-  height: 2.07cm;
+  height: 0.8cm;
   width: 0.32cm;
   bottom: calc(-0.8cm -0.78cm);
   left: 50%;
@@ -696,7 +696,7 @@
 }
 .center-super-lanyard-one-end-25mm-attachment{
   position: absolute;
-  height: 2cm;
+  height: 0.8cm;
   width: 0.4cm;
   bottom: calc(-0.8cm -0.82cm);
   left: 50%;
@@ -758,7 +758,7 @@
 
 .center-super-lanyard-one-end-30mm-attachment{
   position: absolute;
-  height: 1.97cm;
+  height: 0.8cm;
   width: 0.48cm;
   bottom: calc(-0.8cm -0.85cm);
   left: 50%;
