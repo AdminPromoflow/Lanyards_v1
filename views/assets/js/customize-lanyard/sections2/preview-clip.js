@@ -28,11 +28,13 @@ class PreviewClip {
     if (type === "one-end") {
       if (attachment == "none" || attachment == "None") {
         alert("attachment");
-         this.applyOneEndAttachmentStyles(width);
+        this.applyOneEndStyles(width);
+
       }
       else {
         alert("one end");
-        this.applyOneEndStyles(width);
+        this.applyOneEndAttachmentStyles(width);
+
       }
     } else if (type === "two-end") {
       this.applyTwoEndStyles(width);
