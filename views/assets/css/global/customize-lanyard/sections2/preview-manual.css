@@ -690,12 +690,12 @@ overflow: hidden;
 }
 .wrap_img_0 img {
   position: absolute;
-  top: 0%;
+  top: 50%;
   left: 0px;
   margin: 0;
   padding: 0;
   width: 100%;
-  transform: rotate(0deg)  translateY(-200%);
+  transform: rotate(0deg)  translateY(-50%);
 }
 .wrap_img_1 img {
   position: absolute;
