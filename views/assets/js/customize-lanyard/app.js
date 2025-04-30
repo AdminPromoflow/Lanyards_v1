@@ -196,9 +196,10 @@ class CustomizeLanyard {
      this.openColourQuantity();
    }
    else if (this.currentSectionOpen == 8) {//Artwork - Manual
+     alert("Con esto sabemos si nos estamos actualizando");
+
      this.openArtWorkManual();
      this.setCurrentSectionOpenArtwork(0);
-     alert("Con esto sabemos si nos estamos actualizando");
 
      //artworkPreviewClass.showHidePreviewArtwork(false);
    }
