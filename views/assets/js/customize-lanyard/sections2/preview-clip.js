@@ -23,14 +23,15 @@ class PreviewClip {
     this.updateClipImagesSrc();  // Update the image sources
     this.cleanStyle();           // Remove all styles and reset classes
 
-    alert(attachment);
 
     // Apply appropriate layout based on the lanyard type
     if (type === "one-end") {
-      //if (true) {
-
-    //  }
-      this.applyOneEndStyles(width);
+      if (attachment != "none") {
+         this.applyOneEndAttachmentStyles(width);
+      }
+      else {
+        this.applyOneEndStyles(width);
+      }
     } else if (type === "two-end") {
       this.applyTwoEndStyles(width);
     }
