@@ -107,7 +107,9 @@ class OneTwoEnds {
 
     previewTemplate.activateTemplate();
     previewManual.refreshTextLanyard();
- 
+    previewManual.refreshImageLanyard()
+
+
 
 
   }

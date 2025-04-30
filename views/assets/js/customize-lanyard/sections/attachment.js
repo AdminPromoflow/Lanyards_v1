@@ -15,6 +15,7 @@ class AttachmentClass {
     previewTemplate.activateTemplate();
     attachmentPreviewClass.activateTemplate();
     previewManual.refreshTextLanyard();
+    previewManual.refreshImageLanyard()
 
   }
 
