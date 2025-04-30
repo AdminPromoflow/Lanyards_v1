@@ -4,6 +4,8 @@ class CustomizeLanyard {
     this.noColours = "one-colour";
     this.currentSectionOpen = 0;
     this.actionNextOrPrevious = "";
+    this.currentSectionOpenArtwork = 0;
+
 
     // Suponiendo que closeCustomizeLanyard, preview y next están definidos en el contexto global
     this.initializeEventListeners();
@@ -133,6 +135,16 @@ class CustomizeLanyard {
     this.currentSectionOpen = newSection;
   }
 
+
+  getCurrentSectionOpenArtwork() {
+    return this.currentSectionOpenArtwork;
+  }
+
+  setCurrentSectionOpenArtwork(newSection) {
+    this.currentSectionOpenArtwork = newSection;
+  }
+
+
   setJsonLanyards(value) {
     this.jsonLanyards = value;
   }
@@ -194,15 +206,22 @@ class CustomizeLanyard {
     }
 
     else {
-      alert(this.currentSectionOpen);
-      this.setCurrentSectionOpen(8);
 
-      if (true) {
 
+      if (this.getCurrentSectionOpenArtwork() == 0) {
+        this.setCurrentSectionOpen(8);
+        this.setCurrentSectionOpenArtwork(1);
+
+        this.openBackgroundColour();
+
+        alert("if 1" + this.currentSectionOpen);
       }
-      else if (true) {
-        //this.setCurrentSectionOpen(16);
-          //this.openArtwork();
+      else if (this.getCurrentSectionOpenArtwork() == 1) {
+        this.setCurrentSectionOpen(16);
+        this.openArtwork();
+
+        alert("if 1" + this.currentSectionOpen);
+
       }
 
     }
