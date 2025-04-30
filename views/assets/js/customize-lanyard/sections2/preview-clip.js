@@ -26,7 +26,7 @@ class PreviewClip {
 
     // Apply appropriate layout based on the lanyard type
     if (type === "one-end") {
-      if (attachment != "none" || attachment != "None") {
+      if (attachment == "none" || attachment == "None") {
         alert("attachment");
          this.applyOneEndAttachmentStyles(width);
       }
