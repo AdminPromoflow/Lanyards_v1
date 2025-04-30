@@ -219,7 +219,7 @@
   position: absolute;
   height: 0.7cm;
   width: 0.3cm;
-  top: -28%;
+  top: -38%;
 
   left: 22.8%;
   z-index: 2;
@@ -230,7 +230,7 @@
   position: absolute;
   height: 0.7cm;
   width: 0.3cm;
-  top: -28%;
+  top: -38%;
 
   right: 21.8%;
   z-index: 2;
@@ -304,7 +304,7 @@
   position: absolute;
   height: 0.88cm;
   width: 0.55cm;
-  top: -28%;
+  top: -38%;
   left: calc(23% + 0.032cm);
   z-index: 2;
 
@@ -313,7 +313,7 @@
   position: absolute;
   height: 0.88cm;
   width: 0.55cm;
-  top: -28%;
+  top: -38%;
 
   right: calc(22.0% + 0.032cm);
   z-index: 2;
