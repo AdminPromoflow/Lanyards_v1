@@ -164,15 +164,15 @@
   left: 50%;
   transform: translateX(-45%);
   height: 0.75cm;
-  width: 0.33cm;
+  width: 0.30cm;
 }
 
 .attachment-one-end-15mm{
   position: absolute;
   top: 28%;
   left: 50%;
-  transform: translateX(-47%);
-  height: 0.74cm;
+  transform: translateX(-48%);
+  height: 0.75cm;
   width: 0.32cm;
 }
 
@@ -191,19 +191,19 @@
   position: absolute;
   top: 28%;
   left: 50%;
-  transform: translateX(-43%);
+  transform: translateX(-45%);
   height: 0.82cm;
-  width: 0.44cm;
+  width: 0.47cm;
 }
 
 
 .attachment-one-end-30mm{
   position: absolute;
-  top: 29%;
+  top: 28%;
   left: 50%;
-  transform: translateX(-43%);
+  transform: translateX(-45%);
   height: 0.85cm;
-  width: 0.48cm;
+  width: 0.52cm;
 }
 
 
