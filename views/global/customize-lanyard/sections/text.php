@@ -1,13 +1,13 @@
 <?php
 function asset_version_text($filePath) {
-    $realPath = realpath(__DIR__ . $filePath);
-    return ($realPath && file_exists($realPath)) ? filemtime($realPath) : time();
+    // Convertir ruta relativa del navegador a ruta real en el servidor
+    $fullPath = realpath(__DIR__ . '/' . $filePath);
+    return ($fullPath && file_exists($fullPath)) ? filemtime($fullPath) : time();
 }
 
 $cssFile_text = "../../views/assets/css/global/customize-lanyard/sections/text.css";
-$jsFile_text = "../../views/assets/js/customize-lanyard/sections/text.js";
+$jsFile_text  = "../../views/assets/js/customize-lanyard/sections/text.js";
 $imgPath_text = "../../views/assets/img/global/customize-lanyard/sections/text/";
-
 ?>
 
 <!-- CSS -->
@@ -17,26 +17,30 @@ $imgPath_text = "../../views/assets/img/global/customize-lanyard/sections/text/"
   <h2>Text.</h2>
   <div id="containers-boxes-text" class="containers-boxes-text">
     <div class="containers-text1">
+
       <div class="item-text">
         <p>Type the text below, please.</p>
         <input id="textInput" type="text" name="" value="">
       </div>
+
       <div class="item-text inline-item-text">
-        <input  id="printable_area" type="checkbox"   >
+        <input id="printable_area" type="checkbox">
         <label for="printable_area">Select to view the printable area:</label>
         <p>This will not be printed on the lanyard; it is only for visualising the printable area.</p>
       </div>
+
       <div class="item-text">
         <p>Adjust the text position</p>
         <div class="containr-space-between-text">
           <div class="space-between-text-box" id="move_down_text">
-            <img src="<?= $imgPath_text ?>minus.png?v=<?= asset_version_text($imgPath_text . 'bottom.png') ?>" alt="">
+            <img src="<?= $imgPath_text ?>minus.png?v=<?= asset_version_text($imgPath_text . 'minus.png') ?>" alt="">
           </div>
           <div class="space-between-text-box" id="move_up_text">
-            <img src="<?= $imgPath_text ?>plus.png?v=<?= asset_version_text($imgPath_text . 'top.png') ?>" alt="">
+            <img src="<?= $imgPath_text ?>plus.png?v=<?= asset_version_text($imgPath_text . 'plus.png') ?>" alt="">
           </div>
         </div>
       </div>
+
       <div class="item-text">
         <p>Adjust the spacing between the text</p>
         <div class="containr-space-between-text">
@@ -48,17 +52,8 @@ $imgPath_text = "../../views/assets/img/global/customize-lanyard/sections/text/"
           </div>
         </div>
       </div>
-    <!--  <div class="item-text">
-        <p>Spacing along the lanyard edge</p>
-        <div class="containr-space-between-text">
-          <div class="space-between-text-box" id="decrease_space_along_lanyard">
-            <img src="<?= $imgPath_text ?>minus.png?v=<?= asset_version_text($imgPath_text . 'minus.png') ?>" alt="">
-          </div>
-          <div class="space-between-text-box" id="increase_space_along_lanyard">
-            <img src="<?= $imgPath_text ?>plus.png?v=<?= asset_version_text($imgPath_text . 'plus.png') ?>" alt="">
-          </div>
-        </div>
-      </div> -->
+
+      <!-- Repetir texto -->
       <div class="item-text">
         <p id="label-repeat-text">Repeat text</p>
         <div class="containr-repeat-text">
@@ -70,6 +65,7 @@ $imgPath_text = "../../views/assets/img/global/customize-lanyard/sections/text/"
           </div>
         </div>
       </div>
+
       <div class="item-text">
         <p>Select the Pantone reference below.</p>
         <div class="colour-text-select" id="colour-text-select">
@@ -77,6 +73,7 @@ $imgPath_text = "../../views/assets/img/global/customize-lanyard/sections/text/"
         </div>
         <div class="colour-text-select-container" id="colour-text-select-container"></div>
       </div>
+
       <div class="item-text">
         <p>Click to choose a font style:</p>
         <div class="type-text-select" id="type-text-select">
@@ -84,6 +81,7 @@ $imgPath_text = "../../views/assets/img/global/customize-lanyard/sections/text/"
         </div>
         <div class="type-text-select-container" id="type-text-select-container"></div>
       </div>
+
       <div class="item-text">
         <p>Choose the text styling</p>
         <div class="containr-styling-text">
@@ -98,6 +96,7 @@ $imgPath_text = "../../views/assets/img/global/customize-lanyard/sections/text/"
           </div>
         </div>
       </div>
+
       <div class="item-text">
         <p>Adjust the text size</p>
         <div class="containr-size-text">
