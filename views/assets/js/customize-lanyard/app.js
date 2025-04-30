@@ -208,6 +208,7 @@ class CustomizeLanyard {
       if else (this.getCurrentSectionOpenArtwork() == 1){
         this.setCurrentSectionOpen(16);
       }
+      alert(this.getCurrentSectionOpenArtwork());
     //  this.setCurrentSectionOpen(16);
       //  this.openArtwork();
     }
