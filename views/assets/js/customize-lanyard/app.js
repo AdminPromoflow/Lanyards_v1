@@ -206,6 +206,7 @@ class CustomizeLanyard {
     else {
       if (this.getCurrentSectionOpenArtwork() == 0) {
         if (this.actionNextOrPrevious == "next") {
+          alert("Debimos haber entrado por acá");
           this.setCurrentSectionOpen(8);
           this.setCurrentSectionOpenArtwork(1);
           this.openBackgroundColour();
