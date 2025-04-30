@@ -5,6 +5,7 @@ class CustomizeLanyard {
     this.currentSectionOpen = 0;
     this.actionNextOrPrevious = "";
     this.currentSectionOpenArtwork = 0;
+    this.nameCurrectSection = "material";
 
     // Suponiendo que closeCustomizeLanyard, preview y next están definidos en el contexto global
     this.initializeEventListeners();
@@ -15,6 +16,7 @@ class CustomizeLanyard {
   // Make an AJAX request to fetch all materials.
   material.makeAjaxRequestGetAllMaterials();
   }
+
 
   getLanyardsActive(){
     var lanyardActive;
@@ -167,8 +169,10 @@ class CustomizeLanyard {
   }
 
   changePreviewNextSection() {
+    alert("Pasamos al div:" + this.currentSectionOpen);
 
    if (this.currentSectionOpen == 0) {//Material
+
      this.openMaterial();
    }
    else if (this.currentSectionOpen == 1) { // Lanyard type
@@ -199,7 +203,7 @@ class CustomizeLanyard {
 
    else if (this.currentSectionOpen == 9) {
      alert("entramos al div 9");
-     alert(this.getCurrentSectionOpen() + "  " + this.getCurrentSectionOpenArtwork() + "  " + this.actionNextOrPrevious);
+    // alert(this.getCurrentSectionOpen() + "  " + this.getCurrentSectionOpenArtwork() + "  " + this.actionNextOrPrevious);
 
      if (artworkManualClass.getArtworkManual() == "manual"){
        this.openBackgroundColour();
@@ -227,7 +231,7 @@ class CustomizeLanyard {
          }
 
       }
-      alert(this.getCurrentSectionOpen() + "  " + this.getCurrentSectionOpenArtwork());
+    //  alert(this.getCurrentSectionOpen() + "  " + this.getCurrentSectionOpenArtwork());
     //  this.setCurrentSectionOpen(16);
       //  this.openArtwork();
     }
