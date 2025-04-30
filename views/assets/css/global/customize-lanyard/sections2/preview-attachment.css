@@ -124,14 +124,13 @@
 
 .preview-attachment-class{
   position: absolute;
-  top: 50%;
+  top: 70%;
   left: 50%;
   transform: translateX(-50%);
   height: 100px;
   width: 150px;
   display: none;
   z-index: 2;
-  background-color: orange;
 }
 
 
