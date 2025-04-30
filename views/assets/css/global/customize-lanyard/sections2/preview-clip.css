@@ -40,6 +40,31 @@
 }
 
 
+.clip_one_end_attachment_10mm{
+  height: 40%;
+  width: 15%;
+  display: none;
+}
+.clip_one_end_attachment_15mm{
+  height: 45.3%;
+  width: 17%;
+}
+.clip_one_end_attachment_20mm{
+  height: 58.9%;
+  width: 22.1%;
+}
+.clip_one_end_attachment_25mm{
+  height: 78%;
+  width: 26%;
+}
+.clip_one_end_attachment_30mm{
+  height: 79%;
+  width: 30%;
+}
+
+
+
+
 
 
 .clips{

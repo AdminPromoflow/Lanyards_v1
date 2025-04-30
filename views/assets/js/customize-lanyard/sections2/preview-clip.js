@@ -18,12 +18,16 @@ class PreviewClip {
   showPreviewSelectedClip() {
     const type = oneTwoEndsClass.getTypeLanyardSelected();
     const width = widthClass.getWidthSelected();
+    const attachment = attachmentClass.getAttachmentSelected();
 
     this.updateClipImagesSrc();  // Update the image sources
     this.cleanStyle();           // Remove all styles and reset classes
 
     // Apply appropriate layout based on the lanyard type
     if (type === "one-end") {
+      //if (true) {
+
+    //  }
       this.applyOneEndStyles(width);
     } else if (type === "two-end") {
       this.applyTwoEndStyles(width);
@@ -70,6 +74,42 @@ class PreviewClip {
         console.warn("Unrecognized width:", width);
     }
   }
+
+
+
+  applyOneEndAttachmentStyles(width) {
+    if (!this.centerClip) return;
+
+    // Hide left and right clips, show center
+    this.leftClip.style.display = "none";
+    this.rightClip.style.display = "none";
+    this.centerClip.style.display = "block";
+
+    // Add specific class for center clip depending on width
+    switch (width) {
+      case "10mm":
+        this.centerClip.classList.add("clip_one_end_attachment_10mm");
+        break;
+      case "15mm":
+        this.centerClip.classList.add("clip_one_end_attachment_15mm");
+        break;
+      case "20mm":
+        this.centerClip.classList.add("clip_one_end_attachment_20mm");
+        break;
+      case "25mm":
+        this.centerClip.classList.add("clip_one_end_attachment_25mm");
+        break;
+      case "30mm":
+        this.centerClip.classList.add("clip_one_end_attachment_30mm");
+        break;
+      default:
+        console.warn("Unrecognized width:", width);
+    }
+  }
+
+
+
+
 
   // Apply styles for "two-end" layout based on the selected width
   applyTwoEndStyles(width) {
