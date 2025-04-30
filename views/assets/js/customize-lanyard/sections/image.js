@@ -48,7 +48,7 @@ class ImageClass {
 
 
       move_up_image.addEventListener("click", function(){
-        if (imageClass.getImagePosition() <4) {
+        if (imageClass.getImagePosition() <0) {
           imageClass.setImagePosition(imageClass.getImagePosition() + 1);
           previewManual.refreshImageLanyard();
 
