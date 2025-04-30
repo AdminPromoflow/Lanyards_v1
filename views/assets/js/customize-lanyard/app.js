@@ -254,6 +254,7 @@ class CustomizeLanyard {
    }
 
    else if (this.currentSectionOpen == 11) {
+     alert("Entramos al div 11 haha" + artworkManualClass.getArtworkManual());
 
      if (artworkManualClass.getArtworkManual() == "manual"){
        //this.openText();
@@ -261,7 +262,7 @@ class CustomizeLanyard {
   //  artworkManualClass.containerBoxesArtworkManual();
     }
     else {
-        
+
 
         this.setCurrentSectionOpen(16);
         this.openArtwork();
