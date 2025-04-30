@@ -447,6 +447,7 @@ overflow: hidden;
   width: 0.336cm;
 
   transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
+  overflow: hidden;
 }
 .right-super-lanyard-one-end-25mm-attachment-manual{
   overflow: hidden;
