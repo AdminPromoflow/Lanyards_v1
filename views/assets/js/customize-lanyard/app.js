@@ -245,11 +245,8 @@ class CustomizeLanyard {
    else if (this.currentSectionOpen == 10) {
 
      if (artworkManualClass.getArtworkManual() == "manual"){
-       //this.openArtWorkManual();
-       //artworkManualClass.containerBoxesArtworkManual()
+       alert(artworkManualClass.getArtworkManual());
         this.openText();
-      //  artworkManualClass.containerBoxesArtworkManual();
-
     }
     else {
 
@@ -260,7 +257,6 @@ class CustomizeLanyard {
    else if (this.currentSectionOpen == 11) {
 
      if (artworkManualClass.getArtworkManual() == "manual"){
-       //this.openText();
     this.openImage();
   //  artworkManualClass.containerBoxesArtworkManual();
     }
@@ -278,7 +274,6 @@ class CustomizeLanyard {
 
    else if (this.currentSectionOpen == 12) {
 
-       //this.openText();
     this.openArtworkFinal();
   //  artworkManualClass.containerBoxesArtworkManual();
    }
@@ -308,7 +303,6 @@ class CustomizeLanyard {
    else if (this.currentSectionOpen == 15) {
 
      if (artworkManualClass.getArtworkManual() == "manual"){
-       //this.openText();
     this.openCheckout();
   //  artworkManualClass.containerBoxesArtworkManual();
     }
