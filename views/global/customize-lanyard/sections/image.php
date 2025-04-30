@@ -30,10 +30,10 @@ function asset_version($path) {
         <p>Adjust the image position</p>
         <div class="containr-space-between-image">
           <div class="space-between-image-box" id="move_down_image">
-            <img src="../../views/assets/img/global/customize-lanyard/sections/image/bottom.png?v=<?=asset_version('../../views/assets/img/global/customize-lanyard/sections/image/bottom.png')?>" alt="">
+            <img src="../../views/assets/img/global/customize-lanyard/sections/image/bottom.png?v=<?=asset_version('../../views/assets/img/global/customize-lanyard/sections/image/top.png')?>" alt="">
           </div>
           <div class="space-between-image-box" id="move_up_image">
-            <img src="../../views/assets/img/global/customize-lanyard/sections/image/top.png?v=<?=asset_version('../../views/assets/img/global/customize-lanyard/sections/image/top.png')?>" alt="">
+            <img src="../../views/assets/img/global/customize-lanyard/sections/image/top.png?v=<?=asset_version('../../views/assets/img/global/customize-lanyard/sections/image/bottom.png')?>" alt="">
           </div>
         </div>
       </div>

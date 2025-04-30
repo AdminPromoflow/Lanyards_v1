@@ -33,10 +33,10 @@ $imgPath_text = "../../views/assets/img/global/customize-lanyard/sections/text/"
         <p>Adjust the text position</p>
         <div class="containr-space-between-text">
           <div class="space-between-text-box" id="move_down_text">
-            <img src="<?= $imgPath_text ?>minus.png?v=<?= asset_version_text($imgPath_text . 'minus.png') ?>" alt="">
+            <img src="<?= $imgPath_text ?>minus.png?v=<?= asset_version_text($imgPath_text . 'top.png') ?>" alt="">
           </div>
           <div class="space-between-text-box" id="move_up_text">
-            <img src="<?= $imgPath_text ?>plus.png?v=<?= asset_version_text($imgPath_text . 'plus.png') ?>" alt="">
+            <img src="<?= $imgPath_text ?>plus.png?v=<?= asset_version_text($imgPath_text . 'bottom.png') ?>" alt="">
           </div>
         </div>
       </div>
