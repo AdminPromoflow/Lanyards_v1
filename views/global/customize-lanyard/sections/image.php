@@ -25,6 +25,19 @@ function asset_version($path) {
         <p>This will not be printed on the lanyard; it is only for visualising the printable area.</p>
       </div>
 
+
+      <div class="item-text">
+        <p>Adjust the image position</p>
+        <div class="containr-space-between-image">
+          <div class="space-between-image-box" id="move_down_image">
+            <img src="../../views/assets/img/global/customize-lanyard/sections/image/bottom.png?v=<?=asset_version('../../views/assets/img/global/customize-lanyard/sections/image/bottom.png')?>" alt="">
+          </div>
+          <div class="space-between-image-box" id="move_up_image">
+            <img src="../../views/assets/img/global/customize-lanyard/sections/image/top.png?v=<?=asset_version('../../views/assets/img/global/customize-lanyard/sections/image/top.png')?>" alt="">
+          </div>
+        </div>
+      </div>
+
       <div class="item-image">
         <p>Adjust the spacing between the image</p>
         <div class="containr-space-between-image">

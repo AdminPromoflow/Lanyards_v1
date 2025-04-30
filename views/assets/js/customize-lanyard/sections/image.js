@@ -7,6 +7,7 @@ class ImageClass {
       this.spaceAlongLanyard = 0;
       this.printableArea = false;
       this.linkImage = "";
+      this.imagePosition = -50;
 
 
 
@@ -31,6 +32,29 @@ class ImageClass {
       });
 
 
+
+
+
+      const move_down_image = document.getElementById("move_down_image");
+      const move_up_image = document.getElementById("move_up_image");
+
+      move_down_image.addEventListener("click", function(){
+        if (imageClass.getImagePosition() > -100) {
+          imageClass.setImagePosition(imageClass.getImagePosition() - 1);
+          previewManual.refreshImageLanyard();
+        }
+
+      })
+
+
+      move_up_image.addEventListener("click", function(){
+        if (imageClass.getImagetPosition() <4) {
+          imageClass.setImagePosition(imageClass.getImagePosition() + 1);
+          previewManual.refreshImageLanyard();
+
+        }
+
+      })
 
 
 
@@ -266,6 +290,13 @@ class ImageClass {
     }
     getPrintableAreaImage(){
       return this.printableAreaImage;
+    }
+
+    setImagePosition(value){
+      this.imagePosition = value;
+    }
+    getImagePosition(){
+      return this.imagePosition;
     }
 
 

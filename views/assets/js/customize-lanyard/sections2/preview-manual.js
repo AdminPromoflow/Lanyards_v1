@@ -202,6 +202,7 @@ class PreviewManual {
   refreshImageLanyard() {
   //  this.uploadImage();
     this.addImageLanyard();
+    this.modifyImagePosition();
     this.modifySpaceBetweenImage();
     this.modifyImageSize();
     this.modifyImageRotation();
@@ -269,6 +270,11 @@ class PreviewManual {
       });
     }
 
+  }
+
+  modifyImagePosition(){
+    this.img_lanyard_left.style.top = textClass.getImagePosition() + "%";
+    this.img_lanyard_right.style.top = textClass.getImagePosition() + "%";
   }
 
   modifySpaceAlongLanyardImage() {
