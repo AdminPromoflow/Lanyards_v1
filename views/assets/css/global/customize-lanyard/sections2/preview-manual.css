@@ -695,8 +695,7 @@ overflow: hidden;
   margin: 0;
   padding: 0;
   width: 100%;
-
-  transform: rotate(0deg)  translateY(-2000%);
+  transform: rotate(0deg)  translateY(-200%);
 }
 .wrap_img_1 img {
   position: absolute;
