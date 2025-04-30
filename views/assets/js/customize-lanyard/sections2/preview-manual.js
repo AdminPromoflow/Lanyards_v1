@@ -182,9 +182,14 @@ class PreviewManual {
       // Obtener el ancho de text_lanyard_right
       const rightWidth = text_lanyard_right.offsetWidth;
 
+
+
+
+
       wrapElements[i].style.left = "50%";
 
-      wrapElements[i].style.transform = `translateX(-50%)`;    }
+      wrapElements[i].style.transform = `rotate(90deg) translateX(-50%)`;
+    }
   }
 
   togglePreviewManualClass(action) {
