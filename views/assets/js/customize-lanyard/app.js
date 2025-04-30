@@ -199,6 +199,7 @@ class CustomizeLanyard {
    }
 
    else if (this.currentSectionOpen == 9) {
+     alert("entramos al div 9");
      alert(this.getCurrentSectionOpen() + "  " + this.getCurrentSectionOpenArtwork() + "  " + this.actionNextOrPrevious);
 
      if (artworkManualClass.getArtworkManual() == "manual"){
