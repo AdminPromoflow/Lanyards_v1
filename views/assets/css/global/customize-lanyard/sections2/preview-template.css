@@ -526,19 +526,33 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .top_left_clip-one-end-15mm-attachment{
   position: absolute;
-  bottom: 100.68%;
-  height: 0.35cm;
-  width: 0.31cm;
-  left: 11.4%;
+  bottom: 101.5%;
+  height: 0.3cm;
+  width: 0.25cm;
+  left: 11.8%;
 }
 .top_right_clip-one-end-15mm-attachment{
   position: absolute;
-  bottom: 100.68%;
-  height: 0.35cm;
-  width: 0.31cm;
-  right:  11.2%;
+  bottom: 101.5%;
+  height: 0.3cm;
+  width: 0.25cm;
+  right:  10.5%;
 }
 
 .left-super-lanyard-one-end-15mm-attachment{
