@@ -189,7 +189,7 @@
 
 .attachment-one-end-25mm{
   position: absolute;
-  top: 28%;
+  top: 27.7%;
   left: 50%;
   transform: translateX(-45%);
   height: 0.82cm;
@@ -199,9 +199,9 @@
 
 .attachment-one-end-30mm{
   position: absolute;
-  top: 28%;
+  top: 27.5%;
   left: 50%;
-  transform: translateX(-45%);
+  transform: translateX(-48%);
   height: 0.85cm;
   width: 0.52cm;
 }
