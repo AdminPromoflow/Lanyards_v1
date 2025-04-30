@@ -273,8 +273,12 @@ class PreviewManual {
   }
 
   modifyImagePosition(){
-    this.img_lanyard_left.style.top = textClass.getImagePosition() + "%";
-    this.img_lanyard_right.style.top = textClass.getImagePosition() + "%";
+    const image_lanyard_left = document.getElementById("img_lanyard_left");
+    const image_lanyard_right = document.getElementById("img_lanyard_right");
+
+
+    image_lanyard_left.style.top = textClass.getImagePosition() + "%";
+    image_lanyard_right.style.top = textClass.getImagePosition() + "%";
   }
 
   modifySpaceAlongLanyardImage() {
