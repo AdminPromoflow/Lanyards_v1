@@ -1,6 +1,6 @@
 <?php
 // Function to get the last modified timestamp of the file
-function get_customize_lanyard_file_version2($filePath) {
+function get_customize_lanyard_file_version($filePath) {
     if (file_exists($filePath)) {
         return filemtime($filePath);
     }
@@ -12,7 +12,7 @@ $customize_lanyard_js = "../../views/assets/js/customize-lanyard/app.js";
 ?>
 
 <!-- Link CSS with versioning -->
-<link rel="stylesheet" href="<?php echo $customize_lanyard_css . '?v=' . get_customize_lanyard_file_version2($customize_lanyard_css); ?>">
+<link rel="stylesheet" href="<?php echo $customize_lanyard_css . '?v=' . get_customize_lanyard_file_version($customize_lanyard_css); ?>">
 
 <section id="customize-lanyard" class="customize-lanyard">
   <?php //include "../../views/global/customize-lanyard/customize-lanyard.php" ?>
@@ -79,4 +79,4 @@ $customize_lanyard_js = "../../views/assets/js/customize-lanyard/app.js";
 </section>
 
 <!-- Include JS with versioning -->
-<script src="<?php echo $customize_lanyard_js . '?v=' . get_customize_lanyard_file_version2($customize_lanyard_js); ?>"></script>
+<script src="<?php echo $customize_lanyard_js . '?v=' . get_customize_lanyard_file_version($customize_lanyard_js); ?>"></script>

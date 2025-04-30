@@ -1,11 +1,9 @@
 class CustomizeLanyard {
   constructor() {
     this.jsonLanyards = "";
-    this.noColours = "one-colour";
     this.currentSectionOpen = 0;
     this.actionNextOrPrevious = "";
     this.currentSectionOpenArtwork = 0;
-    this.nameCurrectSection = "material";
 
     // Suponiendo que closeCustomizeLanyard, preview y next están definidos en el contexto global
     this.initializeEventListeners();
@@ -15,6 +13,10 @@ class CustomizeLanyard {
 
   // Make an AJAX request to fetch all materials.
   material.makeAjaxRequestGetAllMaterials();
+  }
+  cleanValues(){
+    this.currentSectionOpen = 0;
+    this.currentSectionOpenArtwork = 0;
   }
 
 
@@ -100,7 +102,10 @@ class CustomizeLanyard {
     const next = document.getElementById("next");
 
     if (closeCustomizeLanyard) {
-      closeCustomizeLanyard.addEventListener("click", () => this.openCustomizeLanyard(false));
+      closeCustomizeLanyard.addEventListener("click", () => {
+        this.openCustomizeLanyard(false);
+        this.cleanValues();
+      });
     }
 
     if (preview) {
@@ -111,6 +116,7 @@ class CustomizeLanyard {
       next.addEventListener("click", () => this.handleNextClick());
     }
   }
+
 
   handlePreviewClick() {
     if (this.currentSectionOpen > 0) {
