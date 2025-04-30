@@ -195,6 +195,8 @@ class CustomizeLanyard {
 
     else {
       alert(this.currentSectionOpen);
+      this.setCurrentSectionOpen(8);
+
       if (true) {
 
       }
