@@ -436,6 +436,7 @@ class CustomizeLanyard {
 
 
     previewAccessoriesClass.showAccessoriesPreview("flex");
+    artworkPreviewClass.showHidePreviewArtwork(false);
 
     previewArtworkManualClass.showArtworkManualPreview("none");
     previewLanyardType.showTypeLanyardPreview("flex");
