@@ -305,8 +305,8 @@ class CustomizeLanyard {
     }
     else {
       if (this.actionNextOrPrevious == "preview") {
-        this.setCurrentSectionOpen(8);
-        this.openArtWorkManual();
+        this.setCurrentSectionOpen(9);
+        this.openArtWork();
       }
       if (this.actionNextOrPrevious == "next") {
         this.setCurrentSectionOpen(15);
@@ -316,7 +316,7 @@ class CustomizeLanyard {
    }
    else if (this.currentSectionOpen == 16) {
      if (menuClass.getActiveSession() && this.actionNextOrPrevious == "preview") {
-       alert(menuClass.getActiveSession());
+      // alert(menuClass.getActiveSession());  // aca nunca entra
        this.setCurrentSectionOpen(8);
        this.openArtWorkManual();
      }
