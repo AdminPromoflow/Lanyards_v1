@@ -92,7 +92,6 @@ class CustomizeLanyard {
     }
 
     return lanyardActive;
-  //  alert(lanyardType + width + attachment);
   }
 
 
@@ -174,7 +173,6 @@ class CustomizeLanyard {
   }
 
   changePreviewNextSection() {
-    alert("Pasamos al div: Pero no nos estamos actualizando" + this.currentSectionOpen);
 
    if (this.currentSectionOpen == 0) {//Material
 
@@ -202,17 +200,13 @@ class CustomizeLanyard {
      this.openColourQuantity();
    }
    else if (this.currentSectionOpen == 8) {//Artwork - Manual
-     alert("Con esto sabemos si nos estamos actualizando");
 
      this.openArtWorkManual();
      this.setCurrentSectionOpenArtwork(0);
 
-     //artworkPreviewClass.showHidePreviewArtwork(false);
    }
 
    else if (this.currentSectionOpen == 9) {
-     alert("entramos al div 9");
-    // alert(this.getCurrentSectionOpen() + "  " + this.getCurrentSectionOpenArtwork() + "  " + this.actionNextOrPrevious);
 
      if (artworkManualClass.getArtworkManual() == "manual"){
        this.openBackgroundColour();
@@ -225,7 +219,6 @@ class CustomizeLanyard {
           this.setCurrentSectionOpen(8);
         }
         else if (this.actionNextOrPrevious == "preview") {
-          alert("Entramos a preview 0");
 
         }
 
@@ -236,13 +229,10 @@ class CustomizeLanyard {
             this.openArtwork();
          }
          else if(this.actionNextOrPrevious == "preview"){
-           alert("Entramos a preview 1");
          }
 
       }
-    //  alert(this.getCurrentSectionOpen() + "  " + this.getCurrentSectionOpenArtwork());
-    //  this.setCurrentSectionOpen(16);
-      //  this.openArtwork();
+
     }
    }
 
@@ -262,7 +252,6 @@ class CustomizeLanyard {
    }
 
    else if (this.currentSectionOpen == 11) {
-     alert("Entramos al div 11 haha" + artworkManualClass.getArtworkManual());
 
      if (artworkManualClass.getArtworkManual() == "manual"){
        //this.openText();
@@ -289,7 +278,6 @@ class CustomizeLanyard {
        this.openLogin();
      }
      else if (menuClass.getActiveSession() && this.actionNextOrPrevious == "preview") {
-       //alert("entramos a preview");
       this.setCurrentSectionOpen(12);
       this.openArtworkFinal();
      }
@@ -328,13 +316,10 @@ class CustomizeLanyard {
     }
    }
    else if (this.currentSectionOpen == 16) {
-     alert("Este es el div 16");
      if (menuClass.getActiveSession() && this.actionNextOrPrevious == "preview") {
-      // alert(menuClass.getActiveSession());  // aca nunca entra
        this.setCurrentSectionOpen(8);
        this.openArtWorkManual();
      }
-       alert("algo raro pasa aca");
 
    }
    else if (this.currentSectionOpen == 17) {
@@ -453,7 +438,6 @@ class CustomizeLanyard {
     this.showCurrentSection(this.currentSectionOpen);
   }
   openText(){
-    alert("Al abrir text the currect section was " + this.currentSectionOpen);
     previewTemplate.togglePreviewTemplateClass("block");
 
     previewLanyardType.showTypeLanyardPreview("flex");
@@ -477,7 +461,6 @@ class CustomizeLanyard {
     previewLanyardType.showTypeLanyardPreview("none");
     previewArtworkManualClass.showArtworkManualPreview("none");
     this.showCurrentSection(this.currentSectionOpen);
-    // alert("hola2");
   }
 
   openArtworkFinal(){
