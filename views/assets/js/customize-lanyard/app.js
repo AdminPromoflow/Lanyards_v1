@@ -197,13 +197,13 @@ class CustomizeLanyard {
    }
    else if (this.currentSectionOpen == 8) {//Artwork - Manual
      this.openArtWorkManual();
-     //artworkPreviewClass.showHidePreviewArtwork(false);
+     this.setCurrentSectionOpenArtwork(0);
+
    }
 
    else if (this.currentSectionOpen == 9) {
      if (artworkManualClass.getArtworkManual() == "manual"){
        this.openBackgroundColour();
-       this.setCurrentSectionOpenArtwork(0);
 
     }
 
