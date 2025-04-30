@@ -168,7 +168,7 @@ class CustomizeLanyard {
   }
 
   changePreviewNextSection() {
-    alert("Pasamos al div:" + this.currentSectionOpen);
+    alert("Pasamos al div: Pero no nos estamos actualizando" + this.currentSectionOpen);
 
    if (this.currentSectionOpen == 0) {//Material
 
