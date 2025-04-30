@@ -14,11 +14,12 @@
       }
       .container-preview-template{
         position: absolute;
-        top: 10.0%;
+        top: 5.0%;
         left: 50%;
         transform: translateX(-50%);
         height: 7.2cm;
         width: 105px;
+        background-color: orange;
       /*  display: none;*/
       }
       .super-lanyard{
