@@ -297,7 +297,6 @@ class CustomizeLanyard {
 
    }
    else if (this.currentSectionOpen == 15) {
-     alert("Acabamos de entrar a la seccion 15");
 
      if (artworkManualClass.getArtworkManual() == "manual"){
        //this.openText();
@@ -306,6 +305,8 @@ class CustomizeLanyard {
     }
     else {
       if (this.actionNextOrPrevious == "preview") {
+        alert("Acabamos de entrar a la seccion 15 para artwork y para preview");
+
         this.setCurrentSectionOpen(9);
         this.openArtWork();
       }
