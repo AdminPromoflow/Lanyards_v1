@@ -153,7 +153,6 @@ class CustomizeLanyard {
   }
 
   showCurrentSection(currentSection) {
-    alert("la seccion que se esta mostrando es" + currentSection);
     const sections = document.querySelectorAll(".section");
 
     sections.forEach((section, index) => {
