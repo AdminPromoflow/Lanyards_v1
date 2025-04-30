@@ -240,7 +240,7 @@
   position: absolute;
   height: 0.74cm;
   width: 0.32cm;
-  top: 28%;
+  top: -48%;
 
   left: calc(22.8% + 0.02cm);
   z-index: 2;
@@ -250,7 +250,7 @@
   position: absolute;
   height: 0.74cm;
   width: 0.32cm;
-  top: 28%;
+  top: -48%;
 
   right: calc(21.8% + 0.02cm);
   z-index: 2;
@@ -261,7 +261,7 @@
   position: absolute;
   height: 0.78cm;
   width: 0.38cm;
-  top: 28%;
+  top: -48%;
 
   left: calc(22.8% + 0.03cm);
   z-index: 2;
@@ -271,7 +271,7 @@
   position: absolute;
   height: 0.78cm;
   width: 0.38cm;
-  top: 28%;
+  top: -48%;
 
   right: calc(22.0% + 0.03cm);
   z-index: 2;
@@ -282,7 +282,7 @@
   position: absolute;
   height: 0.82cm;
   width: 0.44cm;
-  top: 28%;
+  top: -48%;
 
   left: calc(23% + 0.032cm);
   z-index: 2;
@@ -292,7 +292,7 @@
   position: absolute;
   height: 0.82cm;
   width: 0.44cm;
-  top: 28%;
+  top: -48%;
 
   right: calc(22.0% + 0.032cm);
 
