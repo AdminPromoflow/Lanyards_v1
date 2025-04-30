@@ -306,9 +306,10 @@ class CustomizeLanyard {
     else {
       if (this.actionNextOrPrevious == "preview") {
         //this.setCurrentSectionOpenArtwork(1);
-        this.openBackgroundColour();
         this.setCurrentSectionOpen(8);
-        alert(this.getCurrentSectionOpenArtwork());
+
+        this.openBackgroundColour();
+        alert(this.getCurrentSectionOpenArtwork() );
       }
       if (this.actionNextOrPrevious == "next") {
         this.setCurrentSectionOpen(15);
