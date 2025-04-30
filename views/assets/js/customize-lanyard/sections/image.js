@@ -6,7 +6,7 @@ class ImageClass {
       this.imageRotation = 0;
       this.spaceAlongLanyard = 0;
       this.printableArea = false;
-      this.linkImage = "../../views/assets/img/Test/arrow2.png";
+      this.linkImage = "";
 
 
 
