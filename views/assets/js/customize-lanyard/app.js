@@ -198,6 +198,7 @@ class CustomizeLanyard {
    else if (this.currentSectionOpen == 8) {//Artwork - Manual
      this.openArtWorkManual();
      this.setCurrentSectionOpenArtwork(0);
+     alert("Con esto sabemos si nos estamos actualizando");
 
      //artworkPreviewClass.showHidePreviewArtwork(false);
    }
