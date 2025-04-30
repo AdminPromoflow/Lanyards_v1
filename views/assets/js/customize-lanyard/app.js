@@ -25,66 +25,66 @@ class CustomizeLanyard {
 
     if (lanyardType == 'one-end' && width == '10mm' && attachment == 'none') {
       lanyardActive = document.querySelectorAll('.draw-os-10mm');
-      //alert("hola");
+
     }
 
     else if (lanyardType == 'one-end' && width == '15mm' && attachment == 'none') {
       lanyardActive = document.querySelectorAll('.draw-os-15mm');
-      //alert("hola");
+
     }
     else if (lanyardType == 'one-end' && width == '20mm' && attachment == 'none') {
       lanyardActive = document.querySelectorAll('.draw-os-20mm');
-      //alert("hola");
+
     }
     else if (lanyardType == 'one-end' && width == '25mm' && attachment == 'none') {
       lanyardActive = document.querySelectorAll('.draw-os-25mm');
-      //alert("hola");
+
     }
     else if (lanyardType == 'one-end' && width == '30mm' && attachment == 'none') {
       lanyardActive = document.querySelectorAll('.draw-os-30mm');
-      //alert("hola");
+
     }
 
     else if (lanyardType == 'two-end' && width == '10mm') {
       lanyardActive = document.querySelectorAll('.draw-ts-10mm');
-      //alert("hola");
+
     }
     else if (lanyardType == 'two-end' && width == '15mm') {
       lanyardActive = document.querySelectorAll('.draw-ts-15mm');
-      //alert("hola");
+
     }
     else if (lanyardType == 'two-end' && width == '20mm') {
       lanyardActive = document.querySelectorAll('.draw-ts-20mm');
-      //alert("hola");
+
     }
     else if (lanyardType == 'two-end' && width == '25mm') {
       lanyardActive = document.querySelectorAll('.draw-ts-25mm');
-      //alert("hola");
+
     }
     else if (lanyardType == 'two-end' && width == '30mm') {
       lanyardActive = document.querySelectorAll('.draw-ts-30mm');
-      //alert("hola");
+
     }
     else if (lanyardType == 'one-end' && width == '10mm' && attachment != 'none') {
      lanyardActive = document.querySelectorAll('.draw-os-wa-10mm');
-      //alert("hola");
+
     }
 
     else if (lanyardType == 'one-end' && width == '15mm' && attachment != 'none') {
       lanyardActive = document.querySelectorAll('.draw-os-wa-15mm');
-      //alert("hola");
+
     }
     else if (lanyardType == 'one-end' && width == '20mm' && attachment != 'none') {
       lanyardActive = document.querySelectorAll('.draw-os-wa-20mm');
-      //alert("hola");
+
     }
     else if (lanyardType == 'one-end' && width == '25mm' && attachment != 'none') {
       lanyardActive = document.querySelectorAll('.draw-os-wa-25mm');
-      //alert("hola");
+
     }
     else if (lanyardType == 'one-end' && width == '30mm' && attachment != 'none') {
       lanyardActive = document.querySelectorAll('.draw-os-wa-30mm');
-      //alert("hola");
+
     }
 
     return lanyardActive;
@@ -167,7 +167,6 @@ class CustomizeLanyard {
   }
 
   changePreviewNextSection() {
-    //alert(this.currentSectionOpen);
 
    if (this.currentSectionOpen == 0) {//Material
      this.openMaterial();
@@ -298,6 +297,7 @@ class CustomizeLanyard {
 
    }
    else if (this.currentSectionOpen == 15) {
+     alert("Acabamos de entrar a la seccion 15");
 
      if (artworkManualClass.getArtworkManual() == "manual"){
        //this.openText();
@@ -322,9 +322,8 @@ class CustomizeLanyard {
        this.setCurrentSectionOpen(8);
        this.openArtWorkManual();
      }
-     else {
        alert("algo raro pasa aca");
-     }
+
    }
    else if (this.currentSectionOpen == 17) {
      if (artworkManualClass.getArtworkManual() == "manual"){
