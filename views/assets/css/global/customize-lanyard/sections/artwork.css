@@ -52,10 +52,9 @@
   position: relative;
   width: 100%;
   padding: 1px 1px;
-  background: green;
 
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: row;
   flex-wrap: wrap;
 
