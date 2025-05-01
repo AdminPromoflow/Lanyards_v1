@@ -32,14 +32,7 @@ class Artwork {
                 img.onload = function() {
                   alert(img.src);
 
-                    /*  if (img.width >= 12 && img.height >= 4) {
-                      //  artworkPreviewClass.uploadArtwork(img.src, i);
 
-
-                    //  artworkPreviewClassFinal.assignArtworkToLanyard(img.src, i);
-                    } else {
-                        alert('La imagen debe tener al menos 1287px de ancho y 54px de alto.');
-                    }*/
                 };
             };
 
