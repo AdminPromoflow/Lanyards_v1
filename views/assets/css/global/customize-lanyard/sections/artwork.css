@@ -48,6 +48,18 @@
   overflow-y: scroll;
   overflow-x: hidden;
 }
+.container_download_files_artwork{
+  position: relative;
+  width: 100%;
+  padding: 1px 1px;
+  background: green;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
 /* Style for the scrollbar in WebKit browsers */
 .containers_boxes_artwork::-webkit-scrollbar {
     width: 13px; /* Width of the scrollbar */
