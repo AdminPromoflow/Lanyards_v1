@@ -57,7 +57,7 @@ class Artwork {
     });
 }
 
-  this.changeWidthRightPanel();
+  //this.changeWidthRightPanel();
 
   }
   showHideArtwork(active){
