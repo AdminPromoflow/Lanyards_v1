@@ -27,7 +27,8 @@
 }
 .backgroundSection p{
   position: relative;
-  color: white;
+  color: rgba(255, 255, 255, .7);
+  justify-content: center;
   width: 90%;
   left: 50%;
   transform: translateX(-50%);
