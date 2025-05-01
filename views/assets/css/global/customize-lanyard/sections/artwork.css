@@ -63,28 +63,28 @@
 .container_download_files_artwork a{
   all: unset;
   cursor: pointer;
-  padding: 5px;
+  padding: 8px 0 0 0;
   background-color: rgba(0, 0, 0, .2);
   border-radius: 5px;
   color: white;
 }
 /* Style for the scrollbar in WebKit browsers */
-.containers_boxes_artwork::-webkit-scrollbar {
+.artworkSection::-webkit-scrollbar {
     width: 13px; /* Width of the scrollbar */
 }
 
-.containers_boxes_artwork::-webkit-scrollbar-thumb {
+.artworkSection::-webkit-scrollbar-thumb {
     background: #091d2c; /* Dark blue color for the draggable part */
     border-radius: 5px; /* Rounded corners for the draggable part */
     border: 1px solid rgba(255, 255, 255, .5); /* Semi-transparent white border for better contrast */
 }
 
-.containers_boxes_artwork::-webkit-scrollbar-track {
+.artworkSection::-webkit-scrollbar-track {
     background: rgba(255, 255, 255, .4); /* Light grey background color */
     border-radius: 10px; /* Rounded corners for the track */
 }
 
-.containers_boxes_artwork::-webkit-scrollbar-thumb:hover {
+.artworkSection::-webkit-scrollbar-thumb:hover {
     background: #132735; /* Darker color when hovering over the scrollbar */
 }
 .container_boxes_artwork{
