@@ -28,7 +28,7 @@
   align-items: center;
   flex-direction: column;
   cursor: pointer;
-  background: rgba(48, 79, 112, 1);
+  background: rgba(48, 79, 112, .7);
   border: 2px solid transparent;
 }
 .box-previewArtwork:nth-child(1){
@@ -74,7 +74,6 @@
     color: rgba(24, 41, 66, 1);
     font-size: 0.95em;
     font-weight: 900;
-    background-color: green;
   }
   .measures-previewArtwork-width{
     position: absolute;
