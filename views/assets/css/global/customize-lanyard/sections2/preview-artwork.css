@@ -55,6 +55,7 @@
   border-top: 1px dashed white;
   border-right: 1px dashed white;
   border-left: 1px dashed white;
+  display: none;
 }
   .measures-previewArtwork-long h4{
     position: absolute;
@@ -77,6 +78,7 @@
     border-top: 1px dashed white;
     border-right: 1px dashed white;
     border-bottom: 1px dashed white;
+    display: none;
   }
  .measures-previewArtwork-width h4{
    position: absolute;
