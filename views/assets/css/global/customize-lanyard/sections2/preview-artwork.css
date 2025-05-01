@@ -39,6 +39,7 @@
   position: relative;
 
   border: 1px solid white;
+  overflow: visible;
 }
 .anyard-artwork img{
   position: absolute;
