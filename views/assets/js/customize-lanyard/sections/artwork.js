@@ -60,7 +60,7 @@ class Artwork {
                 img.src = e.target.result;
 
                 img.onload = function() {
-                    alert(img.src);
+                  //  alert(img.src);
                 };
             };
 
