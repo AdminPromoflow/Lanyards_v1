@@ -102,7 +102,7 @@ class ArtworkPreviewClass {
 
 
   applyClassToGroupArtwork(leftClass = "", rightClass = "") {
-    alert(widthClass.getWidthSelected());
+    alert(leftClass + "  " + rightClass);
     const el = this.elements;
 
     if (leftClass) el.left.classList.add(leftClass);
