@@ -6,7 +6,7 @@ class ArtworkPreviewClass {
         artworkPreviewClass.borderWhite(i);
       })
     }
-  }
+  } 
   showHidePreviewArtwork(active){
     if (active) {
       previewArtwork.style.display = "flex";

@@ -14,9 +14,7 @@ class Artwork {
     }
     for (let i = 0; i < inputImageArtwork.length; i++) {
     inputImageArtwork[i].addEventListener('change', function(event) {
-      //alert("hola");
-        //console.log('Evento change disparado');
-        //alert(i);
+
         var file = event.target.files[0]; // Captura el archivo seleccionado
         console.log('Archivo seleccionado:', file);
 
@@ -38,7 +36,7 @@ class Artwork {
 
                       if (img.width >= 12 && img.height >= 4) {
 
-                        
+
 
                         // Si las dimensiones son correctas o mayores, establecer la imagen como fondo
 

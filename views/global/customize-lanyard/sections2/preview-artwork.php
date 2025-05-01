@@ -31,27 +31,9 @@
       <div class="lanyard-artwork"></div>
     </div>
 
-    <div class="box-previewArtwork previewArtworkBackSide">
-      <h2>Back left</h2>
-      <div class="measures-previewArtwork-long">
-        <h4>39mm</h4>
-      </div>
-      <div class="measures-previewArtwork-width">
-        <h4 class="width-preview-artwork">8mm</h4>
-      </div>
-      <div class="lanyard-artwork"></div>
-    </div>
+  
 
-    <div class="box-previewArtwork previewArtworkBackSide">
-      <h2>Back right</h2>
-      <div class="measures-previewArtwork-long">
-        <h4>39mm</h4>
-      </div>
-      <div class="measures-previewArtwork-width">
-        <h4 class="width-preview-artwork">8mm</h4>
-      </div>
-      <div class="lanyard-artwork"></div>
-    </div>
+
   </div>
 </section>
 
