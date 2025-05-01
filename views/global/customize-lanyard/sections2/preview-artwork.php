@@ -7,7 +7,8 @@
 
 <section class="previewArtwork" id="previewArtwork">
   <div class="container-previewArtwork">
-    <div class="box-previewArtwork">
+    
+    <div class="box-previewArtwork" id="artwork-left-side">
       <div class="measures-previewArtwork">
         <div class="measures-previewArtwork-long">
           <h4>39mm</h4>
@@ -20,7 +21,7 @@
       <div class="lanyard-artwork"></div>
     </div>
 
-    <div class="box-previewArtwork">
+    <div class="box-previewArtwork" id="artwork-left-side">
       <h2>Front right</h2>
       <div class="measures-previewArtwork-long">
         <h4>39mm</h4>
@@ -30,9 +31,6 @@
       </div>
       <div class="lanyard-artwork"></div>
     </div>
-
-  
-
 
   </div>
 </section>

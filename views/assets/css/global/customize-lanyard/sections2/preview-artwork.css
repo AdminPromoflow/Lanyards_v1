@@ -16,7 +16,6 @@
   flex-direction: row;
   align-items: center;
   flex-wrap: nowrap;
-
 }
 .box-previewArtwork{
   position: relative;
@@ -67,6 +66,7 @@
     color: rgba(24, 41, 66, 1);
     font-size: 0.95em;
     font-weight: 900;
+    background-color: green;
   }
   .measures-previewArtwork-width{
     position: absolute;
