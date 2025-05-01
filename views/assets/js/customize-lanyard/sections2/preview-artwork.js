@@ -102,7 +102,6 @@ class ArtworkPreviewClass {
 
 
   applyClassToGroupArtwork(leftClass = "", rightClass = "") {
-    alert(leftClass + "  " + rightClass);
     const el = this.elements;
 
     if (leftClass) el.left.classList.add(leftClass);
