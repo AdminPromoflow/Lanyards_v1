@@ -32,11 +32,8 @@ class Artwork {
 
                 img.onload = function() {
 
-                  upload_file_artwork_left.innerHTML = `<img src="${img.src}" alt="">`;
+                  upload_file_artwork_left.innerHTML = '<img src="' + img.src  + '" alt="">';
 
-
-
-                  //  alert(img.src);
                 };
             };
 
