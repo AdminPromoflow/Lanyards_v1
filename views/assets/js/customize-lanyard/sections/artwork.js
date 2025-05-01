@@ -12,10 +12,13 @@ class Artwork {
         artworkPreviewClass.borderWhite(i);
       })
     }
-    for (let i = 0; i < inputImageArtwork.length; i++) {
-    inputImageArtwork[i].addEventListener('change', function(event) {
 
-        var file = event.target.files[0]; // Captura el archivo seleccionado
+
+    const upload_file_artwork_left = document.getElementById("upload_file_artwork_left");
+
+    upload_file_artwork_left.addEventListener('change', function(event) {
+
+        var file = event.target.files; // Captura el archivo seleccionado
         console.log('Archivo seleccionado:', file);
 
         if (file && file.type.startsWith('image/')) { // Verifica que sea una imagen
@@ -27,26 +30,16 @@ class Artwork {
                 img.src = e.target.result;
 
                 img.onload = function() {
+                  alert(img.src);
 
-                //  alert(img.src);
-                  //  console.log('Dimensiones de la imagen:', img.width, img.height);
-                    // Validar dimensiones mínimas de la imagen
-                    //if (img.width >= 1287 && img.height >= 54) {
-
-
-                      if (img.width >= 12 && img.height >= 4) {
+                    /*  if (img.width >= 12 && img.height >= 4) {
+                      //  artworkPreviewClass.uploadArtwork(img.src, i);
 
 
-
-                        // Si las dimensiones son correctas o mayores, establecer la imagen como fondo
-
-                      //  imageArtworkRigthSection[i].style.backgroundImage = 'url("' + img.src + '")';
-                        artworkPreviewClass.uploadArtwork(img.src, i);
-
-                      artworkPreviewClassFinal.assignArtworkToLanyard(img.src, i);
+                    //  artworkPreviewClassFinal.assignArtworkToLanyard(img.src, i);
                     } else {
                         alert('La imagen debe tener al menos 1287px de ancho y 54px de alto.');
-                    }
+                    }*/
                 };
             };
 
@@ -55,9 +48,8 @@ class Artwork {
             alert('Por favor, selecciona un archivo de imagen.');
         }
     });
-}
 
-  //this.changeWidthRightPanel();
+
 
   }
   showHideArtwork(active){
@@ -70,39 +62,7 @@ class Artwork {
 
     }
   }
-  changeWidthRightPanel() {
-    var widthSelected = widthClass.getWidthSelected();
-  //  const imageArtworkRigthSection = document.querySelectorAll(".image_artwork_rigth_section");
 
-    var width;
-
-    // Determine the width based on the selected width
-    switch (widthSelected) {
-      case "10mm":
-        width = "5px";
-        break;
-      case "15mm":
-        width = "7.5px";
-        break;
-      case "20mm":
-        width = "10px";
-        break;
-      case "25mm":
-        width = "12.5px";
-        break;
-      case "30mm":
-        width = "15px";
-        break;
-      default:
-        width = "15px"; // Default value if no match
-    }
-
-    // Apply the calculated width and a fixed height of 2px to all elements
-  /*  for (var i = 0; i < imageArtworkRigthSection.length; i++) {
-      imageArtworkRigthSection[i].style.height = width;
-
-    }*/
-  }
   borderWhite(active){
     for (var i = 0; i < containerBoxesArtwork.length; i++) {
       containerBoxesArtwork[i].style.border ="2px solid transparent";

@@ -29,15 +29,16 @@ $artworkJsTime = getArtworkFileTime($artworkJsPath);
 
     <div class="container_boxes_artwork artworkFrontSide">
       <p class="click_upload_artwork">Click to add artwork to the front left side.</p>
-      <input type="file" class="input_image_artwork" >
+      <input id="upload_file_artwork_left" type="file" class="input_image_artwork" >
     </div>
 
     <div class="container_boxes_artwork artworkFrontSide">
       <p class="click_upload_artwork"> Click to add artwork to the front right side.</p>
-      <input type="file" class="input_image_artwork" >
+      <input id="upload_file_artwork_right" type="file" class="input_image_artwork" >
     </div>
 
 
+    </div>
 
 </section>
 <script src="<?php echo $artworkJsPath . '?v=' . $artworkJsTime; ?>" type="text/javascript"></script>
