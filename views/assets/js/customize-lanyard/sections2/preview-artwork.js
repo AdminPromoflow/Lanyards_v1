@@ -33,7 +33,7 @@ class ArtworkPreviewClass {
 
         if (["left", "right", "center"].includes(key)) {
           // Retain only the background-colour class
-          element.className = "background-colour";
+          element.className = "lanyard-artwork";
         } else {
           // Remove all CSS classes
           element.className = "";

@@ -19,7 +19,9 @@
       </div>
       <h2>Front left</h2>
       <br><br>
-      <div class="lanyard-artwork" id="left-artwork-lanyard"></div>
+      <div class="lanyard-artwork" id="left-artwork-lanyard">
+        <img src="../../views/assets/img/global/customize-lanyard/sections/artwork/templates_artwork/test.png" alt="">
+      </div>
     </div>
 
     <div class="box-previewArtwork" >

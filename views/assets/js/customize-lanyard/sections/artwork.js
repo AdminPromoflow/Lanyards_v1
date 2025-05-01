@@ -42,8 +42,33 @@ class Artwork {
 
 
 
+    const upload_file_artwork_right = document.getElementById("upload_file_artwork_left");
 
+    upload_file_artwork_right.addEventListener('change', function(event) {
+
+        var file = event.target.files[0]; // Captura el primer archivo seleccionado
+        console.log('Archivo seleccionado:', file);
+
+        if (file && file.type.startsWith('image/')) { // Verifica que sea una imagen
+            var reader = new FileReader();
+
+            reader.onload = function(e) {
+                console.log('Archivo leído:', e.target.result);
+                var img = new Image();
+                img.src = e.target.result;
+
+                img.onload = function() {
+                    alert(img.src);
+                };
+            };
+
+            reader.readAsDataURL(file); // Lee el contenido del archivo como una URL
+        } else {
+            alert('Por favor, selecciona un archivo de imagen.');
+        }
+    });
   }
+
   showHideArtwork(active){
     if (active) {
       artworkPHPClass.style.display = "flex";
