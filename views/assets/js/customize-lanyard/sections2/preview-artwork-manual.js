@@ -19,14 +19,17 @@ class PreviewArtworkManualClass {
 
     const printingOptions = {
       sublimation: {
-        manual: "<strong>Sublimation</strong> lanyards can be customised manually. You can select a background colour, add text, and upload one logo. The design will be mirrored on the reverse side of the lanyard.",
-        artwork: "With the <strong>sublimation</strong> artwork option, you can upload two images—one for each side. Each side is mirrored on the reverse. If your image has a transparent background, you can also add a background colour."
+        manual: "<strong>Sublimation</strong> lanyards can be customised manually. Choose a background colour, add text, and upload one logo. The reverse side will show a mirrored version of your design.",
+
+        artwork: "With the <strong>sublimation</strong> artwork option, upload one image per side. Each side is mirrored on the reverse. If your image has transparency, you can choose a background colour."
       },
       screenPrint: {
-        manual: "<strong>Screen print</strong> lanyards can be customised manually. You can add text, choose a background colour, and upload a simple image – logo, personalised design. For double-sided printing, customise four sides in total.",
-        artwork: "With the <strong>screen print</strong> artwork option, you can upload one image per side. A background colour will always be included if your image has transparency. For double-sided printing, upload four images in total."
+        manual: "<strong>Screen print</strong> lanyards can be customised manually. Add text, pick a background colour, and upload a simple image like a logo. The reverse will mirror your design if both sides are set.",
+
+        artwork: "With the <strong>screen print</strong> artwork option, upload one image per side. Each side is mirrored on the reverse. A background colour is included if your image uses transparency."
       }
     };
+
 
     const materialMap = {
       "Tubular": "screenPrint",

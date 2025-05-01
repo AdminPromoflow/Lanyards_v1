@@ -174,6 +174,7 @@ class CustomizeLanyard {
 
   changePreviewNextSection() {
 
+
    if (this.currentSectionOpen == 0) {//Material
 
      this.openMaterial();
