@@ -61,7 +61,7 @@ class ArtworkPreviewClass {
        el.left.innerHTML = '<img src="' + src + '" alt="">';
     }
     else if (side == "right") {
-      el.left.innerHTML = '<img src="' + src + '" alt="">';
+      el.right.innerHTML = '<img src="' + src + '" alt="">';
     }
   }
   applyTwoEndStylesArtwork() {
