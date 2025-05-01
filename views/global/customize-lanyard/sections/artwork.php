@@ -22,7 +22,7 @@ $artworkJsTime = getArtworkFileTime($artworkJsPath);
     <a href="../../views/assets/img/global/customize-lanyard/sections/artwork/templates_artwork/right_15mm.png" download>Link right side</a>
   </div>
   <br>
-  <p>Select one artwork</p>
+  <p>Select an option to reupload your file.</p>
   <br>
 
   <div id="containers_boxes_artwork" class="containers_boxes_artwork">
