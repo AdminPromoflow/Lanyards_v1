@@ -18,8 +18,8 @@ $artworkJsTime = getArtworkFileTime($artworkJsPath);
   <h2 class="name-section-customize-lanyard">Artwork</h2>
   <p>Please download the files, update the artwork, and reupload it.</p>
   <div class="container_download_files_artwork">
-    <a href="../../views/assets/img/global/customize-lanyard/sections/artwork/templates_artwork/left_15mm.png" download>Link left side</a>
-    <a href="../../views/assets/img/global/customize-lanyard/sections/artwork/templates_artwork/right_15mm.png" download>Link right side</a>
+    <a id="download_file_artwork_left" href="../../views/assets/img/global/customize-lanyard/sections/artwork/templates_artwork/left_15mm.png" download>Link left side</a>
+    <a id="download_file_artwork_right" href="../../views/assets/img/global/customize-lanyard/sections/artwork/templates_artwork/right_15mm.png" download>Link right side</a>
   </div>
   <br>
   <p>Select an option to reupload your file.</p>

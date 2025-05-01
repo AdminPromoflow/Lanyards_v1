@@ -22,6 +22,7 @@ class ArtworkPreviewClass {
   refreshPreviewArtwork(){
     this.cleanStyleArtwork();
     this.applyTwoEndStylesArtwork();
+    this.uploadDownloadableFiles();
   }
   cleanStyleArtwork() {
     const el = this.elements;
@@ -41,6 +42,16 @@ class ArtworkPreviewClass {
     });
     backgroundClass.setBackgroundColourToLanyards();
 
+
+  }
+  uploadDownloadableFiles(){
+    const downloadLinkLeft = document.getElementById('download_file_artwork_left');
+    const downloadLinkRight = document.getElementById('download_file_artwork_right');
+
+    const widthSelected = widthClass.getWidthSelected();
+
+    downloadLinkLeft.href = "../../views/assets/img/global/customize-lanyard/sections/artwork/templates_artwork/left_"+ widthSelected +".png";  // Cambia aquí la nueva ruta
+    downloadLinkRight.href = "../../views/assets/img/global/customize-lanyard/sections/artwork/templates_artwork/right_"+ widthSelected +".png";  // Cambia aquí la nueva ruta
 
   }
   applyTwoEndStylesArtwork() {
