@@ -52,12 +52,21 @@
   position: relative;
   width: 100%;
   padding: 1px 1px;
+  margin: 3px 0;
 
   display: flex;
   justify-content: space-around;
   flex-direction: row;
   flex-wrap: wrap;
 
+}
+.container_download_files_artwork a{
+  all: unset;
+  cursor: pointer;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, .2);
+  border-radius: 5px;
+  color: white;
 }
 /* Style for the scrollbar in WebKit browsers */
 .containers_boxes_artwork::-webkit-scrollbar {
