@@ -63,8 +63,11 @@
 .container_download_files_artwork a{
   all: unset;
   cursor: pointer;
-  padding: 8px 0 0 0;
+  padding: 5px;
+  margin: 8px 0 0 0;
+
   background-color: rgba(0, 0, 0, .2);
+  border: 1px solid white;
   border-radius: 5px;
   color: white;
 }
