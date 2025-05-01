@@ -20,7 +20,7 @@
       <h2>Front left</h2>
       <br><br>
       <div class="lanyard-artwork" id="left-artwork-lanyard">
-        <img src="../../views/assets/img/global/customize-lanyard/sections/artwork/templates_artwork/test.png" alt="">
+        <img src="../../views/assets/img/global/customize-lanyard/sections/artwork/templates_artwork/test2.png" alt="">
       </div>
     </div>
 
