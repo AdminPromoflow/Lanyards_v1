@@ -16,13 +16,13 @@ $artworkJsTime = getArtworkFileTime($artworkJsPath);
 <link rel="stylesheet" href="<?php echo $artworkCssPath . '?v=' . $artworkCssTime; ?>">
 <section class=" artworkSection section" id="artworkPHPClass">
   <h2 class="name-section-customize-lanyard">Artwork</h2>
-  <p>Please download the files, update the artwork, and reupload it.</p>
+  <p>1. Please download the files, update the artwork, and reupload it.</p>
   <div class="container_download_files_artwork">
     <a id="download_file_artwork_left" href="../../views/assets/img/global/customize-lanyard/sections/artwork/templates_artwork/left_15mm.png" download>Link left side</a>
     <a id="download_file_artwork_right" href="../../views/assets/img/global/customize-lanyard/sections/artwork/templates_artwork/right_15mm.png" download>Link right side</a>
   </div>
   <br>
-  <p>Select an option to reupload your file.</p>
+  <p>2. Select an option to reupload your file.</p>
   <br>
 
   <div id="containers_boxes_artwork" class="containers_boxes_artwork">
