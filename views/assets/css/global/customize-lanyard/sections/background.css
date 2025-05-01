@@ -28,6 +28,7 @@
 .backgroundSection p{
   position: relative;
   color: white;
+  width: 90%;
   left: 50%;
   transform: translateX(-50%);
 }
