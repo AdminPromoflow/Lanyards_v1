@@ -28,7 +28,7 @@
   align-items: center;
   flex-direction: column;
   cursor: pointer;
-  background: rgba(48, 79, 112, .7);
+  background: rgba(48, 79, 112, .3);
   border: 2px solid transparent;
 }
 .box-previewArtwork:nth-child(1){

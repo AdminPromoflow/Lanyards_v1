@@ -16,6 +16,8 @@ $artworkJsTime = getArtworkFileTime($artworkJsPath);
 <link rel="stylesheet" href="<?php echo $artworkCssPath . '?v=' . $artworkCssTime; ?>">
 <section class=" artworkSection section" id="artworkPHPClass">
   <h2 class="name-section-customize-lanyard">Artwork</h2>
+  <p>Please download the file, update the artwork, and reupload it.</p>
+
   <br>
   <p>Select one artwork</p>
   <br>
