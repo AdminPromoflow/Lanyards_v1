@@ -18,7 +18,7 @@ class Artwork {
 
     upload_file_artwork_left.addEventListener('change', function(event) {
 
-        var file = event.target.files; // Captura el archivo seleccionado
+        var file = event.target.files[0]; // Captura el primer archivo seleccionado
         console.log('Archivo seleccionado:', file);
 
         if (file && file.type.startsWith('image/')) { // Verifica que sea una imagen
@@ -30,9 +30,7 @@ class Artwork {
                 img.src = e.target.result;
 
                 img.onload = function() {
-                  alert(img.src);
-
-
+                    alert(img.src);
                 };
             };
 
@@ -41,6 +39,7 @@ class Artwork {
             alert('Por favor, selecciona un archivo de imagen.');
         }
     });
+
 
 
 
