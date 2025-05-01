@@ -98,13 +98,26 @@ class Home {
         clipClass.refreshClip();
         artworkManualClass.refreshArtkworkManual();
         backgroundClass.refreshBackgroundColour();
-
+        attachmentClass.refreshAttachment();
+        previewTemplate.activateTemplate();
+        previewManual.refreshTextLanyard();
+        previewManual.refreshImageLanyard();
 
 
         // Open the customization panel
         customizeLanyard.openCustomizeLanyard(true);
         customizeLanyard.setCurrentSectionOpen(0);
         customizeLanyard.setStateVisibilityPanelCustomeLanyard(true);
+
+
+
+
+
+
+
+
+
+
     }
 
     /**
@@ -124,6 +137,11 @@ class Home {
         clipClass.refreshClip();
         artworkManualClass.refreshArtkworkManual();
         backgroundClass.refreshBackgroundColour();
+
+        attachmentClass.refreshAttachment();
+        previewTemplate.activateTemplate();
+        previewManual.refreshTextLanyard();
+        previewManual.refreshImageLanyard();
 
 
 
