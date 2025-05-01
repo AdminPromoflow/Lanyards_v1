@@ -54,6 +54,13 @@ class ArtworkPreviewClass {
     downloadLinkRight.href = "../../views/assets/img/global/customize-lanyard/sections/artwork/templates_artwork/right_"+ widthSelected +".png";  // Cambia aquí la nueva ruta
 
   }
+  uploadArtworkManual(side, src){
+    if (side == "left") {
+       el.left.innerHTML = '<img src="../../views/assets/img/global/customize-lanyard/sections/artwork/templates_artwork/test2.png" alt="">';
+       upload_file_artwork_left.
+
+    }
+  }
   applyTwoEndStylesArtwork() {
     const width = widthClass.getWidthSelected();
 

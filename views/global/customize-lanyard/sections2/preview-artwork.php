@@ -20,6 +20,7 @@
       <h2>Front left</h2>
       <br><br>
       <div class="lanyard-artwork" id="left-artwork-lanyard">
+
       </div>
     </div>
 
