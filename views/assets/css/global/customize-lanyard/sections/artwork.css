@@ -71,6 +71,17 @@
   border-radius: 5px;
   color: white;
 }
+.container_boxes_artwork input{
+  all: unset;
+  cursor: pointer;
+  padding: 5px 9px;
+  margin: 8px 0 0 0;
+
+  background-color: rgba(0, 0, 0, .2);
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+}
 /* Style for the scrollbar in WebKit browsers */
 .artworkSection::-webkit-scrollbar {
     width: 13px; /* Width of the scrollbar */
