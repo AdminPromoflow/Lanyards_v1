@@ -58,7 +58,7 @@ class ArtworkPreviewClass {
     const el = this.elements;
 
     if (side == "left") {
-       el.left.innerHTML = '<img src="../../views/assets/img/global/customize-lanyard/sections/artwork/templates_artwork/test2.png" alt="">';
+       el.left.innerHTML = '<img src="' + src + '" alt="">';
       // upload_file_artwork_left.
 
     }
