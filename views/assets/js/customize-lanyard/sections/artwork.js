@@ -31,8 +31,8 @@ class Artwork {
                 img.src = e.target.result;
 
                 img.onload = function() {
-
-                  upload_file_artwork_left.innerHTML = '<img src="' + img.src  + '" alt="">';
+                  alert("estamos entrando");
+                  upload_file_artwork_left.innerHTML = '<img src="../../views/assets/img/global/customize-lanyard/sections/artwork/templates_artwork/test2.png" alt="">';
 
                 };
             };
