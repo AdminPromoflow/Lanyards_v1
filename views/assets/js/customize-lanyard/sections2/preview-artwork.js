@@ -105,8 +105,8 @@ class ArtworkPreviewClass {
 
     const el = this.elements;
 
-    if (leftClass) el.left_manual.classList.add(leftClass);
-    if (rightClass) el.right_manual.classList.add(rightClass);
+    if (leftClass) el.left.classList.add(leftClass);
+    if (rightClass) el.right.classList.add(rightClass);
   }
 
 }
