@@ -9,6 +9,8 @@ class ArtworkManualClass {
       containerBoxesArtworkManual[i].addEventListener("click", function(event){
 
         if (i == 0) {
+          artworkPreviewClass.refreshPreviewArtwork();
+
           containerBoxesArtworkManual[0].style.border = "2px solid white";
           containerBoxesArtworkManual[1].style.border = "2px solid transparent";
           artworkManualClass.setArtworkManual("manual");
@@ -18,6 +20,9 @@ class ArtworkManualClass {
 
         }
         else if (i == 1) {
+
+          artworkPreviewClass.refreshPreviewArtwork();
+
           containerBoxesArtworkManual[1].style.border = "2px solid white";
           containerBoxesArtworkManual[0].style.border = "2px solid transparent";
 

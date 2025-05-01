@@ -34,6 +34,7 @@
   height: 8px;
   border: 1px solid white;
 }
+
 .box-previewArtwork h2{
   position: relative;
   margin: 0;
@@ -91,3 +92,63 @@
    font-size: 0.95em;
    font-weight: 900;
  }
+
+
+
+
+
+
+
+
+
+
+  .left-artwork-lanyard-two-end-10mm {
+    height: 7.2cm;
+    width: 0.16cm;
+  }
+  .right-artwork-lanyard-two-end-10mm {
+
+    height: 7.2cm;
+    width: 0.16cm;
+  }
+
+
+  .left-artwork-lanyard-two-end-15mm {
+   height: 7.2cm;
+    width: 0.24cm;
+  }
+  .right-artwork-lanyard-two-end-15mm {
+    height: 7.2cm;
+    width: 0.24cm;
+    }
+
+
+  .left-artwork-lanyard-two-end-20mm {
+      height: 7.2cm;
+    width: 0.32cm;
+    }
+  .right-artwork-lanyard-two-end-20mm {
+    height: 7.2cm;
+    width: 0.32cm;
+    }
+
+
+  .left-artwork-lanyard-two-end-25mm {
+    height: 7.2cm;
+    width: 0.4cm;
+  }
+  .right-artwork-lanyard-two-end-25mm {
+    height: 7.2cm;
+    width: 0.4cm;
+  }
+
+
+
+  .left-artwork-lanyard-two-end-30mm {
+    height: 7.2cm;
+    width: 0.48cm;
+  }
+  .right-artwork-lanyard-two-end-30mm {
+    height: 7.2cm;
+    width: 0.48cm;
+  }

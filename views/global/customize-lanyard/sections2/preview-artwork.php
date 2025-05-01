@@ -18,7 +18,7 @@
         </div>
       </div>
       <h2>Front left</h2>
-      <div class="lanyard-artwork" id="artwork-left-side"></div>
+      <div class="lanyard-artwork" id="left-artwork-lanyard"></div>
     </div>
 
     <div class="box-previewArtwork" >
@@ -29,7 +29,7 @@
       <div class="measures-previewArtwork-width">
         <h4 class="width-preview-artwork">8mm</h4>
       </div>
-      <div class="lanyard-artwork" id="artwork-left-side"></div>
+      <div class="lanyard-artwork" id="right-artwork-lanyard"></div>
     </div>
 
   </div>
