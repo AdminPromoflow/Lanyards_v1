@@ -32,7 +32,6 @@ class Artwork {
 
                 img.onload = function() {
                   artworkPreviewClass.uploadArtworkManual("left", img.src);
-
                 };
             };
 
@@ -60,7 +59,7 @@ class Artwork {
                 img.src = e.target.result;
 
                 img.onload = function() {
-                  //  alert(img.src);
+                  artworkPreviewClass.uploadArtworkManual("right", img.src);
                 };
             };
 

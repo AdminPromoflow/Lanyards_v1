@@ -59,8 +59,9 @@ class ArtworkPreviewClass {
 
     if (side == "left") {
        el.left.innerHTML = '<img src="' + src + '" alt="">';
-      // upload_file_artwork_left.
-
+    }
+    else if (side == "right") {
+      el.left.innerHTML = '<img src="' + src + '" alt="">';
     }
   }
   applyTwoEndStylesArtwork() {
