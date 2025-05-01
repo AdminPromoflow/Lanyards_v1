@@ -18,11 +18,13 @@
         </div>
       </div>
       <h2>Front left</h2>
+      <br><br>
       <div class="lanyard-artwork" id="left-artwork-lanyard"></div>
     </div>
 
     <div class="box-previewArtwork" >
       <h2>Front right</h2>
+      <br><br>
       <div class="measures-previewArtwork-long">
         <h4>39mm</h4>
       </div>
