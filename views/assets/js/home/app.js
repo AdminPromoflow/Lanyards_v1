@@ -103,6 +103,7 @@ class Home {
         previewManual.refreshTextLanyard();
         previewManual.refreshImageLanyard();
 
+        artworkPreviewClass.refreshPreviewArtwork();
 
         // Open the customization panel
         customizeLanyard.openCustomizeLanyard(true);
@@ -142,6 +143,7 @@ class Home {
         previewTemplate.activateTemplate();
         previewManual.refreshTextLanyard();
         previewManual.refreshImageLanyard();
+        artworkPreviewClass.refreshPreviewArtwork();
 
 
 

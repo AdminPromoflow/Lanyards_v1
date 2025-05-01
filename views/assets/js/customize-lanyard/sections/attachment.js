@@ -19,6 +19,7 @@ class AttachmentClass {
 
     previewClip.showPreviewSelectedClip()
 
+    artworkPreviewClass.refreshPreviewArtwork();
 
   }
 

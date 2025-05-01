@@ -102,6 +102,7 @@ class OneTwoEnds {
     clipClass.refreshClip(); // Update the clip settings for the material.
     attachmentClass.refreshAttachment();
 
+    artworkPreviewClass.refreshPreviewArtwork();
 
     previewLanyardType.showSelectedPreviewTemplate();
 

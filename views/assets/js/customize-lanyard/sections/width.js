@@ -216,6 +216,7 @@ class Width {
     priceClass.changePricePerLanyard();
     previewManual.refreshTextLanyard();
     previewManual.refreshImageLanyard()
+    artworkPreviewClass.refreshPreviewArtwork();
 
   }
 

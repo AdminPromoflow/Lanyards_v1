@@ -271,6 +271,8 @@ class SidePrinted {
     colourClass.refreshColourQuantity();
     clipClass.refreshClip();
     priceClass.changePricePerLanyard();
+    artworkPreviewClass.refreshPreviewArtwork();
+
 
     previewSidePrinted.showSelectedPreviewtTemplate();
 
