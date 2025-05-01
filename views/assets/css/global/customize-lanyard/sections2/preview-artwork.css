@@ -20,13 +20,14 @@
 }
 .box-previewArtwork{
   position: relative;
-  width: 450%;
+  width: 45%;
   height: 70%;
   margin: 5px 0px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  background-color: green;
 }
 .lanyard-artwork{
   position: relative;
