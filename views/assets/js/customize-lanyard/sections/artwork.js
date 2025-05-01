@@ -1,11 +1,11 @@
 class Artwork {
   constructor() {
-    for (let i = 0; i < clickUploadArtwork.length; i++) {
+  /*  for (let i = 0; i < clickUploadArtwork.length; i++) {
       clickUploadArtwork[i].addEventListener("click", function (){
         inputImageArtwork[i].click();
       //  alert(i);
       })
-    }
+    }*/
     for (let i = 0; i < containerBoxesArtwork.length; i++) {
       containerBoxesArtwork[i].addEventListener("click", function () {
         artworkClass.borderWhite(i);
@@ -40,7 +40,7 @@ class Artwork {
 
                         // Si las dimensiones son correctas o mayores, establecer la imagen como fondo
 
-                        imageArtworkRigthSection[i].style.backgroundImage = 'url("' + img.src + '")';
+                      //  imageArtworkRigthSection[i].style.backgroundImage = 'url("' + img.src + '")';
                         artworkPreviewClass.uploadArtwork(img.src, i);
 
                       artworkPreviewClassFinal.assignArtworkToLanyard(img.src, i);
@@ -72,7 +72,7 @@ class Artwork {
   }
   changeWidthRightPanel() {
     var widthSelected = widthClass.getWidthSelected();
-    const imageArtworkRigthSection = document.querySelectorAll(".image_artwork_rigth_section");
+  //  const imageArtworkRigthSection = document.querySelectorAll(".image_artwork_rigth_section");
 
     var width;
 
@@ -98,10 +98,10 @@ class Artwork {
     }
 
     // Apply the calculated width and a fixed height of 2px to all elements
-    for (var i = 0; i < imageArtworkRigthSection.length; i++) {
+  /*  for (var i = 0; i < imageArtworkRigthSection.length; i++) {
       imageArtworkRigthSection[i].style.height = width;
 
-    }
+    }*/
   }
   borderWhite(active){
     for (var i = 0; i < containerBoxesArtwork.length; i++) {
@@ -124,11 +124,11 @@ class Artwork {
  }
 
 }
-const imageArtworkRigthSection = document.querySelectorAll(".image_artwork_rigth_section");
+//const imageArtworkRigthSection = document.querySelectorAll(".image_artwork_rigth_section");
 const inputImageArtwork = document.querySelectorAll(".input_image_artwork");
 const containerBoxesArtwork = document.querySelectorAll(".container_boxes_artwork");
 const artworkPHPClass = document.getElementById("artworkPHPClass");
-const clickUploadArtwork = document.querySelectorAll(".click_upload_artwork");
+//const clickUploadArtwork = document.querySelectorAll(".click_upload_artwork");
 const artworkBackSide = document.querySelectorAll(".artworkBackSide");
 
 const artworkClass = new Artwork();
