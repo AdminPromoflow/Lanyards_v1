@@ -26,6 +26,18 @@ function asset_version($path) {
       </div>
 
 
+      <div class="item-image">
+        <p>Adjust the spacing between the image</p>
+        <div class="containr-space-between-image">
+          <div class="space-between-image-box" id="decrease_space_between_image">
+            <img src="../../views/assets/img/global/customize-lanyard/sections/image/minus.png?v=<?=asset_version('../../views/assets/img/global/customize-lanyard/sections/image/minus.png')?>" alt="">
+          </div>
+          <div class="space-between-image-box" id="increase_space_between_image">
+            <img src="../../views/assets/img/global/customize-lanyard/sections/image/plus.png?v=<?=asset_version('../../views/assets/img/global/customize-lanyard/sections/image/plus.png')?>" alt="">
+          </div>
+        </div>
+      </div>
+
       <div class="item-text">
         <p>Adjust the image position</p>
         <div class="containr-space-between-image">
@@ -38,17 +50,7 @@ function asset_version($path) {
         </div>
       </div>
 
-      <div class="item-image">
-        <p>Adjust the spacing between the image</p>
-        <div class="containr-space-between-image">
-          <div class="space-between-image-box" id="decrease_space_between_image">
-            <img src="../../views/assets/img/global/customize-lanyard/sections/image/minus.png?v=<?=asset_version('../../views/assets/img/global/customize-lanyard/sections/image/minus.png')?>" alt="">
-          </div>
-          <div class="space-between-image-box" id="increase_space_between_image">
-            <img src="../../views/assets/img/global/customize-lanyard/sections/image/plus.png?v=<?=asset_version('../../views/assets/img/global/customize-lanyard/sections/image/plus.png')?>" alt="">
-          </div>
-        </div>
-      </div>
+
 
     <!--  <div class="item-image">
         <p>Spacing along the lanyard edge</p>
