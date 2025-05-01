@@ -29,6 +29,10 @@
   flex-direction: column;
   background-color: green;
 }
+.box-previewArtwork:nth-child(1){
+  border: 1px solid white;
+}
+
 .lanyard-artwork{
   position: relative;
   width: 290px;
