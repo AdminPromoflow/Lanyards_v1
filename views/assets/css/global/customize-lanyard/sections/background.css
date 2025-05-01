@@ -41,7 +41,7 @@
 .containers_boxes_background{
   position: relative;
   width: 90%;
-  max-height: 150px;
+  max-height: 110px;
 
   left: 50%;
   transform: translateX(-50%);
