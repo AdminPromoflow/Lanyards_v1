@@ -44,7 +44,7 @@ class Artwork {
 
 
 
-    const upload_file_artwork_right = document.getElementById("upload_file_artwork_left");
+    const upload_file_artwork_right = document.getElementById("upload_file_artwork_right");
 
     upload_file_artwork_right.addEventListener('change', function(event) {
 
