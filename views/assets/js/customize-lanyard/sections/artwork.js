@@ -15,6 +15,7 @@ class Artwork {
 
 
     const upload_file_artwork_left = document.getElementById("upload_file_artwork_left");
+    const upload_file_artwork_left_img = document.querySelector("#upload_file_artwork_left img");
 
     upload_file_artwork_left.addEventListener('change', function(event) {
 
@@ -30,7 +31,12 @@ class Artwork {
                 img.src = e.target.result;
 
                 img.onload = function() {
-                    alert(img.src);
+
+                  upload_file_artwork_left.innerHTML = `<img src="${img.src}" alt="">`;
+
+
+
+                  //  alert(img.src);
                 };
             };
 
