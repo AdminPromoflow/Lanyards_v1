@@ -14,6 +14,7 @@ $jsFile_background = "../../views/assets/js/customize-lanyard/sections/backgroun
 <section class="backgroundSection section">
   <h2 class="">Background</h2>
   <br>
+  <p>Select a background colour for your design or if you're uploading images with transparency, to ensure it displays well.</p>
   <div class="box_background_colour">
     <div class="option_background_colour">
       <input class="option_background_checked" id="option_background_checked_01" type="radio" name="option" value="0" checked >
