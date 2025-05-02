@@ -1,5 +1,7 @@
 .preview-template-artwork-section{
-  position: relative;
+  position: absolute;
+  top: 0px;
+  left: 0px;
   width: 90%;
   height: 80%;
   padding: 15px 0;
