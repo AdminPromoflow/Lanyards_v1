@@ -49,13 +49,13 @@ class PreviewTemplate {
     alert(artworkManualSelected);
     if (artworkManualSelected == "manual") {
       previewManual.togglePreviewManualClass(action);
-      previewTemplateArtwork.togglePreviewTemplateArtworkClass("none");
+      previewTemplateArtworkClass.togglePreviewTemplateArtworkClass("none");
 
     }
     else if (artworkManualSelected == "artwork") {
 
       //previewArtwork.togglePreviewManualClass(action);
-      previewTemplateArtwork.togglePreviewTemplateArtworkClass(action);
+      previewTemplateArtworkClass.togglePreviewTemplateArtworkClass(action);
 
       previewManual.togglePreviewManualClass("none");
     }
