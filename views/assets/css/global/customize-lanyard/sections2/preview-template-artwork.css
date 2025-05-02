@@ -6,8 +6,8 @@
   transform: translateX(-50%);
   height: 7.2cm;
   width: 100px;
-  background-color: green;
-  display: none;
+  background-color: rgba(0,0,0,.3);
+
 }
 
 /* 10mm */
