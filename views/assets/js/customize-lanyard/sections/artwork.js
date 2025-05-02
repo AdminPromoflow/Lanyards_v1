@@ -17,24 +17,29 @@ class Artwork {
     const upload_file_artwork_left = document.getElementById("upload_file_artwork_left");
     const upload_file_artwork_left_img = document.querySelector("#upload_file_artwork_left img");
 
-    upload_file_artwork_left.addEventListener('change', function(event) {
 
-        var file = event.target.files[0]; // Captura el primer archivo seleccionado
+    upload_file_artwork_left.addEventListener('change', function(event) {
+        const file = event.target.files[0]; // Captura el primer archivo seleccionado
         console.log('Archivo seleccionado:', file);
 
         if (file && file.type.startsWith('image/')) { // Verifica que sea una imagen
-            var reader = new FileReader();
+            const reader = new FileReader();
 
             reader.onload = function(e) {
                 console.log('Archivo leído:', e.target.result);
-                var img = new Image();
-                img.src = e.target.result;
+                const img = new Image();
 
+                // Asegúrate de asignar el onload ANTES de asignar el src
                 img.onload = function() {
-                  artworkPreviewClass.uploadArtworkManual("left", img.src);
-                  previewTemplateArtworkClass.addArtworkImage("left", img.src);
+                    console.log('Imagen cargada:');
+                    console.log('Ancho:', img.width, 'Alto:', img.height);
 
+                    // Aquí ya puedes usar el src y las dimensiones con seguridad
+                    artworkPreviewClass.uploadArtworkManual("left", img.src);
+                    previewTemplateArtworkClass.addArtworkImage("left", img, img.height, img.width);
                 };
+
+                img.src = e.target.result;
             };
 
             reader.readAsDataURL(file); // Lee el contenido del archivo como una URL
@@ -42,36 +47,42 @@ class Artwork {
             alert('Por favor, selecciona un archivo de imagen.');
         }
     });
+
 
 
 
     const upload_file_artwork_right = document.getElementById("upload_file_artwork_right");
 
     upload_file_artwork_right.addEventListener('change', function(event) {
+        const file = event.target.files[0];
 
-        var file = event.target.files[0]; // Captura el primer archivo seleccionado
-        console.log('Archivo seleccionado:', file);
-
-        if (file && file.type.startsWith('image/')) { // Verifica que sea una imagen
-            var reader = new FileReader();
+        if (file && file.type.startsWith('image/')) {
+            const reader = new FileReader();
 
             reader.onload = function(e) {
-                console.log('Archivo leído:', e.target.result);
-                var img = new Image();
-                img.src = e.target.result;
+                const img = new Image();
 
+                // Agrega el onload antes de asignar src
                 img.onload = function() {
-                  artworkPreviewClass.uploadArtworkManual("right", img.src);
-                  previewTemplateArtworkClass.addArtworkImage("right", img, img.height, img.width);
+                    console.log('Image loaded');
+                    console.log('Width:', img.width);
+                    console.log('Height:', img.height);
 
+                    // Ahora sí: ya puedes usar las dimensiones con seguridad
+                    artworkPreviewClass.uploadArtworkManual("right", img.src);
+                    previewTemplateArtworkClass.addArtworkImage("right", img, img.height, img.width);
                 };
+
+                // Este paso debe venir después de definir onload
+                img.src = e.target.result;
             };
 
-            reader.readAsDataURL(file); // Lee el contenido del archivo como una URL
+            reader.readAsDataURL(file);
         } else {
-            alert('Por favor, selecciona un archivo de imagen.');
+            alert('Please select a valid image file.');
         }
     });
+
   }
 
   showHideArtwork(active){
