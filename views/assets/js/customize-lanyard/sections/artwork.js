@@ -74,6 +74,7 @@ class Artwork {
     if (active) {
       artworkPHPClass.style.display = "flex";
       sidePrintedClass.getSidePrintedSelected();
+      //alert(sidePrintedClass.getSidePrintedSelected());
     }
     else {
 
