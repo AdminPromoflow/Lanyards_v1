@@ -68,6 +68,7 @@ class PreviewTemplate {
 
     this.cleanStyle(); // Clear any existing inline styles or classes
     this.cleanStyleManual();
+    this.cleanStyleArtwork();
 
     // Apply new styles based on the lanyard configuration
     if (type === "one-end") {
@@ -123,7 +124,7 @@ class PreviewTemplate {
   }
 
 
-/*  cleanStyleArtwork() {
+  cleanStyleArtwork() {
     const elArtwork = this.artworkElements;
 
     Object.entries(elArtwork).forEach(([key, element]) => {
@@ -139,7 +140,7 @@ class PreviewTemplate {
         }
       }
     });
-  }*/
+  }
 
   // Apply styles for the "no-attachment" case based on width
   applyNoAttachmentStyles(width) {
