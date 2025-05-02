@@ -32,6 +32,8 @@ class Artwork {
 
                 img.onload = function() {
                   artworkPreviewClass.uploadArtworkManual("left", img.src);
+                  previewTemplateArtworkClass.addArtworkImage("left", img.src);
+
                 };
             };
 
@@ -60,6 +62,8 @@ class Artwork {
 
                 img.onload = function() {
                   artworkPreviewClass.uploadArtworkManual("right", img.src);
+                  previewTemplateArtworkClass.addArtworkImage("right", img.src);
+
                 };
             };
 

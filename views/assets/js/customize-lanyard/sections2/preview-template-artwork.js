@@ -7,7 +7,25 @@ class PreviewTemplateArtworkClass {
 
       previewTemplateArtworkSection.style.display = action;
   }
+
+  addArtworkImage(side, src){
+
+    if (side == "left") {
+       leftSuperLanyardTemplateArtwork = '<img src="' + src + '" alt="">';
+    }
+    else if (side == "right") {
+      rightSuperLanyardTemplateArtwork = '<img src="' + src + '" alt="">';
+    }
+  }
+
+
 }
 const previewTemplateArtworkSection = document.getElementById("preview-template-artwork-section");
+const leftSuperLanyardTemplateArtwork = document.getElementById("left-super-lanyard-template-artwork");
+const rightSuperLanyardTemplateArtwork = document.getElementById("right-super-lanyard-template-artwork");
+const centerSuperLanyardTemplateAartwork = document.getElementById("center-super-lanyard-template-artwork");
+
+
+
 
 const previewTemplateArtworkClass = new PreviewTemplateArtworkClass();
