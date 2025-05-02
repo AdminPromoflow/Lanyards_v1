@@ -8,9 +8,9 @@ class PreviewTemplateArtworkClass {
       previewTemplateArtworkSection.style.display = action;
   }
 
-  addArtworkImage(side, image){
+  addArtworkImage(side, image, height, width){
 
-    var sizeAproval = this.confirmImageMessures(image);
+    var sizeAproval = this.confirmImageMessures(image, height, width);
 
     leftSuperLanyardTemplateArtwork.innerHTML = "";
     rightSuperLanyardTemplateArtwork.innerHTML = "";
@@ -28,13 +28,13 @@ class PreviewTemplateArtworkClass {
 
   }
 
-  confirmImageMessures(image){
+  confirmImageMessures(image, height, width){
     var sizeAproval = false;
     const widthSelected = widthClass.getWidthSelected();
-    alert(image.height + "  " + image.width);
+    alert(height + "  " + width);
 
     if (widthSelected == "10mm") {
-      if (image.height == 42520 && image.width == 945) {
+      if (height == 42520 && width == 945) {
         var sizeAproval = true;
       }
       else {
@@ -42,7 +42,7 @@ class PreviewTemplateArtworkClass {
       }
     }
     else if (widthSelected == "15mm") {
-      if (image.height == 42520 && image.width == 1417) {
+      if (height == 42520 && width == 1417) {
       var sizeAproval = true;
       }
       else {
@@ -51,7 +51,7 @@ class PreviewTemplateArtworkClass {
     }
 
     else if (widthSelected == "20mm") {
-      if (image.height == 42520 && image.width == 1890) {
+      if (height == 42520 && width == 1890) {
       var sizeAproval = true;
       }
       else {
@@ -60,7 +60,7 @@ class PreviewTemplateArtworkClass {
     }
 
     else if (widthSelected == "25mm") {
-      if (image.height == 42520 && image.width == 2362) {
+      if (height == 42520 && width == 2362) {
       var sizeAproval = true;
       }
       else {
@@ -69,7 +69,7 @@ class PreviewTemplateArtworkClass {
     }
 
     else if (widthSelected == "30mm") {
-      if (image.height == 42520 && image.width == 2835) {
+      if (height == 42520 && width == 2835) {
       var sizeAproval = true;
       }
       else {

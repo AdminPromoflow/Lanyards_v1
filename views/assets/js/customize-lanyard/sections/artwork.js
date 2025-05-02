@@ -62,7 +62,7 @@ class Artwork {
 
                 img.onload = function() {
                   artworkPreviewClass.uploadArtworkManual("right", img.src);
-                  previewTemplateArtworkClass.addArtworkImage("right", img);
+                  previewTemplateArtworkClass.addArtworkImage("right", img, img.height, img.width);
 
                 };
             };
