@@ -6,10 +6,11 @@
   padding: 15px 0;
 
   box-shadow: 0px 0px 2px black;
+  z-index: 100;
 }
 .super-lanyard-artwork{
   position: absolute;
-  top: 14.0%;
+  top: 19.0%;
   left: 50%;
   transform: translateX(-50%);
   height: 7.2cm;
