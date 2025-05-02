@@ -3,7 +3,7 @@ class PreviewTemplateArtworkClass {
 
   }
   togglePreviewTemplateArtworkClass(action) {
-
+    alert(JSON.stringify(previewTemplateArtworkSection));
     if (previewTemplateArtworkSection) {
           previewTemplateArtworkSection.style.display = action;
     }
