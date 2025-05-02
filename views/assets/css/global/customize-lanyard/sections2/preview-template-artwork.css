@@ -17,6 +17,21 @@
   width: 105px;
 }
 
+.left-super-lanyard-template-artwork img{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+}
+.right-super-lanyard-template-artwork img{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+}
+
 /* 10mm */
 .left-super-lanyard-one-end-10mm-template-artwork {
   position: absolute;

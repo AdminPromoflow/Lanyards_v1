@@ -10,8 +10,8 @@ function preview_template_artwork_versioned_asset($relative_path) {
 
 <section class="preview-template-artwork-section" id="preview-template-artwork-section">
   <div class="super-lanyard-artwork" id="super-lanyard-artwork">
-    <div id="left-super-lanyard-template-artwork"></div>
-    <div id="right-super-lanyard-template-artwork"></div>
+    <div id="left-super-lanyard-template-artwork" class="left-super-lanyard-template-artwork"></div>
+    <div id="right-super-lanyard-template-artwork" class="right-super-lanyard-template-artwork"></div>
     <div id="center-super-lanyard-template-artwork"></div>
   </div>
 </section>
