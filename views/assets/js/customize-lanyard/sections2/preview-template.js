@@ -51,6 +51,7 @@ class PreviewTemplate {
 
     }
     else if (artworkManualSelected == "artwork") {
+      alert("Bueno");
       //previewArtwork.togglePreviewManualClass(action);
       previewManual.togglePreviewManualClass("none");
     }
