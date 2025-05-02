@@ -8,7 +8,7 @@ class PreviewTemplateArtworkClass {
 
   //  }
   //  else {
-      previewTemplateArtworkSection.style.background = "green";
+      previewTemplateArtworkSection.style.visibility = "hidden";
 
   //  }
 
