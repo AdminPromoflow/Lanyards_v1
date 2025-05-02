@@ -41,15 +41,15 @@
 <section id="preview-artwork-section">
   <div class="super-lanyard-artwork" id="super-lanyard-artwork">
 
-    <div class="" id="left-super-lanyard-artwork">
+    <div class="" id="left-super-lanyard-artwork2">
 
     </div>
 
-    <div class="" id="right-super-lanyard-artwork">
+    <div class="" id="right-super-lanyard-artwork2">
 
     </div>
 
-    <div class="" id="center-super-lanyard-artwork">
+    <div class="" id="center-super-lanyard-artwork2">
 
     </div>
 
