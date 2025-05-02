@@ -34,6 +34,8 @@ class PreviewTemplate {
 
   // Toggles the visibility of the preview container
   togglePreviewTemplateClass(action) {
+    alert("Bueno");
+
 
     this.previewContainer.style.display = action;
     if (action == "block") {
@@ -51,7 +53,6 @@ class PreviewTemplate {
 
     }
     else if (artworkManualSelected == "artwork") {
-      alert("Bueno");
       //previewArtwork.togglePreviewManualClass(action);
       previewManual.togglePreviewManualClass("none");
     }
