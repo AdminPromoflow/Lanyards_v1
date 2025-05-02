@@ -43,12 +43,7 @@ $imgRightMtime = getPreviewTemplateFilemtime($imgRightPath);
       <div class="background-colour" id="center-super-lanyard"></div>
     </div>
 
-    <!-- Artwork lanyard layout -->
-    <div class="super-lanyard-artwork" id="super-lanyard-artwork">
-      <div id="left-super-lanyard-artwork"></div>
-      <div id="right-super-lanyard-artwork"></div>
-      <div id="center-super-lanyard-artwork"></div>
-    </div>
+
 
   </div>
 </section>
