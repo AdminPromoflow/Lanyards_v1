@@ -1,10 +1,10 @@
 class PreviewTemplateArtworkClass {
   constructor() {
-    previewTemplateArtworkSection.style.display = "none";
+    previewTemplateArtworkSection.style.display = "block";
 
   }
   togglePreviewTemplateArtworkClass(action) {
-      previewTemplateArtworkSection.style.display = action;
+      previewTemplateArtworkSection.style.display = "none";
       alert(JSON.stringify(previewTemplateArtworkSection.id + action));
 
 
