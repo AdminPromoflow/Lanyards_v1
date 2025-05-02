@@ -237,7 +237,7 @@ class PreviewTemplate {
       case "30mm":
         this.applyClassToGroup("left-super-lanyard-two-end-30mm", "right-super-lanyard-two-end-30mm", "", "top_left_clip-two-end-30mm", "top_right_clip-two-end-30mm");
         this.applyClassToManualGroup("left-super-lanyard-two-end-30mm-manual", "right-super-lanyard-two-end-30mm-manual", "center-super-lanyard-two-end-30mm-manual");
-        this.applyClassToArtworkManualGroup("left-super-lanyard-two-end-30mm-template-artwork", "right-super-lanyard-two-end-30mm-template-artwork", "center-super-lanyard-two-end-30mm-template-artwork");
+        this.applyClassToArtworkGroup("left-super-lanyard-two-end-30mm-template-artwork", "right-super-lanyard-two-end-30mm-template-artwork", "center-super-lanyard-two-end-30mm-template-artwork");
         break;
       default:
         console.warn("Unrecognised width in 'two-end' mode:", width);
