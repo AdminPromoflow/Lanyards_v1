@@ -35,7 +35,6 @@ class PreviewTemplate {
   // Toggles the visibility of the preview container
   togglePreviewTemplateClass(action) {
 
-    alert(action);
 
 
     this.previewContainer.style.display = action;
@@ -50,12 +49,14 @@ class PreviewTemplate {
 
     if (artworkManualSelected == "manual") {
       previewManual.togglePreviewManualClass(action);
-      //previewArtwork.togglePreviewManualClass("none");
+      previewTemplateArtwork.togglePreviewTemplateArtworkClass("none");
 
     }
     else if (artworkManualSelected == "artwork") {
 
       //previewArtwork.togglePreviewManualClass(action);
+      previewTemplateArtwork.togglePreviewTemplateArtworkClass(action);
+
       previewManual.togglePreviewManualClass("none");
     }
   }
