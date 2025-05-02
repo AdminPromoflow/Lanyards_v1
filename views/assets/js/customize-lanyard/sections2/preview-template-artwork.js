@@ -5,7 +5,7 @@ class PreviewTemplateArtworkClass {
   togglePreviewTemplateArtworkClass(action) {
     document.addEventListener("DOMContentLoaded", () => {
       const previewTemplateArtworkSection = document.getElementById("preview-template-artwork-section");
-      alert(JSON.stringify(previewTemplateArtworkSection));
+      alert(JSON.stringify(previewTemplateArtworkSection.id));
     });
   }
 }
