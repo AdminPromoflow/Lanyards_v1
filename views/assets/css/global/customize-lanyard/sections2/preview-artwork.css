@@ -1,167 +1,509 @@
-.previewArtwork{
-  position: relative;
-  height:100%;
-  width: 100%;
-  display: none;
-}
-.container-previewArtwork{
-  position: relative;
-  height:100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, .12);
-  index: 5;
-
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  align-items: center;
-  flex-wrap: nowrap;
-}
-.box-previewArtwork{
-  position: relative;
-  width: 45%;
-  height: 90%;
-  margin: 5px 5px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  cursor: pointer;
-  background: rgba(48, 79, 112, .3);
-  border: 2px solid transparent;
-}
-.box-previewArtwork:nth-child(1){
-  border: 2px solid white;
-}
-
-.lanyard-artwork{
-  position: relative;
-
-  border: 1px solid white;
-  overflow: visible;
-}
-.anyard-artwork img{
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  height: 100%;
-  width: 100%;
-}
-
-.box-previewArtwork h2{
-  position: relative;
-  margin: 0;
-  text-align: left;
-  color: rgba(255, 255, 255, .7);
-  font-size: 1.2em;
-  text-shadow: 2px 2px 0px rgba(0,0,0,.5);
-  font-weight: 300;
-}
-
-
-.measures-previewArtwork-long{
-  position: absolute;
-  top: 56%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 290px;
-  height: 5%;
-  border-top: 1px dashed white;
-  border-right: 1px dashed white;
-  border-left: 1px dashed white;
-  display: none;
-}
-  .measures-previewArtwork-long h4{
-    position: absolute;
-    top: -30%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    margin: 0;
-    padding:  0.5px;
-    color: rgba(24, 41, 66, 1);
-    font-size: 0.95em;
-    font-weight: 900;
-  }
-  .measures-previewArtwork-width{
-    position: absolute;
-    top: 65%;
-    left: 96%;
-    width: 1.6%;
-    height: 20px;
-    border-top: 1px dashed white;
-    border-right: 1px dashed white;
-    border-bottom: 1px dashed white;
-    display: none;
-  }
- .measures-previewArtwork-width h4{
-   position: absolute;
-   top: 80%;
-   left: 50%;
-   transform: translateX(-83%);
-   margin: 0;
-   padding:  0.5px;
-   color: rgba(24, 41, 66, 1);
-   font-size: 0.95em;
-   font-weight: 900;
- }
-
-
-
-
-
-
-
-
-
-
-  .left-artwork-lanyard-two-end-10mm {
-    height: 7.2cm;
-    width: 0.16cm;
-  }
-  .right-artwork-lanyard-two-end-10mm {
-
-    height: 7.2cm;
-    width: 0.16cm;
-  }
-
-
-  .left-artwork-lanyard-two-end-15mm {
-   height: 7.2cm;
-    width: 0.24cm;
-  }
-  .right-artwork-lanyard-two-end-15mm {
-    height: 7.2cm;
-    width: 0.24cm;
-    }
-
-
-  .left-artwork-lanyard-two-end-20mm {
+/* artwork */
+    .super-lanyard-artwork{
+      position: absolute;
+      top: 18.45%;
+      left: 50%;
+      transform: translateX(-50%);
       height: 7.2cm;
-    width: 0.32cm;
-    }
-  .right-artwork-lanyard-two-end-20mm {
-    height: 7.2cm;
-    width: 0.32cm;
-    }
+      width: 100px;
+      background-color: green;
+}
+
+    /* 10mm */
+    .left-super-lanyard-one-end-10mm-artwork {
+      position: absolute;
+      top: 50%;
+      left: 45.3%;
+      height: 6.08cm;
+      width: 0.096cm;
+      overflow: hidden;
+      transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
+
+}
+
+    .right-super-lanyard-one-end-10mm-artwork {
+      position: absolute;
+      top: 50%;
+      right: 45.3%;
+      height: 6.08cm;
+      width: 0.096cm;
+      overflow: hidden;
+      transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
+
+}
+
+    /* 15mm */
+    .left-super-lanyard-one-end-15mm-artwork {
+      position: absolute;
+      top: 50%;
+      left: 43.8%;
+      height: 6.08cm;
+      width: 0.176cm;
+
+      transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
+      overflow: hidden;
+}
+
+    .right-super-lanyard-one-end-15mm-artwork {
+      position: absolute;
+      top: 50%;
+      right: 43.8%;
+      height: 6.08cm;
+      width: 0.176cm;
+
+      transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
+      overflow: hidden;
+}
 
 
-  .left-artwork-lanyard-two-end-25mm {
-    height: 7.2cm;
-    width: 0.4cm;
-  }
-  .right-artwork-lanyard-two-end-25mm {
-    height: 7.2cm;
-    width: 0.4cm;
-  }
 
 
 
-  .left-artwork-lanyard-two-end-30mm {
-    height: 7.2cm;
-    width: 0.48cm;
-  }
-  .right-artwork-lanyard-two-end-30mm {
-    height: 7.2cm;
-    width: 0.48cm;
-  }
+
+    /* 20mm */
+    .left-super-lanyard-one-end-20mm-artwork {
+      position: absolute;
+      top: 50%;
+      left: 42.3%;
+      height: 6.08cm;
+      width: 0.256cm;
+      overflow: hidden;
+      transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
+}
+
+    .right-super-lanyard-one-end-20mm-artwork {
+      position: absolute;
+      top: 50%;
+      right: 42.3%;
+      height: 6.08cm;
+      width: 0.256cm;
+      overflow: hidden;
+      transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
+}
+
+
+    /* 25mm */
+    .left-super-lanyard-one-end-25mm-artwork {
+      position: absolute;
+      top: 50%;
+      left: 40.8%;
+      height: 6.08cm;
+      width: 0.336cm;
+
+      transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
+      overflow: hidden;
+}
+
+    .right-super-lanyard-one-end-25mm-artwork {
+      position: absolute;
+      top: 50%;
+      right: 40.8%;
+      height: 6.08cm;
+      width: 0.336cm;
+
+      transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
+      overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+/* 30mm */
+.left-super-lanyard-one-end-30mm-artwork {
+position: absolute;
+top: 50%;
+left: 39.6%;
+height: 6.08cm;
+width: 0.416cm;
+
+
+transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
+overflow: hidden;
+}
+
+.right-super-lanyard-one-end-30mm-artwork {
+position: absolute;
+top: 50%;
+right: 39.6%;
+height: 6.08cm;
+width: 0.416cm;
+
+
+transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
+overflow: hidden;
+}
+
+/**/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.left-super-lanyard-two-end-10mm-artwork {
+position: absolute;
+top: 50%;
+left: 10.2%;
+height: 6.08cm;
+width: 0.096cm;
+
+
+transform:   translateY(-50%);
+overflow: hidden;
+}
+
+.right-super-lanyard-two-end-10mm-artwork {
+position: absolute;
+top: 50%;
+right: 10.2%;
+height: 6.08cm;
+width: 0.096cm;
+
+
+transform:   translateY(-50%);
+overflow: hidden;
+}
+
+
+
+/* 15mm */
+.left-super-lanyard-two-end-15mm-artwork {
+position: absolute;
+top: 50%;
+left: 10.2%;
+height: 6.08cm;
+width: 0.176cm;
+
+transform:   translateY(-50%);
+overflow: hidden;
+}
+
+.right-super-lanyard-two-end-15mm-artwork {
+position: absolute;
+top: 50%;
+right: 10.2%;
+height: 6.08cm;
+width: 0.176cm;
+
+transform:   translateY(-50%);
+overflow: hidden;
+}
+
+
+
+
+
+
+/* 20mm */
+.left-super-lanyard-two-end-20mm-artwork {
+position: absolute;
+top: 50%;
+left: 10.2%;
+height: 6.08cm;
+width: 0.256cm;
+
+
+transform:   translateY(-50%);
+overflow: hidden;
+}
+
+.right-super-lanyard-two-end-20mm-artwork {
+position: absolute;
+top: 50%;
+right: 10.2%;;
+height: 6.08cm;
+width: 0.256cm;
+
+
+transform:   translateY(-50%);
+overflow: hidden;
+}
+
+
+
+
+
+
+/* 25mm */
+.left-super-lanyard-two-end-25mm-artwork {
+position: absolute;
+top: 50%;
+left: 10.2%;
+height: 6.08cm;
+width: 0.336cm;
+
+
+transform:   translateY(-50%);
+overflow: hidden;
+}
+
+.right-super-lanyard-two-end-25mm-artwork {
+position: absolute;
+top: 50%;
+right: 10.2%;
+height: 6.08cm;
+width: 0.336cm;
+
+
+transform:   translateY(-50%);
+overflow: hidden;
+}
+
+
+
+
+
+/* 25mm */
+.left-super-lanyard-two-end-30mm-artwork {
+position: absolute;
+top: 50%;
+left: 10.2%;
+height: 6.08cm;
+width: 0.416cm;
+transform:   translateY(-50%);
+overflow: hidden;
+}
+
+.right-super-lanyard-two-end-30mm-artwork {
+position: absolute;
+top: 50%;
+right: 10.2%;
+height: 6.08cm;
+width: 0.416cm;
+transform:   translateY(-50%);
+overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+.left-super-lanyard-one-end-10mm-attachment-artwork{
+position: absolute;
+top: 50%;
+left: 45.3%;
+height: 6.08cm;
+width: 0.096cm;
+overflow: hidden;
+transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
+}
+.right-super-lanyard-one-end-10mm-attachment-artwork{
+position: absolute;
+top: 50%;
+right: 45.3%;
+height: 6.08cm;
+width: 0.096cm;
+overflow: hidden;
+transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
+}
+
+.center-super-lanyard-one-end-10mm-attachment-artwork{
+position: absolute;
+height: calc(2cm - 0.56cm);
+width: 0.096cm;
+bottom: 0.56cm;
+left: 50%;
+
+transform: translateX(-50%);
+z-index: 0;
+overflow: hidden;
+overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+.center-super-lanyard-one-end-15mm-attachment-artwork{
+position: absolute;
+height: calc(2cm - 0.56cm);
+width: 0.165cm;
+bottom: 0.56cm;
+left: 50%;
+transform: translateX(-50%);
+
+z-index: 0;
+overflow: hidden;
+}
+.left-super-lanyard-one-end-15mm-attachment-artwork{
+position: absolute;
+top: 50%;
+left: 43.8%;
+height: 6.08cm;
+width: 0.176cm;
+
+transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
+overflow: hidden;
+}
+.right-super-lanyard-one-end-15mm-attachment-artwork{
+position: absolute;
+top: 50%;
+right: 43.8%;
+height: 6.08cm;
+width: 0.176cm;
+
+transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
+overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.center-super-lanyard-one-end-20mm-attachment-artwork{
+position: absolute;
+height: calc(2cm - 0.56cm);
+width: 0.24cm;
+bottom: 0.56cm;
+left: 50%;
+transform: translateX(-50%);
+
+z-index: 0;
+overflow: hidden;
+}
+.left-super-lanyard-one-end-20mm-attachment-artwork{
+position: absolute;
+top: 50%;
+left: 42.3%;
+height: 6.08cm;
+width: 0.256cm;
+overflow: hidden;
+transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
+}
+.right-super-lanyard-one-end-20mm-attachment-artwork{
+position: absolute;
+top: 50%;
+right: 42.3%;
+height: 6.08cm;
+width: 0.256cm;
+overflow: hidden;
+transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.center-super-lanyard-one-end-25mm-attachment-artwork{
+position: absolute;
+height: calc(2cm - 0.56cm);
+width: 0.315cm;
+bottom: 0.56cm;
+left: 50%;
+transform: translateX(-50%);
+
+z-index: 0;
+overflow: hidden;
+}
+.left-super-lanyard-one-end-25mm-attachment-artwork{
+position: absolute;
+top: 50%;
+left: 40.8%;
+height: 6.08cm;
+width: 0.336cm;
+
+transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
+overflow: hidden;
+}
+.right-super-lanyard-one-end-25mm-attachment-artwork{
+overflow: hidden;
+position: absolute;
+top: 50%;
+right: 40.8%;
+height: 6.08cm;
+width: 0.336cm;
+
+transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
+overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.center-super-lanyard-one-end-30mm-attachment-artwork{
+position: absolute;
+height: calc(2cm - 0.56cm);
+width: 0.39cm;
+bottom: 0.56cm;
+left: 50%;
+transform: translateX(-50%);
+
+z-index: 0;
+overflow: hidden;
+}
+.left-super-lanyard-one-end-30mm-attachment-artwork{
+position: absolute;
+top: 50%;
+left: 39.6%;
+height: 6.08cm;
+width: 0.416cm;
+
+
+transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
+overflow: hidden;
+}
+.right-super-lanyard-one-end-30mm-attachment-artwork{
+position: absolute;
+top: 50%;
+right: 39.6%;
+height: 6.08cm;
+width: 0.416cm;
+
+
+transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
+overflow: hidden;
+}
+/**/
