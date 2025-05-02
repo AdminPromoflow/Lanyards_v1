@@ -20,23 +20,23 @@
 /* 10mm */
 .left-super-lanyard-one-end-10mm-template-artwork {
   position: absolute;
-  top: 50%;
-  left: 45.3%;
-  height: 6.08cm;
-  width: 0.096cm;
-  overflow: hidden;
-  transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
+  top: 0;
+  left: 29%;
+  height: 7.2cm;
+  width: 0.16cm;
+  border: 1px solid black;
+  transform:  skewX(7.5deg) perspective(7.5vw) ;
   background: brown;
 }
 
 .right-super-lanyard-one-end-10mm-template-artwork {
   position: absolute;
-  top: 50%;
-  right: 45.3%;
-  height: 6.08cm;
-  width: 0.096cm;
-  overflow: hidden;
-  transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
+  top: 0;
+  right: 29%;
+  height: 7.2cm;
+  width: 0.16cm;
+  border: 1px solid black;
+  transform:  skewX(-7.5deg) perspective(7.5vw);
   background: brown;
 
 }
