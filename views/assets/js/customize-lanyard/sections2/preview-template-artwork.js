@@ -3,20 +3,10 @@ class PreviewTemplateArtworkClass {
 
   }
   togglePreviewTemplateArtworkClass(action) {
-    alert(JSON.stringify(previewTemplateArtworkSection));
-    if (previewTemplateArtworkSection) {
-          previewTemplateArtworkSection.style.display = action;
-    }
-    else {
-      alert("tenemos un problema");
-    }
-
-
+    document.addEventListener("DOMContentLoaded", () => {
+      const previewTemplateArtworkSection = document.getElementById("preview-template-artwork-section");
+      alert(JSON.stringify(previewTemplateArtworkSection));
+    });
   }
-
-
 }
-
-const previewTemplateArtworkSection = document.getElementById("preview-template-artwork-section");
-
 const previewTemplateArtworkClass = new PreviewTemplateArtworkClass();
