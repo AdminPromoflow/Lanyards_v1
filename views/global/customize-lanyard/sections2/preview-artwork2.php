@@ -10,11 +10,7 @@ function get_file_version($relative_path) {
 <section id="preview-artwork2-section">
   <!-- Artwork2 lanyard layout -->
   <!-- Artwork lanyard layout -->
-  <div class="super-lanyard-artwork" id="super-lanyard-artwork">
-    <div id="left-super-lanyard-artwork2"></div>
-    <div id="right-super-lanyard-artwork2"></div>
-    <div id="center-super-lanyard-artwork2"></div>
-  </div>
+
 </section>
 
 <!--<script src="../../views/assets/js/customize-lanyard/sections2/preview-artwork2.js?v=<?php //echo get_file_version('../../views/assets/js/customize-lanyard/sections2/preview-artwork2.js'); ?>" type="text/javascript"></script>-->
