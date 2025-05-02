@@ -8,7 +8,7 @@ class PreviewTemplateArtworkClass {
 
   //  }
   //  else {
-      previewTemplateArtworkSection.style.display = "none";
+      previewTemplateArtworkSection.style.display = "block";
 
   //  }
 
