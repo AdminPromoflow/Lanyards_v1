@@ -4,7 +4,7 @@ class PreviewTemplateArtworkClass {
 
   }
   togglePreviewTemplateArtworkClass(action) {
-
+    
       previewTemplateArtworkSection.style.display = action;
   }
 }
