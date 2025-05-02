@@ -45,7 +45,6 @@ class PreviewTemplate {
     attachmentPreviewClass.togglePreviewAttachmentClass(action);
 
     var artworkManualSelected = artworkManualClass.getArtworkManual();
-    alert(artworkManualSelected);
 
     if (artworkManualSelected == "manual") {
       previewManual.togglePreviewManualClass(action);
