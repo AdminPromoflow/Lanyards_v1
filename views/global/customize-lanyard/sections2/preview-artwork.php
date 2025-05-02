@@ -1,9 +1,10 @@
 <?php
-  $css_preview_artwork = '../../views/assets/css/global/customize-lanyard/sections2/preview-artwork.css';
-  $js_preview_artwork = '../../views/assets/js/customize-lanyard/sections2/preview-artwork.js';
+function get_file_version($relative_path) {
+    $absolute_path = __DIR__ . '/' . $relative_path;
+    return file_exists($absolute_path) ? filemtime($absolute_path) : time();
+}
 ?>
-
-<link rel="stylesheet" href="<?php echo $css_preview_artwork . '?v=' . filemtime($css_preview_artwork); ?>">
+<script src="../../views/assets/js/customize-lanyard/sections2/preview-artwork.js?v=<?php echo get_file_version('../../views/assets/js/customize-lanyard/sections2/preview-artwork.js'); ?>" type="text/javascript"></script>
 
 
 <section id="preview-artwork-section">
