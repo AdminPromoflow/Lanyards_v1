@@ -11,10 +11,12 @@ class PreviewTemplateArtworkClass {
   addArtworkImage(side, src){
 
     if (side == "left") {
-       leftSuperLanyardTemplateArtwork = '<img src="' + src + '" alt="">';
+      leftSuperLanyardTemplateArtwork.innerHTML = "";
+       leftSuperLanyardTemplateArtwork.innerHTML = '<img src="' + src + '" alt="">';
     }
     else if (side == "right") {
-      rightSuperLanyardTemplateArtwork = '<img src="' + src + '" alt="">';
+      rightSuperLanyardTemplateArtwork.innerHTML = "";
+      rightSuperLanyardTemplateArtwork.innerHTML = '<img src="' + src + '" alt="">';
     }
   }
 
