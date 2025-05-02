@@ -1,9 +1,11 @@
 class PreviewTemplateArtworkClass {
   constructor() {
+    previewTemplateArtworkSection.style.display = "none";
 
   }
   togglePreviewTemplateArtworkClass(action) {
-      previewTemplateArtworkSection.style.display = "block";
+
+      previewTemplateArtworkSection.style.display = action;
   }
 }
 const previewTemplateArtworkSection = document.getElementById("preview-template-artwork-section");
