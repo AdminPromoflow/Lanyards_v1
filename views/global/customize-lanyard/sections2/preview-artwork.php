@@ -13,21 +13,16 @@ function get_file_version($relative_path) {
 
     <div class="" id="left-super-lanyard-artwork">
 
-
-
     </div>
 
     <div class="" id="right-super-lanyard-artwork">
 
+    </div>
 
+    <div class="" id="center-super-lanyard-artwork">
 
-  </div>
-
-  <div class="" id="center-super-lanyard-artwork">
-
-
-
-  </div>
+    </div>
+    
 </section>
 
 <script src="../../views/assets/js/customize-lanyard/sections2/preview-artwork.js?v=<?php echo get_file_version('../../views/assets/js/customize-lanyard/sections2/preview-artwork.js'); ?>" type="text/javascript"></script>
