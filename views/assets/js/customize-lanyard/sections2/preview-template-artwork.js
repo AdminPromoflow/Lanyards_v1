@@ -3,9 +3,8 @@ class PreviewTemplateArtworkClass {
 
   }
   togglePreviewTemplateArtworkClass(action) {
-      previewTemplateArtworkSection.style.display = "none";
-      alert(JSON.stringify(previewTemplateArtworkSection.id + action));
 
+      previewTemplateArtworkSection.style.setProperty('display', 'none', 'important');
 
   }
 }
