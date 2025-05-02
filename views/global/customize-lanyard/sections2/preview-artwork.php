@@ -38,21 +38,6 @@
 
   </div>
 </section>
-<section id="preview-artwork-section">
-  <div class="super-lanyard-artwork" id="super-lanyard-artwork">
 
-    <div class="" id="left-super-lanyard-artwork2">
-
-    </div>
-
-    <div class="" id="right-super-lanyard-artwork2">
-
-    </div>
-
-    <div class="" id="center-super-lanyard-artwork2">
-
-    </div>
-
-</section>
 
 <script src="<?php echo $js_preview_artwork . '?v=' . filemtime($js_preview_artwork); ?>" type="text/javascript"></script>
