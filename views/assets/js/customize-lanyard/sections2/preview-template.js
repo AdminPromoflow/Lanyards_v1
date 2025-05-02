@@ -45,13 +45,13 @@ class PreviewTemplate {
     attachmentPreviewClass.togglePreviewAttachmentClass(action);
 
     var artworkManualSelected = artworkManualClass.getArtworkManual();
+    alert(artworkManualSelected);
 
     if (artworkManualSelected == "manual") {
       previewManual.togglePreviewManualClass(action);
       //previewArtwork.togglePreviewManualClass("none");
 
     }
-    alert(artworkManualSelected);
     else if (artworkManualSelected == "artwork") {
       alert("Bueno");
 
