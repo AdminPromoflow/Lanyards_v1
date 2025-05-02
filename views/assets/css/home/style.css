@@ -36,7 +36,14 @@ body{
   filter: brightness(0.7);
   min-width: 300px;
 }
-
+.content{
+  position: relative;
+  height: auto;
+}
+.content img{
+  position: relative;
+  width: 100%;
+}
 /* Estilo para la barra de desplazamiento en WebKit */
 .container::-webkit-scrollbar {
     width: 18px; /* Ancho de la barra de desplazamiento */
