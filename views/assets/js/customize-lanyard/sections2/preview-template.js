@@ -269,9 +269,9 @@ class PreviewTemplate {
   applyClassToArtworkGroup(leftClass = "", rightClass = "", centerClass = "") {
     const el = this.artworkElements;
 
-    if (leftClass) el.left_artwork.classList.add(leftClass);
-    if (rightClass) el.right_artwork.classList.add(rightClass);
-    if (centerClass) el.center_artwork.classList.add(centerClass);
+    if (leftClass) el.left_artwork2.classList.add(leftClass);
+    if (rightClass) el.right_artwork2.classList.add(rightClass);
+    if (centerClass) el.center_artwork2.classList.add(centerClass);
   }
 }
 
