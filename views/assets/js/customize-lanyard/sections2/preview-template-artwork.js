@@ -3,7 +3,6 @@ class PreviewTemplateArtworkClass {
 
   }
   togglePreviewTemplateArtworkClass(action) {
-    alert("al menos");
     const previewTemplateArtworkSection = document.getElementById("preview-template-artwork-section");
 
     previewTemplateArtworkSection.style.display = action;
