@@ -4,9 +4,8 @@ class PreviewTemplateArtworkClass {
   }
   togglePreviewTemplateArtworkClass(action) {
     const previewTemplateArtworkSection = document.getElementById("preview-template-artwork-section");
-    alert(action);
 
-    previewTemplateArtworkSection.style.display = action;
+    previewTemplateArtworkSection.style.display = "none";
   }
 
 
