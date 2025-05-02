@@ -4,7 +4,14 @@ class PreviewTemplateArtworkClass {
   }
   togglePreviewTemplateArtworkClass(action) {
 
-    previewTemplateArtworkSection.style.display = "none";
+    if (previewTemplateArtworkSection) {
+          previewTemplateArtworkSection.style.display = action;
+    }
+    else {
+      alert("tenemos un problema");
+    }
+
+
   }
 
 
