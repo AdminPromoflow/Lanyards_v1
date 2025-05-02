@@ -1,8 +1,4 @@
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 .super-lanyard-artwork{
   position: absolute;
   top: 18.45%;
@@ -11,7 +7,6 @@ body {
   height: 7.2cm;
   width: 100px;
   background-color: green;
-  display: block
 }
 
 /* 10mm */
