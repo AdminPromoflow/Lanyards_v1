@@ -35,6 +35,8 @@ class PreviewTemplate {
   // Toggles the visibility of the preview container
   togglePreviewTemplateClass(action) {
 
+    alert(action);
+
 
     this.previewContainer.style.display = action;
     if (action == "block") {
