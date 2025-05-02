@@ -17,11 +17,11 @@ class PreviewTemplate {
             center_manual: document.getElementById("center-super-lanyard-manual")
           };
 
-        /*  this.artworkElements = {
-            left_artwork: document.getElementById("left-super-lanyard-artwork"),
-            right_artwork: document.getElementById("right-super-lanyard-artwork"),
-            center_artwork: document.getElementById("center-super-lanyard-artwork")
-          };*/
+          this.artworkElements = {
+            left_artwork2: document.getElementById("left-super-lanyard-artwork2"),
+            right_artwork2: document.getElementById("right-super-lanyard-artwork2"),
+            center_artwork2: document.getElementById("center-super-lanyard-artwork2")
+          };
         });
 
     // Store the main preview container element
@@ -263,13 +263,13 @@ class PreviewTemplate {
     if (centerClass) el.center_manual.classList.add(centerClass);
   }
 
-/*  applyClassToArtworkGroup(leftClass = "", rightClass = "", centerClass = "") {
+  applyClassToArtworkGroup(leftClass = "", rightClass = "", centerClass = "") {
     const el = this.artworkElements;
 
     if (leftClass) el.left_artwork.classList.add(leftClass);
     if (rightClass) el.right_artwork.classList.add(rightClass);
     if (centerClass) el.center_artwork.classList.add(centerClass);
-  }*/
+  }
 }
 
 const previewTemplate = new PreviewTemplate();
