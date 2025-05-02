@@ -1,42 +1,27 @@
 <?php
-  $css_preview_artwork = '../../views/assets/css/global/customize-lanyard/sections2/preview-artwork.css';
-  $js_preview_artwork = '../../views/assets/js/customize-lanyard/sections2/preview-artwork.js';
+function get_file_version($relative_path) {
+    $absolute_path = __DIR__ . '/' . $relative_path;
+    return file_exists($absolute_path) ? filemtime($absolute_path) : time();
+}
 ?>
 
-<link rel="stylesheet" href="<?php echo $css_preview_artwork . '?v=' . filemtime($css_preview_artwork); ?>">
+<link rel="stylesheet" href="../../views/assets/css/global/customize-lanyard/sections2/preview-artwork.css?v=<?php echo get_file_version('../../views/assets/css/global/customize-lanyard/sections2/preview-artwork.css'); ?>">
 
-<section class="previewArtwork" id="previewArtwork">
-  <div class="container-previewArtwork">
+<section id="preview-artwork-section">
+  <div class="super-lanyard-artwork" id="super-lanyard-artwork">
 
-    <div class="box-previewArtwork" >
-      <div class="measures-previewArtwork">
-        <div class="measures-previewArtwork-long">
-          <h4>39mm</h4>
-        </div>
-        <div class="measures-previewArtwork-width">
-          <h4 class="width-preview-artwork">8mm</h4>
-        </div>
-      </div>
-      <h2>Front left</h2>
-      <br><br>
-      <div class="lanyard-artwork" id="left-artwork-lanyard">
+    <div class="" id="left-super-lanyard-artwork">
 
-      </div>
     </div>
 
-    <div class="box-previewArtwork" >
-      <h2>Front right</h2>
-      <br><br>
-      <div class="measures-previewArtwork-long">
-        <h4>39mm</h4>
-      </div>
-      <div class="measures-previewArtwork-width">
-        <h4 class="width-preview-artwork">8mm</h4>
-      </div>
-      <div class="lanyard-artwork" id="right-artwork-lanyard"></div>
+    <div class="" id="right-super-lanyard-artwork">
+
     </div>
 
-  </div>
+    <div class="" id="center-super-lanyard-artwork">
+
+    </div>
+
 </section>
 
-<script src="<?php echo $js_preview_artwork . '?v=' . filemtime($js_preview_artwork); ?>" type="text/javascript"></script>
+<script src="../../views/assets/js/customize-lanyard/sections2/preview-artwork.js?v=<?php echo get_file_version('../../views/assets/js/customize-lanyard/sections2/preview-artwork.js'); ?>" type="text/javascript"></script>
