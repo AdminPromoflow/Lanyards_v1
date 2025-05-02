@@ -3,7 +3,6 @@ class PreviewTemplateArtworkClass {
 
   }
   togglePreviewTemplateArtworkClass(action) {
-    const previewTemplateArtworkSection = document.getElementById("preview-template-artwork-section");
 
     previewTemplateArtworkSection.style.display = "none";
   }
@@ -11,5 +10,6 @@ class PreviewTemplateArtworkClass {
 
 }
 
+const previewTemplateArtworkSection = document.getElementById("preview-template-artwork-section");
 
 const previewTemplateArtworkClass = new PreviewTemplateArtworkClass();
