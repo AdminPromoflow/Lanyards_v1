@@ -14,6 +14,6 @@ class PreviewTemplateArtworkClass {
 
   }
 }
-const previewTemplateArtworkSection = document.getElementById("super-lanyard-artwork");
+const previewTemplateArtworkSection = document.getElementById("preview-template-artwork-section");
 
 const previewTemplateArtworkClass = new PreviewTemplateArtworkClass();
