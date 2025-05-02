@@ -3,14 +3,14 @@ class PreviewTemplateArtworkClass {
 
   }
   togglePreviewTemplateArtworkClass(action) {
-    if (action == "block") {
-      previewTemplateArtworkSection.style.visibility = "visible";
+  //  if (action == "block") {
+  //    previewTemplateArtworkSection.style.visibility = "visible";
 
-    }
-    else {
+  //  }
+  //  else {
       previewTemplateArtworkSection.style.visibility = "hidden";
 
-    }
+  //  }
 
   }
 }
