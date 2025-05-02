@@ -3,7 +3,7 @@ class PreviewTemplateArtworkClass {
 
   }
   togglePreviewTemplateArtworkClass(action) {
-
+    alert(":P");
       previewTemplateArtworkSection.style.setProperty('display', 'block', 'important');
 
   }
