@@ -4,7 +4,7 @@ class PreviewTemplateArtworkClass {
   }
   togglePreviewTemplateArtworkClass(action) {
 
-      previewTemplateArtworkSection.style.setProperty('display', 'none', 'important');
+      previewTemplateArtworkSection.style.setProperty('display', 'block', 'important');
 
   }
 }
