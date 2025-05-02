@@ -43,7 +43,7 @@ $customize_lanyard_js = "../../views/assets/js/customize-lanyard/app.js";
       <?php include "../../views/global/customize-lanyard/sections2/preview-checkout.php"; ?>
       <?php include "../../views/global/customize-lanyard/sections2/preview-template.php" ?>
       <?php include "../../views/global/customize-lanyard/sections2/preview-manual.php" ?>
-      <?php //include "../../views/global/customize-lanyard/sections2/preview-template-artwork.php" ?>
+      <?php include "../../views/global/customize-lanyard/sections2/preview-template-artwork.php" ?>
     </div>
 
     <div id="options-customize-lanyard" class="options-customize-lanyard">
