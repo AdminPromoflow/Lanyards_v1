@@ -1,6 +1,5 @@
 class PreviewTemplateArtworkClass {
   constructor() {
-    previewTemplateArtworkSection.style.display = "block";
 
   }
   togglePreviewTemplateArtworkClass(action) {
