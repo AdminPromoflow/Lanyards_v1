@@ -18,9 +18,9 @@ class PreviewTemplate {
           };
 
           this.artworkElements = {
-            left_template_artwork: document.getElementById("left-super-lanyard-template-template-artwork"),
-            right_template_artwork: document.getElementById("right-super-lanyard-template-template-artwork"),
-            center_template_artwork: document.getElementById("center-super-lanyard-template-template-artwork")
+            left_template_artwork: document.getElementById("left-super-lanyard-template-artwork"),
+            right_template_artwork: document.getElementById("right-super-lanyard-template-artwork"),
+            center_template_artwork: document.getElementById("center-super-lanyard-template-artwork")
           };
         });
 
