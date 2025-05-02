@@ -3,7 +3,14 @@ class PreviewTemplateArtworkClass {
 
   }
   togglePreviewTemplateArtworkClass(action) {
-      previewTemplateArtworkSection.style.background = "red";
+    if (action == "block") {
+      previewTemplateArtworkSection.style.visibility = "visible";
+
+    }
+    else {
+      previewTemplateArtworkSection.style.visibility = "hidden";
+
+    }
 
   }
 }
