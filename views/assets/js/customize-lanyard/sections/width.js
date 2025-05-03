@@ -218,6 +218,9 @@ class Width {
     previewManual.refreshImageLanyard()
     artworkPreviewClass.refreshPreviewArtwork();
 
+    previewTemplateArtworkClass.confirmImageMessures();
+
+
   }
 
   updatePriceWidthIndividual() {

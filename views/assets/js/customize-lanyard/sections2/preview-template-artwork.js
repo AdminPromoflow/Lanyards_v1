@@ -32,6 +32,8 @@ class PreviewTemplateArtworkClass {
 
 
   confirmImageMessures(){
+    if (artworkManualClass.getArtworkManual() == "artwork") {
+
     const height = artworkClass.getHeightImage();
     const width = artworkClass.getWidthImage();
 
@@ -95,7 +97,7 @@ class PreviewTemplateArtworkClass {
     return sizeAproval;
 
   }
-
+  }
 
 }
 const previewTemplateArtworkSection = document.getElementById("preview-template-artwork-section");
