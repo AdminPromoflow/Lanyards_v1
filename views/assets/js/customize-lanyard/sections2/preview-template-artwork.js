@@ -7,8 +7,8 @@ class PreviewTemplateArtworkClass {
     previewTemplateArtworkSection.style.display = action;
   }
 
-  addArtworkImage(side, image, height, width) {
-    const sizeApproval = this.confirmImageMeasurements(height, width);
+  addArtworkImage(side, image) {
+    const sizeApproval = this.confirmImageMessures();
 
     if (sizeApproval) {
       const targetElement = side === "left"
@@ -25,9 +25,11 @@ class PreviewTemplateArtworkClass {
     }
   }
 
-  confirmImageMeasurements(height, width) {
+  confirmImageMessures() {
     if (artworkManualClass.getArtworkManual() !== "artwork") return true;
 
+    const height = artworkClass.getHeightImage();
+    const width = artworkClass.getWidthImage();
     const widthSelected = widthClass.getWidthSelected();
 
     const requiredSizes = {
@@ -38,27 +40,20 @@ class PreviewTemplateArtworkClass {
       "30mm": { height: 42520, width: 2835 },
     };
 
-    const requiredSize = requiredSizes[widthSelected];
+    const required = requiredSizes[widthSelected];
 
-    if (requiredSize) {
-      if (height === requiredSize.height && width === requiredSize.width) {
+    if (required) {
+      if (height === required.height && width === required.width) {
         return true;
       } else {
-        alert(`The lanyard artwork image must measure ${requiredSize.height} pixels high by ${requiredSize.width} pixels wide.`);
+        alert(`The lanyard artwork image must measure ${required.height} pixels high by ${required.width} pixels wide.`);
       }
     }
 
-    // Clear the image sections if the size is incorrect
+    // Limpiar los lados si no es válido
     leftSuperLanyardTemplateArtwork.innerHTML = "";
     rightSuperLanyardTemplateArtwork.innerHTML = "";
 
     return false;
   }
 }
-
-const previewTemplateArtworkSection = document.getElementById("preview-template-artwork-section");
-const leftSuperLanyardTemplateArtwork = document.getElementById("left-super-lanyard-template-artwork");
-const rightSuperLanyardTemplateArtwork = document.getElementById("right-super-lanyard-template-artwork");
-const centerSuperLanyardTemplateArtwork = document.getElementById("center-super-lanyard-template-artwork");
-
-const previewTemplateArtworkClass = new PreviewTemplateArtworkClass();
