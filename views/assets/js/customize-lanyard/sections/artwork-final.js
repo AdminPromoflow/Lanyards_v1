@@ -3,14 +3,14 @@ class ArtworkFinal {
     this.updateItems();
   }
 updateItems(){
-  artworkFinalMaterial.innerHTML = "Material: " + material.getMaterialSelected();
-  artworkFinalLanyardLype.innerHTML = "Lanyard type: " + oneTwoEndsClass.getTypeLanyardSelected();
-  artworkFinalWidth.innerHTML = "Width: " + widthClass.getWidthSelected();
-  artworkFinalSidePrinted.innerHTML = "Side printed: " + sidePrintedClass.getSidePrintedSelected();
-  artworkFinalClips.innerHTML = "Clips: " + clipClass.getClipSelected();
-  artworkFinalAttachment.innerHTML = "Attachment: " + attachmentClass.getAttachmentSelected();
-  artworkFinalColourQuantity.innerHTML = "Colour Quantity: " + colourClass.getColourSelected();
-  artworkFinalArtworkManual.innerHTML = "Artwork - Manual: " + artworkManualClass.getArtworkManual();
+  artworkFinalMaterial.innerHTML = "<strong>Material: </strong>" + material.getMaterialSelected();
+  artworkFinalLanyardLype.innerHTML = "<strong>Lanyard type: </strong>" + oneTwoEndsClass.getTypeLanyardSelected();
+  artworkFinalWidth.innerHTML = "<strong>Width: </strong>" + widthClass.getWidthSelected();
+  artworkFinalSidePrinted.innerHTML = "<strong>Side printed: </strong>" + sidePrintedClass.getSidePrintedSelected();
+  artworkFinalClips.innerHTML = "<strong>Clips: </strong>" + clipClass.getClipSelected();
+  artworkFinalAttachment.innerHTML = "<strong>Attachment: </strong>" + attachmentClass.getAttachmentSelected();
+  artworkFinalColourQuantity.innerHTML = "<strong>Colour Quantity: </strong>" + colourClass.getColourSelected();
+  artworkFinalArtworkManual.innerHTML = "<strong>Artwork - Manual: </strong>" + artworkManualClass.getArtworkManual();
 }
 }
 const artworkFinalMaterial = document.getElementById("artwork-final-material");
