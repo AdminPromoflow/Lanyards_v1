@@ -20,10 +20,11 @@ class ArtworkPreviewClass {
 
   }
   refreshPreviewArtwork(){
+    alert("entro varias o una vez?");
     this.cleanStyleArtwork();
     this.applyTwoEndStylesArtwork();
     this.uploadDownloadableFiles();
-    previewTemplateArtworkClass.confirmImageMessures();
+    //previewTemplateArtworkClass.confirmImageMessures();
 
   }
   cleanStyleArtwork() {

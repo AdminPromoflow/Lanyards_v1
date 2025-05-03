@@ -198,7 +198,6 @@ class Width {
   }
 
   searchDataWidthSelected(width, index) {
-    alert("seleccione width one o dos verces?");
     this.setWidthSelected(width);
     this.setWidthSelectedIndex(index);
 
