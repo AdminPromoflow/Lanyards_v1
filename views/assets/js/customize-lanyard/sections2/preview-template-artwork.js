@@ -56,7 +56,7 @@ class PreviewTemplateArtworkClass {
     leftSuperLanyardTemplateArtwork.innerHTML = "";
     rightSuperLanyardTemplateArtwork.innerHTML = "";
 
-    return true;
+    return false;
   }
 }
 
