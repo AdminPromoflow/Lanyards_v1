@@ -78,10 +78,10 @@
     margin: 5px 0;
     cursor: pointer;
 
-  /*  display: flex;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
-    flex-wrap: wrap;*/
+    flex-wrap: nowrap;
 
 
 
@@ -91,7 +91,6 @@
 
 .container_boxes_artwork-final h4 {
     position: relative;
-    display: inline-block;
     text-align: left;
     width: 40%;
     z-index: 6;
