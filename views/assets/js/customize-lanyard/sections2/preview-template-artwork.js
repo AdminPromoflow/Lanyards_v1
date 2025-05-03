@@ -27,7 +27,7 @@ class PreviewTemplateArtworkClass {
   }
 
   confirmImageMessures() {
-    if (artworkManualClass.getArtworkManual() !== "artwork" %% artworkClass.getSRCImage() != "") return true;
+    if (artworkManualClass.getArtworkManual() !== "artwork" && artworkClass.getSRCImage() != "") return true;
 
     const height = artworkClass.getHeightImage();
     const width = artworkClass.getWidthImage();
