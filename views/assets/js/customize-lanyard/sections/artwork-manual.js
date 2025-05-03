@@ -13,11 +13,9 @@ class ArtworkManualClass {
 
           containerBoxesArtworkManual[0].style.border = "2px solid white";
           containerBoxesArtworkManual[1].style.border = "2px solid transparent";
+
           artworkManualClass.setArtworkManual("manual");
           previewArtworkManualClass.showManualArtworkSeleted();
-
-
-
         }
         else if (i == 1) {
 
@@ -28,10 +26,7 @@ class ArtworkManualClass {
 
           artworkManualClass.setArtworkManual("artwork");
           previewArtworkManualClass.showManualArtworkSeleted();
-
-          artworkPreviewClass.refreshPreviewArtwork()
-
-
+          artworkPreviewClass.refreshPreviewArtwork();
         }
       });
     }
