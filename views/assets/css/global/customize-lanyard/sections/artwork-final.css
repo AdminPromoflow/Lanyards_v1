@@ -43,10 +43,9 @@
 .containers_boxes_artwork-final {
     position: relative;
     width: 100%;
-    max-height: 70%;
+    height: 60%;
     overflow-y: scroll; /* Enable vertical scrolling */
     overflow-x: hidden; /* Disable horizontal scrolling */
-    background-color: green;
 }
 
 /* Style for the scrollbar in WebKit browsers */
