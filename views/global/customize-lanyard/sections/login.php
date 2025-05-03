@@ -1,34 +1,49 @@
-<link rel="stylesheet" href="../../views/assets/css/global/customize-lanyard/sections/login.css">
-<section class="login2 section" id="login2">
+<?php
+// Validar CSS antes de usar filemtime()
+$cssPath = '../../views/assets/css/global/login.css';
+$cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
+?>
 
-  <h2 class="name-section-customize-lanyard">Login</h2>
+<!-- CSS -->
+<link rel="stylesheet" href="<?= $cssPath ?>?v=<?= $cssVersion; ?>">
 
-  <div id="containers_boxes_login2" class="containers_boxes_login2">
-    <label for="login2Email">Please enter your login details:</label>
-    <input id="login2Email" type="text" name="" value="" placeholder="Please provide your email">
-    <input id="login2Password" type="text" name="" value="" placeholder="and your password">
-    <button id="enterLogin2" type="button" name="button"><strong class="containers_boxes_login_button">Login</strong></button>
+<section id="login_customize" class="login">
 
-    <h3>or login with:</h3>
-    <div class="login2OptionsContainer">
-      <div id="loginWithGoogle2" class="login2Options">
-        <img src="../../views/assets/img/global/login/google-icon.png" alt="">
-      </div>
-      <div id="loginWithFacebook2" class="login2Options">
-        <img src="../../views/assets/img/global/login/facebook-icon.png" alt="">
-      </div>
-      <div id="loginWithApple2" class="login2Options">
-        <img src="../../views/assets/img/global/login/apple-icon.png" alt="">
+  <div id="containerLogin_customize" class="containerLogin">
+    <div class="headLogin">
+      <div class="headLoginContaner">
+          <h1>Login</h1>
       </div>
     </div>
-    <p id="openRegister2">No account yet? Register here.</p>
 
+    <div class="bodyLogin">
+      <label for="emailLogin">Please enter your login details:</label>
+      <input id="emailLogin_customize" type="text" placeholder="Email">
+      <input id="passwordLogin_customize" type="password" placeholder="Password">
+      <h3 id="password_forgotten_customize">Have you forgotten your password?</h3>
+      <button id="loginButton_customize" type="button"><strong class="fontWeightButtonLogin">Login</strong></button>
+    </div>
+
+    <div class="footerLogin">
+      <h3>or login with:</h3>
+      <div class="footerLoginOptionsContainer">
+        <?php
+        $googleIcon = '../../views/assets/img/global/login/google-icon.png';
+        $googleIconVersion = file_exists($googleIcon) ? filemtime($googleIcon) : time();
+        ?>
+        <div id="loginWithGoogle_customize" class="footerLoginOptions">
+          <img src="<?= $googleIcon ?>?v=<?= $googleIconVersion; ?>" alt="">
+        </div>
+
+        <!-- Load the JS SDK asynchronously -->
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+
+
+      </div>
+    </div>
   </div>
 
-
 </section>
-<?php include "../../views/global/customize-lanyard/sections/register.php" ?>
 
 
-
-<script src="../../views/assets/js/customize-lanyard/sections/login.js"></script>
+<script src="../../views/assets/js/customize-lanyard/sections/login_customize.js"></script>
