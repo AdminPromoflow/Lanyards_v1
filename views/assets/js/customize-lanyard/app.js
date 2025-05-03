@@ -465,6 +465,8 @@ class CustomizeLanyard {
   }
 
   openArtworkFinal(){
+
+    artworkClassFinal.updateItems();
     previewTemplate.togglePreviewTemplateClass("block");
     previewAccessoriesClass.showAccessoriesPreview("flex");
     artworkPreviewClass.showHidePreviewArtwork(false);
