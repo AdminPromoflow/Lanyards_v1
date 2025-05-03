@@ -20,10 +20,13 @@ class ArtworkPreviewClass {
 
   }
   refreshPreviewArtwork(){
+
+  if (artworkManualClass.getArtworkManual() == "artwork") {
     this.cleanStyleArtwork();
     this.applyTwoEndStylesArtwork();
     this.uploadDownloadableFiles();
     previewTemplateArtworkClass.confirmImageMessures();
+  }
 
   }
   cleanStyleArtwork() {
