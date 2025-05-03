@@ -1,8 +1,8 @@
 class Artwork {
   constructor() {
-    this.setSRCImage = "";
-    this.setHeightImage = "";
-    this.setWidthImage = "";
+    this._setSRCImage = "";
+    this._setHeightImage = "";
+    this._setWidthImage = "";
 
   /*  for (let i = 0; i < clickUploadArtwork.length; i++) {
       clickUploadArtwork[i].addEventListener("click", function (){
@@ -74,7 +74,9 @@ class Artwork {
 
                     // Ahora sí: ya puedes usar las dimensiones con seguridad
 
-                    
+                    this.setSRCImage(img);
+                    this.setHeightImage(img.height);
+                    this.setWidthImage(img.width);
 
                     artworkPreviewClass.uploadArtworkManual("right", img.src);
                     previewTemplateArtworkClass.addArtworkImage("right", img, img.height, img.width);
@@ -95,29 +97,27 @@ class Artwork {
   }
 
   setSRCImage(){
-    return this.setSRCImage;
+    return this._setSRCImage;
   }
   setSRCImage(value){
-    this.setSRCImage = value;
+    this._setSRCImage = value;
   }
 
   getHeightImage(){
-    return this.setHeightImage;
+    return this._setHeightImage;
   }
   setHeightImage(value){
-    this.setHeightImage = value;
+    this._setHeightImage = value;
   }
 
   getWidthImage(){
-    return this.setWidthImage;
+    return this._setWidthImage;
   }
   setWidthImage(value){
-    this.setWidthImage = value;
+    this._setWidthImage = value;
   }
 
-  refreshArtwork(){
-    previewTemplateArtworkClass.confirmImageMessures();
-  }
+
 
 
   showHideArtwork(active){

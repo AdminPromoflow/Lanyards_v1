@@ -23,6 +23,8 @@ class ArtworkPreviewClass {
     this.cleanStyleArtwork();
     this.applyTwoEndStylesArtwork();
     this.uploadDownloadableFiles();
+    previewTemplateArtworkClass.confirmImageMessures();
+
   }
   cleanStyleArtwork() {
     const el = this.elements;

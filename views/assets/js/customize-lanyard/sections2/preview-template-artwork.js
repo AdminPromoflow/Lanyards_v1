@@ -11,9 +11,7 @@ class PreviewTemplateArtworkClass {
   addArtworkImage(side, image, height, width){
 
 
-    artworkClass.setSRCImage(image);
-    artworkClass.setHeightImage(height);
-    artworkClass.setWidthImage(width);
+
 
     var sizeAproval = this.confirmImageMessures();
 
