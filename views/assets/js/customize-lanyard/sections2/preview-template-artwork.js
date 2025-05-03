@@ -11,11 +11,12 @@ class PreviewTemplateArtworkClass {
     const sizeApproval = this.confirmImageMessures();
 
     if (sizeApproval) {
-      const targetElement = side === "left"
-        ? leftSuperLanyardTemplateArtwork
-        : side === "right"
-        ? rightSuperLanyardTemplateArtwork
-        : null;
+      const targetElement =
+        side === "left"
+          ? leftSuperLanyardTemplateArtwork
+          : side === "right"
+          ? rightSuperLanyardTemplateArtwork
+          : null;
 
       if (targetElement) {
         targetElement.innerHTML = `<img src="${image.src}" alt="">`;
@@ -40,20 +41,28 @@ class PreviewTemplateArtworkClass {
       "30mm": { height: 42520, width: 2835 },
     };
 
-    const required = requiredSizes[widthSelected];
+    const expected = requiredSizes[widthSelected];
 
-    if (required) {
-      if (height === required.height && width === required.width) {
+    if (expected) {
+      if (height === expected.height && width === expected.width) {
         return true;
       } else {
-        alert(`The lanyard artwork image must measure ${required.height} pixels high by ${required.width} pixels wide.`);
+        alert(
+          `The lanyard artwork image must measure ${expected.height} pixels high by ${expected.width} pixels wide.`
+        );
       }
     }
 
-    // Limpiar los lados si no es válido
     leftSuperLanyardTemplateArtwork.innerHTML = "";
     rightSuperLanyardTemplateArtwork.innerHTML = "";
 
     return false;
   }
 }
+
+const previewTemplateArtworkSection = document.getElementById("preview-template-artwork-section");
+const leftSuperLanyardTemplateArtwork = document.getElementById("left-super-lanyard-template-artwork");
+const rightSuperLanyardTemplateArtwork = document.getElementById("right-super-lanyard-template-artwork");
+const centerSuperLanyardTemplateArtwork = document.getElementById("center-super-lanyard-template-artwork");
+
+const previewTemplateArtworkClass = new PreviewTemplateArtworkClass();
