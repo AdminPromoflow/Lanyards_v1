@@ -88,34 +88,17 @@
     border: 2px solid transparent; /* Transparent border */
 }
 
-.container_boxes_artwork-final img {
-    width: auto;
-    height: 70%;
-}
 
 .container_boxes_artwork-final h4 {
     position: relative;
+    display: inline-block;
     text-align: left;
     width: 40%;
     z-index: 6;
 
-    margin-left: 12px;
 
     color: white;
     font-weight: 300;
     font-size: 1.1em;
     background: green;
-}
-
-.container_boxes_artwork-final h3 {
-    position: relative;
-    text-decoration: underline;
-    margin-right: 7px;
-    color: #97A7BB;
-    text-align: right;
-    font-weight: 300;
-    font-size: 0.9em;
-}
-.container_boxes_artwork-final h3:hover {
-  font-weight: 500;
 }
