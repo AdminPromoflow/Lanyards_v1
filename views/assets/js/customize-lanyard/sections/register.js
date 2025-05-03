@@ -101,7 +101,7 @@ class ClassRegister2 {
 }
 
 // Get the DOM elements related to registration and login.
-const register2 = document.getElementById("register2");
+//const register2 = document.getElementById("register2");
 
 const registerWithGoogle2 = document.getElementById("registerWithGoogle2");
 //const registerWithFacebook2 = document.getElementById("registerWithFacebook2");
