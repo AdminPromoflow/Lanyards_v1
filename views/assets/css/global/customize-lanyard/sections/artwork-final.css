@@ -79,8 +79,9 @@
     cursor: pointer;
 
     display: flex;
-    justify-content:space-between;
-    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
 
     border: 2px solid transparent; /* Transparent border */
 }
