@@ -34,11 +34,11 @@ class ClassRegister {
     registerWithGoogle2.addEventListener("click", function(){
     })
 
-    registerWithFacebook2.addEventListener("click", function(){
+  /*  registerWithFacebook2.addEventListener("click", function(){
     })
 
     registerWithApple2.addEventListener("click", function(){
-    })
+    })*/
   }
 
   // Function to show or hide the register panel based on the action parameter.
@@ -104,8 +104,8 @@ class ClassRegister {
 const register2 = document.getElementById("register2");
 
 const registerWithGoogle2 = document.getElementById("registerWithGoogle2");
-const registerWithFacebook2 = document.getElementById("registerWithFacebook2");
-const registerWithApple2 = document.getElementById("registerWithApple2");
+//const registerWithFacebook2 = document.getElementById("registerWithFacebook2");
+//const registerWithApple2 = document.getElementById("registerWithApple2");
 
 
 const openLogin2 = document.getElementById("openLogin2");
