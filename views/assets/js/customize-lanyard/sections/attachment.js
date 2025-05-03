@@ -8,19 +8,18 @@ class AttachmentClass {
 
     priceClass.setPriceAttachment(price);
     priceClass.changePricePerLanyard();
+    artworkPreviewClass.refreshPreviewArtwork();
+    previewManual.refreshTextLanyard();
+    previewManual.refreshImageLanyard();
+    previewClip.showPreviewSelectedClip()
+    previewTemplate.activateTemplate();
+
+
   }
 
   refreshAttachment(){
     attachmentClass.showSelectedAttachment();
-    previewTemplate.activateTemplate();
     attachmentPreviewClass.activateTemplate();
-    previewManual.refreshTextLanyard();
-    previewManual.refreshImageLanyard();
-
-    previewClip.showPreviewSelectedClip()
-
-    artworkPreviewClass.refreshPreviewArtwork();
-
   }
 
   showSelectedAttachment() {

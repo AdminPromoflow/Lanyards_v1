@@ -98,12 +98,12 @@ class Home {
         clipClass.refreshClip();
         artworkManualClass.refreshArtkworkManual();
         backgroundClass.refreshBackgroundColour();
-          attachmentClass.refreshAttachment();
-      /*previewTemplate.activateTemplate();
+        attachmentClass.refreshAttachment();
+        previewTemplate.activateTemplate();
         previewManual.refreshTextLanyard();
-        previewManual.refreshImageLanyard();*/
+        previewManual.refreshImageLanyard();
 
-      //  artworkPreviewClass.refreshPreviewArtwork();
+        artworkPreviewClass.refreshPreviewArtwork();
 
         // Open the customization panel
         customizeLanyard.openCustomizeLanyard(true);
