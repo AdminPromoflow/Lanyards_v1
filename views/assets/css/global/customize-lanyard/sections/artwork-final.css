@@ -81,7 +81,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 
 
 
@@ -95,9 +95,23 @@
     width: 40%;
     z-index: 6;
 
+    margin-left: 12px;
 
     color: white;
     font-weight: 300;
     font-size: 1.1em;
     background: green;
+}
+
+.container_boxes_artwork-final h3 {
+    position: relative;
+    text-decoration: underline;
+    margin-right: 7px;
+    color: #97A7BB;
+    text-align: right;
+    font-weight: 300;
+    font-size: 0.9em;
+}
+.container_boxes_artwork-final h3:hover {
+  font-weight: 500;
 }
