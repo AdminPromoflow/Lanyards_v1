@@ -103,7 +103,7 @@ class Home {
         previewManual.refreshTextLanyard();
         previewManual.refreshImageLanyard();
 
-        artworkPreviewClass.refreshPreviewArtwork();
+      //  artworkPreviewClass.refreshPreviewArtwork();
 
         // Open the customization panel
         customizeLanyard.openCustomizeLanyard(true);
