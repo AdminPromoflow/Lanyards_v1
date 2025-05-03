@@ -54,7 +54,6 @@
   position: relative;
   height: 100%;
   width: 100%;
-  background-color: green;
 
 }
 .preview-login-container-image img{
@@ -63,5 +62,4 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background-color: white;
 }
