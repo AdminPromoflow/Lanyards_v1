@@ -99,8 +99,8 @@ class Home {
         artworkManualClass.refreshArtkworkManual();
         backgroundClass.refreshBackgroundColour();
         attachmentClass.refreshAttachment();
-        previewTemplate.activateTemplate();
-      /*  previewManual.refreshTextLanyard();
+      /*  previewTemplate.activateTemplate();
+        previewManual.refreshTextLanyard();
         previewManual.refreshImageLanyard();*/
 
       //  artworkPreviewClass.refreshPreviewArtwork();
