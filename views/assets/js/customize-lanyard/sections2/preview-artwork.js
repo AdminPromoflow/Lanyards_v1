@@ -20,11 +20,11 @@ class ArtworkPreviewClass {
 
   }
   refreshPreviewArtwork(){
-  if (artworkManualClass.getArtworkManual() == "artwork") {
+  //if (artworkManualClass.getArtworkManual() == "artwork") {
     this.cleanStyleArtwork();
     this.applyTwoEndStylesArtwork();
     this.uploadDownloadableFiles();
-  }
+//  }
 
   }
   cleanStyleArtwork() {
@@ -60,7 +60,7 @@ class ArtworkPreviewClass {
   uploadArtworkManual(side, src){
     const sizeApproval = previewTemplateArtworkClass.confirmImageMessures();
 
-    
+
     const el = this.elements;
 
     if (side == "left") {
