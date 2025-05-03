@@ -73,13 +73,13 @@
     position: relative;
     width: 98%;
     height: 40px;
-    background-color: red; /* Solid background color */
+    background-color: rgba(48, 79, 112, 1); /* Solid background color */
     padding: 5px 0;
     margin: 5px 0;
     cursor: pointer;
 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
     flex-wrap: nowrap;
 
