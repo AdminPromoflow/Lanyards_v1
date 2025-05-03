@@ -61,7 +61,7 @@ class ArtworkPreviewClass {
     const sizeApproval = previewTemplateArtworkClass.confirmImageMessures();
     const el = this.elements;
 
-    if (sizeApproval) {
+    /*if (sizeApproval) {
 
       if (side == "left") {
          el.left.innerHTML = '<img src="' + src + '" alt="">';
@@ -78,7 +78,7 @@ class ArtworkPreviewClass {
       else if (side == "right") {
         el.right.innerHTML = '';
       }
-    }
+    }*/
 
 
   }
