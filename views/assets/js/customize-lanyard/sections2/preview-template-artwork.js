@@ -38,7 +38,6 @@ class PreviewTemplateArtworkClass {
 
     var sizeAproval = false;
     const widthSelected = widthClass.getWidthSelected();
-    alert(height + "  " + width);
 
     if (widthSelected == "10mm") {
       if (height == 42520 && width == 945) {
