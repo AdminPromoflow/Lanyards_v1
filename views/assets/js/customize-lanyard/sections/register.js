@@ -1,5 +1,5 @@
 // Class to manage the behavior of the registration form.
-class ClassRegister {
+class ClassRegister2 {
   // The constructor is executed automatically when an instance of the class is created.
   constructor() {
     // Adds a listener to the 'openLogin2' button to switch to the login form when clicked.
@@ -115,4 +115,4 @@ const register2Email = document.getElementById("register2Email");
 const register2Password = document.getElementById("register2Password");
 
 // Create an instance of the 'ClassRegister' class.
-const classRegister = new ClassRegister();
+const classRegister2 = new ClassRegister2();
