@@ -60,7 +60,6 @@ class ArtworkPreviewClass {
   uploadArtworkManual(side, src){
     const sizeApproval = previewTemplateArtworkClass.confirmImageMessures();
     const el = this.elements;
-    alert(sizeApproval);
 
     if (sizeApproval) {
 
