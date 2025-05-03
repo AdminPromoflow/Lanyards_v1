@@ -98,8 +98,8 @@ class Home {
         clipClass.refreshClip();
         artworkManualClass.refreshArtkworkManual();
         backgroundClass.refreshBackgroundColour();
-        /*  attachmentClass.refreshAttachment();
-      previewTemplate.activateTemplate();
+          attachmentClass.refreshAttachment();
+      /*previewTemplate.activateTemplate();
         previewManual.refreshTextLanyard();
         previewManual.refreshImageLanyard();*/
 
