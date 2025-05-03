@@ -79,28 +79,27 @@
     cursor: pointer;
 
     display: flex;
+    justify-content:space-between;
+    align-items: center;
     flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-
-
 
     border: 2px solid transparent; /* Transparent border */
 }
 
+.container_boxes_artwork-final img {
+    width: auto;
+    height: 70%;
+}
 
 .container_boxes_artwork-final h4 {
     position: relative;
     text-align: left;
-    width: 40%;
-    z-index: 6;
 
     margin-left: 12px;
 
     color: white;
     font-weight: 300;
     font-size: 1.1em;
-    background: green;
 }
 
 .container_boxes_artwork-final h3 {
