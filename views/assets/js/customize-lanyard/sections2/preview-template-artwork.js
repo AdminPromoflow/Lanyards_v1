@@ -28,7 +28,7 @@ class PreviewTemplateArtworkClass {
 
   confirmImageMessures() {
     alert(artworkClass.getSRCImage());
-    if (artworkManualClass.getArtworkManual() !== "artwork" && artworkClass.getSRCImage() != "") return true;
+    if (artworkManualClass.getArtworkManual() != "artwork" || artworkClass.getSRCImage() != "") return false;
 
     const height = artworkClass.getHeightImage();
     const width = artworkClass.getWidthImage();
@@ -57,7 +57,7 @@ class PreviewTemplateArtworkClass {
     leftSuperLanyardTemplateArtwork.innerHTML = "";
     rightSuperLanyardTemplateArtwork.innerHTML = "";
 
-    return false;
+    return true;
   }
 }
 
