@@ -7,7 +7,7 @@ $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
 <!-- CSS -->
 <link rel="stylesheet" href="<?= $cssPath ?>?v=<?= $cssVersion; ?>">
 
-<section id="login_customize" class="login">
+<section id="login" class="login session">
 
   <div id="containerLogin_customize" class="containerLogin">
     <div class="headLogin">
@@ -35,7 +35,7 @@ $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
           <img src="<?= $googleIcon ?>?v=<?= $googleIconVersion; ?>" alt="">
         </div>
 
-      
+
 
       </div>
     </div>
