@@ -98,9 +98,9 @@ class Home {
         clipClass.refreshClip();
         artworkManualClass.refreshArtkworkManual();
         backgroundClass.refreshBackgroundColour();
-      /*  attachmentClass.refreshAttachment();
+        attachmentClass.refreshAttachment();
         previewTemplate.activateTemplate();
-        previewManual.refreshTextLanyard();
+      /*  previewManual.refreshTextLanyard();
         previewManual.refreshImageLanyard();*/
 
       //  artworkPreviewClass.refreshPreviewArtwork();
