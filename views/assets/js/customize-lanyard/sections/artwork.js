@@ -74,9 +74,9 @@ class Artwork {
 
                     // Ahora sí: ya puedes usar las dimensiones con seguridad
 
-                    artworkClass.setSRCImage(img.src);
-                    artworkClass.setHeightImage(img.height);
-                    artworkClass.setWidthImage(img.width);
+                    this.setSRCImage(img.src);
+                    this.setHeightImage(img.height);
+                    this.setWidthImage(img.width);
 
                     artworkPreviewClass.uploadArtworkManual("right", img.src);
                     previewTemplateArtworkClass.addArtworkImage("right", img, img.height, img.width);
