@@ -20,11 +20,11 @@ class ArtworkPreviewClass {
 
   }
   refreshPreviewArtwork(){
-  //if (artworkManualClass.getArtworkManual() == "artwork") {
+  if (artworkManualClass.getArtworkManual() == "artwork") {
     this.cleanStyleArtwork();
     this.applyTwoEndStylesArtwork();
     this.uploadDownloadableFiles();
-//  }
+  }
 
   }
   cleanStyleArtwork() {

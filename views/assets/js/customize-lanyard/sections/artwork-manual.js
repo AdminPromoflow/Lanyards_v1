@@ -29,6 +29,9 @@ class ArtworkManualClass {
           artworkManualClass.setArtworkManual("artwork");
           previewArtworkManualClass.showManualArtworkSeleted();
 
+          artworkPreviewClass.refreshPreviewArtwork()
+
+
         }
       });
     }
