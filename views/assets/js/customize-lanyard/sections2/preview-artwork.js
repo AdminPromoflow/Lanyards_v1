@@ -57,16 +57,19 @@ class ArtworkPreviewClass {
     downloadLinkRight.href = "../../views/assets/img/global/customize-lanyard/sections/artwork/templates_artwork/right_"+ widthSelected +".png";  // Cambia aquí la nueva ruta
 
   }
-  uploadArtworkManual(side, src){
+  uploadArtworkManual(side, src) {
+    const sizeApproval = previewTemplateArtworkClass.confirmImageMessures();
+    if (!sizeApproval) return;
+
     const el = this.elements;
 
-    if (side == "left") {
-       el.left.innerHTML = '<img src="' + src + '" alt="">';
-    }
-    else if (side == "right") {
-      el.right.innerHTML = '<img src="' + src + '" alt="">';
+    if (side === "left") {
+      el.left.innerHTML = `<img src="${src}" alt="">`;
+    } else if (side === "right") {
+      el.right.innerHTML = `<img src="${src}" alt="">`;
     }
   }
+
   applyTwoEndStylesArtwork() {
     const width = widthClass.getWidthSelected();
 
