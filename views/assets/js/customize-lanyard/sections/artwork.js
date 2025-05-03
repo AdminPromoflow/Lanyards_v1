@@ -1,5 +1,9 @@
 class Artwork {
   constructor() {
+    this.setSRCImage = "";
+    this.setHeightImage = "";
+    this.setWidthImage = "";
+
   /*  for (let i = 0; i < clickUploadArtwork.length; i++) {
       clickUploadArtwork[i].addEventListener("click", function (){
         inputImageArtwork[i].click();
@@ -69,8 +73,15 @@ class Artwork {
                     console.log('Height:', img.height);
 
                     // Ahora sí: ya puedes usar las dimensiones con seguridad
+
+                    artworkClass.setSRCImage(img.src);
+                    artworkClass.setHeightImage(img.height);
+                    artworkClass.setWidthImage(img.width);
+
                     artworkPreviewClass.uploadArtworkManual("right", img.src);
                     previewTemplateArtworkClass.addArtworkImage("right", img, img.height, img.width);
+
+
                 };
 
                 // Este paso debe venir después de definir onload
@@ -84,6 +95,32 @@ class Artwork {
     });
 
   }
+
+  getSRCImage(){
+    return this.setSRCImage;
+  }
+  setSRCImage(value){
+    this.setSRCImage = value;
+  }
+
+  getHeightImage(){
+    return this.setHeightImage;
+  }
+  setHeightImage(value){
+    this.setHeightImage = value;
+  }
+
+  getWidthImage(){
+    return this.setWidthImage;
+  }
+  setWidthImage(value){
+    this.setWidthImage = value;
+  }
+
+  refreshArtwork(){
+    previewTemplateArtworkClass.confirmImageMessures();
+  }
+
 
   showHideArtwork(active){
     if (active) {
@@ -102,6 +139,7 @@ class Artwork {
     }
     containerBoxesArtwork[active].style.border ="2px solid white";
   }
+
  hideShowOneOrTwoSidesPrinted(){
 
    var sidePrintedDisplay;

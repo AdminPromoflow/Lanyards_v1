@@ -10,10 +10,9 @@ class PreviewTemplateArtworkClass {
 
   addArtworkImage(side, image, height, width){
 
-    var sizeAproval = this.confirmImageMessures(image, height, width);
+    var sizeAproval = this.confirmImageMessures();
 
-    leftSuperLanyardTemplateArtwork.innerHTML = "";
-    rightSuperLanyardTemplateArtwork.innerHTML = "";
+
     if (sizeAproval) {
       if (side == "left") {
          leftSuperLanyardTemplateArtwork.innerHTML = '<img src="' + image.src + '" alt="">';
@@ -28,7 +27,12 @@ class PreviewTemplateArtworkClass {
 
   }
 
-  confirmImageMessures(image, height, width){
+
+  confirmImageMessures(){
+    const height = artworkClass.getHeightImage();
+    const width = artworkClass.getWidthImage();
+
+
     var sizeAproval = false;
     const widthSelected = widthClass.getWidthSelected();
     alert(height + "  " + width);
@@ -75,6 +79,11 @@ class PreviewTemplateArtworkClass {
       else {
         alert("The lanyard artwork image must measure 42,520 pixels high by 2835 pixels wide.");
       }
+    }
+
+    if (!sizeAproval) {
+      leftSuperLanyardTemplateArtwork.innerHTML = "";
+      rightSuperLanyardTemplateArtwork.innerHTML = "";
     }
 
     return sizeAproval;
