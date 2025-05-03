@@ -93,6 +93,8 @@
 .container_boxes_artwork-final h4 {
     position: relative;
     text-align: justify;
+    width: 40%;
+    z-index: 6;
 
     margin-left: 12px;
 
