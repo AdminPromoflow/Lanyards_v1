@@ -99,9 +99,9 @@ class Home {
         artworkManualClass.refreshArtkworkManual();
         backgroundClass.refreshBackgroundColour();
         attachmentClass.refreshAttachment();
-        previewTemplate.activateTemplate();
+      /*  previewTemplate.activateTemplate();
         previewManual.refreshTextLanyard();
-        previewManual.refreshImageLanyard();
+        previewManual.refreshImageLanyard();*/
 
       //  artworkPreviewClass.refreshPreviewArtwork();
 
