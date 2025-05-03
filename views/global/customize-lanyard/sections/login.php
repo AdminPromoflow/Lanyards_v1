@@ -7,7 +7,7 @@ $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
 <!-- CSS -->
 <link rel="stylesheet" href="<?= $cssPath ?>?v=<?= $cssVersion; ?>">
 
-<section id="login" class="login section">
+<section id="login2" class="login2 section">
 
   <div id="containerLogin_customize" class="containerLogin">
     <div class="headLogin">
