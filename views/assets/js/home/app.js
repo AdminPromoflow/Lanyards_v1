@@ -95,10 +95,10 @@ class Home {
         widthClass.refreshWidth();
         sidePrintedClass.refreshSidePrintedData();
         colourClass.refreshColourQuantity();
-      /*  clipClass.refreshClip();
+        clipClass.refreshClip();
         artworkManualClass.refreshArtkworkManual();
         backgroundClass.refreshBackgroundColour();
-        attachmentClass.refreshAttachment();
+      /*  attachmentClass.refreshAttachment();
         previewTemplate.activateTemplate();
         previewManual.refreshTextLanyard();
         previewManual.refreshImageLanyard();*/
