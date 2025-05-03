@@ -474,7 +474,7 @@ class CustomizeLanyard {
     classPreviewLogin.showLoginPreview("none");
     previewProvidedInformation.showProvidedInformationPreview('none');
     this.showCurrentSection(this.currentSectionOpen);
-    //classRegister.openRegister(false);
+    classRegister.openRegister(false);
   }
 
   openLogin(){
