@@ -59,15 +59,24 @@ class ArtworkPreviewClass {
   }
   uploadArtworkManual(side, src){
     const sizeApproval = previewTemplateArtworkClass.confirmImageMessures();
+    const el = this.elements;
 
     if (sizeApproval) {
-      const el = this.elements;
 
       if (side == "left") {
          el.left.innerHTML = '<img src="' + src + '" alt="">';
       }
       else if (side == "right") {
         el.right.innerHTML = '<img src="' + src + '" alt="">';
+      }
+    }
+    else {
+
+      if (side == "left") {
+         el.left.innerHTML = '';
+      }
+      else if (side == "right") {
+        el.right.innerHTML = '';
       }
     }
 
