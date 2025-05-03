@@ -1,41 +1,28 @@
 class ArtworkFinal {
-  constructor(){
+  constructor() {
     this.updateItems();
   }
-updateItems(){
-  artworkFinalMaterialTitle.innerHTML = "Material:";
-  artworkFinalMaterialValue.innerHTML = material.getMaterialSelected();
 
-  artworkFinalLanyardTypeTitle.innerHTML = "Lanyard type:";
-  artworkFinalLanyardTypeValue.innerHTML = oneTwoEndsClass.getTypeLanyardSelected();
+  updateItems() {
+    this.updateItem("artwork-final-material", "Material:", material.getMaterialSelected());
+    this.updateItem("artwork-final-lanyard-type", "Lanyard type:", oneTwoEndsClass.getTypeLanyardSelected());
+    this.updateItem("artwork-final-width", "Width:", widthClass.getWidthSelected());
+    this.updateItem("artwork-final-side-printed", "Side printed:", sidePrintedClass.getSidePrintedSelected());
+    this.updateItem("artwork-final-clips", "Clips:", clipClass.getClipSelected());
+    this.updateItem("artwork-final-attachment", "Attachment:", attachmentClass.getAttachmentSelected());
+    this.updateItem("artwork-final-colour-quantity", "Colour Quantity:", colourClass.getColourSelected());
+    this.updateItem("artwork-final-artwork-manual", "Artwork - Manual:", artworkManualClass.getArtworkManual());
+  }
 
-  artworkFinalWidthTitle.innerHTML = "Width:";
-  artworkFinalWidthValue.innerHTML = widthClass.getWidthSelected();
-
-  artworkFinalSidePrintedTitle.innerHTML = "Side printed:";
-  artworkFinalSidePrintedValue.innerHTML = sidePrintedClass.getSidePrintedSelected();
-
-  artworkFinalClipsTitle.innerHTML = "Clips:";
-  artworkFinalClipsValue.innerHTML = clipClass.getClipSelected();
-
-  artworkFinalAttachmentTitle.innerHTML = "Attachment:";
-  artworkFinalAttachmentValue.innerHTML = attachmentClass.getAttachmentSelected();
-
-  artworkFinalColourQuantityTitle.innerHTML = "Colour Quantity:";
-  artworkFinalColourQuantityValue.innerHTML = colourClass.getColourSelected();
-
-  artworkFinalArtworkManualTitle.innerHTML = "Artwork - Manual:";
-  artworkFinalArtworkManualValue.innerHTML = artworkManualClass.getArtworkManual();
-
+  updateItem(id, title, value) {
+    const container = document.getElementById(id);
+    if (container) {
+      container.innerHTML = `
+        <h4 class="title">${title}</h4>
+        <h4 class="value">${value}</h4>
+      `;
+    }
+  }
 }
-}
-const artworkFinalMaterial = document.getElementById("artwork-final-material");
-const artworkFinalLanyardLype = document.getElementById("artwork-final-lanyard-type");
-const artworkFinalWidth = document.getElementById("artwork-final-width");
-const artworkFinalSidePrinted = document.getElementById("artwork-final-side-printed");
-const artworkFinalClips = document.getElementById("artwork-final-clips");
-const artworkFinalAttachment = document.getElementById("artwork-final-attachment");
-const artworkFinalColourQuantity = document.getElementById("artwork-final-colour-quantity");
-const artworkFinalArtworkManual = document.getElementById("artwork-final-artwork-manual");
 
 const artworkClassFinal = new ArtworkFinal();
