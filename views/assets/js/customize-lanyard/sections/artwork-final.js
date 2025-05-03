@@ -3,14 +3,30 @@ class ArtworkFinal {
     this.updateItems();
   }
 updateItems(){
-  artworkFinalMaterial.innerHTML = "Material: " + material.getMaterialSelected();
-  artworkFinalLanyardLype.innerHTML = "Lanyard type: " + oneTwoEndsClass.getTypeLanyardSelected();
-  artworkFinalWidth.innerHTML = "Width: " + widthClass.getWidthSelected();
-  artworkFinalSidePrinted.innerHTML = "Side printed: " + sidePrintedClass.getSidePrintedSelected();
-  artworkFinalClips.innerHTML = "Clips: " + clipClass.getClipSelected();
-  artworkFinalAttachment.innerHTML = "Attachment: " + attachmentClass.getAttachmentSelected();
-  artworkFinalColourQuantity.innerHTML = "Colour Quantity: " + colourClass.getColourSelected();
-  artworkFinalArtworkManual.innerHTML = "Artwork - Manual: " + artworkManualClass.getArtworkManual();
+  artworkFinalMaterialTitle.innerHTML = "Material:";
+  artworkFinalMaterialValue.innerHTML = material.getMaterialSelected();
+
+  artworkFinalLanyardTypeTitle.innerHTML = "Lanyard type:";
+  artworkFinalLanyardTypeValue.innerHTML = oneTwoEndsClass.getTypeLanyardSelected();
+
+  artworkFinalWidthTitle.innerHTML = "Width:";
+  artworkFinalWidthValue.innerHTML = widthClass.getWidthSelected();
+
+  artworkFinalSidePrintedTitle.innerHTML = "Side printed:";
+  artworkFinalSidePrintedValue.innerHTML = sidePrintedClass.getSidePrintedSelected();
+
+  artworkFinalClipsTitle.innerHTML = "Clips:";
+  artworkFinalClipsValue.innerHTML = clipClass.getClipSelected();
+
+  artworkFinalAttachmentTitle.innerHTML = "Attachment:";
+  artworkFinalAttachmentValue.innerHTML = attachmentClass.getAttachmentSelected();
+
+  artworkFinalColourQuantityTitle.innerHTML = "Colour Quantity:";
+  artworkFinalColourQuantityValue.innerHTML = colourClass.getColourSelected();
+
+  artworkFinalArtworkManualTitle.innerHTML = "Artwork - Manual:";
+  artworkFinalArtworkManualValue.innerHTML = artworkManualClass.getArtworkManual();
+
 }
 }
 const artworkFinalMaterial = document.getElementById("artwork-final-material");
