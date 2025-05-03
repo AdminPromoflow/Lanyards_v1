@@ -2,7 +2,7 @@
 <section class="artwork-final section">
   <h2 class="name-section-customize-lanyard">Final lanyard</h2>
   <br>
-  <p>These are the options you chose for your lanyard:</p>
+  <p>These are the options you’ve chosen for your lanyard. Click ‘Next’ or ‘Preview’ if you’d like to make any changes:</p>
   <br>
   <div id="containers_boxes_artwork-final" class="containers_boxes_artwork-final">
  <div class="container_boxes_artwork-final">
