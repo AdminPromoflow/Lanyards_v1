@@ -39,7 +39,7 @@
   width: 0.16cm;
   border: 1px solid black;
   transform:  skewX(7.5deg) perspective(7.5vw) ;
-  background-color: white;
+
 
 }
 
@@ -51,7 +51,7 @@
   width: 0.16cm;
   border: 1px solid black;
   transform:  skewX(-7.5deg) perspective(7.5vw);
-  background-color: white;
+
 
 }
 
@@ -63,7 +63,7 @@
   height: 7.2cm;
   width: 0.24cm;
   border: 1px solid black;
-  background-color: white;
+
   transform:  skewX(7.5deg) perspective(7.5vw) ;
 }
 
@@ -74,7 +74,7 @@
   height: 7.2cm;
   width: 0.24cm;
   border: 1px solid black;
-  background-color: white;
+
   transform:  skewX(-7.5deg) perspective(7.5vw) ;
 }
 
@@ -91,7 +91,7 @@
   height: 7.2cm;
   width: 0.32cm;
   border: 1px solid black;
-  background-color: white;
+
   transform:  skewX(7.5deg) perspective(7.5vw) ;
 }
 
@@ -102,7 +102,7 @@
   height: 7.2cm;
   width: 0.32cm;
   border: 1px solid black;
-  background-color: white;
+
   transform:  skewX(-7.5deg) perspective(7.5vw) ;
 }
 
@@ -115,7 +115,7 @@
   height: 7.2cm;
   width: 0.4cm;
   border: 1px solid black;
-  background-color: white;
+
   transform:  skewX(7.5deg) perspective(7.5vw) ;
   overflow: hidden;
 }
@@ -127,7 +127,7 @@
   height: 7.2cm;
   width: 0.4cm;
   border: 1px solid black;
-  background-color: white;
+
   transform:  skewX(-7.5deg) perspective(7.5vw) ;
 }
 
@@ -148,7 +148,7 @@
   height: 7.2cm;
   width: 0.48cm;
   border: 1px solid black;
-  background-color: white;
+
   transform:  skewX(7.5deg) perspective(7.5vw) ;
 }
 
@@ -159,7 +159,7 @@
   height: 7.2cm;
   width: 0.48cm;
   border: 1px solid black;
-  background-color: white;
+
   transform:  skewX(-7.5deg) perspective(7.5vw) ;
 }
 
@@ -185,7 +185,7 @@
   height: 7.2cm;
   width: 0.16cm;
   border: 1px solid black;
-  background-color: white;
+
 }
 
 .right-super-lanyard-two-end-10mm-template-artwork {
@@ -195,7 +195,7 @@
   height: 7.2cm;
   width: 0.16cm;
   border: 1px solid black;
-  background-color: white;
+
 }
 
 
@@ -208,7 +208,7 @@
   height: 7.2cm;
   width: 0.24cm;
   border: 1px solid black;
-  background-color: white;
+
 }
 
 .right-super-lanyard-two-end-15mm-template-artwork {
@@ -218,7 +218,7 @@
   height: 7.2cm;
   width: 0.24cm;
   border: 1px solid black;
-  background-color: white;
+
 }
 
 
@@ -234,7 +234,7 @@
   height: 7.2cm;
   width: 0.32cm;
   border: 1px solid black;
-  background-color: white;
+
 }
 
 .right-super-lanyard-two-end-20mm-template-artwork {
@@ -244,7 +244,7 @@
   height: 7.2cm;
   width: 0.32cm;
   border: 1px solid black;
-  background-color: white;
+
 }
 
 
@@ -260,7 +260,7 @@
   height: 7.2cm;
   width: 0.4cm;
   border: 1px solid black;
-  background-color: white;
+
 }
 
 .right-super-lanyard-two-end-25mm-template-artwork {
@@ -270,7 +270,7 @@
   height: 7.2cm;
   width: 0.4cm;
   border: 1px solid black;
-  background-color: white;
+
 }
 
 
@@ -285,7 +285,7 @@
   height: 7.2cm;
   width: 0.48cm;
   border: 1px solid black;
-  background-color: white;
+
 }
 
 .right-super-lanyard-two-end-30mm-template-artwork {
@@ -295,7 +295,7 @@
   height: 7.2cm;
   width: 0.48cm;
   border: 1px solid black;
-  background-color: white;
+
 }
 
 
@@ -314,7 +314,7 @@
   height: 7.2cm;
   width: 0.16cm;
   border: 1px solid black;
-  background-color: white;
+
   transform:  skewX(7.5deg) perspective(7.5vw) ;
 }
 .right-super-lanyard-one-end-10mm-attachment-template-artwork{
@@ -324,7 +324,7 @@
   height: 7.2cm;
   width: 0.16cm;
   border: 1px solid black;
-  background-color: white;
+
   transform:  skewX(-7.5deg) perspective(7.5vw);
 }
 
@@ -335,7 +335,7 @@
   bottom: calc(-0.8cm - 0.58cm);
   left: 50%;
   transform: translateX(-50%);
-  background-color: white;
+
   border: 1px solid black;
   z-index: 0;
   overflow: hidden;
@@ -357,7 +357,7 @@
   height: 7.2cm;
   width: 0.24cm;
   border: 1px solid black;
-  background-color: white;
+
   transform:  skewX(7.5deg) perspective(7.5vw) ;
 }
 .right-super-lanyard-one-end-15mm-attachment-template-artwork{
@@ -367,7 +367,7 @@
   height: 7.2cm;
   width: 0.24cm;
   border: 1px solid black;
-  background-color: white;
+
   transform:  skewX(-7.5deg) perspective(7.5vw) ;
 }
 .center-super-lanyard-one-end-15mm-attachment-template-artwork{
@@ -377,7 +377,7 @@
   bottom: calc(-0.8cm + -0.65cm);
   left: 50%;
   transform: translateX(-50%);
-  background-color: white;
+
   border: 1px solid black;
   z-index: 0;
   overflow: hidden;
@@ -403,7 +403,7 @@
   height: 7.2cm;
   width: 0.32cm;
   border: 1px solid black;
-  background-color: white;
+
   transform:  skewX(7.5deg) perspective(7.5vw) ;
 }
 .right-super-lanyard-one-end-20mm-attachment-template-artwork{
@@ -413,7 +413,7 @@
   height: 7.2cm;
   width: 0.32cm;
   border: 1px solid black;
-  background-color: white;
+
   transform:  skewX(-7.5deg) perspective(7.5vw) ;
 }
 .center-super-lanyard-one-end-20mm-attachment-template-artwork{
@@ -423,7 +423,7 @@
   bottom: calc(-0.8cm + -0.78cm);
   left: 50%;
   transform: translateX(-50%);
-  background-color: white;
+
   border: 1px solid black;
   z-index: 0;
   overflow: hidden;
@@ -451,7 +451,7 @@
   height: 7.2cm;
   width: 0.4cm;
   border: 1px solid black;
-  background-color: white;
+
   transform:  skewX(7.5deg) perspective(7.5vw) ;
 }
 .right-super-lanyard-one-end-25mm-attachment-template-artwork{
@@ -461,7 +461,7 @@
   height: 7.2cm;
   width: 0.4cm;
   border: 1px solid black;
-  background-color: white;
+
   transform:  skewX(-7.5deg) perspective(7.5vw) ;
 }
 .center-super-lanyard-one-end-25mm-attachment-template-artwork{
@@ -471,7 +471,7 @@
   bottom: calc(-0.8cm + -0.9cm);
   left: 50%;
   transform: translateX(-50%);
-  background-color: white;
+
   border: 1px solid black;
   z-index: 0;
   overflow: hidden;
@@ -497,7 +497,7 @@
   height: 7.2cm;
   width: 0.48cm;
   border: 1px solid black;
-  background-color: white;
+
   transform:  skewX(7.5deg) perspective(7.5vw) ;
 }
 .right-super-lanyard-one-end-30mm-attachment-template-artwork{
@@ -507,7 +507,7 @@
   height: 7.2cm;
   width: 0.48cm;
   border: 1px solid black;
-  background-color: white;
+
   transform:  skewX(-7.5deg) perspective(7.5vw) ;
 }
 .center-super-lanyard-one-end-30mm-attachment-template-artwork{
@@ -517,7 +517,7 @@
   bottom: calc(-0.8cm + -0.99cm);
   left: 50%;
   transform: translateX(-50%);
-  background-color: white;
+
   border: 1px solid black;
   z-index: 0;
   overflow: hidden;
