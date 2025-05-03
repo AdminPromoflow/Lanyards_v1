@@ -91,7 +91,7 @@ class Home {
 
 
         material.refreshMaterial();
-        oneTwoEndsClass.refreshLanyardType();
+      /*  oneTwoEndsClass.refreshLanyardType();
         widthClass.refreshWidth();
         sidePrintedClass.refreshSidePrintedData();
         colourClass.refreshColourQuantity();
@@ -99,7 +99,7 @@ class Home {
         artworkManualClass.refreshArtkworkManual();
         backgroundClass.refreshBackgroundColour();
         attachmentClass.refreshAttachment();
-      /*  previewTemplate.activateTemplate();
+        previewTemplate.activateTemplate();
         previewManual.refreshTextLanyard();
         previewManual.refreshImageLanyard();*/
 
