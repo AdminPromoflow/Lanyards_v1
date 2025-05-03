@@ -73,7 +73,7 @@
     position: relative;
     width: 98%;
     height: 40px;
-    background-color: rgba(48, 79, 112, 1); /* Solid background color */
+    background-color: red; /* Solid background color */
     padding: 5px 0;
     margin: 5px 0;
     cursor: pointer;
