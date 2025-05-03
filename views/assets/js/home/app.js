@@ -91,11 +91,11 @@ class Home {
 
 
         material.refreshMaterial();
-      /*  oneTwoEndsClass.refreshLanyardType();
+        oneTwoEndsClass.refreshLanyardType();
         widthClass.refreshWidth();
         sidePrintedClass.refreshSidePrintedData();
         colourClass.refreshColourQuantity();
-        clipClass.refreshClip();
+      /*  clipClass.refreshClip();
         artworkManualClass.refreshArtkworkManual();
         backgroundClass.refreshBackgroundColour();
         attachmentClass.refreshAttachment();
