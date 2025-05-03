@@ -60,15 +60,18 @@ class ArtworkPreviewClass {
   uploadArtworkManual(side, src){
     const sizeApproval = previewTemplateArtworkClass.confirmImageMessures();
 
+    if (sizeApproval) {
+      const el = this.elements;
 
-    const el = this.elements;
+      if (side == "left") {
+         el.left.innerHTML = '<img src="' + src + '" alt="">';
+      }
+      else if (side == "right") {
+        el.right.innerHTML = '<img src="' + src + '" alt="">';
+      }
+    }
 
-    if (side == "left") {
-       el.left.innerHTML = '<img src="' + src + '" alt="">';
-    }
-    else if (side == "right") {
-      el.right.innerHTML = '<img src="' + src + '" alt="">';
-    }
+
   }
   applyTwoEndStylesArtwork() {
     const width = widthClass.getWidthSelected();
