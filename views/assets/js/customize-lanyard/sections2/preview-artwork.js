@@ -60,8 +60,7 @@ class ArtworkPreviewClass {
   uploadArtworkManual(side, src){
     const sizeApproval = previewTemplateArtworkClass.confirmImageMessures();
 
-    if (sizeApproval) {
-
+    
     const el = this.elements;
 
     if (side == "left") {
@@ -70,8 +69,6 @@ class ArtworkPreviewClass {
     else if (side == "right") {
       el.right.innerHTML = '<img src="' + src + '" alt="">';
     }
-  }
-
   }
   applyTwoEndStylesArtwork() {
     const width = widthClass.getWidthSelected();
