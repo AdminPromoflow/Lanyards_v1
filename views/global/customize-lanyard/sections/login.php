@@ -35,9 +35,7 @@ $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
           <img src="<?= $googleIcon ?>?v=<?= $googleIconVersion; ?>" alt="">
         </div>
 
-        <!-- Load the JS SDK asynchronously -->
-        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
-
+      
 
       </div>
     </div>
@@ -46,4 +44,4 @@ $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
 </section>
 
 
-<script src="../../views/assets/js/customize-lanyard/sections/login_customize.js"></script>
+<!--<script src="../../views/assets/js/customize-lanyard/sections/login_customize.js"></script>-->
