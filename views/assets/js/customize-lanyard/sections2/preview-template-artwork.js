@@ -1,111 +1,64 @@
 class PreviewTemplateArtworkClass {
   constructor() {
     previewTemplateArtworkSection.style.display = "block";
-
   }
+
   togglePreviewTemplateArtworkClass(action) {
-
-      previewTemplateArtworkSection.style.display = action;
+    previewTemplateArtworkSection.style.display = action;
   }
 
-  addArtworkImage(side, image, height, width){
+  addArtworkImage(side, image, height, width) {
+    const sizeApproval = this.confirmImageMeasurements(height, width);
 
+    if (sizeApproval) {
+      const targetElement = side === "left"
+        ? leftSuperLanyardTemplateArtwork
+        : side === "right"
+        ? rightSuperLanyardTemplateArtwork
+        : null;
 
-
-
-    var sizeAproval = this.confirmImageMessures();
-
-
-    if (sizeAproval) {
-      if (side == "left") {
-         leftSuperLanyardTemplateArtwork.innerHTML = '<img src="' + image.src + '" alt="">';
+      if (targetElement) {
+        targetElement.innerHTML = `<img src="${image.src}" alt="">`;
       }
-      else if (side == "right") {
-        rightSuperLanyardTemplateArtwork.innerHTML = '<img src="' + image.src + '" alt="">';
-      }
-    }
-    else {
+    } else {
       alert("Please re-upload the image.");
     }
-
   }
 
+  confirmImageMeasurements(height, width) {
+    if (artworkManualClass.getArtworkManual() !== "artwork") return true;
 
-  confirmImageMessures(){
-    if (artworkManualClass.getArtworkManual() == "artwork") {
-
-    const height = artworkClass.getHeightImage();
-    const width = artworkClass.getWidthImage();
-
-
-    var sizeAproval = false;
     const widthSelected = widthClass.getWidthSelected();
 
-    if (artworkManualClass.get) {
+    const requiredSizes = {
+      "10mm": { height: 42520, width: 945 },
+      "15mm": { height: 42520, width: 1417 },
+      "20mm": { height: 42520, width: 1890 },
+      "25mm": { height: 42520, width: 2362 },
+      "30mm": { height: 42520, width: 2835 },
+    };
 
-    }
+    const requiredSize = requiredSizes[widthSelected];
 
-    if (widthSelected == "10mm") {
-      if (height == 42520 && width == 945) {
-        var sizeAproval = true;
-      }
-      else {
-        alert("The lanyard artwork image must measure 42,520 pixels high by 945 pixels wide.");
-      }
-    }
-    else if (widthSelected == "15mm") {
-      if (height == 42520 && width == 1417) {
-      var sizeAproval = true;
-      }
-      else {
-        alert("The lanyard artwork image must measure 42,520 pixels high by 1417 pixels wide.");
+    if (requiredSize) {
+      if (height === requiredSize.height && width === requiredSize.width) {
+        return true;
+      } else {
+        alert(`The lanyard artwork image must measure ${requiredSize.height} pixels high by ${requiredSize.width} pixels wide.`);
       }
     }
 
-    else if (widthSelected == "20mm") {
-      if (height == 42520 && width == 1890) {
-      var sizeAproval = true;
-      }
-      else {
-        alert("The lanyard artwork image must measure 42,520 pixels high by 1890 pixels wide.");
-      }
-    }
+    // Clear the image sections if the size is incorrect
+    leftSuperLanyardTemplateArtwork.innerHTML = "";
+    rightSuperLanyardTemplateArtwork.innerHTML = "";
 
-    else if (widthSelected == "25mm") {
-      if (height == 42520 && width == 2362) {
-      var sizeAproval = true;
-      }
-      else {
-        alert("The lanyard artwork image must measure 42,520 pixels high by 2362 pixels wide.");
-      }
-    }
-
-    else if (widthSelected == "30mm") {
-      if (height == 42520 && width == 2835) {
-      var sizeAproval = true;
-      }
-      else {
-        alert("The lanyard artwork image must measure 42,520 pixels high by 2835 pixels wide.");
-      }
-    }
-
-    if (!sizeAproval) {
-      leftSuperLanyardTemplateArtwork.innerHTML = "";
-      rightSuperLanyardTemplateArtwork.innerHTML = "";
-    }
-
-    return sizeAproval;
-
+    return false;
   }
-  }
-
 }
+
 const previewTemplateArtworkSection = document.getElementById("preview-template-artwork-section");
 const leftSuperLanyardTemplateArtwork = document.getElementById("left-super-lanyard-template-artwork");
 const rightSuperLanyardTemplateArtwork = document.getElementById("right-super-lanyard-template-artwork");
-const centerSuperLanyardTemplateAartwork = document.getElementById("center-super-lanyard-template-artwork");
-
-
-
+const centerSuperLanyardTemplateArtwork = document.getElementById("center-super-lanyard-template-artwork");
 
 const previewTemplateArtworkClass = new PreviewTemplateArtworkClass();
