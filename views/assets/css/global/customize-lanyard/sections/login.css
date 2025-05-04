@@ -64,22 +64,17 @@
   font-size: 1em;
   background: rgba(255 , 255 , 255 , .8);
 }
-.bodyLogin h3{
+
+.containers_boxes_login2 h3{
+  font-size: 1.1em;
   color: white;
   margin-bottom: 10px;
-  font-size: 0.9em;
   font-weight: 300;
   margin: 0;
   padding: 0;
   cursor: pointer;
   border-bottom: 1px solid transparent;
   transition: border-bottom .4s;
-}
-.containers_boxes_login2 h3{
-  color: white;
-  margin-bottom: 10px;
-  font-size: 1.1em;
-  font-weight: 300;
 }
 .containers_boxes_login2 button{
   padding: 4px 14px;
