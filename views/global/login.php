@@ -39,17 +39,6 @@ $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
         <div id="loginWithGoogle1" class="footerLoginOptions">
           <img src="<?= $googleIcon ?>?v=<?= $googleIconVersion; ?>" alt="">
         </div>
-
-        <!-- Load the JS SDK asynchronously -->
-        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
-
-        <?php
-        $facebookIcon = '../../views/assets/img/global/login/facebook-icon.png';
-        $facebookIconVersion = file_exists($facebookIcon) ? filemtime($facebookIcon) : time();
-        ?>
-        <div id="loginWithFacebook1" class="footerLoginOptions">
-          <img src="<?= $facebookIcon ?>?v=<?= $facebookIconVersion; ?>" alt="">
-        </div>
       </div>
       <h4 id="openRegisterFromLogin">No account yet? Register here.</h4>
     </div>

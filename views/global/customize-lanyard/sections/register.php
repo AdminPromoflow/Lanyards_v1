@@ -2,14 +2,11 @@
 $cssPath = '../../views/assets/css/global/customize-lanyard/sections/register.css';
 $jsPath = '../../views/assets/js/customize-lanyard/sections/register.js';
 $imgGoogle = '../../views/assets/img/global/login/google-icon.png';
-$imgFacebook = '../../views/assets/img/global/login/facebook-icon.png';
-$imgApple = '../../views/assets/img/global/login/apple-icon.png';
 
 $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
 $jsVersion = file_exists($jsPath) ? filemtime($jsPath) : time();
 $googleVersion = file_exists($imgGoogle) ? filemtime($imgGoogle) : time();
-$facebookVersion = file_exists($imgFacebook) ? filemtime($imgFacebook) : time();
-$appleVersion = file_exists($imgApple) ? filemtime($imgApple) : time();
+
 ?>
 
 <link rel="stylesheet" href="<?= $cssPath ?>?v=<?= $cssVersion ?>">
@@ -29,12 +26,7 @@ $appleVersion = file_exists($imgApple) ? filemtime($imgApple) : time();
       <div id="registerWithGoogle2" class="register2Options">
         <img src="<?= $imgGoogle ?>?v=<?= $googleVersion ?>" alt="">
       </div>
-    <!--  <div id="registerWithFacebook2" class="register2Options">
-        <img src="<?= $imgFacebook ?>?v=<?= $facebookVersion ?>" alt="">
-      </div>
-      <div id="registerWithApple2" class="register2Options">
-        <img src="<?= $imgApple ?>?v=<?= $appleVersion ?>" alt="">
-      </div>-->
+
     </div>
     <p id="openLogin2">Already have an account? Log in here.</p>
   </div>
