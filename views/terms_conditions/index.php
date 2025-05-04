@@ -8,7 +8,6 @@
   <body>
     <section>
       <?php // include "../../views/global/test_alert.php"; ?>
-      <?php include "../../views/global/charging.php"; ?>
 
       <!-- Background section -->
       <div class="background">
@@ -26,12 +25,7 @@
             </div>
           </div>
 
-          <!-- Include the login component -->
-          <?php include "../../views/global/login.php"; ?>
-          <?php include "../../views/global/password_forgotten.php"; ?>
 
-          <!-- Include the register component -->
-          <?php include "../../views/global/register.php"; ?>
 
         </div>
       </div>
