@@ -16,7 +16,7 @@ $appleVersion = file_exists($imgApple) ? filemtime($imgApple) : time();
 
 <section class="login2 section" id="login2">
 
-  <h2 class="name-section-customize-lanyard">Login</h2>
+  <h2 class="name-section-customize-lanyard">Login hhaha</h2>
 
   <div id="containers_boxes_login2" class="containers_boxes_login2">
     <label for="login2Email">Please enter your login details:</label>
