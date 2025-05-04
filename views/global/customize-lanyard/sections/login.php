@@ -43,6 +43,6 @@ $appleVersion = file_exists($imgApple) ? filemtime($imgApple) : time();
 
 </section>
 
-<?php //include "../../views/global/customize-lanyard/sections/register.php"; ?>
+<?php include "../../views/global/customize-lanyard/sections/register.php"; ?>
 
 <script src="<?= $jsPath ?>?v=<?= $jsVersion ?>"></script>
