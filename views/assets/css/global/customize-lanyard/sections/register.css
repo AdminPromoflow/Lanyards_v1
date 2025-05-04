@@ -165,5 +165,6 @@
   cursor: pointer;
 }
 .label_acept_terms_conditions2 a{
+  all: unset;
   text-decoration-line: underline;
 }
