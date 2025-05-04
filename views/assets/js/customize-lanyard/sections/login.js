@@ -3,6 +3,7 @@ class Classlogin2 {
   constructor() {
     // Listener to switch from login to registration form
     openRegister2.addEventListener("click", () => {
+      alert("hicimos un berraco click");
       if (typeof ClassRegisterCurstomize !== "undefined") {
         console.warn("ClassRegisterCurstomize ya está definida");
         console.trace(); // Muestra el stack trace en la consola
