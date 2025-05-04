@@ -164,3 +164,6 @@
   color: white;
   cursor: pointer;
 }
+.label_acept_terms_conditions2 a{
+  text-decoration-line: underline;
+}
