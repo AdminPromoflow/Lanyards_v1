@@ -75,7 +75,12 @@
   border-bottom: 1px solid transparent;
   transition: border-bottom .4s;
 }
-
+.containers_boxes_login2 h3{
+  color: white;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  font-weight: 300;
+}
 .containers_boxes_login2 button{
   padding: 4px 14px;
   z-index: 10;
