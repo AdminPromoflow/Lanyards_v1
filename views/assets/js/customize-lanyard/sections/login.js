@@ -23,53 +23,64 @@ class Classlogin2 {
 
 
 
+    // Event listener to open the register form from the login screen
+    enterLogin2.addEventListener("click", function () {
+      // Call validation functions and display error or success messages
+      if (classlogin2.validateEmail() && classlogin2.validatePassword()) {
 
+        chargingClass.hideShowchargin(true);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // Listener for login submission
-    enterLogin2.addEventListener("click", () => {
-      if (this.validateEmail() && this.validatePassword()) {
-        const url = "../../controller/users/login.php";
-        const data = {
-          action: "login",
-          emailLogin: login2Email.value,
-          passwordLogin: login2Password.value
-        };
-        loginClass.makeAjaxRequestLogin(url, data);
+        // Make the AJAX request
+        loginClass2.makeAjaxRequestLogin();
       }
     });
 
-    // Social login event listeners (placeholders)
-    /*loginWithGoogle2.addEventListener("click", function () {
-      // TODO: Add Google login functionality
-    });*/
+
+  }
 
 
+  // Function to make the AJAX request
+  makeAjaxRequestLogin() {
+    // Define the URL and the JSON data you want to send
+    const url = "../../controller/users/login.php"; // Replace with your API endpoint URL
+    const data = {
+      action: "login",
+      emailLogin: login2Email.value,
+      passwordLogin: login2Password.value
+    };
+
+    fetch(url, {
+    method: "POST", // HTTP POST method to send data
+    headers: {
+      "Content-Type": "application/json" // Indicate that you're sending JSON
+    },
+    body: JSON.stringify(data) // Convert the JSON object to a JSON string and send it
+  })
+    .then(response => {
+      // Check if the response status is OK (2xx range)
+      if (response.ok) {
+        return response.json(); // Parse the response as JSON
+      }
+      // For other errors, throw a general network error
+      throw new Error("Network error.");
+    })
+    .then(data => {
+      // Process the response data
+      chargingClass.hideShowchargin(false);
+
+      if (data.message) {
+        alert(data.message);
+        //location.reload();
+      }
+      else{
+        alert("The email address or password you entered is incorrect.");
+      }
+    })
+    .catch(error => {
+      // Handle specific errors (from throw in the .then block)
+      console.error("Error:", error.message);
+      alert(error.message); // Show the error message in an alert
+    });
 
   }
 
