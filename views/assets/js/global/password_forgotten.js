@@ -10,10 +10,11 @@ class PasswordForgotten {
         loginClass.showLogin(0);
         // Hide the register form with a sliding animation
         registerClass.hideRegister(0);
-        passwordForgotten.setForgottenPassword2(true);
       }
       else {
         passwordForgotten.showPasswordForgotten(false);
+        passwordForgotten.setForgottenPassword2(true);
+
       }
 
     });
