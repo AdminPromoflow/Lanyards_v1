@@ -31,8 +31,8 @@ class ClassRegister2 {
     });
 
 
-    registerWithGoogle2.addEventListener("click", function(){
-    })
+  /*  registerWithGoogle2.addEventListener("click", function(){
+    })*/
 
   /*  registerWithFacebook2.addEventListener("click", function(){
     })
