@@ -1,5 +1,5 @@
 // Class to manage the behavior of the registration form.
-class ClassRegister2 {
+class ClassRegisterCurstomize {
 /*  constructor() {
     // Adds a listener to the 'openLogin2' button to switch to the login form when clicked.
     openLogin2.addEventListener("click", () => {
@@ -98,4 +98,4 @@ const register2 = document.getElementById("register2");
 
 */
 // Instance of the registration class
-const classRegister2 = new ClassRegister2();
+const classRegisterCustomize = new ClassRegisterCurstomize();
