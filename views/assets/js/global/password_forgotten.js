@@ -1,9 +1,10 @@
 class PasswordForgotten {
   constructor() {
     this._forgottenPassword2 = false;
+
     password_forgotten_close.addEventListener("click", function(){
-      alert(this._forgottenPassword2);
-      if (this._forgottenPassword2 == false) {
+      if (passwordForgotten.getForgottenPassword2() == false) {
+
         passwordForgotten.showPasswordForgotten(false);
         loginClass.openLogin();
         loginClass.showLogin(0);
