@@ -26,12 +26,12 @@ $googleVersion = file_exists($imgGoogle) ? filemtime($imgGoogle) : time();
       <strong class="containers_boxes_register_button">Register</strong>
     </button>
 
-    <div class="register2OptionsContainer">
+    <!--<div class="register2OptionsContainer">
       <div id="registerWithGoogle2" class="register2Options">
         <img src="<?= $imgGoogle ?>?v=<?= $googleVersion ?>" alt="">
       </div>
 
-    </div>
+    </div>-->
     <p id="openLogin2">Already have an account? Log in here.</p>
   </div>
 </section>

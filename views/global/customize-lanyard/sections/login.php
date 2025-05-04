@@ -29,17 +29,17 @@ $appleVersion = file_exists($imgApple) ? filemtime($imgApple) : time();
     </button>
 
     <h3>or login with:</h3>
-    <div class="login2OptionsContainer">
-      <div id="loginWithGoogle2" class="login2Options">
+  <!--  <div class="login2OptionsContainer">
+    <!--  <div id="loginWithGoogle2" class="login2Options">
         <img src="<?= $imgGoogle ?>?v=<?= $googleVersion ?>" alt="">
-      </div>
+      </div>-->
     <!--  <div id="loginWithFacebook2" class="login2Options">
         <img src="<?= $imgFacebook ?>?v=<?= $facebookVersion ?>" alt="">
       </div>
       <div id="loginWithApple2" class="login2Options">
         <img src="<?= $imgApple ?>?v=<?= $appleVersion ?>" alt="">
       </div>-->
-    </div>
+    </div>-->
     <p id="openRegister2">No account yet? Register here.</p>
   </div>
 
