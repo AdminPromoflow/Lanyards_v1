@@ -64,7 +64,9 @@ body{
 
 }
 
-
+.teams_conditions button{
+  cursor: pointer;
+}
 .bgLanyards{
   background-image: url("../../img/home/2-choose-create-lanyard/bg.png"); /* The image used */
   background-position: center; /* Center the image */
