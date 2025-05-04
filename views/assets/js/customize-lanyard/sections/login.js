@@ -20,6 +20,7 @@ class Classlogin2 {
 
     // Listener for login submission
     enterLogin2.addEventListener("click", () => {
+      alert("hahah");
       if (this.validateEmail() && this.validatePassword()) {
         const url = "../../controller/users/login.php";
         const data = {
