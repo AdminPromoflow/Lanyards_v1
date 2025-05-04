@@ -6,7 +6,7 @@ class ClassRegisterCurstomize {
 
 
   }
-/*  constructor() {
+  constructor() {
     // Adds a listener to the 'openLogin2' button to switch to the login form when clicked.
     openLogin2.addEventListener("click", () => {
       classlogin2.openLogin(true);           // Opens the login window
@@ -86,12 +86,12 @@ class ClassRegisterCurstomize {
     }
     register2Password.style.border = "3px solid transparent";
     return true;
-  }*/
+  }
 }
 
 // DOM elements
 
-/*const registerWithGoogle2 = document.getElementById("registerWithGoogle2");
+const registerWithGoogle2 = document.getElementById("registerWithGoogle2");
 // const registerWithFacebook2 = document.getElementById("registerWithFacebook2");
 // const registerWithApple2 = document.getElementById("registerWithApple2");
 
@@ -102,6 +102,6 @@ const register2Email = document.getElementById("register2Email");
 const register2Password = document.getElementById("register2Password");
 const register2 = document.getElementById("register2");
 
-*/
+
 // Instance of the registration class
 //const classRegisterCustomize = new ClassRegisterCurstomize();
