@@ -1,4 +1,12 @@
 // Class to manage the behavior of the registration form.
+if (window.__registerJsLoaded__) {
+  console.warn("register.js ya fue cargado.");
+  console.trace(); // Muestra qué archivo lo cargó
+  alert("El archivo register.js fue cargado más de una vez.");
+} else {
+  window.__registerJsLoaded__ = true;
+}
+
 class ClassRegisterCurstomize {
 /*  constructor() {
     // Adds a listener to the 'openLogin2' button to switch to the login form when clicked.
