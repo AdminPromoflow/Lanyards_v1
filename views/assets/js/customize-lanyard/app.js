@@ -473,7 +473,9 @@ class CustomizeLanyard {
     classPreviewLogin.showLoginPreview("none");
     previewProvidedInformation.showProvidedInformationPreview('none');
     this.showCurrentSection(this.currentSectionOpen);
-  //  classRegister.openRegister(false);
+    this.showNext(true);
+
+    classRegister2.openRegister(false);
   }
 
   openLogin(){
@@ -495,6 +497,8 @@ class CustomizeLanyard {
     previewLanyardType.showTypeLanyardPreview("none");
     this.showCurrentSection(this.currentSectionOpen);
     this.showNext(true);
+    classRegister2.openRegister(false);
+
   }
   openCheckout(){
     previewTemplate.togglePreviewTemplateClass("block");
