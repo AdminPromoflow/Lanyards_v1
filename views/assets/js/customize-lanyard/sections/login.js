@@ -70,7 +70,7 @@ class Classlogin2 {
 
       if (data.message) {
         alert(data.message);
-        this.setActiveSession(parsedData.message);
+        this.setActiveSession(true);
         this.loginOrLogout();
         //location.reload();
       }
