@@ -2,11 +2,18 @@ class PasswordForgotten {
   constructor() {
     this._forgottenPassword2 = false;
     password_forgotten_close.addEventListener("click", function(){
-      passwordForgotten.showPasswordForgotten(false);
-      loginClass.openLogin();
-      loginClass.showLogin(0);
-      // Hide the register form with a sliding animation
-      registerClass.hideRegister(0);
+      alert(this._forgottenPassword2);
+      if (this._forgottenPassword2 == false) {
+        passwordForgotten.showPasswordForgotten(false);
+        loginClass.openLogin();
+        loginClass.showLogin(0);
+        // Hide the register form with a sliding animation
+        registerClass.hideRegister(0);
+      }
+      else {
+        passwordForgotten.showPasswordForgotten(false);
+      }
+
     });
 
 
@@ -89,9 +96,8 @@ class PasswordForgotten {
           location.reload();
         }
         else {
-          alert(error.message);
+          alert(error.message + "Please register");
           chargingClass.hideShowchargin(false);
-
         }
 
 
