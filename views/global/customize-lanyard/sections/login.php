@@ -21,7 +21,7 @@ $appleVersion = file_exists($imgApple) ? filemtime($imgApple) : time();
   <div id="containers_boxes_login2" class="containers_boxes_login2">
     <label for="login2Email">Please enter your login details:</label>
     <input id="login2Email" type="text" name="" value="" placeholder="Please provide your email">
-    <input id="login2Password" type="text" name="" value="" placeholder="and your password">
+    <input id="login2Password" type="password" name="" value="" placeholder="and your password">
     <h3 id="password_forgotten2">Have you forgotten your password?</h3>
 
     <button id="enterLogin2" type="button" name="button">
