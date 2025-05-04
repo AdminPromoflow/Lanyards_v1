@@ -1,8 +1,6 @@
 // Class to manage the behavior of the login and registration forms
 class Classlogin2 {
   constructor() {
-    console.trace(); // Muestra el stack trace en la consola
-
     // Listener to switch from login to registration form
     openRegister2.addEventListener("click", () => {
       this.openLogin(false);                   // Hide login form
@@ -29,7 +27,11 @@ class Classlogin2 {
     });
 
 
-
+    if (typeof ClassRegisterCurstomize !== "undefined") {
+      console.warn("ClassRegisterCurstomize ya está definida");
+      console.trace(); // Muestra el stack trace en la consola
+      alert("¡Clase duplicada detectada! Revisa la consola para más información.");
+    }
   }
 
   // Method to show or hide the login form
