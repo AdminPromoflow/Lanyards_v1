@@ -90,6 +90,8 @@ class PasswordForgotten {
         }
         else {
           alert(error.message);
+          chargingClass.hideShowchargin(false);
+
         }
 
 
