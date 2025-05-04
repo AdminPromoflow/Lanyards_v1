@@ -31,7 +31,7 @@ class Classlogin2 {
         chargingClass.hideShowchargin(true);
 
         // Make the AJAX request
-        loginClass2.makeAjaxRequestLogin();
+        classlogin2.makeAjaxRequestLogin();
       }
     });
 
