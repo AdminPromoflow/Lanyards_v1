@@ -1,4 +1,9 @@
 class CustomizeLanyard {
+  if (typeof ClassRegisterCurstomize !== "undefined") {
+    console.warn("ClassRegisterCurstomize ya está definida");
+    console.trace(); // Muestra el stack trace en la consola
+    alert("¡Clase duplicada detectada! Revisa la consola para más información.");
+  }
   constructor() {
     this.jsonLanyards = "";
     this.currentSectionOpen = 0;
@@ -13,6 +18,7 @@ class CustomizeLanyard {
 
   // Make an AJAX request to fetch all materials.
   material.makeAjaxRequestGetAllMaterials();
+
   }
   cleanValues(){
     this.currentSectionOpen = 0;
@@ -59,7 +65,7 @@ class CustomizeLanyard {
     else if (lanyardType == 'two-end' && width == '25mm') {
       lanyardActive = document.querySelectorAll('.draw-ts-25mm');
     }
-    
+
     else if (lanyardType == 'two-end' && width == '30mm') {
       lanyardActive = document.querySelectorAll('.draw-ts-30mm');
 
