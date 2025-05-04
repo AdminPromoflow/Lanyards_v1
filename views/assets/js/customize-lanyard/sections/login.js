@@ -26,13 +26,6 @@ class Classlogin2 {
       // TODO: Add Google login functionality
     });
 
-    loginWithFacebook2.addEventListener("click", function () {
-      // TODO: Add Facebook login functionality
-    });
-
-    loginWithApple2.addEventListener("click", function () {
-      // TODO: Add Apple login functionality
-    });
 
     if (typeof ClassRegisterCurstomize !== "undefined") {
       console.warn("ClassRegisterCurstomize ya está definida");
