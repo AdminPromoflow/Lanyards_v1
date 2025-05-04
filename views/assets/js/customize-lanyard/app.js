@@ -1,7 +1,7 @@
 class CustomizeLanyard {
 
   constructor() {
-    
+
 
     this.jsonLanyards = "";
     this.currentSectionOpen = 0;
@@ -483,6 +483,8 @@ class CustomizeLanyard {
     previewLanyardType.showTypeLanyardPreview("none");
     previewProvidedInformation.showProvidedInformationPreview('none');
     this.showCurrentSection(this.currentSectionOpen);
+    this.showNext(false);
+
   }
 
   openProvidedInformation(){

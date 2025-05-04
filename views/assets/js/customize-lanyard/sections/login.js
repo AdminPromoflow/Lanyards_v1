@@ -72,6 +72,8 @@ class Classlogin2 {
         alert("The user has successfully logged in.");
         menuClass.setActiveSession(true);
         menuClass.loginOrLogout();
+        customizeLanyard.openProvidedInformation()
+
         //location.reload();
       }
       else{
