@@ -14,7 +14,7 @@ $googleVersion = file_exists($imgGoogle) ? filemtime($imgGoogle) : time();
 <section class="register2" id="register2">
   <h2 class="name-section-customize-lanyard">Register</h2>
   <div id="containers_boxes_register2" class="containers_boxes_register2">
-    <label for="">Please provide your registration information:</label>
+    <label for="register2Name">Please provide your registration information:</label>
     <input id="register2Name" type="text" name="" value="" placeholder="Please provide your name">
     <input id="register2Email" type="text" name="" value="" placeholder="Please provide your email">
     <input id="register2Password" type="text" name="" value="" placeholder="and your password">
