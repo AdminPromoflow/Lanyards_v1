@@ -19,7 +19,7 @@ $googleVersion = file_exists($imgGoogle) ? filemtime($imgGoogle) : time();
     <input id="register2Email" type="text" name="" value="" placeholder="Please provide your email">
     <input id="register2Password" type="text" name="" value="" placeholder="and your password">
     <label class="label_acept_terms_conditions2">
-    <input id="acept_terms_conditions" type="checkbox" name="terms" required>
+    <input id="acept_terms_conditions2" type="checkbox" name="terms" required>
       I agree to the <a href="../../views/terms_conditions/index.php" target="_blank">Terms and Conditions</a>.
     </label>
     <button id="enterRegister2" type="button" name="button">
