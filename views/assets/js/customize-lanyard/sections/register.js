@@ -3,8 +3,7 @@
 
 class ClassRegisterCurstomize {
   constructor(){
-    
-      console.trace(); // Muestra el stack trace en la consola
+
 
   }
 /*  constructor() {
