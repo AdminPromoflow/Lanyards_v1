@@ -22,10 +22,10 @@ class Login {
 
   });
 
-  loginWithFacebook1.addEventListener("click", function(){
+/*  loginWithFacebook1.addEventListener("click", function(){
     loginClass.customLogin();
 
-  });
+  });*/
 
 
 
