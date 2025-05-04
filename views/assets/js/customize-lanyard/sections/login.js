@@ -1,27 +1,17 @@
 // Class to manage the behavior of the login and registration forms
 class Classlogin2 {
   constructor() {
-    alert("Al menos estamos entrando");
     // Listener to switch from login to registration form
     openRegister2.addEventListener("click", () => {
-      alert("hicimos un berraco click");
-      if (typeof ClassRegisterCurstomize !== "undefined") {
-        console.warn("ClassRegisterCurstomize ya está definida");
-        console.trace(); // Muestra el stack trace en la consola
-        alert("¡Clase duplicada detectada! Revisa la consola para más información.");
-      }
+      
       this.openLogin(false);                   // Hide login form
       classRegister.openRegister(true);        // Show registration form
       classPreviewLogin.changeImage("register"); // Change image preview
-      if (typeof ClassRegisterCurstomize !== "undefined") {
-          alert("Clase duplicada");
-          console.trace();
-        }
+
     });
 
     // Listener for login submission
     enterLogin2.addEventListener("click", () => {
-      alert("hahah");
       if (this.validateEmail() && this.validatePassword()) {
         const url = "../../controller/users/login.php";
         const data = {
