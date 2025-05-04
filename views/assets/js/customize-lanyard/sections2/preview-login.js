@@ -7,11 +7,11 @@ class ClassPreviewLogin {
   }
   changeImage(action){
     if (action == "register") {
-      previewLoginContainerImage.src = "../../views/assets/img/global/customize-lanyard/sections2/preview-login/avatars2.png"
+      previewLoginContainerImage.src = "../../views/assets/img/global/customize-lanyard/sections2/preview-login/avatarsRegister.png"
 
     }
     else {
-      previewLoginContainerImage.src = "../../views/assets/img/global/customize-lanyard/sections2/preview-login/avatars.png"
+      previewLoginContainerImage.src = "../../views/assets/img/global/customize-lanyard/sections2/preview-login/avatarsLogin.png"
 
     }
 

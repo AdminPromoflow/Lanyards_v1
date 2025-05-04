@@ -1,7 +1,7 @@
 <?php
 $cssPath = '../../views/assets/css/global/customize-lanyard/sections2/preview-login.css';
 $jsPath = '../../views/assets/js/customize-lanyard/sections2/preview-login.js';
-$imgPath = '../../views/assets/img/global/customize-lanyard/sections2/preview-login/avatars.png';
+$imgPath = '../../views/assets/img/global/customize-lanyard/sections2/preview-login/avatarsLogin.png';
 
 $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
 $jsVersion = file_exists($jsPath) ? filemtime($jsPath) : time();
