@@ -2,6 +2,13 @@
 
 
 class ClassRegisterCurstomize {
+  constructor(){
+    if (typeof ClassRegisterCurstomize !== "undefined") {
+      console.warn("ClassRegisterCurstomize ya está definida");
+      console.trace(); // Muestra el stack trace en la consola
+      alert("¡Clase duplicada detectada! Revisa la consola para más información.");
+    }
+  }
 /*  constructor() {
     // Adds a listener to the 'openLogin2' button to switch to the login form when clicked.
     openLogin2.addEventListener("click", () => {
