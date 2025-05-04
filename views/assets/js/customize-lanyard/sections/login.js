@@ -10,6 +10,43 @@ class Classlogin2 {
 
     });
 
+    const password_forgotten2 = document.getElementById("password_forgotten2");
+
+
+    password_forgotten2.addEventListener("click", function(){
+      passwordForgotten.showPasswordForgotten(true);
+
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // Listener for login submission
     enterLogin2.addEventListener("click", () => {
       if (this.validateEmail() && this.validatePassword()) {
