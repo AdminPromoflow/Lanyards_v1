@@ -1,6 +1,7 @@
 // Class to manage the behavior of the login and registration forms
 class Classlogin2 {
   constructor() {
+    alert("Al menos estamos entrando");
     // Listener to switch from login to registration form
     openRegister2.addEventListener("click", () => {
       alert("hicimos un berraco click");
