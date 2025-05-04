@@ -20,7 +20,7 @@ class Classlogin2 {
     });
 
 
-    
+
 
 
 
@@ -65,9 +65,9 @@ class Classlogin2 {
     });
 
     // Social login event listeners (placeholders)
-    loginWithGoogle2.addEventListener("click", function () {
+    /*loginWithGoogle2.addEventListener("click", function () {
       // TODO: Add Google login functionality
-    });
+    });*/
 
 
 
