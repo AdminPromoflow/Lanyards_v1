@@ -70,8 +70,8 @@ class Classlogin2 {
 
       if (data.message) {
         alert("The user has successfully logged in.");
-        this.setActiveSession(true);
-        this.loginOrLogout();
+        menuClass.setActiveSession(true);
+        menuClass.loginOrLogout();
         //location.reload();
       }
       else{
