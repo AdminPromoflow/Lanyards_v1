@@ -55,8 +55,8 @@
   position: relative;
   text-align: center;
   color: white;
-  margin-bottom: 6px 0;
-  font-size: 1em;
+  margin: 6px 0;
+  font-size: 1.05em;
   font-weight: 300;
 }
 .containers_boxes_register2 input{
