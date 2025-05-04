@@ -98,4 +98,4 @@ const register2 = document.getElementById("register2");
 
 */
 // Instance of the registration class
-const classRegisterCustomize = new ClassRegisterCurstomize();
+//const classRegisterCustomize = new ClassRegisterCurstomize();
