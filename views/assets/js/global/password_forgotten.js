@@ -1,5 +1,6 @@
 class PasswordForgotten {
   constructor() {
+    this._forgottenPassword2 = false;
     password_forgotten_close.addEventListener("click", function(){
       passwordForgotten.showPasswordForgotten(false);
       loginClass.openLogin();
@@ -7,6 +8,8 @@ class PasswordForgotten {
       // Hide the register form with a sliding animation
       registerClass.hideRegister(0);
     });
+
+
 
     password_forgotten_button.addEventListener("click", function(){
       if (passwordForgotten.validateEmail()) {
@@ -17,6 +20,15 @@ class PasswordForgotten {
 
     })
   }
+  getForgottenPassword2() {
+     return this._forgottenPassword2;
+   }
+
+   // Función para establecer el valor
+   setForgottenPassword2(value) {
+     this._forgottenPassword2 = value;
+   }
+
   makeAjaxRequestPasswordForgotten() {
     // Define the URL and the JSON data you want to send
     const url = "../../controller/users/password-forgotten.php"; // Replace with your API endpoint URL
@@ -46,24 +58,45 @@ class PasswordForgotten {
       .then((data) => {
 
         // Process the successful response
-        if (data.success) { // Assuming your API returns a `success` property
-          chargingClass.hideShowchargin(false);
+        if (passwordForgotten.getForgottenPassword2() == false) {
+          if (data.success) { // Assuming your API returns a `success` property
+            chargingClass.hideShowchargin(false);
 
-          alert("Recovery email sent successfully. Please check your inbox.");
-          // Optionally reload the page
-        } else {
-          chargingClass.hideShowchargin(false);
+            alert("Recovery email sent successfully. Please check your inbox.");
+            // Optionally reload the page
+          } else {
+            chargingClass.hideShowchargin(false);
+          }
+          location.reload();
         }
-        location.reload();
+        else {
+          if (data.success) { // Assuming your API returns a `success` property
+            chargingClass.hideShowchargin(false);
+
+            alert("Recovery email sent successfully. Please check your inbox.");
+            // Optionally reload the page
+          } else {
+            chargingClass.hideShowchargin(false);
+          }
+        }
+
       })
       .catch((error) => {
         // Handle errors
-        console.error("Error:", error.message);
-        alert(error.message); // Show the error message in an alert
-        location.reload();
+        if (passwordForgotten.getForgottenPassword2() == false) {
+          console.error("Error:", error.message);
+          alert(error.message); // Show the error message in an alert
+          location.reload();
+        }
+        else {
+          alert(error.message);
+        }
+
 
       });
   }
+
+
 
   // Email validation function
   validateEmail() {

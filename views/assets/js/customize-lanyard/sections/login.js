@@ -14,6 +14,7 @@ class Classlogin2 {
 
 
     password_forgotten2.addEventListener("click", function(){
+      passwordForgotten.setForgottenPassword2(true);
       passwordForgotten.showPasswordForgotten(true);
 
     });
