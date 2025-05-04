@@ -22,6 +22,11 @@ window.addEventListener("scroll", handleScroll);
 
 class Home {
     constructor() {
+      if (typeof ClassRegisterCurstomize !== "undefined") {
+        console.warn("ClassRegisterCurstomize ya está definida");
+        console.trace(); // Muestra el stack trace en la consola
+        alert("¡Clase duplicada detectada! Revisa la consola para más información.");
+      }
         this.initEventListeners(); // Initialize event listeners on page load
     }
 
