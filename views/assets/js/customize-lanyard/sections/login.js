@@ -82,6 +82,7 @@ const loginWithApple2 = document.getElementById("loginWithApple2");
 const enterLogin2 = document.getElementById("enterLogin2");
 const login2Password = document.getElementById("login2Password");
 const login2Email = document.getElementById("login2Email");
+const openRegister2 = document.getElementById("openRegister2");
 
 // Create an instance of the Classlogin2 class
 const classlogin2 = new Classlogin2();

@@ -90,7 +90,7 @@ class ClassRegister2 {
   // Password validation for registration.
   validatePasswordRegister2() {
     const password = register2Password.value.trim(); // Get password and remove extra spaces.
-    if (password.length < 6) {
+    if (password.length < 6)
       alert("Password must be at least 6 characters"); // Show error if password is too short.
       register2Password.style.border = "3px solid #8B0000"; // Highlight field in red.
       return false; // Validation fails.
@@ -101,7 +101,7 @@ class ClassRegister2 {
 }
 
 // Get the DOM elements related to registration and login.
-//const register2 = document.getElementById("register2");
+const register2 = document.getElementById("register2");
 
 const registerWithGoogle2 = document.getElementById("registerWithGoogle2");
 //const registerWithFacebook2 = document.getElementById("registerWithFacebook2");
