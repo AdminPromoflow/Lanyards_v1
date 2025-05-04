@@ -32,4 +32,4 @@ $googleVersion = file_exists($imgGoogle) ? filemtime($imgGoogle) : time();
   </div>
 </section>
 
-<!--<script src="<?= $jsPath ?>?v=<?= $jsVersion ?>"></script>-->
+<script src="<?= $jsPath ?>?v=<?= $jsVersion ?>"></script>
