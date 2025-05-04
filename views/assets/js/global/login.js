@@ -48,8 +48,7 @@ class Login {
       loginClass.makeAjaxRequestLoginWithGoogle();
     })
 
-    loginWithFacebook1.addEventListener("click", function(){
-    })
+    
 
 
 
