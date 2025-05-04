@@ -111,7 +111,7 @@ class Classlogin2 {
 // DOM elements for login and registration
 const login2 = document.getElementById("login2");
 
-const loginWithGoogle2 = document.getElementById("loginWithGoogle2");
+//const loginWithGoogle2 = document.getElementById("loginWithGoogle2");
 const loginWithFacebook2 = document.getElementById("loginWithFacebook2");
 const loginWithApple2 = document.getElementById("loginWithApple2");
 
