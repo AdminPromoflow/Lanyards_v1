@@ -58,7 +58,7 @@
 }
 .containers_boxes_login2 input{
   position: relative;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   border-radius: 5px;
   padding: 3px 10px;;
   font-size: 1em;
@@ -68,9 +68,9 @@
 .containers_boxes_login2 h3{
   font-size: 1.1em;
   color: white;
-  margin-bottom: 10px;
+  margin: 0px 0 5px;
   font-weight: 300;
-  margin: 5px 0 10px 0;
+  margin: 0px 0 10px 0;
   padding: 0;
   cursor: pointer;
   border-bottom: 1px solid transparent;
