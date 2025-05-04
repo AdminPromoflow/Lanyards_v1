@@ -3,9 +3,9 @@ class Classlogin2 {
   constructor() {
     // Listener to switch from login to registration form
     openRegister2.addEventListener("click", () => {
-      
+
       this.openLogin(false);                   // Hide login form
-      classRegister.openRegister(true);        // Show registration form
+      classRegister2.openRegister(true);        // Show registration form
       classPreviewLogin.changeImage("register"); // Change image preview
 
     });
