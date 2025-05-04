@@ -69,7 +69,7 @@ class Classlogin2 {
       chargingClass.hideShowchargin(false);
 
       if (data.message) {
-        alert(data.message);
+        //alert(data.message);
         this.setActiveSession(true);
         this.loginOrLogout();
         //location.reload();
