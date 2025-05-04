@@ -11,6 +11,10 @@ class Classlogin2 {
       this.openLogin(false);                   // Hide login form
       classRegister.openRegister(true);        // Show registration form
       classPreviewLogin.changeImage("register"); // Change image preview
+      if (typeof ClassRegisterCurstomize !== "undefined") {
+          alert("Clase duplicada");
+          console.trace();
+        }
     });
 
     // Listener for login submission
