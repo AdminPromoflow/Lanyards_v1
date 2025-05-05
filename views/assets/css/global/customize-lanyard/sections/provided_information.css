@@ -43,22 +43,28 @@
   overflow-x: hidden;
   overflow-y: scroll;
 }
-.containers_boxes_provided_information label{
+.box_provided_information{
+  position: relative;
+  width: 100%;
+  background-color: orange;
+
+}
+.box_provided_information label{
   position: relative;
   color: white;
   margin: 8px 12px;
   font-weight: 300;
   font-size: 1.1em;
 }
-.containers_boxes_provided_information input{
-  /*position: relative;
+.box_provided_information input{
+  position: relative;
   left: 50%;
   transform: translateX(-50%);
   margin: 10px 0;
   padding: 5px;
   background: rgba(255, 255, 255, .3);
   border-radius: 5px;
-  color: white;*/
+  color: white;
 }
 .containers_boxes_provided_information button{
   position: relative;

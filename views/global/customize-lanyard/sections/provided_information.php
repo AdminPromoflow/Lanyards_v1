@@ -17,6 +17,15 @@ $jsVersion = file_exists($jsFile) ? filemtime($jsFile) : time();
   <br>
   <div id="containers_boxes_provided_information" class="containers_boxes_provided_information">
     <div class="boxes_provided_information">
+      <div class="box_provided_information">
+        <label for="first_name">First name</label>
+        <input id="first_name" type="text" name="" value="" placeholder="First name">
+      </div>
+
+      <div class="box_provided_information">
+        <label for="last_name">Last name</label>
+        <input id="last_name" type="text" name="" value="" placeholder="Last name">
+      </div>
 
     </div>
     <br>
