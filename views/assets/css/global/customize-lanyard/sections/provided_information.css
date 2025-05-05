@@ -129,6 +129,11 @@
   background-color: black;
 }
 
+.row-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
 
 
 
