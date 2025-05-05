@@ -46,22 +46,23 @@
 .box_provided_information{
   position: relative;
   width: 100%;
-  background-color: orange;
 
 }
 .box_provided_information label{
   position: relative;
   color: white;
-  margin: 8px 12px;
+  margin: 4px 0;
   font-weight: 300;
   font-size: 1.1em;
 }
 .box_provided_information input{
   position: relative;
+  width: 100%;
   left: 50%;
   transform: translateX(-50%);
   margin: 10px 0;
   padding: 5px;
+  font-size: 0.9em;
   background: rgba(255, 255, 255, .3);
   border-radius: 5px;
   color: white;
