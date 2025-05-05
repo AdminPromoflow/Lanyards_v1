@@ -132,6 +132,9 @@
 .boxes_provided_information_checkbox {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
   gap: 4px;
 }
 

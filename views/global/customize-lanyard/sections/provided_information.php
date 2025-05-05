@@ -20,12 +20,10 @@ $jsVersion = file_exists($jsFile) ? filemtime($jsFile) : time();
 
     </div>
     <br>
-    <div class="boxes_provided_information_checkbox">
-      <label>
+      <label class="boxes_provided_information_checkbox">
           <input type="checkbox" id="checkbox_provided_information">
-          Deliver to a different address?
+          <p>Deliver to a different address?</p>
       </label>
-    </div>
 
 
     <div class="boxes_provided_information">
