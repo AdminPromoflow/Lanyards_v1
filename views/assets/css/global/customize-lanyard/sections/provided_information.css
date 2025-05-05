@@ -45,13 +45,16 @@
 }
 .box_provided_information{
   position: relative;
-  width: 100%;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
 
 }
 .box_provided_information label{
   position: relative;
   color: white;
   margin: 4px 0;
+  padding: 4px 0;
   font-weight: 300;
   font-size: 1.1em;
 }
