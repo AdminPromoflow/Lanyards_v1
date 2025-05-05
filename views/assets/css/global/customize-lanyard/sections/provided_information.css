@@ -129,7 +129,7 @@
   background-color: black;
 }
 
-.row-checkbox {
+.boxes_provided_information_checkbox {
   display: flex;
   align-items: center;
   gap: 4px;
