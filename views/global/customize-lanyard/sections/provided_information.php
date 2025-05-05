@@ -149,6 +149,7 @@ $jsVersion = file_exists($jsFile) ? filemtime($jsFile) : time();
 
 
       </div>
+      <br><br><br>
   <!--  <label for="search-box">Delivery address</label>
     <input id="search-box" type="text" placeholder="Search an address">
     <ul id="result-list"></ul>
