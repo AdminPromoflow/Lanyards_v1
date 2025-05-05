@@ -3,13 +3,7 @@ class ProvidedInformation {
     boxes_provided_information_2.style.display = "none";
 
     checkbox_provided_information.addEventListener("click", function(){
-      //  if (!boxes_provided_information_2) return;
-
-        if (boxes_provided_information_2.style.display === "none" || getComputedStyle(boxes_provided_information_2).display === "none") {
-          boxes_provided_information_2.style.display = "block";
-        } else {
-          boxes_provided_information_2.style.display = "none";
-        }
+      providedInformation.toggleProvidedInformation2();
     })
 
 
@@ -88,6 +82,16 @@ class ProvidedInformation {
             resultList.innerHTML = '';  // Limpiar la lista si se borran los caracteres de búsqueda
         }
     });*/
+  }
+
+  toggleProvidedInformation2(){
+    if (!boxes_provided_information_2) return;
+
+      if (boxes_provided_information_2.style.display === "none" || getComputedStyle(boxes_provided_information_2).display === "none") {
+        boxes_provided_information_2.style.display = "block";
+      } else {
+        boxes_provided_information_2.style.display = "none";
+      }
   }
 }
 
