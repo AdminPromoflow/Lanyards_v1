@@ -131,6 +131,8 @@
 .boxes_provided_information{
   position: relative;
   width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 5px;
   background-color: black;
 }
