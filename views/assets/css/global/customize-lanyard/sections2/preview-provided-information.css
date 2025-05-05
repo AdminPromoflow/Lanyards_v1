@@ -14,7 +14,8 @@
 }
 .preview_provided_information_box{
   position: relative;
-  height: 50%;
+  height: 40%;
+  margin: 15px 0;
   width: 90%;
   background-color: green;
 }
