@@ -53,6 +53,7 @@
 }
 .box_provided_information label{
   position: relative;
+  text-align: left;
   color: white;
   margin: 4px 0;
   padding: 4px 0;

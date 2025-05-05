@@ -17,6 +17,7 @@ $jsVersion = file_exists($jsFile) ? filemtime($jsFile) : time();
   <br>
   <div id="containers_boxes_provided_information" class="containers_boxes_provided_information">
     <div class="boxes_provided_information">
+
       <div class="box_provided_information">
         <label for="first_name">First name</label>
         <input id="first_name" type="text" name="" value="" placeholder="First name">
@@ -27,6 +28,56 @@ $jsVersion = file_exists($jsFile) ? filemtime($jsFile) : time();
         <input id="last_name" type="text" name="" value="" placeholder="Last name">
       </div>
 
+      <div class="box_provided_information">
+        <label for="company_name">Company name</label>
+        <input id="company_name" type="text" name="" value="" placeholder="Company name">
+      </div>
+
+      <div class="box_provided_information">
+        <label for="phone">Phone</label>
+        <input id="phone" type="text" name="" value="" placeholder="Phone">
+      </div>
+
+      <div class="box_provided_information">
+        <label for="country">Country</label>
+        <input id="country" type="text" name="" value="" placeholder="Country">
+      </div>
+
+      <div class="box_provided_information">
+        <label for="state">State</label>
+        <input id="state" type="text" name="" value="" placeholder="State">
+      </div>
+
+      <div class="box_provided_information">
+        <label for="town_city">Town/city</label>
+        <input id="town_city" type="text" name="" value="" placeholder="Town/city">
+      </div>
+
+      <div class="box_provided_information">
+        <label for="street_address_1">Street address 1</label>
+        <input id="street_address_1" type="text" name="" value="" placeholder="Street address 1">
+      </div>
+
+      <div class="box_provided_information">
+        <label for="street_address_2">Street address 2</label>
+        <input id="street_address_2" type="text" name="" value="" placeholder="Street address 2">
+      </div>
+
+      <div class="box_provided_information">
+        <label for="postcode">Postcode</label>
+        <input id="postcode" type="text" name="" value="" placeholder="Postcode">
+      </div>
+
+      <div class="box_provided_information">
+        <label for="email_address">Email address</label>
+        <input id="email_address" type="text" name="" value="" placeholder="Email address">
+      </div>
+
+
+
+
+
+
     </div>
     <br>
       <label class="boxes_provided_information_checkbox">
@@ -35,9 +86,69 @@ $jsVersion = file_exists($jsFile) ? filemtime($jsFile) : time();
       </label>
 
 
-    <div class="boxes_provided_information">
+      <div class="boxes_provided_information">
 
-    </div>
+        <div class="box_provided_information">
+          <label for="first_name">First name</label>
+          <input id="first_name" type="text" name="" value="" placeholder="First name">
+        </div>
+
+        <div class="box_provided_information">
+          <label for="last_name">Last name</label>
+          <input id="last_name" type="text" name="" value="" placeholder="Last name">
+        </div>
+
+        <div class="box_provided_information">
+          <label for="company_name">Company name</label>
+          <input id="company_name" type="text" name="" value="" placeholder="Company name">
+        </div>
+
+        <div class="box_provided_information">
+          <label for="phone">Phone</label>
+          <input id="phone" type="text" name="" value="" placeholder="Phone">
+        </div>
+
+        <div class="box_provided_information">
+          <label for="country">Country</label>
+          <input id="country" type="text" name="" value="" placeholder="Country">
+        </div>
+
+        <div class="box_provided_information">
+          <label for="state">State</label>
+          <input id="state" type="text" name="" value="" placeholder="State">
+        </div>
+
+        <div class="box_provided_information">
+          <label for="town_city">Town/city</label>
+          <input id="town_city" type="text" name="" value="" placeholder="Town/city">
+        </div>
+
+        <div class="box_provided_information">
+          <label for="street_address_1">Street address 1</label>
+          <input id="street_address_1" type="text" name="" value="" placeholder="Street address 1">
+        </div>
+
+        <div class="box_provided_information">
+          <label for="street_address_2">Street address 2</label>
+          <input id="street_address_2" type="text" name="" value="" placeholder="Street address 2">
+        </div>
+
+        <div class="box_provided_information">
+          <label for="postcode">Postcode</label>
+          <input id="postcode" type="text" name="" value="" placeholder="Postcode">
+        </div>
+
+        <div class="box_provided_information">
+          <label for="email_address">Email address</label>
+          <input id="email_address" type="text" name="" value="" placeholder="Email address">
+        </div>
+
+
+
+
+
+
+      </div>
   <!--  <label for="search-box">Delivery address</label>
     <input id="search-box" type="text" placeholder="Search an address">
     <ul id="result-list"></ul>
