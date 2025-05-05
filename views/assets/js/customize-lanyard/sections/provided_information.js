@@ -1,5 +1,6 @@
 class ProvidedInformation {
   constructor() {
+    boxes_provided_information_2.style.display = "none";
 
     checkbox_provided_information.addEventListener("click", function(){
       //  if (!boxes_provided_information_2) return;
