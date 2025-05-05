@@ -86,61 +86,61 @@ $jsVersion = file_exists($jsFile) ? filemtime($jsFile) : time();
       </label>
 
 
-      <div class="boxes_provided_information">
+      <div class="boxes_provided_information" id="boxes_provided_information_2">
 
         <div class="box_provided_information">
-          <label for="first_name">First name</label>
-          <input id="first_name" type="text" name="" value="" placeholder="First name">
+          <label for="first_name_2">First name</label>
+          <input id="first_name_2" type="text" name="" value="" placeholder="First name">
         </div>
 
         <div class="box_provided_information">
-          <label for="last_name">Last name</label>
-          <input id="last_name" type="text" name="" value="" placeholder="Last name">
+          <label for="last_name_2">Last name</label>
+          <input id="last_name_2" type="text" name="" value="" placeholder="Last name">
         </div>
 
         <div class="box_provided_information">
-          <label for="company_name">Company name</label>
-          <input id="company_name" type="text" name="" value="" placeholder="Company name">
+          <label for="company_name_2">Company name</label>
+          <input id="company_name_2" type="text" name="" value="" placeholder="Company name">
         </div>
 
         <div class="box_provided_information">
-          <label for="phone">Phone</label>
-          <input id="phone" type="text" name="" value="" placeholder="Phone">
+          <label for="phone_2">Phone</label>
+          <input id="phone_2" type="text" name="" value="" placeholder="Phone">
         </div>
 
         <div class="box_provided_information">
-          <label for="country">Country</label>
-          <input id="country" type="text" name="" value="" placeholder="Country">
+          <label for="country_2">Country</label>
+          <input id="country_2" type="text" name="" value="" placeholder="Country">
         </div>
 
         <div class="box_provided_information">
-          <label for="state">State</label>
-          <input id="state" type="text" name="" value="" placeholder="State">
+          <label for="state_2">State</label>
+          <input id="state_2" type="text" name="" value="" placeholder="State">
         </div>
 
         <div class="box_provided_information">
-          <label for="town_city">Town/city</label>
-          <input id="town_city" type="text" name="" value="" placeholder="Town/city">
+          <label for="town_city_2">Town/city</label>
+          <input id="town_city_2" type="text" name="" value="" placeholder="Town/city">
         </div>
 
         <div class="box_provided_information">
-          <label for="street_address_1">Street address 1</label>
-          <input id="street_address_1" type="text" name="" value="" placeholder="Street address 1">
+          <label for="street_address_1_2">Street address 1</label>
+          <input id="street_address_1_2" type="text" name="" value="" placeholder="Street address 1">
         </div>
 
         <div class="box_provided_information">
-          <label for="street_address_2">Street address 2</label>
-          <input id="street_address_2" type="text" name="" value="" placeholder="Street address 2">
+          <label for="street_address_2_2">Street address 2</label>
+          <input id="street_address_2_2" type="text" name="" value="" placeholder="Street address 2">
         </div>
 
         <div class="box_provided_information">
-          <label for="postcode">Postcode</label>
-          <input id="postcode" type="text" name="" value="" placeholder="Postcode">
+          <label for="postcode_2">Postcode</label>
+          <input id="postcode_2" type="text" name="" value="" placeholder="Postcode">
         </div>
 
         <div class="box_provided_information">
-          <label for="email_address">Email address</label>
-          <input id="email_address" type="text" name="" value="" placeholder="Email address">
+          <label for="email_address_2">Email address</label>
+          <input id="email_address_2" type="text" name="" value="" placeholder="Email address">
         </div>
 
 

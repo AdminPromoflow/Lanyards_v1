@@ -1,5 +1,18 @@
 class ProvidedInformation {
   constructor() {
+
+    checkbox_provided_information.addEventListener("click", function(){
+      //  if (!boxes_provided_information_2) return;
+
+        if (boxes_provided_information_2.style.display === "none" || getComputedStyle(boxes_provided_information_2).display === "none") {
+          boxes_provided_information_2.style.display = "block";
+        } else {
+          boxes_provided_information_2.style.display = "none";
+        }
+    })
+
+
+
   /*  mapboxgl.accessToken = 'pk.eyJ1IjoiaWFuc291dGhlcm4iLCJhIjoiY20ybWowdnRlMHBmcjJqcTljaDdhYXV6diJ9.UK4tRTqDkO6yYffa-LIyWw';  // Reemplaza con tu token de Mapbox
     const postcodeHTML = document.getElementById('postcode');
     const countryHTML = document.getElementById('country');
@@ -76,4 +89,35 @@ class ProvidedInformation {
     });*/
   }
 }
+
+const first_name = document.getElementById("first_name"),
+      last_name = document.getElementById("last_name"),
+      company_name = document.getElementById("company_name"),
+      phone = document.getElementById("phone"),
+      country = document.getElementById("country"),
+      state = document.getElementById("state"),
+      town_city = document.getElementById("town_city"),
+      street_address_1 = document.getElementById("street_address_1"),
+      street_address_2 = document.getElementById("street_address_2"),
+      postcode = document.getElementById("postcode"),
+      email_address = document.getElementById("email_address");
+
+
+const first_name_2 = document.getElementById("first_name_2"),
+      last_name_2 = document.getElementById("last_name_2"),
+      company_name_2 = document.getElementById("company_name_2"),
+      phone_2 = document.getElementById("phone_2"),
+      country_2 = document.getElementById("country_2"),
+      state_2 = document.getElementById("state_2"),
+      town_city_2 = document.getElementById("town_city_2"),
+      street_address_1_2 = document.getElementById("street_address_1_2"),
+      street_address_2_2 = document.getElementById("street_address_2_2"),
+      postcode_2 = document.getElementById("postcode_2"),
+      email_address_2 = document.getElementById("email_address_2");
+
+      const checkbox_provided_information = document.getElementById("checkbox_provided_information");
+      const boxes_provided_information_2 = document.getElementById("boxes_provided_information_2");
+
+
+
 const providedInformation = new ProvidedInformation();
