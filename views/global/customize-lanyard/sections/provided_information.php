@@ -7,7 +7,13 @@
   <p>Please add or update the information you have provided.</p>
   <br>
   <div id="containers_boxes_provided_information" class="containers_boxes_provided_information">
-    <label for="search-box">Delivery address</label>
+    <div class="boxes_provided_information">
+
+    </div>
+    <div class="boxes_provided_information">
+
+    </div>
+  <!--  <label for="search-box">Delivery address</label>
     <input id="search-box" type="text" placeholder="Search an address">
     <ul id="result-list"></ul>
     <br><br>
@@ -21,8 +27,8 @@
       <br><br>
       <label for="region">Region</label>
       <br>
-       <input id="region" type="text"">
-
+       <input id="region" type="text">
+     -->
   </div>
 </section>
 <script src="../../views/assets/js/customize-lanyard/sections/provided_information.js"></script>
