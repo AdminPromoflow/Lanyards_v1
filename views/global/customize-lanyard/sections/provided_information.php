@@ -1,4 +1,13 @@
-<link rel="stylesheet" href="../../views/assets/css/global/customize-lanyard/sections/provided_information.css">
+<?php
+$cssFile = '../../views/assets/css/global/customize-lanyard/sections/provided_information.css';
+$jsFile = '../../views/assets/js/customize-lanyard/sections/provided_information.js';
+
+$cssVersion = file_exists($cssFile) ? filemtime($cssFile) : time();
+$jsVersion = file_exists($jsFile) ? filemtime($jsFile) : time();
+?>
+<link rel="stylesheet" href="../../views/assets/css/global/customize-lanyard/sections/provided_information.css?v=<?= $cssVersion ?>">
+
+
 <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
 <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
 <section class="provided_information section" id="artworkManual">
@@ -31,4 +40,4 @@
      -->
   </div>
 </section>
-<script src="../../views/assets/js/customize-lanyard/sections/provided_information.js"></script>
+<script src="../../views/assets/js/customize-lanyard/sections/provided_information.js?v=<?= $jsVersion ?>"></script>
