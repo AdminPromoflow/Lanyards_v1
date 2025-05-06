@@ -48,9 +48,20 @@ class ProvidedInformation {
                         li.addEventListener('click', () => {
                             const [lng, lat] = feature.geometry.coordinates;
 
-                            // Mostrar alerta con el nombre del lugar seleccionado
-                            street_address_1.value = `${feature.place_name}`;
+                            // Rellenar el campo de dirección con el valor seleccionado
+                            street_address_1.value = feature.place_name;
 
+                            // Obtener datos adicionales del contexto de Mapbox
+                            const postcode = feature.context.find(c => c.id.startsWith('postcode'))?.text || 'No disponible';
+                            const country = feature.context.find(c => c.id.startsWith('country'))?.text || 'Not available';
+                            const region = feature.context.find(c => c.id.startsWith('region'))?.text || 'Not available';
+
+                            // Asignar los valores a los campos correspondientes
+                            postcode.value = postcode;
+                            country.value = country;
+                            town_city.value = region;
+
+                            // Manejo del marcador en el mapa
                             if (marker) {
                                 marker.remove();
                             }
@@ -65,14 +76,15 @@ class ProvidedInformation {
                                 essential: true
                             });
 
-                            resultList.innerHTML = '';
+                            resultList.innerHTML = ''; // Ocultar lista después de seleccionar
                         });
                     });
                 });
         } else {
-            resultList.innerHTML = '';
+            resultList.innerHTML = ''; // Limpiar si la búsqueda es muy corta
         }
     });
+
 
   }
 
