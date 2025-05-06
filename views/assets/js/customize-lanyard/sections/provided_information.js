@@ -57,9 +57,9 @@ class ProvidedInformation {
                             const region = feature.context.find(c => c.id.startsWith('region'))?.text || 'Not available';
 
                             // Asignar los valores a los campos correspondientes
-                            postcode.value = postcode;
                             country.value = country;
                             town_city.value = region;
+                            postcode.value = postcode;
 
                             // Manejo del marcador en el mapa
                             if (marker) {
