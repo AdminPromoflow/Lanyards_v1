@@ -48,7 +48,7 @@ class ProvidedInformation {
                         // Cuando se selecciona un resultado de la lista
                         li.addEventListener('click', () => {
                             const [lng, lat] = feature.geometry.coordinates;
-                            alert(JSON.stringfy(li));
+                            alert(JSON.stringify(li));
 
                             // Si ya existe un marcador, lo eliminamos
                             if (marker) {
