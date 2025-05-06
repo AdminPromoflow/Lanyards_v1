@@ -168,7 +168,7 @@
   padding: 0;
   margin: 0px;
   background: black;
-  z-index: 10;
+  z-index: 100;
 }
 .result_list li {
    cursor: pointer;
