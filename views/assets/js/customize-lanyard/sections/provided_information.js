@@ -48,6 +48,7 @@ class ProvidedInformation {
                         // Cuando se selecciona un resultado de la lista
                         li.addEventListener('click', () => {
                             const [lng, lat] = feature.geometry.coordinates;
+                            alert(li);
 
                             // Si ya existe un marcador, lo eliminamos
                             if (marker) {
@@ -66,13 +67,7 @@ class ProvidedInformation {
                                 essential: true  // Esto asegura que la animación ocurra
                             });
 
-                        /*    postcode = feature.context.find(c => c.id.startsWith('postcode'))?.text || 'No disponible';
-                            country = feature.context.find(c => c.id.startsWith('country'))?.text || 'Not available';
-                            region = feature.context.find(c => c.id.startsWith('region'))?.text || 'Not available';
 
-                            postcodeHTML.value = postcode;
-                            countryHTML.value = country;
-                            regionHTML.value = region;*/
                             // Ocultar la lista de resultados después de seleccionar uno
                             resultList.innerHTML = '';
                         });
