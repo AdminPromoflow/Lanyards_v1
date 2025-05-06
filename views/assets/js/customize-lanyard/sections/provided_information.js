@@ -8,9 +8,6 @@ class ProvidedInformation {
 
     mapboxgl.accessToken = 'pk.eyJ1IjoiaWFuc291dGhlcm4iLCJhIjoiY20ybWowdnRlMHBmcjJqcTljaDdhYXV6diJ9.UK4tRTqDkO6yYffa-LIyWw';
 
-    const postcodeHTML = document.getElementById('postcode');
-    const countryHTML = document.getElementById('country');
-    const regionHTML = document.getElementById('region');
 
     const map = new mapboxgl.Map({
       container: 'map',

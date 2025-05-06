@@ -1,7 +1,7 @@
 class PreviewProvidedInformation {
   constructor() {
-    preview_provided_information_box_2.style.display = "none";
-    preview_provided_information_box[1].style.height = "80%";
+  //  preview_provided_information_box_2.style.display = "none";
+    //preview_provided_information_box[1].style.height = "80%";
 
   }
   showProvidedInformationPreview(action){
