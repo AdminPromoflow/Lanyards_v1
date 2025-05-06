@@ -5,7 +5,7 @@ class PreviewProvidedInformation {
     const previewProvidedInformationContainer = document.getElementById("preview-provided-information-container");
     previewProvidedInformationContainer.style.display = action;
   }
-  showProvidedInformationPreview(action){
+  showMapProvidedInformationPreview(action){
     var height = "80%";
     if (action) {
       //.style.display = "block";

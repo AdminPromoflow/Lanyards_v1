@@ -88,10 +88,10 @@ class ProvidedInformation {
     if (!boxes_provided_information_2) return;
 
       if (boxes_provided_information_2.style.display === "none" || getComputedStyle(boxes_provided_information_2).display === "none") {
-        previewProvidedInformation.showProvidedInformationPreview(true);
+        previewProvidedInformation.showMapProvidedInformationPreview(true);
         boxes_provided_information_2.style.display = "block";
       } else {
-        previewProvidedInformation.showProvidedInformationPreview(false);
+        previewProvidedInformation.showMapProvidedInformationPreview(false);
         boxes_provided_information_2.style.display = "none";
       }
   }
