@@ -128,9 +128,9 @@ class ProvidedInformation {
 
                             marker = new mapboxgl.Marker()
                                 .setLngLat([lng, lat])
-                                .addTo(map);
+                                .addTo(map_mapbox_2);
 
-                            map.flyTo({
+                            map_mapbox_2.flyTo({
                                 center: [lng, lat],
                                 zoom: 14,
                                 essential: true
