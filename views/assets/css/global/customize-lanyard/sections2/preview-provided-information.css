@@ -26,6 +26,8 @@
   flex-direction: column;
 
   position: relative;
+  height: 90%;
+  width: 90%;
   background-color: gold;
 
 }
