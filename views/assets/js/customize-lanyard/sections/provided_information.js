@@ -30,7 +30,7 @@ class ProvidedInformation {
 
 
     const searchBox = document.getElementById('search-box');
-    const resultList = document.getElementById('result-list');
+    const resultList = document.getElementById('result_list');
 
     street_address_1.addEventListener('input', function() {
         const query = street_address_1.value;

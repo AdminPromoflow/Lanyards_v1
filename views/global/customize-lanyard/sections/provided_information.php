@@ -56,7 +56,7 @@ $jsVersion = file_exists($jsFile) ? filemtime($jsFile) : time();
       <div class="box_provided_information">
         <label for="street_address_1">Street address 1</label>
         <input id="street_address_1" type="text" name="" value="" placeholder="Street address 1">
-        <ul id="resultList">
+        <ul id="result_list">
 
         </ul>
       </div>
