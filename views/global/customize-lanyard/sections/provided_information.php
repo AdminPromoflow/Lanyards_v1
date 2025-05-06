@@ -58,10 +58,10 @@ $jsVersion = file_exists($jsFile) ? filemtime($jsFile) : time();
         <input id="street_address_1" type="text" name="" value="" placeholder="Street address 1">
       </div>
 
-      <div class="box_provided_information">
+    <!--  <div class="box_provided_information">
         <label for="street_address_2">Street address 2</label>
         <input id="street_address_2" type="text" name="" value="" placeholder="Street address 2">
-      </div>
+      </div>-->
 
       <div class="box_provided_information">
         <label for="postcode">Postcode</label>
@@ -128,10 +128,10 @@ $jsVersion = file_exists($jsFile) ? filemtime($jsFile) : time();
           <input id="street_address_1_2" type="text" name="" value="" placeholder="Street address 1">
         </div>
 
-        <div class="box_provided_information">
+      <!--  <div class="box_provided_information">
           <label for="street_address_2_2">Street address 2</label>
           <input id="street_address_2_2" type="text" name="" value="" placeholder="Street address 2">
-        </div>
+        </div> -->
 
         <div class="box_provided_information">
           <label for="postcode_2">Postcode</label>

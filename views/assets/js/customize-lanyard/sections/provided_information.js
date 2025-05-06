@@ -32,7 +32,7 @@ class ProvidedInformation {
     const searchBox = document.getElementById('search-box');
     const resultList = document.getElementById('result-list');
 
-    searchBox.addEventListener('input', function() {
+    street_address_1.addEventListener('input', function() {
         const query = searchBox.value;
         if (query.length > 2) {
             fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${query}.json?access_token=${mapboxgl.accessToken}`)
@@ -105,7 +105,7 @@ const first_name = document.getElementById("first_name"),
       state = document.getElementById("state"),
       town_city = document.getElementById("town_city"),
       street_address_1 = document.getElementById("street_address_1"),
-      street_address_2 = document.getElementById("street_address_2"),
+    //  street_address_2 = document.getElementById("street_address_2"),
       postcode = document.getElementById("postcode"),
       email_address = document.getElementById("email_address");
 
@@ -118,7 +118,7 @@ const first_name_2 = document.getElementById("first_name_2"),
       state_2 = document.getElementById("state_2"),
       town_city_2 = document.getElementById("town_city_2"),
       street_address_1_2 = document.getElementById("street_address_1_2"),
-      street_address_2_2 = document.getElementById("street_address_2_2"),
+    //  street_address_2_2 = document.getElementById("street_address_2_2"),
       postcode_2 = document.getElementById("postcode_2"),
       email_address_2 = document.getElementById("email_address_2");
 
