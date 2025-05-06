@@ -42,8 +42,6 @@ $jsVersion = file_exists($jsFile) ? filemtime($jsFile) : time();
         <label for="street_address_1">Street address 1</label>
         <input id="street_address_1" type="text" name="" value="" placeholder="Street address 1">
         <ul class="result_list" id="result_list">
-          <li>Option 1</li>
-          <li>option 2</li>
         </ul>
       </div>
 
