@@ -32,51 +32,48 @@ class ProvidedInformation {
     const searchBox = document.getElementById('search-box');
     const resultList = document.getElementById('result_list');
 
-    street_address_1.addEventListener('input', function() {
+    street_address_1.addEventListener('input', function () {
         const query = street_address_1.value;
         if (query.length > 2) {
             fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${query}.json?access_token=${mapboxgl.accessToken}`)
                 .then(response => response.json())
                 .then(data => {
-                    resultList.innerHTML = '';  // Limpiar la lista de resultados previos
+                    resultList.innerHTML = ''; // Limpiar resultados previos
 
                     data.features.forEach((feature) => {
                         const li = document.createElement('li');
                         li.textContent = feature.place_name;
                         resultList.appendChild(li);
 
-                        // Cuando se selecciona un resultado de la lista
                         li.addEventListener('click', () => {
                             const [lng, lat] = feature.geometry.coordinates;
-                            alert(JSON.stringify(li));
 
-                            // Si ya existe un marcador, lo eliminamos
+                            // Mostrar alerta con el nombre del lugar seleccionado
+                            alert(`Has seleccionado: ${feature.place_name}`);
+
                             if (marker) {
                                 marker.remove();
                             }
 
-                            // Crear un nuevo marcador y posicionarlo en la ubicación seleccionada
                             marker = new mapboxgl.Marker()
                                 .setLngLat([lng, lat])
                                 .addTo(map);
 
-                            // Centrar el mapa en la ubicación seleccionada
                             map.flyTo({
                                 center: [lng, lat],
                                 zoom: 14,
-                                essential: true  // Esto asegura que la animación ocurra
+                                essential: true
                             });
 
-
-                            // Ocultar la lista de resultados después de seleccionar uno
                             resultList.innerHTML = '';
                         });
                     });
                 });
         } else {
-            resultList.innerHTML = '';  // Limpiar la lista si se borran los caracteres de búsqueda
+            resultList.innerHTML = '';
         }
     });
+
   }
 
   toggleProvidedInformation2(){
