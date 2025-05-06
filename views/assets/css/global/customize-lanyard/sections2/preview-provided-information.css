@@ -20,14 +20,14 @@
   background-color: green;
 }
 .map{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
-  position: relative;
+  position: absolute;
   height: 90%;
   width: 90%;
   background-color: gold;
+  top: 0px;
+  left: 0px;
+
+
+
 
 }
