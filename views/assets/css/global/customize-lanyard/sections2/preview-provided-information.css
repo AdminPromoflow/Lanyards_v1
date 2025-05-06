@@ -19,3 +19,13 @@
   width: 90%;
   background-color: green;
 }
+.map{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  position: relative;
+  background-color: gold;
+
+}

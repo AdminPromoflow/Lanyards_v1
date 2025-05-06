@@ -12,7 +12,7 @@ function previewProvidedInformation($filePath) {
   <h2>Location</h2>
 
   <div class="preview_provided_information_box">
-    <div id="map"></div>
+    <div class="map"  id="map"></div>
 
   </div>
   <div class="preview_provided_information_box" id="preview_provided_information_box_2">
