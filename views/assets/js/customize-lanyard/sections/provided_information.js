@@ -66,13 +66,13 @@ class ProvidedInformation {
                                 essential: true  // Esto asegura que la animación ocurra
                             });
 
-                            postcode = feature.context.find(c => c.id.startsWith('postcode'))?.text || 'No disponible';
+                        /*    postcode = feature.context.find(c => c.id.startsWith('postcode'))?.text || 'No disponible';
                             country = feature.context.find(c => c.id.startsWith('country'))?.text || 'Not available';
                             region = feature.context.find(c => c.id.startsWith('region'))?.text || 'Not available';
 
                             postcodeHTML.value = postcode;
                             countryHTML.value = country;
-                            regionHTML.value = region;
+                            regionHTML.value = region;*/
                             // Ocultar la lista de resultados después de seleccionar uno
                             resultList.innerHTML = '';
                         });
