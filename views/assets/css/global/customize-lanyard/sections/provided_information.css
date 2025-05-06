@@ -175,7 +175,9 @@
    padding: 10px;
    margin: 0px 0;
    color: white;
+   background: green;
+
  }
 .result_list li:hover {
-  background-color: rgba(255,2,0,.2);
+  background-color: rgba(255,2,0,1);
 }
