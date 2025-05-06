@@ -8,7 +8,7 @@ class ProvidedInformation {
 
 
 
-  /*  mapboxgl.accessToken = 'pk.eyJ1IjoiaWFuc291dGhlcm4iLCJhIjoiY20ybWowdnRlMHBmcjJqcTljaDdhYXV6diJ9.UK4tRTqDkO6yYffa-LIyWw';  // Reemplaza con tu token de Mapbox
+    mapboxgl.accessToken = 'pk.eyJ1IjoiaWFuc291dGhlcm4iLCJhIjoiY20ybWowdnRlMHBmcjJqcTljaDdhYXV6diJ9.UK4tRTqDkO6yYffa-LIyWw';  // Reemplaza con tu token de Mapbox
     const postcodeHTML = document.getElementById('postcode');
     const countryHTML = document.getElementById('country');
     const regionHTML = document.getElementById('region');
@@ -81,7 +81,7 @@ class ProvidedInformation {
         } else {
             resultList.innerHTML = '';  // Limpiar la lista si se borran los caracteres de búsqueda
         }
-    });*/
+    });
   }
 
   toggleProvidedInformation2(){
