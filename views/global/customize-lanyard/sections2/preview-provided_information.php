@@ -16,7 +16,7 @@ function previewProvidedInformation($filePath) {
 
   </div>
   <div class="preview_provided_information_box" id="preview_provided_information_box_2">
-    <div class="map"  id="map_mapbox_2"></div>
+    <div class="map"  id="map_2"></div>
 
   </div>
     <br>
