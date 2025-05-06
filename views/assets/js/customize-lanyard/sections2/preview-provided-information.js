@@ -1,5 +1,8 @@
 class PreviewProvidedInformation {
   constructor() {
+    preview_provided_information_box_2.style.display = "none";
+    preview_provided_information_box[1].style.height = "80%";
+
   }
   showProvidedInformationPreview(action){
     const previewProvidedInformationContainer = document.getElementById("preview-provided-information-container");
@@ -8,17 +11,17 @@ class PreviewProvidedInformation {
   showMapProvidedInformationPreview(action){
     var height = "80%";
     if (action) {
-      //.style.display = "block";
+      preview_provided_information_box_2.style.display = "block";
       height = "40%";
     }
     else {
-    //  preview_provided_information_box_2.style.display = "none";
+      preview_provided_information_box_2.style.display = "none";
       height = "80%";
     }
 
-  /*  for (var i = 0; i < preview_provided_information_box.length; i++) {
+    for (var i = 0; i < preview_provided_information_box.length; i++) {
       preview_provided_information_box[i].style.height = height;
-    }*/
+    }
   }
 
 }
