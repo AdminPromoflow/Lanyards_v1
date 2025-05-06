@@ -49,7 +49,7 @@ class ProvidedInformation {
                             const [lng, lat] = feature.geometry.coordinates;
 
                             // Mostrar alerta con el nombre del lugar seleccionado
-                            alert(`Has seleccionado: ${feature.place_name}`);
+                            street_address_1.value = `${feature.place_name}`;
 
                             if (marker) {
                                 marker.remove();
