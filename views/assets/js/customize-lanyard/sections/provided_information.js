@@ -33,7 +33,7 @@ class ProvidedInformation {
     const resultList = document.getElementById('result-list');
 
     street_address_1.addEventListener('input', function() {
-        const query = searchBox.value;
+        const query = street_address_1.value;
         if (query.length > 2) {
             fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${query}.json?access_token=${mapboxgl.accessToken}`)
                 .then(response => response.json())
