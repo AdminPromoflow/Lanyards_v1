@@ -24,9 +24,9 @@ class ProvidedInformation {
     });
 
     let marker;  // Variable para almacenar el marcador
-    let postcode ='';
-    let country = '';   // Variable to store the country
-    let region = '';    // Variable to store the state/region
+    let postcode_mapbox ='';
+    let country_mapbox = '';   // Variable to store the country
+    let region_mapbox = '';    // Variable to store the state/region
 
 
     const searchBox = document.getElementById('search-box');
@@ -52,14 +52,14 @@ class ProvidedInformation {
                             street_address_1.value = feature.place_name;
 
                             // Obtener datos adicionales del contexto de Mapbox
-                            const postcode = feature.context.find(c => c.id.startsWith('postcode'))?.text || 'No disponible';
-                            const country = feature.context.find(c => c.id.startsWith('country'))?.text || 'Not available';
-                            const region = feature.context.find(c => c.id.startsWith('region'))?.text || 'Not available';
+                             postcode_mapbox = feature.context.find(c => c.id.startsWith('postcode'))?.text || 'No disponible';
+                             country_mapbox = feature.context.find(c => c.id.startsWith('country'))?.text || 'Not available';
+                             region_mapbox = feature.context.find(c => c.id.startsWith('region'))?.text || 'Not available';
 
                             // Asignar los valores a los campos correspondientes
-                            country.value = country;
-                            town_city.value = region;
-                            postcode.value = postcode;
+                            country.value = country_mapbox;
+                            town_city.value = region_mapbox;
+                            postcode.value = postcode_mapbox;
 
                             // Manejo del marcador en el mapa
                             if (marker) {
