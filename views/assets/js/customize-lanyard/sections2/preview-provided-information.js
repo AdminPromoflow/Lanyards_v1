@@ -8,11 +8,11 @@ class PreviewProvidedInformation {
   showProvidedInformationPreview(action){
     var height = "80%";
     if (action) {
-      preview_provided_information_box_2.style.display = "block";
+      //.style.display = "block";
       height = "40%";
     }
     else {
-      preview_provided_information_box_2.style.display = "none";
+    //  preview_provided_information_box_2.style.display = "none";
       height = "80%";
     }
 
