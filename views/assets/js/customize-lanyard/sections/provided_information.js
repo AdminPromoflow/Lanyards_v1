@@ -17,7 +17,7 @@ class ProvidedInformation {
     });
 
     const map_2 = new mapboxgl.Map({
-      container: 'map',
+      container: 'map_2',
       style: 'mapbox://styles/mapbox/streets-v11',
       center: [-4.041201572157277, 50.39614566225547],
       zoom: 12
