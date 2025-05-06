@@ -16,9 +16,9 @@ class PreviewProvidedInformation {
       height = "80%";
     }
 
-    for (var i = 0; i < preview_provided_information_box.length; i++) {
+  /*  for (var i = 0; i < preview_provided_information_box.length; i++) {
       preview_provided_information_box[i].style.height = height;
-    }
+    }*/
   }
 
 }
