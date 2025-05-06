@@ -19,7 +19,7 @@ class ProvidedInformation {
       zoom: 12
     });
 
-    const map2 = new mapboxgl.Map({
+    const map_2 = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/mapbox/streets-v11',
       center: [-4.041201572157277, 50.39614566225547],
@@ -111,9 +111,9 @@ class ProvidedInformation {
 
                 marker = new mapboxgl.Marker()
                   .setLngLat([lng, lat])
-                  .addTo(map2);
+                  .addTo(map_2);
 
-                map2.flyTo({
+                map_2.flyTo({
                   center: [lng, lat],
                   zoom: 14,
                   essential: true
