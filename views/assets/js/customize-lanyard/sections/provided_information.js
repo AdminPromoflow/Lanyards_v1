@@ -29,7 +29,6 @@ class ProvidedInformation {
     let region_mapbox = '';    // Variable to store the state/region
 
 
-    const searchBox = document.getElementById('search-box');
     const resultList = document.getElementById('result_list');
 
     street_address_1.addEventListener('input', function () {
@@ -84,6 +83,70 @@ class ProvidedInformation {
             resultList.innerHTML = ''; // Limpiar si la búsqueda es muy corta
         }
     });
+
+
+
+
+
+
+    const resultList2 = document.getElementById('result_list');
+
+
+    street_address_1_2.addEventListener('input', function () {
+        const query = street_address_1_2.value;
+        if (query.length > 2) {
+            fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${query}.json?access_token=${mapboxgl.accessToken}`)
+                .then(response => response.json())
+                .then(data => {
+                    result_list_2.innerHTML = ''; // Limpiar resultados previos
+
+                    data.features.forEach((feature) => {
+                        const li = document.createElement('li');
+                        li.textContent = feature.place_name;
+                        resultList.appendChild(li);
+
+                        li.addEventListener('click', () => {
+                            const [lng, lat] = feature.geometry.coordinates;
+
+                            // Rellenar el campo de dirección con el valor seleccionado
+                            street_address_1.value = feature.place_name;
+
+                            // Obtener datos adicionales del contexto de Mapbox
+                             postcode_mapbox = feature.context.find(c => c.id.startsWith('postcode'))?.text || 'No disponible';
+                             country_mapbox = feature.context.find(c => c.id.startsWith('country'))?.text || 'Not available';
+                             region_mapbox = feature.context.find(c => c.id.startsWith('region'))?.text || 'Not available';
+
+                            // Asignar los valores a los campos correspondientes
+                            country.value = country_mapbox;
+                            town_city.value = region_mapbox;
+                            postcode.value = postcode_mapbox;
+
+                            // Manejo del marcador en el mapa
+                            if (marker) {
+                                marker.remove();
+                            }
+
+                            marker = new mapboxgl.Marker()
+                                .setLngLat([lng, lat])
+                                .addTo(map);
+
+                            map.flyTo({
+                                center: [lng, lat],
+                                zoom: 14,
+                                essential: true
+                            });
+
+                            result_list_2.innerHTML = ''; // Ocultar lista después de seleccionar
+                        });
+                    });
+                });
+        } else {
+            result_list_2.innerHTML = ''; // Limpiar si la búsqueda es muy corta
+        }
+    });
+
+
+
 
 
   }
