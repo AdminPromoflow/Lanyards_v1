@@ -87,7 +87,12 @@ class ProvidedInformation {
 
 
 
-
+    const map_mapbox_2 = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [ -4.041201572157277 , 50.39614566225547],
+        zoom: 12
+    });
 
     const resultList2 = document.getElementById('result_list');
 
