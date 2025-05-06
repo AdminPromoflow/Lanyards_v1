@@ -162,7 +162,7 @@
    border-radius: 10px;
  }*/
 .result_list {
-  position: absolute;
+  position: relative;
   width: 100%;
   list-style: none;
   padding: 0;
