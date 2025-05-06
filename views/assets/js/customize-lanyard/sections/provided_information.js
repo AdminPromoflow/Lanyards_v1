@@ -86,8 +86,9 @@ class ProvidedInformation {
 
 
 
+    mapboxgl_2.accessToken = 'pk.eyJ1IjoiaWFuc291dGhlcm4iLCJhIjoiY20ybWowdnRlMHBmcjJqcTljaDdhYXV6diJ9.UK4tRTqDkO6yYffa-LIyWw';  // Reemplaza con tu token de Mapbox
 
-    const map_mapbox_2 = new mapboxgl.Map({
+    const map_mapbox_2 = new mapboxgl_2.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v11',
         center: [ -4.041201572157277 , 50.39614566225547],
@@ -100,7 +101,7 @@ class ProvidedInformation {
     street_address_1_2.addEventListener('input', function () {
         const query = street_address_1_2.value;
         if (query.length > 2) {
-            fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${query}.json?access_token=${mapboxgl.accessToken}`)
+            fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${query}.json?access_token=${mapboxgl_2.accessToken}`)
                 .then(response => response.json())
                 .then(data => {
                     result_list_2.innerHTML = ''; // Limpiar resultados previos
@@ -131,7 +132,7 @@ class ProvidedInformation {
                                 marker.remove();
                             }
 
-                            marker = new mapboxgl.Marker()
+                            marker = new mapboxgl_2.Marker()
                                 .setLngLat([lng, lat])
                                 .addTo(map_mapbox_2);
 
