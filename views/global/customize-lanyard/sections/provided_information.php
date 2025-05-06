@@ -39,6 +39,15 @@ $jsVersion = file_exists($jsFile) ? filemtime($jsFile) : time();
       </div>
 
       <div class="box_provided_information">
+        <label for="street_address_1">Street address 1</label>
+        <input id="street_address_1" type="text" name="" value="" placeholder="Street address 1">
+        <ul class="result_list" id="result_list">
+          <li>Option 1</li>
+          <li>option 2</li>
+        </ul>
+      </div>
+
+      <div class="box_provided_information">
         <label for="country">Country</label>
         <input id="country" type="text" name="" value="" placeholder="Country">
       </div>
@@ -53,14 +62,7 @@ $jsVersion = file_exists($jsFile) ? filemtime($jsFile) : time();
         <input id="town_city" type="text" name="" value="" placeholder="Town/city">
       </div>
 
-      <div class="box_provided_information">
-        <label for="street_address_1">Street address 1</label>
-        <input id="street_address_1" type="text" name="" value="" placeholder="Street address 1">
-        <ul class="result_list" id="result_list">
-          <li>Option 1</li>
-          <li>option 2</li>
-        </ul>
-      </div>
+
 
     <!--  <div class="box_provided_information">
         <label for="street_address_2">Street address 2</label>
