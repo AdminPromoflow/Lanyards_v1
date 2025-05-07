@@ -324,3 +324,9 @@
   left: 50%;
   transform: translateX(-50%);
 }
+.back_preview_checkout img:hover{
+  filter: drop-shadow(2px 2px 1px black);
+}
+.back_preview_checkout img:active{
+  filter: drop-shadow(2px 2px 1px transparent);
+}
