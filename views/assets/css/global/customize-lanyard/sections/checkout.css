@@ -311,9 +311,9 @@
 .back_preview_checkout{
   position: absolute;
   left: 0;
-  transform: translateX(-50%);
+  transform: translateX(-80%);
   bottom: 8px;
-  height: 40px;
-  width: 45px;
+  height: 35px;
+  width: 38px;
   background-color: white;
 }
