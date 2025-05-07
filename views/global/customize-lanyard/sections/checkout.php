@@ -10,9 +10,9 @@
 
       <div class="preview_checkout" id="">
         <h3 class="dataAccessories">Lanyard</h3>
-        <img class="" src="../../views/assets/img/global/customize-lanyard/sections/accessories/arrow_top.png?v=<?= filemtime('../../views/assets/img/global/customize-lanyard/sections/accessories/arrow_top.png') ?>" alt="">
-
         <img class="imgaccessories" src="../../views/assets/img/global/customize-lanyard/sections/checkout/lanyardIcon.png?v=<?= filemtime('../../views/assets/img/global/customize-lanyard/sections/checkout/lanyardIcon.png') ?>" alt="">
+
+        <img class="" src="../../views/assets/img/global/customize-lanyard/sections/accessories/arrow_top.png?v=<?= filemtime('../../views/assets/img/global/customize-lanyard/sections/accessories/arrow_top.png') ?>" alt="">
 
       </div>
 
