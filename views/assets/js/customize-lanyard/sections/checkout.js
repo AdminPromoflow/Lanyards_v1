@@ -1,21 +1,22 @@
 class Checkout {
   constructor(){
-    //this.updateItems();
+    //
     subcontainer_boxes_preview_checkout.style.display = "flex";
     arrow_preview_checkout.style.transform = "rotate(0deg)";
 
 
     preview_checkout.addEventListener('click', function() {
-      // Alternar visibilidad
       subcontainer_boxes_preview_checkout.style.display =
         (subcontainer_boxes_preview_checkout.style.display === 'none' || subcontainer_boxes_preview_checkout.style.display === '')
         ? 'flex'
         : 'none';
 
-      // Alternar rotación de flecha
       const isRotated = arrow_preview_checkout.style.transform === 'rotate(-90deg)';
       arrow_preview_checkout.style.transform = isRotated ? 'rotate(0deg)' : 'rotate(-90deg)';
     });
+
+
+    this.updateItems();
 
 
   }
@@ -30,6 +31,15 @@ checkoutClips.innerHTML = "Clips: " + clipClass.getClipSelected();
 checkoutAttachment.innerHTML = "Attachment: " + attachmentClass.getAttachmentSelected();
 checkoutColourQuantity.innerHTML = "Colour Quantity: " + colourClass.getColourSelected();
 checkoutArtworkManual.innerHTML = "Artwork - Manual: " + artworkManualClass.getArtworkManual();*/
+
+  buy_cart_material.innerHTML = "+£" + material.getMaterialSelected();
+  buy_cart_lanyard_type.innerHTML = "+£" + oneTwoEndsClass.getTypeLanyardSelected();
+  buy_cart_width.innerHTML = "+£" + widthClass.getWidthSelected();
+  buy_cart_side_printed.innerHTML = "+£" + sidePrintedClass.getSidePrintedSelected();
+  buy_cart_clips.innerHTML = "+£" + clipClass.getClipSelected();
+  buy_cart_attachment.innerHTML = "+£" + attachmentClass.getAttachmentSelected();
+  buy_cart_accessories.innerHTML = "+£" + accessoriesClass.getAccessoriesSelected();
+  buy_cart_colour_quantity.innerHTML = "+£" + colourClass.getColourSelected();
 }
 }
 
