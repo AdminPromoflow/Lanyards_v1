@@ -33,10 +33,10 @@ checkoutArtworkManual.innerHTML = "Artwork - Manual: " + artworkManualClass.getA
 }
 
 // Captura todos los elementos con la clase "preview_checkout"
-const preview_checkout = document.getElementsByClassName('preview_checkout');
+const preview_checkout = document.getElementById('preview_checkout');
 
 // Captura todos los elementos con la clase "subcontainer_boxes_preview_checkout"
-const subcontainer_boxes_preview_checkout = document.getElementsByClassName('subcontainer_boxes_preview_checkout');
+const subcontainer_boxes_preview_checkout = document.getElementById('subcontainer_boxes_preview_checkout');
 
 const arrow_preview_checkout = document.getElementById('arrow_preview_checkout');
 
