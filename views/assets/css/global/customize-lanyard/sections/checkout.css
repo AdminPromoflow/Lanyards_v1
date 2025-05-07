@@ -144,10 +144,10 @@
   padding: 7px 10px;
   cursor: pointer;
 }
-.button_boxes_checkout:nth-child(1){
+.second_colour_checkout_button{
   background: rgb(107,109,139);
 }
-.button_boxes_checkout:nth-child(2){
+.first_colour_checkout_button:nth-child(2){
   background: rgb(135,88,97);
 }
 
