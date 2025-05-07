@@ -302,6 +302,7 @@
 }
 .arrow_preview_checkout{
   position: relative;
-  height: 30px;
-  width: 30px;
+  display: block;
+  height: 20px;
+  width: 20px;
 }
