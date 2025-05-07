@@ -125,7 +125,7 @@
   font-weight: 500;
 }
 
-.containers_boxes_checkout button{
+.button_boxes_checkout{
   position: relative;
   display: inline-block;
   width: 40%;
