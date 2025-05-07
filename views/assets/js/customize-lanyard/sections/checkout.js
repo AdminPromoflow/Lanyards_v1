@@ -44,7 +44,12 @@ class Checkout {
     const buy_cart_colour_quantity = document.getElementById('buy_cart_colour_quantity');
     const price_buy_cart_colour_quantity = document.getElementById('price_buy_cart_colour_quantity');
 
-    const price_buy_cart_total = document.getElementById('price_buy_cart_total');
+    const price_buy_cart_price_per_unit = document.getElementById('price_buy_cart_price_per_unit');
+
+
+    const price_buy_cart_subtotal = document.getElementById('price_buy_cart_subtotal');
+    const amount_buy_cart = document.getElementById('amount_buy_cart');
+    const price_buy_cart_price_per_unit_2 = document.getElementById('price_buy_cart_price_per_unit_2');
 
 
 
@@ -76,7 +81,12 @@ class Checkout {
                 priceClass.getPriceAccessory() +
                 priceClass.getPriceColour();
 
-    price_buy_cart_total.innerHTML = "+£" + total;
+    price_buy_cart_price_per_unit.innerHTML = "+£" + total;
+
+    amount_buy_cart.innerHTML = priceClass.getAmountSelected();
+    price_buy_cart_price_per_unit_2.innerHTML = "+£" + total;
+    price_buy_cart_subtotal.innerHTML = priceClass.getAmountSelected() * total;
+
   }
 
 }
