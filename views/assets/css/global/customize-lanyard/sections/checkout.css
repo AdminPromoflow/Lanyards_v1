@@ -275,7 +275,7 @@
   flex-direction: row;
   align-items: center;
 
-  border: 1px solid transparent;
+  border: 1px solid white;
 }
 
 .subcontainers_boxes_preview_checkout img{
