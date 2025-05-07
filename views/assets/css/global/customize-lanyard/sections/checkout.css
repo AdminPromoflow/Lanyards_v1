@@ -279,7 +279,7 @@
   text-align: left;
   color: white;
   font-weight: 300;
-  font-size: 1em;
+  font-size: 0.9em;
 }
 .subcontainers_boxes_preview_checkout h4{
   position: relative;
@@ -287,7 +287,7 @@
   text-align: right;
   color: white;
   font-weight: 300;
-  font-size: 0.8em;
+  font-size: 0.34em;
 }
 .arrow_preview_checkout{
   position: relative;
