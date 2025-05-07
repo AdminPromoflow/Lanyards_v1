@@ -3,17 +3,17 @@ class Checkout {
     //this.updateItems();
 
 
-    previewCheckout.addEventListener('click', function() {
+    preview_checkout.addEventListener('click', function() {
       // Alternar visibilidad
-      subcontainerBoxes.style.display =
-        (subcontainerBoxes.style.display === 'none' || subcontainerBoxes.style.display === '')
+      subcontainer_boxes_preview_checkout.style.display =
+        (subcontainer_boxes_preview_checkout.style.display === 'none' || subcontainer_boxes_preview_checkout.style.display === '')
         ? 'flex'
         : 'none';
 
       // Alternar rotación de flecha
-      const isRotated = arrowPreviewCheckout.style.transform === 'rotate(90deg)';
-      arrowPreviewCheckout.style.transform = isRotated ? 'rotate(0deg)' : 'rotate(90deg)';
-      arrowPreviewCheckout.style.transition = 'transform 0.3s ease';
+      const isRotated = arrow_preview_checkout.style.transform === 'rotate(90deg)';
+      arrow_preview_checkout.style.transform = isRotated ? 'rotate(0deg)' : 'rotate(90deg)';
+      arrow_preview_checkout.style.transition = 'transform 0.3s ease';
     });
 
 
@@ -33,12 +33,12 @@ checkoutArtworkManual.innerHTML = "Artwork - Manual: " + artworkManualClass.getA
 }
 
 // Captura todos los elementos con la clase "preview_checkout"
-const previewCheckoutElements = document.getElementsByClassName('preview_checkout');
+const preview_checkout = document.getElementsByClassName('preview_checkout');
 
 // Captura todos los elementos con la clase "subcontainer_boxes_preview_checkout"
-const subcontainerBoxes = document.getElementsByClassName('subcontainer_boxes_preview_checkout');
+const subcontainer_boxes_preview_checkout = document.getElementsByClassName('subcontainer_boxes_preview_checkout');
 
-const arrowPreviewCheckout = document.getElementById('arrow_preview_checkout');
+const arrow_preview_checkout = document.getElementById('arrow_preview_checkout');
 
 const buy_cart_material = document.getElementById('buy_cart_material');
 const price_buy_cart_material = document.getElementById('price_buy_cart_material');
