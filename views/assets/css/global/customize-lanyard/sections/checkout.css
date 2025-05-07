@@ -300,3 +300,8 @@
   font-weight: 300;
   font-size: 0.8em;
 }
+.arrow_preview_checkout{
+  position: relative;
+  height: 30px;
+  width: 30px;
+}
