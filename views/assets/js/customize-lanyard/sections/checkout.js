@@ -76,4 +76,4 @@ const buy_cart_colour_quantity = document.getElementById('buy_cart_colour_quanti
 const price_buy_cart_colour_quantity = document.getElementById('price_buy_cart_colour_quantity');
 
 
-const checkout = new Checkout();
+const checkoutClass = new Checkout();
