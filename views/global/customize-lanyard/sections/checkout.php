@@ -67,8 +67,8 @@
       </div>
 
     </div>
-    <button type="button" name="button">Add to Cart</button>
-    <button type="button" name="button">Buy Now</button>
+  <!--  <button type="button" name="button">Add to Cart</button>
+    <button type="button" name="button">Buy Now</button> -->
   </div>
 </section>
 
