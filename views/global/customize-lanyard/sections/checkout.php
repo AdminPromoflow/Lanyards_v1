@@ -10,10 +10,10 @@
 
       <div class="preview_checkout" id="">
         <h3 class="dataAccessories">Lanyard</h3>
+        <img class="" src="../../views/assets/img/global/customize-lanyard/sections/accessories/arrow_top.png?v=<?= filemtime('../../views/assets/img/global/customize-lanyard/sections/accessories/arrow_top.png') ?>" alt="">
+
         <img class="imgaccessories" src="../../views/assets/img/global/customize-lanyard/sections/checkout/lanyardIcon.png?v=<?= filemtime('../../views/assets/img/global/customize-lanyard/sections/checkout/lanyardIcon.png') ?>" alt="">
-        <div class="arrow_accessories">
-          <img class="hideArrowAccessories" src="../../views/assets/img/global/customize-lanyard/sections/accessories/arrow_top.png?v=<?= filemtime('../../views/assets/img/global/customize-lanyard/sections/accessories/arrow_top.png') ?>" alt="">
-        </div>
+
       </div>
 
       <div class="subcontainers_boxes_preview_checkout" id="subcontainers_boxes_preview_checkout">
@@ -42,22 +42,22 @@
           <h3 class="dataAccessories">Clips</h3>
           <h4 class="priceDataAccessories">+£0.25 per unit</h4>
         </div>
-        
+
         <div class="subcontainer_boxes_preview_checkout">
           <h3 class="dataAccessories">Attachment</h3>
           <h4 class="priceDataAccessories">+£0.25 per unit</h4>
         </div>
-        
+
         <div class="subcontainer_boxes_preview_checkout">
           <h3 class="dataAccessories">Accessories</h3>
           <h4 class="priceDataAccessories">+£0.25 per unit</h4>
         </div>
-        
+
         <div class="subcontainer_boxes_preview_checkout">
           <h3 class="dataAccessories">Colour quantity</h3>
           <h4 class="priceDataAccessories">+£0.25 per unit</h4>
         </div>
-        
+
       </div>
 
     </div>
