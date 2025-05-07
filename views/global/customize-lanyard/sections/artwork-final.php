@@ -5,37 +5,6 @@
   <p>These are the options you’ve chosen for your lanyard. Click ‘Next’ or ‘Preview’ if you’d like to make any changes:</p>
   <br>
   <div id="containers_boxes_artwork-final" class="containers_boxes_artwork-final">
-    <div class="container_boxes_artwork-final">
-      <h4 id="artwork-final-material"></h4>
-    </div>
-    <div class="container_boxes_artwork-final">
-      <h4 id="artwork-final-lanyard-type"></h4>
-    </div>
-    <div class="container_boxes_artwork-final">
-      <h4 id="artwork-final-width"></h4>
-    </div>
-    <div class="container_boxes_artwork-final">
-      <h4 id="artwork-final-side-printed"></h4>
-    </div>
-    <div class="container_boxes_artwork-final">
-      <h4 id="artwork-final-clips"></h4>
-    </div>
-    <div class="container_boxes_artwork-final">
-      <h4 id="artwork-final-attachment"></h4>
-    </div>
-    <div class="container_boxes_artwork-final">
-      <h4 id="artwork-final-colour-quantity"></h4>
-    </div>
-    <div class="container_boxes_artwork-final">
-      <h4 id="artwork-final-artwork-manual"></h4>
-    </div>
-
-
-
-
-
-
-
 
 
     <div class="subcontainer_boxes_final_lanyard">
@@ -63,7 +32,7 @@
     </div>
 
     <div class="subcontainer_boxes_final_lanyard">
-      <h3 class=""><strongClipsstrong></h3>
+      <h3 class=""><strong>Clips</strong></h3>
       <h3 id="final_lanyard_clips">Clips</h3>
       <h4 id="price_final_lanyard_clips">+£0.25 per unit</h4>
     </div>
