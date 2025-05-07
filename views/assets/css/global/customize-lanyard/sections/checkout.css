@@ -303,6 +303,6 @@
 .arrow_preview_checkout{
   position: relative;
   display: block;
-  height: 20px;
+  height: 20px!important;
   width: 20px;
 }
