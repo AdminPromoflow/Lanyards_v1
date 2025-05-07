@@ -66,8 +66,9 @@
 
         <div class="subcontainer_boxes_preview_checkout colour_total_checkout">
           <h4 class="">Price per unit</h4>
+          <h4 id=""></h4>
+
           <h4 id="price_buy_cart_price_per_unit"></h4>
-          <h4 id="">+£0.25 per unit</h4>
         </div>
 
         <div class="subcontainer_boxes_preview_checkout colour_total_checkout">
