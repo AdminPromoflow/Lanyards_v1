@@ -128,7 +128,6 @@ class CustomizeLanyard {
     if (preview) {
       preview.addEventListener("click", () => {
         this.handlePreviewClick();
-        checkoutClass.showHideBottons("none");
       });
     }
     if (back_preview_checkout) {
@@ -527,7 +526,10 @@ class CustomizeLanyard {
     previewLanyardType.showTypeLanyardPreview("none");
     this.showCurrentSection(this.currentSectionOpen);
     this.showNext(true);
+    this.showPreview(true);
     classRegister2.openRegister(false);
+    checkoutClass.showHideBottons("none");
+
 
   }
   openCheckout(){
