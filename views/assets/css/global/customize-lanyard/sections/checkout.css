@@ -145,10 +145,10 @@
   cursor: pointer;
 }
 .second_colour_checkout_button{
-  background: rgb(107,109,139);
+  background: rgba(48, 79, 112, 1);
 }
 .first_colour_checkout_button:nth-child(2){
-  background: rgb(139,85,90);
+  background: rgb(144,81,83);
 }
 
 .containers_boxes_checkout button:nth-child(1){
