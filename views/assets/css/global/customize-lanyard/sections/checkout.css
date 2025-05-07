@@ -111,9 +111,10 @@
 .container_boxes_checkout h3 {
     position: relative;
     text-decoration: underline;
+    text-align: left;
+
     margin-right: 7px;
     color: #97A7BB;
-    text-align: right;
     font-weight: 300;
     font-size: 0.9em;
 }
