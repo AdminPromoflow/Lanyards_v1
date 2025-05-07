@@ -44,6 +44,8 @@ class Checkout {
     const buy_cart_colour_quantity = document.getElementById('buy_cart_colour_quantity');
     const price_buy_cart_colour_quantity = document.getElementById('price_buy_cart_colour_quantity');
 
+    const price_buy_cart_total = document.getElementById('price_buy_cart_total');
+
 
 
     buy_cart_material.innerHTML =  material.getMaterialSelected();
@@ -64,6 +66,17 @@ class Checkout {
     price_buy_cart_attachment.innerHTML = "+£" + priceClass.getPriceAttachment() + "per unit";
     price_buy_cart_accessories.innerHTML = "+£" + priceClass.getPriceAccessory() + "per unit";
     price_buy_cart_colour_quantity.innerHTML = "+£" + priceClass.getPriceColour() + "per unit";
+
+    var total = priceClass.getPricePerMaterialWithAmount() +
+                priceClass.getPriceLanyardType() +
+                priceClass.getPriceWidth() +
+                priceClass.getPriceSidePrinted() +
+                priceClass.getPriceClip() +
+                priceClass.getPriceAttachment() +
+                priceClass.getPriceAccessory() +
+                priceClass.getPriceColour();
+
+    price_buy_cart_total.innerHTML = "+£" + total;
   }
 
 }
