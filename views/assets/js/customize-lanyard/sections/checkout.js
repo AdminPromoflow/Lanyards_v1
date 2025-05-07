@@ -15,6 +15,10 @@ class Checkout {
       arrow_preview_checkout.style.transform = isRotated ? 'rotate(0deg)' : 'rotate(-90deg)';
     });
 
+    add_to_cart_from_buy_cart.addEventListener("click", function(){
+      alert("Buenas");
+    })
+
 
 
 
@@ -91,7 +95,6 @@ class Checkout {
 
   showHideBottons(action){
     const container_button_boxes_checkout = document.getElementById('container_button_boxes_checkout');
-
     container_button_boxes_checkout.style.display = action;
   }
 
@@ -105,5 +108,6 @@ const subcontainer_boxes_preview_checkout = document.getElementById('subcontaine
 
 const arrow_preview_checkout = document.getElementById('arrow_preview_checkout');
 
+const add_to_cart_from_buy_cart = document.getElementById("add_to_cart_from_buy_cart");
 
 const checkoutClass = new Checkout();
