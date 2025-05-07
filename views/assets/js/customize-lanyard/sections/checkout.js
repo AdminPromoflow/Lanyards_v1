@@ -84,8 +84,8 @@ class Checkout {
     price_buy_cart_price_per_unit.innerHTML = "+£" + total;
 
     amount_buy_cart.innerHTML = priceClass.getAmountSelected() + " units x";
-    price_buy_cart_price_per_unit_2.innerHTML = "+£" + total + " = ";
-    price_buy_cart_subtotal.innerHTML = "+£" + (priceClass.getAmountSelected() * total);
+    price_buy_cart_price_per_unit_2.innerHTML = "£" + total + "     = ";
+    price_buy_cart_subtotal.innerHTML = "£" + (priceClass.getAmountSelected() * total);
 
   }
 
