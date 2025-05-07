@@ -92,15 +92,60 @@
 }
 
 .container_boxes_artwork-final h4 {
-  position: relative;
-  margin: 0;
-  text-align: right;
-  color: white;
-  font-weight: 300;
-  font-size: 0.7em;
+    position: relative;
+    text-align: left;
+
+    margin-left: 12px;
+
+    color: white;
+    font-weight: 300;
+    font-size: 1.1em;
 }
 
 .container_boxes_artwork-final h3 {
+    position: relative;
+    text-decoration: underline;
+    margin-right: 7px;
+    color: #97A7BB;
+    text-align: right;
+    font-weight: 300;
+    font-size: 0.9em;
+}
+.container_boxes_artwork-final h3:hover {
+  font-weight: 500;
+}
+
+
+
+
+
+
+
+.subcontainer_boxes_final_lanyard{
+  position: relative;
+  width: 85%;
+
+  padding: 5px 10px;
+  cursor: pointer;
+  margin: 3px 0;
+
+  background: rgb(72,102,138, 1);
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+
+  border: 1px solid rgba(255, 255, 255, .5);
+}
+
+.subcontainer_boxes_final_lanyard img{
+  position: relative;
+  height: 100%;
+  margin: 0 5px;
+  width: auto;
+}
+.subcontainer_boxes_final_lanyard h3{
   position: relative;
   margin: 0;
   width: 25%;
@@ -108,7 +153,13 @@
   color: white;
   font-weight: 300;
   font-size: 0.9em;
+
 }
-.container_boxes_artwork-final h3:hover {
-  font-weight: 500;
+.subcontainer_boxes_final_lanyard h4{
+  position: relative;
+  margin: 0;
+  text-align: right;
+  color: white;
+  font-weight: 300;
+  font-size: 0.7em;
 }
