@@ -124,7 +124,15 @@
 .container_boxes_checkout h3:hover {
   font-weight: 500;
 }
-
+.container_button_boxes_checkout{
+  position: relative;
+  display: none;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
 .button_boxes_checkout{
   position: relative;
   display: inline-block;
