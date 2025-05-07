@@ -29,6 +29,10 @@
 
   border: 2px solid transparent;
 }
+.arrow_accessories{
+  position: relative;
+  background: green;
+}
 .preview_checkout:nth-child(1){
   border: 2px solid white;
 }
