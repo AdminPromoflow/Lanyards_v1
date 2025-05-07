@@ -201,7 +201,7 @@
   height: 50px;
   background-color: rgba(48, 79, 112, 1);
   padding: 5px 10px;
-  margin:  0;
+  margin:  0 0 7px 0;
   cursor: pointer;
 
   display: flex;
@@ -260,7 +260,7 @@
 
 .subcontainer_boxes_preview_checkout{
   position: relative;
-  width: 98%;
+  width: 85%;
 
   padding: 5px 10px;
   cursor: pointer;
@@ -273,7 +273,7 @@
   flex-direction: row;
   align-items: center;
 
-  border: 1px solid white;
+  border: 1px solid rgba(255, 255, 255, .5);
 }
 
 .subcontainers_boxes_preview_checkout img{
