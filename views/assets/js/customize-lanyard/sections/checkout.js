@@ -1,6 +1,8 @@
 class Checkout {
   constructor(){
     //this.updateItems();
+    subcontainer_boxes_preview_checkout.style.display = "none";
+    arrow_preview_checkout.style.transform = "rotate(-90deg)";
 
 
     preview_checkout.addEventListener('click', function() {
