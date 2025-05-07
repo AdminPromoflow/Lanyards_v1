@@ -89,7 +89,7 @@
     <button type="button" name="button">Buy Now</button> -->
   </div>
 </section>
-  <button type="button" name="button">Add to Cart</button>
-  <button type="button" name="button">Buy Now</button>
+  <button class="button_boxes_checkout" type="button" name="button">Add to Cart</button>
+  <button class="button_boxes_checkout" type="button" name="button">Buy Now</button>
 
 <script src="../../views/assets/js/customize-lanyard/sections/checkout.js?v=<?= filemtime('../../views/assets/js/customize-lanyard/sections/checkout.js') ?>" type="text/javascript"></script>
