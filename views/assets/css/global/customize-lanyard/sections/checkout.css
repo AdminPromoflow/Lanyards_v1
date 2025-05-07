@@ -48,8 +48,8 @@
     overflow-x: hidden; /* Disable horizontal scrolling */
 
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
 }
@@ -145,7 +145,6 @@
   width: 100%;
   margin-bottom: 10px;
 
-  background-color: green;
 
   display: flex;
   justify-content: flex-start;
