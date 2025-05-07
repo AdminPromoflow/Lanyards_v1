@@ -11,7 +11,7 @@
       <div class="preview_checkout" id="">
         <h3 class="">Lanyard</h3>
         <img class="imgaccessories" src="../../views/assets/img/global/customize-lanyard/sections/checkout/lanyardIcon.png?v=<?= filemtime('../../views/assets/img/global/customize-lanyard/sections/checkout/lanyardIcon.png') ?>" alt="">
-        <img class="arrow_preview_checkout" src="../../views/assets/img/global/customize-lanyard/sections/accessories/arrow_top.png?v=<?= filemtime('../../views/assets/img/global/customize-lanyard/sections/accessories/arrow_top.png') ?>" alt="">
+        <img class="arrow_preview_checkout" src="../../views/assets/img/global/customize-lanyard/sections/checkout/arrow_top.png?v=<?= filemtime('../../views/assets/img/global/customize-lanyard/sections/accessories/arrow_top.png') ?>" alt="">
       </div>
 
       <div class="subcontainers_boxes_preview_checkout" id="subcontainers_boxes_preview_checkout">
