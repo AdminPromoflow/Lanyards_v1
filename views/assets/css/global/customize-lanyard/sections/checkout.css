@@ -310,8 +310,9 @@
 }
 .back_preview_checkout{
   position: absolute;
-  left: 15px;
-  bottom: 15px;
+  left: 0;
+  transform: translateX(-50%);
+  bottom: 8px;
   height: 40px;
   width: 45px;
   background-color: white;
