@@ -209,18 +209,8 @@
   flex-direction: row;
   align-items: center;
   border: 2px solid rgba(255, 255, 255, .7);
-
-
-  border: 2px solid transparent;
-}
-.arrow_accessories{
-  position: relative;
-  background: green;
 }
 
-.preview_checkout:active{
-  border: 2px solid white;
-}
 .preview_checkout img{
   position: relative;
   height: 85%;
