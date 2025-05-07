@@ -8,60 +8,60 @@
   <div id="containers_boxes_checkout" class="containers_boxes_checkout">
     <div class="containers_boxes_checkout_2">
 
-      <div class="preview_checkout" id="">
+      <div class="preview_checkout" id="preview_checkout">
         <h3 class="">Lanyard</h3>
         <img class="imgaccessories" src="../../views/assets/img/global/customize-lanyard/sections/checkout/lanyardIcon.png?v=<?= filemtime('../../views/assets/img/global/customize-lanyard/sections/checkout/lanyardIcon.png') ?>" alt="">
-        <img class="arrow_preview_checkout" src="../../views/assets/img/global/customize-lanyard/sections/checkout/arrow_top.png?v=<?= filemtime('../../views/assets/img/global/customize-lanyard/sections/checkout/arrow_top.png') ?>" alt="">
+        <img id="arrow_preview_checkout" class="arrow_preview_checkout" src="../../views/assets/img/global/customize-lanyard/sections/checkout/arrow_top.png?v=<?= filemtime('../../views/assets/img/global/customize-lanyard/sections/checkout/arrow_top.png') ?>" alt="">
       </div>
 
       <div class="subcontainers_boxes_preview_checkout" id="subcontainers_boxes_preview_checkout">
 
         <div class="subcontainer_boxes_preview_checkout">
           <h3 class="">Material </h3>
-          <h3 class="">Material </h3>
-          <h4 class="">+£0.3 per unit</h4>
+          <h3 id="buy_cart_material">Material </h3>
+          <h4 id="price_buy_cart_material">+£0.3 per unit</h4>
         </div>
 
         <div class="subcontainer_boxes_preview_checkout">
           <h3 class="">Lanyard type</h3>
-          <h3 class="">Lanyard type</h3>
-          <h4 class="">+£0.3 per unit</h4>
+          <h3 id="buy_cart_lanyard_type">Lanyard type</h3>
+          <h4 id="price_buy_cart_lanyard_type">+£0.3 per unit</h4>
         </div>
 
         <div class="subcontainer_boxes_preview_checkout">
-          <h3 class="">Width</h3>
-          <h3 class="">Width</h3>
-          <h4 class="">+£0.25 per unit</h4>
+          <h3 class="" >Width</h3>
+          <h3 id="buy_cart_width">Width</h3>
+          <h4 id="price_buy_cart_width">+£0.25 per unit</h4>
         </div>
 
         <div class="subcontainer_boxes_preview_checkout">
           <h3 class="">Side Printed</h3>
-          <h3 class="">Side Printed</h3>
-          <h4 class="">+£0.25 per unit</h4>
+          <h3 id="buy_cart_side_printed">Side Printed</h3>
+          <h4 id="price_buy_cart_side_printed">+£0.25 per unit</h4>
         </div>
 
         <div class="subcontainer_boxes_preview_checkout">
           <h3 class="">Clips</h3>
-          <h3 class="">Clips</h3>
-          <h4 class="">+£0.25 per unit</h4>
+          <h3 id="buy_cart_clips">Clips</h3>
+          <h4 id="price_buy_cart_clips">+£0.25 per unit</h4>
         </div>
 
         <div class="subcontainer_boxes_preview_checkout">
           <h3 class="">Attachment</h3>
-          <h3 class="">Attachment</h3>
-          <h4 class="">+£0.25 per unit</h4>
+          <h3 id="buy_cart_attachment">Attachment</h3>
+          <h4 id="price_buy_cart_attachment">+£0.25 per unit</h4>
         </div>
 
         <div class="subcontainer_boxes_preview_checkout">
           <h3 class="">Accessories</h3>
-          <h3 class="">Accessories</h3>
-          <h4 class="">+£0.25 per unit</h4>
+          <h3 id="buy_cart_accessories">Accessories</h3>
+          <h4 id="price_buy_cart_accessories">+£0.25 per unit</h4>
         </div>
 
         <div class="subcontainer_boxes_preview_checkout">
           <h3 class="">Colour quantity</h3>
-          <h3 class="">Colour quantity</h3>
-          <h4 class="">+£0.25 per unit</h4>
+          <h3 id="buy_cart_colour_quantity">Colour quantity</h3>
+          <h4 id="price_buy_cart_colour_quantity">+£0.25 per unit</h4>
         </div>
 
       </div>
