@@ -13,7 +13,6 @@ class Checkout {
       // Alternar rotación de flecha
       const isRotated = arrow_preview_checkout.style.transform === 'rotate(90deg)';
       arrow_preview_checkout.style.transform = isRotated ? 'rotate(0deg)' : 'rotate(90deg)';
-      arrow_preview_checkout.style.transition = 'transform 0.3s ease';
     });
 
 
