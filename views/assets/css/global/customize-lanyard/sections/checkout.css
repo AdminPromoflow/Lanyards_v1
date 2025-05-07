@@ -308,3 +308,11 @@
   height: 20px!important;
   width: 20px;
 }
+.back_preview_checkout{
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  height: 40px;
+  width: 45px;
+  background-color: white;
+}
