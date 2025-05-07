@@ -524,6 +524,7 @@ class CustomizeLanyard {
     previewTemplate.togglePreviewTemplateClass("block");
 
     this.showNext(false);
+    this.showPreview(false);
     checkoutClass.updateItems();
 
     previewLanyardType.showTypeLanyardPreview("none");
