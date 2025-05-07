@@ -14,7 +14,7 @@
         <img id="arrow_preview_checkout" class="arrow_preview_checkout" src="../../views/assets/img/global/customize-lanyard/sections/checkout/arrow_top.png?v=<?= filemtime('../../views/assets/img/global/customize-lanyard/sections/checkout/arrow_top.png') ?>" alt="">
       </div>
 
-      <div class="subcontainers_boxes_preview_checkout" id="subcontainers_boxes_preview_checkout">
+      <div class="subcontainers_boxes_preview_checkout" id="subcontainer_boxes_preview_checkout">
 
         <div class="subcontainer_boxes_preview_checkout">
           <h3 class="">Material </h3>
