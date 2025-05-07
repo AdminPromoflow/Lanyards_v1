@@ -114,3 +114,57 @@
 .container_boxes_artwork-final h3:hover {
   font-weight: 500;
 }
+
+
+
+
+
+
+
+.subcontainer_boxes_final_lanyard{
+  position: relative;
+  width: 85%;
+
+  padding: 5px 10px;
+  cursor: pointer;
+  margin: 3px 0;
+
+  background: rgb(72,102,138, 1);
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+
+  border: 1px solid rgba(255, 255, 255, .5);
+}
+
+.subcontainers_boxes_final_lanyard img{
+  position: relative;
+  height: 100%;
+  margin: 0 5px;
+  width: auto;
+}
+.subcontainers_boxes_final_lanyard h3{
+  position: relative;
+  margin: 0;
+  width: 25%;
+  text-align: left;
+  color: white;
+  font-weight: 300;
+  font-size: 0.9em;
+}
+.subcontainers_boxes_final_lanyard h4{
+  position: relative;
+  margin: 0;
+  text-align: right;
+  color: white;
+  font-weight: 300;
+  font-size: 0.7em;
+}
+.arrow_final_lanyard{
+  position: relative;
+  display: block;
+  height: 20px!important;
+  width: 20px;
+}
