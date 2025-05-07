@@ -316,3 +316,8 @@
   height: 35px;
   width: 38px;
 }
+.back_preview_checkout img{
+  position: relative;
+  height: 100%;
+  
+}
