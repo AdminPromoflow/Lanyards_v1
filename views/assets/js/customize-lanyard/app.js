@@ -345,6 +345,8 @@ class CustomizeLanyard {
      previewArtworkManualClass.showArtworkManualPreview("none");
      this.showCurrentSection(this.currentSectionOpen);
      this.showPreview(false);
+     this.showNext(true);
+
    }
    openLanyardType(){
      previewTemplate.togglePreviewTemplateClass("block");
