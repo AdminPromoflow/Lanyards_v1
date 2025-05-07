@@ -129,6 +129,7 @@ class CustomizeLanyard {
     if (next) {
       next.addEventListener("click", () => this.handleNextClick());
     }
+    
   }
 
 

@@ -85,15 +85,14 @@
       </div>
 
     </div>
-  <!--  <button type="button" name="button">Add to Cart</button>
-    <button type="button" name="button">Buy Now</button> -->
+
   </div>
 </section>
 <div class="container_button_boxes_checkout" id="container_button_boxes_checkout">
   <button class="button_boxes_checkout" type="button" name="button">Add to Cart</button>
   <button class="button_boxes_checkout" type="button" name="button">Buy Now</button>
   <div class="back_preview_checkout" id="back_preview_checkout">
-    <img  class="" src="../../views/assets/img/global/customize-lanyard/sections/checkout/arrow_top.png?v=<?= filemtime('../../views/assets/img/global/customize-lanyard/sections/checkout/arrow_top.png') ?>" alt="">
+    <img  class="" src="../../views/assets/img/global/customize-lanyard/sections/checkout/arrow_back.png?v=<?= filemtime('../../views/assets/img/global/customize-lanyard/sections/checkout/arrow_back.png') ?>" alt="">
   </div>
 </div>
 
