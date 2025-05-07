@@ -32,14 +32,14 @@ checkoutAttachment.innerHTML = "Attachment: " + attachmentClass.getAttachmentSel
 checkoutColourQuantity.innerHTML = "Colour Quantity: " + colourClass.getColourSelected();
 checkoutArtworkManual.innerHTML = "Artwork - Manual: " + artworkManualClass.getArtworkManual();*/
 
-  buy_cart_material.innerHTML = "+£" + material.getMaterialSelected();
-  buy_cart_lanyard_type.innerHTML = "+£" + oneTwoEndsClass.getTypeLanyardSelected();
-  buy_cart_width.innerHTML = "+£" + widthClass.getWidthSelected();
-  buy_cart_side_printed.innerHTML = "+£" + sidePrintedClass.getSidePrintedSelected();
-  buy_cart_clips.innerHTML = "+£" + clipClass.getClipSelected();
-  buy_cart_attachment.innerHTML = "+£" + attachmentClass.getAttachmentSelected();
-  buy_cart_accessories.innerHTML = "+£" + accessoriesClass.getAccessoriesSelected();
-  buy_cart_colour_quantity.innerHTML = "+£" + colourClass.getColourSelected();
+  buy_cart_material.innerHTML =  material.getMaterialSelected();
+  buy_cart_lanyard_type.innerHTML =  oneTwoEndsClass.getTypeLanyardSelected();
+  buy_cart_width.innerHTML =  widthClass.getWidthSelected();
+  buy_cart_side_printed.innerHTML =  sidePrintedClass.getSidePrintedSelected();
+  buy_cart_clips.innerHTML =  clipClass.getClipSelected();
+  buy_cart_attachment.innerHTML =  attachmentClass.getAttachmentSelected();
+  buy_cart_accessories.innerHTML =  accessoriesClass.getAccessoriesSelected();
+  buy_cart_colour_quantity.innerHTML =  colourClass.getColourSelected();
 }
 }
 
