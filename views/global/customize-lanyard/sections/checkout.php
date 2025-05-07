@@ -72,7 +72,7 @@
 
         <div class="subcontainer_boxes_preview_checkout">
           <h3 class="">Subtotal</h3>
-          <h3 id="amount_buy_cart"></h3>
+          <h4 id="amount_buy_cart"></h4>
           <h4 id="price_buy_cart_price_per_unit_2">+£0.25 per unit</h4>
           <h4 id="price_buy_cart_subtotal">+£0.25 per unit</h4>
         </div>
