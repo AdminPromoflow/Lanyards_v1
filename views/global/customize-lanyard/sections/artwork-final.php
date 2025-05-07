@@ -39,49 +39,49 @@
 
 
     <div class="subcontainer_boxes_final_lanyard">
-      <h3 class="">Material </h3>
+      <h3 class=""><strong>Material</strong> </h3>
       <h3 id="final_lanyard_material">Material </h3>
       <h4 id="price_final_lanyard_material">+£0.3 per unit</h4>
     </div>
 
     <div class="subcontainer_boxes_final_lanyard">
-      <h3 class="">Lanyard type</h3>
+      <h3 class=""><strong>Lanyard type</strong></h3>
       <h3 id="final_lanyard_lanyard_type">Lanyard type</h3>
       <h4 id="price_final_lanyard_lanyard_type">+£0.3 per unit</h4>
     </div>
 
     <div class="subcontainer_boxes_final_lanyard">
-      <h3 class="" >Width</h3>
+      <h3 class="" ><strong>Width</strong></h3>
       <h3 id="final_lanyard_width">Width</h3>
       <h4 id="price_final_lanyard_width">+£0.25 per unit</h4>
     </div>
 
     <div class="subcontainer_boxes_final_lanyard">
-      <h3 class="">Side Printed</h3>
+      <h3 class=""><strong>Side Printed</strong></h3>
       <h3 id="final_lanyard_side_printed">Side Printed</h3>
       <h4 id="price_final_lanyard_side_printed">+£0.25 per unit</h4>
     </div>
 
     <div class="subcontainer_boxes_final_lanyard">
-      <h3 class="">Clips</h3>
+      <h3 class=""><strongClipsstrong></h3>
       <h3 id="final_lanyard_clips">Clips</h3>
       <h4 id="price_final_lanyard_clips">+£0.25 per unit</h4>
     </div>
 
     <div class="subcontainer_boxes_final_lanyard">
-      <h3 class="">Attachment</h3>
+      <h3 class=""><strong>Attachment</strong></h3>
       <h3 id="final_lanyard_attachment">Attachment</h3>
       <h4 id="price_final_lanyard_attachment">+£0.25 per unit</h4>
     </div>
 
     <div class="subcontainer_boxes_final_lanyard">
-      <h3 class="">Colour quantity</h3>
+      <h3 class=""><strong>Colour quantity</strong></h3>
       <h3 id="final_lanyard_colour_quantity">Colour quantity</h3>
       <h4 id="price_final_lanyard_colour_quantity">+£0.25 per unit</h4>
     </div>
 
     <div class="subcontainer_boxes_final_lanyard">
-      <h3 class="">Accessories</h3>
+      <h3 class=""><strong>Accessories</strong></h3>
       <h3 id="final_lanyard_accessories">Accessories</h3>
       <h4 id="price_final_lanyard_accessories">+£0.25 per unit</h4>
     </div>
