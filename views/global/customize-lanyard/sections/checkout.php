@@ -48,15 +48,18 @@
 
         <div class="subcontainer_boxes_preview_checkout">
           <h3 class="">Attachment</h3>
+          <h3 class="">Attachment</h3>
           <h4 class="">+£0.25 per unit</h4>
         </div>
 
         <div class="subcontainer_boxes_preview_checkout">
           <h3 class="">Accessories</h3>
+          <h3 class="">Accessories</h3>
           <h4 class="">+£0.25 per unit</h4>
         </div>
 
         <div class="subcontainer_boxes_preview_checkout">
+          <h3 class="">Colour quantity</h3>
           <h3 class="">Colour quantity</h3>
           <h4 class="">+£0.25 per unit</h4>
         </div>
