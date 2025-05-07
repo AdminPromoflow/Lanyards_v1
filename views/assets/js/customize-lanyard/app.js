@@ -126,10 +126,10 @@ class CustomizeLanyard {
     }
 
     if (preview) {
-      preview.addEventListener("click", () =>
-      this.handlePreviewClick();
-      checkoutClass.showHideBottons("none");
-    );
+      preview.addEventListener("click", () => {
+        this.handlePreviewClick();
+        checkoutClass.showHideBottons("none");
+      });
     }
     if (back_preview_checkout) {
       back_preview_checkout.addEventListener("click", () => this.handlePreviewClick());
