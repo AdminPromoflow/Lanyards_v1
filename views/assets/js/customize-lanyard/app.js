@@ -426,6 +426,8 @@ class CustomizeLanyard {
      artworkPreviewClass.showHidePreviewArtwork(false);
      this.showCurrentSection(this.currentSectionOpen);
      this.showPreview(true);
+     this.showNext(true);
+
 
    }
   openBackgroundColour() {
