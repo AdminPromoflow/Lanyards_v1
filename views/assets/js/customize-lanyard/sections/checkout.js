@@ -51,9 +51,7 @@ class Checkout {
     const amount_buy_cart = document.getElementById('amount_buy_cart');
     const price_buy_cart_price_per_unit_2 = document.getElementById('price_buy_cart_price_per_unit_2');
 
-    const container_button_boxes_checkout = document.getElementById('container_button_boxes_checkout');
-
-    container_button_boxes_checkout.style.display = "flex";
+    this.showHideBottons("flex");
 
     buy_cart_material.innerHTML =  material.getMaterialSelected();
     buy_cart_lanyard_type.innerHTML =  oneTwoEndsClass.getTypeLanyardSelected();
@@ -89,6 +87,12 @@ class Checkout {
     price_buy_cart_price_per_unit_2.innerHTML = "£" + total ;
     price_buy_cart_subtotal.innerHTML = "£" + (priceClass.getAmountSelected() * total);
 
+  }
+
+  showHideBottons(action){
+    const container_button_boxes_checkout = document.getElementById('container_button_boxes_checkout');
+
+    container_button_boxes_checkout.style.display = action;
   }
 
 }
