@@ -1,6 +1,6 @@
 class Accessories {
   constructor() {
-    this.accessoriesSelected = "";
+    this.accessoriesSelected = "none";
     for (let i = 0; i < containerBoxesAccessories.length; i++) {
   containerBoxesAccessories[i].addEventListener("click", function () {
     accessoriesClass.clickContainer(i);
