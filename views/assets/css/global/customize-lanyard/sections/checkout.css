@@ -126,9 +126,9 @@
 }
 .container_button_boxes_checkout{
   position: relative;
-  display: none;
   width: 100%;
-  display: flex;
+  margin-top: 8px;
+  display: none;
   justify-content: space-around;
   flex-direction: row;
   flex-wrap: nowrap;
