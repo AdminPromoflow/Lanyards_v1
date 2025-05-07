@@ -118,6 +118,9 @@
     font-weight: 300;
     font-size: 0.9em;
 }
+.colour_total_checkout{
+  background: rgba(0, 0, 0, .3);
+}
 .container_boxes_checkout h3:hover {
   font-weight: 500;
 }

@@ -64,13 +64,13 @@
           <h4 id="price_buy_cart_accessories">+£0.25 per unit</h4>
         </div>
 
-        <div class="subcontainer_boxes_preview_checkout">
+        <div class="subcontainer_boxes_preview_checkout colour_total_checkout">
           <h3 class="">Price per unit</h3>
           <h3 id="price_buy_cart_price_per_unit"></h3>
           <h4 id="">+£0.25 per unit</h4>
         </div>
 
-        <div class="subcontainer_boxes_preview_checkout">
+        <div class="subcontainer_boxes_preview_checkout colour_total_checkout">
           <h3 class="">Subtotal</h3>
           <h4 id="amount_buy_cart"></h4>
           <h4>x</h4>
