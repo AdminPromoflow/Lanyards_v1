@@ -315,6 +315,7 @@
   bottom: 8px;
   height: 35px;
   width: 38px;
+  cursor: pointer;
 }
 .back_preview_checkout img{
   position: relative;

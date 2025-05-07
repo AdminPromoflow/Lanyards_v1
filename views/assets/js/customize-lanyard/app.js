@@ -114,6 +114,9 @@ class CustomizeLanyard {
     const closeCustomizeLanyard = document.getElementById("close-customize-lanyard");
     const preview = document.getElementById("preview");
     const next = document.getElementById("next");
+    const back_preview_checkout = document.getElementById("back_preview_checkout");
+
+
 
     if (closeCustomizeLanyard) {
       closeCustomizeLanyard.addEventListener("click", () => {
@@ -125,11 +128,14 @@ class CustomizeLanyard {
     if (preview) {
       preview.addEventListener("click", () => this.handlePreviewClick());
     }
+    if (back_preview_checkout) {
+      back_preview_checkout.addEventListener("click", () => this.handlePreviewClick());
+    }
 
     if (next) {
       next.addEventListener("click", () => this.handleNextClick());
     }
-    
+
   }
 
 
