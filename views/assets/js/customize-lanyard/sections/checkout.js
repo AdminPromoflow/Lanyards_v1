@@ -81,7 +81,7 @@ class Checkout {
                 priceClass.getPriceAccessory() +
                 priceClass.getPriceColour();
 
-    price_buy_cart_price_per_unit.innerHTML = "+£" + total;
+    price_buy_cart_price_per_unit.innerHTML = "+£" + total + " per unit";
 
     amount_buy_cart.innerHTML = priceClass.getAmountSelected() + " units";
     price_buy_cart_price_per_unit_2.innerHTML = "£" + total ;
