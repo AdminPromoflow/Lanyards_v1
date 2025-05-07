@@ -201,13 +201,15 @@
   height: 50px;
   background-color: rgba(48, 79, 112, 1);
   padding: 5px 10px;
-  margin:  0 0 7px 0;
+  margin:  0 0 2px 0;
   cursor: pointer;
 
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
+  border: 2px solid rgba(255, 255, 255, .7);
+
 
   border: 2px solid transparent;
 }
@@ -215,9 +217,7 @@
   position: relative;
   background: green;
 }
-.preview_checkout:nth-child(1){
-  border: 2px solid white;
-}
+
 .preview_checkout:active{
   border: 2px solid white;
 }
