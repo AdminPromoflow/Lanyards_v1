@@ -4,7 +4,7 @@
   <br>
   <p>These are the options you’ve chosen for your lanyard. Click ‘Next’ or ‘Preview’ if you’d like to make any changes:</p>
   <br>
-  <div id="containers_boxes_artwork-final" class="subcontainer_boxes_final_lanyard">
+  <div id="containers_boxes_artwork-final" class="containers_boxes_artwork-final">
     <div class="container_boxes_artwork-final">
       <h4 id="artwork-final-material"></h4>
     </div>
