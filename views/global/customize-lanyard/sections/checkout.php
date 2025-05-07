@@ -53,16 +53,18 @@
         </div>
 
         <div class="subcontainer_boxes_preview_checkout">
+          <h3 class="">Colour quantity</h3>
+          <h3 id="buy_cart_colour_quantity">Colour quantity</h3>
+          <h4 id="price_buy_cart_colour_quantity">+£0.25 per unit</h4>
+        </div>
+
+        <div class="subcontainer_boxes_preview_checkout">
           <h3 class="">Accessories</h3>
           <h3 id="buy_cart_accessories">Accessories</h3>
           <h4 id="price_buy_cart_accessories">+£0.25 per unit</h4>
         </div>
 
-        <div class="subcontainer_boxes_preview_checkout">
-          <h3 class="">Colour quantity</h3>
-          <h3 id="buy_cart_colour_quantity">Colour quantity</h3>
-          <h4 id="price_buy_cart_colour_quantity">+£0.25 per unit</h4>
-        </div>
+
 
       </div>
 

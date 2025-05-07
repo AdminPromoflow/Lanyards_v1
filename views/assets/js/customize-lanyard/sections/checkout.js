@@ -16,21 +16,10 @@ class Checkout {
     });
 
 
-    this.updateItems();
 
 
   }
 updateItems(){
-
-
-/*checkoutMaterial.innerHTML = "Material: " + material.getMaterialSelected(oneTwoEndsClass.getTypeLanyardSelected());
-checkoutLanyardLype.innerHTML = "Lanyard type: " + oneTwoEndsClass.getTypeLanyardSelected();
-checkoutWidth.innerHTML = "Width: " + widthClass.getWidthSelected();
-checkoutSidePrinted.innerHTML = "Side printed: " + sidePrintedClass.getSidePrintedSelected();
-checkoutClips.innerHTML = "Clips: " + clipClass.getClipSelected();
-checkoutAttachment.innerHTML = "Attachment: " + attachmentClass.getAttachmentSelected();
-checkoutColourQuantity.innerHTML = "Colour Quantity: " + colourClass.getColourSelected();
-checkoutArtworkManual.innerHTML = "Artwork - Manual: " + artworkManualClass.getArtworkManual();*/
 
   buy_cart_material.innerHTML =  material.getMaterialSelected();
   buy_cart_lanyard_type.innerHTML =  oneTwoEndsClass.getTypeLanyardSelected();

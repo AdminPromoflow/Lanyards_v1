@@ -21,6 +21,22 @@ class CustomizeLanyard {
   cleanValues(){
     this.currentSectionOpen = 0;
     this.currentSectionOpenArtwork = 0;
+
+
+    previewTemplate.togglePreviewTemplateClass("none");
+    previewAccessoriesClass.showAccessoriesPreview("none");
+    previewLanyardType.showTypeLanyardPreview("none");
+    previewArtworkManualClass.showArtworkManualPreview("none");
+    previewMaterial.showMaterialPreview("none");
+    previewColourClass.showColourPreview("none");
+    artworkPreviewClass.showHidePreviewArtwork(false);
+    classPreviewLogin.showLoginPreview("none");
+    previewProvidedInformation.showProvidedInformationPreview('none');
+    previewCheckout.showPreviewCheckout("none");
+
+
+
+
   }
 
 
