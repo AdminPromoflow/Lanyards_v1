@@ -1,5 +1,12 @@
 class Checkout {
   constructor(){
+
+    this.productName = "";
+    this.description = "";
+    this.pricePerUnit = "";
+    this.amount = "";
+    this.total = "";
+    this.linkPdf = "";
     //
     subcontainer_boxes_preview_checkout.style.display = "flex";
     arrow_preview_checkout.style.transform = "rotate(0deg)";
@@ -16,20 +23,20 @@ class Checkout {
     });
 
     add_to_cart_from_buy_cart.addEventListener("click", function(){
-      checkoutClass.getProduct();
-      checkoutClass.getDescription();
-      checkoutClass.getPricePerUnit();
-      checkoutClass.getAmount();
-      checkoutClass.getTotal();
+      checkoutClass.obtainProduct();
+      checkoutClass.obtainDescription();
+      checkoutClass.obtainPricePerUnit();
+      checkoutClass.obtainAmount();
+      checkoutClass.obtainTotal();
 
       checkoutClass.getJob();
     })
 
   }
-  getProduct(){
+  obtainProduct(){
     shoppingCart.setProduct("Custom Lanyard");
   }
-  getDescription(){
+  obtainDescription(){
     const description = {
     material: {
       type: material.getMaterialSelected(),
@@ -55,7 +62,7 @@ class Checkout {
   shoppingCart.setDescription(description);
 
   }
-  getPricePerUnit(){
+  obtainPricePerUnit(){
     var pricePerUnit = priceClass.getPricePerMaterialWithAmount() +
                 priceClass.getPriceLanyardType() +
                 priceClass.getPriceWidth() +
@@ -64,11 +71,11 @@ class Checkout {
 
     shoppingCart.setPricePerUnit(pricePerUnit);
   }
-  getAmount(){
+  obtainAmount(){
     const amount = priceClass.getAmountSelected();
     shoppingCart.setAmount(amount);
   }
-  getTotal(){
+  obtainTotal(){
     var pricePerUnit = priceClass.getPricePerMaterialWithAmount() +
                 priceClass.getPriceLanyardType() +
                 priceClass.getPriceWidth() +
@@ -85,16 +92,60 @@ class Checkout {
 
   getJob(){
     alert(
-      shoppingCart.getProduct() + " /n " +
-      shoppingCart.getDescription() + " /n " +
-      shoppingCart.getPricePerUnit() + " /n " +
-      shoppingCart.getAmount() + " /n " +
-      shoppingCart.getTotal() + " /n "
+      this.getProduct() + " /n " +
+      this.getDescription() + " /n " +
+      this.getPricePerUnit() + " /n " +
+      this.getAmount() + " /n " +
+      this.getTotal() + " /n "
   );
 
 
   }
 
+  getProduct() {
+    return this.productName;
+  }
+  setProduct(newName) {
+    this.productName = newName;
+  }
+
+  getDescription() {
+    return this.description;
+  }
+  setDescription(newDescription) {
+    this.description = newDescription;
+  }
+
+  getPricePerUnit() {
+    return this.pricePerUnit;
+  }
+  setPricePerUnit(newPrice) {
+    this.pricePerUnit = newPrice;
+  }
+
+  // Amount
+  getAmount() {
+    return this.amount;
+  }
+  setAmount(newAmount) {
+    this.amount = newAmount;
+  }
+
+  // Total
+  getTotal() {
+    return this.total;
+  }
+  setTotal(newTotal) {
+    this.total = newTotal;
+  }
+
+  // PDF Link
+  getLinkPdf() {
+    return this.linkPdf;
+  }
+  setLinkPdf(newLink) {
+    this.linkPdf = newLink;
+  }
 
   updateItems(){
 
