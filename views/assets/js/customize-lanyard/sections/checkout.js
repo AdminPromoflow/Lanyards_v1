@@ -93,7 +93,7 @@ class Checkout {
   getJob(){
     alert(
       this.getProduct() + " /n " +
-      this.getDescription() + " /n " +
+      JSON.stringify(this.getDescription()) + " /n " +
       this.getPricePerUnit() + " /n " +
       this.getAmount() + " /n " +
       this.getTotal() + " /n "
