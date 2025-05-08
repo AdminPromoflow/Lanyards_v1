@@ -16,44 +16,87 @@ class Checkout {
     });
 
     add_to_cart_from_buy_cart.addEventListener("click", function(){
-      alert("Buenas");
+      checkoutClass.getProduct();
+      checkoutClass.getDescription();
+      checkoutClass.getPricePerUnit();
+      checkoutClass.getAmount();
+      checkoutClass.getTotal();
+
+      checkoutClass.getJob();
     })
 
+  }
+  getProduct(){
+    shoppingCart.setProduct("Custom Lanyard");
+  }
+  getDescription(){
+    const description = {
+    material: {
+      type: material.getMaterialSelected(),
+      additional_price: priceClass.getPricePerMaterialWithAmount()
+    },
+    lanyard_type: {
+      type: oneTwoEndsClass.getTypeLanyardSelected(),
+      additional_price: priceClass.getPriceLanyardType()
+    },
+    width: {
+      value: widthClass.getWidthSelected(),
+      additional_price: priceClass.getPriceWidth()
+    },
+    side_printed: {
+      side: sidePrintedClass.getSidePrintedSelected(),
+      additional_price: priceClass.getPriceSidePrinted()
+    },
+    colour_quantity: {
+      type: colourClass.getColourSelected(),
+      additional_price: priceClass.getPriceColour()
+    }
+  };
+  shoppingCart.setDescription(description);
 
+  }
+  getPricePerUnit(){
+    var pricePerUnit = priceClass.getPricePerMaterialWithAmount() +
+                priceClass.getPriceLanyardType() +
+                priceClass.getPriceWidth() +
+                priceClass.getPriceSidePrinted() +
+                priceClass.getPriceColour();
+
+    shoppingCart.setPricePerUnit(pricePerUnit);
+  }
+  getAmount(){
+    const amount = priceClass.getAmountSelected();
+    shoppingCart.setAmount(amount);
+  }
+  getTotal(){
+    var pricePerUnit = priceClass.getPricePerMaterialWithAmount() +
+                priceClass.getPriceLanyardType() +
+                priceClass.getPriceWidth() +
+                priceClass.getPriceSidePrinted() +
+                priceClass.getPriceColour();
+
+    const amount = priceClass.getAmountSelected();
+
+    var total = pricePerUnit * amount;
+
+    shoppingCart.setTotal(total);
+
+  }
+
+  getJob(){
+    alert(
+      shoppingCart.getProduct() + " /n " +
+      shoppingCart.getDescription() + " /n " +
+      shoppingCart.getPricePerUnit() + " /n " +
+      shoppingCart.getAmount() + " /n " +
+      shoppingCart.getTotal() + " /n "
+  );
 
 
   }
+
+
   updateItems(){
-    const buy_cart_material = document.getElementById('buy_cart_material');
-    const price_buy_cart_material = document.getElementById('price_buy_cart_material');
-
-    const buy_cart_lanyard_type = document.getElementById('buy_cart_lanyard_type');
-    const price_buy_cart_lanyard_type = document.getElementById('price_buy_cart_lanyard_type');
-
-    const buy_cart_width = document.getElementById('buy_cart_width');
-    const price_buy_cart_width = document.getElementById('price_buy_cart_width');
-
-    const buy_cart_side_printed = document.getElementById('buy_cart_side_printed');
-    const price_buy_cart_side_printed = document.getElementById('price_buy_cart_side_printed');
-
-    const buy_cart_clips = document.getElementById('buy_cart_clips');
-    const price_buy_cart_clips = document.getElementById('price_buy_cart_clips');
-
-    const buy_cart_attachment = document.getElementById('buy_cart_attachment');
-    const price_buy_cart_attachment = document.getElementById('price_buy_cart_attachment');
-
-    const buy_cart_accessories = document.getElementById('buy_cart_accessories');
-    const price_buy_cart_accessories = document.getElementById('price_buy_cart_accessories');
-
-    const buy_cart_colour_quantity = document.getElementById('buy_cart_colour_quantity');
-    const price_buy_cart_colour_quantity = document.getElementById('price_buy_cart_colour_quantity');
-
-    const price_buy_cart_price_per_unit = document.getElementById('price_buy_cart_price_per_unit');
-
-
-    const price_buy_cart_subtotal = document.getElementById('price_buy_cart_subtotal');
-    const amount_buy_cart = document.getElementById('amount_buy_cart');
-    const price_buy_cart_price_per_unit_2 = document.getElementById('price_buy_cart_price_per_unit_2');
 
     this.showHideBottons("flex");
 
@@ -99,6 +142,39 @@ class Checkout {
   }
 
 }
+
+const buy_cart_material = document.getElementById('buy_cart_material');
+const price_buy_cart_material = document.getElementById('price_buy_cart_material');
+
+const buy_cart_lanyard_type = document.getElementById('buy_cart_lanyard_type');
+const price_buy_cart_lanyard_type = document.getElementById('price_buy_cart_lanyard_type');
+
+const buy_cart_width = document.getElementById('buy_cart_width');
+const price_buy_cart_width = document.getElementById('price_buy_cart_width');
+
+const buy_cart_side_printed = document.getElementById('buy_cart_side_printed');
+const price_buy_cart_side_printed = document.getElementById('price_buy_cart_side_printed');
+
+const buy_cart_clips = document.getElementById('buy_cart_clips');
+const price_buy_cart_clips = document.getElementById('price_buy_cart_clips');
+
+const buy_cart_attachment = document.getElementById('buy_cart_attachment');
+const price_buy_cart_attachment = document.getElementById('price_buy_cart_attachment');
+
+const buy_cart_accessories = document.getElementById('buy_cart_accessories');
+const price_buy_cart_accessories = document.getElementById('price_buy_cart_accessories');
+
+const buy_cart_colour_quantity = document.getElementById('buy_cart_colour_quantity');
+const price_buy_cart_colour_quantity = document.getElementById('price_buy_cart_colour_quantity');
+
+const price_buy_cart_price_per_unit = document.getElementById('price_buy_cart_price_per_unit');
+
+
+const price_buy_cart_subtotal = document.getElementById('price_buy_cart_subtotal');
+const amount_buy_cart = document.getElementById('amount_buy_cart');
+const price_buy_cart_price_per_unit_2 = document.getElementById('price_buy_cart_price_per_unit_2');
+
+
 
 // Captura todos los elementos con la clase "preview_checkout"
 const preview_checkout = document.getElementById('preview_checkout');
