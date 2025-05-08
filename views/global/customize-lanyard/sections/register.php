@@ -17,7 +17,7 @@ $googleVersion = file_exists($imgGoogle) ? filemtime($imgGoogle) : time();
     <label for="register2Name">Please provide your registration information:</label>
     <input id="register2Name" type="text" name="" value="" placeholder="Please provide your name">
     <input id="register2Email" type="text" name="" value="" placeholder="Please provide your email">
-    <input id="register2Password" type="text" name="" value="" placeholder="and your password">
+    <input id="register2Password" type="password" name="" value="" placeholder="and your password">
     <label class="label_acept_terms_conditions2">
     <input id="acept_terms_conditions2" type="checkbox" name="terms" required>
       I agree to the <a href="../../views/terms_conditions/index.php" target="_blank">Terms and Conditions</a>.
@@ -26,7 +26,7 @@ $googleVersion = file_exists($imgGoogle) ? filemtime($imgGoogle) : time();
       <strong class="containers_boxes_register_button">Register</strong>
     </button>
 
-    
+
     <p id="openLogin2">Already have an account? Log in here.</p>
   </div>
 </section>
