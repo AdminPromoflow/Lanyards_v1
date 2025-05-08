@@ -34,7 +34,7 @@ class Checkout {
 
   }
   obtainProduct(){
-    shoppingCart.setProduct("Custom Lanyard");
+    this.setProduct("Custom Lanyard");
   }
   obtainDescription(){
     const description = {
@@ -59,7 +59,7 @@ class Checkout {
       additional_price: priceClass.getPriceColour()
     }
   };
-  shoppingCart.setDescription(description);
+  this.setDescription(description);
 
   }
   obtainPricePerUnit(){
@@ -69,11 +69,11 @@ class Checkout {
                 priceClass.getPriceSidePrinted() +
                 priceClass.getPriceColour();
 
-    shoppingCart.setPricePerUnit(pricePerUnit);
+    this.setPricePerUnit(pricePerUnit);
   }
   obtainAmount(){
     const amount = priceClass.getAmountSelected();
-    shoppingCart.setAmount(amount);
+    this.setAmount(amount);
   }
   obtainTotal(){
     var pricePerUnit = priceClass.getPricePerMaterialWithAmount() +
@@ -86,7 +86,7 @@ class Checkout {
 
     var total = pricePerUnit * amount;
 
-    shoppingCart.setTotal(total);
+    this.setTotal(total);
 
   }
 
