@@ -1,6 +1,6 @@
 <?php
 require_once '../config/database.php';
-require_once '../../models/jobs.php';
+//require_once '../../models/jobs.php';
 
 class Job {
     public function handleRequest() {

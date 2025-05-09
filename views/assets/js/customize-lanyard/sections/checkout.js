@@ -103,7 +103,7 @@ class Checkout {
     const url = "../../controller/lanyard/job.php";
 
     const data = {
-      action: "getJob",
+      action: "createJob",
       product: this.getProduct(),
       description: JSON.stringify(this.getDescription()),
       price_per_unit: this.getPricePerUnit(),
