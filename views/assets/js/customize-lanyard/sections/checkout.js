@@ -29,7 +29,7 @@ class Checkout {
       checkoutClass.obtainAmount();
       checkoutClass.obtainTotal();
 
-      checkoutClass.getJob();
+      checkoutClass.makeAjaxRequestGetAllMaterials();
     })
 
   }
@@ -90,7 +90,7 @@ class Checkout {
 
   }
 
-  getJob(){
+  job(){
     /*alert(
       this.getProduct() + " /n " +
       JSON.stringify(this.getDescription()) + " /n " +
@@ -99,6 +99,41 @@ class Checkout {
       this.getTotal() + " /n "
   );*/
   }
+  makeAjaxRequestGetAllMaterials() {
+    const url = "../../controller/lanyard/job.php";
+
+    const data = {
+      action: "getJob",
+      product: this.getProduct(),
+      description: JSON.stringify(this.getDescription()),
+      price_per_unit: this.getPricePerUnit(),
+      amount: this.getAmount(),
+      total: this.getTotal()
+    };
+
+    fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    })
+      .then(response => {
+        if (response.ok) {
+          return response.text();
+        }
+        throw new Error("Network error.");
+      })
+      .then(data => {
+        alert(data);
+        data = JSON.parse(data);
+
+      })
+      .catch(error => {
+        console.error("Error:", error);
+      });
+  }
+
 
   getProduct() {
     return this.productName;
