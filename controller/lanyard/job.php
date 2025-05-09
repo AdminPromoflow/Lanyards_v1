@@ -8,10 +8,6 @@ class Job {
             $rawData = file_get_contents("php://input");
             $data = json_decode($rawData);
 
-            echo json_encode([
-                "received" => $data
-            ]);
-            exit;
 
             if ($data !== null && isset($data->action)) {
                 $action = $data->action;
