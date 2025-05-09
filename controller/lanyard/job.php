@@ -8,6 +8,11 @@ class Job {
             $rawData = file_get_contents("php://input");
             $data = json_decode($rawData);
 
+            echo json_encode([
+                "received" => $data
+            ]);
+            exit;
+
             if ($data !== null && isset($data->action)) {
                 $action = $data->action;
 
@@ -29,6 +34,7 @@ class Job {
             http_response_code(405);
             echo json_encode(["message" => "Method not allowed"]);
         }
+
     }
 
     private function createJob($data) {
