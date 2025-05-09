@@ -33,6 +33,7 @@ class CustomizeLanyard {
     classPreviewLogin.showLoginPreview("none");
     previewProvidedInformation.showProvidedInformationPreview('none');
     previewCheckout.showPreviewCheckout("none");
+    checkoutClass.showHideBottons("none");
 
 
 

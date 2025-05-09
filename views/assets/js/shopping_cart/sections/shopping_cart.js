@@ -14,60 +14,9 @@ class ShoppingCart {
     // Obtener los estilos iniciales de todos los elementos
     this.initializeStyles();
 
-    this.productName = "";
-    this.description = "";
-    this.pricePerUnit = "";
-    this.amount = "";
-    this.total = "";
-    this.linkPdf = "";
-
-
   }
 
-  getProduct() {
-    return this.productName;
-  }
-  setProduct(newName) {
-    this.productName = newName;
-  }
 
-  getDescription() {
-    return this.description;
-  }
-  setDescription(newDescription) {
-    this.description = newDescription;
-  }
-
-  getPricePerUnit() {
-    return this.pricePerUnit;
-  }
-  setPricePerUnit(newPrice) {
-    this.pricePerUnit = newPrice;
-  }
-
-  // Amount
-  getAmount() {
-    return this.amount;
-  }
-  setAmount(newAmount) {
-    this.amount = newAmount;
-  }
-
-  // Total
-  getTotal() {
-    return this.total;
-  }
-  setTotal(newTotal) {
-    this.total = newTotal;
-  }
-
-  // PDF Link
-  getLinkPdf() {
-    return this.linkPdf;
-  }
-  setLinkPdf(newLink) {
-    this.linkPdf = newLink;
-  }
 
 
 

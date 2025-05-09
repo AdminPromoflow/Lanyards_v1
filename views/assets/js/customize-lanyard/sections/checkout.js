@@ -91,15 +91,13 @@ class Checkout {
   }
 
   getJob(){
-    alert(
+    /*alert(
       this.getProduct() + " /n " +
       JSON.stringify(this.getDescription()) + " /n " +
       this.getPricePerUnit() + " /n " +
       this.getAmount() + " /n " +
       this.getTotal() + " /n "
-  );
-
-
+  );*/
   }
 
   getProduct() {
