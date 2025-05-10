@@ -181,6 +181,7 @@ class Amount_Models {
                   `SidePrinted`.`noSides` = :noSides AND
                   `noColours`.`option` = :noColours AND
                   :amount BETWEEN `Amount`.`min-amount` AND `Amount`.`max-amount`
+              LIMIT 1
           ");
 
           // Bind parameters
