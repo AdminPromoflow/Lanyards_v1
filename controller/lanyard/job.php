@@ -94,6 +94,8 @@ class Job {
 
         if ($order_in_process) {
 
+          echo json_encode("entramos");exit;
+
             $connection = new Database();
             $order_model = new Order_Model($connection);
             $order_model->setEmail($_SESSION['email']);
