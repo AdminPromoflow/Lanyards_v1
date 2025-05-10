@@ -40,11 +40,11 @@ class Job {
       echo json_encode("hola");
         $this->verifyOrden();
 
-      /*  $connection = new Database();
+        $connection = new Database();
         $job_model = new Job_Model($connection);
 
         // Asignar los valores usando setters
-        $job_model->setName($data->product);
+      /*  $job_model->setName($data->product);
 
         // Convertir la descripción a JSON string para guardarla como texto
         $descriptionJson = json_encode($data->description, JSON_UNESCAPED_UNICODE);
