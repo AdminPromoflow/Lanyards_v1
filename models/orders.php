@@ -46,7 +46,6 @@ class Order_Model {
             $sqlUser->bindParam(':email', $this->email, PDO::PARAM_STR);
             $sqlUser->execute();
             $user = $sqlUser->fetch(PDO::FETCH_ASSOC);
-            echo json_encode("entramos 3");exit;
 
             if (!$user) {
                 throw new Exception("No se encontró un usuario con el email proporcionado.");
@@ -60,6 +59,8 @@ class Order_Model {
             $sql = $this->connection->getConnection()->prepare("INSERT INTO `Orders` (`idUser`, `order_date`, `status`, `total`)
                 VALUES (:idUser, :order_date, :status, :total)
             ");
+            echo json_encode("entramos 4");exit;
+
             $sql->bindParam(':idUser', $this->idUser, PDO::PARAM_INT);
             $sql->bindParam(':order_date', $this->order_date, PDO::PARAM_STR);
             $sql->bindParam(':status', $this->status, PDO::PARAM_STR);
