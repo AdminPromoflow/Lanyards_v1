@@ -58,7 +58,7 @@ class Job {
         $job_model->setIdOrder($_SESSION['orden_in_process']);
 
         $amount_Models = new Amount_Models();
-        echo json_encode($data->description->material->type);exit;
+        echo json_encode("hola tu");exit;
 
         $amount_Models->setDescription($data->description);
 
