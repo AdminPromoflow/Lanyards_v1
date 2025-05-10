@@ -57,7 +57,7 @@ class Job {
         // Recuperar el idOrder desde la sesión
         $job_model->setIdOrder($_SESSION['orden_in_process']);
 
-        $amount_Models = new Amount_Models();
+        $amount_Models = new AmountModel();
         echo json_encode("hola tu");exit;
 
         $amount_Models->setDescription($data->description);
