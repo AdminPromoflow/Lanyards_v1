@@ -44,13 +44,13 @@ class Job {
         $job_model = new Job_Model($connection);
 
         // Asignar los valores usando setters
-      /*  $job_model->setName($data->product);
+       $job_model->setName($data->product);
 
         // Convertir la descripción a JSON string para guardarla como texto
         $descriptionJson = json_encode($data->description, JSON_UNESCAPED_UNICODE);
         $job_model->setDescription($descriptionJson);
 
-        $job_model->setPricePerUnit($data->price_per_unit);
+      /*   $job_model->setPricePerUnit($data->price_per_unit);
         $job_model->setAmount($data->amount);
         $job_model->setTotal($data->total);
 
