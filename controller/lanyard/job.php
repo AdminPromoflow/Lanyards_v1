@@ -85,7 +85,7 @@ class Job {
     }
 
     // 🔍 Verifica o crea una orden en sesión
-    public function verifyOrden() {
+    public function verifyOrden($data) {
         if (session_status() !== PHP_SESSION_ACTIVE) {
             session_start();
         }
