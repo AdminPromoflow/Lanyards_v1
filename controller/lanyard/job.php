@@ -38,7 +38,7 @@ class Job {
 
     // 🛠️ Crea un nuevo trabajo (job)
     private function createJob($data) {
-        $this->verifyOrden();
+        $idOrder = $this->verifyOrden();
 
         $connection = new Database();
         $job_model = new Job_Model($connection);
@@ -55,7 +55,7 @@ class Job {
         $job_model->setTotal($data->total);
 
         // Recuperar el idOrder desde la sesión
-        $job_model->setIdOrder($_SESSION['orden_in_process']);
+        $job_model->setIdOrder($idOrder);
 
         $connection = new Database();
         $amount_Models = new Amount_Models($connection);
@@ -94,7 +94,10 @@ class Job {
             $order_model = new Order_Model($connection);
             $_SESSION['orden_in_process'] = $order_model->createOrder();
         }
+
+        return $_SESSION['orden_in_process'];
     }
+
 }
 
 // 🚀 Ejecuta el manejador
