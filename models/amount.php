@@ -164,14 +164,43 @@ class Amount_Models {
   }
 
 
-    public function getIdAmountForJob() {
-      echo json_encode($this->description->material->type);
-      echo json_encode($this->description->lanyard_type->type);
-      echo json_encode($this->description->width->value);
-      echo json_encode($this->description->side_printed->side);
-      echo json_encode($this->description->colour_quantity->type);
-      exit;
-    }
+  public function getIdAmountForJob($amount = 10) {
+      try {
+          $sql = $this->connection->prepare("
+              SELECT Amount.idPriceAmount
+              FROM Lanyards
+              JOIN LanyardTypes ON Lanyards.idLanyard = LanyardTypes.idLanyard
+              JOIN Width ON Lanyards.idLanyard = Width.idLanyard
+              JOIN SidePrinted ON Width.idWidth = SidePrinted.idWidth
+              JOIN noColours ON SidePrinted.idSidePrinted = noColours.idSidePrinted
+              JOIN Amount ON noColours.idNoColour = Amount.idNoColour
+              WHERE
+                  Lanyards.material = :material AND
+                  LanyardTypes.type = :lanyardType AND
+                  Width.width = :width AND
+                  SidePrinted.noSides = :noSides AND
+                  noColours.option = :colourQuantity AND
+                  :amount BETWEEN Amount.`min-amount` AND Amount.`max-amount`
+              LIMIT 1
+          ");
+
+          $sql->bindParam(':material', $this->description->material->type);
+          $sql->bindParam(':lanyardType', $this->description->lanyard_type->type);
+          $sql->bindParam(':width', $this->description->width->value);
+          $sql->bindParam(':noSides', $this->description->side_printed->side);
+          $sql->bindParam(':colourQuantity', $this->description->colour_quantity->type);
+          $sql->bindParam(':amount', $amount, PDO::PARAM_INT);
+
+          $sql->execute();
+          $result = $sql->fetch(PDO::FETCH_ASSOC);
+
+          return $result ? $result['idPriceAmount'] : null;
+
+      } catch (PDOException $e) {
+          throw new Exception("Error in getIdAmountForJob: " . $e->getMessage());
+      }
+  }
+
 
 
 

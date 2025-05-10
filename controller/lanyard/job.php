@@ -64,7 +64,7 @@ class Job {
         $amount_Models->getIdAmountForJob();
 
         // Extras pueden ser null o string vacío
-          $job_model->setIdPriceAmount(0); // Cambiar si hay valor
+          $job_model->setIdPriceAmount($amount_Models->getIdAmountForJob()); // Cambiar si hay valor
 
         // Crear el job en la base de datos
         $success = $job_model->createJob();
