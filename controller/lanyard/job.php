@@ -61,8 +61,7 @@ class Job {
         $amount_Models = new Amount_Models($connection);
 
         $amount_Models->setDescription($data->description);
-        echo json_encode($data->description->material->type);exit;
-
+        $amount_Models->getIdAmountForJob();
 
         // Extras pueden ser null o string vacío
           $job_model->setIdPriceAmount(0); // Cambiar si hay valor

@@ -165,6 +165,7 @@ class Amount_Models {
 
 
     public function getIdAmountForJob() {
+      echo json_encode($this->description->material->type."Buenas");exit;
 
     }
 
