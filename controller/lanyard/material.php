@@ -3,7 +3,6 @@
 require_once '../config/database.php'; // Path to database configuration
 require_once '../../models/lanyards.php'; // Path to lanyards model
 require_once 'width.php';
-require_once 'width.php'; // Double inclusion of the 'width.php' file. This might be an error.
 require_once 'sidePrinted.php';
 require_once 'noColours.php';
 require_once 'typeLanyards.php';
