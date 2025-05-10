@@ -104,7 +104,6 @@ class Job {
             $order_model->setOrderDate($dateTime);
 
             $order_model->setTotal($data->total);
-            echo json_encode("entramos 2");exit;
 
             $_SESSION['orden_in_process'] = $order_model->createOrder();
 

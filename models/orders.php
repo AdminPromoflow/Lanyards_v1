@@ -46,6 +46,7 @@ class Order_Model {
             $sqlUser->bindParam(':email', $this->email, PDO::PARAM_STR);
             $sqlUser->execute();
             $user = $sqlUser->fetch(PDO::FETCH_ASSOC);
+            echo json_encode("entramos 3");exit;
 
             if (!$user) {
                 throw new Exception("No se encontró un usuario con el email proporcionado.");
