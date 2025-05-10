@@ -38,9 +38,9 @@ class Job {
     // 🛠️ Crea un nuevo trabajo (job)
     private function createJob($data) {
       echo json_encode("hola");
-      /*  $this->verifyOrden();
+        $this->verifyOrden();
 
-        $connection = new Database();
+      /*  $connection = new Database();
         $job_model = new Job_Model($connection);
 
         // Asignar los valores usando setters
