@@ -65,6 +65,7 @@ class Job {
 
 
         $idAmount = $amount_Models->getIdAmountForJob($data->amount);
+        echo json_encode($idAmount."algo");exit;
 
         // Extras pueden ser null o string vacío
           $job_model->setIdPriceAmount($idAmount); // Cambiar si hay valor
