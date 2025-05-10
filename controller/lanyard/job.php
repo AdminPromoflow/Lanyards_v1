@@ -66,7 +66,7 @@ class Job {
 
         $idAmount = $amount_Models->getIdAmountForJob($data->amount);
 
-        echo json_encode($idAmount);exit;
+        echo json_encode($idAmount[0]['idPriceAmount'];);exit;
 
 
         // Extras pueden ser null o string vacío
