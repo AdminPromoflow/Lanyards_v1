@@ -183,6 +183,8 @@ class Amount_Models {
                   :amount BETWEEN Amount.`min-amount` AND Amount.`max-amount`
               LIMIT 1
           ");
+          echo json_encode("Buenas");exit;
+
 
           $sql->bindParam(':material', $this->description->material->type);
           $sql->bindParam(':lanyardType', $this->description->lanyard_type->type);
@@ -190,7 +192,6 @@ class Amount_Models {
           $sql->bindParam(':noSides', $this->description->side_printed->side);
           $sql->bindParam(':colourQuantity', $this->description->colour_quantity->type);
           $sql->bindParam(':amount', $amount, PDO::PARAM_INT);
-          echo json_encode("Buenas");exit;
 
           $sql->execute();
           $result = $sql->fetch(PDO::FETCH_ASSOC);
