@@ -41,8 +41,7 @@ class Order_Model {
     public function createOrder() {
         try {
             // Buscar idUser usando el email almacenado en $this->email
-            $sqlUser = $this->connection->getConnection()->prepare("
-                SELECT idUser FROM Users WHERE email = :email
+            $sqlUser = $this->connection->getConnection()->prepare("SELECT idUser FROM Users WHERE email = :email
             ");
             $sqlUser->bindParam(':email', $this->email, PDO::PARAM_STR);
             $sqlUser->execute();
@@ -57,8 +56,7 @@ class Order_Model {
 
 
             // Insertar la orden
-            $sql = $this->connection->getConnection()->prepare("
-                INSERT INTO `Orders` (`idUser`, `order_date`, `status`, `total`)
+            $sql = $this->connection->getConnection()->prepare("INSERT INTO `Orders` (`idUser`, `order_date`, `status`, `total`)
                 VALUES (:idUser, :order_date, :status, :total)
             ");
             $sql->bindParam(':idUser', $this->idUser, PDO::PARAM_INT);
