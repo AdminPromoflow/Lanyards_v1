@@ -61,17 +61,14 @@ class Job {
         $amount_Models = new Amount_Models($connection);
 
         $amount_Models->setDescription($data->description);
-        $var = $amount_Models->getIdAmountForJob(10);
-        echo json_encode($var);
-        //$amount_Models->getIdAmountForJob()
-        exit;
+        $idAmount = $amount_Models->getIdAmountForJob(10);
 
         // Extras pueden ser null o string vacío
-          $job_model->setIdPriceAmount(); // Cambiar si hay valor
-          echo json_encode($success);exit;
+          $job_model->setIdPriceAmount($idAmount); // Cambiar si hay valor
 
         // Crear el job en la base de datos
         $success = $job_model->createJob();
+        echo json_encode($success);exit;
 
       /*  if ($success) {
             echo json_encode([
