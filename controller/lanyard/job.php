@@ -59,9 +59,10 @@ class Job {
 
         $connection = new Database();
         $amount_Models = new Amount_Models($connection);
-        echo json_encode("hola tu");exit;
 
         $amount_Models->setDescription($data->description);
+        echo json_encode("hola tu");exit;
+
 
         // Extras pueden ser null o string vacío
           $job_model->setIdPriceAmount(0); // Cambiar si hay valor
