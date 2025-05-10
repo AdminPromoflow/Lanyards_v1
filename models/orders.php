@@ -59,7 +59,6 @@ class Order_Model {
             $sql = $this->connection->getConnection()->prepare("INSERT INTO `Orders` (`idUser`, `order_date`, `status`, `total`)
                 VALUES (:idUser, :order_date, :status, :total)
             ");
-            echo json_encode($this->total);exit;
 
 
             $sql->bindParam(':idUser', $this->idUser, PDO::PARAM_INT);
@@ -68,6 +67,7 @@ class Order_Model {
             $sql->bindParam(':total', $this->total);
             $sql->execute();
 
+            echo json_encode($this->total);exit;
 
             $lastId = $this->connection->getConnection()->lastInsertId();
             $this->connection->closeConnection();
