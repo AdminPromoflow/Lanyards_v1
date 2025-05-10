@@ -94,7 +94,6 @@ class Job {
 
         if ($order_in_process) {
 
-          echo json_encode("entramos");exit;
 
             $connection = new Database();
             $order_model = new Order_Model($connection);
@@ -105,6 +104,8 @@ class Job {
             $order_model->setOrderDate($dateTime);
 
             $order_model->setTotal($data->total);
+            echo json_encode("entramos 2");exit;
+
             $_SESSION['orden_in_process'] = $order_model->createOrder();
 
         }
