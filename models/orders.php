@@ -59,13 +59,14 @@ class Order_Model {
             $sql = $this->connection->getConnection()->prepare("INSERT INTO `Orders` (`idUser`, `order_date`, `status`, `total`)
                 VALUES (:idUser, :order_date, :status, :total)
             ");
+            echo json_encode($this->idUser);exit;
+
 
             $sql->bindParam(':idUser', $this->idUser, PDO::PARAM_INT);
             $sql->bindParam(':order_date', $this->order_date, PDO::PARAM_STR);
             $sql->bindParam(':status', $this->status, PDO::PARAM_STR);
             $sql->bindParam(':total', $this->total);
             $sql->execute();
-            echo json_encode("entramos 5");exit;
 
 
             $lastId = $this->connection->getConnection()->lastInsertId();
