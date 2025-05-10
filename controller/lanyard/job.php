@@ -100,7 +100,8 @@ class Job {
 
             $order_model->setTotal($data->total);
             $_SESSION['orden_in_process'] = $order_model->createOrder();
-
+            echo json_encode("Vamos lograndolo");
+            exit;
         }
 
         return $_SESSION['orden_in_process'];
