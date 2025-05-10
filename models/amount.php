@@ -167,7 +167,6 @@ class Amount_Models {
 
 
   public function getIdAmountForJob($amount) {
-    echo json_encode($amount);exit;
 
       try {
           // Prepare the SQL query with placeholders
@@ -201,6 +200,9 @@ class Amount_Models {
 
           // Fetch the result
           $response = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+          echo json_encode($response);exit;
+
 
           // Close the database connection
           $this->connection->closeConnection();
