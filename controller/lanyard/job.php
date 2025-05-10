@@ -61,7 +61,7 @@ class Job {
           $job_model->setIdPriceAmount(0); // Cambiar si hay valor
 
         // Crear el job en la base de datos
-        $success = $job_model->createJob();
+      /*  $success = $job_model->createJob();
 
         if ($success) {
             echo json_encode([
@@ -73,7 +73,7 @@ class Job {
             echo json_encode([
                 "message" => "Failed to create job"
             ]);
-        }
+        }*/
     }
 
     // 🔍 Verifica o crea una orden en sesión
