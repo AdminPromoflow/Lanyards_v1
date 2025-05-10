@@ -2,7 +2,7 @@
 // 📦 Importaciones necesarias antes de declarar la clase
 require_once '../config/database.php';
 require_once '../../models/orders.php';
-//require_once '../../models/jobs.php';
+require_once '../../models/jobs.php';
 
 
 class Job {
