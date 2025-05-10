@@ -103,7 +103,7 @@ class Job {
             $order_model->setOrderDate($dateTime);
 
             $order_model->setTotal($data->total);
-            $_SESSION['orden_in_process'] = $order_model->createOrder();
+          //  $_SESSION['orden_in_process'] = $order_model->createOrder();
 
         }
 
