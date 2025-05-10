@@ -62,7 +62,7 @@ class Job {
 
         // Crear el job en la base de datos
         $success = $job_model->createJob();
-        echo json_encode($success);
+        echo json_encode($success);exit;
 
       /*  if ($success) {
             echo json_encode([
