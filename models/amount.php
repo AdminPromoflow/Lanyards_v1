@@ -170,7 +170,7 @@ class Amount_Models {
       echo json_encode($this->description->width->value);
       echo json_encode($this->description->side_printed->side);
       echo json_encode($this->description->colour_quantity->type);
-
+      exit;
     }
 
 
