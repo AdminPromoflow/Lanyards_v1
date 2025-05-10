@@ -105,7 +105,7 @@ class Checkout {
     const data = {
       action: "createJob",
       product: this.getProduct(),
-      description: this.getDescription(),
+      description: JSON.stringify(this.getDescription()),
       price_per_unit: this.getPricePerUnit(),
       amount: this.getAmount(),
       total: this.getTotal()
