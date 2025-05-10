@@ -38,7 +38,7 @@ class Job {
 
     // 🛠️ Crea un nuevo trabajo (job)
     private function createJob($data) {
-        $idOrder = $this->verifyOrden();
+        $idOrder = $this->verifyOrden($data);
 
         $connection = new Database();
         $job_model = new Job_Model($connection);
@@ -92,7 +92,15 @@ class Job {
         if (!isset($_SESSION['orden_in_process'])) {
             $connection = new Database();
             $order_model = new Order_Model($connection);
+            $order_model->setEmail($_SESSION['email']);
+            $order_model->setStatus('pending');
+            $dateTime = date('Y-m-d H:i:s');
+
+            $order_model->setOrderDate($dateTime);
+
+            $order_model->setTotal($data->total);
             $_SESSION['orden_in_process'] = $order_model->createOrder();
+
         }
 
         return $_SESSION['orden_in_process'];

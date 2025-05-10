@@ -10,6 +10,7 @@ class Amount_Models {
   private $description;
 
 
+
   // Constructor that initializes the connection.
   function __construct($connection) {
     $this->connection = $connection;
@@ -32,6 +33,7 @@ class Amount_Models {
   public function setDescription($description) {
       $this->description = $description;
   }
+
 
 
 
