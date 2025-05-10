@@ -147,16 +147,16 @@
 .second_colour_checkout_button{
   background: rgba(48, 79, 112, 1);
 }
-.first_colour_checkout_button:nth-child(2){
+.first_colour_checkout_button{
   background: rgba(141, 67, 68, 1);
 }
 
-.containers_boxes_checkout button:nth-child(1){
+/*.containers_boxes_checkout button:nth-child(1){
   background-color: darkblue;
 }
 .containers_boxes_checkout button:nth-child(2){
   background-color: darkgreen;
-}
+}*/
 .containers_boxes_checkout_2{
   position: relative;
   width: 100%;
