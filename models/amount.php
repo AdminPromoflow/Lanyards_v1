@@ -165,7 +165,6 @@ class Amount_Models {
 
 
   public function getIdAmountForJob($amount) {
-    echo json_encode("Buenas");exit;
       try {
           $sql = $this->connection->prepare("
               SELECT Amount.idPriceAmount
@@ -191,6 +190,7 @@ class Amount_Models {
           $sql->bindParam(':noSides', $this->description->side_printed->side);
           $sql->bindParam(':colourQuantity', $this->description->colour_quantity->type);
           $sql->bindParam(':amount', $amount, PDO::PARAM_INT);
+          echo json_encode("Buenas");exit;
 
           $sql->execute();
           $result = $sql->fetch(PDO::FETCH_ASSOC);
