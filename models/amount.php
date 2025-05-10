@@ -199,8 +199,8 @@ class Amount_Models {
           $sql->execute();
 
           // Fetch the result
-          $response = $sql->fetchAll(PDO::FETCH_ASSOC)["idPriceAmount"];
-
+          $response = $sql->fetchAll(PDO::FETCH_ASSOC);
+          $response = $response["idPriceAmount"];
           echo json_encode($response);exit;
 
 
