@@ -62,8 +62,9 @@ class Job {
 
         // Crear el job en la base de datos
         $success = $job_model->createJob();
+        echo json_encode($success);
 
-        if ($success) {
+      /*  if ($success) {
             echo json_encode([
                 "message" => "Job created successfully",
                 "order_id" => $_SESSION['orden_in_process']
@@ -73,7 +74,7 @@ class Job {
             echo json_encode([
                 "message" => "Failed to create job"
             ]);
-        }
+        }*/
     }
 
     // 🔍 Verifica o crea una orden en sesión
