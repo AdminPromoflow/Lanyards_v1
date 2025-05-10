@@ -157,10 +157,6 @@ class Amount_Models {
         throw new Exception("Error in the user verification query.");
     }
   }
-
-  public getIdAmount(){
-
-  }
     /*
    * Get a list of all Materia's lanyards from the database.
    *
