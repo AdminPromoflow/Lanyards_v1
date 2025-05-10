@@ -38,7 +38,6 @@ class Job {
 
     // 🛠️ Crea un nuevo trabajo (job)
     private function createJob($data) {
-      echo json_encode("hola");
         $this->verifyOrden();
 
         $connection = new Database();
@@ -57,6 +56,10 @@ class Job {
 
         // Recuperar el idOrder desde la sesión
         $job_model->setIdOrder($_SESSION['orden_in_process']);
+
+        $amount_Models = new Amount_Models();
+        $amount_Models->setDescription($data->description);
+        echo $data->description;
 
         // Extras pueden ser null o string vacío
           $job_model->setIdPriceAmount(0); // Cambiar si hay valor

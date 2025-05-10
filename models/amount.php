@@ -7,6 +7,8 @@ class Amount_Models {
   private $material;
   private $noColour;
   private $minAmount;
+  private $description;
+
 
   // Constructor that initializes the connection.
   function __construct($connection) {
@@ -26,6 +28,9 @@ class Amount_Models {
   }
   public function setMinAmount($minAmount){
     $this->minAmount = $minAmount;
+  }
+  public function setDescription($description) {
+      $this->description = $description;
   }
 
 
