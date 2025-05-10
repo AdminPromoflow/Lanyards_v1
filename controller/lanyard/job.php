@@ -62,7 +62,8 @@ class Job {
         $amount_Models = new Amount_Models($connection);
 
         $amount_Models->setDescription($data->description);
-        $idAmount = $amount_Models->getIdAmountForJob(10);
+
+        $idAmount = $amount_Models->getIdAmountForJob($data->amount);
 
         // Extras pueden ser null o string vacío
           $job_model->setIdPriceAmount($idAmount); // Cambiar si hay valor
