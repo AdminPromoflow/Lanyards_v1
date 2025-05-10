@@ -164,7 +164,7 @@ class Amount_Models {
   }
 
 
-  public function getIdAmountForJob($amount = 10) {
+  public function getIdAmountForJob($amount) {
       try {
           $sql = $this->connection->prepare("
               SELECT Amount.idPriceAmount
@@ -197,7 +197,8 @@ class Amount_Models {
           return $result ? $result['idPriceAmount'] : null;
 
       } catch (PDOException $e) {
-          throw new Exception("Error in getIdAmountForJob: " . $e->getMessage());
+        echo json_encode( $e );
+
       }
   }
 
