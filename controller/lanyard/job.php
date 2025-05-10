@@ -39,8 +39,7 @@ class Job {
     // 🛠️ Crea un nuevo trabajo (job)
     private function createJob($data) {
         $idOrder = $this->verifyOrden($data);
-        echo json_encode("Vamos lograndolo");
-        exit;
+
 
         $connection = new Database();
         $job_model = new Job_Model($connection);
@@ -90,6 +89,8 @@ class Job {
         if (session_status() !== PHP_SESSION_ACTIVE) {
             session_start();
         }
+        echo json_encode("Vamos lograndolo 2");
+        exit;
 
         if (!isset($_SESSION['orden_in_process'])) {
             $connection = new Database();
