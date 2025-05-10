@@ -90,7 +90,8 @@ class Job {
             session_start();
         }
 
-        echo (isset($_SESSION['orden_in_process']));exit;
+        $order_in_process = isset($_SESSION['orden_in_process']);
+        echo json_encode($order_in_process);exit;
 
         if (isset($_SESSION['orden_in_process']) == 1) {
 
