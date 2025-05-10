@@ -61,9 +61,9 @@ class Job {
           $job_model->setIdPriceAmount(0); // Cambiar si hay valor
 
         // Crear el job en la base de datos
-      /*  $success = $job_model->createJob();
+        $success = $job_model->createJob();
 
-        if ($success) {
+      /*  if ($success) {
             echo json_encode([
                 "message" => "Job created successfully",
                 "order_id" => $_SESSION['orden_in_process']
