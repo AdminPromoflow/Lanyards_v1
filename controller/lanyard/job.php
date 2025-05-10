@@ -92,7 +92,7 @@ class Job {
 
         echo json_encode(isset($_SESSION['orden_in_process']));exit;
 
-        if (isset($_SESSION['orden_in_process']) =! 1) {
+        if (isset($_SESSION['orden_in_process']) == 1) {
 
             $connection = new Database();
             $order_model = new Order_Model($connection);
