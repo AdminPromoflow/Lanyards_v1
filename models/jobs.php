@@ -95,7 +95,7 @@ class Job_Model {
             $this->connection->closeConnection();
             return true;
         } catch (PDOException $e) {
-            return false;
+            return $e;
         }
     }
 }
