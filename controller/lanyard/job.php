@@ -90,10 +90,10 @@ class Job {
             session_start();
         }
 
-
+        echo json_encode(isset($_SESSION['orden_in_process']));
 
         if (isset($_SESSION['orden_in_process']) =! 1) {
-          echo json_encode("Vamos");
+
             $connection = new Database();
             $order_model = new Order_Model($connection);
             $order_model->setEmail($_SESSION['email']);
