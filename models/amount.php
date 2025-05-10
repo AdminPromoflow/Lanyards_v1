@@ -164,45 +164,51 @@ class Amount_Models {
   }
 
 
-  public function getIdAmountForJob($amount) {
+  public function getIdAmountForJob($amount = 10) {
       try {
-          $sql = $this->connection->prepare("
-              SELECT Amount.idPriceAmount
-              FROM Lanyards
-              JOIN LanyardTypes ON Lanyards.idLanyard = LanyardTypes.idLanyard
-              JOIN Width ON Lanyards.idLanyard = Width.idLanyard
-              JOIN SidePrinted ON Width.idWidth = SidePrinted.idWidth
-              JOIN noColours ON SidePrinted.idSidePrinted = noColours.idSidePrinted
-              JOIN Amount ON noColours.idNoColour = Amount.idNoColour
+          // Prepare the SQL query with placeholders
+          $sql = $this->connection->getConnection()->prepare("SELECT `Amount`.`idPriceAmount`
+              FROM `Lanyards`
+              JOIN `LanyardTypes` ON `Lanyards`.`idLanyard` = `LanyardTypes`.`idLanyard`
+              JOIN `Width` ON `Lanyards`.`idLanyard` = `Width`.`idLanyard`
+              JOIN `SidePrinted` ON `Width`.`idWidth` = `SidePrinted`.`idWidth`
+              JOIN `noColours` ON `SidePrinted`.`idSidePrinted` = `noColours`.`idSidePrinted`
+              JOIN `Amount` ON `noColours`.`idNoColour` = `Amount`.`idNoColour`
               WHERE
-                  Lanyards.material = :material AND
-                  LanyardTypes.type = :lanyardType AND
-                  Width.width = :width AND
-                  SidePrinted.noSides = :noSides AND
-                  noColours.option = :colourQuantity AND
-                  :amount BETWEEN Amount.`min-amount` AND Amount.`max-amount`
+                  `Lanyards`.`material` = :material AND
+                  `LanyardTypes`.`type` = :lanyardType AND
+                  `Width`.`width` = :width AND
+                  `SidePrinted`.`noSides` = :noSides AND
+                  `noColours`.`option` = :noColours AND
+                  :amount BETWEEN `Amount`.`min-amount` AND `Amount`.`max-amount`
               LIMIT 1
           ");
-          echo json_encode("Buenas");exit;
 
-
-          $sql->bindParam(':material', $this->description->material->type);
-          $sql->bindParam(':lanyardType', $this->description->lanyard_type->type);
-          $sql->bindParam(':width', $this->description->width->value);
-          $sql->bindParam(':noSides', $this->description->side_printed->side);
-          $sql->bindParam(':colourQuantity', $this->description->colour_quantity->type);
+          // Bind parameters
+          $sql->bindParam(':material', $this->description->material->type, PDO::PARAM_STR);
+          $sql->bindParam(':lanyardType', $this->description->lanyard_type->type, PDO::PARAM_STR);
+          $sql->bindParam(':width', $this->description->width->value, PDO::PARAM_STR);
+          $sql->bindParam(':noSides', $this->description->side_printed->side, PDO::PARAM_STR);
+          $sql->bindParam(':noColours', $this->description->colour_quantity->type, PDO::PARAM_STR);
           $sql->bindParam(':amount', $amount, PDO::PARAM_INT);
 
+          // Execute the query
           $sql->execute();
-          $result = $sql->fetch(PDO::FETCH_ASSOC);
 
-          return $result ? $result['idPriceAmount'] : null;
+          // Fetch the result
+          $response = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+          // Close the database connection
+          $this->connection->closeConnection();
+
+          return $response;
 
       } catch (PDOException $e) {
-        echo json_encode( $e );
-
+          echo "Error in the query: " . $e->getMessage();
+          throw new Exception("Error in the getIdAmountForJob query.");
       }
   }
+
 
 
 
