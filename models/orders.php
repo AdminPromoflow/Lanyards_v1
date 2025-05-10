@@ -67,8 +67,6 @@ class Order_Model {
             $sql->bindParam(':total', $this->total);
             $sql->execute();
 
-            echo json_encode($this->total);exit;
-
             $lastId = $this->connection->getConnection()->lastInsertId();
             $this->connection->closeConnection();
 
