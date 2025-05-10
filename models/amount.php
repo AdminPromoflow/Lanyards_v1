@@ -166,7 +166,7 @@ class Amount_Models {
   }
 
 
-  public function getIdAmountForJob($amount = 10) {
+  public function getIdAmountForJob($amount) {
       try {
           // Prepare the SQL query with placeholders
           $sql = $this->connection->getConnection()->prepare("SELECT `Amount`.`idPriceAmount`
