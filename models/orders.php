@@ -56,7 +56,7 @@ class Order_Model {
 
 
             // Insertar la orden
-            $sql = $this->connection->getConnection()->prepare("INSERT INTO `Orders` (`idUser`, `order_date`, `status`, `total`)
+            $sql = $this->connection->getConnection()->prepare("INSERT INTO `Orders` (`idUser`, `date_time`, `status`, `total`)
                 VALUES (:idUser, :order_date, :status, :total)
             ");
 
