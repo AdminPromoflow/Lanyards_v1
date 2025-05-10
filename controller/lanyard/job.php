@@ -50,7 +50,7 @@ class Job {
         $descriptionJson = json_encode($data->description, JSON_UNESCAPED_UNICODE);
         $job_model->setDescription($descriptionJson);
 
-      /*   $job_model->setPricePerUnit($data->price_per_unit);
+         $job_model->setPricePerUnit($data->price_per_unit);
         $job_model->setAmount($data->amount);
         $job_model->setTotal($data->total);
 
@@ -61,7 +61,7 @@ class Job {
           $job_model->setIdPriceAmount(0); // Cambiar si hay valor
 
         // Crear el job en la base de datos
-        $success = $job_model->createJob();
+      /*  $success = $job_model->createJob();
 
         if ($success) {
             echo json_encode([
