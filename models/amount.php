@@ -162,12 +162,11 @@ class Amount_Models {
         throw new Exception("Error in the user verification query.");
     }
   }
-    /*
-   * Get a list of all Materia's lanyards from the database.
-   *
-   * @return array An array of customer data, or an empty array if no customers are found.
-   */
 
+
+    public function getIdAmountForJob() {
+
+    }
 
 
 
