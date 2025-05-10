@@ -77,12 +77,15 @@ class Job {
         if ($success) {
             echo json_encode([
                 "message" => "Job created successfully",
-                "order_id" => $_SESSION['orden_in_process']
+                "order_id" => $_SESSION['orden_in_process'],
+                "status" => true
             ]);
         } else {
             http_response_code(500);
             echo json_encode([
-                "message" => "Failed to create job"
+                "message" => "Failed to create job",
+                "status" => false
+
             ]);
         }
     }

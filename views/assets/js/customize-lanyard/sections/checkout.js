@@ -90,15 +90,7 @@ class Checkout {
 
   }
 
-  job(){
-    /*alert(
-      this.getProduct() + " /n " +
-      JSON.stringify(this.getDescription()) + " /n " +
-      this.getPricePerUnit() + " /n " +
-      this.getAmount() + " /n " +
-      this.getTotal() + " /n "
-  );*/
-  }
+
   makeAjaxRequestGetAllMaterials() {
     const url = "../../controller/lanyard/job.php";
 
@@ -127,6 +119,8 @@ class Checkout {
       .then(data => {
         alert(data);
         data = JSON.parse(data);
+
+        
 
       })
       .catch(error => {
