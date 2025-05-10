@@ -61,7 +61,7 @@ class Job {
         $amount_Models = new Amount_Models($connection);
 
         $amount_Models->setDescription($data->description);
-        echo json_encode($data->description);exit;
+        echo json_encode($data->description->material->type);exit;
 
 
         // Extras pueden ser null o string vacío
