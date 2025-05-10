@@ -90,9 +90,8 @@ class Job {
             session_start();
         }
 
-        echo json_encode(!isset($_SESSION['orden_in_process']);
+        echo json_encode(isset($_SESSION['orden_in_process'])."HOLA");
         exit;
-
         if (!isset($_SESSION['orden_in_process'])) {
 
             $connection = new Database();
@@ -104,7 +103,7 @@ class Job {
             $order_model->setOrderDate($dateTime);
 
             $order_model->setTotal($data->total);
-          //  $_SESSION['orden_in_process'] = $order_model->createOrder();
+            $_SESSION['orden_in_process'] = $order_model->createOrder();
 
         }
 
