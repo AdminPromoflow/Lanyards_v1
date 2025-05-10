@@ -167,6 +167,8 @@ class Amount_Models {
 
 
   public function getIdAmountForJob($amount) {
+    echo json_encode($amount);exit;
+
       try {
           // Prepare the SQL query with placeholders
           $sql = $this->connection->getConnection()->prepare("SELECT `Amount`.`idPriceAmount`

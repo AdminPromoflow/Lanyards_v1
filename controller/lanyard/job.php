@@ -62,7 +62,6 @@ class Job {
         $amount_Models = new Amount_Models($connection);
 
         $amount_Models->setDescription($data->description);
-        echo json_encode($data->amount);exit;
 
 
         $idAmount = $amount_Models->getIdAmountForJob($data->amount);
