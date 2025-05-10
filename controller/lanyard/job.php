@@ -58,7 +58,7 @@ class Job {
         $job_model->setIdOrder($_SESSION['orden_in_process']);
 
         $connection = new Database();
-        $amount_Models = new AmountModel($connection);
+        $amount_Models = new Amount_Models($connection);
         echo json_encode("hola tu");exit;
 
         $amount_Models->setDescription($data->description);
