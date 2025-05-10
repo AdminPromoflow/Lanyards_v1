@@ -201,7 +201,10 @@ class Amount_Models {
           // Fetch the result
           $response = $sql->fetchAll(PDO::FETCH_ASSOC);
 
-          
+          echo json_encode($response."algo");exit;
+
+
+
 
 
           // Close the database connection
