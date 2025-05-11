@@ -64,7 +64,25 @@ class ClassRegister2 {
       alert(JSON.stringify(data));
       chargingClass.hideShowchargin(false); // Hide loading indicator
 
+      switch (data.messageRegister) {
+        case "1":
+          alert("Registration successful. Welcome to our community! Please log in.");
+          // Opens the login window using the 'classlogin2' instance.
+          classlogin2.openLogin(true);
 
+          // Closes the registration window using 'this' (referring to the current instance).
+          this.openRegister(false);
+
+          // Changes the preview image to the login image.
+          classPreviewLogin.changeImage("login");
+          break;
+        case "0":
+          alert("Registration unsuccessful. The user already exists.");
+          break;
+        default:
+          alert("An unexpected error occurred. Please try again.");
+          break;
+      }
     })
     .catch(error => {
       console.error("Error:", error);
