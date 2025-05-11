@@ -88,6 +88,7 @@ class Job {
                 "order_id" => $_SESSION['orden_in_process'],
                 "status" => true
             ]);
+            $order_in_process = false;
         } else {
             http_response_code(500);
             echo json_encode([
