@@ -61,7 +61,7 @@ class ClassRegister2 {
       return response.json(); // Expecting JSON response
     })
     .then(data => {
-      alert(JSON.stringify(data));
+      //alert(JSON.stringify(data));
       chargingClass.hideShowchargin(false); // Hide loading indicator
 
       switch (data.messageRegister) {
