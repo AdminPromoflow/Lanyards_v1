@@ -4,7 +4,7 @@ require_once '../config/database.php';
 require_once '../../models/orders.php';
 require_once '../../models/jobs.php';
 require_once '../../models/amount.php';
-require_once '../../models/clips.php';
+//require_once '../../models/clips.php';
 
 
 
@@ -74,11 +74,11 @@ class Job {
         // Extras pueden ser null o string vacío
           $job_model->setIdPriceAmount($idAmount); // Cambiar si hay valor
 
-
+/*
           $connection = new Database();
           $clips_models = new Clips_Models($connection);
           $clips_models->setDescription($data->description);
-
+*/
 
           $clips_models->getIdClip();
 
