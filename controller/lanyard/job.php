@@ -137,7 +137,7 @@ class Job {
         }
 
         // Final debug or confirmation message
-        echo json_encode("Processing completed");
+        echo json_encode($data->accessories->type);
         exit;
     }
 
