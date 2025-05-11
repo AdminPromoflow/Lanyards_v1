@@ -1,7 +1,16 @@
-<link rel="stylesheet" href="../../views/assets/css/global/customize-lanyard/sections/accessories.css">
+<?php
+// Obtener la última fecha de modificación de los archivos
+$cssPath = '../../views/assets/css/global/customize-lanyard/sections/accessories.css';
+$jsPath  = '../../views/assets/js/customize-lanyard/sections/accessories.js';
+
+$cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
+$jsVersion  = file_exists($jsPath)  ? filemtime($jsPath)  : time();
+?>
+<link rel="stylesheet" href="<?php echo $cssPath . '?v=' . $cssVersion; ?>">
+
 <section class="accessoriesSection  section ">
   <h2 class="name-section-customize-lanyard">Accessories</h2>
-  <br> 
+  <br>
   <p>Select one accessories</p>
   <br>
 
@@ -140,4 +149,4 @@
 </section>
 
 
-<script src="../../views/assets/js/customize-lanyard/sections/accessories.js"></script>
+<script src="<?php echo $jsPath . '?v=' . $jsVersion; ?>"></script>

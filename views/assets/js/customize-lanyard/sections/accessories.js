@@ -70,7 +70,6 @@ class Accessories {
 
   }
   selectAccessory(i){
-    alert(i);
 
     const text = priceDataAccessories[i].textContent;
     const number = parseFloat(text.match(/[-+]?[0-9]*\.?[0-9]+/)[0]);
