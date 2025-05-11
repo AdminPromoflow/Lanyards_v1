@@ -16,6 +16,7 @@ class ClassRegister2 {
 
     // Adds a listener to the 'enterRegister2' button for registration validation and submission.
     enterRegister2.addEventListener("click", () => {
+      alert(register2Name.value + register2Email.value + register2Password.value);
       // If name, email, and password are valid, send the registration request.
       if (this.validateNameRegister2() && this.validateEmailRegister2() && this.validatePasswordRegister2() && this.validateTermsConditions2()) {
         const url = "../../controller/users/register.php"; // API endpoint for registration.
