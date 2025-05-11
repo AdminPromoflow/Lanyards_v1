@@ -21,7 +21,7 @@ class Job {
 
                 switch ($action) {
                     case "createJob":
-                      //  $this->verifyExtras($data);
+                        $this->verifyExtras($data);
                         $this->createJob($data);
                         break;
 
@@ -103,9 +103,9 @@ class Job {
         }
     }
 
-  /*  verifyExtras($data){
+    public function verifyExtras($data){
       echo json_encode($data);exit;
-    }*/
+    }
 
     // 🔍 Verifica o crea una orden en sesión
     public function verifyOrden($data) {
