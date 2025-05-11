@@ -47,7 +47,8 @@ class ApiHandlerRegister {
 
     // Function to handle user registration
     public function handleRegistration($data) {
-
+      echo json_encode($data->nameRegister);
+      exit;
 
         try {
             // Extract and validate user data
@@ -58,8 +59,7 @@ class ApiHandlerRegister {
                 $data->passwordRegister
             );
 
-            echo json_encode("Hasta aca entra bien");
-            exit;
+
 
 
             if (!$validatedData) {
