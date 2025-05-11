@@ -148,6 +148,7 @@ class Register {
 
   // Function to make the AJAX request
   makeAjaxRequestRegister() {
+    alert(nameRegister.value.trim());
     const url = "../../controller/users/register.php?ajax=true"; // API endpoint
     const data = {
       action: "register",
