@@ -36,45 +36,45 @@ class Checkout {
   obtainProduct(){
     this.setProduct("Custom Lanyard");
   }
-  obtainDescription(){
+  obtainDescription() {
     const description = {
-    material: {
-      type: material.getMaterialSelected(),
-      additional_price: priceClass.getPricePerMaterialWithAmount()
-    },
-    lanyard_type: {
-      type: oneTwoEndsClass.getTypeLanyardSelected(),
-      additional_price: priceClass.getPriceLanyardType()
-    },
-    width: {
-      value: widthClass.getWidthSelected(),
-      additional_price: priceClass.getPriceWidth()
-    },
-    side_printed: {
-      side: sidePrintedClass.getSidePrintedSelected(),
-      additional_price: priceClass.getPriceSidePrinted()
-    },
-    colour_quantity: {
-      type: colourClass.getColourSelected(),
-      additional_price: priceClass.getPriceColour()
-    },
-    clip: {
-      type: clipClass.getClipSelected(),
-      additional_price: priceClass.getPriceClip()
-    },
-    attachment: {
-      type: attachmentClass.getAttachmentSelected(),
-      additional_price: priceClass.getPriceAttachment()
-    },
-    accessories: {
-      type: accessoriesClass.getAccessoriesSelected(),
-      additional_price: priceClass.getPriceAccessory()
-    }
+      material: {
+        type: material.getMaterialSelected(),
+        additional_price: priceClass.getPricePerMaterialWithAmount()
+      },
+      lanyard_type: {
+        type: oneTwoEndsClass.getTypeLanyardSelected(),
+        additional_price: priceClass.getPriceLanyardType()
+      },
+      width: {
+        value: widthClass.getWidthSelected(),
+        additional_price: priceClass.getPriceWidth()
+      },
+      side_printed: {
+        side: sidePrintedClass.getSidePrintedSelected(),
+        additional_price: priceClass.getPriceSidePrinted()
+      },
+      colour_quantity: {
+        type: colourClass.getColourSelected(),
+        additional_price: priceClass.getPriceColour()
+      },
+      clip: {
+        type: clipClass.getClipSelected(),
+        additional_price: priceClass.getPriceClip()
+      },
+      attachment: {
+        type: attachmentClass.getAttachmentSelected(),
+        additional_price: priceClass.getPriceAttachment()
+      },
+      accessories: {
+        type: accessoriesClass.getAccessoriesSelected(),
+        additional_price: priceClass.getPriceAccessory()
+      }
+    };
 
-  };
-  this.setDescription(description);
-
+    this.setDescription(description);
   }
+
   obtainPricePerUnit(){
     var pricePerUnit = priceClass.getPricePerMaterialWithAmount() +
                 priceClass.getPriceLanyardType() +
@@ -134,10 +134,11 @@ class Checkout {
         throw new Error("Network error.");
       })
       .then(data => {
+        alert("Vamos bien");
+
         data = JSON.parse(data);
 
         if (data["status"]) {
-          alert("Vamos bien");
 
         }
         else {
