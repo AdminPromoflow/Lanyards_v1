@@ -75,7 +75,7 @@
   margin: 5px 0;
   cursor: pointer;
 
-  display: flex;
+  display: none;
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
