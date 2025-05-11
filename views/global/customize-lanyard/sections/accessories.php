@@ -102,27 +102,27 @@ $jsVersion  = file_exists($jsPath)  ? filemtime($jsPath)  : time();
 
 
     <div class="subcontainer_boxes_accessories">
-      <h3 class="dataAccessories">Plastic</h3>
+      <h3 class="dataAccessories">Retractable Reel Plastic</h3>
       <img class="imgaccessories" src="../../views/assets/img/global/customize-lanyard/sections/accessories/12.png" alt="">
       <h4 class="priceDataAccessories">+£0.5 per unit</h4>
     </div>
     <div class="subcontainer_boxes_accessories">
-      <h3 class="dataAccessories">Round</h3>
+      <h3 class="dataAccessories">Retractable Reel Round</h3>
       <img class="imgaccessories" src="../../views/assets/img/global/customize-lanyard/sections/accessories/12.png" alt="">
       <h4 class="priceDataAccessories">+£0.85 per unit</h4>
     </div>
     <div class="subcontainer_boxes_accessories">
-      <h3 class="dataAccessories">Oval</h3>
+      <h3 class="dataAccessories">Retractable Reel Oval</h3>
       <img class="imgaccessories" src="../../views/assets/img/global/customize-lanyard/sections/accessories/12.png" alt="">
       <h4 class="priceDataAccessories">+£0.85 per unit</h4>
     </div>
     <div class="subcontainer_boxes_accessories">
-      <h3 class="dataAccessories">Metal</h3>
+      <h3 class="dataAccessories">Retractable Reel Metal</h3>
       <img class="imgaccessories" src="../../views/assets/img/global/customize-lanyard/sections/accessories/12.png" alt="">
       <h4 class="priceDataAccessories">+£1.10 per unit</h4>
     </div>
     <div class="subcontainer_boxes_accessories">
-      <h3 class="dataAccessories">Printing (per screen)</h3>
+      <h3 class="dataAccessories">Retractable Reel Printing (per screen)</h3>
       <img class="imgaccessories" src="../../views/assets/img/global/customize-lanyard/sections/accessories/12.png" alt="">
       <h4 class="priceDataAccessories">+£25.0 per unit</h4>
     </div>
