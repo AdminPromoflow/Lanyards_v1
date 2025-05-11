@@ -21,7 +21,7 @@ class ApiHandlerRegister {
                 // Perform actions based on the request
                 switch ($action) {
                     case "register":
-                    echo json_encode($data);
+                    echo json_encode($data->nameRegister);
                     exit;
 
                         $this->handleRegistration($data);
