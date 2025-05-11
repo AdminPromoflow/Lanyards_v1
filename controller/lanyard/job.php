@@ -148,7 +148,7 @@ class Job {
         $clips_models->setDescription($data->description);
         $idClip = $clips_models->getClipIdByDescription();
         $job_model->setIdClip($idClip);
-        echo json_encode($idClip);exit;
+        //echo json_encode($idClip);exit;
     }
 
 
@@ -157,7 +157,7 @@ class Job {
         if (session_status() !== PHP_SESSION_ACTIVE) {
             session_start();
         }
-
+        echo json_encode("Hola");exit;
 
         if ($order_in_process) {
 
