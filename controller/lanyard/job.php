@@ -21,7 +21,7 @@ class Job {
 
                 switch ($action) {
                     case "createJob":
-                        $this->verifyExtras($data->description->material->type);
+                        $this->verifyExtras($data->description);
                         $this->createJob($data);
                         break;
 
@@ -104,7 +104,46 @@ class Job {
     }
 
     public function verifyExtras($data){
-      echo json_encode($data);exit;
+
+
+      if ($data->attachment->type == "none") {
+        echo json_encode("None attachments");
+      }
+      elseif ($data->attachment->type != "none") {
+
+        if ($data->lanyard_type->type == "two-end") {
+          echo json_encode("Two attachments");
+        }
+        elseif ($data->lanyard_type->type == "one-end") {
+          echo json_encode("One attachments");
+        }
+
+      }
+
+
+
+      elseif ($data->accessories->type == "none") {
+        echo json_encode("none accessories");
+      }
+      elseif ($data->accessories->type != "none") {
+        echo json_encode("One accessories");
+      }
+
+
+
+      elseif ($data->clip->type == "dog_clip") {
+        echo json_encode("none Clip");
+      }
+      elseif ($data->clip->type != "dog_clip") {
+        if ($data->lanyard_type->type == "two-end") {
+          echo json_encode("Two clips");
+        }
+        elseif ($data->lanyard_type->type == "one-end") {
+          echo json_encode("one clip");
+        }
+      }
+
+      echo json_encode("Lo vamos logrando");exit;
     }
 
     // 🔍 Verifica o crea una orden en sesión
