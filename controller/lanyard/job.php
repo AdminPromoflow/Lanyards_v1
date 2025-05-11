@@ -21,7 +21,7 @@ class Job {
 
                 switch ($action) {
                     case "createJob":
-                        $this->verifyExtras($data);
+                        $this->verifyExtras($data->description);
                         $this->createJob($data);
                         break;
 
