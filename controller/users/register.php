@@ -47,6 +47,9 @@ class ApiHandlerRegister {
 
     // Function to handle user registration
     public function handleRegistration($data) {
+      echo json_encode(array( "messageRegister" => "1"));
+
+      exit;
 
         try {
 
@@ -65,7 +68,6 @@ class ApiHandlerRegister {
 
               return false;
             }
-            exit;
 
             // Create a database connection and user instance
             $connection = new Database();
