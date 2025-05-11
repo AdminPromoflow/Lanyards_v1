@@ -98,48 +98,42 @@ class Job {
         }
     }
 
-    public function verifyExtras($data){
-
-
-      if ($data->attachment->type == "none") {
-        echo json_encode("None attachments");
-      }
-      elseif ($data->attachment->type != "none") {
-
-        if ($data->lanyard_type->type == "two-end") {
-          echo json_encode("Two attachments");
+    public function verifyExtras($data)
+    {
+        // Check attachment type
+        if ($data->attachment->type === "none") {
+            echo json_encode("No attachments selected");
+        } else {
+            // Determine attachment count based on lanyard type
+            if ($data->lanyard_type->type === "two-end") {
+                echo json_encode("Two attachments");
+            } elseif ($data->lanyard_type->type === "one-end") {
+                echo json_encode("One attachment");
+            }
         }
-        elseif ($data->lanyard_type->type == "one-end") {
-          echo json_encode("One attachments");
+
+        // Check accessories type
+        if ($data->accessories->type === "none") {
+            echo json_encode("No accessories selected");
+        } else {
+            echo json_encode("One or more accessories selected");
         }
 
-      }
-
-
-
-      if ($data->accessories->type == "none") {
-        echo json_encode("none accessories");
-      }
-      elseif ($data->accessories->type != "none") {
-        echo json_encode("One accessories");
-      }
-
-
-
-      if ($data->clip->type == "dog_clip") {
-        echo json_encode("none Clip");
-      }
-      elseif ($data->clip->type != "dog_clip") {
-        if ($data->lanyard_type->type == "two-end") {
-            $this->createJobClip($data);
+        // Check clip type and process accordingly
+        if ($data->clip->type === "dog_clip") {
+            echo json_encode("Default clip: dog clip (no extra charge)");
+        } else {
+            // Call createJobClip for custom clip type, regardless of one or two ends
+            if (in_array($data->lanyard_type->type, ['one-end', 'two-end'])) {
+                $this->createJobClip($data);
+            }
         }
-        elseif ($data->lanyard_type->type == "one-end") {
-            $this->createJobClip($data);
-        }
-      }
 
-      echo json_encode("Lo vamos logrando");exit;
+        // Final debug or confirmation message
+        echo json_encode("Processing completed");
+        exit;
     }
+
     public function createJobClip($data) {
       $connection = new Database();
         $clips_models = new Clips_Models($connection);
