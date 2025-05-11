@@ -113,7 +113,7 @@ class Job {
         }
 
         // Check accessories type
-        if ($data->accessories->type === "none") {
+        if ($data->accessories->type === "none" || $data->accessories->type === "None") {
             echo json_encode("No accessories selected");
         } else {
             echo json_encode("One or more accessories selected");
