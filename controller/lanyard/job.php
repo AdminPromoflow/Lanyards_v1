@@ -158,9 +158,9 @@ class Job {
             session_start();
         }
 
-        echo json_encode("Buenas");exit;
-        if (!isset($_SESSION['orden_in_process'])) {
 
+        if (!isset($_SESSION['orden_in_process'])) {
+          echo json_encode("Buenas2");exit;
 
             $connection = new Database();
             $order_model = new Order_Model($connection);
