@@ -20,7 +20,7 @@ class ClassRegister2 {
       if (this.validateNameRegister2() && this.validateEmailRegister2() && this.validatePasswordRegister2() && this.validateTermsConditions2()) {
 
         // Make the AJAX request for registration.
-        this.makeAjaxRequestRegister(url, data);
+        this.makeAjaxRequestRegister();
       }
     });
 
