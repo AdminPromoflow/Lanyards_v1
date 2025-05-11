@@ -88,7 +88,6 @@ class Job {
                 "order_id" => $_SESSION['orden_in_process'],
                 "status" => true
             ]);
-            $order_in_process = false;
         } else {
             http_response_code(500);
             echo json_encode([
@@ -158,10 +157,11 @@ class Job {
         if (session_status() !== PHP_SESSION_ACTIVE) {
             session_start();
         }
+        echo json_encode($order_in_process);exit;
+
 
         if ($order_in_process) {
 
-          echo json_encode("Hola2");exit;
 
             $connection = new Database();
             $order_model = new Order_Model($connection);
