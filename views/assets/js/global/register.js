@@ -148,7 +148,6 @@ class Register {
 
   // Function to make the AJAX request
   makeAjaxRequestRegister() {
-    alert(nameRegister.value.trim());
     const url = "../../controller/users/register.php?ajax=true"; // API endpoint
     const data = {
       action: "register",
@@ -173,7 +172,7 @@ class Register {
       return response.json(); // Expecting JSON response
     })
     .then(data => {
-      alert(JSON.stringify(data));
+    //  alert(JSON.stringify(data));
       chargingClass.hideShowchargin(false); // Hide loading indicator
 
       switch (data.messageRegister) {

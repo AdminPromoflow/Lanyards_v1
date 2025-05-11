@@ -26,7 +26,7 @@ class ClassRegister2 {
           passwordRegister: register2Password.value
         };
         // Make the AJAX request for registration.
-        registerClass.makeAjaxRequestRegister(url, data);
+        registerClass2.makeAjaxRequestRegister(url, data);
       }
     });
 
@@ -39,6 +39,35 @@ class ClassRegister2 {
 
     registerWithApple2.addEventListener("click", function(){
     })*/
+  }
+  makeAjaxRequestRegister(url, data) {
+
+
+    // Show loading indicator
+    chargingClass.hideShowchargin(true);
+
+    fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Network error: ${response.status}`);
+      }
+      return response.json(); // Expecting JSON response
+    })
+    .then(data => {
+      alert(JSON.stringify(data));
+      chargingClass.hideShowchargin(false); // Hide loading indicator
+
+
+    })
+    .catch(error => {
+      console.error("Error:", error);
+      alert("A network error occurred. Please check your connection.");
+      //location.reload();
+    });
   }
 
   // Function to show or hide the register panel based on the action parameter.
