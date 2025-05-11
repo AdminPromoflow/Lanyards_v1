@@ -158,7 +158,7 @@ class Job {
             session_start();
         }
 
-        echo "Buenas";exit;
+        echo json_encode("Buenas");exit;
         if (!isset($_SESSION['orden_in_process'])) {
 
 
