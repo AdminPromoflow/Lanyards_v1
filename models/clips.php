@@ -61,6 +61,10 @@ class Clips_Models {
     }
   }
     public function getIdClip(){
+
+
+
+      
       echo json_encode($this->description);exit;
   }
 
