@@ -157,10 +157,9 @@ class Job {
         if (session_status() !== PHP_SESSION_ACTIVE) {
             session_start();
         }
-        echo json_encode(isset($_SESSION['orden_in_process']));exit;
 
 
-        if ($order_in_process) {
+        if (!isset($_SESSION['orden_in_process'])) {
 
 
             $connection = new Database();
