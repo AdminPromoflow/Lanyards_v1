@@ -71,7 +71,7 @@ class Checkout {
         additional_price: priceClass.getPriceAccessory()
       }
     };
-
+    alert(accessoriesClass.getAccessoriesSelected());
     this.setDescription(description);
   }
 
