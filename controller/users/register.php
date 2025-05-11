@@ -65,6 +65,7 @@ class ApiHandlerRegister {
 
               return false;
             }
+            exit;
 
             // Create a database connection and user instance
             $connection = new Database();
