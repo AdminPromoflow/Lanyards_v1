@@ -74,13 +74,13 @@ class Job {
         // Extras pueden ser null o string vacío
           $job_model->setIdPriceAmount($idAmount); // Cambiar si hay valor
 
-/*
+
           $connection = new Database();
           $clips_models = new Clips_Models($connection);
           $clips_models->setDescription($data->description);
 
 
-          $clips_models->getIdClip();*/
+        /*  $clips_models->getIdClip();*/
 
         // Crear el job en la base de datos
         $success = $job_model->createJob();
