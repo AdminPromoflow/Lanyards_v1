@@ -21,6 +21,7 @@ class Job {
 
                 switch ($action) {
                     case "createJob":
+                        $this->verifyExtras($data);
                         $this->createJob($data);
                         break;
 
@@ -48,7 +49,7 @@ class Job {
         $job_model = new Job_Model($connection);
 
         // Asignar los valores usando setters
-       $job_model->setName($data->product);
+        $job_model->setName($data->product);
 
         // Convertir la descripción a JSON string para guardarla como texto
         $descriptionJson = json_encode($data->description, JSON_UNESCAPED_UNICODE);
@@ -75,17 +76,16 @@ class Job {
           $job_model->setIdPriceAmount($idAmount); // Cambiar si hay valor
 
 
-          $connection = new Database();
+        /*  $connection = new Database();
           $clips_models = new Clips_Models($connection);
           $clips_models->setDescription($data->description);
-
-
           $idClip = $clips_models->getClipIdByDescription();
+          $job_model->setIdClip($idClip);
+          echo json_encode($idClip);exit;*/
 
-          echo json_encode($idClip);exit;
 
         // Crear el job en la base de datos
-        $success = $job_model->createJob();
+      //  $success = $job_model->createJob();
 
         if ($success) {
             echo json_encode([
@@ -101,6 +101,10 @@ class Job {
 
             ]);
         }
+    }
+
+    verifyExtras($data){
+      echo json_encode($data);exit;
     }
 
     // 🔍 Verifica o crea una orden en sesión
