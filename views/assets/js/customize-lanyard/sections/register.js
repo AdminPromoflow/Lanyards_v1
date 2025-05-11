@@ -26,7 +26,7 @@ class ClassRegister2 {
           passwordRegister: register2Password.value
         };
         // Make the AJAX request for registration.
-        registerClass2.makeAjaxRequestRegister(url, data);
+        this.makeAjaxRequestRegister(url, data);
       }
     });
 
