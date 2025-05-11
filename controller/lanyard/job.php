@@ -157,10 +157,10 @@ class Job {
         if (session_status() !== PHP_SESSION_ACTIVE) {
             session_start();
         }
-        echo json_encode("Hola");exit;
 
         if ($order_in_process) {
 
+          echo json_encode("Hola2");exit;
 
             $connection = new Database();
             $order_model = new Order_Model($connection);
