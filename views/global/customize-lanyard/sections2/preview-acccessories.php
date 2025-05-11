@@ -2,6 +2,9 @@
 <section class="previewAccessories" id="preview_accessories">
 
   <div class="accessories_clear_plastic_closed_face big_accessory">
+  </div>
+
+  <div class="accessories_clear_plastic_closed_face big_accessory">
     <img src="../../views/assets/img/global/customize-lanyard/sections/accessories/6.png" alt="">
   </div>
 
