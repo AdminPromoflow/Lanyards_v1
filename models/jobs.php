@@ -67,36 +67,37 @@ class Job_Model {
 
     // ✅ Método para crear un Job
     public function createJob() {
-        try {
-            $sql = $this->connection->getConnection()->prepare("
-                INSERT INTO `Jobs` (
-                    `name`, `description`, `price_per_unit`, `amount`, `total`,
-                    `link_pdf`, `notes`, `idOrder`, `idExtras`, `idClip`, `idPriceAmount`
-                ) VALUES (
-                    :name, :description, :price_per_unit, :amount, :total,
-                    :link_pdf, :notes, :idOrder, :idExtras, :idClip, :idPriceAmount
-                )
-            ");
+      try {
+          $sql = $this->connection->getConnection()->prepare("
+              INSERT INTO `Jobs` (
+                  `name`, `description`, `price_per_unit`, `amount`, `total`,
+                  `link_pdf`, `notes`, `idOrder`, `idExtras`, `idClip`, `idPriceAmount`
+              ) VALUES (
+                  :name, :description, :price_per_unit, :amount, :total,
+                  :link_pdf, :notes, :idOrder, :idExtras, :idClip, :idPriceAmount
+              )
+          ");
 
-            $sql->bindParam(':name', $this->name, PDO::PARAM_STR);
-            $sql->bindParam(':description', $this->description, PDO::PARAM_STR);
-            $sql->bindParam(':price_per_unit', $this->price_per_unit);
-            $sql->bindParam(':amount', $this->amount);
-            $sql->bindParam(':total', $this->total);
-            $sql->bindParam(':link_pdf', $this->link_pdf, PDO::PARAM_STR);
-            $sql->bindParam(':notes', $this->notes, PDO::PARAM_STR);
-            $sql->bindParam(':idOrder', $this->idOrder, PDO::PARAM_INT);
-            $sql->bindParam(':idExtras', $this->idExtras, PDO::PARAM_STR);
-            $sql->bindParam(':idClip', $this->idClip, PDO::PARAM_INT);
-            $sql->bindParam(':idPriceAmount', $this->idPriceAmount, PDO::PARAM_INT);
+          $sql->bindParam(':name', $this->name, PDO::PARAM_STR);
+          $sql->bindParam(':description', $this->description, PDO::PARAM_STR);
+          $sql->bindParam(':price_per_unit', $this->price_per_unit);
+          $sql->bindParam(':amount', $this->amount);
+          $sql->bindParam(':total', $this->total);
+          $sql->bindParam(':link_pdf', $this->link_pdf, PDO::PARAM_STR);
+          $sql->bindParam(':notes', $this->notes, PDO::PARAM_STR);
+          $sql->bindParam(':idOrder', $this->idOrder, PDO::PARAM_INT);
+          $sql->bindParam(':idExtras', $this->idExtras, PDO::PARAM_STR);
+          $sql->bindParam(':idClip', $this->idClip, PDO::PARAM_INT);
+          $sql->bindParam(':idPriceAmount', $this->idPriceAmount, PDO::PARAM_INT);
 
-            $sql->execute();
+          $result = $sql->execute();
+          $this->connection->closeConnection();
 
-            $this->connection->closeConnection();
-            return true;
-        } catch (PDOException $e) {
-            return $e;
-        }
-    }
+          return $result; // will be true if insert succeeded, false otherwise
+      } catch (PDOException $e) {
+          return false; // Or log the error as needed
+      }
+  }
+
 }
 ?>
