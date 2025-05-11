@@ -70,12 +70,12 @@ class Accessories {
 
   }
   selectAccessory(i){
+    alert(i);
 
     const text = priceDataAccessories[i].textContent;
     const number = parseFloat(text.match(/[-+]?[0-9]*\.?[0-9]+/)[0]);
     priceClass.setPriceAccessory(number);
     priceClass.changePricePerLanyard();
-    alert(text);
 
     // Restablece el borde de todos los elementos a transparente
     for (let j = 0; j < subContainerBoxesAccessories.length; j++) {
