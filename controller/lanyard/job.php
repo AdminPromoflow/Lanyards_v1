@@ -21,7 +21,7 @@ class Job {
 
                 switch ($action) {
                     case "createJob":
-                        $this->verifyExtras($data->description->type);
+                        $this->verifyExtras($data->description->material->type);
                         $this->createJob($data);
                         break;
 
