@@ -76,12 +76,7 @@ class Job {
           $job_model->setIdPriceAmount($idAmount); // Cambiar si hay valor
 
 
-        /*  $connection = new Database();
-          $clips_models = new Clips_Models($connection);
-          $clips_models->setDescription($data->description);
-          $idClip = $clips_models->getClipIdByDescription();
-          $job_model->setIdClip($idClip);
-          echo json_encode($idClip);exit;*/
+        /*  */
 
 
         // Crear el job en la base de datos
@@ -122,7 +117,7 @@ class Job {
 
 
 
-      elseif ($data->accessories->type == "none") {
+      if ($data->accessories->type == "none") {
         echo json_encode("none accessories");
       }
       elseif ($data->accessories->type != "none") {
@@ -131,20 +126,29 @@ class Job {
 
 
 
-      elseif ($data->clip->type == "dog_clip") {
+      if ($data->clip->type == "dog_clip") {
         echo json_encode("none Clip");
       }
       elseif ($data->clip->type != "dog_clip") {
         if ($data->lanyard_type->type == "two-end") {
-          echo json_encode("Two clips");
+            $this->createJobClip($data);
         }
         elseif ($data->lanyard_type->type == "one-end") {
-          echo json_encode("one clip");
+            $this->createJobClip($data);
         }
       }
 
       echo json_encode("Lo vamos logrando");exit;
     }
+    public function createJobClip($data) {
+      $connection = new Database();
+        $clips_models = new Clips_Models($connection);
+        $clips_models->setDescription($data->description);
+        $idClip = $clips_models->getClipIdByDescription();
+        $job_model->setIdClip($idClip);
+        echo json_encode($idClip);exit;
+    }
+
 
     // 🔍 Verifica o crea una orden en sesión
     public function verifyOrden($data) {
