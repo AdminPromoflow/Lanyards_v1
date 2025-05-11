@@ -173,13 +173,13 @@
 
 
 
-.subcontainers_boxes_accessories img{
+.subcontainer_boxes_accessories img{
   position: relative;
   height: 100%;
   margin: 0 5px;
   width: auto;
 }
-.subcontainers_boxes_accessories h3{
+.subcontainer_boxes_accessories h3{
   position: relative;
   margin: 0;
   width: 35%;
@@ -188,7 +188,7 @@
   font-weight: 300;
   font-size: 1em;
 }
-.subcontainers_boxes_accessories h4{
+.subcontainer_boxes_accessories h4{
   position: relative;
   margin: 0;
   text-align: right;

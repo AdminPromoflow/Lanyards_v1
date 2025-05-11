@@ -17,7 +17,7 @@ $jsVersion  = file_exists($jsPath)  ? filemtime($jsPath)  : time();
   <div id="containers_boxes_accessories" class="containers_boxes_accessories">
 
     <div class="container_boxes_accessories">
-      <h3 class="dataAccessories">None</h3>
+      <h3 class="">None</h3>
       <img class="imgaccessories" src="../../views/assets/img/global/customize-lanyard/sections/accessories/none.png" alt="">
       <div class="arrow_accessories">
         <img class="hideArrowAccessories" src="../../views/assets/img/global/customize-lanyard/sections/accessories/arrow_top.png" alt="">
