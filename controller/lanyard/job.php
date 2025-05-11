@@ -77,6 +77,8 @@ class Job {
 
           $connection = new Database();
           $clips_models = new Clips_Models($connection);
+          $clips_models->setDescription($data->description);
+
 
           $clips_models->getIdClip();
 
