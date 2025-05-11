@@ -1,11 +1,11 @@
 class Accessories {
   constructor() {
     this.accessoriesSelected = "none";
-    for (let i = 0; i < containerBoxesAccessories.length; i++) {
+/*for (let i = 0; i < containerBoxesAccessories.length; i++) {
   containerBoxesAccessories[i].addEventListener("click", function () {
     accessoriesClass.clickContainer(i);
   });
-}
+}*/
 
   for (var i = 0; i < subContainerBoxesAccessories.length; i++) {
     this.addBorderContainer(i, "transparent");
@@ -22,7 +22,7 @@ class Accessories {
 
 
   }
-  clickContainer(i) {
+/*  clickContainer(i) {
 
    // Restablece los bordes de todos los contenedores de accesorios a transparente
    for (let j = 0; j < containerBoxesAccessories.length; j++) {
@@ -51,18 +51,18 @@ class Accessories {
        // Rota la flecha hacia su posición original
        arrowAccessories[i].querySelector("img").style.transform = "rotate(0deg)";
    } else {
-     /*for (var j = 0; j < subcontainersBoxesAccessories.length; j++) {
+     for (var j = 0; j < subcontainersBoxesAccessories.length; j++) {
        subcontainersBoxesAccessories[i].style.display = "none";
        arrowAccessories[i].querySelector("img").style.transform = "rotate(0deg)";
 
-     }*/
+     }
        // Muestra el subcontenedor si está oculto
        subcontainersBoxesAccessories[i].style.display = "flex";
 
        // Rota la flecha para indicar que el subcontenedor está expandido
        arrowAccessories[i].querySelector("img").style.transform = "rotate(180deg)";
    }
-}
+}*/
 
   addBorderContainer(i, colour){
     subContainerBoxesAccessories[i].style.border = "1px solid" + colour;
