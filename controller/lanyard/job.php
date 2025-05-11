@@ -78,9 +78,9 @@ class Job {
           $connection = new Database();
           $clips_models = new Clips_Models($connection);
           $clips_models->setDescription($data->description);
-*/
 
-          $clips_models->getIdClip();
+
+          $clips_models->getIdClip();*/
 
         // Crear el job en la base de datos
         $success = $job_model->createJob();
