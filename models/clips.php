@@ -70,12 +70,14 @@ class Clips_Models {
               JOIN Lanyards l ON w.idLanyard = l.idLanyard
               WHERE w.width = :width
                 AND l.material = :material
+                AND c.name = :clip
               LIMIT 1
           ");
 
           // Acceder a las propiedades del objeto global $description
           $sql->bindParam(':width', $this->description->width->value, PDO::PARAM_STR);
           $sql->bindParam(':material', $this->description->material->type, PDO::PARAM_STR);
+          $sql->bindParam(':clip', $this->description->clip->type, PDO::PARAM_STR);
 
           // Ejecutar la consulta
           $sql->execute();
