@@ -71,7 +71,6 @@ class Checkout {
         additional_price: priceClass.getPriceAccessory()
       }
     };
-    alert(accessoriesClass.getAccessoriesSelected());
     this.setDescription(description);
   }
 
@@ -97,7 +96,12 @@ class Checkout {
                 priceClass.getPriceLanyardType() +
                 priceClass.getPriceWidth() +
                 priceClass.getPriceSidePrinted() +
-                priceClass.getPriceColour();
+                priceClass.getPriceColour() +
+                priceClass.getPriceClip() +
+                priceClass.getPriceAccessory() +
+                priceClass.getPriceAttachment()
+
+                ;
 
     const amount = priceClass.getAmountSelected();
 

@@ -21,7 +21,7 @@ class Job {
 
                 switch ($action) {
                     case "createJob":
-                        $this->verifyExtras($data->description);
+                        //$this->verifyExtras($data->description);
                         $this->createJob($data);
                         break;
 
@@ -137,7 +137,7 @@ class Job {
         }
 
         // Final debug or confirmation message
-        echo json_encode($data->accessories->type);
+      //  echo json_encode($data->accessories->type);
         exit;
     }
 
