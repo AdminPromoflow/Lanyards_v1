@@ -123,9 +123,16 @@ class Job {
         if ($data->clip->type === "dog_clip") {
             echo json_encode("Default clip: dog clip (no extra charge)");
         } else {
-            // Call createJobClip for custom clip type, regardless of one or two ends
-            if (in_array($data->lanyard_type->type, ['one-end', 'two-end'])) {
-                $this->createJobClip($data);
+            // Handle clip for two-end lanyard
+            if ($data->lanyard_type->type === "two-end") {
+                // Process both ends with the selected clip
+                echo json_encode("Clip two - end");
+                // $this->createJobClip($data); // Uncomment if 2 jobs needed
+            }
+
+            // Handle clip for one-end lanyard
+            if ($data->lanyard_type->type === "one-end") {
+              echo json_encode("Clip one - end");
             }
         }
 
@@ -133,6 +140,7 @@ class Job {
         echo json_encode("Processing completed");
         exit;
     }
+
 
     public function createJobClip($data) {
       $connection = new Database();
