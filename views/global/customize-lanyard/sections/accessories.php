@@ -26,8 +26,7 @@ $jsVersion  = file_exists($jsPath)  ? filemtime($jsPath)  : time();
     </div>
 
 
-    <div class="subcontainers_boxes_accessories">
-    </div>
+  
 
     <div class="container_boxes_accessories">
       <h3 class="">Rigid Card Holder</h3>
