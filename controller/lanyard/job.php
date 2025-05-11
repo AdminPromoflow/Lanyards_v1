@@ -4,7 +4,7 @@ require_once '../config/database.php';
 require_once '../../models/orders.php';
 require_once '../../models/jobs.php';
 require_once '../../models/amount.php';
-//require_once '../../models/clips.php';
+require_once '../../models/clips.php';
 
 
 
