@@ -26,7 +26,7 @@ $jsVersion  = file_exists($jsPath)  ? filemtime($jsPath)  : time();
     </div>
 
 
-  
+
 
     <div class="container_boxes_accessories">
       <h3 class="">Rigid Card Holder</h3>
@@ -37,6 +37,12 @@ $jsVersion  = file_exists($jsPath)  ? filemtime($jsPath)  : time();
     </div>
 
     <div class="subcontainers_boxes_accessories">
+
+      <div class="subcontainer_boxes_accessories">
+        <h3 class="dataAccessories">None </h3>
+        <img class="imgaccessories" src="../../views/assets/img/global/customize-lanyard/sections/accessories/none.png" alt="">
+        <h4 class="priceDataAccessories">+£0 per unit</h4>
+      </div>
       <div class="subcontainer_boxes_accessories">
         <h3 class="dataAccessories">Clear Plastic (closed face) </h3>
         <img class="imgaccessories" src="../../views/assets/img/global/customize-lanyard/sections/accessories/6.png" alt="">
