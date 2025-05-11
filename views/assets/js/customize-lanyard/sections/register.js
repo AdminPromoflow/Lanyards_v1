@@ -18,13 +18,7 @@ class ClassRegister2 {
     enterRegister2.addEventListener("click", () => {
       // If name, email, and password are valid, send the registration request.
       if (this.validateNameRegister2() && this.validateEmailRegister2() && this.validatePasswordRegister2() && this.validateTermsConditions2()) {
-        const url = "../../controller/users/register.php"; // API endpoint for registration.
-        const data = {
-          action: "register",
-          nameRegister: register2Name.value,
-          emailRegister: register2Email.value,
-          passwordRegister: register2Password.value
-        };
+
         // Make the AJAX request for registration.
         this.makeAjaxRequestRegister(url, data);
       }
@@ -40,7 +34,16 @@ class ClassRegister2 {
     registerWithApple2.addEventListener("click", function(){
     })*/
   }
-  makeAjaxRequestRegister(url, data) {
+  makeAjaxRequestRegister() {
+    const url = "../../controller/users/register.php?ajax=true"; // API endpoint
+    const data = {
+      action: "register",
+      nameRegister: register2Name.value.trim(),
+      emailRegister: register2Email.value.trim(),
+      passwordRegister: register2Password.value.trim(),
+      signupCategory: "normal"
+    };
+
 
 
     // Show loading indicator
