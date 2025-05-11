@@ -80,7 +80,7 @@ class Job {
           $clips_models->setDescription($data->description);
 
 
-        /*  $clips_models->getIdClip();*/
+          $clips_models->getIdClip();
 
         // Crear el job en la base de datos
         $success = $job_model->createJob();
