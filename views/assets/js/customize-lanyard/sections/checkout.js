@@ -138,12 +138,13 @@ class Checkout {
         throw new Error("Network error.");
       })
       .then(data => {
-        alert(data);
+
 
         data = JSON.parse(data);
 
         if (data["status"]) {
-
+          alert(data["message"]);
+          window.location.href = "../../views/shopping_cart/index.php";
         }
         else {
 
