@@ -50,7 +50,6 @@ class ApiHandlerRegister {
 
 
         try {
-
             // Extract and validate user data
             $security = new Security();
             $validatedData = $security->validateUserData(
@@ -58,6 +57,7 @@ class ApiHandlerRegister {
                 $data->emailRegister,
                 $data->passwordRegister
             );
+            
             echo json_encode($data."Hasta aca entra bien");
             exit;
 

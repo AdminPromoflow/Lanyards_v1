@@ -17,7 +17,7 @@ class ClassRegister2 {
     // Adds a listener to the 'enterRegister2' button for registration validation and submission.
     enterRegister2.addEventListener("click", () => {
       // If name, email, and password are valid, send the registration request.
-      if (this.validateNameRegister2() && this.validateEmailRegister2() && this.validatePasswordRegister2()) {
+      if (this.validateNameRegister2() && this.validateEmailRegister2() && this.validatePasswordRegister2() && this.validateTermsConditions2()) {
         const url = "../../controller/users/register.php"; // API endpoint for registration.
         const data = {
           action: "register",
@@ -98,6 +98,15 @@ class ClassRegister2 {
     register2Password.style.border = "3px solid transparent"; // Reset border if valid.
     return true; // Validation passes.
   }
+  // terms and Conditions
+  validateTermsConditions2() {
+      if (!aceptTermsConditions2.checked) {
+          alert("Please accept the Terms and Conditions.");
+          return false; // Evita que el formulario se envíe
+      }
+
+        return true; // Permite el envío si está marcado
+      }
 }
 
 // Get the DOM elements related to registration and login.
@@ -113,6 +122,7 @@ const enterRegister2 = document.getElementById("enterRegister2");
 const register2Name = document.getElementById("register2Name");
 const register2Email = document.getElementById("register2Email");
 const register2Password = document.getElementById("register2Password");
+const aceptTermsConditions2 = document.getElementById("acept_terms_conditions2");
 
 // Create an instance of the 'ClassRegister' class.
 const classRegister2 = new ClassRegister2();
