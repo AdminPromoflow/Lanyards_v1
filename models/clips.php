@@ -60,13 +60,40 @@ class Clips_Models {
         throw new Exception("Error in the user verification query.");
     }
   }
-    public function getIdClip(){
+  public function getClipIdByDescription() {
+      try {
+          // Preparar la consulta SQL
+          $sql = $this->connection->getConnection()->prepare("
+              SELECT c.idClip
+              FROM Clips c
+              JOIN Width w ON c.idWidth = w.idWidth
+              JOIN Lanyards l ON w.idLanyard = l.idLanyard
+              WHERE w.width = :width
+                AND l.material = :material
+              LIMIT 1
+          ");
 
+          // Acceder a las propiedades del objeto global $description
+          $sql->bindParam(':width', $this->description->width->value, PDO::PARAM_STR);
+          $sql->bindParam(':material', $this->description->material->type, PDO::PARAM_STR);
 
+          // Ejecutar la consulta
+          $sql->execute();
 
-      
-      echo json_encode($this->description);exit;
+          // Obtener el resultado
+          $result = $sql->fetch(PDO::FETCH_ASSOC);
+
+          // Cerrar la conexión
+          $this->connection->closeConnection();
+
+          // Retornar el idClip si se encuentra, de lo contrario null
+          return $result ? $result['idClip'] : null;
+      } catch (PDOException $e) {
+          echo "Error en la consulta: " . $e->getMessage();
+          throw new Exception("Error en la consulta para obtener el idClip.");
+      }
   }
+
 
     /*
    * Get a list of all Materia's lanyards from the database.

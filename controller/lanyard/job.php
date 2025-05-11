@@ -80,7 +80,9 @@ class Job {
           $clips_models->setDescription($data->description);
 
 
-          $clips_models->getIdClip();
+          $idClip = $clips_models->getClipIdByDescription();
+
+          echo json_encode($idClip);exit;
 
         // Crear el job en la base de datos
         $success = $job_model->createJob();

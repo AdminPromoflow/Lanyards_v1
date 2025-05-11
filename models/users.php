@@ -198,7 +198,7 @@ class Users {
    *
    * @return array An array of customer data, or an empty array if no customers are found.
    */
-  public function getAllLanyardCustomers() {
+  public function getAllLanyardCustomers(){
       try {
           // Prepare the SQL query to select all customers
           $sql = $this->connection->getConnection()->prepare("SELECT `nameUser`, `emailUser` FROM `Users`");
