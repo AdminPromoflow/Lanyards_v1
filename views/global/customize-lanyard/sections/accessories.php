@@ -30,7 +30,7 @@ $jsVersion  = file_exists($jsPath)  ? filemtime($jsPath)  : time();
     </div>
 
     <div class="container_boxes_accessories">
-      <h3 class="dataAccessories">Rigid Card Holder</h3>
+      <h3 class="">Rigid Card Holder</h3>
       <div class="arrow_accessories">
         <img class="" src="../../views/assets/img/global/customize-lanyard/sections/accessories/arrow_top.png" alt="">
 
@@ -56,7 +56,7 @@ $jsVersion  = file_exists($jsPath)  ? filemtime($jsPath)  : time();
     </div>
 
     <div class="container_boxes_accessories">
-      <h3 class="dataAccessories">Plastic Wallet</h3>
+      <h3 class="">Plastic Wallet</h3>
       <div class="arrow_accessories">
         <img class="" src="../../views/assets/img/global/customize-lanyard/sections/accessories/arrow_top.png" alt="">
 
@@ -85,7 +85,7 @@ $jsVersion  = file_exists($jsPath)  ? filemtime($jsPath)  : time();
 
     </div>
     <div class="container_boxes_accessories">
-      <h3 class="dataAccessories">Retractable Reel</h3>
+      <h3 class="">Retractable Reel</h3>
       <div class="arrow_accessories">
         <img class="" src="../../views/assets/img/global/customize-lanyard/sections/accessories/arrow_top.png" alt="">
 
@@ -121,7 +121,7 @@ $jsVersion  = file_exists($jsPath)  ? filemtime($jsPath)  : time();
     </div>
 
     <div class="container_boxes_accessories">
-      <h3 class="dataAccessories">Other</h3>
+      <h3 class="">Other</h3>
       <div class="arrow_accessories">
         <img class="" src="../../views/assets/img/global/customize-lanyard/sections/accessories/arrow_top.png" alt="">
 
