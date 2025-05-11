@@ -58,7 +58,7 @@ class ApiHandlerRegister {
                 $data->emailRegister,
                 $data->passwordRegister
             );
-            echo json_encode($validatedData."Hasta aca entra bien");
+            echo json_encode($data."Hasta aca entra bien");
             exit;
 
 
