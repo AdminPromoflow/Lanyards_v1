@@ -134,7 +134,7 @@ class Checkout {
         throw new Error("Network error.");
       })
       .then(data => {
-        alert("Vamos bien");
+        alert(data);
 
         data = JSON.parse(data);
 
