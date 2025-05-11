@@ -4,6 +4,7 @@ class Clips_Models {
   private $connection; // The database connection
   private $width;
   private $material;
+  private $description;
 
 
   // Constructor that initializes the connection.
@@ -18,6 +19,9 @@ class Clips_Models {
   // Set the user's name
   public function setWidth($width) {
     $this->width = $width;
+  }
+  public function setDescription($description) {
+      $this->description = $description;
   }
 
 
@@ -55,6 +59,9 @@ class Clips_Models {
         echo "Error in the query: " . $e->getMessage();
         throw new Exception("Error in the user verification query.");
     }
+  }
+    public function getIdClip(){
+      echo json_encode($this->description);exit;
   }
 
     /*

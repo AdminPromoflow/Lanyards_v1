@@ -4,6 +4,9 @@ require_once '../config/database.php';
 require_once '../../models/orders.php';
 require_once '../../models/jobs.php';
 require_once '../../models/amount.php';
+require_once '../../models/clips.php';
+
+
 
 
 class Job {
@@ -51,7 +54,7 @@ class Job {
         $descriptionJson = json_encode($data->description, JSON_UNESCAPED_UNICODE);
         $job_model->setDescription($descriptionJson);
 
-         $job_model->setPricePerUnit($data->price_per_unit);
+        $job_model->setPricePerUnit($data->price_per_unit);
         $job_model->setAmount($data->amount);
         $job_model->setTotal($data->total);
 
@@ -70,6 +73,12 @@ class Job {
 
         // Extras pueden ser null o string vacío
           $job_model->setIdPriceAmount($idAmount); // Cambiar si hay valor
+
+
+          $connection = new Database();
+          $clips_models = new Clips_Models($connection);
+
+          $clips_models->getIdClip();
 
         // Crear el job en la base de datos
         $success = $job_model->createJob();

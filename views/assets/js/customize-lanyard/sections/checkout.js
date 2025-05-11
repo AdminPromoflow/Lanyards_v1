@@ -57,7 +57,20 @@ class Checkout {
     colour_quantity: {
       type: colourClass.getColourSelected(),
       additional_price: priceClass.getPriceColour()
+    },
+    clip: {
+      type: clipClass.getClipSelected(),
+      additional_price: priceClass.getPriceClip()
+    },
+    attachment: {
+      type: attachmentClass.getAttachmentSelected(),
+      additional_price: priceClass.getPriceAttachment()
+    },
+    accessories: {
+      type: accessoriesClass.getAccessoriesSelected(),
+      additional_price: priceClass.getPriceAccessory()
     }
+
   };
   this.setDescription(description);
 
@@ -67,7 +80,11 @@ class Checkout {
                 priceClass.getPriceLanyardType() +
                 priceClass.getPriceWidth() +
                 priceClass.getPriceSidePrinted() +
-                priceClass.getPriceColour();
+                priceClass.getPriceColour() +
+                priceClass.getPriceClip() +
+                priceClass.getPriceAttachment() +
+                priceClass.getPriceAccessory()
+                ;
 
     this.setPricePerUnit(pricePerUnit);
   }
@@ -117,10 +134,17 @@ class Checkout {
         throw new Error("Network error.");
       })
       .then(data => {
-        alert(data);
         data = JSON.parse(data);
 
-        
+        if (data["status"]) {
+          alert("Vamos bien");
+
+        }
+        else {
+
+        }
+
+
 
       })
       .catch(error => {
