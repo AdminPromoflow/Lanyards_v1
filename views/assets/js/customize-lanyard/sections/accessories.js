@@ -70,9 +70,10 @@ class Accessories {
 
   }
   selectAccessory(i){
+    alert(i);
 
     const accessory = document.querySelectorAll(".dataAccessories");
-    alert(accessory[i+1].textContent);
+    alert(accessory[i].textContent);
     const text = priceDataAccessories[i].textContent;
     const number = parseFloat(text.match(/[-+]?[0-9]*\.?[0-9]+/)[0]);
     priceClass.setPriceAccessory(number);
