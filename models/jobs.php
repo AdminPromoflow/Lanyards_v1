@@ -98,6 +98,10 @@ class Job_Model {
           return false; // Or log the error as needed
       }
   }
+  public function getJobsByOrder(){
+    echo json_encode("lo seguimos logrando");
+
+  }
 
 }
 ?>

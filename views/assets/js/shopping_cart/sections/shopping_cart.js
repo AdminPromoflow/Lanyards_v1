@@ -48,7 +48,7 @@ class ShoppingCart {
 
       }
       else{
-        alert("The email address or password you entered is incorrect.");
+      //  alert("The email address or password you entered is incorrect.");
       }
     })
     .catch(error => {
