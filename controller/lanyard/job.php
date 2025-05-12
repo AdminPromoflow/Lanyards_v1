@@ -160,7 +160,7 @@ class Job {
       $job_model = new Job_Model($connection);
       $jobs = $job_model ->getJobsByOrder();
 
-      echo json_encode("hidi");
+      echo json_encode($_SESSION['orden_in_process']);
 
     }
 
