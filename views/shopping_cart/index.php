@@ -46,7 +46,22 @@
     </div>
   </section>
 
+
+    <?php
+    // Validar archivos JavaScript
+    $jsApp = '../../views/assets/js/home/app.js';
+    $jsLogin = '../../views/assets/js/global/login.js';
+    $jsRegister = '../../views/assets/js/global/register.js';
+
+    $jsAppVersion = file_exists($jsApp) ? filemtime($jsApp) : time();
+    $jsLoginVersion = file_exists($jsLogin) ? filemtime($jsLogin) : time();
+    $jsRegisterVersion = file_exists($jsRegister) ? filemtime($jsRegister) : time();
+    ?>
+
   <!-- Add the JS file -->
-  <script src="../assets/js/home/app.js"></script>
+  <script src="<?= $jsApp ?>?v=<?= $jsAppVersion; ?>"></script>
+  <script src="<?= $jsLogin ?>?v=<?= $jsLoginVersion; ?>"></script>
+  <script src="<?= $jsRegister ?>?v=<?= $jsRegisterVersion; ?>"></script>
+
 </body>
 </html>
