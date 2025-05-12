@@ -158,7 +158,9 @@ class Job {
     public function getJobsByOrder($data){
       $connection = new Database();
       $job_model = new Job_Model($connection);
-      $job_model ->getJobsByOrder();
+      $jobs = $job_model ->getJobsByOrder();
+
+      echo json_encode($jobs);
 
     }
 

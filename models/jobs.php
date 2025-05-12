@@ -98,10 +98,35 @@ class Job_Model {
           return false; // Or log the error as needed
       }
   }
-  public function getJobsByOrder(){
-    echo json_encode("lo seguimos logrando");
+  public function getJobsByOrder() {
+      try {
+          // Obtener el idOrder desde la sesión
+          $idOrder = $_SESSION['orden_in_process'];
 
+          // Preparar la consulta SQL con placeholder
+          $sql = $this->connection->getConnection()->prepare("SELECT * FROM `Jobs` WHERE `idOrder` = :idOrder");
+
+          // Enlazar el parámetro de la sesión
+          $sql->bindParam(':idOrder', $idOrder, PDO::PARAM_INT);
+
+          // Ejecutar la consulta
+          $sql->execute();
+
+          // Obtener todos los trabajos asociados al pedido
+          $jobs = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+          // Cerrar la conexión
+          $this->connection->closeConnection();
+
+          // Retornar los trabajos
+          return $jobs;
+
+      } catch (PDOException $e) {
+          echo "Error in the query: " . $e->getMessage();
+          throw new Exception("Error retrieving jobs for the order.");
+      }
   }
+
 
 }
 ?>
