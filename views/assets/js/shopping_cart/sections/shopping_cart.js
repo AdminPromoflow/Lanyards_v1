@@ -1,5 +1,6 @@
 class ShoppingCart {
   constructor() {
+    this.makeAjaxRequestJobsAvailables();
     // Iterar sobre cada elemento del carrito y agregar un evento
     for (let i = 0; i < product_items_shopping_cart.length; i++) {
       product_items_shopping_cart[i].addEventListener("click", () => {
@@ -17,7 +18,9 @@ class ShoppingCart {
   }
 
 
-
+  makeAjaxRequestJobsAvailables(){
+    alert("Hola");
+  }
 
 
 
