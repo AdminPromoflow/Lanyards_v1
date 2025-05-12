@@ -160,7 +160,6 @@ class Job {
       $job_model = new Job_Model($connection);
       $job_model ->getJobsByOrder();
 
-      echo json_encode("lo logramos");
     }
 
 
