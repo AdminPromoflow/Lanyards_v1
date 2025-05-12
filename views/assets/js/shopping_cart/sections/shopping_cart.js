@@ -19,7 +19,43 @@ class ShoppingCart {
 
 
   makeAjaxRequestJobsAvailables(){
-    alert("Hola");
+
+    // Define the URL and the JSON data you want to send
+    const url = "../../controller/lanyard/job.php"; // Replace with your API endpoint URL
+    const data = {
+      action: "getJobsByOrder"
+    };
+
+    fetch(url, {
+    method: "POST", // HTTP POST method to send data
+    headers: {
+      "Content-Type": "application/json" // Indicate that you're sending JSON
+    },
+    body: JSON.stringify(data) // Convert the JSON object to a JSON string and send it
+  })
+    .then(response => {
+      // Check if the response status is OK (2xx range)
+      if (response.ok) {
+        return response.json(); // Parse the response as JSON
+      }
+      // For other errors, throw a general network error
+      throw new Error("Network error.");
+    })
+    .then(data => {
+      alert(data);
+
+      if (data.message) {
+
+      }
+      else{
+        alert("The email address or password you entered is incorrect.");
+      }
+    })
+    .catch(error => {
+      // Handle specific errors (from throw in the .then block)
+      console.error("Error:", error.message);
+      alert(error.message); // Show the error message in an alert
+    });
   }
 
 

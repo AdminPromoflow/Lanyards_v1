@@ -24,6 +24,10 @@ class Job {
                         //$this->verifyExtras($data->description);
                         $this->createJob($data);
                         break;
+                    case "getJobsByOrder":
+                        //$this->verifyExtras($data->description);
+                        $this->getJobsByOrder($data);
+                        break;
 
                     default:
                         http_response_code(400);
@@ -149,6 +153,10 @@ class Job {
         $idClip = $clips_models->getClipIdByDescription();
         $job_model->setIdClip($idClip);
         //echo json_encode($idClip);exit;
+    }
+
+    public function getJobsByOrder($data){
+      echo json_encode("lo logramos");
     }
 
 

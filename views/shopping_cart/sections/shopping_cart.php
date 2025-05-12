@@ -55,6 +55,7 @@
           </div>
 
         </div>
+
         <div class="summary_items_shopping_cart">
           <div class="elements_summary_items_shopping_cart">
             <h3>Cost per unit</h3>
@@ -241,7 +242,7 @@
         <div class="elements_boxes2_container_shopping_cart">
           <h3>Material</h3>
           <h3>hola2</h3>
-        </div> 
+        </div>
         <div class="elements_boxes2_container_shopping_cart">
           <h3>Material</h3>
           <h3>hola2</h3>
