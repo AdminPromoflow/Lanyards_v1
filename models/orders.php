@@ -78,51 +78,49 @@ class Order_Model {
 
 
     public function getOrderIdByUser() {
-
         try {
-            // Obtener el email desde la sesión
-            $email = $_SESSION['email'];
+            if (session_status() !== PHP_SESSION_ACTIVE) {
+                session_start();
+            }
 
-            // Paso 1: Obtener el idUser desde Users
-            $sqlUser = $this->connection->getConnection()->prepare(
+            if (!isset($_SESSION['email'])) {
+                throw new Exception("Email not found in session.");
+            }
+
+            $email = $_SESSION['email'];
+            $conn = $this->connection->getConnection();
+
+            // Paso 1: Obtener el idUser
+            $sqlUser = $conn->prepare(
                 "SELECT `idUser` FROM `Users` WHERE `email` = :email"
             );
             $sqlUser->bindParam(':email', $email, PDO::PARAM_STR);
             $sqlUser->execute();
             $idUser = $sqlUser->fetchColumn();
 
-
-
             if (!$idUser) {
                 $this->connection->closeConnection();
                 return false;
             }
 
-            // Paso 2: Buscar si existe una orden para ese usuario
-            $sqlOrder = $this->connection->getConnection()->prepare(
+            // Paso 2: Obtener la orden
+            $sqlOrder = $conn->prepare(
                 "SELECT `idOrder` FROM `Orders` WHERE `idUser` = :idUser LIMIT 1"
             );
             $sqlOrder->bindParam(':idUser', $idUser, PDO::PARAM_INT);
             $sqlOrder->execute();
             $idOrder = $sqlOrder->fetchColumn();
 
-
-
-            // Cerrar la conexión
             $this->connection->closeConnection();
 
-            echo json_encode("hi");exit;
-
-
-            return $idOrder ? $idOrder : false;
-
-
+            return $idOrder ?: false;
 
         } catch (PDOException $e) {
-            echo "Error in the query: " . $e->getMessage();
+            error_log("DB Error in getOrderIdByUser: " . $e->getMessage());
             throw new Exception("Error retrieving order by user.");
         }
     }
+
 
 }
 ?>

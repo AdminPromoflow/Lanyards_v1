@@ -156,17 +156,12 @@ class Job {
     }
 
     public function getJobsByOrder($data){
-      if (session_status() !== PHP_SESSION_ACTIVE) {
-          session_start();
-      }
-
-
 
       $connection = new Database();
       $order_model = new Order_Model($connection);
       $var = $order_model->getOrderIdByUser();
 
-
+      echo json_encode($var);
 
 
       $connection = new Database();
