@@ -70,9 +70,9 @@ class Users {
    * Check if a user with the given email already exists in the database.
    */
    public function getOrderIdByUser() {
-     echo json_encode("Buenas");exit;
+     echo json_encode("Buenas3");exit;
 
-       try {
+       /*try {
            // Verifica y accede a la sesión
 
 
@@ -108,7 +108,7 @@ class Users {
        } catch (PDOException $e) {
            echo "Error in the query: " . $e->getMessage();
            throw new Exception("Error retrieving order by user.");
-       }
+       }*/
    }
 
 

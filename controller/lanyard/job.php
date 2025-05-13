@@ -164,11 +164,10 @@ class Job {
       $connection = new Database();
 
     $order_model = new Order_Model($connection);
-    echo json_encode("Buenas2");exit;
 
-      /*  $var = $order_model->getOrderIdByUser();
+       $order_model->getOrderIdByUser();
 
-
+       /*
 
 
       $connection = new Database();
