@@ -162,10 +162,11 @@ class Job {
       }
 
       $connection = new Database();
-      echo json_encode("Buenas");exit;
 
-    /*  $order_model = new Order_Model($connection);
-      $var = $order_model->getOrderIdByUser();
+    $order_model = new Order_Model($connection);
+    echo json_encode("Buenas");exit;
+
+      /*  $var = $order_model->getOrderIdByUser();
 
 
 
