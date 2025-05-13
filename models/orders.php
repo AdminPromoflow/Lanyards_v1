@@ -88,7 +88,6 @@ class Order_Model {
             }
 
             $email = $_SESSION['email'];
-            echo json_encode($idUser."hhaha"); exit;
 
             $conn = $this->connection->getConnection();
 
@@ -104,6 +103,7 @@ class Order_Model {
                 $this->connection->closeConnection();
                 return false;
             }
+            echo json_encode($idUser."hhaha"); exit;
 
 
             // Paso 2: Obtener la orden
