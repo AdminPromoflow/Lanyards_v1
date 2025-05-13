@@ -101,7 +101,6 @@ class Job_Model {
   public function getJobsByOrder() {
       try {
 
-        echo json_encode($this->idOrder); exit;
 
           // Preparar la consulta SQL con placeholder
           $sql = $this->connection->getConnection()->prepare("SELECT * FROM `Jobs` WHERE `idOrder` = :idOrder");
@@ -114,6 +113,9 @@ class Job_Model {
 
           // Obtener todos los trabajos asociados al pedido
           $jobs = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+          echo json_encode($jobs); exit;
+
 
           // Cerrar la conexión
           $this->connection->closeConnection();
