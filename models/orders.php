@@ -83,7 +83,6 @@ class Order_Model {
             $email = $_SESSION['email'];
 
 
-            echo json_encode($email);exit;
 
 
             // Paso 1: Obtener el idUser desde Users
@@ -93,6 +92,9 @@ class Order_Model {
             $sqlUser->bindParam(':email', $email, PDO::PARAM_STR);
             $sqlUser->execute();
             $idUser = $sqlUser->fetchColumn();
+
+            echo json_encode($idUser);exit;
+
 
             if (!$idUser) {
                 $this->connection->closeConnection();
