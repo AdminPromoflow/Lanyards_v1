@@ -151,9 +151,9 @@ class Menu {
     openLogoutClass.forEach(element => {
       element.style.display = activeSession ? 'flex' : 'none'; // Show or hide logout buttons
     });
-
-    alert(window.location.href);
-
+    alert(this.getActiveSession());
+  //  alert(window.location.href);
+  //https://lanyardsforyou.com/views/shopping_cart/index.php
 
   }
 
