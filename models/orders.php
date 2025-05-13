@@ -88,6 +88,7 @@ class Order_Model {
             }
 
             $email = $_SESSION['email'];
+            echo json_encode($idUser."hhaha"); exit;
 
             $conn = $this->connection->getConnection();
 
@@ -114,9 +115,6 @@ class Order_Model {
             $idOrder = $sqlOrder->fetchColumn();
 
             $this->connection->closeConnection();
-
-            echo json_encode($idOrder ?: false); exit;
-
 
             return $idOrder ?: false;
 
