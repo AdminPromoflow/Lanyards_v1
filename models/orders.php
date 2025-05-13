@@ -88,31 +88,21 @@ class Order_Model {
             }
 
             $email = $_SESSION['email'];
-
             $conn = $this->connection->getConnection();
 
-            // Paso 1: Obtener el idUser
-            $sqlUser = $conn->prepare(
-                "SELECT `idUser` FROM `Users` WHERE `email` = :email"
+            // Consulta combinada para obtener idOrder desde el email directamente
+            $sql = $conn->prepare(
+                "SELECT o.idOrder
+                 FROM Orders o
+                 INNER JOIN Users u ON o.idUser = u.idUser
+                 WHERE u.email = :email
+                 LIMIT 1"
             );
-            $sqlUser->bindParam(':email', $email, PDO::PARAM_STR);
-            $sqlUser->execute();
-            $idUser = $sqlUser->fetchColumn();
 
-            if (!$idUser) {
-                $this->connection->closeConnection();
-                return false;
-            }
-            echo json_encode($idUser."hhaha"); exit;
+            $sql->bindParam(':email', $email, PDO::PARAM_STR);
+            $sql->execute();
 
-
-            // Paso 2: Obtener la orden
-            $sqlOrder = $conn->prepare(
-                "SELECT `idOrder` FROM `Orders` WHERE `idUser` = :idUser LIMIT 1"
-            );
-            $sqlOrder->bindParam(':idUser', $idUser, PDO::PARAM_INT);
-            $sqlOrder->execute();
-            $idOrder = $sqlOrder->fetchColumn();
+            $idOrder = $sql->fetchColumn();
 
             $this->connection->closeConnection();
 
@@ -123,6 +113,7 @@ class Order_Model {
             throw new Exception("Error retrieving order by user.");
         }
     }
+
 
 
 }
