@@ -175,6 +175,7 @@ class Job {
       $job_model->setIdOrder($idOrder);
       $jobs = $job_model->getJobsByOrder();
 
+      echo json_encode($jobs); exit;
 
 
 
