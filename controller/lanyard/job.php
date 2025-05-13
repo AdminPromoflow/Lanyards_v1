@@ -156,10 +156,13 @@ class Job {
     }
 
     public function getJobsByOrder($data){
+      echo json_encode($_SESSION['email']);exit;
+
 
       $connection = new Database();
       $order_model = new Order_Model($connection);
-      $_SESSION['orden_in_process'] = $order_model->getOrderIdByUser();
+      $order_model->getOrderIdByUser();
+
 
 
       $connection = new Database();
@@ -182,7 +185,6 @@ class Job {
         $order_model = new Order_Model($connection);
          = $order_model->getOrderIdByUser();
 
-        echo json_encode($_SESSION['orden_in_process']);exit;
         if ($_SESSION['orden_in_process'] == false) {
         //
 
