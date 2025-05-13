@@ -162,10 +162,8 @@ class Job {
       }
 
       $connection = new Database();
-
-    $order_model = new Order_Model($connection);
-
-       $order_model->getOrderIdByUser();
+      $order_model3 = new Order_Model($connection);
+      $order_model3->getOrderIdByUser();
 
        /*
 
