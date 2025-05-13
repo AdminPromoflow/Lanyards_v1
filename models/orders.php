@@ -113,7 +113,7 @@ class Order_Model {
             // Cerrar la conexión
             $this->connection->closeConnection();
 
-            echo json_encode("Hola tu");exit;
+          //  echo json_encode("Hola tu");exit;
 
 
             return $idOrder ? $idOrder : false;
