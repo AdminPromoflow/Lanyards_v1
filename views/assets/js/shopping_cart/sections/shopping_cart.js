@@ -19,7 +19,7 @@ class ShoppingCart {
 
 
 
- 
+
 
   }
 
@@ -48,9 +48,9 @@ class ShoppingCart {
       throw new Error("Network error.");
     })
     .then(data => {
-    /*  alert(data);
+      alert(data);
 
-      if (data.message) {
+    /*  if (data.message) {
 
       }
       else{
