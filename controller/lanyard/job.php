@@ -164,7 +164,7 @@ class Job {
       $connection = new Database();
       $order_model = new Order_Model($connection);
       $order_model->setEmail($_SESSION['email']);
-      //$order_model3->getOrderIdByUser2();
+      $order_model->getOrderIdByUser2();
 
 
       //$order_model->test();
