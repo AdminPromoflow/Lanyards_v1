@@ -111,6 +111,10 @@ class Users {
        }*/
    }
 
+   public function test(){
+     echo "hi";
+   }
+
 
   /*
    * Create a new user with the provided name, email, and password.

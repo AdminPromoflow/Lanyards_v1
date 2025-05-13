@@ -163,7 +163,10 @@ class Job {
 
       $connection = new Database();
       $order_model3 = new Order_Model($connection);
-      $order_model3->getOrderIdByUser2();
+      //$order_model3->getOrderIdByUser2();
+
+
+      $order_model3->test();
 
        /*
 
