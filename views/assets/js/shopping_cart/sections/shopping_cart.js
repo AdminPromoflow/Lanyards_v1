@@ -1,5 +1,6 @@
 class ShoppingCart {
   constructor() {
+
     this.makeAjaxRequestJobsAvailables();
     // Iterar sobre cada elemento del carrito y agregar un evento
     for (let i = 0; i < product_items_shopping_cart.length; i++) {
@@ -10,11 +11,16 @@ class ShoppingCart {
     }
     open_checkout.addEventListener("click", function(){
       window.open("../../views/checkout/index.php", "_self");
-    }) 
+    })
 
     // Obtener los estilos iniciales de todos los elementos
     this.initializeStyles();
 
+    if (window.location.href == "https://lanyardsforyou.com/views/shopping_cart/index.php") {
+      if (this.getActiveSession() == false) {
+        alert("jum");
+      }
+    }
   }
 
 
