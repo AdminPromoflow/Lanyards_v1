@@ -175,9 +175,9 @@ class Job {
         $order_model = new Order_Model($connection);
         $_SESSION['orden_in_process'] = $order_model->getOrderIdByUser();
 
-
+        echo json_encode("Buenas2");exit;
         if ($_SESSION['orden_in_process'] == false) {
-        //  echo json_encode("Buenas2");exit;
+        //
 
             $connection = new Database();
             $order_model = new Order_Model($connection);
