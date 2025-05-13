@@ -58,9 +58,10 @@ class ShoppingCart {
     }*/
     })
     .catch(error => {
+      alert("error");
       // Handle specific errors (from throw in the .then block)
-      console.error("Error:", error.message);
-      alert(error.message); // Show the error message in an alert
+    //  console.error("Error:", error.message);
+      //alert(error.message); // Show the error message in an alert
     });
   }
 
