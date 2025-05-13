@@ -90,7 +90,6 @@ class Order_Model {
             $email = $_SESSION['email'];
             $conn = $this->connection->getConnection();
 
-            echo json_encode($email."hhaha2"); exit;
 
 
             // Consulta combinada para obtener idOrder desde el email directamente
@@ -105,6 +104,8 @@ class Order_Model {
             $sql->execute();
 
             $idOrder = $sql->fetchColumn();
+            echo json_encode($idOrder."hhaha3"); exit;
+
 
             $this->connection->closeConnection();
 
