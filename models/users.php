@@ -70,7 +70,6 @@ class Users {
    * Check if a user with the given email already exists in the database.
    */
    public function getOrderIdByUser() {
-     echo json_encode("1");exit;
 
        try {
            // Verifica y accede a la sesión
