@@ -156,7 +156,6 @@ class Job {
     }
 
     public function getJobsByOrder($data){
-      echo json_encode($data);exit;
 
       $connection = new Database();
       $order_model = new Order_Model($connection);

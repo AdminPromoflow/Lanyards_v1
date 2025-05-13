@@ -99,6 +99,8 @@ class Users {
 
            // Cierra la conexión
            $this->connection->closeConnection();
+           echo json_encode($idOrder);exit;
+
 
            // Retorna el resultado o false si no se encuentra
            return $idOrder ?: false;
