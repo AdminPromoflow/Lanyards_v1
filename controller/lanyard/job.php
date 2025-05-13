@@ -159,12 +159,14 @@ class Job {
       if (session_status() !== PHP_SESSION_ACTIVE) {
           session_start();
       }
-      echo json_encode($_SESSION['email']);exit;
+
 
 
       $connection = new Database();
       $order_model = new Order_Model($connection);
       $order_model->getOrderIdByUser();
+
+      echo json_encode($order_model->getOrderIdByUser());exit;
 
 
 
