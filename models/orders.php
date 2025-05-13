@@ -108,8 +108,6 @@ class Order_Model {
             $sqlOrder->execute();
             $idOrder = $sqlOrder->fetchColumn();
 
-            echo json_encode($idOrder);exit;
-
 
             // Cerrar la conexión
             $this->connection->closeConnection();
