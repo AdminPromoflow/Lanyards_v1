@@ -174,7 +174,7 @@ class Job {
       $jobs = $job_model ->getJobsByOrder();
 
 
-      echo json_encode($_SESSION['orden_in_process']."hahah");
+    //  echo json_encode($_SESSION['orden_in_process']."hahah");
 
     }
 
