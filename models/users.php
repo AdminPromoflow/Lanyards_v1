@@ -70,50 +70,41 @@ class Users {
    * Check if a user with the given email already exists in the database.
    */
    public function getOrderIdByUser2() {
-     echo json_encode("Buenas3");exit;
-
-       /*try {
-           // Verifica y accede a la sesión
-
-
-           if (!isset($_SESSION['email'])) {
-               throw new Exception("Email not found in session.");
+       try {
+           if (session_status() !== PHP_SESSION_ACTIVE) {
+               session_start();
            }
 
-           // Prepara la consulta con JOIN
-           $sql = $this->connection->getConnection()->prepare("SELECT o.idOrder
-               FROM Users u
-               INNER JOIN Orders o ON u.idUser = o.idUser
-               WHERE u.email = :email
-               LIMIT 1
-           ");
+           if (!isset($_SESSION['email'])) {
+               throw new Exception("No email in session.");
+           }
 
-           // Enlaza el parámetro
+           $sql = $this->connection->getConnection()->prepare(
+               "SELECT o.idOrder
+                FROM Users u
+                INNER JOIN Orders o ON u.idUser = o.idUser
+                WHERE u.email = :email
+                LIMIT 1"
+           );
+
            $sql->bindParam(':email', $_SESSION['email'], PDO::PARAM_STR);
-
-           // Ejecuta la consulta
            $sql->execute();
 
-           // Obtiene el idOrder directamente
            $idOrder = $sql->fetchColumn();
 
-           // Cierra la conexión
-           $this->connection->closeConnection();
-
-
-
-           // Retorna el resultado o false si no se encuentra
            return $idOrder ?: false;
 
-       } catch (PDOException $e) {
-           echo "Error in the query: " . $e->getMessage();
-           throw new Exception("Error retrieving order by user.");
-       }*/
+       } catch (Exception $e) {
+           echo json_encode([
+               "status" => false,
+               "error" => $e->getMessage()
+           ]);
+           exit;
+       }
    }
 
-   public function test(){
-     echo "hi";
-   }
+
+   
 
 
   /*
