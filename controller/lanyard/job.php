@@ -183,7 +183,7 @@ class Job {
 
         $connection = new Database();
         $order_model = new Order_Model($connection);
-         = $order_model->getOrderIdByUser();
+        $_SESSION['orden_in_process'] = $order_model->getOrderIdByUser();
 
         if ($_SESSION['orden_in_process'] == false) {
         //
