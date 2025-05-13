@@ -102,6 +102,8 @@ class Order_Model {
                 $this->connection->closeConnection();
                 return false;
             }
+            echo json_encode($idUser); exit;
+
 
             // Paso 2: Obtener la orden
             $sqlOrder = $conn->prepare(
