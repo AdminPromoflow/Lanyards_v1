@@ -156,25 +156,22 @@ class Job {
     }
 
     public function getJobsByOrder($data){
-
       if (session_status() !== PHP_SESSION_ACTIVE) {
           session_start();
       }
 
+
+
       $connection = new Database();
       $order_model = new Order_Model($connection);
-      $order_model->setEmail($_SESSION['email']);
-      $order_model->getOrderIdByUser2();
+      $var = $order_model->getOrderIdByUser();
 
 
-      //$order_model->test();
-
-       /*
 
 
       $connection = new Database();
       $job_model = new Job_Model($connection);
-      $jobs = $job_model ->getJobsByOrder();*/
+      $jobs = $job_model ->getJobsByOrder();
 
 
     //  echo json_encode($_SESSION['orden_in_process']."hahah");
