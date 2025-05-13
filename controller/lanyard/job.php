@@ -155,23 +155,35 @@ class Job {
         //echo json_encode($idClip);exit;
     }
 
-    public function getJobsByOrder($data){
-      echo json_encode("1");exit;
+    public function getJobsByOrder($data) {
+        try {
+            $connection = new Database();
+            $order_model2 = new Order_Model($connection); // Asegúrate que esta clase tenga el método
+            $var = $order_model2->getOrderIdByUser();
 
+            // Verificamos si la respuesta es válida
+            if ($var === false) {
+                echo json_encode([
+                    "status" => false,
+                    "message" => "No se encontró ninguna orden para este usuario."
+                ]);
+                return;
+            }
 
-      $connection = new Database();
-      $order_model2 = new Order_Model($connection);
-      $var = $order_model2->getOrderIdByUser();
-
-
-
-      $connection = new Database();
-      $job_model = new Job_Model($connection);
-      $jobs = $job_model ->getJobsByOrder();
-
-
-
+            // Si se encontró, devolvemos el ID
+            echo json_encode([
+                "status" => true,
+                "order_id" => $var
+            ]);
+        } catch (Exception $e) {
+            // Captura de errores
+            echo json_encode([
+                "status" => false,
+                "error" => $e->getMessage()
+            ]);
+        }
     }
+
 
 
     // 🔍 Verifica o crea una orden en sesión
