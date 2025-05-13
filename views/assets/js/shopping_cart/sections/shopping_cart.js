@@ -16,6 +16,8 @@ class ShoppingCart {
     // Obtener los estilos iniciales de todos los elementos
     this.initializeStyles();
 
+    alert(this.getActiveSession());
+
     if (window.location.href == "https://lanyardsforyou.com/views/shopping_cart/index.php") {
       if (this.getActiveSession() == false) {
         alert("jum");
@@ -48,14 +50,14 @@ class ShoppingCart {
       throw new Error("Network error.");
     })
     .then(data => {
-      alert(data);
+    /*  alert(data);
 
       if (data.message) {
 
       }
       else{
       //  alert("The email address or password you entered is incorrect.");
-      }
+    }*/
     })
     .catch(error => {
       // Handle specific errors (from throw in the .then block)
