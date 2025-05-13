@@ -146,7 +146,7 @@ class Job {
     }
 
 
-    public function createJobClip($data) {
+    public function createJobClip($data){
       $connection = new Database();
         $clips_models = new Clips_Models($connection);
         $clips_models->setDescription($data->description);
@@ -156,10 +156,10 @@ class Job {
     }
 
     public function getJobsByOrder($data){
+
       $connection = new Database();
       $job_model = new Job_Model($connection);
       $jobs = $job_model ->getJobsByOrder();
-
       echo json_encode($_SESSION['orden_in_process']);
 
     }
@@ -171,8 +171,12 @@ class Job {
             session_start();
         }
 
+        $connection = new Database();
+        $order_model = new Order_Model($connection);
+        $_SESSION['orden_in_process'] = $order_model->getOrderIdByUser();
 
-        if (!isset($_SESSION['orden_in_process'])) {
+
+        if ($_SESSION['orden_in_process'] == false) {
         //  echo json_encode("Buenas2");exit;
 
             $connection = new Database();
