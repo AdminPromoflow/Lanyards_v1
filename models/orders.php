@@ -82,9 +82,6 @@ class Order_Model {
             // Obtener el email desde la sesión
             $email = $_SESSION['email'];
 
-
-
-
             // Paso 1: Obtener el idUser desde Users
             $sqlUser = $this->connection->getConnection()->prepare(
                 "SELECT `idUser` FROM `Users` WHERE `email` = :email"
@@ -114,6 +111,7 @@ class Order_Model {
             $this->connection->closeConnection();
 
 
+            echo json_encode($idOrder ? $idOrder : false."Hola tu, rayos");exit;
 
             return $idOrder ? $idOrder : false;
 
