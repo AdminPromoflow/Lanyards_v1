@@ -109,10 +109,16 @@ class Order_Model {
             $idOrder = $sqlOrder->fetchColumn();
 
 
+
             // Cerrar la conexión
             $this->connection->closeConnection();
 
+            echo json_encode($idOrder."haha");exit;
+
+
             return $idOrder ? $idOrder : false;
+
+
 
         } catch (PDOException $e) {
             echo "Error in the query: " . $e->getMessage();

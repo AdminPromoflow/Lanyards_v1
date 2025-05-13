@@ -167,7 +167,6 @@ class Job {
       $var = $order_model->getOrderIdByUser();
 
 
-      echo json_encode($var."haha");exit;
 
 
       $connection = new Database();
