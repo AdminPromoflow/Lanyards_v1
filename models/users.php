@@ -70,12 +70,11 @@ class Users {
    * Check if a user with the given email already exists in the database.
    */
    public function getOrderIdByUser() {
+     echo json_encode("Buenas");
 
        try {
            // Verifica y accede a la sesión
-           if (session_status() !== PHP_SESSION_ACTIVE) {
-               session_start();
-           }
+
 
            if (!isset($_SESSION['email'])) {
                throw new Exception("Email not found in session.");

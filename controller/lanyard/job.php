@@ -142,7 +142,7 @@ class Job {
 
         // Final debug or confirmation message
       //  echo json_encode($data->accessories->type);
-      //  exit;
+        exit;
     }
 
 
@@ -155,35 +155,27 @@ class Job {
         //echo json_encode($idClip);exit;
     }
 
-    public function getJobsByOrder($data) {
-        try {
-            $connection = new Database();
-            $order_model2 = new Order_Model($connection); // Asegúrate que esta clase tenga el método
-            $var = $order_model2->getOrderIdByUser();
+    public function getJobsByOrder($data){
 
-            // Verificamos si la respuesta es válida
-            if ($var === false) {
-                echo json_encode([
-                    "status" => false,
-                    "message" => "No se encontró ninguna orden para este usuario."
-                ]);
-                return;
-            }
+      if (session_status() !== PHP_SESSION_ACTIVE) {
+          session_start();
+      }
 
-            // Si se encontró, devolvemos el ID
-            echo json_encode([
-                "status" => true,
-                "order_id" => $var
-            ]);
-        } catch (Exception $e) {
-            // Captura de errores
-            echo json_encode([
-                "status" => false,
-                "error" => $e->getMessage()
-            ]);
-        }
+      $connection = new Database();
+      $order_model = new Order_Model($connection);
+      $var = $order_model->getOrderIdByUser();
+
+
+
+
+      $connection = new Database();
+      $job_model = new Job_Model($connection);
+      $jobs = $job_model ->getJobsByOrder();
+
+
+    //  echo json_encode($_SESSION['orden_in_process']."hahah");
+
     }
-
 
 
     // 🔍 Verifica o crea una orden en sesión
