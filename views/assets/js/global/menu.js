@@ -122,6 +122,8 @@ class Menu {
         // Update the active session and handle login/logout logic
         this.setActiveSession(parsedData.message);
         this.loginOrLogout();
+
+
       })
       .catch(error => {
         // Handle any errors during the request or processing
@@ -149,6 +151,10 @@ class Menu {
     openLogoutClass.forEach(element => {
       element.style.display = activeSession ? 'flex' : 'none'; // Show or hide logout buttons
     });
+
+    alert(window.location.href);
+
+
   }
 
 

@@ -10,7 +10,7 @@ class ShoppingCart {
     }
     open_checkout.addEventListener("click", function(){
       window.open("../../views/checkout/index.php", "_self");
-    })
+    }) 
 
     // Obtener los estilos iniciales de todos los elementos
     this.initializeStyles();

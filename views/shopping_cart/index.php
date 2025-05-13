@@ -24,7 +24,6 @@
   <!-- Add the CSS file -->
   <link rel="stylesheet" type="text/css" href="../assets/css/home/style.css">
 
-
 </head>
 <body>
   <section>
@@ -38,7 +37,7 @@
       <div class="container" id="dad-customize-lanyard">
 
         <!-- Content section -->
-        <div class="content" >
+        <div class="content">
 
           <!-- Include the menu component -->
           <?php include "../../views/global/menu.php" ?>
