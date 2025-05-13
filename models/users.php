@@ -69,7 +69,7 @@ class Users {
   /*
    * Check if a user with the given email already exists in the database.
    */
-   public function getOrderIdByUser() {
+   public function getOrderIdByUser2() {
      echo json_encode("Buenas3");exit;
 
        /*try {
