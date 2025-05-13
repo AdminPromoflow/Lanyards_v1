@@ -162,7 +162,9 @@ class Job {
       }
 
       $connection = new Database();
-      $order_model = new Order_Model($connection);
+      echo json_encode("Buenas");exit;
+
+    /*  $order_model = new Order_Model($connection);
       $var = $order_model->getOrderIdByUser();
 
 
@@ -170,7 +172,7 @@ class Job {
 
       $connection = new Database();
       $job_model = new Job_Model($connection);
-      $jobs = $job_model ->getJobsByOrder();
+      $jobs = $job_model ->getJobsByOrder();*/
 
 
     //  echo json_encode($_SESSION['orden_in_process']."hahah");
