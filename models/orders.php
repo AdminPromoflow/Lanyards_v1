@@ -104,10 +104,12 @@ class Order_Model {
             $sql->execute();
 
             $idOrder = $sql->fetchColumn();
-            echo json_encode($idOrder."hhaha3"); exit;
 
 
             $this->connection->closeConnection();
+
+            echo json_encode($idOrder."hhaha4"); exit;
+
 
             return $idOrder ?: false;
 
