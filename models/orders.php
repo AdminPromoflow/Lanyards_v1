@@ -90,7 +90,7 @@ class Order_Model {
             $email = $_SESSION['email'];
             $conn = $this->connection->getConnection();
 
-            echo json_encode($email."hhaha"); exit;
+            echo json_encode($email."hhaha2"); exit;
 
 
             // Consulta combinada para obtener idOrder desde el email directamente
