@@ -14,9 +14,13 @@ class ShoppingCart {
     })
 
     // Obtener los estilos iniciales de todos los elementos
+
     this.initializeStyles();
 
-    alert(menuClass.getActiveSession());
+    document.addEventListener("DOMContentLoaded", function() {
+        alert(menuClass.getActiveSession());
+    });
+
 
     if (window.location.href == "https://lanyardsforyou.com/views/shopping_cart/index.php") {
       if (this.getActiveSession() == false) {
