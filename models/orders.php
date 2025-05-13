@@ -111,7 +111,7 @@ class Order_Model {
             $this->connection->closeConnection();
 
 
-            echo json_encode($idOrder ? $idOrder : false."Hola tu, rayos");exit;
+            echo json_encode($idOrder ? $idOrder : false);exit;
 
             return $idOrder ? $idOrder : false;
 
