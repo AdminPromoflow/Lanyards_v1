@@ -78,7 +78,6 @@ class Order_Model {
 
 
     public function getOrderIdByUser() {
-      echo json_encode("hi");exit;
 
         try {
             // Obtener el email desde la sesión
@@ -112,6 +111,7 @@ class Order_Model {
             // Cerrar la conexión
             $this->connection->closeConnection();
 
+            echo json_encode("hi");exit;
 
 
             return $idOrder ? $idOrder : false;
