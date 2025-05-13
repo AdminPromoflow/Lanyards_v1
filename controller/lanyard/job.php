@@ -158,12 +158,14 @@ class Job {
     public function getJobsByOrder($data){
 
       $connection = new Database();
+      $order_model = new Order_Model($connection);
+      $_SESSION['orden_in_process'] = $order_model->getOrderIdByUser();
+
+
+      $connection = new Database();
       $job_model = new Job_Model($connection);
       $jobs = $job_model ->getJobsByOrder();
 
-      $connection = new Database();
-      $order_model = new Order_Model($connection);
-      $_SESSION['orden_in_process'] = $order_model->getOrderIdByUser();
 
       echo json_encode($_SESSION['orden_in_process']);
 
@@ -178,9 +180,9 @@ class Job {
 
         $connection = new Database();
         $order_model = new Order_Model($connection);
-        $_SESSION['orden_in_process'] = $order_model->getOrderIdByUser();
+         = $order_model->getOrderIdByUser();
 
-        echo json_encode("Buenas2");exit;
+        echo json_encode($_SESSION['orden_in_process']);exit;
         if ($_SESSION['orden_in_process'] == false) {
         //
 
