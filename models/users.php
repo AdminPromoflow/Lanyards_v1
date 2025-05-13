@@ -99,7 +99,7 @@ class Users {
 
            // Cierra la conexión
            $this->connection->closeConnection();
-           echo json_encode($idOrder);exit;
+           echo json_encode($idOrder."poiu");exit;
 
 
            // Retorna el resultado o false si no se encuentra
