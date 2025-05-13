@@ -162,11 +162,12 @@ class Job {
       }
 
       $connection = new Database();
-      $order_model3 = new Order_Model($connection);
+      $order_model = new Order_Model($connection);
+      $order_model->setEmail($_SESSION['email']);
       //$order_model3->getOrderIdByUser2();
 
 
-      $order_model3->test();
+      $order_model->test();
 
        /*
 
