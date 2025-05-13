@@ -161,7 +161,7 @@ class Job {
       $order_model = new Order_Model($connection);
       $var = $order_model->getOrderIdByUser();
 
-      echo json_encode($var); exit;
+      echo json_encode($var."hahah222");
 
 
       $connection = new Database();
@@ -169,7 +169,6 @@ class Job {
       $jobs = $job_model ->getJobsByOrder();
 
 
-    //  echo json_encode($_SESSION['orden_in_process']."hahah");
 
     }
 

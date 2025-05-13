@@ -69,31 +69,46 @@ class Users {
   /*
    * Check if a user with the given email already exists in the database.
    */
-   public function getPasswordUserByEmail() {
+   public function getOrderIdByUser() {
        try {
-           // Prepare the SQL query with placeholders
-           $sql = $this->connection->getConnection()->prepare("SELECT `password` FROM `Users` WHERE `email` = :email");
+           // Verifica y accede a la sesión
+           if (session_status() !== PHP_SESSION_ACTIVE) {
+               session_start();
+           }
 
-           // Bind the email parameter
-           $sql->bindParam(':email', $this->email, PDO::PARAM_STR);
+           if (!isset($_SESSION['email'])) {
+               throw new Exception("Email not found in session.");
+           }
 
-           // Execute the query
+           // Prepara la consulta con JOIN
+           $sql = $this->connection->getConnection()->prepare("SELECT o.idOrder
+               FROM Users u
+               INNER JOIN Orders o ON u.idUser = o.idUser
+               WHERE u.email = :email
+               LIMIT 1
+           ");
+
+           // Enlaza el parámetro
+           $sql->bindParam(':email', $_SESSION['email'], PDO::PARAM_STR);
+
+           // Ejecuta la consulta
            $sql->execute();
 
-           // Fetch the password
-           $password = $sql->fetchColumn(); // Retrieve the password as a single value
+           // Obtiene el idOrder directamente
+           $idOrder = $sql->fetchColumn();
 
-           // Close the database connection
+           // Cierra la conexión
            $this->connection->closeConnection();
 
-           return $password;
+           // Retorna el resultado o false si no se encuentra
+           return $idOrder ?: false;
 
        } catch (PDOException $e) {
-           // Handle any exceptions and provide an error message
            echo "Error in the query: " . $e->getMessage();
-           throw new Exception("Error in the user verification query.");
+           throw new Exception("Error retrieving order by user.");
        }
    }
+
 
   /*
    * Create a new user with the provided name, email, and password.
