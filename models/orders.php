@@ -102,7 +102,7 @@ class Order_Model {
                 $this->connection->closeConnection();
                 return false;
             }
-            echo json_encode($idUser); exit;
+            echo json_encode($idUser."hhaha"); exit;
 
 
             // Paso 2: Obtener la orden
