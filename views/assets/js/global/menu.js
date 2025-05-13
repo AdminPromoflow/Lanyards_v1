@@ -154,7 +154,7 @@ class Menu {
 
     if (window.location.href == "https://lanyardsforyou.com/views/shopping_cart/index.php") {
       if (this.getActiveSession() == false) {
-        alert("jum");
+        window.location.href = "https://lanyardsforyou.com/views/home/index.php";
       }
     }
 
