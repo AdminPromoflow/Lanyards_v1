@@ -167,7 +167,6 @@ class Job {
       $idOrder = $order_model->getOrderIdByUser();
 
 
-      echo json_encode($idOrder); exit;
 
 
 
@@ -177,6 +176,8 @@ class Job {
       $jobs = $job_model ->getJobsByOrder();
 
 
+
+      echo json_encode($jobs); exit;
 
     //  echo json_encode($_SESSION['orden_in_process']."hahah");
 
