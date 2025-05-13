@@ -152,7 +152,11 @@ class Menu {
       element.style.display = activeSession ? 'flex' : 'none'; // Show or hide logout buttons
     });
 
-    
+    if (window.location.href == "https://lanyardsforyou.com/views/shopping_cart/index.php") {
+      if (this.getActiveSession() == false) {
+        alert("jum");
+      }
+    }
 
 
   }
