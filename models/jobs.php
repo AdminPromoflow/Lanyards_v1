@@ -100,14 +100,13 @@ class Job_Model {
   }
   public function getJobsByOrder() {
       try {
-          // Obtener el idOrder desde la sesión
-          $idOrder = $_SESSION['orden_in_process'];
+
 
           // Preparar la consulta SQL con placeholder
           $sql = $this->connection->getConnection()->prepare("SELECT * FROM `Jobs` WHERE `idOrder` = :idOrder");
 
           // Enlazar el parámetro de la sesión
-          $sql->bindParam(':idOrder', $idOrder, PDO::PARAM_INT);
+          $sql->bindParam(':idOrder', $this->idOrder, PDO::PARAM_INT);
 
           // Ejecutar la consulta
           $sql->execute();

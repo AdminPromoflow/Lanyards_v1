@@ -173,11 +173,10 @@ class Job {
       $connection = new Database();
       $job_model = new Job_Model($connection);
       $job_model->setIdOrder($idOrder);
-      $jobs = $job_model ->getJobsByOrder();
+      $jobs = $job_model->getJobsByOrder();
 
 
 
-      echo json_encode($jobs); exit;
 
     //  echo json_encode($_SESSION['orden_in_process']."hahah");
 
