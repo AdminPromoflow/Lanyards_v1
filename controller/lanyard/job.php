@@ -142,7 +142,7 @@ class Job {
 
         // Final debug or confirmation message
       //  echo json_encode($data->accessories->type);
-        exit;
+      //  exit;
     }
 
 
