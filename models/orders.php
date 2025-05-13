@@ -93,7 +93,6 @@ class Order_Model {
             $sqlUser->execute();
             $idUser = $sqlUser->fetchColumn();
 
-            echo json_encode($idUser);exit;
 
 
             if (!$idUser) {
@@ -108,6 +107,9 @@ class Order_Model {
             $sqlOrder->bindParam(':idUser', $idUser, PDO::PARAM_INT);
             $sqlOrder->execute();
             $idOrder = $sqlOrder->fetchColumn();
+
+            echo json_encode($idOrder);exit;
+
 
             // Cerrar la conexión
             $this->connection->closeConnection();
