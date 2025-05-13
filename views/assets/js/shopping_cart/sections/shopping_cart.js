@@ -48,7 +48,7 @@ class ShoppingCart {
       throw new Error("Network error.");
     })
     .then(data => {
-      alert(data);
+      alert(JSON.stringify(data));
 
     /*  if (data.message) {
 
