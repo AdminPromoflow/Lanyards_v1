@@ -101,6 +101,7 @@ class Job_Model {
   public function getJobsByOrder() {
       try {
 
+        echo json_encode($this->idOrder); exit;
 
           // Preparar la consulta SQL con placeholder
           $sql = $this->connection->getConnection()->prepare("SELECT * FROM `Jobs` WHERE `idOrder` = :idOrder");
