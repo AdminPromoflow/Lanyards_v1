@@ -114,7 +114,6 @@ class Job_Model {
           // Obtener todos los trabajos asociados al pedido
           $jobs = $sql->fetchAll(PDO::FETCH_ASSOC);
 
-          echo json_encode($jobs); exit;
 
 
           // Cerrar la conexión
