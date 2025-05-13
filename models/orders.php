@@ -90,9 +90,11 @@ class Order_Model {
             $email = $_SESSION['email'];
             $conn = $this->connection->getConnection();
 
+            echo json_encode($email."hhaha"); exit;
+
+
             // Consulta combinada para obtener idOrder desde el email directamente
-            $sql = $conn->prepare(
-                "SELECT o.idOrder
+            $sql = $conn->prepare("SELECT o.idOrder
                  FROM Orders o
                  INNER JOIN Users u ON o.idUser = u.idUser
                  WHERE u.email = :email
