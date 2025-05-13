@@ -157,7 +157,6 @@ class Job {
 
     public function getJobsByOrder($data){
 
-      echo json_encode("poiu");exit;
 
       $connection = new Database();
       $order_model = new Order_Model($connection);
