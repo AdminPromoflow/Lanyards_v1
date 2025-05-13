@@ -156,12 +156,12 @@ class Job {
     }
 
     public function getJobsByOrder($data){
+      echo json_encode($data);exit;
 
       $connection = new Database();
       $order_model = new Order_Model($connection);
       $var = $order_model->getOrderIdByUser();
 
-    //  echo json_encode($var."hahah222");
 
 
       $connection = new Database();
