@@ -12,6 +12,15 @@
 
   <title>Lanyards for you</title>
 
+  <?php
+  // Validar favicon
+  $faviconPath = '../../views/assets/img/home/favicon.ico';
+  $faviconVersion = file_exists($faviconPath) ? filemtime($faviconPath) : time();
+  ?>
+
+  <link rel="icon" href="<?= $faviconPath ?>?v=<?= $faviconVersion; ?>" type="image/x-icon">
+
+
   <!-- Add the CSS file -->
   <link rel="stylesheet" type="text/css" href="../assets/css/home/style.css">
 
@@ -40,6 +49,13 @@
             <?php include "../../views/global/footer.php" ?>
 
           </div>
+
+          <!-- Include the login component -->
+          <?php include "../../views/global/login.php"; ?>
+          <?php include "../../views/global/password_forgotten.php"; ?>
+
+          <!-- Include the register component -->
+          <?php include "../../views/global/register.php"; ?>
 
         </div>
       </div>
