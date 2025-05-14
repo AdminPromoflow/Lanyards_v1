@@ -85,10 +85,20 @@ class ShoppingCart {
 
        for (const key in description) {
           if (description.hasOwnProperty(key)) {
-            const value = description[key];
-            alert(`${key}:`, value);
+            console.log("Categoría:", key); // Ej: "material"
+
+            const entry = description[key];
+
+            for (const subKey in entry) {
+              if (entry.hasOwnProperty(subKey)) {
+                console.log(`  ${subKey}: ${entry[subKey]}`); // Ej: "type: RPET Polyester"
+              }
+            }
+
+            console.log("---");
           }
         }
+
 
         let descriptionsHTML = "";
 
