@@ -74,7 +74,7 @@ class ShoppingCart {
 
     data.forEach((item, index) => {
       const name = item["name"] || "No name";
-      const description = item["description"];
+      const description[0] = item["description"];
 
       description.forEach((element, i) => {
         alert(element);
