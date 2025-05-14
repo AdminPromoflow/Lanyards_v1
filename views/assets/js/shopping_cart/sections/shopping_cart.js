@@ -79,11 +79,11 @@ class ShoppingCart {
        const description =  JSON.parse(item["description"]);
 
        // Construir HTML de las descripciones dinámicamente
-       let descriptionsHTML = "";
 
 
-        alert(description.length);
+       alert(Object.keys(description).length);
 
+        let descriptionsHTML = "";
 
 
        // Crear HTML del item completo
