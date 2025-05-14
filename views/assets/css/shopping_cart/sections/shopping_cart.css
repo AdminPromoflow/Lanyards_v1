@@ -391,3 +391,24 @@
   display: block;
   transform: rotate(90deg);
 }
+
+
+.arrow_products_shopping_cart {
+  transition: transform 0.3s ease;
+  transform: rotate(0deg);
+}
+
+.arrow_products_shopping_cart.rotated {
+  transform: rotate(90deg);
+}
+
+
+
+.descriptions_items_shopping_cart {
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.descriptions_items_shopping_cart.visible {
+  display: block;
+}

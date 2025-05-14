@@ -182,28 +182,31 @@ class ShoppingCart {
 
 
   // Alterna la visibilidad de una descripción específica
-  toggleDescriptionItemShoppingCart(index) {
-    alert(index);
-    const item = this.descriptionsStyles[index]?.element;
-    const arrow = this.arrowsStyles[index]?.element;
 
-    // Verificar que los elementos existan antes de manipularlos
-    if (item && arrow) {
-      const currentDisplay = this.descriptionsStyles[index].display;
 
-      if (currentDisplay === "block") {
-        item.style.display = "none";
-        arrow.style.transform = "rotate(0deg)";
-        this.descriptionsStyles[index].display = "none";
-      } else {
-        item.style.display = "block";
-        arrow.style.transform = "rotate(90deg)";
-        this.descriptionsStyles[index].display = "block";
-      }
-    } else {
-      console.error(`No se puede alternar el índice ${index}: Elemento no válido.`);
+
+
+
+   toggleDescriptionItemShoppingCart(index) {
+    const descriptions_items_shopping_cart = document.querySelectorAll(".descriptions_items_shopping_cart");
+    const arrow_products_shopping_cart = document.querySelectorAll(".arrow_products_shopping_cart");
+
+    const description = descriptions_items_shopping_cart[index];
+    const arrow = arrow_products_shopping_cart[index];
+
+    if (!description) return;
+
+    // Alternar clase para mostrar u ocultar
+    description.classList.toggle("visible");
+
+    // Opcional: rotar la flecha para indicar el estado
+    if (arrow) {
+      arrow.classList.toggle("rotated");
     }
   }
+
+
+
 }
 
 const container_draw_items_shopping_cart = document.getElementById("container_draw_items_shopping_cart");
