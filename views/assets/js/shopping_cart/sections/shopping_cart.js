@@ -45,12 +45,9 @@ class ShoppingCart {
     .then(data => {
       //alert(JSON.stringify(data));
 
+      shoppingCart.addJobstoOrder(data);
 
-      for (var i = 0; i < data.length; i++) {
 
-        alert(JSON.stringify(data[i]));
-
-      }
 
     /*  if (data.message) {
 
@@ -65,6 +62,16 @@ class ShoppingCart {
     //  console.error("Error:", error.message);
       //alert(error.message); // Show the error message in an alert
     });
+  }
+
+
+
+  addJobstoOrder(data){
+    for (var i = 0; i < data.length; i++) {
+
+      alert(JSON.stringify(data[i]["name"]));
+
+    }
   }
 
 

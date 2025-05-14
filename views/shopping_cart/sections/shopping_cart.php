@@ -6,6 +6,10 @@
   <div class="container_shopping_cart">
 
     <div class="boxes_shopping_cart">
+
+
+
+
       <div class="items_shopping_cart">
         <div class="product_items_shopping_cart">
             <h3>hola2</h3>
@@ -75,6 +79,16 @@
 
         </div>
       </div>
+
+
+
+
+
+
+
+
+
+      
       <div class="items_shopping_cart">
         <div class="product_items_shopping_cart">
             <h3>hola2</h3>
