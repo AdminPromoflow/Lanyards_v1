@@ -82,7 +82,7 @@ class ShoppingCart {
        let descriptionsHTML = "";
 
 
-        alert(item["description"].length);
+        alert(typeof description);
 
 
 
