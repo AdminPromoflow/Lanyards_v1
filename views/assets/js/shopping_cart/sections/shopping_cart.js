@@ -74,13 +74,15 @@ class ShoppingCart {
 
      data.forEach((item, index) => {
        const name = item["name"] || "Sin nombre";
-       const description = item["description"] || {};
+
+
+       const description =  JSON.parse(item["description"]);
 
        // Construir HTML de las descripciones dinámicamente
        let descriptionsHTML = "";
 
 
-       alert(description[0]);
+       //alert(description[0]);
 
 
        // Crear HTML del item completo
