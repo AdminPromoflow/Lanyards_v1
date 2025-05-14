@@ -45,11 +45,11 @@ class ShoppingCart {
     .then(data => {
       //alert(JSON.stringify(data));
 
-      const data = JSON.parse(data);
+      const data2 = JSON.parse(data);
 
-      for (var i = 0; i < data.length; i++) {
+      for (var i = 0; i < data2.length; i++) {
 
-        alert(JSON.stringify(data[i]));
+        alert(JSON.stringify(data2[i]));
 
       }
 
