@@ -80,7 +80,7 @@ class ShoppingCart {
        let descriptionsHTML = "";
 
 
-       alert(description["material"]);
+       alert(description);
 
 
        // Crear HTML del item completo
