@@ -183,6 +183,7 @@ class ShoppingCart {
 
   // Alterna la visibilidad de una descripción específica
   toggleDescriptionItemShoppingCart(index) {
+    alert(index);
     const item = this.descriptionsStyles[index]?.element;
     const arrow = this.arrowsStyles[index]?.element;
 
