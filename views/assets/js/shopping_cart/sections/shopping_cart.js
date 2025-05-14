@@ -79,12 +79,13 @@ class ShoppingCart {
        // Construir HTML de las descripciones dinámicamente
        let descriptionsHTML = "";
 
-       for (const key in description) {
-         if (description.hasOwnProperty(key)) {
-           const value = description[key];
-           const label = this.formatLabel(key);
-           const detail = value.type || value.value || value.side || "—";
-           const price = `+$${parseFloat(value.additional_price || 0).toFixed(2)}`;
+
+       for (var i = 0; i < description.length; i++) {
+         if (true/*description.hasOwnProperty(key)*/) {
+           const value = "test";
+           const label = "test";
+           const detail = "test";
+           const price = "test";
 
            descriptionsHTML += `
              <div class="elements_descriptions_items_shopping_cart">
