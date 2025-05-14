@@ -129,7 +129,7 @@ class ShoppingCart {
 
        container_draw_items_shopping_cart.innerHTML += itemHTML;
      });
-    },
+    }
 
   // Función auxiliar para convertir snake_case en "Title Case"
   formatLabel(key) {
