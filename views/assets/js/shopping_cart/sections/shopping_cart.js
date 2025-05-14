@@ -76,7 +76,7 @@ class ShoppingCart {
       const name = item["name"] || "No name";
 
       const itemHTML = `
-        <div class="items_shopping_cart" onclick="toggleDescriptionItemShoppingCart2(${index})">
+        <div class="items_shopping_cart" onclick="this.toggleDescriptionItemShoppingCart2(${index})">
           <div class="product_items_shopping_cart">
               <h3>${name}</h3>
               <h3></h3>
