@@ -79,7 +79,7 @@ class ShoppingCart {
        // Construir HTML de las descripciones dinámicamente
        let descriptionsHTML = "";
 
-       alert(description.material);
+       alert(description[0].material);
 
 
        // Crear HTML del item completo
