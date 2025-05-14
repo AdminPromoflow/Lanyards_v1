@@ -82,7 +82,7 @@ class ShoppingCart {
        let descriptionsHTML = "";
 
 
-       alert(description);
+       alert(JSON.stringify(description));
 
 
        // Crear HTML del item completo
