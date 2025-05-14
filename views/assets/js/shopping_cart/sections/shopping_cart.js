@@ -81,7 +81,14 @@ class ShoppingCart {
        // Construir HTML de las descripciones dinámicamente
 
 
-       alert(Object.keys(description).length);
+       //alert(Object.keys(description).length);
+
+       for (const key in description) {
+          if (description.hasOwnProperty(key)) {
+            const value = description[key];
+            alert(`${key}:`, value);
+          }
+        }
 
         let descriptionsHTML = "";
 
