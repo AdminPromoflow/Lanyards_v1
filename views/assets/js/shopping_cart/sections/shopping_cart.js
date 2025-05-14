@@ -16,11 +16,6 @@ class ShoppingCart {
     // Obtener los estilos iniciales de todos los elementos
 
     this.initializeStyles();
-
-
-
-
-
   }
 
 
