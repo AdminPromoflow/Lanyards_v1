@@ -66,7 +66,7 @@ class ShoppingCart {
 
 
 
-   addJobsToOrder(data) {
+  addJobsToOrder(data) {
     if (!Array.isArray(data)) return;
 
     // Limpiar contenido anterior
@@ -74,9 +74,29 @@ class ShoppingCart {
 
     data.forEach((item, index) => {
       const name = item["name"] || "No name";
+      const descriptionData = item["description"] || {};
 
-      alert(item["description"] + "por favor");
+      // Convertir objeto a array de claves y valores
+      const descriptionEntries = Object.entries(descriptionData);
 
+      // Generar HTML dinámico para descripciones
+      let descriptionsHTML = "";
+
+      descriptionEntries.forEach(([key, value]) => {
+        const label = formatLabel(key); // Convertir snake_case a "Title Case"
+        const value1 = value.type || value.value || value.side || "—";
+        const value2 = `+$${parseFloat(value.additional_price || 0).toFixed(2)}`;
+
+        descriptionsHTML += `
+          <div class="elements_descriptions_items_shopping_cart">
+            <h3>${label}</h3>
+            <h3>${value1}</h3>
+            <h3>${value2}</h3>
+          </div>
+        `;
+      });
+
+      // Generar HTML completo del item
       const itemHTML = `
         <div class="items_shopping_cart" onclick="shoppingCart.toggleDescriptionItemShoppingCart(${index})">
           <div class="product_items_shopping_cart">
@@ -85,48 +105,8 @@ class ShoppingCart {
               <img class="arrow_products_shopping_cart" src="../../views/assets/img/shopping_cart/sections/arrow_right.png" alt="">
           </div>
           <div class="descriptions_items_shopping_cart">
-            <div class="elements_descriptions_items_shopping_cart">
-              <h3>Material</h3>
-              <h3>hola2</h3>
-              <h3>hola3</h3>
-            </div>
-            <div class="elements_descriptions_items_shopping_cart">
-              <h3>Lanyard type</h3>
-              <h3>hola2</h3>
-              <h3>hola3</h3>
-            </div>
-            <div class="elements_descriptions_items_shopping_cart">
-              <h3>Width</h3>
-              <h3>hola2</h3>
-              <h3>hola3</h3>
-            </div>
-            <div class="elements_descriptions_items_shopping_cart">
-              <h3>Side printed</h3>
-              <h3>hola2</h3>
-              <h3>hola3</h3>
-            </div>
-            <div class="elements_descriptions_items_shopping_cart">
-              <h3>Clips</h3>
-              <h3>hola2</h3>
-              <h3>hola3</h3>
-            </div>
-            <div class="elements_descriptions_items_shopping_cart">
-              <h3>Attachment</h3>
-              <h3>hola2</h3>
-              <h3>hola3</h3>
-            </div>
-            <div class="elements_descriptions_items_shopping_cart">
-              <h3>Accessories</h3>
-              <h3>hola2</h3>
-              <h3>hola3</h3>
-            </div>
-            <div class="elements_descriptions_items_shopping_cart">
-              <h3>Colour Quantity</h3>
-              <h3>hola2</h3>
-              <h3>hola3</h3>
-            </div>
+            ${descriptionsHTML}
           </div>
-
           <div class="summary_items_shopping_cart">
             <div class="elements_summary_items_shopping_cart">
               <h3>Cost per unit</h3>
@@ -149,7 +129,15 @@ class ShoppingCart {
 
       container_draw_items_shopping_cart.innerHTML += itemHTML;
     });
+
+    // Función para convertir snake_case a Title Case
+    function formatLabel(str) {
+      return str
+        .replace(/_/g, ' ')
+        .replace(/\w\S*/g, (txt) => txt.charAt(0).toUpperCase() + txt.slice(1));
+    }
   }
+
 
 
 
