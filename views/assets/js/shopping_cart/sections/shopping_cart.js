@@ -76,9 +76,9 @@ class ShoppingCart {
       const name = item["name"] || "No name";
       const description = item["description"];
 
-    /*  descriptionl.forEach((element, i) => {
+      description.forEach((element, i) => {
         alert(element);
-      });*/
+      });
 
 
       const itemHTML = `
