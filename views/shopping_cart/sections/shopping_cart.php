@@ -5,7 +5,7 @@
   <p>Hello, these are the products that you have added to your shopping cart.</p>
   <div class="container_shopping_cart">
 
-    <div class="boxes_shopping_cart">
+    <div class="boxes_shopping_cart" id="container_draw_items_shopping_cart">
 
 
 
@@ -88,7 +88,7 @@
 
 
 
-      
+
       <div class="items_shopping_cart">
         <div class="product_items_shopping_cart">
             <h3>hola2</h3>

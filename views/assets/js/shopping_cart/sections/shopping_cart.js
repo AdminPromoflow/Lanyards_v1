@@ -128,6 +128,8 @@ class ShoppingCart {
   }
 }
 
+const container_draw_items_shopping_cart = document.getElementById("container_draw_items_shopping_cart");
+
 // Obtener los elementos del DOM
 const product_items_shopping_cart = document.querySelectorAll(".product_items_shopping_cart");
 const open_checkout = document.getElementById("open_checkout");
