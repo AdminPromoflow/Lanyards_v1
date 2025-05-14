@@ -75,7 +75,7 @@ class ShoppingCart {
     data.forEach((item, index) => {
       const name = item["name"] || "No name";
 
-      alert(item["description"] + "por favor"]);
+      alert(item["description"] + "por favor");
 
       const itemHTML = `
         <div class="items_shopping_cart" onclick="shoppingCart.toggleDescriptionItemShoppingCart(${index})">
