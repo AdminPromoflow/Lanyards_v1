@@ -45,7 +45,7 @@ class ShoppingCart {
     .then(data => {
       //alert(JSON.stringify(data));
 
-      shoppingCart.addJobstoOrder(data);
+      shoppingCart.addJobsToOrder(data);
 
 
 
