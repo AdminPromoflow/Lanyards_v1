@@ -79,7 +79,7 @@ class ShoppingCart {
        // Construir HTML de las descripciones dinámicamente
        let descriptionsHTML = "";
 
-       const firstKey = Object.keys(obj)[0];
+       const firstKey = Object.keys(description)[0];
 
        alert(firstKey);
 
