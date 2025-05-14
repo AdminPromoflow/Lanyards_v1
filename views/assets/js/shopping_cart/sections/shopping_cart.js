@@ -82,9 +82,8 @@ class ShoppingCart {
        let descriptionsHTML = "";
 
 
-       for (var i = 0; i < description.length; i++) {
         alert(description.length);
-       }
+
 
 
        // Crear HTML del item completo
