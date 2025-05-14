@@ -79,21 +79,16 @@ class ShoppingCart {
        // Construir HTML de las descripciones dinámicamente
        let descriptionsHTML = "";
 
-       for (const key in description) {
-         if (description.hasOwnProperty(key)) {
-           const entry = description[key];
+       Object.entries(description).forEach(([key, entry]) => {
+         const label = key;
+         const value = entry.type || entry.value || entry.side || "Sin dato";
+         const price = entry.additional_price ?? "0";
 
-           // Para acceder a los valores correctamente
-           const label = key; // como "material", "lanyard_type", etc.
-           const value = entry.type || entry.value || entry.side || "Sin dato";
-           const price = entry.additional_price ?? "0";
-
-           console.log(`Clave: ${label}`);
-           console.log(`Tipo: ${value}`);
-           console.log(`Precio adicional: ${price}`);
-           console.log('---');
-         }
-       }
+         console.log(`Clave: ${label}`);
+         console.log(`Tipo: ${value}`);
+         console.log(`Precio adicional: ${price}`);
+         console.log('---');
+       });
 
 
        // Crear HTML del item completo
