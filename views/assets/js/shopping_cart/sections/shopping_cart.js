@@ -43,18 +43,8 @@ class ShoppingCart {
       throw new Error("Network error.");
     })
     .then(data => {
-      //alert(JSON.stringify(data));
-
       shoppingCart.addJobsToOrder(data);
 
-
-
-    /*  if (data.message) {
-
-      }
-      else{
-      //  alert("The email address or password you entered is incorrect.");
-    }*/
     })
     .catch(error => {
     //  alert("error");
@@ -153,6 +143,10 @@ class ShoppingCart {
 
   deleteJob(index){
     let result = confirm("Are you sure you want to delete the product?");
+
+    alert(result);
+
+
   }
 
 
