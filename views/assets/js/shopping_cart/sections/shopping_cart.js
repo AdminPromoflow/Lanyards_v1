@@ -84,7 +84,8 @@ class ShoppingCart {
       const price_per_unit = item["price_per_unit"];
       const amount = item["amount"];
 
-      alert(price_per_unit + amount);
+      const total = price_per_unit * amount;
+
 
       const description = JSON.parse(item["description"]);
       let descriptionsHTML = "";
@@ -126,17 +127,17 @@ class ShoppingCart {
             <div class="elements_summary_items_shopping_cart">
               <h3>Cost per unit</h3>
               <h3></h3>
-              <h3>hola3</h3>
+              <h3>${price_per_unit}</h3>
             </div>
             <div class="elements_summary_items_shopping_cart">
-              <h3>Amount</h3>
+              <h3>${amount}</h3>
               <h3></h3>
               <h3>hola3</h3>
             </div>
             <div class="elements_summary_items_shopping_cart">
               <h3>Subtotal</h3>
               <h3></h3>
-              <h3>hola3</h3>
+              <h3>${total}</h3>
             </div>
           </div>
         </div>
