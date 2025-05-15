@@ -144,7 +144,10 @@ class ShoppingCart {
   deleteJob(index){
     let result = confirm("Are you sure you want to delete the product?");
 
-    alert(result);
+    if (!result) {
+      return;
+    }
+    alert("No deberia salir");
 
 
   }
