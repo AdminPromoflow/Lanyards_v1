@@ -140,7 +140,7 @@ class Job_Model {
   public function deleteJobById() {
     try {
         // Preparar la consulta SQL con placeholder
-        $sql = $this->connection->getConnection()->prepare("DELETE FROM `Jobs` WHERE `idJob` = :idJob");
+        $sql = $this->connection->getConnection()->prepare("DELETE FROM `Jobs` WHERE `idJobs` = :idJob");
 
         // Enlazar el parámetro
         $sql->bindParam(':idJob', $this->idJob, PDO::PARAM_INT);
