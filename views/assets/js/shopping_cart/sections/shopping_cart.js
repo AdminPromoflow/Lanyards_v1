@@ -172,7 +172,10 @@ class ShoppingCart {
         throw new Error("Network error.");
       })
       .then(data => {
-        alert(data);
+        if (data) {
+          alert("The product has been delete successfully");
+
+        }
         //shoppingCart.addJobsToOrder(data);
 
       })
