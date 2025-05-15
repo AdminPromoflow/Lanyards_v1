@@ -414,7 +414,7 @@
 }
 .delete_job{
   position: absolute !important;
-  right: 0px;
+  right: 10px;
   top: 50%;
   transform: translateY(-50%);
   height: 20px;
