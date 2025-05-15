@@ -146,7 +146,7 @@ class ShoppingCart {
   addOrderSummary(data){
 
     data.forEach((item, index) => {
-      alert(JSON.stringify(item));
+      alert(JSON.stringify(item["total"]));
     });
   }
 
