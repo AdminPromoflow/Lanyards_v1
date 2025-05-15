@@ -152,7 +152,7 @@ class ShoppingCart {
 
 
   deleteJob(index){
-    alert(index);
+    let result = confirm("Are you sure you want to delete the product?");
   }
 
 
