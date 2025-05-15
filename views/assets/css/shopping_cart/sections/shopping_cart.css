@@ -413,7 +413,7 @@
   display: block;
 }
 .delete_job{
-  position: absolute;
+  position: absolute !important;
   right: 0px;
   top: 50%;
   transform: translateY(-50%);
