@@ -44,6 +44,7 @@ class ShoppingCart {
     })
     .then(data => {
       shoppingCart.addJobsToOrder(data);
+      shoppingCart.addOrderSummary(data);
 
     })
     .catch(error => {
@@ -139,6 +140,11 @@ class ShoppingCart {
 
       container_draw_items_shopping_cart.innerHTML += itemHTML;
     });
+  }
+
+
+  addOrderSummary(data){
+    alert(data);
   }
 
 
