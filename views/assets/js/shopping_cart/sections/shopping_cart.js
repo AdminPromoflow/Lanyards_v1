@@ -152,7 +152,7 @@ class ShoppingCart {
 
 
   deleteJob(index){
-    alertJ(index);
+    alert(index);
   }
 
 
