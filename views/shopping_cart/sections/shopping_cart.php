@@ -19,25 +19,7 @@
 
       <div class="boxes_container_shopping_cart" id="boxes_container_shopping_cart">
 
-        <div class="items2_shopping_cart">
-          <h3>Product</h3>
-          <h3>Subtotal</h3>
-        </div>
-
-        <div class="elements_boxes_container_shopping_cart">
-          <h3>Material</h3>
-          <h3>hola2</h3>
-        </div>
-
-        <div class="elements_boxes_container_shopping_cart">
-          <h3>Material</h3>
-          <h3>hola2</h3>
-        </div>
-
-        <div class="elements_boxes_container_shopping_cart">
-          <h3>Material</h3>
-          <h3>hola2</h3>
-        </div>
+        
 
       </div>
 
@@ -58,7 +40,7 @@
           <h3>Material</h3>
           <h3>hola2</h3>
         </div>
-        
+
       </div>
 
 
