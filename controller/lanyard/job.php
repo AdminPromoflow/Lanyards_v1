@@ -28,6 +28,10 @@ class Job {
                         //$this->verifyExtras($data->description);
                         $this->getJobsByOrder($data);
                         break;
+                    case "deleteJob":
+                        //$this->verifyExtras($data->description);
+                        $this->deleteJob($data);
+                        break;
 
                     default:
                         http_response_code(400);
@@ -212,6 +216,37 @@ class Job {
         }
 
         return $_SESSION['orden_in_process'];
+    }
+
+    public function deleteJob($data) {
+
+      echo json_encode("buenas");
+        /*if (session_status() !== PHP_SESSION_ACTIVE) {
+            session_start();
+        }
+
+        $connection = new Database();
+        $order_model = new Order_Model($connection);
+        $_SESSION['orden_in_process'] = $order_model->getOrderIdByUser();
+
+        if ($_SESSION['orden_in_process'] == false) {
+        //
+
+            $connection = new Database();
+            $order_model = new Order_Model($connection);
+            $order_model->setEmail($_SESSION['email']);
+            $order_model->setStatus('pending');
+            $dateTime = date('Y-m-d H:i:s');
+
+            $order_model->setOrderDate($dateTime);
+
+            $order_model->setTotal($data->total);
+
+            $_SESSION['orden_in_process'] = $order_model->createOrder();
+
+        }
+
+        return $_SESSION['orden_in_process'];*/
     }
 
 }
