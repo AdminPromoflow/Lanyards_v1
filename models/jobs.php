@@ -139,6 +139,8 @@ class Job_Model {
 
   public function deleteJobById() {
     try {
+      echo json_encode($data->idJob."hi");
+
         // Preparar la consulta SQL con placeholder
         $sql = $this->connection->getConnection()->prepare("DELETE FROM `Jobs` WHERE `idJobs` = :idJob");
 
