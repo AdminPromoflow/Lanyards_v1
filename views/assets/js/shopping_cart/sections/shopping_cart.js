@@ -67,83 +67,76 @@ class ShoppingCart {
 
 
   addJobsToOrder(data) {
-     if (!Array.isArray(data)) return;
+    if (!Array.isArray(data)) return;
 
-     // Limpiar contenido anterior
-     container_draw_items_shopping_cart.innerHTML = "";
+    // Limpiar contenido anterior
+    container_draw_items_shopping_cart.innerHTML = "";
 
-     data.forEach((item, index) => {
-       const name = item["name"] || "Sin nombre";
+    data.forEach((item, index) => {
+      const name = item["name"] || "Sin nombre";
 
+      const description = JSON.parse(item["description"]);
+      let descriptionsHTML = "";
 
-       const description =  JSON.parse(item["description"]);
+      // Construir el HTML de las descripciones dinámicamente
+      for (const key in description) {
+        if (description.hasOwnProperty(key)) {
+          const entry = description[key];
 
-       // Construir HTML de las descripciones dinámicamente
+          // Tomamos el valor principal según disponibilidad
+          const value = entry.type || entry.value || entry.side || "Sin dato";
+          const price = entry.additional_price ?? "0";
 
+          // Título legible
+          const title = key.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
 
-       //alert(Object.keys(description).length);
-
-       for (const key in description) {
-          if (description.hasOwnProperty(key)) {
-            console.log("Categoría:", key); // Ej: "material"
-
-            const entry = description[key];
-
-            for (const subKey in entry) {
-              if (entry.hasOwnProperty(subKey)) {
-                console.log(`  ${subKey}: ${entry[subKey]}`); // Ej: "type: RPET Polyester"
-              }
-            }
-
-            console.log("---");
-          }
+          descriptionsHTML += `
+            <div class="elements_descriptions_items_shopping_cart">
+              <h3>${title}</h3>
+              <h3>${value}</h3>
+              <h3>+ $${price}</h3>
+            </div>
+          `;
         }
+      }
 
+      // Crear HTML del item completo
+      const itemHTML = `
+        <div class="items_shopping_cart" onclick="shoppingCart.toggleDescriptionItemShoppingCart(${index})">
+          <div class="product_items_shopping_cart">
+              <h3>${name}</h3>
+              <h3></h3>
+              <img class="arrow_products_shopping_cart" src="../../views/assets/img/shopping_cart/sections/arrow_right.png" alt="">
+          </div>
+          <div class="descriptions_items_shopping_cart">
+            ${descriptionsHTML}
+          </div>
+          <div class="summary_items_shopping_cart">
+            <div class="elements_summary_items_shopping_cart">
+              <h3>Cost per unit</h3>
+              <h3></h3>
+              <h3>hola3</h3>
+            </div>
+            <div class="elements_summary_items_shopping_cart">
+              <h3>Amount</h3>
+              <h3></h3>
+              <h3>hola3</h3>
+            </div>
+            <div class="elements_summary_items_shopping_cart">
+              <h3>Subtotal</h3>
+              <h3></h3>
+              <h3>hola3</h3>
+            </div>
+          </div>
+        </div>
+      `;
 
-        let descriptionsHTML = "";
-
-
-       // Crear HTML del item completo
-       const itemHTML = `
-         <div class="items_shopping_cart" onclick="shoppingCart.toggleDescriptionItemShoppingCart(${index})">
-           <div class="product_items_shopping_cart">
-               <h3>${name}</h3>
-               <h3></h3>
-               <img class="arrow_products_shopping_cart" src="../../views/assets/img/shopping_cart/sections/arrow_right.png" alt="">
-           </div>
-           <div class="descriptions_items_shopping_cart">
-             ${descriptionsHTML}
-           </div>
-           <div class="summary_items_shopping_cart">
-             <div class="elements_summary_items_shopping_cart">
-               <h3>Cost per unit</h3>
-               <h3></h3>
-               <h3>hola3</h3>
-             </div>
-             <div class="elements_summary_items_shopping_cart">
-               <h3>Amount</h3>
-               <h3></h3>
-               <h3>hola3</h3>
-             </div>
-             <div class="elements_summary_items_shopping_cart">
-               <h3>Subtotal</h3>
-               <h3></h3>
-               <h3>hola3</h3>
-             </div>
-           </div>
-         </div>
-       `;
-
-       container_draw_items_shopping_cart.innerHTML += itemHTML;
-     });
-    }
-
-  // Función auxiliar para convertir snake_case en "Title Case"
-  formatLabel(key) {
-   return key
-     .replace(/_/g, ' ')
-     .replace(/\b\w/g, char => char.toUpperCase());
+      container_draw_items_shopping_cart.innerHTML += itemHTML;
+    });
   }
+
+
+
 
 
 
