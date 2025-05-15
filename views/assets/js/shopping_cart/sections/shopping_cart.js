@@ -147,7 +147,7 @@ class ShoppingCart {
 
     data.forEach((item, index) => {
       alert(JSON.stringify(item));
-    };
+    });
   }
 
 
