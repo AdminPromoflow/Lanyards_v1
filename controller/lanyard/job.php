@@ -220,33 +220,13 @@ class Job {
 
     public function deleteJob($data) {
 
-      echo json_encode($data->idJob);
-        /*if (session_status() !== PHP_SESSION_ACTIVE) {
-            session_start();
-        }
 
-        $connection = new Database();
-        $order_model = new Order_Model($connection);
-        $_SESSION['orden_in_process'] = $order_model->getOrderIdByUser();
+      $connection = new Database();
+      $job_model = new Job_Model($connection);
+      $deleted = $job_model->setIdJob($data->idJob);
 
-        if ($_SESSION['orden_in_process'] == false) {
-        //
+      echo json_encode($deleted);
 
-            $connection = new Database();
-            $order_model = new Order_Model($connection);
-            $order_model->setEmail($_SESSION['email']);
-            $order_model->setStatus('pending');
-            $dateTime = date('Y-m-d H:i:s');
-
-            $order_model->setOrderDate($dateTime);
-
-            $order_model->setTotal($data->total);
-
-            $_SESSION['orden_in_process'] = $order_model->createOrder();
-
-        }
-
-        return $_SESSION['orden_in_process'];*/
     }
 
 }

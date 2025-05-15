@@ -11,6 +11,7 @@ class Job_Model {
     private $link_pdf;
     private $notes;
     private $idOrder;
+    private $idJob;
     private $idExtras;
     private $idClip;
     private $idPriceAmount;
@@ -51,6 +52,10 @@ class Job_Model {
 
     public function setIdOrder($idOrder) {
         $this->idOrder = $idOrder;
+    }
+
+    public function setIdJob($idJob) {
+        $this->idJob = $idJob;
     }
 
     public function setIdExtras($idExtras) {
@@ -127,6 +132,34 @@ class Job_Model {
           throw new Exception("Error retrieving jobs for the order.");
       }
   }
+
+
+
+
+
+  public function deleteJobById() {
+    try {
+        // Preparar la consulta SQL con placeholder
+        $sql = $this->connection->getConnection()->prepare("DELETE FROM `Jobs` WHERE `idJob` = :idJob");
+
+        // Enlazar el parámetro
+        $sql->bindParam(':idJob', $this->idJob, PDO::PARAM_INT);
+
+        // Ejecutar la consulta
+        $sql->execute();
+
+        // Cerrar la conexión
+        $this->connection->closeConnection();
+
+        // Confirmar eliminación
+        return true;
+
+    } catch (PDOException $e) {
+        echo "Error in the query: " . $e->getMessage();
+        throw new Exception("Error deleting the job.");
+    }
+}
+
 
 
 }
