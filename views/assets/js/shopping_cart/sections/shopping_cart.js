@@ -67,7 +67,7 @@ class ShoppingCart {
 
 
   addJobsToOrder(data) {
-    alert(data);
+    alert(JSON.stringify(data));
 
     if (!Array.isArray(data)) return;
 
