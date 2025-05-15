@@ -227,7 +227,7 @@ class Job {
       $deleted = $job_model->deleteJobById()
 
 
-      echo json_encode($data->idJob);
+      echo json_encode($deleted);
 
     }
 
