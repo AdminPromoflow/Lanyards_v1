@@ -70,7 +70,7 @@ class ShoppingCart {
 
     data.forEach((item, index) => {
 
-      alert(JSON.stringify(item));
+      alert(item["idJobs"]);
       const name = item["name"] || "Sin nombre";
 
       const price_per_unit = item["price_per_unit"];
