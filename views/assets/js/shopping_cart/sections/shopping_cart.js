@@ -109,7 +109,7 @@ class ShoppingCart {
       const itemHTML = `
         <div class="items_shopping_cart" >
           <div class="product_items_shopping_cart">
-              <h3>${name}</h3>
+              <h3>${name} ${index}</h3>
               <h3></h3>
               <img class="arrow_products_shopping_cart" onclick="shoppingCart.toggleDescriptionItemShoppingCart(${index})" src="../../views/assets/img/shopping_cart/sections/arrow_right.png" alt="">
               <img class="delete_job" onclick="shoppingCart.deleteJob(${idJob})" src="../../views/assets/img/shopping_cart/sections/delete-button.png" alt="">
