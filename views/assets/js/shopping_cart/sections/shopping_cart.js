@@ -130,9 +130,9 @@ class ShoppingCart {
               <h3>${price_per_unit}</h3>
             </div>
             <div class="elements_summary_items_shopping_cart">
-              <h3>${amount}</h3>
+              <h3>Amount</h3>
               <h3></h3>
-              <h3>hola3</h3>
+              <h3>${amount}</h3>
             </div>
             <div class="elements_summary_items_shopping_cart">
               <h3>Subtotal</h3>
