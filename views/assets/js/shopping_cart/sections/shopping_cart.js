@@ -160,8 +160,8 @@ class ShoppingCart {
     data.forEach((item, index) => {
       const itemHTML = `
       <div class="elements_boxes_container_shopping_cart">
-        <h3>${item["name"]}</h3>
-        <h3>${item["total"]}</h3>
+        <h3>${item["name"]}${index + 1}</h3>
+        <h3>${item["total"]}${index + 1}</h3>
       </div>
       `;
 
