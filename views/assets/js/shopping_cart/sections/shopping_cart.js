@@ -143,7 +143,7 @@ class ShoppingCart {
 
 
 
-  deleteJob(index){
+  deleteJob(idJob){
       let result = confirm("Are you sure you want to delete the product?");
 
       if (!result) {
@@ -152,7 +152,8 @@ class ShoppingCart {
 
       const url = "../../controller/lanyard/job.php"; // Replace with your API endpoint URL
       const data = {
-        action: "deleteJob"
+        action: "deleteJob",
+        idJob: idJob
       };
 
       fetch(url, {

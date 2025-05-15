@@ -220,7 +220,7 @@ class Job {
 
     public function deleteJob($data) {
 
-      echo json_encode("buenas");
+      echo json_encode($data->idJob);
         /*if (session_status() !== PHP_SESSION_ACTIVE) {
             session_start();
         }
