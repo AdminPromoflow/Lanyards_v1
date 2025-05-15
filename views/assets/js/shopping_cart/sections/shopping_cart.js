@@ -106,7 +106,7 @@ class ShoppingCart {
             <div class="elements_descriptions_items_shopping_cart">
               <h3>${title}</h3>
               <h3>${value}</h3>
-              <h3>+ $${price}</h3>
+              <h3>+ £${price}</h3>
             </div>
           `;
         }
@@ -127,7 +127,7 @@ class ShoppingCart {
             <div class="elements_summary_items_shopping_cart">
               <h3>Cost per unit</h3>
               <h3></h3>
-              <h3>${price_per_unit}</h3>
+              <h3>£${price_per_unit}</h3>
             </div>
             <div class="elements_summary_items_shopping_cart">
               <h3>Amount</h3>
@@ -137,7 +137,7 @@ class ShoppingCart {
             <div class="elements_summary_items_shopping_cart">
               <h3>Subtotal</h3>
               <h3></h3>
-              <h3>${total}</h3>
+              <h3>£${total}</h3>
             </div>
           </div>
         </div>
