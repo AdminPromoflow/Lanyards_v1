@@ -119,7 +119,7 @@ class ShoppingCart {
               <h3>${name}</h3>
               <h3></h3>
               <img class="arrow_products_shopping_cart" onclick="shoppingCart.toggleDescriptionItemShoppingCart(${index})" src="../../views/assets/img/shopping_cart/sections/arrow_right.png" alt="">
-              <img class="delete_job" onclick="shoppingCart.deleteJob(${index})" src="../../views/assets/img/shopping_cart/sections/arrow_right.png" alt="">
+              <img class="delete_job" onclick="shoppingCart.deleteJob(${index})" src="../../views/assets/img/shopping_cart/sections/delete-button.png" alt="">
 
           </div>
           <div class="descriptions_items_shopping_cart">
