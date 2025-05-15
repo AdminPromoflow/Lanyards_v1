@@ -69,6 +69,8 @@ class ShoppingCart {
   //  alert(price_per_unit + amount);
 
     data.forEach((item, index) => {
+
+      alert(JSON.stringify(item));
       const name = item["name"] || "Sin nombre";
 
       const price_per_unit = item["price_per_unit"];
