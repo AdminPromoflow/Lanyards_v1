@@ -174,7 +174,7 @@ class ShoppingCart {
       .then(data => {
         if (data) {
           alert("The product has been delete successfully");
-          window.reload();
+          location.reload();
         }
         //shoppingCart.addJobsToOrder(data);
 
