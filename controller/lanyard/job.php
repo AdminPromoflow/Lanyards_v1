@@ -225,7 +225,8 @@ class Job {
       $job_model = new Job_Model($connection);
       $deleted = $job_model->setIdJob($data->idJob);
 
-      echo json_encode($deleted);
+
+      echo json_encode($data->idJob);
 
     }
 
