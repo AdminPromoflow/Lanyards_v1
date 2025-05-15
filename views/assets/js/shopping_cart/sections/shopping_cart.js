@@ -144,10 +144,28 @@ class ShoppingCart {
 
 
   addOrderSummary(data){
+    const boxes_container_shopping_cart = document.getElementById("boxes_container_shopping_cart");
+
+
+
+  //  boxes_container_shopping_cart
+
+    boxes_container_shopping_cart.innerHTML = "";
 
     data.forEach((item, index) => {
-      alert(JSON.stringify(item["total"]));
+      const itemHTML = `
+      <div class="items2_shopping_cart">
+        <h3>Product</h3>
+        <h3>Subtotal</h3>
+      </div>
+      `;
+
+      boxes_container_shopping_cart.innerHTML += itemHTML;
+
+      //alert(JSON.stringify(item["total"]));
     });
+
+
   }
 
 
