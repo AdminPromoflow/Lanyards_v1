@@ -114,11 +114,11 @@ class ShoppingCart {
 
       // Crear HTML del item completo
       const itemHTML = `
-        <div class="items_shopping_cart" onclick="shoppingCart.toggleDescriptionItemShoppingCart(${index})">
+        <div class="items_shopping_cart" >
           <div class="product_items_shopping_cart">
               <h3>${name}</h3>
               <h3></h3>
-              <img class="arrow_products_shopping_cart" src="../../views/assets/img/shopping_cart/sections/arrow_right.png" alt="">
+              <img class="arrow_products_shopping_cart" onclick="shoppingCart.toggleDescriptionItemShoppingCart(${index})" src="../../views/assets/img/shopping_cart/sections/arrow_right.png" alt="">
           </div>
           <div class="descriptions_items_shopping_cart">
             ${descriptionsHTML}

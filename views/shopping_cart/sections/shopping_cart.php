@@ -227,7 +227,7 @@
       </div>
     </div>
     <div class="boxes_shopping_cart">
-      <h3 class="title_boxes_shopping_cart">You Orden</h3>
+      <h3 class="title_boxes_shopping_cart">Your order</h3>
       <div class="boxes_container_shopping_cart">
         <div class="items2_shopping_cart">
           <h3>Product</h3>
