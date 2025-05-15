@@ -67,21 +67,24 @@ class ShoppingCart {
 
 
   addJobsToOrder(data) {
-    alert(JSON.stringify(data));
 
     if (!Array.isArray(data)) return;
 
     // Limpiar contenido anterior
     container_draw_items_shopping_cart.innerHTML = "";
 
-    const price_per_unit = data["price_per_unit"];
-    const amount = data["amount"];
+
 
 
   //  alert(price_per_unit + amount);
 
     data.forEach((item, index) => {
       const name = item["name"] || "Sin nombre";
+
+      const price_per_unit = item["price_per_unit"];
+      const amount = item["amount"];
+
+      alert(price_per_unit + amount);
 
       const description = JSON.parse(item["description"]);
       let descriptionsHTML = "";
