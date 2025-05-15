@@ -67,6 +67,7 @@ class ShoppingCart {
 
 
   addJobsToOrder(data) {
+    console.log(data);
 
     if (!Array.isArray(data)) return;
 
@@ -77,7 +78,7 @@ class ShoppingCart {
     const amount = data["amount"];
 
 
-    alert(price_per_unit + amount);
+  //  alert(price_per_unit + amount);
 
     data.forEach((item, index) => {
       const name = item["name"] || "Sin nombre";
