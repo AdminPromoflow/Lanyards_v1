@@ -144,7 +144,10 @@ class ShoppingCart {
 
 
   addOrderSummary(data){
-    alert(data);
+
+    data.forEach((item, index) => {
+      alert(JSON.stringify(item));
+    };
   }
 
 
