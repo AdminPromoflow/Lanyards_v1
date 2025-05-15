@@ -67,7 +67,7 @@ class ShoppingCart {
 
 
   addJobsToOrder(data) {
-    console.log(data);
+    alert(data);
 
     if (!Array.isArray(data)) return;
 
