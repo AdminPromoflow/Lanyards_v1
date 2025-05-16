@@ -159,7 +159,7 @@ class ShoppingCart {
       <h3>Subtotal</h3>
     </div>
     `;
-    var total = 0;
+    var subtotal = 0;
 
     data.forEach((item, index) => {
       const itemHTML = `
@@ -170,24 +170,27 @@ class ShoppingCart {
       `;
 
       boxes_container_shopping_cart.innerHTML += itemHTML;
-      total = parseFloat(total) + parseFloat(item["total"]) ;
+      subtotal = parseFloat(subtotal) + parseFloat(item["total"]) ;
       //alert(JSON.stringify(item["total"]));
     });
+
+    const vat = parseFloat(total)*20/100;
+    const total = subtotal + vat;
 
     const item2HTML = `
     <div class="elements_boxes2_container_shopping_cart">
       <h3>Subtotal</h3>
-      <h3>${total}</h3>
+      <h3>${subtotal}</h3>
     </div>
 
     <div class="elements_boxes2_container_shopping_cart">
       <h3>Tax (VAT 20%)</h3>
-      <h3>hola2</h3>
+      <h3>${vat}</h3>
     </div>
 
     <div class="elements_boxes2_container_shopping_cart">
       <h3>Total</h3>
-      <h3>hola2</h3>
+      <h3>${total}</h3>
     </div>
     `;
 
