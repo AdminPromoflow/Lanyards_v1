@@ -144,7 +144,7 @@ class ShoppingCart {
 
 
   addOrderSummary(data){
-    alert(JSON.stringify(data));
+    //alert(JSON.stringify(data));
     const boxes_container_shopping_cart = document.getElementById("boxes_container_shopping_cart");
     const boxes2_container_shopping_cart = document.getElementById("boxes2_container_shopping_cart");
 
