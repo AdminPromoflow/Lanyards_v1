@@ -170,7 +170,7 @@ class ShoppingCart {
       `;
 
       boxes_container_shopping_cart.innerHTML += itemHTML;
-      total = total + item["total"];
+      total = parseFloat(total) + parseFloat(item["total"]) ;
       //alert(JSON.stringify(item["total"]));
     });
 
