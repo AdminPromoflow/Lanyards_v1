@@ -159,6 +159,7 @@ class ShoppingCart {
       <h3>Subtotal</h3>
     </div>
     `;
+    var total = 0;
 
     data.forEach((item, index) => {
       const itemHTML = `
@@ -169,14 +170,14 @@ class ShoppingCart {
       `;
 
       boxes_container_shopping_cart.innerHTML += itemHTML;
-
+      total = total + item["total"];
       //alert(JSON.stringify(item["total"]));
     });
 
     const item2HTML = `
     <div class="elements_boxes2_container_shopping_cart">
       <h3>Subtotal</h3>
-      <h3>hola2</h3>
+      <h3>${total}</h3>
     </div>
 
     <div class="elements_boxes2_container_shopping_cart">
@@ -191,7 +192,7 @@ class ShoppingCart {
     `;
 
 
-    boxes2_container_shopping_cart.innerHTML = "";
+    boxes2_container_shopping_cart.innerHTML = item2HTML;
 
 
   }
