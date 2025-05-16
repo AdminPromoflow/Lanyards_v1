@@ -144,11 +144,14 @@ class ShoppingCart {
 
 
   addOrderSummary(data){
+    alert(JSON.stringify(data));
     const boxes_container_shopping_cart = document.getElementById("boxes_container_shopping_cart");
+    const boxes2_container_shopping_cart = document.getElementById("boxes2_container_shopping_cart");
 
 
 
   //  boxes_container_shopping_cart
+  boxes2_container_shopping_cart.innerHTML = "";
 
     boxes_container_shopping_cart.innerHTML = `
     <div class="items2_shopping_cart">
@@ -169,6 +172,26 @@ class ShoppingCart {
 
       //alert(JSON.stringify(item["total"]));
     });
+
+    const item2HTML = `
+    <div class="elements_boxes2_container_shopping_cart">
+      <h3>Subtotal</h3>
+      <h3>hola2</h3>
+    </div>
+
+    <div class="elements_boxes2_container_shopping_cart">
+      <h3>Tax (VAT 20%)</h3>
+      <h3>hola2</h3>
+    </div>
+
+    <div class="elements_boxes2_container_shopping_cart">
+      <h3>Total</h3>
+      <h3>hola2</h3>
+    </div>
+    `;
+
+
+    boxes2_container_shopping_cart.innerHTML = "";
 
 
   }
