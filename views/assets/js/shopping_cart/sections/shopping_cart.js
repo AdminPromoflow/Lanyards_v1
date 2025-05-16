@@ -175,7 +175,7 @@ class ShoppingCart {
     });
 
     const vat = parseFloat(total)*20/100;
-    const total = subtotal + vat;
+    const total = "subtotal + vat";
 
     const item2HTML = `
     <div class="elements_boxes2_container_shopping_cart">
