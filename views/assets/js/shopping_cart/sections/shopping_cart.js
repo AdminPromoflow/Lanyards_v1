@@ -174,8 +174,8 @@ class ShoppingCart {
       //alert(JSON.stringify(item["total"]));
     });
 
-    const vat = "parseFloat(total)*20/100";
-    const total = "subtotal + vat";
+    const vat = parseFloat(subtotal)*20/100;
+    const total = subtotal + vat;
 
     const item2HTML = `
     <div class="elements_boxes2_container_shopping_cart">
