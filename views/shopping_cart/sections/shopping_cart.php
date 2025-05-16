@@ -37,7 +37,7 @@
         </div>
 
         <div class="elements_boxes2_container_shopping_cart">
-          <h3>Material</h3>
+          <h3>Total</h3>
           <h3>hola2</h3>
         </div>
 
