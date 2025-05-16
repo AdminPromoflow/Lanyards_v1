@@ -19,7 +19,7 @@
 
       <div class="boxes_container_shopping_cart" id="boxes_container_shopping_cart">
 
-        
+
 
       </div>
 
@@ -27,12 +27,12 @@
       <div class="boxes2_container_shopping_cart">
 
         <div class="elements_boxes2_container_shopping_cart">
-          <h3>Material</h3>
+          <h3>Subtotal</h3>
           <h3>hola2</h3>
         </div>
 
         <div class="elements_boxes2_container_shopping_cart">
-          <h3>Material</h3>
+          <h3>Tax (VAT 20%)</h3>
           <h3>hola2</h3>
         </div>
 
