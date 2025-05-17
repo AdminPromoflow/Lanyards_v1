@@ -9,6 +9,10 @@ class AccessoriesHome {
     this.addToCartEvent(".add_to_cart_accessory");
     this.addArrowsEvent(".container_accessories_home_arrow");
 
+    for (var i = 0; i < input_amount_accessories.length; i++) {
+      input_amount_accessories[i].value = 1;
+    }
+
 
     for (let i = 0; i < input_amount_accessories.length; i++) {
       input_amount_accessories[i].addEventListener("input", function(){
