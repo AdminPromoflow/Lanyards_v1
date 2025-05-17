@@ -60,7 +60,7 @@ $accessories_home_js = "../../views/assets/js/home/sections/accessories.js";
             <div class="dropbox_accessories_home">
               <h3>Quantity</h3>
             </div>
-            <input type="text" name="" value="">
+            <input class="input_amount_accessories" type="text" name="" value="">
           </div>
 
           <div class="subcontainer_accessories_home_description">

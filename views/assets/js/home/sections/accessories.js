@@ -9,6 +9,12 @@ class AccessoriesHome {
     this.addToCartEvent(".add_to_cart_accessory");
     this.addArrowsEvent(".container_accessories_home_arrow");
 
+
+    for (var i = 0; i < input_amount_accessories.length; i++) {
+      input_amount_accessories[i].addEventListener("input", function(){
+        alert(i);
+      })
+    }
   }
 
   // Function to handle border selection and set first element as default
@@ -35,6 +41,7 @@ class AccessoriesHome {
       });
     });
   }
+
 
   // Function to add event listener to 'Add to Cart Accessory' buttons
   addToCartEvent(selector) {
@@ -106,5 +113,6 @@ class AccessoriesHome {
 
 }
 
+const input_amount_accessories = document.querySelectorAll(".input_amount_accessories");
 // Instantiate the class to apply all event listeners
 const accessoriesHome = new AccessoriesHome();
