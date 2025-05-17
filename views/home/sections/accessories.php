@@ -91,19 +91,7 @@ $accessories_home_js = "../../views/assets/js/home/sections/accessories.js";
 
 
 
-  <div class="padre">
-    <div class="hijo">
 
-    </div>
-    <div class="hijo">
-
-    </div>
-  </div>
-  <div class="padre">
-    <div class="hijo">
-
-    </div>
-  </div>
 
 </section>
 
