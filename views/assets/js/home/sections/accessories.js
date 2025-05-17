@@ -10,7 +10,7 @@ class AccessoriesHome {
     this.addArrowsEvent(".container_accessories_home_arrow");
 
 
-    for (var i = 0; i < input_amount_accessories.length; i++) {
+    for (let i = 0; i < input_amount_accessories.length; i++) {
       input_amount_accessories[i].addEventListener("input", function(){
         alert(i);
       })
