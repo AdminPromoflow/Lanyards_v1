@@ -12,7 +12,7 @@ class AccessoriesHome {
 
     for (let i = 0; i < input_amount_accessories.length; i++) {
       input_amount_accessories[i].addEventListener("input", function(){
-        alert(i);
+        this.value = this.value.replace(/\D/g, '');
       })
     }
   }
