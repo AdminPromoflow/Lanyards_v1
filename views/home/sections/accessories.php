@@ -88,6 +88,23 @@ $accessories_home_js = "../../views/assets/js/home/sections/accessories.js";
     <img src="<?php echo '../../views/assets/img/home/accessories/arrow_top.png?v=' . accessories_home_file_version('../../views/assets/img/home/accessories/arrow_top.png'); ?>" alt="">
   </div>
 
+
+
+
+  <div class="padre">
+    <div class="hijo">
+
+    </div>
+    <div class="hijo">
+
+    </div>
+  </div>
+  <div class="padre">
+    <div class="hijo">
+
+    </div>
+  </div>
+
 </section>
 
 <script src="<?php echo $accessories_home_js . '?v=' . accessories_home_file_version($accessories_home_js); ?>" type="text/javascript"></script>
