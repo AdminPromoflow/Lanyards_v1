@@ -32,8 +32,11 @@ class AccessoriesHome {
       box_accessories_home_description[i].addEventListener("click", function(){
           //alert();
            const padre = box_accessories_home_description[i].closest('.subcontainer_accessories_home_description');
+           const subcontainer_accessories_home_description = document.querySelectorAll('.subcontainer_accessories_home_description');
 
-           alert(padre + "hola");
+
+           const index = Array.from(subcontainer_accessories_home_description).indexOf(padre);
+           alert(index);
       })
     }
 
