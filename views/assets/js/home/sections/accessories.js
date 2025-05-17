@@ -29,8 +29,8 @@ class AccessoriesHome {
 
 
     for (let i = 0; i < box_accessories_home_description.length; i++) {
-      box_accessories_home_description[i].addEventListener("input", function(){
-        alert("buenas");
+      box_accessories_home_description[i].addEventListener("click", function(){
+      //  alert("buenas");
           box_accessories_home_description[i].style.border = "1px solid white";
       })
     }
