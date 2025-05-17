@@ -20,18 +20,23 @@ class AccessoriesHome {
 
         if (this.value > 0) {
           input_amount_accessories[i].value = this.value;
-
-
-
         }
         else {
           input_amount_accessories[i].value = 1;
-
-
-
         }
       })
     }
+
+
+    for (let i = 0; i < box_accessories_home_description.length; i++) {
+      box_accessories_home_description[i].addEventListener("input", function(){
+          box_accessories_home_description[i].style.border = "1px solid white";
+      })
+    }
+
+
+
+
   }
 
   // Function to handle border selection and set first element as default
@@ -130,6 +135,7 @@ class AccessoriesHome {
 
 }
 
+const box_accessories_home_description = document.querySelectorAll(".box_accessories_home_description");
 const input_amount_accessories = document.querySelectorAll(".input_amount_accessories");
 // Instantiate the class to apply all event listeners
 const accessoriesHome = new AccessoriesHome();
