@@ -13,6 +13,19 @@ class AccessoriesHome {
     for (let i = 0; i < input_amount_accessories.length; i++) {
       input_amount_accessories[i].addEventListener("input", function(){
         this.value = this.value.replace(/\D/g, '');
+
+        if (this.value > 0) {
+          input_amount_accessories[i].value = this.value;
+
+
+
+        }
+        else {
+          input_amount_accessories[i].value = 1;
+
+
+
+        }
       })
     }
   }
