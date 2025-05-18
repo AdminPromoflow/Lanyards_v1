@@ -38,7 +38,7 @@ class AccessoriesHome {
            const index = Array.from(subcontainer_accessories_home_description).indexOf(padre);
 
 
-           const title = document.querySelectorAll(".name_accessory_item")[index];
+           const title = document.querySelectorAll(".name_accessory_item");
 
            alert(title);
 
