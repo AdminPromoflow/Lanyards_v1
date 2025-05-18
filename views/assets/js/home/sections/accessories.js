@@ -38,9 +38,9 @@ class AccessoriesHome {
            const index = Array.from(subcontainer_accessories_home_description).indexOf(padre);
 
 
-           const title = document.querySelectorAll(".name_accessory_item")[0].innerHTML;
+           const title = document.querySelectorAll(".name_accessory_item")[index].innerHTML;
 
-           alert(index);
+           alert(title);
 
       })
     }
