@@ -53,7 +53,7 @@ $accessories_home_js = "../../views/assets/js/home/sections/accessories.js";
         ?>
 
         <div class="box_accessories_home">
-          <h2><?php echo $title; ?></h2>
+          <h2 class="name_accessory_item" ><?php echo $title; ?></h2>
           <img src="<?php echo $image_path . '?v=' . accessories_home_file_version($image_path); ?>" alt="<?php echo $title; ?>">
 
           <div class="subcontainer_accessories_home_quantity">

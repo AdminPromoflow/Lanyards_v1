@@ -36,7 +36,12 @@ class AccessoriesHome {
 
 
            const index = Array.from(subcontainer_accessories_home_description).indexOf(padre);
-           alert(index);
+
+
+           const title = name_accessory_item.document.querySelectorAll(".name_accessory_item")[index];
+
+           alert(title);
+
       })
     }
 
