@@ -95,9 +95,9 @@ class AccessoriesHome {
   // Function to add event listener to 'Add to Cart Accessory' buttons
   addToCartEvent(selector) {
     const cartButtons = document.querySelectorAll(selector);
-    cartButtons.forEach(button => {
+    cartButtons.forEach((button, index) => {
       button.addEventListener("click", () => {
-        alert("Your product has been added to the basket");
+        alert(index);
       });
     });
   }
