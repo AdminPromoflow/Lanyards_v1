@@ -40,15 +40,31 @@ class AccessoriesHome {
 
            const title = document.querySelectorAll(".name_accessory_item")[index].innerHTML;
 
-           alert(title + box_accessories_home_description[i].innerHTML);
+        //   alert(title + box_accessories_home_description[i].innerHTML);
 
       })
     }
 
 
 
+  /*  for (var i = 0; i < box_accessories.length; i++) {
+      box_accessories[i]
+    }*/
+
+
+
 
   }
+
+  setPosicionChildSelected(index, value) {
+    posiciones[index] = { selectedChild: value };
+  }
+
+  getPosicionChildSelected(index) {
+    return posiciones[index].selectedChild;
+  }
+
+
 
   // Function to handle border selection and set first element as default
   addClickEvent(selector) {
@@ -81,7 +97,8 @@ class AccessoriesHome {
     const cartButtons = document.querySelectorAll(selector);
     cartButtons.forEach(button => {
       button.addEventListener("click", () => {
-        alert("Your product has been added to the basket");
+        alert(selector);
+        //alert("Your product has been added to the basket");
       });
     });
   }
@@ -146,6 +163,7 @@ class AccessoriesHome {
 
 }
 
+const box_accessories = document.querySelectorAll(".box_accessories_home");
 const box_accessories_home_description = document.querySelectorAll(".box_accessories_home_description");
 const input_amount_accessories = document.querySelectorAll(".input_amount_accessories");
 // Instantiate the class to apply all event listeners
