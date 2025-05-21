@@ -45,7 +45,7 @@ class AccessoriesHome {
       const description =   box_accessories_home_description[i].querySelectorAll('h3')[0]?.textContent || ''
       const price =  box_accessories_home_description[i].querySelectorAll('h3')[1]?.textContent || ''
 
-        alert(description + "  " +  price );
+        alert(description + "  " +  price.match(/[\d.]+/) );
       /*  accessoriesHome.obtainProduct();
         accessoriesHome.obtainDescription();
         accessoriesHome.obtainPricePerUnit();
