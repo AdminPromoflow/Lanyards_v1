@@ -42,10 +42,10 @@ class AccessoriesHome {
 
         //   alert(title + box_accessories_home_description[i].innerHTML);
 
-      const description =   box_accessories_home_description[i].querySelectorAll('h1')[0]?.textContent || ''
-      const price =  box_accessories_home_description[i].querySelectorAll('h1')[1]?.textContent || ''
+      const description =   box_accessories_home_description[i].querySelectorAll('h3')[0]?.textContent || ''
+      const price =  box_accessories_home_description[i].querySelectorAll('h3')[1]?.textContent || ''
 
-        alert(box_accessories_home_description[i].innerHTML  );
+        alert(description + "  " +  price );
       /*  accessoriesHome.obtainProduct();
         accessoriesHome.obtainDescription();
         accessoriesHome.obtainPricePerUnit();
