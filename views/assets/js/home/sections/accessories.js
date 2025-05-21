@@ -41,28 +41,40 @@ class AccessoriesHome {
            const title = document.querySelectorAll(".name_accessory_item")[index].innerHTML;
 
         //   alert(title + box_accessories_home_description[i].innerHTML);
-        alert(index  + " " + i);
+
+      const description =   box_accessories_home_description[i].querySelectorAll('h1')[0]?.textContent || ''
+      const price =  box_accessories_home_description[i].querySelectorAll('h1')[1]?.textContent || ''
+
+        alert(description  + " " + price);
+        accessoriesHome.obtainProduct();
+        accessoriesHome.obtainDescription();
+        accessoriesHome.obtainPricePerUnit();
+        accessoriesHome.obtainAmount();
+        accessoriesHome.obtainTotal();
+
+
 
       })
     }
 
-
-
-  /*  for (var i = 0; i < box_accessories.length; i++) {
-      box_accessories[i]
-    }*/
-
-
-
-
   }
 
   setPosicionChildSelected(index, value) {
-    posiciones[index] = { selectedChild: value };
+    this.posiciones[index] = { selectedChild: value };
   }
 
   getPosicionChildSelected(index) {
-    return posiciones[index].selectedChild;
+    return this.posiciones[index].selectedChild;
+  }
+
+
+
+  setProduct(index, value) {
+    this.name[index] = { selectedChild: value };
+  }
+
+  getProduct(index) {
+    return this.name[index].selectedChild;
   }
 
 
