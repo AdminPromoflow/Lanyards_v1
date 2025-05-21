@@ -45,7 +45,7 @@ class AccessoriesHome {
       const description =   box_accessories_home_description[i].querySelectorAll('h3')[0]?.textContent || ''
       const price =  box_accessories_home_description[i].querySelectorAll('h3')[1]?.textContent || ''
 
-        alert(description + "  " +  price.match(/[\d.]+/) );
+        alert(title + " " + description + "  " +  price.match(/[\d.]+/) );
       /*  accessoriesHome.obtainProduct();
         accessoriesHome.obtainDescription();
         accessoriesHome.obtainPricePerUnit();
@@ -59,6 +59,9 @@ class AccessoriesHome {
 
   }
 
+
+  // Creo que esto no es necesario:
+
   setPosicionChildSelected(index, value) {
     this.posiciones[index] = { selectedChild: value };
   }
@@ -70,13 +73,21 @@ class AccessoriesHome {
 
 
   setProduct(index, value) {
-    this.name[index] = { selectedChild: value };
+    this.product[index] = value;
   }
 
   getProduct(index) {
-    return this.name[index].selectedChild;
+    return this.product[index];
   }
 
+
+  setPrice(index, value) {
+    this.price[index] = value;
+  }
+
+  getPrice(index) {
+    return this.price[index];
+  }
 
 
   // Function to handle border selection and set first element as default
