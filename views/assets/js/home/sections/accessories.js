@@ -40,7 +40,8 @@ class AccessoriesHome {
 
            const title = document.querySelectorAll(".name_accessory_item")[index].innerHTML;
 
-           alert(title + box_accessories_home_description[i].innerHTML);
+        //   alert(title + box_accessories_home_description[i].innerHTML);
+        alert(i + " " + index);
 
       })
     }
