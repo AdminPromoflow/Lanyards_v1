@@ -45,12 +45,12 @@ class AccessoriesHome {
       const description =   box_accessories_home_description[i].querySelectorAll('h1')[0]?.textContent || ''
       const price =  box_accessories_home_description[i].querySelectorAll('h1')[1]?.textContent || ''
 
-        alert(box_accessories_home_description[i].querySelectorAll('h1')  + " " + price);
-        accessoriesHome.obtainProduct();
+        alert(box_accessories_home_description[i].querySelectorAll('h1')[0].textContent  );
+      /*  accessoriesHome.obtainProduct();
         accessoriesHome.obtainDescription();
         accessoriesHome.obtainPricePerUnit();
         accessoriesHome.obtainAmount();
-        accessoriesHome.obtainTotal();
+        accessoriesHome.obtainTotal();*/
 
 
 
