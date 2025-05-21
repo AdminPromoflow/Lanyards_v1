@@ -42,10 +42,12 @@ class AccessoriesHome {
 
         //   alert(title + box_accessories_home_description[i].innerHTML);
 
+        const amount = document.querySelectorAll(".name_accessory_item");
+
       const description =   box_accessories_home_description[i].querySelectorAll('h3')[0]?.textContent || ''
       const price =  box_accessories_home_description[i].querySelectorAll('h3')[1]?.textContent || ''
 
-        alert(title + " " + description + "  " +  price.match(/[\d.]+/) );
+        alert(title + " " + description + "  " +  price.match(/[\d.]+/) + "  " + input_amount_accessories[index].value );
       /*  accessoriesHome.obtainProduct();
         accessoriesHome.obtainDescription();
         accessoriesHome.obtainPricePerUnit();
