@@ -48,8 +48,9 @@ class AccessoriesHome {
 
       //  alert(title + " " + description + "  " +  price.match(/[\d.]+/) + "  " + input_amount_accessories[index].value  + "  " +  price.match(/[\d.]+/) );
         accessoriesHome.setProduct(index, title);
-        accessoriesHome.setDescription(index, description);
         accessoriesHome.setPricePerUnit(index, price.match(/[\d.]+/));
+        accessoriesHome.setDescription(index, description);
+
         accessoriesHome.setAmount(index, input_amount_accessories[index].value);
         accessoriesHome.setTotal(index, price.match(/[\d.]+/));
         accessoriesHome.setPosicionChildSelected(index, i);
@@ -108,8 +109,8 @@ class AccessoriesHome {
       const price =  box_accessories_home_description[selected].querySelectorAll('h3')[1]?.textContent || ''
 
       this.setProduct(index, title);
-      this.setDescription(index, description);
       this.setPricePerUnit(index, price.match(/[\d.]+/));
+      this.setDescription(index, description);
       this.setAmount(index, input_amount_accessories[index].value);
       this.setTotal(index, price.match(/[\d.]+/));
     //  this.setPosicionChildSelected(index, selected);
@@ -161,8 +162,15 @@ class AccessoriesHome {
 
 
   setDescription(index, value) {
-    this.description[index] = value;
-  }
+
+    this.description[index] = {
+      item: {
+        type: value,
+        additional_price: this.getPricePerUnit(index)
+      }
+    }
+
+]  }
 
   getDescription(index) {
     return this.description[index];
@@ -226,7 +234,16 @@ class AccessoriesHome {
     const cartButtons = document.querySelectorAll(selector);
     cartButtons.forEach((button, index) => {
       button.addEventListener("click", () => {
-        alert(index);
+
+
+
+        /*  alert(this.getPosicionChildSelected(index)  + "  " +   this.getProduct(index) + "  " + this.getDescription(index) + "  " +  this.getPricePerUnit(index)
+           + "  " +  this.getAmount(index) + "  " +  this.getTotal(index)
+        );*/
+
+
+
+
       });
     });
   }
