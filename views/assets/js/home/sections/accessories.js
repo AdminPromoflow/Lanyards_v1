@@ -73,6 +73,27 @@ class AccessoriesHome {
 
 
 
+      this.posiciones[0] = 0;
+      this.posiciones[1] = 3;
+      this.posiciones[2] = 6;
+      this.posiciones[3] = 11;
+      this.posiciones[4] = 12;
+
+
+      this.assignValues();
+
+  }
+
+
+  assignValues(){
+    const selected;
+    for (var i = 0; i < box_accessories.length; i++) {
+
+      selected = box_accessories[i].getPosicionChildSelected(i);
+      alert(selected);
+    }
+  //  accessoriesHome.setProduct(index, title);
+
   }
 
 
