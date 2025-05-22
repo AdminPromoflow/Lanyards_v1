@@ -114,7 +114,6 @@ class Checkout {
 
   makeAjaxRequestGetAllMaterials() {
     const url = "../../controller/lanyard/job.php";
-    alert(this.getPricePerUnit());
     const data = {
       action: "createJob",
       product: this.getProduct(),
@@ -138,6 +137,7 @@ class Checkout {
         throw new Error("Network error.");
       })
       .then(data => {
+        alert(data);
 
 
         data = JSON.parse(data);

@@ -63,6 +63,8 @@ class Job {
         $descriptionJson = json_encode($data->description, JSON_UNESCAPED_UNICODE);
         $job_model->setDescription($descriptionJson);
 
+        echo json_encode($data->price_per_unit);exit;
+
         $job_model->setPricePerUnit($data->price_per_unit);
         $job_model->setAmount($data->amount);
         $job_model->setTotal($data->total);

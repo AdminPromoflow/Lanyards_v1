@@ -246,7 +246,7 @@ class AccessoriesHome {
 
   makeAjaxRequestGetAllMaterials(index) {
     const url = "../../controller/lanyard/job.php";
-    
+
     const data = {
       action: "createJob",
       product: this.getProduct(index),
