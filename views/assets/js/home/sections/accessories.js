@@ -170,7 +170,7 @@ class AccessoriesHome {
       }
     }
 
-]  }
+  }
 
   getDescription(index) {
     return this.description[index];
