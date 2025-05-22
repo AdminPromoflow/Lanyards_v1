@@ -87,7 +87,7 @@ class AccessoriesHome {
 
   assignValues(){
     var selected;
-    for (var i = 0; i < box_accessories.length; i++) {
+    for (var i = 0; i < box_accessories_home_description.length; i++) {
 
       selected = this.getPosicionChildSelected(i);
 
@@ -103,15 +103,15 @@ class AccessoriesHome {
 
       const amount = document.querySelectorAll(".name_accessory_item");
 
-      const description =   box_accessories_home_description[i].querySelectorAll('h3')[0]?.textContent || ''
-      const price =  box_accessories_home_description[i].querySelectorAll('h3')[1]?.textContent || ''
+      const description =   box_accessories_home_description[selected].querySelectorAll('h3')[0]?.textContent || ''
+      const price =  box_accessories_home_description[selected].querySelectorAll('h3')[1]?.textContent || ''
 
       this.setProduct(index, title);
       this.setDescription(index, description);
       this.setPricePerUnit(index, price.match(/[\d.]+/));
       this.setAmount(index, input_amount_accessories[index].value);
       this.setTotal(index, price.match(/[\d.]+/));
-      this.setPosicionChildSelected(index, i);
+    //  this.setPosicionChildSelected(index, selected);
 
 
       alert(this.getPosicionChildSelected(index)  + "  " +   this.getProduct(index) + "  " + this.getDescription(index) + "  " +  this.getPricePerUnit(index)
