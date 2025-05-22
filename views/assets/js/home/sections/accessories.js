@@ -237,9 +237,9 @@ class AccessoriesHome {
 
 
 
-        /*  alert(this.getPosicionChildSelected(index)  + "  " +   this.getProduct(index) + "  " + this.getDescription(index) + "  " +  this.getPricePerUnit(index)
+          alert(this.getPosicionChildSelected(index)  + "  " +   this.getProduct(index) + "  " + this.getDescription(index) + "  " +  this.getPricePerUnit(index)
            + "  " +  this.getAmount(index) + "  " +  this.getTotal(index)
-        );*/
+        );
 
 
 
