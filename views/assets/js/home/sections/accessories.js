@@ -64,12 +64,12 @@ class AccessoriesHome {
       //this.setProduct(0, 1);
 
 
-      this.posiciones[0] = 0;
-      this.product[0] = "Rigid Card Holder";
-      this.description[0] = "Clear Plastic (closed face)";
-      this.price[0] = 0.3;
-      this.amount[0] = 1;
-      this.total[0] = 0.3;
+      this.posiciones = [];
+      this.product = [];
+      this.description = [];
+      this.price = [];
+      this.amount = [];
+      this.total = [];
 
 
 
@@ -83,7 +83,7 @@ class AccessoriesHome {
   }
 
   getPosicionChildSelected(index) {
-    return this.posiciones[index].selectedChild;
+    return this.posiciones[index];
   }
 
 
