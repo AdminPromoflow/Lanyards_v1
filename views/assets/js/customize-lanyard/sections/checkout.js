@@ -137,15 +137,16 @@ class Checkout {
         throw new Error("Network error.");
       })
       .then(data => {
-        alert(data);
+      //  alert(data);
 
 
         data = JSON.parse(data);
 
         if (data["status"]) {
           alert(data["message"]);
-          chargingClass.hideShowchargin(false);
           window.location.href = "../../views/shopping_cart/index.php";
+          chargingClass.hideShowchargin(false);
+
         }
         else {
 
