@@ -52,7 +52,7 @@ class AccessoriesHome {
         accessoriesHome.setDescription(index, description);
 
         accessoriesHome.setAmount(index, input_amount_accessories[index].value);
-        accessoriesHome.setTotal(index, price.match(/[\d.]+/)accessoriesHome.getAmount(index));
+        accessoriesHome.setTotal(index, price.match(/[\d.]+/) * accessoriesHome.getAmount(index));
         accessoriesHome.setPosicionChildSelected(index, i);
 
         accessoriesHome.selectItems();
