@@ -97,7 +97,8 @@ class Job {
             echo json_encode([
                 "message" => "Job created successfully",
                 "order_id" => $_SESSION['orden_in_process'],
-                "status" => true
+                "status" => true,
+                "data"=> $data
             ]);
         } else {
             http_response_code(500);
