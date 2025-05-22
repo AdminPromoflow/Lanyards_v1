@@ -54,7 +54,8 @@ class AccessoriesHome {
         accessoriesHome.setTotal(index, price.match(/[\d.]+/));
         accessoriesHome.setPosicionChildSelected(index, i);
 
-        alert(index + "  " + i);
+        accessoriesHome.selectItems();
+
 
       })
     }
