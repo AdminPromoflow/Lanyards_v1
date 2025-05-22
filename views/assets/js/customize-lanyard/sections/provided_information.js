@@ -136,13 +136,24 @@ class ProvidedInformation {
       state_2, town_city_2, street_address_1_2, postcode_2, email_address_2
     ];
 
-    const allEmpty = fields.every(field => field.value === "");
+    let allFilled = true;
 
-    if (allEmpty) {
-      alert("Todos los campos están vacíos.");
+    fields.forEach(field => {
+      if (field.value.trim() === "") {
+        field.style.border = "1px solid red"; // Marcar en rojo los vacíos
+        allFilled = false;
+      } else {
+        field.style.border = ""; // Limpiar el borde si está lleno
+      }
+    });
+
+    if (allFilled) {
+      console.log("Todos los campos están llenos.");
     } else {
-      alert("Hay al menos un campo con valor.");
+      console.log("Faltan campos por llenar.");
     }
+
+
 
 
 
