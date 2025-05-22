@@ -112,7 +112,7 @@ class AccessoriesHome {
       this.setPricePerUnit(index, price.match(/[\d.]+/));
       this.setDescription(index, description);
       this.setAmount(index, input_amount_accessories[index].value);
-      this.setTotal(index, price.match(/[\d.]+/)* this.getAmount(index));
+      this.setTotal(index, price.match(/[\d.]+/) * this.getAmount(index));
     //  this.setPosicionChildSelected(index, selected);
 
 
