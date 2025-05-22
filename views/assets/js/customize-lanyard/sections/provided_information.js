@@ -126,6 +126,10 @@ class ProvidedInformation {
     });
   }
 
+  checkEmptyValues(){
+    alert("hah");
+  }
+
   toggleProvidedInformation2() {
     if (!boxes_provided_information_2) return;
 
