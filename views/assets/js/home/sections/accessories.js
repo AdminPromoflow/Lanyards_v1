@@ -234,20 +234,11 @@ class AccessoriesHome {
     const cartButtons = document.querySelectorAll(selector);
     cartButtons.forEach((button, index) => {
       button.addEventListener("click", () => {
-
-
-
         /*  alert(this.getPosicionChildSelected(index)  + "  " +   this.getProduct(index) + "  " + JSON.stringify(this.getDescription(index)) + "  " +  this.getPricePerUnit(index)
            + "  " +  this.getAmount(index) + "  " +  this.getTotal(index)
         );*/
 
-
-
-
         accessoriesHome.makeAjaxRequestGetAllMaterials(index);
-
-
-
 
       });
     });
@@ -255,7 +246,7 @@ class AccessoriesHome {
 
   makeAjaxRequestGetAllMaterials(index) {
     const url = "../../controller/lanyard/job.php";
-
+    alert(this.getPricePerUnit(index));
     const data = {
       action: "createJob",
       product: this.getProduct(index),
