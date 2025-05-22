@@ -114,7 +114,7 @@ class Checkout {
 
   makeAjaxRequestGetAllMaterials() {
     const url = "../../controller/lanyard/job.php";
-
+    alert(this.getPricePerUnit());
     const data = {
       action: "createJob",
       product: this.getProduct(),
