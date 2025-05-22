@@ -390,27 +390,30 @@ class CustomizeLanyard {
    }
    openWidth(){
      previewTemplate.togglePreviewTemplateClass("block");
+     previewAccessoriesClass.showAccessoriesPreview("flex");
 
      this.showCurrentSection(this.currentSectionOpen);
    }
    openSidePrinted(){
      previewTemplate.togglePreviewTemplateClass("block");
+     previewAccessoriesClass.showAccessoriesPreview("flex");
 
      this.showCurrentSection(this.currentSectionOpen);
    }
    openClips(){
      previewTemplate.togglePreviewTemplateClass("block");
+     previewAccessoriesClass.showAccessoriesPreview("flex");
 
      this.showCurrentSection(this.currentSectionOpen);
    }
    openAttachment(){
      previewTemplate.togglePreviewTemplateClass("block");
+     previewAccessoriesClass.showAccessoriesPreview("flex");
 
 
      previewLanyardType.showTypeLanyardPreview("flex");
      previewLanyardType.showSelectedPreviewTemplate();
      previewColourClass.showColourPreview("none");
-     previewAccessoriesClass.showAccessoriesPreview("none");
      previewAccessoriesClass.showAccessoriesPreview("flex");
 
      this.showCurrentSection(this.currentSectionOpen);
@@ -469,6 +472,7 @@ class CustomizeLanyard {
   }
   openText(){
     previewTemplate.togglePreviewTemplateClass("block");
+    previewAccessoriesClass.showAccessoriesPreview("flex");
 
     previewLanyardType.showTypeLanyardPreview("flex");
     previewArtworkManualClass.showArtworkManualPreview("none");
@@ -477,6 +481,7 @@ class CustomizeLanyard {
   openImage(){
     previewTemplate.togglePreviewTemplateClass("block");
 
+    previewAccessoriesClass.showAccessoriesPreview("flex");
 
     previewLanyardType.showTypeLanyardPreview("flex");
     previewArtworkManualClass.showArtworkManualPreview("none");
@@ -523,6 +528,8 @@ class CustomizeLanyard {
     previewTemplate.togglePreviewTemplateClass("none");
     classPreviewLogin.showLoginPreview("none");
     previewCheckout.showPreviewCheckout("none");
+    previewAccessoriesClass.showAccessoriesPreview("none");
+
     previewProvidedInformation.showProvidedInformationPreview('flex');
     previewLanyardType.showTypeLanyardPreview("none");
     this.showCurrentSection(this.currentSectionOpen);
@@ -539,6 +546,7 @@ class CustomizeLanyard {
     this.showNext(false);
     this.showPreview(false);
     checkoutClass.updateItems();
+    previewAccessoriesClass.showAccessoriesPreview("none");
 
     previewLanyardType.showTypeLanyardPreview("none");
     previewProvidedInformation.showProvidedInformationPreview('none');
