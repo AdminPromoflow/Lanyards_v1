@@ -493,6 +493,8 @@ class CustomizeLanyard {
 
     artworkClass.showHideArtwork(true);
     artworkPreviewClass.showHidePreviewArtwork(true);
+    previewAccessoriesClass.showAccessoriesPreview("none");
+
     previewLanyardType.showTypeLanyardPreview("none");
     previewArtworkManualClass.showArtworkManualPreview("none");
     this.showCurrentSection(this.currentSectionOpen);
