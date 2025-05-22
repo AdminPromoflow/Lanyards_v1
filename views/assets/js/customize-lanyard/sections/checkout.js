@@ -28,7 +28,7 @@ class Checkout {
       checkoutClass.obtainPricePerUnit();
       checkoutClass.obtainAmount();
       checkoutClass.obtainTotal();
-
+      chargingClass.hideShowchargin(true);
       checkoutClass.makeAjaxRequestGetAllMaterials();
     })
 
@@ -144,6 +144,7 @@ class Checkout {
 
         if (data["status"]) {
           alert(data["message"]);
+          chargingClass.hideShowchargin(false);
           window.location.href = "../../views/shopping_cart/index.php";
         }
         else {
