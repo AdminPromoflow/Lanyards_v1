@@ -227,9 +227,11 @@ class AccessoriesHome {
   // Function to add event listener to 'Buy Accessory' buttons
   addBuyEvent(selector) {
     const buyButtons = document.querySelectorAll(selector);
-    buyButtons.forEach(button => {
+    buyButtons.forEach((button, index) => {
       button.addEventListener("click", () => {
-        alert("Under construction");
+        accessoriesHome.makeAjaxRequestCreateJobAccessory(index);
+        window.location.href = "../../views/shopping_cart/index.php";
+
       });
     });
   }
@@ -282,7 +284,6 @@ class AccessoriesHome {
 
         if (data["status"]) {
           alert(data["message"]);
-          window.location.href = "../../views/shopping_cart/index.php";
         }
         else {
 
