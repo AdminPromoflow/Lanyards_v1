@@ -46,17 +46,23 @@ class AccessoriesHome {
       const description =   box_accessories_home_description[i].querySelectorAll('h3')[0]?.textContent || ''
       const price =  box_accessories_home_description[i].querySelectorAll('h3')[1]?.textContent || ''
 
-        alert(title + " " + description + "  " +  price.match(/[\d.]+/) + "  " + input_amount_accessories[index].value  + "  " +  price.match(/[\d.]+/) );
-      /*  accessoriesHome.obtainProduct();
-        accessoriesHome.obtainDescription();
-        accessoriesHome.obtainPricePerUnit();
-        accessoriesHome.obtainAmount();
-        accessoriesHome.obtainTotal();*/
+      //  alert(title + " " + description + "  " +  price.match(/[\d.]+/) + "  " + input_amount_accessories[index].value  + "  " +  price.match(/[\d.]+/) );
+        accessoriesHome.setProduct(index, title);
+        accessoriesHome.setDescription(index, description);
+        accessoriesHome.setPricePerUnit(index, price.match(/[\d.]+/));
+        accessoriesHome.setAmount(index, input_amount_accessories[index].value);
+        accessoriesHome.setTotal(index, price.match(/[\d.]+/));
+        accessoriesHome.setProduct(index, i);
 
-
+        alert(index + "  " + i);
 
       })
     }
+
+
+
+      //this.setProduct(0, 1);
+
 
   }
 
@@ -81,6 +87,7 @@ class AccessoriesHome {
     return this.product[index];
   }
 
+
   setDescription(index, value) {
     this.description[index] = value;
   }
@@ -98,6 +105,23 @@ class AccessoriesHome {
     return this.price[index];
   }
 
+
+  setAmount(index, value) {
+    this.amount[index] = value;
+  }
+
+  getAmount(index) {
+    return this.amount[index];
+  }
+
+
+  setTotal(index, value) {
+    this.total[index] = value;
+  }
+
+  getTotal(index) {
+    return this.total[index];
+  }
 
   // Function to handle border selection and set first element as default
   addClickEvent(selector) {
