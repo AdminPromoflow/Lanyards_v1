@@ -90,7 +90,16 @@ class AccessoriesHome {
     for (var i = 0; i < box_accessories.length; i++) {
 
       selected = this.getPosicionChildSelected(i);
-      alert(selected);
+
+
+      const padre = box_accessories_home_description[selected].closest('.subcontainer_accessories_home_description');
+      const subcontainer_accessories_home_description = document.querySelectorAll('.subcontainer_accessories_home_description');
+
+
+      const index = Array.from(subcontainer_accessories_home_description).indexOf(padre);
+
+      const title = document.querySelectorAll(".name_accessory_item")[index].innerHTML;
+      alert(title);
     }
   //  accessoriesHome.setProduct(index, title);
 
