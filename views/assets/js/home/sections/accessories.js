@@ -19,13 +19,19 @@ class AccessoriesHome {
         this.value = this.value.replace(/\D/g, '');
 
         if (this.value > 0) {
+          accessoriesHome.setAmount(i, this.value);
           input_amount_accessories[i].value = this.value;
         }
         else {
+          accessoriesHome.setAmount(i, 1);
+
           input_amount_accessories[i].value = 1;
         }
       })
     }
+
+
+
 
 
     for (let i = 0; i < box_accessories_home_description.length; i++) {
@@ -246,7 +252,6 @@ class AccessoriesHome {
 
   makeAjaxRequestCreateJobAccessory(index) {
     const url = "../../controller/lanyard/job.php";
-    alert(this.getAmount(index));
     const data = {
       action: "createJob",
       product: this.getProduct(index),
