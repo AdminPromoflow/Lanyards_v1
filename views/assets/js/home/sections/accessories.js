@@ -227,7 +227,7 @@ class AccessoriesHome {
   // Function to add event listener to 'Buy Accessory' buttons
   addBuyEvent(selector) {
     const buyButtons = document.querySelectorAll(selector);
-    buyButtons.forEach(button => {
+    buyButtons.forEach((button, index) => {
       button.addEventListener("click", () => {
 
         accessoriesHome.makeAjaxRequestCreateBuyJobAccessory(index);
