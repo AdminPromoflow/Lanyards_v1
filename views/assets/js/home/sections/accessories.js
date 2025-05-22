@@ -237,9 +237,58 @@ class AccessoriesHome {
 
 
 
-          alert(this.getPosicionChildSelected(index)  + "  " +   this.getProduct(index) + "  " + JSON.stringify(this.getDescription(index)) + "  " +  this.getPricePerUnit(index)
+        /*  alert(this.getPosicionChildSelected(index)  + "  " +   this.getProduct(index) + "  " + JSON.stringify(this.getDescription(index)) + "  " +  this.getPricePerUnit(index)
            + "  " +  this.getAmount(index) + "  " +  this.getTotal(index)
-        );
+        );*/
+
+
+
+
+        makeAjaxRequestGetAllMaterials() {
+          const url = "../../controller/lanyard/job.php";
+
+          const data = {
+            action: "createJob",
+            product: this.getProduct(index),
+            description: this.getDescription(index),
+            price_per_unit: this.getPricePerUnit(index),
+            amount: this.getAmount(index),
+            total: this.getTotal(index)
+          };
+
+          fetch(url, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+          })
+            .then(response => {
+              if (response.ok) {
+                return response.text();
+              }
+              throw new Error("Network error.");
+            })
+            .then(data => {
+
+
+              data = JSON.parse(data);
+
+              if (data["status"]) {
+                alert(data["message"]);
+                window.location.href = "../../views/shopping_cart/index.php";
+              }
+              else {
+
+              }
+
+
+
+            })
+            .catch(error => {
+              console.error("Error:", error);
+            });
+        }
 
 
 
