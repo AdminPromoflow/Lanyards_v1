@@ -244,7 +244,7 @@ class AccessoriesHome {
 
 
 
-        makeAjaxRequestGetAllMaterials(index);
+        accessoriesHome.makeAjaxRequestGetAllMaterials(index);
 
 
 
