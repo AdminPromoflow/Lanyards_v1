@@ -106,11 +106,11 @@ class AccessoriesHome {
   }
 
 
-  setPrice(index, value) {
+  setPricePerUnit(index, value) {
     this.price[index] = value;
   }
 
-  getPrice(index) {
+  getPricePerUnit(index) {
     return this.price[index];
   }
 
