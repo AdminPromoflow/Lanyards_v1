@@ -114,14 +114,27 @@ class AccessoriesHome {
     //  this.setPosicionChildSelected(index, selected);
 
 
-      alert(this.getPosicionChildSelected(index)  + "  " +   this.getProduct(index) + "  " + this.getDescription(index) + "  " +  this.getPricePerUnit(index)
+    /*  alert(this.getPosicionChildSelected(index)  + "  " +   this.getProduct(index) + "  " + this.getDescription(index) + "  " +  this.getPricePerUnit(index)
        + "  " +  this.getAmount(index) + "  " +  this.getTotal(index)
-    );
+    );*/
 
 
     }
-  //  accessoriesHome.setProduct(index, title);
 
+    this.selectItems();
+      //  accessoriesHome.setProduct(index, title);
+
+  }
+
+  selectItems(){
+
+    for (var i = 0; i < box_accessories_home_description.length; i++) {
+      box_accessories_home_description[i].style.border = "1px solid transparent";
+    }
+    for (var i = 0; i < box_accessories.length; i++) {
+      selected = this.getPosicionChildSelected(i);
+      box_accessories_home_description[selected].style.border = "1px solid white";
+    }
   }
 
 
