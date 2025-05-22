@@ -66,9 +66,23 @@ class Job {
         $job_model->setDescription($descriptionJson);
 
 
-        $job_model->setPricePerUnit($data->price_per_unit);
+        if (is_array($data->price_per_unit)) {
+            $data_price = $data->price_per_unit[0];
+        }
+        else {
+          $data_price = $data->price_per_unit;
+        }
+        $job_model->setPricePerUnit($data_price);
         $job_model->setAmount($data->amount);
-        $job_model->setTotal($data->total);
+
+        if (is_array($data->total)) {
+            $data_price_total = $data->total[0];
+        }
+        else {
+          $data_price_total = $data->total;
+        }
+
+        $job_model->setTotal($data_price_total);
 
         // Recuperar el idOrder desde la sesión
         $job_model->setIdOrder($idOrder);
