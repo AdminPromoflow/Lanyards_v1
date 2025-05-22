@@ -131,9 +131,7 @@ class ProvidedInformation {
 
     const fields = [
       first_name, last_name, company_name, phone, country,
-      state, town_city, street_address_1, postcode, email_address,
-      first_name_2, last_name_2, company_name_2, phone_2, country_2,
-      state_2, town_city_2, street_address_1_2, postcode_2, email_address_2
+      state, town_city, street_address_1, postcode, email_address
     ];
 
     let allFilled = true;
@@ -148,17 +146,10 @@ class ProvidedInformation {
     });
 
     if (allFilled) {
-      console.log("Todos los campos están llenos.");
+      fulledValues = true;
     } else {
-      console.log("Faltan campos por llenar.");
+      fulledValues = false;
     }
-
-
-
-
-
-
-
 
     return fulledValues;
   }

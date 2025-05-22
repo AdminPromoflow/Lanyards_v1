@@ -521,7 +521,6 @@ class CustomizeLanyard {
     previewCheckout.showPreviewCheckout("none");
     previewAccessoriesClass.showAccessoriesPreview("none");
 
-    providedInformation.checkEmptyValues();
 
     previewProvidedInformation.showProvidedInformationPreview('flex');
     previewLanyardType.showTypeLanyardPreview("none");
@@ -531,20 +530,29 @@ class CustomizeLanyard {
     classRegister2.openRegister(false);
     checkoutClass.showHideBottons("none");
 
-    
+
   }
   openCheckout(){
-    previewTemplate.togglePreviewTemplateClass("block");
 
-    this.showNext(false);
-    this.showPreview(false);
-    checkoutClass.updateItems();
-    previewAccessoriesClass.showAccessoriesPreview("none");
+    if (providedInformation.checkEmptyValues()) {
+      previewTemplate.togglePreviewTemplateClass("block");
 
-    previewLanyardType.showTypeLanyardPreview("none");
-    previewProvidedInformation.showProvidedInformationPreview('none');
-    this.showCurrentSection(this.currentSectionOpen);
-    previewLanyardType.showTypeLanyardPreview("flex");
+      this.showNext(false);
+      this.showPreview(false);
+      checkoutClass.updateItems();
+      previewAccessoriesClass.showAccessoriesPreview("none");
+
+      previewLanyardType.showTypeLanyardPreview("none");
+      previewProvidedInformation.showProvidedInformationPreview('none');
+      this.showCurrentSection(this.currentSectionOpen);
+      previewLanyardType.showTypeLanyardPreview("flex");
+    }
+    else {
+      alert("Please enter all the required information.")
+      this.setCurrentSectionOpen(14);
+      this.openProvidedInformation();
+    }
+
   }
   setStateVisibilityPanelCustomeLanyard(value) {
     stateVisibilityPanelCustomeLanyard = value;
