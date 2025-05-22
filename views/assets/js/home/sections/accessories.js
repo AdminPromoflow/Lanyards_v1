@@ -89,7 +89,7 @@ class AccessoriesHome {
     var selected;
     for (var i = 0; i < box_accessories.length; i++) {
 
-      selected = box_accessories[i].getPosicionChildSelected(i);
+      selected = this.getPosicionChildSelected(i);
       alert(selected);
     }
   //  accessoriesHome.setProduct(index, title);
