@@ -270,6 +270,7 @@ class AccessoriesHome {
         throw new Error("Network error.");
       })
       .then(data => {
+        alert(data);
 
 
         data = JSON.parse(data);
