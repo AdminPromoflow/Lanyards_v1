@@ -99,7 +99,21 @@ class AccessoriesHome {
       const index = Array.from(subcontainer_accessories_home_description).indexOf(padre);
 
       const title = document.querySelectorAll(".name_accessory_item")[index].innerHTML;
-      alert(title);
+
+
+      const amount = document.querySelectorAll(".name_accessory_item");
+
+      const description =   box_accessories_home_description[i].querySelectorAll('h3')[0]?.textContent || ''
+      const price =  box_accessories_home_description[i].querySelectorAll('h3')[1]?.textContent || ''
+
+      this.setProduct(index, title);
+      this.setDescription(index, description);
+      this.setPricePerUnit(index, price.match(/[\d.]+/));
+      this.setAmount(index, input_amount_accessories[index].value);
+      this.setTotal(index, price.match(/[\d.]+/));
+      this.setProduct(index, i);
+
+
     }
   //  accessoriesHome.setProduct(index, title);
 
