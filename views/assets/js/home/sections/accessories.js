@@ -238,15 +238,15 @@ class AccessoriesHome {
            + "  " +  this.getAmount(index) + "  " +  this.getTotal(index)
         );*/
 
-        accessoriesHome.makeAjaxRequestGetAllMaterials(index);
+        accessoriesHome.makeAjaxRequestCreateJobAccessory(index);
 
       });
     });
   }
 
-  makeAjaxRequestGetAllMaterials(index) {
+  makeAjaxRequestCreateJobAccessory(index) {
     const url = "../../controller/lanyard/job.php";
-    
+    alert(this.getAmount(index));
     const data = {
       action: "createJob",
       product: this.getProduct(index),
