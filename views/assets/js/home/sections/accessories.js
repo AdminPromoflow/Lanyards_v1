@@ -64,13 +64,22 @@ class AccessoriesHome {
       //this.setProduct(0, 1);
 
 
+      this.posiciones[0] = 0;
+      this.product[0] = "Rigid Card Holder";
+      this.description[0] = "Clear Plastic (closed face)";
+      this.price[0] = 0.3;
+      this.amount[0] = 1;
+      this.total[0] = 0.3;
+
+
+
   }
 
 
   // Creo que esto no es necesario:
 
   setPosicionChildSelected(index, value) {
-    this.posiciones[index] = { selectedChild: value };
+    this.posiciones[index] = value ;
   }
 
   getPosicionChildSelected(index) {
