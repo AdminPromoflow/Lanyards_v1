@@ -86,7 +86,7 @@ class AccessoriesHome {
 
 
   assignValues(){
-    const selected;
+    var selected;
     for (var i = 0; i < box_accessories.length; i++) {
 
       selected = box_accessories[i].getPosicionChildSelected(i);
