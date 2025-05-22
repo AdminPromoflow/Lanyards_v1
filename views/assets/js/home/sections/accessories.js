@@ -127,7 +127,7 @@ class AccessoriesHome {
   }
 
   selectItems(){
-
+    var selected;
     for (var i = 0; i < box_accessories_home_description.length; i++) {
       box_accessories_home_description[i].style.border = "1px solid transparent";
     }
