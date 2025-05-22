@@ -124,6 +124,27 @@ class ProvidedInformation {
         resultList2.innerHTML = '';
       }
     });
+
+
+
+    const fields = [
+      first_name, last_name, company_name, phone, country,
+      state, town_city, street_address_1, postcode, email_address
+    ];
+
+    // Agregar un event listener para limpiar el borde rojo en cuanto se escriba algo
+    fields.forEach(field => {
+      field.addEventListener("input", function () {
+        if (field.value.trim() !== "") {
+          field.style.border = ""; // Elimina el borde rojo al escribir
+        }
+      });
+    });
+
+
+
+
+
   }
 
   checkEmptyValues(){
