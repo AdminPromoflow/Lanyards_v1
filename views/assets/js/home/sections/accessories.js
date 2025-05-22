@@ -87,6 +87,7 @@ class AccessoriesHome {
 
   assignValues(){
     var selected;
+    for (var i = 0; i < box_accessories.length; i++) {
 
       selected = this.getPosicionChildSelected(i);
 
@@ -118,7 +119,7 @@ class AccessoriesHome {
     );
 
 
-
+    }
   //  accessoriesHome.setProduct(index, title);
 
   }
