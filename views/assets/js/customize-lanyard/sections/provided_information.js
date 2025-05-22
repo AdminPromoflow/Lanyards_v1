@@ -127,7 +127,29 @@ class ProvidedInformation {
   }
 
   checkEmptyValues(){
-    alert("hah");
+    var fulledValues = false;
+
+    const fields = [
+      first_name, last_name, company_name, phone, country,
+      state, town_city, street_address_1, postcode, email_address,
+      first_name_2, last_name_2, company_name_2, phone_2, country_2,
+      state_2, town_city_2, street_address_1_2, postcode_2, email_address_2
+    ];
+
+    const allEmpty = fields.every(field => field.value === "");
+
+    if (allEmpty) {
+      alert("Todos los campos están vacíos.");
+    } else {
+      alert("Hay al menos un campo con valor.");
+    }
+
+
+
+
+
+
+    return fulledValues;
   }
 
   toggleProvidedInformation2() {

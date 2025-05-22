@@ -513,7 +513,6 @@ class CustomizeLanyard {
     previewProvidedInformation.showProvidedInformationPreview('none');
     this.showCurrentSection(this.currentSectionOpen);
     this.showNext(false);
-
   }
 
   openProvidedInformation(){
@@ -524,7 +523,6 @@ class CustomizeLanyard {
 
     providedInformation.checkEmptyValues();
 
-
     previewProvidedInformation.showProvidedInformationPreview('flex');
     previewLanyardType.showTypeLanyardPreview("none");
     this.showCurrentSection(this.currentSectionOpen);
@@ -533,7 +531,7 @@ class CustomizeLanyard {
     classRegister2.openRegister(false);
     checkoutClass.showHideBottons("none");
 
-
+    
   }
   openCheckout(){
     previewTemplate.togglePreviewTemplateClass("block");
