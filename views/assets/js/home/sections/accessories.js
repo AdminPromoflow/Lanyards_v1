@@ -37,7 +37,6 @@ class AccessoriesHome {
 
            const index = Array.from(subcontainer_accessories_home_description).indexOf(padre);
 
-
            const title = document.querySelectorAll(".name_accessory_item")[index].innerHTML;
 
         //   alert(title + box_accessories_home_description[i].innerHTML);
@@ -47,7 +46,7 @@ class AccessoriesHome {
       const description =   box_accessories_home_description[i].querySelectorAll('h3')[0]?.textContent || ''
       const price =  box_accessories_home_description[i].querySelectorAll('h3')[1]?.textContent || ''
 
-        alert(title + " " + description + "  " +  price.match(/[\d.]+/) + "  " + input_amount_accessories[index].value );
+        alert(title + " " + description + "  " +  price.match(/[\d.]+/) + "  " + input_amount_accessories[index].value  + "  " +  price.match(/[\d.]+/) );
       /*  accessoriesHome.obtainProduct();
         accessoriesHome.obtainDescription();
         accessoriesHome.obtainPricePerUnit();
@@ -80,6 +79,14 @@ class AccessoriesHome {
 
   getProduct(index) {
     return this.product[index];
+  }
+
+  setDescription(index, value) {
+    this.description[index] = value;
+  }
+
+  getDescription(index) {
+    return this.description[index];
   }
 
 
