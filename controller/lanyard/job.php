@@ -98,7 +98,7 @@ class Job {
                 "message" => "Job created successfully",
                 "order_id" => $_SESSION['orden_in_process'],
                 "status" => true,
-                "data"=> $data
+                "data_price"=> $data->price_per_unit
             ]);
         } else {
             http_response_code(500);
