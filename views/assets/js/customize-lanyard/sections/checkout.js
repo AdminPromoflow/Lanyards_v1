@@ -145,7 +145,6 @@ class Checkout {
         if (data["status"]) {
           alert(data["message"]);
           window.location.href = "../../views/shopping_cart/index.php";
-          chargingClass.hideShowchargin(false);
 
         }
         else {
