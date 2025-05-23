@@ -29,7 +29,7 @@ class Checkout {
       checkoutClass.obtainAmount();
       checkoutClass.obtainTotal();
       chargingClass.hideShowchargin(true);
-      checkoutClass.makeAjaxRequestGetAllMaterials();
+      checkoutClass.makeAjaxRequestCreateJob();
     })
 
   }
@@ -112,7 +112,7 @@ class Checkout {
   }
 
 
-  makeAjaxRequestGetAllMaterials() {
+  makeAjaxRequestCreateJob() {
     const url = "../../controller/lanyard/job.php";
     const data = {
       action: "createJob",
@@ -137,7 +137,7 @@ class Checkout {
         throw new Error("Network error.");
       })
       .then(data => {
-      //  alert(data);
+        alert(data);
 
 
         data = JSON.parse(data);
