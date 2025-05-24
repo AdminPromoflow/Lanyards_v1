@@ -116,6 +116,7 @@ class Checkout {
   }
 
   makeAjaxRequestCreateJob() {
+    alert(JSON.stringify(providedInformation.getAddress1()));
     const url = "../../controller/lanyard/job.php";
     const data = {
       action: "createJob",
