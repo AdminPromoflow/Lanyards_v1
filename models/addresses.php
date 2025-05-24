@@ -4,7 +4,7 @@ class Addresses_Model {
 
     private $address1 = [];
     private $address2 = [];
-    private $idUser;
+    private $userEmail;
 
     public function __construct($connection) {
         $this->connection = $connection;
@@ -40,15 +40,28 @@ class Addresses_Model {
         ];
     }
 
-    public function setIdUser($id) {
-        $this->idUser = $id;
+    public function setUserEmail($email) {
+        $this->userEmail = $email;
     }
 
     public function createProvidedInformation() {
         try {
             $conn = $this->connection->getConnection();
-            $sql = $conn->prepare("
-                INSERT INTO `Addresses` (
+
+            // 1. Obtener idUser a partir del email
+            $stmt = $conn->prepare("SELECT idUser FROM Users WHERE email = :email LIMIT 1");
+            $stmt->bindParam(':email', $this->userEmail, PDO::PARAM_STR);
+            $stmt->execute();
+            $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            if (!$user) {
+                throw new Exception("Usuario no encontrado con el email: " . $this->userEmail);
+            }
+
+            $idUser = $user['idUser'];
+
+            // 2. Preparar statement para inserción en Addresses
+            $sql = $conn->prepare("INSERT INTO `Addresses` (
                     `first_name`, `last_name`, `company_name`, `phone`, `country`,
                     `state`, `town_city`, `street_address_1`, `postcode`, `email_address`, `idUser`
                 ) VALUES (
@@ -69,7 +82,7 @@ class Addresses_Model {
                 $sql->bindParam(':street_address_1', $this->address1['street_address_1'], PDO::PARAM_STR);
                 $sql->bindParam(':postcode', $this->address1['postcode'], PDO::PARAM_STR);
                 $sql->bindParam(':email_address', $this->address1['email_address'], PDO::PARAM_STR);
-                $sql->bindParam(':idUser', $this->idUser, PDO::PARAM_INT);
+                $sql->bindParam(':idUser', $idUser, PDO::PARAM_INT);
                 $sql->execute();
             }
 
@@ -85,13 +98,13 @@ class Addresses_Model {
                 $sql->bindParam(':street_address_1', $this->address2['street_address_1'], PDO::PARAM_STR);
                 $sql->bindParam(':postcode', $this->address2['postcode'], PDO::PARAM_STR);
                 $sql->bindParam(':email_address', $this->address2['email_address'], PDO::PARAM_STR);
-                $sql->bindParam(':idUser', $this->idUser, PDO::PARAM_INT);
+                $sql->bindParam(':idUser', $idUser, PDO::PARAM_INT);
                 $sql->execute();
             }
 
             $this->connection->closeConnection();
             return true;
-        } catch (PDOException $e) {
+        } catch (Exception $e) {
             error_log("Error inserting addresses: " . $e->getMessage());
             return false;
         }
