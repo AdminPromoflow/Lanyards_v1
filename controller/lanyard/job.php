@@ -116,7 +116,7 @@ class Job {
           $provided->setUserEmail($email);
           $provided->setAddress1($data->address1);
           $provided->setAddress2($data->address2);
-          $provided->createProvidedInformation($idUser);
+          $provided->createProvidedInformation();
         }
 
 
