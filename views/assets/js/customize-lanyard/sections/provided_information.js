@@ -186,6 +186,41 @@ class ProvidedInformation {
       boxes_provided_information_2.style.display = "none";
     }
   }
+
+  getAddress1() {
+    const address1 = {
+      first_name: first_name.value,
+      last_name: last_name.value,
+      company_name: company_name.value,
+      phone: phone.value,
+      country: country.value,
+      state: state.value,
+      town_city: town_city.value,
+      street_address_1: street_address_1.value,
+      postcode: postcode.value,
+      email_address: email_address.value
+    };
+
+    return address1;
+  }
+
+  getAddress2() {
+  const address2 = {
+    first_name: first_name_2.value,
+    last_name: last_name_2.value,
+    company_name: company_name_2.value,
+    phone: phone_2.value,
+    country: country_2.value,
+    state: state_2.value,
+    town_city: town_city_2.value,
+    street_address_1: street_address_1_2.value,
+    postcode: postcode_2.value,
+    email_address: email_address_2.value
+  };
+
+  return address2;
+}
+
 }
 
 // Elementos del DOM

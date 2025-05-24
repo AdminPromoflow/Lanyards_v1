@@ -33,10 +33,12 @@ class Checkout {
     })
 
   }
+
   obtainProduct(){
     this.setProduct("Custom Lanyard");
   }
-  obtainDescription() {
+
+  obtainDescription(){
     const description = {
       material: {
         type: material.getMaterialSelected(),
@@ -87,10 +89,12 @@ class Checkout {
 
     this.setPricePerUnit(pricePerUnit);
   }
+
   obtainAmount(){
     const amount = priceClass.getAmountSelected();
     this.setAmount(amount);
   }
+
   obtainTotal(){
     var pricePerUnit = priceClass.getPricePerMaterialWithAmount() +
                 priceClass.getPriceLanyardType() +
@@ -111,7 +115,6 @@ class Checkout {
 
   }
 
-
   makeAjaxRequestCreateJob() {
     const url = "../../controller/lanyard/job.php";
     const data = {
@@ -120,7 +123,9 @@ class Checkout {
       description: this.getDescription(),
       price_per_unit: this.getPricePerUnit(),
       amount: this.getAmount(),
-      total: this.getTotal()
+      total: this.getTotal(),
+      address1: providedInformation.getAddress1(),
+      address2: providedInformation.getAddress2()
     };
 
     fetch(url, {
@@ -159,10 +164,10 @@ class Checkout {
       });
   }
 
-
   getProduct() {
     return this.productName;
   }
+
   setProduct(newName) {
     this.productName = newName;
   }
@@ -170,6 +175,7 @@ class Checkout {
   getDescription() {
     return this.description;
   }
+
   setDescription(newDescription) {
     this.description = newDescription;
   }
@@ -177,30 +183,31 @@ class Checkout {
   getPricePerUnit() {
     return this.pricePerUnit;
   }
+
   setPricePerUnit(newPrice) {
     this.pricePerUnit = newPrice;
   }
 
-  // Amount
   getAmount() {
     return this.amount;
   }
+
   setAmount(newAmount) {
     this.amount = newAmount;
   }
 
-  // Total
   getTotal() {
     return this.total;
   }
+
   setTotal(newTotal) {
     this.total = newTotal;
   }
 
-  // PDF Link
   getLinkPdf() {
     return this.linkPdf;
   }
+
   setLinkPdf(newLink) {
     this.linkPdf = newLink;
   }
