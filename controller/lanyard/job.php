@@ -104,13 +104,13 @@ class Job {
 
         if (isset($data->address1)) {
           echo json_encode([
-              "message" => $data->address1
+              "address1" => $data->address1
 
           ]);
         }
         if (isset($data->address1)) {
           echo json_encode([
-              "Address2" => $data->address2
+              "address2" => $data->address2
           ]);
           exit;
         }
