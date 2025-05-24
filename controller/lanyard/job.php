@@ -101,7 +101,7 @@ class Job {
         $job_model->setIdPriceAmount($idAmount); // Cambiar si hay valor
 
         echo json_encode([
-            "address1" => $_POST['address1']
+            "address1" => $data->address1
         ]);
         exit;
 
