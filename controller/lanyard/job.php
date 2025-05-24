@@ -111,18 +111,21 @@ class Job {
               session_start();
           }
            $email = $_SESSION['email'];
+           $provided->setUserEmail($email);
+
+
+           $address1Array = (array) $data->address1;
+           $address2Array = (array) $data->address2;
+
+           $provided->setAddress1($address1Array);
+
+           $provided->setAddress2($address2Array);
 
 
 
-
-          $provided->setUserEmail($email);
-          $address1Array = (array) $data->address1;
-
-          $provided->setAddress1($address1Array);
           echo json_encode([
-              "email3" => $email
+              "email4" => $email
           ]);exit;
-          $provided->setAddress2($data->address2);
 
           $provided->createProvidedInformation();
         }
