@@ -116,10 +116,11 @@ class Job {
 
 
           $provided->setUserEmail($email);
+
+          $provided->setAddress1($data->address1);
           echo json_encode([
               "email3" => $email
           ]);exit;
-          $provided->setAddress1($data->address1);
           $provided->setAddress2($data->address2);
 
           $provided->createProvidedInformation();
