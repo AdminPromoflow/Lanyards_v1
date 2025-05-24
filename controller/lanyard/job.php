@@ -100,20 +100,17 @@ class Job {
         // Extras pueden ser null o string vacío
         $job_model->setIdPriceAmount($idAmount); // Cambiar si hay valor
 
-        echo json_encode([
-            "address1" => $data->address1
-        ]);
-        exit;
 
-        if (isset($_POST['address1'])) {
+
+        if (isset($data->address1)) {
           echo json_encode([
-              "message" => $_POST['address1']
+              "message" => $data->address1
 
           ]);
         }
-        if (isset($_POST['address2'])) {
+        if (isset($data->address1)) {
           echo json_encode([
-              "Address2" => $_POST['address2']
+              "Address2" => $data->address2
           ]);
           exit;
         }
