@@ -113,13 +113,14 @@ class Job {
            $email = $_SESSION['email'];
 
 
-           echo json_encode([
-               "email" => $email
-           ]);exit;
+
 
           $provided->setUserEmail($email);
           $provided->setAddress1($data->address1);
           $provided->setAddress2($data->address2);
+          echo json_encode([
+              "email2" => $email
+          ]);exit;
           $provided->createProvidedInformation();
         }
 
