@@ -150,14 +150,12 @@ class Checkout {
         if (data["status"]) {
           alert(data["message"]);
           window.location.href = "../../views/shopping_cart/index.php";
-
         }
+
         else {
 
         }
-
-
-
+        
       })
       .catch(error => {
         console.error("Error:", error);

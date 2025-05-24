@@ -98,10 +98,21 @@ class Job {
 
 
         // Extras pueden ser null o string vacío
-          $job_model->setIdPriceAmount($idAmount); // Cambiar si hay valor
+        $job_model->setIdPriceAmount($idAmount); // Cambiar si hay valor
 
 
-          
+        if (isset($_POST['address1'])) {
+          echo json_encode([
+              "message" => $_POST['address1']
+
+          ]);
+        }
+        if (isset($_POST['address2'])) {
+          echo json_encode([
+              "Address2" => $_POST['address2']
+          ]);
+          exit;
+        }
 
 
         // Crear el job en la base de datos
