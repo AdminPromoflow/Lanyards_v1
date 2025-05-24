@@ -125,11 +125,7 @@ class Addresses_Model {
                 throw new Exception("Usuario no encontrado con el email: " . $this->email);
             }
 
-
-
             $idUser = $user['idUser'];
-
-
 
             // 2. Eliminar direcciones por idUser
             $delete = $conn->prepare("DELETE FROM Addresses WHERE idUser = :idUser");
