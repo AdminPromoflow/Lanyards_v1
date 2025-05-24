@@ -145,7 +145,7 @@ class Checkout {
       .then(data => {
         alert(data);
 
-        chargingClass.hideShowchargin(true);
+        chargingClass.hideShowchargin(false);
 
         data = JSON.parse(data);
 
