@@ -110,35 +110,34 @@ class Addresses_Model {
         }
     }
 
-    public function deleteAddressesByEmail() {
+    public function deleteAddressesByEmail(){
 
-        try {
-            $conn = $this->connection->getConnection();
+      try {
+          $conn = $this->connection->getConnection();
 
-            // 1. Buscar idUser por email
-            $stmt = $conn->prepare("SELECT idUser FROM Users WHERE email = :email LIMIT 1");
-            $stmt->bindParam(':email', $this->userEmail, PDO::PARAM_STR);
-            $stmt->execute();
-            $user = $stmt->fetch(PDO::FETCH_ASSOC);
+          // 1. Buscar idUser por email
+          $stmt = $conn->prepare("SELECT idUser FROM Users WHERE email = :email LIMIT 1");
+          $stmt->bindParam(':email', $this->userEmail, PDO::PARAM_STR);
+          $stmt->execute();
+          $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-            if (!$user) {
-                throw new Exception("Usuario no encontrado con el email: " . $this->email);
-            }
+          if (!$user) {
+              throw new Exception("Usuario no encontrado con el email: " . $this->email);
+          }
 
-            $idUser = $user['idUser'];
+          $idUser = $user['idUser'];
 
-            // 2. Eliminar direcciones por idUser
-            $delete = $conn->prepare("DELETE FROM Addresses WHERE idUser = :idUser");
-            $delete->bindParam(':idUser', $idUser, PDO::PARAM_INT);
-            $delete->execute();
+          // 2. Eliminar direcciones por idUser
+          $delete = $conn->prepare("DELETE FROM Addresses WHERE idUser = :idUser");
+          $delete->bindParam(':idUser', $idUser, PDO::PARAM_INT);
+          $delete->execute();
 
-            $this->connection->closeConnection();
-            return true;
+          $this->connection->closeConnection();
+          return true;
         } catch (Exception $e) {
             error_log("Error al eliminar direcciones: " . $e->getMessage());
             return false;
         }
     }
-
 }
 ?>
