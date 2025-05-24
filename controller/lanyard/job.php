@@ -115,6 +115,10 @@ class Job {
            $provided->setUserEmail($email);
            $provided->deleteAddressesByEmail();
 
+           echo json_encode([
+               "message" => "Deleted",
+           ]);exit;
+
 
           $connection = new Database();
           $provided = new Addresses_Model($connection);
