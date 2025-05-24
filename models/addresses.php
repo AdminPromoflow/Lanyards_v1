@@ -111,9 +111,7 @@ class Addresses_Model {
     }
 
     public function deleteAddressesByEmail() {
-      echo json_encode([
-          "entramos" => "huhu",
-      ]);exit;
+
         try {
             $conn = $this->connection->getConnection();
 
@@ -126,6 +124,10 @@ class Addresses_Model {
             if (!$user) {
                 throw new Exception("Usuario no encontrado con el email: " . $this->email);
             }
+
+            echo json_encode([
+                "entramos" => ":)",
+            ]);exit;
 
             $idUser = $user['idUser'];
 
