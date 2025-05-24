@@ -117,7 +117,7 @@ class Addresses_Model {
 
             // 1. Buscar idUser por email
             $stmt = $conn->prepare("SELECT idUser FROM Users WHERE email = :email LIMIT 1");
-            $stmt->bindParam(':email', $this->email, PDO::PARAM_STR);
+            $stmt->bindParam(':email', $this->userEmail, PDO::PARAM_STR);
             $stmt->execute();
             $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -125,9 +125,7 @@ class Addresses_Model {
                 throw new Exception("Usuario no encontrado con el email: " . $this->email);
             }
 
-            echo json_encode([
-                "entramos" => ":)",
-            ]);exit;
+
 
             $idUser = $user['idUser'];
 
