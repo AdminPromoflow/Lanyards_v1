@@ -116,8 +116,6 @@ class Job {
            $provided->deleteAddressesByEmail();
 
 
-
-
           $connection = new Database();
           $provided = new Addresses_Model($connection);
 
@@ -195,7 +193,6 @@ class Job {
 
         // Final debug or confirmation message
       //  echo json_encode($data->accessories->type);
-        exit;
     }
 
 
@@ -228,7 +225,6 @@ class Job {
       $job_model->setIdOrder($idOrder);
       $jobs = $job_model->getJobsByOrder();
 
-      echo json_encode($jobs); exit;
 
 
 
