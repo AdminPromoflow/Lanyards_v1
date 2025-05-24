@@ -5,6 +5,7 @@ require_once '../../models/orders.php';
 require_once '../../models/jobs.php';
 require_once '../../models/amount.php';
 require_once '../../models/clips.php';
+require_once '../../models/addresses.php';
 
 
 
@@ -102,18 +103,14 @@ class Job {
 
 
 
-        if (isset($data->address1)) {
-          echo json_encode([
-              "address1" => $data->address1
+        if (isset($data->address1) && isset($data->address2)) {
+          $provided = new Addresses_Model($connection);
+          $provided->setIdOrder($idOrder);
+          $provided->setAddress1($data->address1);
+          $provided->setAddress2($data->address2);
+          $provided->createProvidedInformation($idUser);
+        }
 
-          ]);
-        }
-        if (isset($data->address1)) {
-          echo json_encode([
-              "address2" => $data->address2
-          ]);
-          exit;
-        }
 
 
         // Crear el job en la base de datos
