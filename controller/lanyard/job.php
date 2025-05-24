@@ -105,20 +105,26 @@ class Job {
 
         if (isset($data->address1) || isset($data->address2)) {
 
-        /*  $connection = new Database();
+          $connection = new Database();
           $provided = new Addresses_Model($connection);
 
           if (session_status() === PHP_SESSION_NONE) {
               session_start();
           }
-
            $email = $_SESSION['email'];
            $provided->setUserEmail($email);
-           $provided->deleteAddressesByEmail();*/
+           $provided->deleteAddressesByEmail();
 
 
           $connection = new Database();
           $provided = new Addresses_Model($connection);
+
+
+          if (session_status() === PHP_SESSION_NONE) {
+              session_start();
+          }
+           $email = $_SESSION['email'];
+           $provided->setUserEmail($email);
 
 
            $address1Array = (array) $data->address1;
