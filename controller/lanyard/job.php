@@ -113,7 +113,7 @@ class Job {
           }
            $email = $_SESSION['email'];
            $provided->setUserEmail($email);
-           $provided = deleteAddressesByEmail();
+           $provided->deleteAddressesByEmail();
 
 
           $connection = new Database();
