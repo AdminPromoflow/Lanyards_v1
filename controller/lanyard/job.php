@@ -232,7 +232,7 @@ class Job {
       $job_model->setIdOrder($idOrder);
       $jobs = $job_model->getJobsByOrder();
 
-
+      echo json_encode($jobs);
 
 
     //  echo json_encode($_SESSION['orden_in_process']."hahah");
