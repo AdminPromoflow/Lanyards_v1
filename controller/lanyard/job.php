@@ -123,11 +123,13 @@ class Job {
 
 
 
-          echo json_encode([
-              "email4" => $email
-          ]);exit;
 
-          $provided->createProvidedInformation();
+
+          $result = $provided->createProvidedInformation();
+
+          echo json_encode([
+              "result" => $result
+          ]);exit;
         }
 
 
