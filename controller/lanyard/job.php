@@ -104,6 +104,7 @@ class Job {
 
 
         if (isset($data->address1) || isset($data->address2)) {
+
           $connection = new Database();
           $provided = new Addresses_Model($connection);
 
@@ -112,6 +113,11 @@ class Job {
           }
            $email = $_SESSION['email'];
            $provided->setUserEmail($email);
+           $provided = deleteAddressesByEmail();
+
+
+          $connection = new Database();
+          $provided = new Addresses_Model($connection);
 
 
            $address1Array = (array) $data->address1;
@@ -121,15 +127,8 @@ class Job {
 
            $provided->setAddress2($address2Array);
 
-
-
-
-
           $result = $provided->createProvidedInformation();
 
-          echo json_encode([
-              "result" => $result
-          ]);exit;
         }
 
 
