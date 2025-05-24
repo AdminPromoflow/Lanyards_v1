@@ -111,6 +111,9 @@ class Addresses_Model {
     }
 
     public function deleteAddressesByEmail() {
+      echo json_encode([
+          "entramos" => "huhu",
+      ]);exit;
         try {
             $conn = $this->connection->getConnection();
 
@@ -126,9 +129,7 @@ class Addresses_Model {
 
             $idUser = $user['idUser'];
 
-            echo json_encode([
-                "idUser" => $idUser,
-            ]);exit;
+
 
             // 2. Eliminar direcciones por idUser
             $delete = $conn->prepare("DELETE FROM Addresses WHERE idUser = :idUser");
