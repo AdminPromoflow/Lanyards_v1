@@ -106,12 +106,16 @@ class Job {
         if (isset($data->address1) && isset($data->address2)) {
           $connection = new Database();
           $provided = new Addresses_Model($connection);
-  //ERROR ERROR       $provided->setIdUser($idOrder);
 
           if (session_status() === PHP_SESSION_NONE) {
               session_start();
           }
            $email = $_SESSION['email'];
+
+
+           echo json_encode([
+               "email" => $email
+           ]);exit;
 
           $provided->setUserEmail($email);
           $provided->setAddress1($data->address1);
