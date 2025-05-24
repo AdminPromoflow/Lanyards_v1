@@ -126,6 +126,10 @@ class Addresses_Model {
 
             $idUser = $user['idUser'];
 
+            echo json_encode([
+                "idUser" => $idUser,
+            ]);exit;
+
             // 2. Eliminar direcciones por idUser
             $delete = $conn->prepare("DELETE FROM Addresses WHERE idUser = :idUser");
             $delete->bindParam(':idUser', $idUser, PDO::PARAM_INT);
