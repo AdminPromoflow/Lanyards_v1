@@ -103,7 +103,7 @@ class Job {
 
 
 
-        if (isset($data->address1) && isset($data->address2)) {
+        if (isset($data->address1) || isset($data->address2)) {
           $connection = new Database();
           $provided = new Addresses_Model($connection);
 
