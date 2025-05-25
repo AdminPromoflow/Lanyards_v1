@@ -145,13 +145,13 @@ class Checkout {
       .then(data => {
         alert(data);
 
-        chargingClass.hideShowchargin(false);
+        //chargingClass.hideShowchargin(false);
 
         data = JSON.parse(data);
 
         if (data["status"]) {
           alert(data["message"]);
-          //window.location.href = "../../views/shopping_cart/index.php";
+          window.location.href = "../../views/shopping_cart/index.php";
 
         }
 
