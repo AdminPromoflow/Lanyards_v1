@@ -43,7 +43,7 @@ class ShoppingCart {
       throw new Error("Network error.");
     })
     .then(data => {
-      alert(JSON.stringify(data));
+    //  alert(JSON.stringify(data));
       shoppingCart.addJobsToOrder(data);
       shoppingCart.addOrderSummary(data);
 
@@ -71,6 +71,8 @@ class ShoppingCart {
   //  alert(price_per_unit + amount);
 
     data.forEach((item, index) => {
+
+      alert(JSON.stringify(item));
 
       const idJob = item["idJobs"];
       const name = item["name"] || "Sin nombre";
