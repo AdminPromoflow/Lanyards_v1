@@ -76,9 +76,21 @@ class ShoppingCart {
       const idJob = item["idJobs"];
       const name = item["name"] || "Sin nombre";
 
-      const newColour = item["newColour"];
+      const newColour = item["newColour"] * 25;
 
-      alert(newColour);
+      if (newColour == 0) {
+        const extraPriceNewColour =
+        ``;
+      }
+      else {
+        const extraPriceNewColour =
+        `<div class="elements_summary_items_shopping_cart">
+          <h3>Extra Price new colour background</h3>
+          <h3></h3>
+          <h3>£${newColour}</h3>
+        </div>`;
+      }
+
 
 
       const price_per_unit = item["price_per_unit"];
@@ -126,6 +138,7 @@ class ShoppingCart {
             ${descriptionsHTML}
           </div>
           <div class="summary_items_shopping_cart">
+            ${extraPriceNewColour}
             <div class="elements_summary_items_shopping_cart">
               <h3>Cost per unit</h3>
               <h3></h3>
