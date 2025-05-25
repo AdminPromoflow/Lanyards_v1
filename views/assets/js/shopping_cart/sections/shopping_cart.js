@@ -187,10 +187,11 @@ class ShoppingCart {
     var subtotal = 0;
 
     data.forEach((item, index) => {
+      var total = item["total"] + item["newColour"];
       const itemHTML = `
       <div class="elements_boxes_container_shopping_cart">
         <h3>${item["name"]} ${index + 1}</h3>
-        <h3>${item["total"] }</h3>
+        <h3>${total}</h3>
       </div>
       `;
 
