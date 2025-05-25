@@ -95,7 +95,7 @@ class ShoppingCart {
       const price_per_unit = item["price_per_unit"];
       const amount = item["amount"];
 
-      const total = price_per_unit * amount;
+      const total = price_per_unit * amount + newColour;
 
 
       const description = JSON.parse(item["description"]);
