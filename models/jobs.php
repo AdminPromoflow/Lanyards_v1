@@ -82,10 +82,10 @@ class Job_Model {
           $sql = $this->connection->getConnection()->prepare("
               INSERT INTO `Jobs` (
                   `name`, `description`, `price_per_unit`, `amount`, `total`,
-                  `link_pdf`, `notes`, `idOrder`, `idExtras`, `idClip`, `idPriceAmount`
+                  `link_pdf`, `notes`, `idOrder`, `idExtras`, `idClip`, `idPriceAmount`, `newColour`
               ) VALUES (
                   :name, :description, :price_per_unit, :amount, :total,
-                  :link_pdf, :notes, :idOrder, :idExtras, :idClip, :idPriceAmount
+                  :link_pdf, :notes, :idOrder, :idExtras, :idClip, :idPriceAmount, :newColour
               )
           ");
 
@@ -96,6 +96,7 @@ class Job_Model {
           $sql->bindParam(':total', $this->total);
           $sql->bindParam(':link_pdf', $this->link_pdf, PDO::PARAM_STR);
           $sql->bindParam(':notes', $this->notes, PDO::PARAM_STR);
+          $sql->bindParam(':newColour', $this->newColour, PDO::PARAM_STR);
           $sql->bindParam(':idOrder', $this->idOrder, PDO::PARAM_INT);
           $sql->bindParam(':idExtras', $this->idExtras, PDO::PARAM_STR);
           $sql->bindParam(':idClip', $this->idClip, PDO::PARAM_INT);

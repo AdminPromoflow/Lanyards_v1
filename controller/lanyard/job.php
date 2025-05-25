@@ -52,17 +52,7 @@ class Job {
     // 🛠️ Crea un nuevo trabajo (job)
     private function createJob($data) {
 
-      if ($data->newColour) {
-
-        $newColour = 1;
-
-      }
-      else {
-        $newColour = 0;
-
-      }
-      echo json_encode($newColour );exit;
-
+      $newColour = $data->newColour ? 1 : 0;
 
 
         $idOrder = $this->verifyOrden($data);
@@ -99,7 +89,6 @@ class Job {
 
 
         //$newColour
-      //  $job_model->setNewColour($data->newColour);
 
         // Recuperar el idOrder desde la sesión
         $job_model->setIdOrder($idOrder);
@@ -154,6 +143,7 @@ class Job {
 
         }
 
+        $job_model->setNewColour($data->newColour);
 
 
         // Crear el job en la base de datos
