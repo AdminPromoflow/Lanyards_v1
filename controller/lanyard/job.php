@@ -51,7 +51,9 @@ class Job {
 
     // 🛠️ Crea un nuevo trabajo (job)
     private function createJob($data) {
-      echo json_encode($data->newColour);exit;
+      //echo json_encode($data->newColour);exit;
+
+
 
         $idOrder = $this->verifyOrden($data);
 
@@ -84,6 +86,10 @@ class Job {
         }
 
         $job_model->setTotal($data_price_total);
+
+
+        //$newColour
+      //  $job_model->setNewColour($data->newColour);
 
         // Recuperar el idOrder desde la sesión
         $job_model->setIdOrder($idOrder);

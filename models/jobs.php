@@ -15,6 +15,8 @@ class Job_Model {
     private $idExtras;
     private $idClip;
     private $idPriceAmount;
+    private $newColour;
+
 
     // 🧱 Constructor
     function __construct($connection) {
@@ -60,6 +62,10 @@ class Job_Model {
 
     public function setIdExtras($idExtras) {
         $this->idExtras = $idExtras;
+    }
+
+    public function setNewColour($newColour) {
+        $this->newColour = $newColour;
     }
 
     public function setIdClip($idClip) {
