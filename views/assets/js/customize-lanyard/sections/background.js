@@ -1,6 +1,8 @@
 // Class to manage background color settings for an application interface.
 class BackgroundClass {
   constructor() {
+    this.newColour = false;
+
     // Initialize default background colors for both options
     this.setBackgroundColourSelectedFirstOption("#ffffff");
     this.setBackgroundColourSelectedSecondOption("#ffffff");
@@ -17,8 +19,11 @@ class BackgroundClass {
       option_background_colour[i].addEventListener("click", () => {
         backgroundClass.activateContainerBackground(i);
         if (i === 0) {
+          backgroundClass.setNewColour(false);
+
           backgroundClass.changeBackgroundColourSelectedFirstOption();
         } else if (i === 1) {
+          backgroundClass.setNewColour(true);
           backgroundClass.changeBackgroundColourSelectedSecondOption();
         }
       });
@@ -99,6 +104,13 @@ class BackgroundClass {
     }
   }
 
+  setNewColour(value) {
+    this.newColour = value;
+  }
+
+  getNewColour() {
+    return this.newColour;
+  }
   // Set and get first selected background color
   setBackgroundColourSelectedFirstOption(value) {
     this.backgroundColourSelectedFirstOption = value;

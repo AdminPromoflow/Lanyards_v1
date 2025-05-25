@@ -125,7 +125,8 @@ class Checkout {
       amount: this.getAmount(),
       total: this.getTotal(),
       address1: providedInformation.getAddress1(),
-      address2: providedInformation.getAddress2()
+      address2: providedInformation.getAddress2(),
+      newColour: backgroundClass.getNewColour();
     };
 
     fetch(url, {
@@ -142,7 +143,7 @@ class Checkout {
         throw new Error("Network error.");
       })
       .then(data => {
-        //alert(data);
+        alert(data);
 
         //chargingClass.hideShowchargin(false);
 

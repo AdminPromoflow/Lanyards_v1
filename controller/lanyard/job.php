@@ -51,7 +51,7 @@ class Job {
 
     // 🛠️ Crea un nuevo trabajo (job)
     private function createJob($data) {
-    //  echo json_encode("hi");exit;
+      echo json_encode($data->newColour);exit;
 
         $idOrder = $this->verifyOrden($data);
 
