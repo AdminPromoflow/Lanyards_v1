@@ -187,7 +187,7 @@ class ShoppingCart {
     var subtotal = 0;
 
     data.forEach((item, index) => {
-      var total = item["total"] + item["newColour"];
+      var total = parseFloat(item["total"]) + parseFloat(item["newColour"]);
       const itemHTML = `
       <div class="elements_boxes_container_shopping_cart">
         <h3>${item["name"]} ${index + 1}</h3>
