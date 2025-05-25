@@ -78,7 +78,7 @@ class ShoppingCart {
 
       const newColour = item["newColour"] * 25;
 
-      const extraPriceNewColour = ``;
+      let extraPriceNewColour = ``;
 
       if (newColour != 0) {
          extraPriceNewColour =
