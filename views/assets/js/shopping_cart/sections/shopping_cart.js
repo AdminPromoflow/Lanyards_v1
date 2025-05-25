@@ -138,7 +138,7 @@ class ShoppingCart {
             ${descriptionsHTML}
           </div>
           <div class="summary_items_shopping_cart">
-            ${extraPriceNewColour}
+          
             <div class="elements_summary_items_shopping_cart">
               <h3>Cost per unit</h3>
               <h3></h3>
