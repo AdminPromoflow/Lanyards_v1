@@ -78,18 +78,17 @@ class ShoppingCart {
 
       const newColour = item["newColour"] * 25;
 
-      if (newColour == 0) {
-        const extraPriceNewColour =
-        ``;
-      }
-      else {
-        const extraPriceNewColour =
+      const extraPriceNewColour = ``;
+
+      if (newColour != 0) {
+         extraPriceNewColour =
         `<div class="elements_summary_items_shopping_cart">
           <h3>Extra Price new colour background</h3>
           <h3></h3>
           <h3>£${newColour}</h3>
         </div>`;
       }
+
 
 
 
@@ -132,13 +131,12 @@ class ShoppingCart {
               <h3></h3>
               <img class="arrow_products_shopping_cart" onclick="shoppingCart.toggleDescriptionItemShoppingCart(${index})" src="../../views/assets/img/shopping_cart/sections/arrow_right.png" alt="">
               <img class="delete_job" onclick="shoppingCart.deleteJob(${idJob})" src="../../views/assets/img/shopping_cart/sections/delete-button.png" alt="">
-
           </div>
           <div class="descriptions_items_shopping_cart">
             ${descriptionsHTML}
           </div>
           <div class="summary_items_shopping_cart">
-          
+
             <div class="elements_summary_items_shopping_cart">
               <h3>Cost per unit</h3>
               <h3></h3>
