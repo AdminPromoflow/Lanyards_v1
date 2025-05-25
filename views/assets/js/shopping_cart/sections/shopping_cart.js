@@ -196,7 +196,7 @@ class ShoppingCart {
       `;
 
       boxes_container_shopping_cart.innerHTML += itemHTML;
-      subtotal = parseFloat(subtotal) + parseFloat(item["total"]);
+      subtotal = parseFloat(subtotal) + total;
     //  alert(JSON.stringify(subtotal));
     });
 
