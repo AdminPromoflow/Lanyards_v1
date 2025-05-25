@@ -195,7 +195,7 @@ class ShoppingCart {
       `;
 
       boxes_container_shopping_cart.innerHTML += itemHTML;
-      subtotal = parseFloat(subtotal) + parseFloat(item["total"]) +  parseFloat(item["newColour"] * 25);
+      subtotal = parseFloat(subtotal) + parseFloat(item["total"]) ;
       //alert(JSON.stringify(item["total"]));
     });
 
