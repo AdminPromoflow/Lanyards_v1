@@ -143,7 +143,7 @@ class Checkout {
         throw new Error("Network error.");
       })
       .then(data => {
-        alert(data);
+        //alert(data);
 
         //chargingClass.hideShowchargin(false);
 
@@ -152,7 +152,6 @@ class Checkout {
         if (data["status"]) {
           alert(data["message"]);
           window.location.href = "../../views/shopping_cart/index.php";
-
         }
 
         else {
