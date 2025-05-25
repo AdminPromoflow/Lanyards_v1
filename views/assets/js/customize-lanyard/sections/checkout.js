@@ -126,7 +126,7 @@ class Checkout {
       total: this.getTotal(),
       address1: providedInformation.getAddress1(),
       address2: providedInformation.getAddress2(),
-      newColour: backgroundClass.getNewColour();
+      newColour: backgroundClass.getNewColour()
     };
 
     fetch(url, {
