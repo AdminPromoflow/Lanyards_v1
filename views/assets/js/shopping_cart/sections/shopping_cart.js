@@ -85,8 +85,8 @@ class ShoppingCart {
           <div class="elements_summary_items_shopping_cart">
             <h3>New background colour</h3>
             <h3></h3>
-            <h3 onclick="shoppingCart.infoNewColour();">£${newColour}</h3>
-            <div class="info_extra_colour">
+            <h3>£${newColour}</h3>
+            <div onclick="shoppingCart.infoNewColour();" class="info_extra_colour">
               <img src="../../views/assets/img/shopping_cart/sections/info_icon.png" alt="">
             </div>
           </div>`;
