@@ -81,12 +81,12 @@ class ShoppingCart {
       let extraPriceNewColour = ``;
 
       if (newColour != 0) {
-         extraPriceNewColour =
-        `<div class="elements_summary_items_shopping_cart">
-          <h3>New background colour</h3>
-          <h3></h3>
-          <h3>£${newColour}</h3>
-        </div>`;
+        extraPriceNewColour = `
+          <div class="elements_summary_items_shopping_cart">
+            <h3>New background colour</h3>
+            <h3></h3>
+            <h3 onclick="shoppingCart.infoNewColour();">£${newColour}</h3>
+          </div>`;
       }
 
 
@@ -158,6 +158,10 @@ class ShoppingCart {
 
       container_draw_items_shopping_cart.innerHTML += itemHTML;
     });
+  }
+
+  infoNewColour(){
+    alert("You selected a new background colour when creating your lanyard. As noted in the options, this choice adds an extra charge to the total price of the lanyard, not to the unit cost.");
   }
 
 
