@@ -407,6 +407,7 @@
   top: 0px;
   height: 100%;
   width: 27px;
+  cursor: pointer;
 }
 .info_extra_colour img{
   position: relative;
