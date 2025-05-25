@@ -195,8 +195,8 @@ class ShoppingCart {
       `;
 
       boxes_container_shopping_cart.innerHTML += itemHTML;
-      subtotal = parseFloat(subtotal) + parseFloat(item["total"]) +  parseFloat(item["newColour"] * 25);
-      alert(JSON.stringify(subtotal));
+      subtotal = parseFloat(subtotal) + parseFloat(item["total"]);
+    //  alert(JSON.stringify(subtotal));
     });
 
     const vat = parseFloat(subtotal)*20/100;
