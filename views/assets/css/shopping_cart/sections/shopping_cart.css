@@ -405,13 +405,16 @@
   position: absolute;
   right: 15px;
   top: 0px;
-  height: 27px;
+  height: 100%;
   width: 27px;
 }
 .info_extra_colour img{
   position: relative;
-  height: 100%;
-  width: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 90%;
+  width: 900%;
 }
 
 
