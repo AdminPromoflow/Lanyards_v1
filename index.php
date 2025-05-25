@@ -5,6 +5,9 @@
     <title></title>
   </head>
   <body>
+    <div class="">
+      <img src="" alt="">
+    </div>
     <script type="text/javascript">
       window.open("views/home/index.php", "_self");
     </script>
