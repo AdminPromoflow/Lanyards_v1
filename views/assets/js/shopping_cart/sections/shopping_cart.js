@@ -83,7 +83,7 @@ class ShoppingCart {
       if (newColour != 0) {
          extraPriceNewColour =
         `<div class="elements_summary_items_shopping_cart">
-          <h3>Extra Price new colour background</h3>
+          <h3>New background colour</h3>
           <h3></h3>
           <h3>£${newColour}</h3>
         </div>`;
