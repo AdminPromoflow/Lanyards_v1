@@ -19,17 +19,16 @@
 
       <div class="boxes_container_shopping_cart" id="boxes_container_shopping_cart">
 
-
-
       </div>
 
 
       <div class="boxes2_container_shopping_cart" id="boxes2_container_shopping_cart">
 
-        
-
       </div>
 
+      <div class="boxes4_container_shopping_cart" id="boxes4_container_shopping_cart">
+
+      </div>
 
 
       <div class="boxes3_container_shopping_cart">

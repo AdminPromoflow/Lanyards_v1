@@ -196,8 +196,7 @@ class ShoppingCart {
       `;
 
       boxes_container_shopping_cart.innerHTML += itemHTML;
-      subtotal = parseFloat(subtotal) + total;
-    //  alert(JSON.stringify(subtotal));
+      subtotal = parseFloat(subtotal) + parseFloat(item["total"]);
     });
 
     const vat = parseFloat(subtotal)*20/100;
@@ -222,6 +221,34 @@ class ShoppingCart {
 
 
     boxes2_container_shopping_cart.innerHTML = item2HTML;
+
+
+
+
+
+
+
+
+
+    const item4HTML = `
+    <div class="elements_boxes2_container_shopping_cart">
+      <h3>Subtotal</h3>
+      <h3>${subtotal}</h3>
+    </div>
+
+    <div class="elements_boxes2_container_shopping_cart">
+      <h3>Tax (VAT 20%)</h3>
+      <h3>${vat}</h3>
+    </div>
+
+    <div class="elements_boxes2_container_shopping_cart">
+      <h3>Total</h3>
+      <h3>${total}</h3>
+    </div>
+    `;
+
+
+    boxes4_container_shopping_cart.innerHTML = item4HTML;
 
 
   }
@@ -335,6 +362,10 @@ class ShoppingCart {
 }
 
 const container_draw_items_shopping_cart = document.getElementById("container_draw_items_shopping_cart");
+
+const boxes4_container_shopping_cart = document.getElementById("boxes4_container_shopping_cart");
+
+
 
 // Obtener los elementos del DOM
 const product_items_shopping_cart = document.querySelectorAll(".product_items_shopping_cart");
