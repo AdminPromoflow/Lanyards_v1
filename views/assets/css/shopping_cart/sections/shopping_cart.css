@@ -380,6 +380,7 @@
   padding: 7px 0;
   color: white;
   background: white;
+  min-width: 240px;
 }
 .elements_boxes2_container_shopping_cart h3:nth-child(1){
   width: 75%;
