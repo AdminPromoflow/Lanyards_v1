@@ -343,6 +343,14 @@
   border-bottom: 3px solid rgba(255, 255, 255, .5);
 
 }
+.elements_boxes2_container_shopping_cart h2{
+  position: relative;
+  font-size: 1.4em;
+  font-weight: 400;
+  text-align: center;
+  margin: 0px;
+  color: white;
+}
 .elements_boxes2_container_shopping_cart h3{
   position: relative;
   font-size: 1.1em;
