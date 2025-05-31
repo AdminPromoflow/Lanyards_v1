@@ -2,7 +2,6 @@ class ShoppingCart {
   constructor() {
 
     this.shippingDays= 15;
-    document.querySelector('input[name="options_card_shippingCart"][value="15"]').checked = true;
 
 
     this.makeAjaxRequestJobsAvailables();
@@ -219,7 +218,7 @@ class ShoppingCart {
 
     <div class="elements_boxes2_container_shopping_cart">
     <label  onclick="shoppingCart.changeShoppingTime(15)">
-        <input type="radio" name="options_card_shippingCart" value="15">
+        <input type="radio" name="options_card_shippingCart" value="15" checked>
         <h3>15 working days</h3>
     </label>
     <h3>0%</h3>
