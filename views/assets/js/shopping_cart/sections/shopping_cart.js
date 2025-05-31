@@ -1,6 +1,8 @@
 class ShoppingCart {
   constructor() {
 
+    this.shippingDays= 15;
+
     this.makeAjaxRequestJobsAvailables();
     // Iterar sobre cada elemento del carrito y agregar un evento
     for (let i = 0; i < product_items_shopping_cart.length; i++) {
@@ -247,8 +249,6 @@ class ShoppingCart {
 
 
 
-
-
     const item4HTML = `
 
     <div class="elements_boxes2_container_shopping_cart">
@@ -267,7 +267,7 @@ class ShoppingCart {
 
     <div class="elements_boxes2_container_shopping_cart">
       <h3>Shipping</h3>
-      <h3>${vat}</h3>
+      <h3 id="price_shipping">0</h3>
     </div>
 
     <div class="elements_boxes2_container_shopping_cart">
@@ -332,8 +332,18 @@ class ShoppingCart {
   }
 
 
+  updatePriceShippingHTML(){
 
+    const price_shipping = document.getElementById("price_shipping");
+
+    price_shipping.textContent = this.shippingDays;
+
+  }
   changeShoppingTime(days){
+
+    this.shippingDays = days;
+
+
     const url = "../../controller/lanyard/order.php";
     const data = {
       action: "updateShipping",
@@ -354,7 +364,7 @@ class ShoppingCart {
         throw new Error("Network error.");
       })
       .then(data => {
-        alert(data);
+      //  alert(data);
 
         //chargingClass.hideShowchargin(false);
 
