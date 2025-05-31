@@ -204,7 +204,7 @@ class ShoppingCart {
 
     const item2HTML = `
     <div class="elements_boxes2_container_shopping_cart">
-      <h2>Shipping</h2>
+      <h3>Shipping</h3>
     </div>
 
     <div class="elements_boxes2_container_shopping_cart">
