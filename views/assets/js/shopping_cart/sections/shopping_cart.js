@@ -4,6 +4,12 @@ class ShoppingCart {
     this.shippingDays= 15;
 
 
+        this.subtotal = 0;
+        this.tax = 0;
+        this.shippingPrice = 0;
+        this.total = 0;
+
+
     this.makeAjaxRequestJobsAvailables();
     // Iterar sobre cada elemento del carrito y agregar un evento
     for (let i = 0; i < product_items_shopping_cart.length; i++) {
@@ -20,6 +26,42 @@ class ShoppingCart {
 
     this.initializeStyles();
   }
+
+  // Subtotal
+   setSubtotal(value) {
+     this.subtotal = value;
+   }
+
+   getSubtotal() {
+     return this.subtotal;
+   }
+
+   // Tax
+   setTax(value) {
+     this.tax = value;
+   }
+
+   getTax() {
+     return this.tax;
+   }
+
+   // Shipping Price
+   setShippingPrice(value) {
+     this.shippingPrice = value;
+   }
+
+   getShippingPrice() {
+     return this.shippingPrice;
+   }
+
+   // Total
+   setTotal(value) {
+     this.total = value;
+   }
+
+   getTotal() {
+     return this.total;
+   }
 
 
   makeAjaxRequestJobsAvailables(){
@@ -208,8 +250,17 @@ class ShoppingCart {
       subtotal = parseFloat(subtotal) + parseFloat(item["total"]);
     });
 
+
+    this.setSubtotal(subtotal);
+
     const vat = parseFloat(subtotal)*20/100;
+    this.setTax(vat);
+
+    //const shippingPrice = subtotal *
+
     const total = subtotal + vat;
+
+    this.setTotal(total);
 
     const item2HTML = `
     <div class="elements_boxes2_container_shopping_cart">
@@ -336,6 +387,19 @@ class ShoppingCart {
   updatePriceShippingHTML(){
 
     const price_shipping = document.getElementById("price_shipping");
+
+    if (this.shippingDays == 15) {
+      this.shippingPrice = 0;
+    }
+    else if (this.shippingDays == 10) {
+      this.shippingPrice = this.getSubtotal()* 0.2 ;
+    }
+    else if (this.shippingDays == 8) {
+      this.shippingPrice = this.getSubtotal()* 0.5 ;
+    }
+    else {
+      this.shippingPrice = 0;
+    }
 
     price_shipping.textContent = this.shippingDays;
 
