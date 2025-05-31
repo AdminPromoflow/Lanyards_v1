@@ -401,7 +401,7 @@ class ShoppingCart {
       this.shippingPrice = 0;
     }
 
-    price_shipping.textContent = this.shippingDays;
+    price_shipping.textContent = this.shippingPrice;
 
   }
   changeShoppingTime(days){
