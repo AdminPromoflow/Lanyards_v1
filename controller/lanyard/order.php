@@ -42,11 +42,10 @@ class Order {
       }
 
       $email = $_SESSION['email'];
-      $data->shippingDays;
 
 
       $connection = new Database();
-      $upadateShippingDays = new Users($connection);
+      $upadateShippingDays = new Order_Model($connection);
       $upadateShippingDays->setEmail($email);
       $upadateShippingDays->setShippingDays($data->shippingDays);
       $status = $upadateShippingDays->updateShippingDays();
