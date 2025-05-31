@@ -309,22 +309,22 @@ class ShoppingCart {
 
     <div class="elements_boxes2_container_shopping_cart">
       <h3>Subtotal</h3>
-      <h3>${subtotal}</h3>
+      <h3>£${subtotal}</h3>
     </div>
 
     <div class="elements_boxes2_container_shopping_cart">
       <h3>Tax (VAT 20%)</h3>
-      <h3>${vat}</h3>
+      <h3>£${vat}</h3>
     </div>
 
     <div class="elements_boxes2_container_shopping_cart">
       <h3>Shipping</h3>
-      <h3 id="price_shipping">0</h3>
+      <h3 id="price_shipping">£0</h3>
     </div>
 
     <div class="elements_boxes2_container_shopping_cart">
       <h3>Total</h3>
-      <h3>${total}</h3>
+      <h3>£${total}</h3>
     </div>
     `;
 
@@ -401,7 +401,7 @@ class ShoppingCart {
       this.shippingPrice = 0;
     }
 
-    price_shipping.textContent = this.shippingPrice;
+    price_shipping.textContent = "£" +this.shippingPrice;
 
   }
   changeShoppingTime(days){
