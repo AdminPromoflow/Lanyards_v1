@@ -359,8 +359,8 @@
   text-align:left;
   margin: 10px 0;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   flex-direction: row;
 }
 .elements_boxes2_container_shopping_cart input {
