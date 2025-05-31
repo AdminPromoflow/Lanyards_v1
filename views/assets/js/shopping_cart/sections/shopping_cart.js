@@ -214,7 +214,7 @@ class ShoppingCart {
     </div>
 
     <div class="elements_boxes2_container_shopping_cart">
-    <label onclick="shoppingCart.changeShoppingTime(15)>
+    <label  onclick="shoppingCart.changeShoppingTime(15)">
         <input type="radio" name="options_card_shippingCart" value="15">
         <h3>15 working days</h3>
     </label>
@@ -225,7 +225,7 @@ class ShoppingCart {
     <label onclick="shoppingCart.changeShoppingTime(10)">
         <input type="radio" name="options_card_shippingCart" value="10">
         <h3>10 working days</h3>
-    </label ">
+    </label>
       <h3>+25%</h3>
     </div>
 
