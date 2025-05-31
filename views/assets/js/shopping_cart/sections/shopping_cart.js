@@ -2,6 +2,8 @@ class ShoppingCart {
   constructor() {
 
     this.shippingDays= 15;
+    document.querySelector('input[name="options_card_shippingCart"][value="15"]').checked = true;
+
 
     this.makeAjaxRequestJobsAvailables();
     // Iterar sobre cada elemento del carrito y agregar un evento
