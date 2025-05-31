@@ -266,6 +266,11 @@ class ShoppingCart {
     </div>
 
     <div class="elements_boxes2_container_shopping_cart">
+      <h3>Shipping</h3>
+      <h3>${vat}</h3>
+    </div>
+
+    <div class="elements_boxes2_container_shopping_cart">
       <h3>Total</h3>
       <h3>${total}</h3>
     </div>
