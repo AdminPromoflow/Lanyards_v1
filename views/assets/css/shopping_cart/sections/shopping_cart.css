@@ -359,7 +359,7 @@
   margin: 10px 0;
   display: flex;
   justify-content: space-around;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: row;
 }
 .elements_boxes2_container_shopping_cart input {
