@@ -352,6 +352,21 @@
   margin: 0px;
   color: white;
 }
+.elements_boxes2_container_shopping_cart label{
+  position: relative;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+.elements_boxes2_container_shopping_cart input {
+margin: 0 10px;
+}
+
+
+
+
 .elements_boxes2_container_shopping_cart h3{
   position: relative;
   font-size: 1.1em;

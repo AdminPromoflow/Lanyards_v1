@@ -214,7 +214,10 @@ class ShoppingCart {
     </div>
 
     <div class="elements_boxes2_container_shopping_cart">
-      <h3>15 working days</h3>
+    <label>
+          <input type="radio" name="options_card_checkout" value="PayPal">
+        <h4>Shipping</h4>
+    </label>
       <h3>0%</h3>
     </div>
 
