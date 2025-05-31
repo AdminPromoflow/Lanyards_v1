@@ -215,19 +215,25 @@ class ShoppingCart {
 
     <div class="elements_boxes2_container_shopping_cart">
     <label>
-          <input type="radio" name="options_card_checkout" value="PayPal">
-        <h3>Shipping</h3>
+        <input type="radio" name="options_card_shippingCart" value="15">
+        <h3>15 working days</h3>
     </label>
     <h3>0%</h3>
     </div>
 
     <div class="elements_boxes2_container_shopping_cart">
-      <h3>10 working days</h3>
+    <label>
+        <input type="radio" name="options_card_shippingCart" value="10">
+        <h3>10 working days</h3>
+    </label>
       <h3>+25%</h3>
     </div>
 
     <div class="elements_boxes2_container_shopping_cart">
-      <h3>8 working days</h3>
+    <label>
+        <input type="radio" name="options_card_shippingCart" value="8">
+        <h3>8 working days</h3>
+    </label>
       <h3>+50%</h3>
     </div>
     `;
