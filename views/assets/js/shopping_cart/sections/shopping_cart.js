@@ -262,6 +262,8 @@ class ShoppingCart {
 
     this.setTotal(total);
 
+    this.updateOrder();
+
     const item2HTML = `
     <div class="elements_boxes2_container_shopping_cart">
       <h2>Shipping</h2>
@@ -319,7 +321,7 @@ class ShoppingCart {
 
     <div class="elements_boxes2_container_shopping_cart">
       <h3>Shipping</h3>
-      <h3 id="price_shipping">£0</h3>
+      <h3 id="price_shipping">£${this.shippingPrice}</h3>
     </div>
 
     <div class="elements_boxes2_container_shopping_cart">
@@ -333,6 +335,13 @@ class ShoppingCart {
 
 
   }
+
+
+
+  updateOrder(){
+
+  }
+
 
 
 
