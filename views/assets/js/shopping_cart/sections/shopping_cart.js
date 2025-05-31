@@ -214,18 +214,18 @@ class ShoppingCart {
     </div>
 
     <div class="elements_boxes2_container_shopping_cart">
-      <h3>Subtotal</h3>
-      <h3>${subtotal}</h3>
+      <h3>15 working days</h3>
+      <h3>0%</h3>
     </div>
 
     <div class="elements_boxes2_container_shopping_cart">
-      <h3>Tax (VAT 20%)</h3>
-      <h3>${vat}</h3>
+      <h3>10 working days</h3>
+      <h3>+25%</h3>
     </div>
 
     <div class="elements_boxes2_container_shopping_cart">
-      <h3>Total</h3>
-      <h3>${total}</h3>
+      <h3>8 working days</h3>
+      <h3>+50%</h3>
     </div>
     `;
 
