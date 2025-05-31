@@ -186,6 +186,12 @@ class ShoppingCart {
     `;
     var subtotal = 0;
 
+
+    boxes_container_shopping_cart.innerHTML +=
+  `  <div class="elements_boxes2_container_shopping_cart">
+      <h2>Products</h2>
+    </div>`;
+
     data.forEach((item, index) => {
       var total = parseFloat(item["total"]) + parseFloat(item["newColour"]*25);
       const itemHTML = `
