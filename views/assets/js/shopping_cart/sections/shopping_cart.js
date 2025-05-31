@@ -324,7 +324,7 @@ class ShoppingCart {
 
     <div class="elements_boxes2_container_shopping_cart">
       <h3>Total</h3>
-      <h3>£${total}</h3>
+      <h3 id="total_price">£${total}</h3>
     </div>
     `;
 
@@ -387,6 +387,7 @@ class ShoppingCart {
   updatePriceShippingHTML(){
 
     const price_shipping = document.getElementById("price_shipping");
+    const total_price = document.getElementById("total_price");
 
     if (this.shippingDays == 15) {
       this.shippingPrice = 0;
@@ -402,6 +403,10 @@ class ShoppingCart {
     }
 
     price_shipping.textContent = "£" +this.shippingPrice;
+
+    total_price.textContent = "£" + (this.shippingPrice + this.tax + this.subtotal);
+
+
 
   }
   changeShoppingTime(days){
