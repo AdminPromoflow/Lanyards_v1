@@ -2,10 +2,7 @@
 // 📦 Importaciones necesarias antes de declarar la clase
 require_once '../config/database.php';
 require_once '../../models/orders.php';
-require_once '../../models/jobs.php';
-require_once '../../models/amount.php';
-require_once '../../models/clips.php';
-require_once '../../models/addresses.php';
+
 
 class Order {
     // 📥 Maneja la solicitud POST
@@ -40,12 +37,31 @@ class Order {
     // 🚚 Actualiza la información de envío
     private function updateShipping($data) {
 
+      if (session_status() === PHP_SESSION_NONE) {
+          session_start();
+      }
+
+      $email = $_SESSION['email'];
+      $data->shippingDays;
+
+
+      $connection = new Database();
+      $upadateShippingDays = new Users($connection);
+      $upadateShippingDays->setEmail($email);
+      $upadateShippingDays->setShippingDays($data->shippingDays);
+      $status = $upadateShippingDays->updateShippingDays();
+
+
+
         // Ejemplo de respuesta simulada
-        echo json_encode([
-            "message" => "Shipping information updated successfully",
-            "input" => $data,
-            "status" => true
-        ]);
+        if ($status) {
+          echo json_encode([
+              "message" => "Shipping information updated successfully",
+              "input" => $data,
+              "status" => $status
+          ]);
+        }
+
     }
 }
 

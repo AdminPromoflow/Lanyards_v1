@@ -332,7 +332,7 @@ class ShoppingCart {
     const url = "../../controller/lanyard/order.php";
     const data = {
       action: "updateShipping",
-      days: days
+      shippingDays: days
     };
 
     fetch(url, {

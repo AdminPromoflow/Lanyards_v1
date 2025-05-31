@@ -9,6 +9,8 @@ class Order_Model {
     private $order_date;
     private $status;
     private $total;
+    private $shippingDays;
+
 
     // 🧱 Constructor
     function __construct($connection) {
@@ -18,6 +20,10 @@ class Order_Model {
     // 🛠️ Setters
     public function setIdUser($idUser) {
         $this->idUser = $idUser;
+    }
+
+    public function setShippingDays($shippingDays) {
+        $this->shippingDays = $shippingDays;
     }
 
     // Set the user's email.
@@ -117,6 +123,50 @@ class Order_Model {
             throw new Exception("Error retrieving order by user.");
         }
     }
+
+
+    public function updateShippingDays() {
+        try {
+            // Buscar idUser usando el email almacenado
+            $sqlUser = $this->connection->getConnection()->prepare("SELECT idUser FROM Users WHERE email = :email");
+            $sqlUser->bindParam(':email', $this->email, PDO::PARAM_STR);
+            $sqlUser->execute();
+            $user = $sqlUser->fetch(PDO::FETCH_ASSOC);
+
+            if (!$user) {
+                throw new Exception("No se encontró un usuario con el email proporcionado.");
+            }
+
+            $this->idUser = $user['idUser'];
+
+            // Actualizar el campo shippingDays en la orden con estado 'pending'
+            $sql = $this->connection->getConnection()->prepare("UPDATE Orders
+                SET shippingDays = :shippingDays
+                WHERE idUser = :idUser AND status = 'pending'
+            ");
+
+            $sql->bindParam(':shippingDays', $this->shippingDays, PDO::PARAM_INT);
+            $sql->bindParam(':idUser', $this->idUser, PDO::PARAM_INT);
+            $sql->execute();
+
+            $updatedRows = $sql->rowCount(); // cantidad de filas afectadas
+            $this->connection->closeConnection();
+
+            if ($updatedRows > 0) {
+                return true;
+            } else {
+                return false;
+            }
+            
+        } catch (PDOException $e) {
+            echo "Error PDO: " . $e->getMessage();
+            return false;
+        } catch (Exception $e) {
+            echo "Error: " . $e->getMessage();
+            return false;
+        }
+    }
+
 
 
 
