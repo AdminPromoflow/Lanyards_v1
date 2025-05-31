@@ -354,12 +354,12 @@
 }
 .elements_boxes2_container_shopping_cart label{
   position: relative;
-  font-size: 1.4em;
-  font-weight: 400;
+  font-size: 1.1em;
+  font-weight: 300;
   margin: 10px 0;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: row;
 }
 .elements_boxes2_container_shopping_cart input {
