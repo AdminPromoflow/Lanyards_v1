@@ -353,6 +353,7 @@
   color: white;
 }
 .elements_boxes2_container_shopping_cart label{
+  display: inline-block;
   position: relative;
   font-size: 1.1em;
   font-weight: 300;
