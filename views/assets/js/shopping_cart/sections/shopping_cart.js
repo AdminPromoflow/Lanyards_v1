@@ -232,6 +232,11 @@ class ShoppingCart {
 
     const item4HTML = `
     <div class="elements_boxes2_container_shopping_cart">
+      <h1>Shipping</h1>
+    </div>
+
+
+    <div class="elements_boxes2_container_shopping_cart">
       <h3>Subtotal</h3>
       <h3>${subtotal}</h3>
     </div>
