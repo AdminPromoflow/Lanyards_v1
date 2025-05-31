@@ -329,7 +329,36 @@ class ShoppingCart {
 
 
   changeShoppingTime(days){
-    alert(days);
+    const url = "../../controller/lanyard/order.php";
+    const data = {
+      action: "updateShipping",
+      days: days
+    };
+
+    fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    })
+      .then(response => {
+        if (response.ok) {
+          return response.text();
+        }
+        throw new Error("Network error.");
+      })
+      .then(data => {
+        alert(data);
+
+        //chargingClass.hideShowchargin(false);
+
+
+
+      })
+      .catch(error => {
+        console.error("Error:", error);
+      });
   }
 
 
