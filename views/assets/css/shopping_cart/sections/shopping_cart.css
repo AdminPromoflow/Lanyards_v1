@@ -354,6 +354,9 @@
 }
 .elements_boxes2_container_shopping_cart label{
   position: relative;
+  font-size: 1.1em;
+  font-weight: 300;
+  text-align:left;
   margin: 10px 0;
   display: flex;
   justify-content: space-around;
