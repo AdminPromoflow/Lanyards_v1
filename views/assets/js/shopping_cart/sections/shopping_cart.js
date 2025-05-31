@@ -216,7 +216,7 @@ class ShoppingCart {
     <div class="elements_boxes2_container_shopping_cart">
     <label>
           <input type="radio" name="options_card_checkout" value="PayPal">
-        <h4>Shipping</h4>
+        <h3>Shipping</h3>
     </label>
       <h3>0%</h3>
     </div>
