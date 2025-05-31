@@ -356,10 +356,7 @@
   position: relative;
   font-size: 1.1em;
   font-weight: 300;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: row;
+
 }
 .elements_boxes2_container_shopping_cart input {
 margin: 0 10px;
