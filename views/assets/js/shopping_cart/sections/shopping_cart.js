@@ -1,32 +1,17 @@
 class ShoppingCart {
   constructor() {
+   this.subtotal = 0;
+   this.tax = 0;
+   this.shippingPrice = 0;
+   this.total = 0;
+   this.shippingDays = 15;
 
-    if (this.shippingDays === undefined || this.shippingDays == null || isNaN(this.shippingDays)) {
-      this.shippingDays = 15;
-      this.shippingPrice = 0;
+   this.cacheDOM();
+   this.bindEvents();
 
-      this.total  = this.subtotal + this.tax + this.shippingPrice;
-      this.updateOrder();
-    }
-    
-    this.getOrder();
-
-    this.makeAjaxRequestJobsAvailables();
-
-    // Iterar sobre cada elemento del carrito y agregar un evento
-    for (let i = 0; i < product_items_shopping_cart.length; i++) {
-      product_items_shopping_cart[i].addEventListener("click", () => {
-        // Alternar la visibilidad del div correspondiente
-        this.toggleDescriptionItemShoppingCart(i);
-      });
-    }
-
-    open_checkout.addEventListener("click", function(){
-      window.open("../../views/checkout/index.php", "_self");
-    })
-
-    this.initializeStyles();
-  }
+   this.getOrder();
+   this.makeAjaxRequestJobsAvailables();
+ }
 
   // Subtotal
    setSubtotal(value) {
@@ -65,96 +50,42 @@ class ShoppingCart {
    }
 
 
-  makeAjaxRequestJobsAvailables(){
-
-    // Define the URL and the JSON data you want to send
-    const url = "../../controller/lanyard/job.php"; // Replace with your API endpoint URL
-    const data = {
-      action: "getJobsByOrder"
-    };
-
-    fetch(url, {
-    method: "POST", // HTTP POST method to send data
-    headers: {
-      "Content-Type": "application/json" // Indicate that you're sending JSON
-    },
-    body: JSON.stringify(data) // Convert the JSON object to a JSON string and send it
-  })
-    .then(response => {
-      // Check if the response status is OK (2xx range)
-      if (response.ok) {
-        return response.json(); // Parse the response as JSON
-      }
-      // For other errors, throw a general network error
-      throw new Error("Network error.");
-    })
-    .then(data => {
-      //alert(JSON.stringify(data));
-      shoppingCart.addJobsToOrder(data);
-      shoppingCart.addOrderSummary(data);
-
-    })
-    .catch(error => {
-    //  alert("error");
-      // Handle specific errors (from throw in the .then block)
-      console.error("Error:", error.message);
-      //alert(error.message); // Show the error message in an alert
-    });
-  }
+   makeAjaxRequestJobsAvailables() {
+     fetch("../../controller/lanyard/job.php", {
+       method: "POST",
+       headers: { "Content-Type": "application/json" },
+       body: JSON.stringify({ action: "getJobsByOrder" }),
+     })
+       .then((res) => res.json())
+       .then((data) => {
+         this.addJobsToOrder(data);
+         this.addOrderSummary(data);
+       })
+       .catch((err) => console.error("Error:", err));
+   }
 
 
 
   addJobsToOrder(data) {
-
     if (!Array.isArray(data)) return;
 
-    // Limpiar contenido anterior
-    container_draw_items_shopping_cart.innerHTML = "";
+    this.containerDraw.innerHTML = "";
 
     data.forEach((item, index) => {
+      const idJob = item.idJobs;
+      const name = item.name || "Sin nombre";
+      const price_per_unit = parseFloat(item.price_per_unit || 0);
+      const amount = parseFloat(item.amount || 0);
+      const newColour = parseFloat(item.newColour || 0) * 25;
 
-
-      const idJob = item["idJobs"];
-      const name = item["name"] || "Sin nombre";
-
-      const newColour = item["newColour"] * 25;
-
-      let extraPriceNewColour = ``;
-
-      if (newColour != 0) {
-        extraPriceNewColour = `
-          <div class="elements_summary_items_shopping_cart">
-            <h3>New background colour</h3>
-            <h3></h3>
-            <h3>£${newColour}</h3>
-            <div onclick="shoppingCart.infoNewColour();" class="info_extra_colour">
-              <img src="../../views/assets/img/shopping_cart/sections/info_icon.png" alt="">
-            </div>
-          </div>`;
-      }
-
-
-
-
-      const price_per_unit = item["price_per_unit"];
-      const amount = item["amount"];
-
-      const total = price_per_unit * amount + newColour;
-
-
-      const description = JSON.parse(item["description"]);
       let descriptionsHTML = "";
+      const description = JSON.parse(item.description || "{}");
 
-      // Construir el HTML de las descripciones dinámicamente
       for (const key in description) {
         if (description.hasOwnProperty(key)) {
           const entry = description[key];
-
-          // Tomamos el valor principal según disponibilidad
           const value = entry.type || entry.value || entry.side || "Sin dato";
-          const price = entry.additional_price ?? "0";
-
-          // Título legible
+          const price = parseFloat(entry.additional_price || 0);
           const title = key.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
 
           descriptionsHTML += `
@@ -162,47 +93,69 @@ class ShoppingCart {
               <h3>${title}</h3>
               <h3>${value}</h3>
               <h3>+ £${price}</h3>
-            </div>
-          `;
+            </div>`;
         }
       }
 
-      // Crear HTML del item completo
-      const itemHTML = `
-        <div class="items_shopping_cart" >
+      const extraColourHTML = newColour > 0
+        ? `<div class="elements_summary_items_shopping_cart">
+              <h3>New background colour</h3><h3></h3><h3>£${newColour}</h3>
+              <div onclick="shoppingCart.infoNewColour();" class="info_extra_colour">
+                <img src="../../views/assets/img/shopping_cart/sections/info_icon.png" alt="">
+              </div>
+          </div>`
+        : "";
+
+      const total = price_per_unit * amount + newColour;
+
+      this.containerDraw.innerHTML += `
+        <div class="items_shopping_cart">
           <div class="product_items_shopping_cart">
-              <h3>${name} ${index + 1}</h3>
-              <h3></h3>
-              <img class="arrow_products_shopping_cart" onclick="shoppingCart.toggleDescriptionItemShoppingCart(${index})" src="../../views/assets/img/shopping_cart/sections/arrow_right.png" alt="">
+              <h3>${name} ${index + 1}</h3><h3></h3>
+              <img class="arrow_products_shopping_cart" src="../../views/assets/img/shopping_cart/sections/arrow_right.png" alt="">
               <img class="delete_job" onclick="shoppingCart.deleteJob(${idJob})" src="../../views/assets/img/shopping_cart/sections/delete-button.png" alt="">
           </div>
-          <div class="descriptions_items_shopping_cart">
-            ${descriptionsHTML}
-          </div>
+          <div class="descriptions_items_shopping_cart">${descriptionsHTML}</div>
           <div class="summary_items_shopping_cart">
-            ${extraPriceNewColour}
+            ${extraColourHTML}
             <div class="elements_summary_items_shopping_cart">
-              <h3>Cost per unit</h3>
-              <h3></h3>
-              <h3>£${price_per_unit}</h3>
+              <h3>Cost per unit</h3><h3></h3><h3>£${price_per_unit}</h3>
             </div>
             <div class="elements_summary_items_shopping_cart">
-              <h3>Amount</h3>
-              <h3></h3>
-              <h3>${amount}</h3>
+              <h3>Amount</h3><h3></h3><h3>${amount}</h3>
             </div>
             <div class="elements_summary_items_shopping_cart">
-              <h3>Subtotal</h3>
-              <h3></h3>
-              <h3>£${total}</h3>
+              <h3>Subtotal</h3><h3></h3><h3>£${total}</h3>
             </div>
           </div>
-        </div>
-      `;
-
-      container_draw_items_shopping_cart.innerHTML += itemHTML;
+        </div>`;
     });
+
+    // IMPORTANTE: asignar eventos después de renderizar
+    this.assignToggleEvents();
   }
+  cacheDOM() {
+  this.containerDraw = document.getElementById("container_draw_items_shopping_cart");
+  this.boxesSummary = document.getElementById("boxes4_container_shopping_cart");
+  this.boxesProducts = document.getElementById("boxes_container_shopping_cart");
+  this.boxesShipping = document.getElementById("boxes2_container_shopping_cart");
+  this.checkoutButton = document.getElementById("open_checkout");
+}
+  bindEvents() {
+   if (this.checkoutButton) {
+     this.checkoutButton.addEventListener("click", () => {
+       window.open("../../views/checkout/index.php", "_self");
+     });
+   }
+ }
+  assignToggleEvents() {
+  const products = document.querySelectorAll(".product_items_shopping_cart");
+  products.forEach((el, index) => {
+    el.addEventListener("click", () => {
+      this.toggleDescriptionItemShoppingCart(index);
+    });
+  });
+}
 
   infoNewColour(){
     alert("You selected a new background colour when creating your lanyard. As noted in the options, this choice adds an extra charge to the total price of the lanyard, not to the unit cost.");
@@ -539,22 +492,14 @@ class ShoppingCart {
 
 
 
-   toggleDescriptionItemShoppingCart(index) {
-    const descriptions_items_shopping_cart = document.querySelectorAll(".descriptions_items_shopping_cart");
-    const arrow_products_shopping_cart = document.querySelectorAll(".arrow_products_shopping_cart");
+  toggleDescriptionItemShoppingCart(index) {
+    const descriptions = document.querySelectorAll(".descriptions_items_shopping_cart");
+    const arrows = document.querySelectorAll(".arrow_products_shopping_cart");
 
-    const description = descriptions_items_shopping_cart[index];
-    const arrow = arrow_products_shopping_cart[index];
-
-    if (!description) return;
-
-    // Alternar clase para mostrar u ocultar
-    description.classList.toggle("visible");
-
-    // Opcional: rotar la flecha para indicar el estado
-    if (arrow) {
-      arrow.classList.toggle("rotated");
-    }
+    const desc = descriptions[index];
+    const arrow = arrows[index];
+    if (desc) desc.classList.toggle("visible");
+    if (arrow) arrow.classList.toggle("rotated");
   }
 
 
