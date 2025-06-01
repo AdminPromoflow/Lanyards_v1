@@ -33,7 +33,7 @@
 
       <div class="boxes3_container_shopping_cart">
         <label>
-            <input type="checkbox" name="option3" value="Option3">
+            <input id="shopping_cart_input_terms_conditions" type="checkbox" name="option3" value="Option3">
             By clicking 'Place Order,' I confirm that I have read and agree to the website's terms and conditions.
         </label>
         <a class="shopping_cart_terms_conditions" href="../../views/terms_conditions/index.php">Terms and conditions</a>

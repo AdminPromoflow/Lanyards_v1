@@ -12,8 +12,12 @@ class ShoppingCart {
 
     open_checkout.addEventListener("click", function(){
 
-      
-      //window.open("../../views/checkout/index.php", "_self");
+      if (shopping_cart_input_terms_conditions.checked) {
+        window.open("../../views/checkout/index.php", "_self");
+      }
+      else {
+        alert("Please confirm your acceptance of the terms and conditions in order to continue. ");
+      }
     })
 
     this.initializeStyles();
@@ -573,6 +577,7 @@ class ShoppingCart {
 const container_draw_items_shopping_cart = document.getElementById("container_draw_items_shopping_cart");
 
 const boxes4_container_shopping_cart = document.getElementById("boxes4_container_shopping_cart");
+const shopping_cart_input_terms_conditions = document.getElementById("shopping_cart_input_terms_conditions");
 
 
 
