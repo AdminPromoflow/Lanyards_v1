@@ -156,6 +156,34 @@ class Order_Model {
     }
 
 
+    public function getOrderDetails() {
+        try {
+            $conn = $this->connection->getConnection();
+
+            $sql = $conn->prepare("SELECT o.idOrder, o.subtotal, o.tax, o.shipping_price, o.total, o.status, o.date_time
+                FROM Orders o
+                INNER JOIN Users u ON o.idUser = u.idUser
+                WHERE u.email = :email AND o.status = 'pending'
+                LIMIT 1
+            ");
+
+            $sql->bindParam(':email', $this->email, PDO::PARAM_STR);
+            $sql->execute();
+
+            $order = $sql->fetch(PDO::FETCH_ASSOC);
+
+            $this->connection->closeConnection();
+
+            return $order ?: false;
+
+        } catch (PDOException $e) {
+            echo "Error al obtener la orden: " . $e->getMessage();
+            return false;
+        }
+    }
+
+
+
 
     public function getOrderIdByUser() {
         try {

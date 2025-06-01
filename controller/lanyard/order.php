@@ -22,6 +22,10 @@ class Order {
                         $this->updateOrder($data);
                         break;
 
+                    case "getOrder":
+                        $this->getOrder();
+                        break;
+
                     default:
                         http_response_code(400);
                         echo json_encode(["message" => "Unknown action"]);
@@ -51,7 +55,6 @@ class Order {
         $upadateShippingDays->setShippingDays($data->shippingDays);
         $status = $upadateShippingDays->updateShippingDays();
 
-        // Ejemplo de respuesta simulada
         if ($status) {
             echo json_encode([
                 "message" => "Shipping information updated successfully",
@@ -61,7 +64,7 @@ class Order {
         }
     }
 
-    // 🧾 Actualiza la orden completa (subtotal, tax, shippingPrice, total)
+    // 🧾 Actualiza la orden completa
     private function updateOrder($data) {
         if (session_status() === PHP_SESSION_NONE) {
             session_start();
@@ -77,17 +80,38 @@ class Order {
         $orderModel->setShippingPrice($data->shippingPrice);
         $orderModel->setTotal($data->total);
 
-
         $status = $orderModel->updateOrder();
-
-
-      //  echo json_encode($status);exit;
 
         echo json_encode([
             "message" => "Order updated successfully",
             "input" => $data,
             "status" => $status
         ]);
+    }
+
+    // 📄 Obtener detalles de la orden del usuario actual
+    private function getOrder() {
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
+
+        $email = $_SESSION['email'];
+
+        $connection = new Database();
+        $orderModel = new Order_Model($connection);
+        $orderModel->setEmail($email);
+
+        $order = $orderModel->getOrderDetails();
+
+        if ($order) {
+            echo json_encode([
+                "message" => "Order retrieved successfully",
+                "order" => $order
+            ]);
+        } else {
+            http_response_code(404);
+            echo json_encode(["message" => "No pending order found for this user"]);
+        }
     }
 }
 

@@ -1,13 +1,10 @@
 class ShoppingCart {
   constructor() {
 
-    this.shippingDays= 15;
 
 
-        this.subtotal = 0;
-        this.tax = 0;
-        this.shippingPrice = 0;
-        this.total = 0;
+
+        this.getOrder();
 
 
     this.makeAjaxRequestJobsAvailables();
@@ -335,7 +332,42 @@ class ShoppingCart {
 
   }
 
+  getOrder(){
+    const url = "../../controller/lanyard/order.php";
+    const data = {
+      action: "getOrder"
+    };
 
+    fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    })
+      .then(response => {
+        if (response.ok) {
+          return response.text();
+        }
+        throw new Error("Network error.");
+      })
+      .then(data => {
+        alert(data);
+
+
+        this.shippingDays= 15;
+
+
+            this.subtotal = 0;
+            this.tax = 0;
+            this.shippingPrice = 0;
+            this.total = 0;
+        //chargingClass.hideShowchargin(false);
+      })
+      .catch(error => {
+        console.error("Error:", error);
+      });
+  }
 
   updateOrder(){
 
