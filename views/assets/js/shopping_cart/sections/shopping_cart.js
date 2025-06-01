@@ -359,6 +359,11 @@ class ShoppingCart {
         this.shippingPrice = data2["order"]["shipping_price"];
         this.total = data2["order"]["total"];
 
+        if (this.shippingDays == null) {
+          this.shippingDays == 15;
+          this.shippingPrice = 0;
+        }
+
 
         alert(this.shippingPrice + "  " + this.total);
         //chargingClass.hideShowchargin(false);
