@@ -115,8 +115,15 @@
         </div>
       </div>
     </div>
+
+
+
+
+
     <div class="boxes_checkout">
+
       <h3 class="title_boxes_checkout">You Orden</h3>
+
       <div class="boxes_container_checkout">
         <div class="items2_checkout">
           <h3>Product</h3>
@@ -136,21 +143,7 @@
           <h3>hola2</h3>
         </div>
       </div>
-      <div class="boxes2_container_checkout">
 
-        <div class="elements_boxes2_container_checkout">
-          <h3>Material</h3>
-          <h3>hola2</h3>
-        </div>
-        <div class="elements_boxes2_container_checkout">
-          <h3>Material</h3>
-          <h3>hola2</h3>
-        </div>
-        <div class="elements_boxes2_container_checkout">
-          <h3>Material</h3>
-          <h3>hola2</h3>
-        </div>
-      </div>
       <div class="boxes_card_container_checkout">
         <label>
             <input type="radio" name="options_card_checkout" value="Stripe">
@@ -184,10 +177,15 @@
         <button id="button_checkout_paypal" class="button_checkout_paypal">
           <img src="../../views/assets/img/checkout/sections/paypal.svg" alt="Icon">
         </button>
-
       </div>
 
     </div>
+
+
+
+
+
+
   </div>
 
 

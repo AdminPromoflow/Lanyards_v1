@@ -40,9 +40,6 @@
         <button id="open_checkout"  type="button" name="button">Proceed to checkout</button>
       </div>
 
-
-
-
     </div>
   </div>
 
