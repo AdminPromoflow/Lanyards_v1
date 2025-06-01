@@ -81,9 +81,9 @@ class Order {
         $status = $orderModel->updateOrder();
 
 
+        echo json_encode("hola tu hahahah2");exit;
 
         if ($status) {
-          echo json_encode("hola tu hahahah");exit;
 
             echo json_encode([
                 "message" => "Order updated successfully",
