@@ -361,16 +361,15 @@ class ShoppingCart {
 
       //  alert(this.shippingDay);
         if (this.shippingDays === undefined || this.shippingDays == null || isNaN(this.shippingDays)) {
-         alert("juemadre");
           this.shippingDays = 15;
           this.shippingPrice = 0;
           this.updateOrder();
         }
 
 
-      //  var value = this.shippingDays + " working days";
+        var value = this.shippingDays + " working days";
 
-      //  document.querySelector('input[name="options_card_shippingCart"][value="' + value + '"]').checked = true;
+        document.querySelector('input[name="options_card_shippingCart"][value="' + value + '"]').checked = true;
 
 
       //  alert(this.shippingPrice + "  " + this.total);
