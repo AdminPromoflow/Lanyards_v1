@@ -359,11 +359,11 @@ class ShoppingCart {
         }
 
 
-        var value = this.shippingDays + " working days";
+        //var value = this.shippingDays + " working days";
 
-        alert(value);
+      //  alert(value);
 
-        //document.querySelector('input[name="options_card_shippingCart"][value="' + value + '"]').checked = true;
+        document.querySelector('input[name="options_card_shippingCart"][value="' + this.shippingDays + '"]').checked = true;
 
 
       //  alert(this.shippingPrice + "  " + this.total);
