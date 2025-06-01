@@ -76,6 +76,8 @@ class Order {
         $orderModel->setTax($data->tax);
         $orderModel->setShippingPrice($data->shippingPrice);
         $orderModel->setTotal($data->total);
+
+        echo json_encode("ufff");exit;
         $status = $orderModel->updateOrder();
 
         if ($status) {
