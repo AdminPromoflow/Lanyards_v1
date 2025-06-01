@@ -83,13 +83,14 @@ class Order {
 
 
         if ($status) {
+          echo json_encode("hola tu hahahah");exit;
+
             echo json_encode([
                 "message" => "Order updated successfully",
                 "input" => $data,
                 "status" => $status
             ]);
 
-            echo json_encode("hola tu hahahah");exit;
 
         } else {
             http_response_code(500);
