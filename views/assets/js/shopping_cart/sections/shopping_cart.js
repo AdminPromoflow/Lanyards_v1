@@ -399,7 +399,7 @@ class ShoppingCart {
   }
 
   updateOrder(){
-    alert(this.shippingDays + " " + this.shippingPrice + " " + this.total);
+  //  alert(this.shippingDays + " " + this.shippingPrice + " " + this.total);
     const url = "../../controller/lanyard/order.php";
     const data = {
       action: "updateOrder",
