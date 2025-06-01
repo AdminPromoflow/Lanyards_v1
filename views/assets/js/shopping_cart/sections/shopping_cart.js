@@ -353,7 +353,11 @@ class ShoppingCart {
       })
       .then(data => {
 
-        const order = data.order;
+      const data =   JSON.parse(data);
+
+      alert(data["order"]["subtotal"]);
+
+      /*  const order = data.order;
 
 
         alert(parseFloat(order.subtotal));
@@ -364,7 +368,7 @@ class ShoppingCart {
             this.subtotal = 0;
             this.tax = 0;
             this.shippingPrice = 0;
-            this.total = 0;
+            this.total = 0;*/
         //chargingClass.hideShowchargin(false);
       })
       .catch(error => {
