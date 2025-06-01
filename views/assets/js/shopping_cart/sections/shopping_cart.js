@@ -261,7 +261,7 @@ class ShoppingCart {
     const total = subtotal + vat + this.shippingPrice;
 
     this.setTotal(total);
-
+    this.updatePriceShippingHTML();
     this.updateOrder();
 
     const item2HTML = `
