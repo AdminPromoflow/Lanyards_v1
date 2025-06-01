@@ -11,7 +11,9 @@ class ShoppingCart {
     }
 
     open_checkout.addEventListener("click", function(){
-      window.open("../../views/checkout/index.php", "_self");
+
+      
+      //window.open("../../views/checkout/index.php", "_self");
     })
 
     this.initializeStyles();
