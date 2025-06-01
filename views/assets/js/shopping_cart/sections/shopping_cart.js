@@ -353,10 +353,10 @@ class ShoppingCart {
       })
       .then(data => {
 
-        alert(data.order);
+        const order = data.order;
 
 
-
+        alert( parseFloat(order.subtotal));
 
         this.shippingDays= 15;
 
