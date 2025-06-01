@@ -1,9 +1,5 @@
 class ShoppingCart {
   constructor() {
-
-
-
-
     this.makeAjaxRequestJobsAvailables();
 
     // Iterar sobre cada elemento del carrito y agregar un evento
