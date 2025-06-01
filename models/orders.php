@@ -139,7 +139,6 @@ class Order_Model {
             $updatedRows = $sql->rowCount();
             $this->connection->closeConnection();
 
-            echo json_encode("hola tu");exit;
 
             if ($updatedRows > 0) {
                 return true;
