@@ -1,15 +1,13 @@
 class Checkout {
   constructor() {
     // Iterar sobre cada elemento del carrito y agregar un evento
-    for (let i = 0; i < product_items_checkout.length; i++) {
+  /*  for (let i = 0; i < product_items_checkout.length; i++) {
       product_items_checkout[i].addEventListener("click", () => {
         // Alternar la visibilidad del div correspondiente
         this.toggleDescriptionItemCheckout(i);
       });
     }
-  /*  open_checkout.addEventListener("click", function(){
-      window.open("../../views/checkout/index.php", "_self");
-    })*/
+
 
     // Obtener los estilos iniciales de todos los elementos
     this.initializeStyles();
@@ -31,7 +29,7 @@ class Checkout {
 
     document.querySelectorAll('input[name="options_card_checkout"]').forEach(radio => {
         radio.addEventListener("change", this.getSelectedOption);
-    });
+    });*/
 
   }
       getSelectedOption() {
@@ -96,7 +94,7 @@ class Checkout {
   }
 
   // Alterna la visibilidad de una descripción específica
-  toggleDescriptionItemCheckout(index) {
+  /*toggleDescriptionItemCheckout(index) {
     const item = this.descriptionsStyles[index]?.element;
     const arrow = this.arrowsStyles[index]?.element;
 
@@ -116,7 +114,7 @@ class Checkout {
     } else {
       console.error(`No se puede alternar el índice ${index}: Elemento no válido.`);
     }
-  }
+  }*/
 }
 
 // Obtener los elementos del DOM

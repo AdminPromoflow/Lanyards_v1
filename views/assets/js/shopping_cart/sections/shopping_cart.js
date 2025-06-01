@@ -19,6 +19,7 @@ class ShoppingCart {
       else {
         alert("Please confirm your acceptance of the terms and conditions in order to continue. ");
       }
+
     })
 
     this.initializeStyles();

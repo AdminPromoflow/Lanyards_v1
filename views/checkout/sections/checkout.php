@@ -124,7 +124,7 @@
 
       <h3 class="title_boxes_checkout">You Orden</h3>
 
-      <div class="boxes_container_checkout">
+      <div id="boxes_container_checkout" class="boxes_container_checkout">
         <div class="items2_checkout">
           <h3>Product</h3>
           <h3>Subtotal</h3>
@@ -168,7 +168,7 @@
             <img src="../../views/assets/img/checkout/sections/paypal.png" alt="">
         </label>
       </div>
-      <div class="boxes3_container_checkout">
+    <!--  <div class="boxes3_container_checkout">
         <label>
             <input type="checkbox" name="option3" value="Option3">
             I have read and agree to the website terms and conditions *
@@ -179,7 +179,7 @@
         </button>
       </div>
 
-    </div>
+    </div>-->
 
 
 
