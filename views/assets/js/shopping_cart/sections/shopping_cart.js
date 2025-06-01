@@ -362,7 +362,7 @@ class ShoppingCart {
 
       const data2 =   JSON.parse(data);
 
-        this.shippingDays= parseFloat(data2["order"]["shippingDays"]);
+      /*  this.shippingDays= parseFloat(data2["order"]["shippingDays"]);
         this.subtotal = parseFloat(data2["order"]["subtotal"]);
         this.tax = parseFloat(data2["order"]["tax"]);
         this.shippingPrice = parseFloat(data2["order"]["shipping_price"]);
@@ -376,17 +376,17 @@ class ShoppingCart {
 
           this.total  = this.subtotal + this.tax + this.shippingPrice;
           this.updateOrder();
-        }
+        }*/
 
 
         //var value = this.shippingDays + " working days";
 
       //  alert(this.shippingDays);
 
-      this.calculateShippingAndTotal();
-      this.updateOrder();
+    //  this.calculateShippingAndTotal();
+    //  this.updateOrder();
 
-        document.querySelector('input[name="options_card_shippingCart"][value="' + this.shippingDays + '"]').checked = true;
+    //    document.querySelector('input[name="options_card_shippingCart"][value="' + this.shippingDays + '"]').checked = true;
 
 
       //  alert(this.shippingPrice + "  " + this.total);
@@ -568,8 +568,6 @@ class ShoppingCart {
       arrow.classList.toggle("rotated");
     }
   }
-
-
 
 }
 
