@@ -327,7 +327,7 @@ class ShoppingCart {
 
       //  alert(this.shippingDays);
 
-        document.querySelector('input[name="options_card_shippingCart"][value="' + this.shippingDays + '"]').checked = true;
+      //  document.querySelector('input[name="options_card_shippingCart"][value="' + this.shippingDays + '"]').checked = true;
 
 
       //  alert(this.shippingPrice + "  " + this.total);
