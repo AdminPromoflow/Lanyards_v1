@@ -134,14 +134,17 @@ class Order_Model {
 
             $sql->execute();
 
-            echo json_encode("ahaha quiero llorar x 2");exit;
 
 
             $updatedRows = $sql->rowCount();
             $this->connection->closeConnection();
 
-            return $updatedRows > 0;
-
+            if ($updatedRows > 0) {
+                return true;
+            } else {
+                return false;
+            }
+            
         } catch (PDOException $e) {
             echo "Error PDO en updateOrder: " . $e->getMessage();
             return false;
