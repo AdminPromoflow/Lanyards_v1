@@ -353,9 +353,9 @@ class ShoppingCart {
       })
       .then(data => {
 
-      const data =   JSON.parse(data);
+      const data2 =   JSON.parse(data);
 
-      alert(data["order"]["subtotal"]);
+      alert(data2["order"]["subtotal"]);
 
       /*  const order = data.order;
 
