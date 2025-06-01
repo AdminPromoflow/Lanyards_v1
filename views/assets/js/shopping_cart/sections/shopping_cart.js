@@ -295,10 +295,6 @@ class ShoppingCart {
 
 
 
-
-
-
-
     const item4HTML = `
 
     <div class="elements_boxes2_container_shopping_cart">
@@ -307,12 +303,12 @@ class ShoppingCart {
 
     <div class="elements_boxes2_container_shopping_cart">
       <h3>Subtotal</h3>
-      <h3>£${subtotal}</h3>
+      <h3>£${this.subtotal}</h3>
     </div>
 
     <div class="elements_boxes2_container_shopping_cart">
       <h3>Tax (VAT 20%)</h3>
-      <h3>£${vat}</h3>
+      <h3>£${this.tax}</h3>
     </div>
 
     <div class="elements_boxes2_container_shopping_cart">
@@ -322,7 +318,7 @@ class ShoppingCart {
 
     <div class="elements_boxes2_container_shopping_cart">
       <h3>Total</h3>
-      <h3 id="total_price">£${total}</h3>
+      <h3 id="total_price">£${this.total}</h3>
     </div>
     `;
 
@@ -352,22 +348,20 @@ class ShoppingCart {
         throw new Error("Network error.");
       })
       .then(data => {
-        alert(data);
+        //alert(data);
 
       const data2 =   JSON.parse(data);
 
-      alert(data2["order"]["subtotal"]);
+    //  alert(data2["order"]["subtotal"]);
 
 
 
 
-        this.shippingDays= 15;
-
-
-            this.subtotal = 0;
-            this.tax = 0;
-            this.shippingPrice = 0;
-            this.total = 0;
+        this.shippingDays= data2["order"]["subtotal"];
+        this.subtotal = data2["order"]["subtotal"];
+        this.tax = data2["order"]["tax"];
+        this.shippingPrice = data2["order"]["shipping_price"];
+        this.total = data2["order"]["total"];
         //chargingClass.hideShowchargin(false);
       })
       .catch(error => {
