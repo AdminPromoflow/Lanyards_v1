@@ -1,5 +1,7 @@
 class Checkout {
   constructor() {
+
+    this.getOrder();
     // Iterar sobre cada elemento del carrito y agregar un evento
   /*  for (let i = 0; i < product_items_checkout.length; i++) {
       product_items_checkout[i].addEventListener("click", () => {
@@ -31,6 +33,66 @@ class Checkout {
         radio.addEventListener("change", this.getSelectedOption);
     });*/
 
+  }
+
+
+  getOrder(){
+    const url = "../../controller/lanyard/order.php";
+    const data = {
+      action: "getOrder"
+    };
+
+    fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    })
+      .then(response => {
+        if (response.ok) {
+          return response.text();
+        }
+        throw new Error("Network error.");
+      })
+      .then(data => {
+        alert(data);
+
+      const data2 =   JSON.parse(data);
+
+      /*  this.shippingDays= parseFloat(data2["order"]["shippingDays"]);
+        this.subtotal = parseFloat(data2["order"]["subtotal"]);
+        this.tax = parseFloat(data2["order"]["tax"]);
+        this.shippingPrice = parseFloat(data2["order"]["shipping_price"]);
+        this.total = parseFloat(data2["order"]["total"]);
+
+
+      //  alert(this.shippingDay);
+        if (this.shippingDays === undefined || this.shippingDays == null || isNaN(this.shippingDays)) {
+          this.shippingDays = 15;
+          this.shippingPrice = 0;
+
+          this.total  = this.subtotal + this.tax + this.shippingPrice;
+          this.updateOrder();
+        }*/
+
+
+        //var value = this.shippingDays + " working days";
+
+      //  alert(this.shippingDays);
+
+    //  this.calculateShippingAndTotal();
+    //  this.updateOrder();
+
+    //    document.querySelector('input[name="options_card_shippingCart"][value="' + this.shippingDays + '"]').checked = true;
+
+
+      //  alert(this.shippingPrice + "  " + this.total);
+        //chargingClass.hideShowchargin(false);
+      })
+      .catch(error => {
+        console.error("Error:", error);
+      });
   }
       getSelectedOption() {
         // Selecciona todos los radio buttons del grupo "options"
