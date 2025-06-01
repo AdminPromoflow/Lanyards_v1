@@ -248,16 +248,15 @@ class ShoppingCart {
     });
 
 
-    this.setSubtotal(subtotal);
+    this.subtotal = subtotal;
 
     const vat = parseFloat(subtotal)*20/100;
-    this.setTax(vat);
+    this.tax = vat;
 
     //const shippingPrice = subtotal *
 
     const total = subtotal + vat + this.shippingPrice;
-
-    this.setTotal(total);
+    this.total = total;
     this.updateOrder();
 
     const item2HTML = `
@@ -348,14 +347,9 @@ class ShoppingCart {
         throw new Error("Network error.");
       })
       .then(data => {
-        alert(data);
+      //  alert(data);
 
       const data2 =   JSON.parse(data);
-
-    //  alert(data2["order"]["subtotal"]);
-
-
-
 
         this.shippingDays= data2["order"]["subtotal"];
         this.subtotal = data2["order"]["subtotal"];
