@@ -362,11 +362,12 @@ class ShoppingCart {
         if (this.shippingDays == null) {
           this.shippingDays == 15;
           this.shippingPrice = 0;
+          
         }
 
-        var value = this.shippingDays + " working days";
+      //  var value = this.shippingDays + " working days";
 
-        document.querySelector('input[name="options_card_shippingCart"][value="' + value + '"]').checked = true;
+      //  document.querySelector('input[name="options_card_shippingCart"][value="' + value + '"]').checked = true;
 
 
       //  alert(this.shippingPrice + "  " + this.total);
