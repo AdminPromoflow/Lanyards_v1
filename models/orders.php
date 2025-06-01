@@ -106,6 +106,9 @@ class Order_Model {
             $sqlUser->execute();
             $user = $sqlUser->fetch(PDO::FETCH_ASSOC);
 
+
+            echo json_encode("ahaha quiero llorar x 2");exit;
+
             if (!$user) {
                 throw new Exception("No se encontró un usuario con el email proporcionado.");
             }
