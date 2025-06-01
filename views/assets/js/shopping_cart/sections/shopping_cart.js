@@ -509,6 +509,9 @@ class ShoppingCart {
 
     this.total = this.subtotal + this.tax + this.shippingPrice;
 
+
+    alert(this.total);
+
     price_shipping.textContent = "£" +this.shippingPrice;
 
     total_price.textContent = "£" + (this.shippingPrice + this.tax + this.subtotal);
