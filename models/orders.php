@@ -119,6 +119,7 @@ class Order_Model {
                 SET
                     subtotal = :subtotal,
                     tax = :tax,
+                    shippingDays = :shippingDays,
                     shipping_price = :shipping_price,
                     total = :total
                 WHERE idUser = :idUser AND status = 'pending'
@@ -128,7 +129,10 @@ class Order_Model {
 
             $sql->bindParam(':subtotal', $this->subtotal, PDO::PARAM_STR);
             $sql->bindParam(':tax', $this->tax, PDO::PARAM_STR);
-            $sql->bindParam(':shipping_price', $this->shippingPrice, PDO::PARAM_STR); // ✅ nombre correcto según la tabla
+            $sql->bindParam(':shipping_price', $this->shippingPrice, PDO::PARAM_STR);
+            $sql->bindParam(':shippingDays', $this->shippingDays, PDO::PARAM_STR);
+
+
             $sql->bindParam(':total', $this->total, PDO::PARAM_STR);
             $sql->bindParam(':idUser', $this->idUser, PDO::PARAM_INT);
 

@@ -78,6 +78,8 @@ class Order {
         $orderModel->setSubtotal($data->subtotal);
         $orderModel->setTax($data->tax);
         $orderModel->setShippingPrice($data->shippingPrice);
+        $orderModel->setShippingDays($data->shippingDays);
+
         $orderModel->setTotal($data->total);
 
         $status = $orderModel->updateOrder();
