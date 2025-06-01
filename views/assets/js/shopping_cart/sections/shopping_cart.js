@@ -478,6 +478,7 @@ class ShoppingCart {
     }
     else {
       this.shippingPrice = 0;
+      this.shippingDays == 15
     }
 
     this.total = this.subtotal + this.tax + this.shippingPrice;
