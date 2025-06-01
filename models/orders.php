@@ -160,7 +160,7 @@ class Order_Model {
         try {
             $conn = $this->connection->getConnection();
 
-            $sql = $conn->prepare("SELECT o.idOrder, o.subtotal, o.tax, o.shipping_price, o.total, o.status, o.date_time
+            $sql = $conn->prepare("SELECT o.*
                 FROM Orders o
                 INNER JOIN Users u ON o.idUser = u.idUser
                 WHERE u.email = :email AND o.status = 'pending'
