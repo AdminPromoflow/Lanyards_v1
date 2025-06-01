@@ -356,7 +356,7 @@ class ShoppingCart {
         const order = data.order;
 
 
-        alert( parseFloat(order.subtotal));
+        alert(parseFloat(order.subtotal));
 
         this.shippingDays= 15;
 
