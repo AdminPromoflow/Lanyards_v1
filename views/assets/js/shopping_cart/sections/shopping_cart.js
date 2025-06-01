@@ -257,6 +257,8 @@ class ShoppingCart {
 
     const total = subtotal + vat + this.shippingPrice;
     this.total = total;
+
+    alert("jaj" + this.shippingPrice);
     this.updateOrder();
 
     const item2HTML = `
