@@ -124,7 +124,6 @@ class Order_Model {
                 WHERE idUser = :idUser AND status = 'pending'
             ");
 
-            echo json_encode("ahaha quiero llorar x 2");exit;
 
 
             $sql->bindParam(':subtotal', $this->subtotal, PDO::PARAM_STR);
@@ -134,6 +133,9 @@ class Order_Model {
             $sql->bindParam(':idUser', $this->idUser, PDO::PARAM_INT);
 
             $sql->execute();
+
+            echo json_encode("ahaha quiero llorar x 2");exit;
+
 
             $updatedRows = $sql->rowCount();
             $this->connection->closeConnection();
