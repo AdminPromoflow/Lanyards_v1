@@ -77,6 +77,8 @@ class Order {
         $orderModel->setShippingPrice($data->shippingPrice);
         $orderModel->setTotal($data->total);
 
+        echo json_encode("ahaha quiero llorar");
+
         $status = $orderModel->updateOrder();
 
         if ($status) {
