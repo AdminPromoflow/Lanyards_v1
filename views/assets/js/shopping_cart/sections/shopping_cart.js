@@ -1,5 +1,14 @@
 class ShoppingCart {
   constructor() {
+
+    if (this.shippingDays === undefined || this.shippingDays == null || isNaN(this.shippingDays)) {
+      this.shippingDays = 15;
+      this.shippingPrice = 0;
+
+      this.total  = this.subtotal + this.tax + this.shippingPrice;
+      this.updateOrder();
+    }
+    
     this.getOrder();
 
     this.makeAjaxRequestJobsAvailables();
@@ -363,7 +372,7 @@ class ShoppingCart {
 
         //var value = this.shippingDays + " working days";
 
-        alert(this.shippingDays);
+      //  alert(this.shippingDays);
 
         document.querySelector('input[name="options_card_shippingCart"][value="' + this.shippingDays + '"]').checked = true;
 
