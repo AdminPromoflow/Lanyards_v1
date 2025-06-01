@@ -2,6 +2,8 @@ class Checkout {
   constructor() {
 
     this.getOrder();
+    this.getAddresses();
+
     // Iterar sobre cada elemento del carrito y agregar un evento
   /*  for (let i = 0; i < product_items_checkout.length; i++) {
       product_items_checkout[i].addEventListener("click", () => {
@@ -57,41 +59,39 @@ class Checkout {
       })
       .then(data => {
         //alert(data);
-
       const data2 =   JSON.parse(data);
-
-
       checkout.setHTMLOrder(data2["order"]);
 
-      /*  this.shippingDays= parseFloat(data2["order"]["shippingDays"]);
-        this.subtotal = parseFloat(data2["order"]["subtotal"]);
-        this.tax = parseFloat(data2["order"]["tax"]);
-        this.shippingPrice = parseFloat(data2["order"]["shipping_price"]);
-        this.total = parseFloat(data2["order"]["total"]);
+      })
+      .catch(error => {
+        console.error("Error:", error);
+      });
+  }
 
+  getAddresses(){
+    const url = "../../controller/lanyard/addresses.php";
+    const data = {
+      action: "getAddresses"
+    };
 
-      //  alert(this.shippingDay);
-        if (this.shippingDays === undefined || this.shippingDays == null || isNaN(this.shippingDays)) {
-          this.shippingDays = 15;
-          this.shippingPrice = 0;
+    fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    })
+      .then(response => {
+        if (response.ok) {
+          return response.text();
+        }
+        throw new Error("Network error.");
+      })
+      .then(data => {
+        alert(data);
+    //  const data2 =   JSON.parse(data);
+      //checkout.setHTMLOrder(data2["order"]);
 
-          this.total  = this.subtotal + this.tax + this.shippingPrice;
-          this.updateOrder();
-        }*/
-
-
-        //var value = this.shippingDays + " working days";
-
-      //  alert(this.shippingDays);
-
-    //  this.calculateShippingAndTotal();
-    //  this.updateOrder();
-
-    //    document.querySelector('input[name="options_card_shippingCart"][value="' + this.shippingDays + '"]').checked = true;
-
-
-      //  alert(this.shippingPrice + "  " + this.total);
-        //chargingClass.hideShowchargin(false);
       })
       .catch(error => {
         console.error("Error:", error);

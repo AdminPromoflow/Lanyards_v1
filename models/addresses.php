@@ -110,6 +110,39 @@ class Addresses_Model {
         }
     }
 
+    public function getAddresses() {
+        try {
+            $conn = $this->connection->getConnection();
+
+            // Obtener idUser a partir del email
+            $stmt = $conn->prepare("SELECT idUser FROM Users WHERE email = :email LIMIT 1");
+            $stmt->bindParam(':email', $this->userEmail, PDO::PARAM_STR);
+            $stmt->execute();
+            $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            if (!$user) {
+                throw new Exception("Usuario no encontrado con el email: " . $this->userEmail);
+            }
+
+            $idUser = $user['idUser'];
+
+            // Recuperar direcciones asociadas al idUser
+            $sql = $conn->prepare("SELECT * FROM Addresses WHERE idUser = :idUser");
+            $sql->bindParam(':idUser', $idUser, PDO::PARAM_INT);
+            $sql->execute();
+            $addresses = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+            $this->connection->closeConnection();
+
+            return $addresses ?: []; // Devuelve array vacío si no hay resultados
+
+        } catch (Exception $e) {
+            error_log("Error al obtener direcciones: " . $e->getMessage());
+            return false;
+        }
+    }
+
+
     public function deleteAddressesByEmail(){
 
       try {
