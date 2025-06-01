@@ -383,7 +383,7 @@ class ShoppingCart {
   }
 
   updateOrder(){
-    alert(this.shippingDays + " " + this.shippingPrice + " " + this.total);
+  //  alert(this.shippingDays + " " + this.shippingPrice + " " + this.total);
     const url = "../../controller/lanyard/order.php";
     const data = {
       action: "updateOrder",
@@ -485,6 +485,8 @@ class ShoppingCart {
     else {
       this.shippingPrice = 0;
     }
+
+    this.total = this.subtotal + this.tax + this.shippingPrice;
 
     price_shipping.textContent = "£" +this.shippingPrice;
 
