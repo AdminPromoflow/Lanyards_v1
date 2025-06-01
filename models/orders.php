@@ -107,7 +107,6 @@ class Order_Model {
             $user = $sqlUser->fetch(PDO::FETCH_ASSOC);
 
 
-            echo json_encode("ahaha quiero llorar x 2");exit;
 
             if (!$user) {
                 throw new Exception("No se encontró un usuario con el email proporcionado.");
@@ -124,6 +123,9 @@ class Order_Model {
                     total = :total
                 WHERE idUser = :idUser AND status = 'pending'
             ");
+
+            echo json_encode("ahaha quiero llorar x 2");exit;
+
 
             $sql->bindParam(':subtotal', $this->subtotal, PDO::PARAM_STR);
             $sql->bindParam(':tax', $this->tax, PDO::PARAM_STR);
