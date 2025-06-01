@@ -246,6 +246,7 @@ class ShoppingCart {
     </div>`;
 
     data.forEach((item, index) => {
+      alert(item["name"]);
       if (item["name"] == "Custom Lanyard") {
         var total = parseFloat(item["total"]) + parseFloat(item["newColour"]*25);
       }
