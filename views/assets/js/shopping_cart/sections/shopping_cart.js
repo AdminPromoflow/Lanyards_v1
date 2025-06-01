@@ -359,11 +359,12 @@ class ShoppingCart {
         this.total = parseFloat(data2["order"]["total"]);
 
 
-        alert(this.shippingDay);
+      //  alert(this.shippingDay);
         if (this.shippingDays === undefined || this.shippingDays == null || isNaN(this.shippingDays)) {
-          alert("juemadre");
+        //  alert("juemadre");
           this.shippingDays = 15;
           this.shippingPrice = 0;
+          this.updateOrder();
         }
 
 
