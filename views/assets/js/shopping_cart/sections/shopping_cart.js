@@ -367,7 +367,7 @@ class ShoppingCart {
             this.subtotal = 0;
             this.tax = 0;
             this.shippingPrice = 0;
-            this.total = 0;*/
+            this.total = 0;
         //chargingClass.hideShowchargin(false);
       })
       .catch(error => {
