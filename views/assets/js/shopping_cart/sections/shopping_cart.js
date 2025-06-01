@@ -3,7 +3,6 @@ class ShoppingCart {
 
 
 
-    this.getOrder();
 
     this.makeAjaxRequestJobsAvailables();
 
@@ -261,7 +260,9 @@ class ShoppingCart {
     const vat = parseFloat(subtotal)*20/100;
     this.tax = vat;
 
-    //const shippingPrice = subtotal *
+    this.shippingPrice = 0;
+    this.shippingDay = 15;
+
 
     const total = subtotal + vat + this.shippingPrice;
     this.total = total;
