@@ -3,7 +3,6 @@
 require_once '../config/database.php';
 require_once '../../models/orders.php';
 
-
 class Order {
     // 📥 Maneja la solicitud POST
     public function handleRequest() {
@@ -17,6 +16,10 @@ class Order {
                 switch ($action) {
                     case "updateShipping":
                         $this->updateShipping($data);
+                        break;
+
+                    case "updateOrder":
+                        $this->updateOrder($data);
                         break;
 
                     default:
@@ -36,31 +39,55 @@ class Order {
 
     // 🚚 Actualiza la información de envío
     private function updateShipping($data) {
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
 
-      if (session_status() === PHP_SESSION_NONE) {
-          session_start();
-      }
+        $email = $_SESSION['email'];
 
-      $email = $_SESSION['email'];
-
-
-      $connection = new Database();
-      $upadateShippingDays = new Order_Model($connection);
-      $upadateShippingDays->setEmail($email);
-      $upadateShippingDays->setShippingDays($data->shippingDays);
-      $status = $upadateShippingDays->updateShippingDays();
-
-
+        $connection = new Database();
+        $upadateShippingDays = new Order_Model($connection);
+        $upadateShippingDays->setEmail($email);
+        $upadateShippingDays->setShippingDays($data->shippingDays);
+        $status = $upadateShippingDays->updateShippingDays();
 
         // Ejemplo de respuesta simulada
         if ($status) {
-          echo json_encode([
-              "message" => "Shipping information updated successfully",
-              "input" => $data,
-              "status" => $status
-          ]);
+            echo json_encode([
+                "message" => "Shipping information updated successfully",
+                "input" => $data,
+                "status" => $status
+            ]);
+        }
+    }
+
+    // 🧾 Actualiza la orden completa (subtotal, tax, shippingPrice, total)
+    private function updateOrder($data) {
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
         }
 
+        $email = $_SESSION['email'];
+
+        $connection = new Database();
+        $orderModel = new Order_Model($connection);
+        $orderModel->setEmail($email);
+        $orderModel->setSubtotal($data->subtotal);
+        $orderModel->setTax($data->tax);
+        $orderModel->setShippingPrice($data->shippingPrice);
+        $orderModel->setTotal($data->total);
+        $status = $orderModel->updateOrder();
+
+        if ($status) {
+            echo json_encode([
+                "message" => "Order updated successfully",
+                "input" => $data,
+                "status" => $status
+            ]);
+        } else {
+            http_response_code(500);
+            echo json_encode(["message" => "Failed to update order"]);
+        }
     }
 }
 

@@ -11,6 +11,9 @@ class Order_Model {
     private $total;
     private $shippingDays;
 
+    private $subtotal;
+    private $tax;
+    private $shippingPrice;
 
     // 🧱 Constructor
     function __construct($connection) {
@@ -42,6 +45,19 @@ class Order_Model {
     public function setTotal($total) {
         $this->total = $total;
     }
+
+    // 📌 NUEVOS SETTERS
+   public function setSubtotal($subtotal) {
+       $this->subtotal = $subtotal;
+   }
+
+   public function setTax($tax) {
+       $this->tax = $tax;
+   }
+
+   public function setShippingPrice($shippingPrice) {
+       $this->shippingPrice = $shippingPrice;
+   }
 
     // ✅ Crear una orden y devolver su ID
     public function createOrder() {
@@ -78,6 +94,56 @@ class Order_Model {
             return $lastId;
         } catch (PDOException $e) {
             echo "Error PDO: " . $e->getMessage(); // útil para debug
+            return false;
+        }
+    }
+
+    public function updateOrder() {
+        try {
+            // Obtener idUser por email
+            $sqlUser = $this->connection->getConnection()->prepare("SELECT idUser FROM Users WHERE email = :email");
+            $sqlUser->bindParam(':email', $this->email, PDO::PARAM_STR);
+            $sqlUser->execute();
+            $user = $sqlUser->fetch(PDO::FETCH_ASSOC);
+
+            if (!$user) {
+                throw new Exception("No se encontró un usuario con el email proporcionado.");
+            }
+
+            $this->idUser = $user['idUser'];
+
+            // Actualizar subtotal, tax, shippingPrice, total en la orden con estado 'pending'
+            $sql = $this->connection->getConnection()->prepare("
+                UPDATE Orders
+                SET subtotal = :subtotal,
+                    tax = :tax,
+                    shippingPrice = :shippingPrice,
+                    total = :total
+                WHERE idUser = :idUser AND status = 'pending'
+            ");
+
+            $sql->bindParam(':subtotal', $this->subtotal, PDO::PARAM_STR);
+            $sql->bindParam(':tax', $this->tax, PDO::PARAM_STR);
+            $sql->bindParam(':shippingPrice', $this->shippingPrice, PDO::PARAM_STR);
+            $sql->bindParam(':total', $this->total, PDO::PARAM_STR);
+            $sql->bindParam(':idUser', $this->idUser, PDO::PARAM_INT);
+
+            $sql->execute();
+
+            $updatedRows = $sql->rowCount();
+            $this->connection->closeConnection();
+
+
+            if ($updatedRows > 0) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (PDOException $e) {
+            echo "Error PDO en updateOrder: " . $e->getMessage();
+            return false;
+        } catch (Exception $e) {
+            echo "Error en updateOrder: " . $e->getMessage();
             return false;
         }
     }
@@ -157,7 +223,7 @@ class Order_Model {
             } else {
                 return false;
             }
-            
+
         } catch (PDOException $e) {
             echo "Error PDO: " . $e->getMessage();
             return false;

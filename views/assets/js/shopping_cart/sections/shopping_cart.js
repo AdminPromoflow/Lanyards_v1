@@ -340,6 +340,35 @@ class ShoppingCart {
 
   updateOrder(){
 
+    const url = "../../controller/lanyard/order.php";
+    const data = {
+      action: "updateOrder",
+      subtotal: this.subtotal,
+      shippingDays: this.shippingDays,
+      tax: this.tax,
+      total: this.total
+    };
+
+    fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    })
+      .then(response => {
+        if (response.ok) {
+          return response.text();
+        }
+        throw new Error("Network error.");
+      })
+      .then(data => {
+        alert(data);
+        //chargingClass.hideShowchargin(false);
+      })
+      .catch(error => {
+        console.error("Error:", error);
+      });
   }
 
 
