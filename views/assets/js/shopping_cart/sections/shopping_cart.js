@@ -363,6 +363,8 @@ class ShoppingCart {
         if (this.shippingDays === undefined || this.shippingDays == null || isNaN(this.shippingDays)) {
           this.shippingDays = 15;
           this.shippingPrice = 0;
+
+          this.total  = this.subtotal + this.tax + this.shippingPrice;
           this.updateOrder();
         }
 
