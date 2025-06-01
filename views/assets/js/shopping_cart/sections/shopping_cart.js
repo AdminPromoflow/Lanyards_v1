@@ -261,7 +261,7 @@ class ShoppingCart {
     this.tax = vat;
 
     this.shippingPrice = 0;
-    this.shippingDay = 15;
+    this.shippingDays = 15;
 
 
     const total = subtotal + vat + this.shippingPrice;
