@@ -381,7 +381,7 @@ class ShoppingCart {
   }
 
   updateOrder(){
-
+    alert(this.shippingDays + " " + this.shippingPrice + " " + this.total);
     const url = "../../controller/lanyard/order.php";
     const data = {
       action: "updateOrder",
@@ -487,8 +487,6 @@ class ShoppingCart {
     price_shipping.textContent = "£" +this.shippingPrice;
 
     total_price.textContent = "£" + (this.shippingPrice + this.tax + this.subtotal);
-
-
 
   }
   changeShoppingTime(days){
