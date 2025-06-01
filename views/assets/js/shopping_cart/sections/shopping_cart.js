@@ -359,11 +359,11 @@ class ShoppingCart {
         this.shippingPrice = parseFloat(data2["order"]["shipping_price"]);
         this.total = parseFloat(data2["order"]["total"]);
 
-        if (this.shippingDays == null || this.shippingDays == undefined || this.shippingDays == "NaN") {
-          this.shippingDays == 15;
+        if (this.shippingDays == null || isNaN(this.shippingDays)) {
+          this.shippingDays = 15;
           this.shippingPrice = 0;
-
         }
+
 
       //  var value = this.shippingDays + " working days";
 
