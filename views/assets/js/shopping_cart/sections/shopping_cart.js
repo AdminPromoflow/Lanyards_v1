@@ -362,6 +362,9 @@ class ShoppingCart {
         this.tax = data2["order"]["tax"];
         this.shippingPrice = data2["order"]["shipping_price"];
         this.total = data2["order"]["total"];
+
+
+        alert(this.shippingPrice + "  " + this.total);
         //chargingClass.hideShowchargin(false);
       })
       .catch(error => {
