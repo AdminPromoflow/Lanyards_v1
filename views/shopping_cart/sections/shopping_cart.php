@@ -36,7 +36,7 @@
             <input type="checkbox" name="option3" value="Option3">
             By clicking 'Place Order,' I confirm that I have read and agree to the website's terms and conditions.
         </label>
-        <a href="../../views/terms_conditions/index.php">Terms and conditions</a>
+        <a class="shopping_cart_terms_conditions" href="../../views/terms_conditions/index.php">Terms and conditions</a>
         <button id="open_checkout"  type="button" name="button">Proceed to checkout</button>
       </div>
 

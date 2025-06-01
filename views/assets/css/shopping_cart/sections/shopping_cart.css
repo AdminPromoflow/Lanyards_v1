@@ -555,4 +555,15 @@
   width: 75%;
 }
 .elements_boxes_container_shopping_cart h3:nth-child(2){
-  w
+}
+
+
+
+
+.shopping_cart_terms_conditions{
+  property: unset;
+  text-align: left;
+  color: rgba(255, 255, 255, .6);
+
+
+}
