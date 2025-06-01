@@ -81,7 +81,7 @@ class Order {
         $status = $orderModel->updateOrder();
 
 
-        echo json_encode("hola tu hahahah2");exit;
+        echo json_encode($status);exit;
 
         if ($status) {
 
