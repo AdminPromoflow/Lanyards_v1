@@ -89,7 +89,7 @@ class Order {
                 "status" => $status
             ]);
 
-            echo json_encode("hola tu");exit;
+            echo json_encode("hola tu hahahah");exit;
 
         } else {
             http_response_code(500);
