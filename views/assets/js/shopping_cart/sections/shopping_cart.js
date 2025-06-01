@@ -13,6 +13,7 @@ class ShoppingCart {
     open_checkout.addEventListener("click", function(){
 
       if (shopping_cart_input_terms_conditions.checked) {
+        chargingClass.hideShowchargin(true);
         window.open("../../views/checkout/index.php", "_self");
       }
       else {
