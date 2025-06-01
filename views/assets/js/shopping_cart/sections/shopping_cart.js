@@ -352,7 +352,9 @@ class ShoppingCart {
         throw new Error("Network error.");
       })
       .then(data => {
-        alert(data);
+        alert(data["order"]["subtotal"]);
+
+
 
 
         this.shippingDays= 15;
@@ -395,6 +397,7 @@ class ShoppingCart {
         throw new Error("Network error.");
       })
       .then(data => {
+
       //  alert(data);
         //chargingClass.hideShowchargin(false);
       })
