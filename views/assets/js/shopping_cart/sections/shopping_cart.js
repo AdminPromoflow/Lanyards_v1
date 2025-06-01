@@ -222,7 +222,7 @@ class ShoppingCart {
 
 
   addOrderSummary(data){
-    alert(JSON.stringify(data));
+    //alert(JSON.stringify(data));
     const boxes_container_shopping_cart = document.getElementById("boxes_container_shopping_cart");
     const boxes2_container_shopping_cart = document.getElementById("boxes2_container_shopping_cart");
 
@@ -246,7 +246,7 @@ class ShoppingCart {
     </div>`;
 
     data.forEach((item, index) => {
-      var total = parseFloat(item["total"]) + parseFloat(item["newColour"]*25);
+      var total = parseFloat(item["total"])*parseFloat(item["amount"]) + parseFloat(item["newColour"]*25);
       const itemHTML = `
       <div class="elements_boxes_container_shopping_cart">
         <h3>${item["name"]} ${index + 1}</h3>
