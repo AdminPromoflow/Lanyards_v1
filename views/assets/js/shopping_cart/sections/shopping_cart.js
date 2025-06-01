@@ -364,8 +364,12 @@ class ShoppingCart {
           this.shippingPrice = 0;
         }
 
+        var value = this.shippingDays + " working days";
 
-        alert(this.shippingPrice + "  " + this.total);
+        document.querySelector('input[name="options_card_shippingCart"][value="' + value + '"]').checked = true;
+
+
+      //  alert(this.shippingPrice + "  " + this.total);
         //chargingClass.hideShowchargin(false);
       })
       .catch(error => {
