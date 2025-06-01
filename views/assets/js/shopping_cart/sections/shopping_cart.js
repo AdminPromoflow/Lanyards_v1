@@ -353,7 +353,7 @@ class ShoppingCart {
       })
       .then(data => {
 
-        alert(data.order.total);
+        alert(data.order["total"]);
 
 
 
