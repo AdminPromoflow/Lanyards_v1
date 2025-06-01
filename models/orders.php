@@ -112,19 +112,19 @@ class Order_Model {
 
             $this->idUser = $user['idUser'];
 
-            // Actualizar subtotal, tax, shippingPrice, total en la orden con estado 'pending'
-            $sql = $this->connection->getConnection()->prepare("
-                UPDATE Orders
-                SET subtotal = :subtotal,
+            // ✅ Solo actualizar shipping_price, subtotal, tax y total
+            $sql = $this->connection->getConnection()->prepare("UPDATE Orders
+                SET
+                    subtotal = :subtotal,
                     tax = :tax,
-                    shippingPrice = :shippingPrice,
+                    shipping_price = :shipping_price,
                     total = :total
                 WHERE idUser = :idUser AND status = 'pending'
             ");
 
             $sql->bindParam(':subtotal', $this->subtotal, PDO::PARAM_STR);
             $sql->bindParam(':tax', $this->tax, PDO::PARAM_STR);
-            $sql->bindParam(':shippingPrice', $this->shippingPrice, PDO::PARAM_STR);
+            $sql->bindParam(':shipping_price', $this->shippingPrice, PDO::PARAM_STR); // ✅ nombre correcto según la tabla
             $sql->bindParam(':total', $this->total, PDO::PARAM_STR);
             $sql->bindParam(':idUser', $this->idUser, PDO::PARAM_INT);
 
@@ -133,12 +133,8 @@ class Order_Model {
             $updatedRows = $sql->rowCount();
             $this->connection->closeConnection();
 
+            return $updatedRows > 0;
 
-            if ($updatedRows > 0) {
-                return true;
-            } else {
-                return false;
-            }
         } catch (PDOException $e) {
             echo "Error PDO en updateOrder: " . $e->getMessage();
             return false;
@@ -147,6 +143,7 @@ class Order_Model {
             return false;
         }
     }
+
 
 
     public function getOrderIdByUser() {
