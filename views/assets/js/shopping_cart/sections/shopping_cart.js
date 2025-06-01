@@ -353,11 +353,11 @@ class ShoppingCart {
 
       const data2 =   JSON.parse(data);
 
-        this.shippingDays= data2["order"]["subtotal"];
-        this.subtotal = data2["order"]["subtotal"];
-        this.tax = data2["order"]["tax"];
-        this.shippingPrice = data2["order"]["shipping_price"];
-        this.total = data2["order"]["total"];
+        this.shippingDays= parseFloat(data2["order"]["subtotal"]);
+        this.subtotal = parseFloat(data2["order"]["subtotal"]);
+        this.tax = parseFloat(data2["order"]["tax"]);
+        this.shippingPrice = parseFloat(data2["order"]["shipping_price"]);
+        this.total = parseFloat(data2["order"]["total"]);
 
         if (this.shippingDays == null) {
           this.shippingDays == 15;
