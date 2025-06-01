@@ -352,15 +352,14 @@ class ShoppingCart {
         throw new Error("Network error.");
       })
       .then(data => {
+        alert(data);
 
       const data2 =   JSON.parse(data);
 
       alert(data2["order"]["subtotal"]);
 
-      /*  const order = data.order;
 
 
-        alert(parseFloat(order.subtotal));
 
         this.shippingDays= 15;
 
