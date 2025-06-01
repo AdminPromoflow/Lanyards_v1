@@ -360,6 +360,7 @@ class ShoppingCart {
         this.total = parseFloat(data2["order"]["total"]);
 
         if (this.shippingDays == null || isNaN(this.shippingDays)) {
+          alert("juemadre");
           this.shippingDays = 15;
           this.shippingPrice = 0;
         }
