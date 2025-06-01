@@ -81,21 +81,13 @@ class Order {
         $status = $orderModel->updateOrder();
 
 
-        echo json_encode($status);exit;
+      //  echo json_encode($status);exit;
 
-        if ($status) {
-
-            echo json_encode([
-                "message" => "Order updated successfully",
-                "input" => $data,
-                "status" => $status
-            ]);
-
-
-        } else {
-            http_response_code(500);
-            echo json_encode(["message" => "Failed to update order"]);
-        }
+        echo json_encode([
+            "message" => "Order updated successfully",
+            "input" => $data,
+            "status" => $status
+        ]);
     }
 }
 
