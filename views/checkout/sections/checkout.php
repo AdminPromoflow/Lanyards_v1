@@ -142,6 +142,10 @@
           <h3>Material</h3>
           <h3>hola2</h3>
         </div>
+        <div class="elements_boxes_container_checkout">
+          <h3>Material</h3>
+          <h3>hola2</h3>
+        </div>
       </div>
 
       <div class="boxes_card_container_checkout">

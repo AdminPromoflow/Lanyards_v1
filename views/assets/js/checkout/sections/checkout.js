@@ -56,9 +56,12 @@ class Checkout {
         throw new Error("Network error.");
       })
       .then(data => {
-        alert(data);
+        //alert(data);
 
       const data2 =   JSON.parse(data);
+
+
+      checkout.setHTMLOrder(data2["order"]);
 
       /*  this.shippingDays= parseFloat(data2["order"]["shippingDays"]);
         this.subtotal = parseFloat(data2["order"]["subtotal"]);
@@ -93,6 +96,37 @@ class Checkout {
       .catch(error => {
         console.error("Error:", error);
       });
+  }
+
+
+  setHTMLOrder(data){
+
+    const boxes_container_checkout = document.getElementById("boxes_container_checkout");
+
+
+    boxes_container_checkout.innerHTML =
+    `<div class="items2_checkout">
+      <h3>Product</h3>
+      <h3>Subtotal</h3>
+    </div>
+
+    <div class="elements_boxes_container_checkout">
+      <h3>Subtotal</h3>
+      <h3>${data["subtotal"]}</h3>
+    </div>
+    <div class="elements_boxes_container_checkout">
+      <h3>Shipping</h3>
+      <h3>${data["shipping_price"]}</h3>
+    </div>
+    <div class="elements_boxes_container_checkout">
+      <h3>Tax</h3>
+      <h3>${data["tax"]}</h3>
+    </div>
+    <div class="elements_boxes_container_checkout">
+      <h3>total</h3>
+      <h3>${data["total"]}</h3>
+    </div>`
+
   }
       getSelectedOption() {
         // Selecciona todos los radio buttons del grupo "options"
