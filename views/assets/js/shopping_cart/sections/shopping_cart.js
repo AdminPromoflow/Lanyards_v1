@@ -345,6 +345,7 @@ class ShoppingCart {
       action: "updateOrder",
       subtotal: this.subtotal,
       shippingDays: this.shippingDays,
+      shippingPrice: this.shippingPrice,
       tax: this.tax,
       total: this.total
     };
