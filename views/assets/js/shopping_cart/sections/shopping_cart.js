@@ -452,6 +452,8 @@ class ShoppingCart {
     this.shippingDays = days;
     this.updatePriceShippingHTML();
 
+    this.updateOrder();
+
 
     const url = "../../controller/lanyard/order.php";
     const data = {
