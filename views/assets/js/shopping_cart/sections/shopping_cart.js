@@ -254,7 +254,7 @@ class ShoppingCart {
         var total = parseFloat(item["total"])*parseFloat(item["amount"]) + parseFloat(item["newColour"]*25);
       }*/
 
-      var total = parseFloat(item["total"])*parseFloat(item["amount"]) + parseFloat(item["newColour"]*25);
+      var total = parseFloat(item["total"]) + parseFloat(item["newColour"]*25);
 
       const itemHTML = `
       <div class="elements_boxes_container_shopping_cart">
