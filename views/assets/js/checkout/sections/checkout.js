@@ -219,12 +219,24 @@ class Checkout {
 
     </div>
     <script type="text/javascript">
-      document.getElementById("button_deliver_different_address").addEventListener("change", () => {
-        this.addSecondAddress();
+    const button_deliver_different_address =   document.getElementById("button_deliver_different_address");
+    const form_boxes_checkout_2 =   document.getElementById("form_boxes_checkout_2");
+
+
+    form_boxes_checkout_2.style.display = "none";
+
+      button_deliver_different_address.addEventListener("change", function() {
+        
+          if (this.checked) {
+            form_boxes_checkout_2.classList.remove("active_form_boxes_checkout");
+
+          } else {
+            form_boxes_checkout_2.classList.add("active_form_boxes_checkout");
+
+          }
       });
 
       // Ocultar el segundo bloque inicialmente
-      document.getElementById("form_boxes_checkout_2").style.display = "none";
     </script>
 
     `;
