@@ -2,6 +2,7 @@
   position: relative;
   width: 100%;
   color: white;
+  min-height: 100vh;
 
   display: flex;
   justify-content: center;
@@ -22,6 +23,10 @@
 .section_success_payment p{
   position: relative;
   text-align: center;
+  width: 50%;
+  min-width: 280px;
+  left: 50%;
+  transform: translateX(-50%);
   color: white;
   text-shadow: 3px 3px 2px black;
   font-size: calc(0.8em + 0.8vw);
