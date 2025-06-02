@@ -3,49 +3,52 @@ class Checkout {
     this.getOrder();
     this.getAddresses();
 
-    button_place_order.addEventListener("click", function () {
-      const requiredFields = [
-        "first_name_1",
-        "last_name_1",
-        "company_name_1",
-        "phone_1",
-        "country_1",
-        "town_city_1",
-        "street_address_1_1",
-        "street_address_2_1",
-        "postcode_1",
-        "email_address_1"
-      ];
+    button_place_order.addEventListener("click", function() {
+      const address1 = checkout.getAddressIds1();
+      let valid = true;
 
-      let allValid = true;
-
-      requiredFields.forEach(id => {
-        const input = document.getElementById(id);
+      // Recorrer los campos y validar
+      for (const key in address1) {
+        const input = address1[key];
         if (input) {
-          if (input.value.trim() === "") {
-            input.style.border = "1px solid red";
-            allValid = false;
-          } else {
-            input.style.border = ""; // limpia el borde si estaba rojo
+          // Elimina cualquier borde rojo anterior
+          input.style.border = "";
+
+          // Verifica si el campo está vacío
+          if (!input.value.trim()) {
+            input.style.border = "2px solid red";
+            valid = false;
           }
         }
-      });
-
-      // Validación opcional del campo "state"
-      const stateInput = document.getElementById("state_1");
-      if (stateInput && stateInput.required && stateInput.value.trim() === "") {
-        stateInput.style.border = "1px solid red";
-        allValid = false;
-      } else if (stateInput) {
-        stateInput.style.border = "";
       }
 
-      if (allValid) {
+      // Si todo está correcto, continúa
+      if (valid) {
         checkout.makeAjaxRequestSaveOrder();
+      } else {
+        alert("Por favor, completa todos los campos obligatorios.");
       }
     });
 
   }
+
+  getAddressIds1() {
+    return {
+      first_name: document.getElementById("first_name_1"),
+      last_name: document.getElementById("last_name_1"),
+      company_name: document.getElementById("company_name_1"),
+      phone: document.getElementById("phone_1"),
+      country: document.getElementById("country_1"),
+      state: document.getElementById("state_1"),
+      town_city: document.getElementById("town_city_1"),
+      street_address_1: document.getElementById("street_address_1_1"),
+      street_address_2: document.getElementById("street_address_2_1"), // si es obligatorio
+      postcode: document.getElementById("postcode_1"),
+      email_address: document.getElementById("email_address_1")
+    };
+  }
+
+
 
   makeAjaxRequestSaveOrder(){
     const url = "../../controller/lanyard/addresses.php";
