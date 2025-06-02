@@ -35,6 +35,10 @@ class Checkout {
         radio.addEventListener("change", this.getSelectedOption);
     });*/
 
+
+    document.querySelectorAll('input[name="options_card_checkout"]').forEach(radio => {
+        radio.addEventListener("change", this.getSelectedOption);
+    });
   }
 
 
