@@ -4,9 +4,46 @@ class Checkout {
     this.getAddresses();
 
     button_place_order.addEventListener("click", function(){
-      alert("uf");
+      checkout.makeAjaxRequestSaveOrder();
     });
   }
+
+  makeAjaxRequestSaveOrder(){
+    const url = "../../controller/lanyard/addresses.php";
+    const data = {
+      action: "createAdresses",
+      address1: this.getAddress1(),
+      address2: this.getAddress2()
+    };
+
+    fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    })
+      .then(response => {
+        if (response.ok) {
+          return response.text();
+        }
+        throw new Error("Network error.");
+      })
+      .then(data => {
+        alert(data);
+
+        //chargingClass.hideShowchargin(false);
+
+      //  data = JSON.parse(data);
+
+
+
+      })
+      .catch(error => {
+        console.error("Error:", error);
+      });
+  }
+
 
   addSecondAddress(event) {
     const checkbox = event.target;
@@ -247,7 +284,7 @@ class Checkout {
    });
   }
 
-  initializeStyles() {
+  initializeStyles(){
     this.descriptionsStyles = [];
     this.arrowsStyles = [];
 

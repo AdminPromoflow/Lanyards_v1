@@ -20,7 +20,9 @@ class Addresses {
                     case "getAddresses":
                         $this->getAddresses();
                         break;
-
+                    case "updateAddresses":
+                        $this->updateAddresses($data);
+                        break;
                     default:
                         http_response_code(400); // Bad Request
                         echo json_encode(array("message" => "Unknown action"));
@@ -68,6 +70,48 @@ class Addresses {
             echo json_encode(["message" => "No addresses found for this user"]);
         }
     }
+    private function updateAddresses($data) {
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
+
+        if (!isset($_SESSION['email'])) {
+            http_response_code(401); // Unauthorized
+            echo json_encode(["message" => "User email not found in session"]);
+            return;
+        }
+
+        $email = $_SESSION['email'];
+
+        // Paso 1: Eliminar direcciones anteriores
+        $connection = new Database();
+        $deleteAddresses = new Addresses_Model($connection);
+        $deleteAddresses->setUserEmail($email);
+        $deleted = $deleteAddresses->deleteAddressesByEmail();
+
+        if ($deleted) {
+            // Paso 2: Crear nuevas direcciones
+            $connection = new Database();
+            $createAddresses = new Addresses_Model($connection);
+            $createAddresses->setUserEmail($email);
+
+            $createAddresses->setAddress1((array) $data->address1);
+            $createAddresses->setAddress2((array) $data->address2);
+
+            $created = $createAddresses->createProvidedInformation();
+
+            if ($created) {
+                echo json_encode(["message" => "Addresses updated successfully"]);
+            } else {
+                http_response_code(500); // Internal Server Error
+                echo json_encode(["message" => "Failed to create new addresses"]);
+            }
+        } else {
+            http_response_code(500); // Internal Server Error
+            echo json_encode(["message" => "Failed to delete previous addresses"]);
+        }
+    }
+
 }
 
 // Include required files
