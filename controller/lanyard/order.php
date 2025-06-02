@@ -148,7 +148,7 @@ class Order {
             'cancel_url' => 'https://www.youtube.com',
         ]);
 
-        header("Location: " . $session->url);
+      //  header("Location: " . $session->url);
 
         echo json_encode(['id' => $session->url]);
     }
