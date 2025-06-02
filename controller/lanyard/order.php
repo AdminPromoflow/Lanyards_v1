@@ -124,12 +124,13 @@ class Order {
         }
     }
 
+
     private function setOrder($data) {
-        // $data ya está decodificado como objeto
         $amount = $data->total;
         $currency = $data->currency;
+        $orderId = $data->order_id ?? 'unknown'; // Asegúrate de pasar el ID de la orden
 
-        \Stripe\Stripe::setApiKey('sk_test_51RVWm7Iy7ZwkjsYRhmh4hsLctFV3lGr2HlAK5qn8eb7yAOTc9z2BTYRc2DVzvyRhLrndFR4MYMWBe6Kw2PA9Od3Z00UpRTyB8P');
+        \Stripe\Stripe::setApiKey('sk_test_51RVWm7Iy7ZwkjsYRhmh4hsLctFV3lGr2HlAK5qn8eb7yAOTc9z2BTYRc2DVzvyRhLrndFR4MYMWBe6Kw2PA9Od3Z00UpRTyB8P'); // Tu clave secreta
 
         $session = \Stripe\Checkout\Session::create([
             'payment_method_types' => ['card'],
@@ -139,19 +140,23 @@ class Order {
                     'product_data' => [
                         'name' => 'Tu orden completa',
                     ],
-                    'unit_amount' => $amount,
+                    'unit_amount' => $amount, // en centavos
                 ],
                 'quantity' => 1,
             ]],
             'mode' => 'payment',
             'success_url' => 'https://www.lanyardsforyou.com/views/success_payment/index.php',
-            'cancel_url' => 'https://www.lanyardsforyou.com',
-        ]);
+            'cancel_url' => 'https://www.lanyardsforyou.com/views/success_payment/index.php',
 
-      //  header("Location: " . $session->url);
+            // 👇 Aquí envías el ID de tu orden (o lo que necesites rastrear)
+            'metadata' => [
+                'order_id' => $orderId
+            ]
+        ]);
 
         echo json_encode(['url' => $session->url]);
     }
+
 
 }
 
