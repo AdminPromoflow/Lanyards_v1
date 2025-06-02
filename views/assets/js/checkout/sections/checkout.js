@@ -35,10 +35,16 @@ class Checkout {
         radio.addEventListener("change", this.getSelectedOption);
     });*/
 
+    button_deliver_different_address.addEventListener("change", function() {
+      if (this.checked) {
+        form_boxes_checkout_2.classList.remove("active_form_boxes_checkout");
 
-    document.querySelectorAll('input[name="options_card_checkout"]').forEach(radio => {
-        radio.addEventListener("change", this.getSelectedOption);
-    });
+      } else {
+        form_boxes_checkout_2.classList.add("active_form_boxes_checkout");
+
+      }
+  });
+
   }
 
 
