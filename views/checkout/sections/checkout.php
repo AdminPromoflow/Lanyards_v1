@@ -6,7 +6,7 @@
   <div class="container_checkout">
 
     <div id="boxes_checkout" class="boxes_checkout">
-    
+
     </div>
 
 
@@ -18,27 +18,7 @@
       <h3 class="title_boxes_checkout">You Orden</h3>
 
       <div id="boxes_container_checkout" class="boxes_container_checkout">
-        <div class="items2_checkout">
-          <h3>Product</h3>
-          <h3>Subtotal</h3>
-        </div>
 
-        <div class="elements_boxes_container_checkout">
-          <h3>Material</h3>
-          <h3>hola2</h3>
-        </div>
-        <div class="elements_boxes_container_checkout">
-          <h3>Material</h3>
-          <h3>hola2</h3>
-        </div>
-        <div class="elements_boxes_container_checkout">
-          <h3>Material</h3>
-          <h3>hola2</h3>
-        </div>
-        <div class="elements_boxes_container_checkout">
-          <h3>Material</h3>
-          <h3>hola2</h3>
-        </div>
       </div>
 
       <div class="boxes_card_container_checkout">
