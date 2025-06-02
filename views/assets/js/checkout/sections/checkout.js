@@ -54,7 +54,7 @@ class Checkout {
 
 
 
-
+    alert(button_deliver_different_address.checked);
     if (button_deliver_different_address.checked) {
       form_boxes_checkout_2.style.display = "block";
 
