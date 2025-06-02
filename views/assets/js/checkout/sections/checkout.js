@@ -3,9 +3,48 @@ class Checkout {
     this.getOrder();
     this.getAddresses();
 
-    button_place_order.addEventListener("click", function(){
-      checkout.makeAjaxRequestSaveOrder();
+    button_place_order.addEventListener("click", function () {
+      const requiredFields = [
+        "first_name_1",
+        "last_name_1",
+        "company_name_1",
+        "phone_1",
+        "country_1",
+        "town_city_1",
+        "street_address_1_1",
+        "street_address_2_1",
+        "postcode_1",
+        "email_address_1"
+      ];
+
+      let allValid = true;
+
+      requiredFields.forEach(id => {
+        const input = document.getElementById(id);
+        if (input) {
+          if (input.value.trim() === "") {
+            input.style.border = "1px solid red";
+            allValid = false;
+          } else {
+            input.style.border = ""; // limpia el borde si estaba rojo
+          }
+        }
+      });
+
+      // Validación opcional del campo "state"
+      const stateInput = document.getElementById("state_1");
+      if (stateInput && stateInput.required && stateInput.value.trim() === "") {
+        stateInput.style.border = "1px solid red";
+        allValid = false;
+      } else if (stateInput) {
+        stateInput.style.border = "";
+      }
+
+      if (allValid) {
+        checkout.makeAjaxRequestSaveOrder();
+      }
     });
+
   }
 
   makeAjaxRequestSaveOrder(){
@@ -103,7 +142,7 @@ class Checkout {
         throw new Error("Network error.");
       })
       .then(data => {
-        alert(data);
+      //  alert(data);
       const data2 =   JSON.parse(data);
       checkout.setHTMLAddresses(data2["addresses"]);
 
