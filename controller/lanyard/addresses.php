@@ -23,7 +23,7 @@ class Addresses {
                     case "getAddresses":
                         $this->getAddresses();
                         break;
-                    
+
                     default:
                         http_response_code(400); // Bad Request
                         echo json_encode(array("message" => "Unknown action"));
@@ -71,7 +71,7 @@ class Addresses {
             echo json_encode(["message" => "No addresses found for this user"]);
         }
     }
-    private function updateAddresses($data) {
+    public function updateAddresses($data) {
         if (session_status() === PHP_SESSION_NONE) {
             session_start();
         }
