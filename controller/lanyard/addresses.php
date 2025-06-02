@@ -14,6 +14,7 @@ class Addresses {
             if ($data !== null && isset($data->action)) {
                 // Get the action from the JSON data
                 $action = $data->action;
+                echo json_encode("uffff3");exit;
 
                 // Perform actions based on the request
                 switch ($action) {
@@ -21,7 +22,6 @@ class Addresses {
                         $this->getAddresses();
                         break;
                     case "updateAddresses":
-                    echo json_encode("uffff2");exit;
 
                         $this->updateAddresses($data);
                         break;
