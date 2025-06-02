@@ -42,7 +42,6 @@ class Checkout {
       state: document.getElementById("state_1"),
       town_city: document.getElementById("town_city_1"),
       street_address_1: document.getElementById("street_address_1_1"),
-      street_address_2: document.getElementById("street_address_2_1"), // si es obligatorio
       postcode: document.getElementById("postcode_1"),
       email_address: document.getElementById("email_address_1")
     };
