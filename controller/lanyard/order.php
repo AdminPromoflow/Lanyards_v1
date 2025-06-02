@@ -30,7 +30,7 @@ class Order {
                         break;
                     case "setOrder":
                     $addresses = new Addresses();
-                    $addresses->->updateAddresses($data);
+                    $addresses->updateAddresses($data);
 
                         //$this->getOrder();
                         break;
