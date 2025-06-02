@@ -11,7 +11,7 @@ class Checkout {
   makeAjaxRequestSaveOrder(){
     const url = "../../controller/lanyard/addresses.php";
     const data = {
-      action: "createAdresses",
+      action: "updateAddresses",
       address1: this.getAddress1(),
       address2: this.getAddress2()
     };
