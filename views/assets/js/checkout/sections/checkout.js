@@ -47,8 +47,10 @@ class Checkout {
 
   }
 
-  addSecondAddress() {
-    alert("como rayos se?");
+  addSecondAddress(event) {
+
+    const checkbox = event.target;
+    alert(checkbox.checked );
     const checkbox = document.getElementById("button_deliver_different_address");
     const form_boxes_checkout_2 = document.getElementById("form_boxes_checkout_2");
 
@@ -174,7 +176,7 @@ class Checkout {
       </div>-->
       <div class="items_form_boxes_checkout_checkbox">
         <label  >
-            <input type="checkbox" onchange="checkout.addSecondAddress()" id="button_deliver_different_address">
+            <input type="checkbox" onchange="checkout.addSecondAddress(event)" id="button_deliver_different_address">
             Deliver to a different address?
         </label>
       </div>
