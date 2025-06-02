@@ -25,8 +25,7 @@
   text-align: center;
   width: 50%;
   min-width: 280px;
-  left: 50%;
-  transform: translateX(-50%);
+
   color: white;
   text-shadow: 3px 3px 2px black;
   font-size: calc(0.8em + 0.8vw);
