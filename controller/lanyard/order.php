@@ -2,7 +2,7 @@
 // 📦 Importaciones necesarias antes de declarar la clase
 require_once '../config/database.php';
 require_once '../../models/orders.php';
-//require_once '../../controller/lanyard/addresses.php';
+require_once '../../controller/lanyard/addresses.php';
 
 
 
