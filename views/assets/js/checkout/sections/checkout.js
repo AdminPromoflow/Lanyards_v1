@@ -226,7 +226,7 @@ class Checkout {
     form_boxes_checkout_2.style.display = "none";
 
       button_deliver_different_address.addEventListener("change", function() {
-        
+        alert("mm");
           if (this.checked) {
             form_boxes_checkout_2.classList.remove("active_form_boxes_checkout");
 
