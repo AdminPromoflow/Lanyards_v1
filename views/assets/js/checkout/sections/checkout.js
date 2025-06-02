@@ -1,50 +1,11 @@
 class Checkout {
   constructor() {
-
     this.getOrder();
     this.getAddresses();
 
-    // Iterar sobre cada elemento del carrito y agregar un evento
-  /*  for (let i = 0; i < product_items_checkout.length; i++) {
-      product_items_checkout[i].addEventListener("click", () => {
-        // Alternar la visibilidad del div correspondiente
-        this.toggleDescriptionItemCheckout(i);
-      });
-    }
-
-
-    // Obtener los estilos iniciales de todos los elementos
-    this.initializeStyles();
-
-    this.checkSizeItemsFormBoxesCheckout();
-    // Check size on load and resize
-  window.addEventListener("resize", this.checkSizeItemsFormBoxesCheckout);
-
-  button_deliver_different_address.addEventListener("change", function() {
-    if (this.checked) {
-      form_boxes_checkout_2.classList.remove("active_form_boxes_checkout");
-
-    } else {
-      form_boxes_checkout_2.classList.add("active_form_boxes_checkout");
-
-    }
-});
-
-
-    document.querySelectorAll('input[name="options_card_checkout"]').forEach(radio => {
-        radio.addEventListener("change", this.getSelectedOption);
-    });*/
-
-  /*  button_deliver_different_address.addEventListener("change", function() {
-      if (this.checked) {
-        form_boxes_checkout_2.classList.remove("active_form_boxes_checkout");
-
-      } else {
-        form_boxes_checkout_2.classList.add("active_form_boxes_checkout");
-
-      }
-  });*/
-
+    button_place_order.addEventListener("click", function(){
+      alert("uf");
+    });
   }
 
   addSecondAddress(event) {
@@ -59,8 +20,6 @@ class Checkout {
       }
     }
   }
-
-
 
   getOrder(){
     const url = "../../controller/lanyard/order.php";
@@ -123,128 +82,100 @@ class Checkout {
   }
 
   setHTMLAddresses(data){
-  //  alert();
     const boxes_checkout = document.getElementById("boxes_checkout");
 
     boxes_checkout.innerHTML = `
     <div class="form_boxes_checkout">
       <div class="items_form_boxes_checkout ">
-        <label for="">First name *</label>
-        <input type="text" name="" value="${data[0]["first_name"]}">
+        <label for="first_name_1">First name *</label>
+        <input type="text" id="first_name_1" value="${data[0]["first_name"]}">
       </div>
       <div class="items_form_boxes_checkout ">
-        <label for="">Last name *</label>
-        <input type="text" name="" value="${data[0]["last_name"]}">
+        <label for="last_name_1">Last name *</label>
+        <input type="text" id="last_name_1" value="${data[0]["last_name"]}">
       </div>
       <div class="items_form_boxes_checkout">
-        <label for="">Company name (optional)</label>
-        <input type="text" name="" value="${data[0]["company_name"]}">
+        <label for="company_name_1">Company name (optional)</label>
+        <input type="text" id="company_name_1" value="${data[0]["company_name"]}">
       </div>
       <div class="items_form_boxes_checkout">
-        <label for="">Phone *</label>
-        <input type="text" name="" value="${data[0]["phone"]}">
+        <label for="phone_1">Phone *</label>
+        <input type="text" id="phone_1" value="${data[0]["phone"]}">
       </div>
       <div class="items_form_boxes_checkout">
-        <label for="">Country/Region *</label>
-        <input type="text" name="" value="${data[0]["country"]}">
+        <label for="country_1">Country/Region *</label>
+        <input type="text" id="country_1" value="${data[0]["country"]}">
       </div>
       <div class="items_form_boxes_checkout">
-        <label for="">Street address *</label>
-        <input type="text" name="" value="${data[0]["street_address_1"]}">
-        <input type="text" name="" value="${data[0]["street_address_2"]}">
+        <label for="street_address_1_1">Street address *</label>
+        <input type="text" id="street_address_1_1" value="${data[0]["street_address_1"]}">
+        <input type="text" id="street_address_2_1" value="${data[0]["street_address_2"]}">
       </div>
       <div class="items_form_boxes_checkout">
-        <label for="">Town / City *</label>
-        <input type="text" name="" value="${data[0]["town_city"]}">
+        <label for="town_city_1">Town / City *</label>
+        <input type="text" id="town_city_1" value="${data[0]["town_city"]}">
+      </div>
+      <div class="items_form_boxes_checkout">
+        <label for="postcode_1">Postcode *</label>
+        <input type="text" id="postcode_1" value="${data[0]["postcode"]}">
+      </div>
+      <div class="items_form_boxes_checkout">
+        <label for="email_address_1">Email address *</label>
+        <input type="text" id="email_address_1" value="${data[0]["email_address"]}">
       </div>
 
-      <div class="items_form_boxes_checkout">
-        <label for="">Postcode *</label>
-        <input type="text" name="" value="${data[0]["postcode"]}">
-      </div>
-      <div class="items_form_boxes_checkout">
-        <label for="">Email address *</label>
-        <input type="text" name="" value="${data[0]["email_address"]}">
-      </div>
-
-    <!--  <div class="items_form_boxes_checkout">
-        <label for="">Order notes (optional)</label>
-        <input type="text" name="" value="${data[0][""]}">
-      </div>-->
       <div class="items_form_boxes_checkout_checkbox">
-        <label  >
-            <input type="checkbox" onchange="checkout.addSecondAddress(event)" id="button_deliver_different_address">
-            Deliver to a different address?
+        <label>
+          <input type="checkbox" onchange="checkout.addSecondAddress(event)" id="button_deliver_different_address">
+          Deliver to a different address?
         </label>
       </div>
     </div>
+
     <div id="form_boxes_checkout_2" class="form_boxes_checkout active_form_boxes_checkout">
       <div class="items_form_boxes_checkout ">
-        <label for="">First name *</label>
-        <input type="text" name="" value="${data[1]["first_name"]}">
+        <label for="first_name_2">First name *</label>
+        <input type="text" id="first_name_2" value="${data[1]["first_name"]}">
       </div>
       <div class="items_form_boxes_checkout ">
-        <label for="">Last name *</label>
-        <input type="text" name="" value="${data[1]["last_name"]}">
+        <label for="last_name_2">Last name *</label>
+        <input type="text" id="last_name_2" value="${data[1]["last_name"]}">
       </div>
       <div class="items_form_boxes_checkout">
-        <label for="">Company name (optional)</label>
-        <input type="text" name="" value="${data[1]["company_name"]}">
+        <label for="company_name_2">Company name (optional)</label>
+        <input type="text" id="company_name_2" value="${data[1]["company_name"]}">
       </div>
       <div class="items_form_boxes_checkout">
-        <label for="">Phone *</label>
-        <input type="text" name="" value="${data[1]["phone"]}">
+        <label for="phone_2">Phone *</label>
+        <input type="text" id="phone_2" value="${data[1]["phone"]}">
       </div>
       <div class="items_form_boxes_checkout">
-        <label for="">Country/Region *</label>
-        <input type="text" name="" value="${data[1]["country"]}">
+        <label for="country_2">Country/Region *</label>
+        <input type="text" id="country_2" value="${data[1]["country"]}">
       </div>
       <div class="items_form_boxes_checkout">
-        <label for="">Street address *</label>
-        <input type="text" name="" value="${data[1]["street_address_1"]}">
-        <input type="text" name="" value="${data[1]["street_address_2"]}">
+        <label for="street_address_1_2">Street address *</label>
+        <input type="text" id="street_address_1_2" value="${data[1]["street_address_1"]}">
+        <input type="text" id="street_address_2_2" value="${data[1]["street_address_2"]}">
       </div>
       <div class="items_form_boxes_checkout">
-        <label for="">Town / City *</label>
-        <input type="text" name="" value="${data[1]["town_city"]}">
+        <label for="town_city_2">Town / City *</label>
+        <input type="text" id="town_city_2" value="${data[1]["town_city"]}">
       </div>
       <div class="items_form_boxes_checkout">
-        <label for="">Postcode *</label>
-        <input type="text" name="" value="${data[1]["postcode"]}">
+        <label for="postcode_2">Postcode *</label>
+        <input type="text" id="postcode_2" value="${data[1]["postcode"]}">
       </div>
       <div class="items_form_boxes_checkout">
-        <label for="">Email address *</label>
-        <input type="text" name="" value="${data[1]["email_address"]}">
+        <label for="email_address_2">Email address *</label>
+        <input type="text" id="email_address_2" value="${data[1]["email_address"]}">
       </div>
-
     </div>
-    <script type="text/javascript">
-    /*const button_deliver_different_address =   document.getElementById("button_deliver_different_address");
-    const form_boxes_checkout_2 =   document.getElementById("form_boxes_checkout_2");
-
-
-    form_boxes_checkout_2.style.display = "none";
-
-      button_deliver_different_address.addEventListener("change", function() {
-
-          if (this.checked) {
-            form_boxes_checkout_2.classList.remove("active_form_boxes_checkout");
-
-          } else {
-            form_boxes_checkout_2.classList.add("active_form_boxes_checkout");
-
-          }
-      });*/
-
-      // Ocultar el segundo bloque inicialmente
-    </script>
-
     `;
 
 
 
   }
-
 
   setHTMLOrder(data){
 
@@ -275,7 +206,8 @@ class Checkout {
     </div>`
 
   }
-      getSelectedOption() {
+
+  getSelectedOption() {
         // Selecciona todos los radio buttons del grupo "options"
         const radios = document.querySelectorAll('input[name="options_card_checkout"]');
 
@@ -301,7 +233,8 @@ class Checkout {
 
         // Muestra el resultado en el párrafo con id "result"
         }
-   checkSizeItemsFormBoxesCheckout() {
+
+  checkSizeItemsFormBoxesCheckout() {
      const items = document.querySelectorAll(".items_form_boxes_checkout:nth-child(-n+2)");
 
      items.forEach(item => {
@@ -314,7 +247,6 @@ class Checkout {
    });
   }
 
-  // Inicializa los estilos actuales de todos los elementos
   initializeStyles() {
     this.descriptionsStyles = [];
     this.arrowsStyles = [];
@@ -336,38 +268,48 @@ class Checkout {
     }
   }
 
-  // Alterna la visibilidad de una descripción específica
-  /*toggleDescriptionItemCheckout(index) {
-    const item = this.descriptionsStyles[index]?.element;
-    const arrow = this.arrowsStyles[index]?.element;
+  getAddress1() {
+  const address1 = {
+    first_name: document.getElementById("first_name_1").value,
+    last_name: document.getElementById("last_name_1").value,
+    company_name: document.getElementById("company_name_1").value,
+    phone: document.getElementById("phone_1").value,
+    country: document.getElementById("country_1").value,
+    state: document.getElementById("state_1")?.value || "", // opcional
+    town_city: document.getElementById("town_city_1").value,
+    street_address_1: document.getElementById("street_address_1_1").value,
+    street_address_2: document.getElementById("street_address_2_1").value,
+    postcode: document.getElementById("postcode_1").value,
+    email_address: document.getElementById("email_address_1").value
+  };
 
-    // Verificar que los elementos existan antes de manipularlos
-    if (item && arrow) {
-      const currentDisplay = this.descriptionsStyles[index].display;
+  return address1;
+}
 
-      if (currentDisplay === "block") {
-        item.style.display = "none";
-        arrow.style.transform = "rotate(0deg)";
-        this.descriptionsStyles[index].display = "none";
-      } else {
-        item.style.display = "block";
-        arrow.style.transform = "rotate(90deg)";
-        this.descriptionsStyles[index].display = "block";
-      }
-    } else {
-      console.error(`No se puede alternar el índice ${index}: Elemento no válido.`);
-    }
-  }*/
+  getAddress2() {
+  const address2 = {
+    first_name: document.getElementById("first_name_2").value,
+    last_name: document.getElementById("last_name_2").value,
+    company_name: document.getElementById("company_name_2").value,
+    phone: document.getElementById("phone_2").value,
+    country: document.getElementById("country_2").value,
+    state: document.getElementById("state_2")?.value || "", // opcional
+    town_city: document.getElementById("town_city_2").value,
+    street_address_1: document.getElementById("street_address_1_2").value,
+    street_address_2: document.getElementById("street_address_2_2").value,
+    postcode: document.getElementById("postcode_2").value,
+    email_address: document.getElementById("email_address_2").value
+  };
+
+  return address2;
+}
+
 }
 
 // Obtener los elementos del DOM
 const product_items_checkout = document.querySelectorAll(".product_items_checkout");
 const descriptions_items_checkout = document.querySelectorAll(".descriptions_items_checkout");
 const arrow_products_checkout = document.querySelectorAll(".arrow_products_checkout");
-
-
-
-
 
 const form_card_container_checkout = document.getElementById("form_card_container_checkout");
 const button_checkout_paypal = document.getElementById("button_checkout_paypal");
