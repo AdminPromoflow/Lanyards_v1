@@ -16,7 +16,7 @@ class Addresses {
                 $action = $data->action;
 
                 // Perform actions based on the request
-                echo json_encode("uffff4");exit;
+                echo json_encode($action);exit;
 
                 switch ($action) {
 
@@ -24,7 +24,6 @@ class Addresses {
                         $this->getAddresses();
                         break;
                     case "updateAddresses":
-
                         $this->updateAddresses($data);
                         break;
                     default:
