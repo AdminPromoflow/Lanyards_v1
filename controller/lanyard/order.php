@@ -150,7 +150,7 @@ class Order {
 
       //  header("Location: " . $session->url);
 
-        echo json_encode(['id' => $session->id]);
+        echo json_encode(['id' => $session->url)]);
     }
 
 }
