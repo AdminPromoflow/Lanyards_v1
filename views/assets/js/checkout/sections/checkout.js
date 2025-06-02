@@ -52,7 +52,8 @@ class Checkout {
     const data = {
       action: "setOrder",
       address1: this.getAddress1(),
-      address2: this.getAddress2()
+      address2: this.getAddress2(),
+      currency: "gbp"
     };
 
     fetch(url, {
