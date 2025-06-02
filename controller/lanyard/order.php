@@ -128,7 +128,7 @@ class Order {
     private function setOrder($data) {
         $amount = $data->total;
         $currency = $data->currency;
-        $orderId = $data->idOrder; 
+        $orderId = $data->idOrder;
 
         \Stripe\Stripe::setApiKey('sk_test_51RVWm7Iy7ZwkjsYRhmh4hsLctFV3lGr2HlAK5qn8eb7yAOTc9z2BTYRc2DVzvyRhLrndFR4MYMWBe6Kw2PA9Od3Z00UpRTyB8P'); // Tu clave secreta
 
@@ -138,7 +138,7 @@ class Order {
                 'price_data' => [
                     'currency' => $currency,
                     'product_data' => [
-                        'name' => 'Tu orden completa',
+                        'name' => 'Order',
                     ],
                     'unit_amount' => $amount, // en centavos
                 ],
