@@ -287,7 +287,7 @@
   cursor: pointer;
 }
 
-.boxes3_container_checkout button{
+.button_checkout {
   position: relative;
   background: rgba(255, 0, 0, .3);
   color: white;

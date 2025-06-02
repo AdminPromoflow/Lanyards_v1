@@ -50,7 +50,7 @@
             <input type="checkbox" name="option3" value="Option3">
             I have read and agree to the website terms and conditions *
         </label>-->
-        <button id="button_place_order" type="button" name="button">Place Order</button>
+        <button class="button_checkout" id="button_place_order" type="button" name="button">Place Order</button>
       <!--  <button id="button_checkout_paypal" class="button_checkout_paypal">
           <img src="../../views/assets/img/checkout/sections/paypal.svg" alt="Icon">
         </button>-->
