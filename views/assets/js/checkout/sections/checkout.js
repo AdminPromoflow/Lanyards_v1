@@ -72,7 +72,7 @@ class Checkout {
         throw new Error("Network error.");
       })
       .then(data => {
-        //alert(data);
+        alert(data);
         //chargingClass.hideShowchargin(false);
         //  data = JSON.parse(data);
       })
