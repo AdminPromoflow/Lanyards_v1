@@ -3,6 +3,7 @@
 require_once '../config/database.php';
 require_once '../../models/orders.php';
 require_once '../../controller/lanyard/addresses.php';
+require '../../vendor/autoload.php';
 
 class Order {
     // 📥 Maneja la solicitud POST
@@ -29,6 +30,8 @@ class Order {
                     case "setOrder":
                         $addresses = new Addresses();
                         $addresses->updateAddresses($data);
+
+                        $this->setOrder($data);
                         break;
 
                     default:
@@ -120,6 +123,36 @@ class Order {
             echo json_encode(["message" => "No pending order found for this user"]);
         }
     }
+
+    private function setOrder($data) {
+        // $data ya está decodificado como objeto
+        $amount = $data->total;
+        $currency = $data->currency;
+
+      //  \Stripe\Stripe::setApiKey('My key');
+
+        $session = \Stripe\Checkout\Session::create([
+            'payment_method_types' => ['card'],
+            'line_items' => [[
+                'price_data' => [
+                    'currency' => $currency,
+                    'product_data' => [
+                        'name' => 'Tu orden completa',
+                    ],
+                    'unit_amount' => $amount,
+                ],
+                'quantity' => 1,
+            ]],
+            'mode' => 'payment',
+            'success_url' => 'https://www.google.com',
+            'cancel_url' => 'https://www.youtube.com',
+        ]);
+
+        header("Location: " . $session->url);
+
+      //  echo json_encode(['id' => $session->id]);
+    }
+
 }
 
 // 🚀 Ejecuta el manejador

@@ -1,5 +1,6 @@
 class Checkout {
   constructor() {
+    this.total;
     this.getOrder();
     this.getAddresses();
 
@@ -53,7 +54,8 @@ class Checkout {
       action: "setOrder",
       address1: this.getAddress1(),
       address2: this.getAddress2(),
-      currency: "gbp"
+      currency: "gbp",
+      total: this.getTotal()
     };
 
     fetch(url, {
@@ -70,7 +72,7 @@ class Checkout {
         throw new Error("Network error.");
       })
       .then(data => {
-        alert(data);
+        //alert(data);
         //chargingClass.hideShowchargin(false);
         //  data = JSON.parse(data);
       })
@@ -113,13 +115,23 @@ class Checkout {
       })
       .then(data => {
         alert(data);
+
       const data2 =   JSON.parse(data);
       checkout.setHTMLOrder(data2["order"]);
+      checkout.setTotal(data2["order"]["total"]);
 
       })
       .catch(error => {
         console.error("Error:", error);
       });
+  }
+
+  setTotal(total){
+    this.total = total;
+  }
+
+  getTotal(){
+    return this.total;
   }
 
   getAddresses(){
