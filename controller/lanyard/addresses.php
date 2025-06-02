@@ -1,5 +1,7 @@
 <?php
-class Addresses {
+echo json_encode("uffff");exit;
+
+/*class Addresses {
 
     // Function to handle incoming requests
     public function handleRequest() {
@@ -120,4 +122,4 @@ require_once '../config/database.php';
 require_once '../../models/addresses.php';
 
 $addresses = new Addresses();
-$addresses->handleRequest();
+$addresses->handleRequest();*/
