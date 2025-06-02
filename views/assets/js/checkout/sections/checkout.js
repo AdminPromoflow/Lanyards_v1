@@ -31,13 +31,8 @@ class Checkout {
       })
       .then(data => {
         alert(data);
-
         //chargingClass.hideShowchargin(false);
-
-      //  data = JSON.parse(data);
-
-
-
+        //  data = JSON.parse(data);
       })
       .catch(error => {
         console.error("Error:", error);
