@@ -75,8 +75,8 @@ class Checkout {
 
         //chargingClass.hideShowchargin(false);
           data = JSON.parse(data);
-        //  window.location.href = url
-          alert(data["url"]);
+          const url = data["url"];
+          window.location.href = url
 
       })
       .catch(error => {
