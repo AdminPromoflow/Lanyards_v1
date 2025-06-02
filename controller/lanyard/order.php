@@ -2,6 +2,9 @@
 // 📦 Importaciones necesarias antes de declarar la clase
 require_once '../config/database.php';
 require_once '../../models/orders.php';
+require_once '../../controller/lanyard/addresses.php';
+
+
 
 class Order {
     // 📥 Maneja la solicitud POST
@@ -24,6 +27,12 @@ class Order {
 
                     case "getOrder":
                         $this->getOrder();
+                        break;
+                    case "setOrder":
+                    $addresses = new Addresses();
+                    $addresses->->updateAddresses($data);
+
+                        //$this->getOrder();
                         break;
 
                     default:

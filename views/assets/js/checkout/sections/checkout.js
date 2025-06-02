@@ -47,12 +47,10 @@ class Checkout {
     };
   }
 
-
-
   makeAjaxRequestSaveOrder(){
-    const url = "../../controller/lanyard/addresses.php";
+    const url = "../../controller/lanyard/order.php";
     const data = {
-      action: "updateAddresses",
+      action: "setOrder",
       address1: this.getAddress1(),
       address2: this.getAddress2()
     };
@@ -79,7 +77,6 @@ class Checkout {
         console.error("Error:", error);
       });
   }
-
 
   addSecondAddress(event) {
     const checkbox = event.target;

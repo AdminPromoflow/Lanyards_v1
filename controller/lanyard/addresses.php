@@ -23,9 +23,7 @@ class Addresses {
                     case "getAddresses":
                         $this->getAddresses();
                         break;
-                    case "updateAddresses":
-                        $this->updateAddresses($data);
-                        break;
+                    
                     default:
                         http_response_code(400); // Bad Request
                         echo json_encode(array("message" => "Unknown action"));
