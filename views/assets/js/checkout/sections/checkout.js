@@ -35,7 +35,7 @@ class Checkout {
         radio.addEventListener("change", this.getSelectedOption);
     });*/
 
-    button_deliver_different_address.addEventListener("change", function() {
+  /*  button_deliver_different_address.addEventListener("change", function() {
       if (this.checked) {
         form_boxes_checkout_2.classList.remove("active_form_boxes_checkout");
 
@@ -43,8 +43,22 @@ class Checkout {
         form_boxes_checkout_2.classList.add("active_form_boxes_checkout");
 
       }
-  });
+  });*/
 
+  }
+
+  addSecondAddress(){
+
+    const button_deliver_different_address = document.getElementById("form_boxes_checkout_2");
+
+
+    if (button_deliver_different_address.checked) {
+      form_boxes_checkout_2.classList.remove("active_form_boxes_checkout");
+
+    } else {
+      form_boxes_checkout_2.classList.add("active_form_boxes_checkout");
+
+    }
   }
 
 
@@ -158,8 +172,8 @@ class Checkout {
         <input type="text" name="" value="${data[0][""]}">
       </div>-->
       <div class="items_form_boxes_checkout_checkbox">
-        <label>
-            <input type="checkbox" id="button_deliver_different_address">
+        <label  >
+            <input type="checkbox" onclick="checkout.addSecondAddress()" id="button_deliver_different_address">
             Deliver to a different address?
         </label>
       </div>
