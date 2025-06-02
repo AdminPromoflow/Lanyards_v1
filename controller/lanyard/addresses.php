@@ -16,7 +16,7 @@ class Addresses {
                 $action = $data->action;
 
                 // Perform actions based on the request
-                echo json_encode($action);exit;
+                //echo json_encode($action);exit;
 
                 switch ($action) {
 
