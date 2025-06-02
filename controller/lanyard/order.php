@@ -139,7 +139,7 @@ class Order {
                     'product_data' => [
                         'name' => 'Tu orden completa',
                     ],
-                    'unit_amount' => $amount,
+                    'unit_amount' => 10000,
                 ],
                 'quantity' => 1,
             ]],
