@@ -111,7 +111,7 @@ class Checkout {
         throw new Error("Network error.");
       })
       .then(data => {
-        //alert(data);
+        alert(data);
       const data2 =   JSON.parse(data);
       checkout.setHTMLOrder(data2["order"]);
 
