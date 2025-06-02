@@ -50,6 +50,9 @@ class Checkout {
   addSecondAddress(){
 
     const button_deliver_different_address = document.getElementById("form_boxes_checkout_2");
+    const form_boxes_checkout_2 = document.getElementById("form_boxes_checkout_2");
+
+
 
 
     if (button_deliver_different_address.checked) {
