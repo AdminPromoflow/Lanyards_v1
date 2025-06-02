@@ -48,9 +48,7 @@ class Checkout {
   }
 
   addSecondAddress(event) {
-
     const checkbox = event.target;
-  //  alert(checkbox.checked );
     const form_boxes_checkout_2 = document.getElementById("form_boxes_checkout_2");
 
     if (checkbox ) {

@@ -225,7 +225,7 @@
   position: relative;
   width: 90%;
 
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;

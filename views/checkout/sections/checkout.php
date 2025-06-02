@@ -23,7 +23,7 @@
 
       <div class="boxes_card_container_checkout">
         <label>
-            <input type="radio" name="options_card_checkout" value="Stripe">
+          <!--  <input type="radio" name="options_card_checkout" value="Stripe">-->
               <h4>Stripe</h4>
               <img src="../../views/assets/img/checkout/sections/amex.svg" alt="">
               <img src="../../views/assets/img/checkout/sections/mastercard.svg" alt="">
@@ -39,11 +39,11 @@
           <input type="text" name="" value="">
         </div>
 
-        <label>
+      <!--  <label>
             <input type="radio" name="options_card_checkout" value="PayPal">
             <h4>PayPal</h4>
             <img src="../../views/assets/img/checkout/sections/paypal.png" alt="">
-        </label>
+        </label>-->
       </div>
     <!--  <div class="boxes3_container_checkout">
         <label>
