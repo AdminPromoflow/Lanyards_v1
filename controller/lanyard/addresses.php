@@ -25,19 +25,19 @@ class Addresses {
                         break;
 
                     default:
-                        http_response_code(400); // Bad Request
-                        echo json_encode(array("message" => "Unknown action"));
+                    //    http_response_code(400); // Bad Request
+                    //    echo json_encode(array("message" => "Unknown action"));
                         break;
                 }
             } else {
                 // Incomplete JSON data or missing action
-                http_response_code(400); // Bad Request
-                echo json_encode(array("message" => "Incomplete JSON data or missing action"));
+              //  http_response_code(400); // Bad Request
+              //  echo json_encode(array("message" => "Incomplete JSON data or missing action"));
             }
         } else {
             // The request is not a valid POST request
-            http_response_code(405); // Method Not Allowed
-            echo json_encode(array("message" => "Method not allowed"));
+          //  http_response_code(405); // Method Not Allowed
+            //echo json_encode(array("message" => "Method not allowed"));
         }
     }
 
