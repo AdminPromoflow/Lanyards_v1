@@ -133,8 +133,8 @@ class Checkout {
     this.total = total;
   }
 
-  getTotal(){
-    return this.total;
+  getTotal() {
+    return Math.round(this.total * 100);
   }
 
   getAddresses(){
