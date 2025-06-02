@@ -56,10 +56,10 @@ class Checkout {
 
 
     if (button_deliver_different_address.checked) {
-      form_boxes_checkout_2.classList.remove("active_form_boxes_checkout");
+      form_boxes_checkout_2.style.display = "block";
 
     } else {
-      form_boxes_checkout_2.classList.add("active_form_boxes_checkout");
+      form_boxes_checkout_2.style.display = "none";
 
     }
   }
