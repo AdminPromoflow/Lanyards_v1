@@ -55,7 +55,8 @@ class Checkout {
       address1: this.getAddress1(),
       address2: this.getAddress2(),
       currency: "gbp",
-      total: this.getTotal()
+      total: this.getTotal(),
+      idOrder: this.getIdOrder()
     };
 
     fetch(url, {
@@ -117,16 +118,24 @@ class Checkout {
         throw new Error("Network error.");
       })
       .then(data => {
-        alert(data);
+      //  alert(data);
 
       const data2 =   JSON.parse(data);
       checkout.setHTMLOrder(data2["order"]);
       checkout.setTotal(data2["order"]["total"]);
+      checkout.setIdOrder(data2["order"]["idOrder"]);
 
       })
       .catch(error => {
         console.error("Error:", error);
       });
+  }
+
+  setIdOrder(idOrder){
+    this.idOrder = idOrder;
+  }
+  getIdOrder(){
+    return this.idOrder;
   }
 
   setTotal(total){
