@@ -54,13 +54,13 @@ class Checkout {
     const checkbox = document.getElementById("button_deliver_different_address");
     const form_boxes_checkout_2 = document.getElementById("form_boxes_checkout_2");
 
-    if (checkbox && form_boxes_checkout_2) {
+    /*if (checkbox && form_boxes_checkout_2) {
       if (checkbox.checked) {
         form_boxes_checkout_2.style.display = "block";
       } else {
         form_boxes_checkout_2.style.display = "none";
       }
-    }
+    }*/
   }
 
 
