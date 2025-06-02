@@ -48,6 +48,7 @@ class Checkout {
   }
 
   addSecondAddress() {
+    alert("como rayos se?");
     const checkbox = document.getElementById("button_deliver_different_address");
     const form_boxes_checkout_2 = document.getElementById("form_boxes_checkout_2");
 
@@ -173,7 +174,7 @@ class Checkout {
       </div>-->
       <div class="items_form_boxes_checkout_checkbox">
         <label  >
-            <input type="checkbox" id="button_deliver_different_address">
+            <input type="checkbox" onchange="checkout.addSecondAddress()" id="button_deliver_different_address">
             Deliver to a different address?
         </label>
       </div>
@@ -219,14 +220,14 @@ class Checkout {
 
     </div>
     <script type="text/javascript">
-    const button_deliver_different_address =   document.getElementById("button_deliver_different_address");
+    /*const button_deliver_different_address =   document.getElementById("button_deliver_different_address");
     const form_boxes_checkout_2 =   document.getElementById("form_boxes_checkout_2");
 
 
     form_boxes_checkout_2.style.display = "none";
 
       button_deliver_different_address.addEventListener("change", function() {
-        alert("mm");
+
           if (this.checked) {
             form_boxes_checkout_2.classList.remove("active_form_boxes_checkout");
 
@@ -234,7 +235,7 @@ class Checkout {
             form_boxes_checkout_2.classList.add("active_form_boxes_checkout");
 
           }
-      });
+      });*/
 
       // Ocultar el segundo bloque inicialmente
     </script>
