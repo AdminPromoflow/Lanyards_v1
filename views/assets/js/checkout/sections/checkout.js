@@ -47,22 +47,19 @@ class Checkout {
 
   }
 
-  addSecondAddress(){
-
-    const button_deliver_different_address = document.getElementById("form_boxes_checkout_2");
+  addSecondAddress() {
+    const checkbox = document.getElementById("button_deliver_different_address");
     const form_boxes_checkout_2 = document.getElementById("form_boxes_checkout_2");
 
-
-
-    alert(button_deliver_different_address.checked);
-    if (button_deliver_different_address.checked) {
-      form_boxes_checkout_2.style.display = "block";
-
-    } else {
-      form_boxes_checkout_2.style.display = "none";
-
+    if (checkbox && form_boxes_checkout_2) {
+      if (checkbox.checked) {
+        form_boxes_checkout_2.style.display = "block";
+      } else {
+        form_boxes_checkout_2.style.display = "none";
+      }
     }
   }
+
 
 
   getOrder(){
@@ -176,7 +173,7 @@ class Checkout {
       </div>-->
       <div class="items_form_boxes_checkout_checkbox">
         <label  >
-            <input type="checkbox" onclick="checkout.addSecondAddress()" id="button_deliver_different_address">
+            <input type="checkbox" id="button_deliver_different_address">
             Deliver to a different address?
         </label>
       </div>
@@ -221,6 +218,15 @@ class Checkout {
       </div>
 
     </div>
+    <script type="text/javascript">
+      document.getElementById("button_deliver_different_address").addEventListener("change", () => {
+        this.addSecondAddress();
+      });
+
+      // Ocultar el segundo bloque inicialmente
+      document.getElementById("form_boxes_checkout_2").style.display = "none";
+    </script>
+
     `;
 
 
