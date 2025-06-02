@@ -72,9 +72,12 @@ class Checkout {
         throw new Error("Network error.");
       })
       .then(data => {
-        alert(data);
+
         //chargingClass.hideShowchargin(false);
-        //  data = JSON.parse(data);
+          data = JSON.parse(data);
+        //  window.location.href = url
+          alert(data[1]["id"]);
+
       })
       .catch(error => {
         console.error("Error:", error);
@@ -114,7 +117,7 @@ class Checkout {
         throw new Error("Network error.");
       })
       .then(data => {
-        alert(data);
+      //  alert(data);
 
       const data2 =   JSON.parse(data);
       checkout.setHTMLOrder(data2["order"]);

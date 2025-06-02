@@ -11,6 +11,8 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,200&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 
   <title>Lanyards for you</title>
+  <script src="https://js.stripe.com/v3/"></script>
+
 
   <!-- Add the CSS file -->
   <link rel="stylesheet" type="text/css" href="../assets/css/home/style.css">
