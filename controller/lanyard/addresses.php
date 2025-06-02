@@ -14,6 +14,8 @@ class Addresses {
             if ($data !== null && isset($data->action)) {
                 // Get the action from the JSON data
                 $action = $data->action;
+                echo json_encode("uffff");exit;
+
 
                 // Perform actions based on the request
                 switch ($action) {
@@ -118,7 +120,6 @@ class Addresses {
 // Include required files
 require_once '../config/database.php';
 require_once '../../models/addresses.php';
-echo json_encode("uffff");exit;
 
 $addresses = new Addresses();
 $addresses->handleRequest();
