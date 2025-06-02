@@ -16,8 +16,9 @@ class Addresses {
                 $action = $data->action;
 
                 // Perform actions based on the request
+                echo json_encode("uffff4");exit;
+
                 switch ($action) {
-                  echo json_encode("uffff4");exit;
 
                     case "getAddresses":
                         $this->getAddresses();
