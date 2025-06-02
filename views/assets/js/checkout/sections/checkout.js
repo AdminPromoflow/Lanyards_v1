@@ -5,20 +5,20 @@ class Checkout {
     this.getAddresses();
 
     // Iterar sobre cada elemento del carrito y agregar un evento
-    for (let i = 0; i < product_items_checkout.length; i++) {
+  /*  for (let i = 0; i < product_items_checkout.length; i++) {
       product_items_checkout[i].addEventListener("click", () => {
         // Alternar la visibilidad del div correspondiente
         this.toggleDescriptionItemCheckout(i);
       });
-    }
+    }*/
 
 
     // Obtener los estilos iniciales de todos los elementos
-    this.initializeStyles();
+  //  this.initializeStyles();
 
-    this.checkSizeItemsFormBoxesCheckout();
+//    this.checkSizeItemsFormBoxesCheckout();
     // Check size on load and resize
-  window.addEventListener("resize", this.checkSizeItemsFormBoxesCheckout);
+//  window.addEventListener("resize", this.checkSizeItemsFormBoxesCheckout);
 
   button_deliver_different_address.addEventListener("change", function() {
     if (this.checked) {
@@ -31,9 +31,9 @@ class Checkout {
 });
 
 
-    document.querySelectorAll('input[name="options_card_checkout"]').forEach(radio => {
+  /*  document.querySelectorAll('input[name="options_card_checkout"]').forEach(radio => {
         radio.addEventListener("change", this.getSelectedOption);
-    });
+    });*/
 
   }
 
