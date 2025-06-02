@@ -74,7 +74,6 @@ class Addresses {
         }
     }
     private function updateAddresses($data) {
-      echo json_encode("uffff");exit;
         if (session_status() === PHP_SESSION_NONE) {
             session_start();
         }
