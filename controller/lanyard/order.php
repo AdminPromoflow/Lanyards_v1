@@ -144,8 +144,8 @@ class Order {
                 'quantity' => 1,
             ]],
             'mode' => 'payment',
-            'success_url' => 'https://www.google.com',
-            'cancel_url' => 'https://www.youtube.com',
+            'success_url' => 'https://www.lanyardsforyou.com/views/success_payment/index.php',
+            'cancel_url' => 'https://www.lanyardsforyou.com',
         ]);
 
       //  header("Location: " . $session->url);
