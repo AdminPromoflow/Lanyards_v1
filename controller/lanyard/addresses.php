@@ -101,12 +101,12 @@ class Addresses {
 
             $created = $createAddresses->createProvidedInformation();
 
-            if ($created) {
+          /*  if ($created) {
                 echo json_encode(["message" => "Addresses updated successfully"]);
             } else {
                 http_response_code(500); // Internal Server Error
                 echo json_encode(["message" => "Failed to create new addresses"]);
-            }
+            }*/
         } else {
             http_response_code(500); // Internal Server Error
             echo json_encode(["message" => "Failed to delete previous addresses"]);
