@@ -1,8 +1,8 @@
 class SuccessPayment {
   constructor() {
+    this.getPaymentSuccess();
 
-
-    boxes_container_success_payment.addEventListener("click", function() {
+    button_go_home.addEventListener("click", function() {
 
     });
 
@@ -44,6 +44,6 @@ class SuccessPayment {
 }
 
 // Obtener los elementos del DOM
-const boxes_container_success_payment = document.getElementById("boxes_container_success_payment");
+const button_go_home = document.getElementById("button_go_home");
 // Crear una instancia del carrito de compras
 const success_payment = new SuccessPayment();
