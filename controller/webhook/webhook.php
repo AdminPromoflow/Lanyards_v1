@@ -25,7 +25,7 @@ try {
   http_response_code(400);
   exit();
 }
-$_SESSION['success_payment'] = null;
+$_SESSION['success_payment'] = false;
 
 
 if ($event->type === 'checkout.session.completed') {
