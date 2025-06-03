@@ -1,4 +1,4 @@
-class success_payment {
+class SuccessPayment {
   constructor() {
 
 
@@ -46,4 +46,4 @@ class success_payment {
 // Obtener los elementos del DOM
 const boxes_container_success_payment = document.getElementById("boxes_container_success_payment");
 // Crear una instancia del carrito de compras
-const success_payment = new success_payment();
+const success_payment = new SuccessPayment();
