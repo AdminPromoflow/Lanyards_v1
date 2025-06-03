@@ -32,6 +32,7 @@ if ($event->type === 'checkout.session.completed') {
 
 // Guardar datos en sesión
   $_SESSION['success_payment'] = true;
+  
     $session = $event->data->object;
 
     // 👇 Aquí recuperas el ID de la orden que enviaste antes
