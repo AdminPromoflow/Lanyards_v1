@@ -9,7 +9,7 @@ $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
 
 <section class="container_footer">
   <div class="box_footer">
-    <div class="social_media_footer">
+  <!--  <div class="social_media_footer">
       <?php
       $facebookIcon = '../../views/assets/img/global/login/facebook-icon.png';
       $facebookIconVersion = file_exists($facebookIcon) ? filemtime($facebookIcon) : time();
@@ -33,7 +33,7 @@ $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
       <div class="box_media">
         <img src="<?= $appleIcon ?>?v=<?= $appleIconVersion; ?>" alt="Apple">
       </div>
-    </div>
+    </div>-->
 
     <div class="terms_conditions_footer">
       <a href="../../views/terms_conditions/index.php"><p>Terms and conditions.</p></a>
