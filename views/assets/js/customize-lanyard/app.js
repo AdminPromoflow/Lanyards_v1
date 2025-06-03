@@ -505,6 +505,10 @@ class CustomizeLanyard {
     textClass.setPrintableAreaText(false);
     imageClass.setPrintableAreaImage(false);
 
+    previewManual.showPrintableAreaImage();
+    previewManual.showPrintableAreaText();
+
+
 
     classRegister2.openRegister(false);
   }
