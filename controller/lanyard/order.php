@@ -191,8 +191,7 @@ class Order {
             ]
         ]);
 
-      /*  header("Location: " . $session->url);
-        exit;*/
+    
 
         echo json_encode(['url' => $session->url]);
     }

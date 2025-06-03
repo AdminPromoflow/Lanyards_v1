@@ -3,7 +3,7 @@ class SuccessPayment {
     this.getPaymentSuccess();
 
     button_go_home.addEventListener("click", function() {
-
+      window.location.href = "../../views/home/index.php";
     });
 
   }
@@ -28,7 +28,7 @@ class SuccessPayment {
         throw new Error("Network error.");
       })
       .then(data => {
-        alert(data);
+      //  alert(data);
 
       const data2 =   JSON.parse(data);
 
