@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 require '../../vendor/autoload.php';
 
 
@@ -23,8 +25,13 @@ try {
   http_response_code(400);
   exit();
 }
+$_SESSION['success_payment'] = false;
+
 
 if ($event->type === 'checkout.session.completed') {
+
+// Guardar datos en sesión
+  $_SESSION['success_payment'] = true;
     $session = $event->data->object;
 
     // 👇 Aquí recuperas el ID de la orden que enviaste antes
@@ -33,8 +40,6 @@ if ($event->type === 'checkout.session.completed') {
     // 🔁 Aquí marcas la orden como pagada en tu base de datos
   //  file_put_contents('pagos.txt', "Orden pagada: $orderId\n", FILE_APPEND);
 }
-else {
-  // code...
-}
+
 
 http_response_code(200);

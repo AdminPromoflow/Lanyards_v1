@@ -33,6 +33,11 @@ class Order {
 
                         $this->setOrder($data);
                         break;
+                    case "getPaymentSuccess":
+                        $this->getPaymentSuccess();
+                        break;
+
+
 
                     default:
                         http_response_code(400);
@@ -123,6 +128,21 @@ class Order {
             echo json_encode(["message" => "No pending order found for this user"]);
         }
     }
+
+
+
+
+    private function getPaymentSuccess() {
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
+
+        echo json_encode($_SESSION['success_payment']);
+    }
+
+
+
+
 
 
     private function setOrder($data) {

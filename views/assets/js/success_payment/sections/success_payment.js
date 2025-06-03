@@ -8,6 +8,37 @@ class success_payment {
 
   }
 
+  getPaymentSuccess(){
+    const url = "../../controller/lanyard/order.php";
+    const data = {
+      action: "getPaymentSuccess"
+    };
+
+    fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    })
+      .then(response => {
+        if (response.ok) {
+          return response.text();
+        }
+        throw new Error("Network error.");
+      })
+      .then(data => {
+        alert(data);
+
+      const data2 =   JSON.parse(data);
+
+      })
+      .catch(error => {
+        console.error("Error:", error);
+      });
+  }
+
+
 
 
 }
