@@ -184,8 +184,6 @@
   overflow: hidden;
 }
 
-
-
 /* 15mm */
 .left-super-lanyard-two-end-15mm-manual {
   position: absolute;
@@ -195,7 +193,7 @@
   width: 0.176cm;
 
   transform:   translateY(-50%);
-  overflow: scroll;
+  overflow: hidden;
 }
 
 .right-super-lanyard-two-end-15mm-manual {
