@@ -1,8 +1,6 @@
 <?php
 // ✅ Carga Stripe y clases necesarias
 require_once '../../vendor/autoload.php';
-require_once '../../models/orders.php';
-require_once '../../controller/config/database.php';
 
 // ✅ Verifica que el método sea POST
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
