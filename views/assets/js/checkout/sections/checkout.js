@@ -48,8 +48,9 @@ class Checkout {
     };
   }
 
-  makeAjaxRequestSaveOrder(){
+  makeFormRequestSaveOrder() {
     const url = "../../controller/lanyard/order.php";
+
     const data = {
       action: "setOrder",
       address1: this.getAddress1(),
@@ -59,34 +60,27 @@ class Checkout {
       idOrder: this.getIdOrder()
     };
 
-    fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(data)
-    })
-      .then(response => {
-        if (response.ok) {
-          return response.text();
-        }
-        throw new Error("Network error.");
-      })
-      .then(data => {
-        //chargingClass.hideShowchargin(false);
-          data = JSON.parse(data);
+    // Crear formulario oculto
+    const form = document.createElement("form");
+    form.method = "POST";
+    form.action = url;
 
+    // Añadir los datos como campos ocultos
+    for (const key in data) {
+      if (data.hasOwnProperty(key)) {
+        const input = document.createElement("input");
+        input.type = "hidden";
+        input.name = key;
+        input.value = data[key];
+        form.appendChild(input);
+      }
+    }
 
-          const url = data["url"];
-          alert(url);
-
-          //window.location.href = url;
-
-      })
-      .catch(error => {
-        console.error("Error:", error);
-      });
+    // Añadir formulario al documento y enviarlo
+    document.body.appendChild(form);
+    form.submit();
   }
+
 
   addSecondAddress(event) {
     const checkbox = event.target;
