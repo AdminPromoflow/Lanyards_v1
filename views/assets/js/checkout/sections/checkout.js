@@ -49,7 +49,7 @@ class Checkout {
   }
 
   makeFormRequestSaveOrder() {
-    const url = "../../controller/lanyard/order.php";
+    const url = "../../controller/lanyard/create_stripe_session.php";
 
     const data = {
       action: "setOrder",
