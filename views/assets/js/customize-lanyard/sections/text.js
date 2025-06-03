@@ -451,7 +451,7 @@ class TextClass {
 
   setPrintableAreaText(value){
     const printable_area = document.getElementById("printable_area");
-
+ 
     printable_area.checked = value;
     this.printableAreaText = value;
   }

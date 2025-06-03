@@ -249,7 +249,7 @@ class PreviewManual {
   }
 
   showPrintableAreaImage(){
-    const value = imageClass.getPrintableAreaImage()
+    const value = imageClass.getPrintableAreaImage();
 
     const image_lanyard_left = document.getElementById("img_lanyard_left");
     const image_lanyard_right = document.getElementById("img_lanyard_right");

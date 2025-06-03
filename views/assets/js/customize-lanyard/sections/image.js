@@ -291,6 +291,7 @@ class ImageClass {
       printable_area_image.checked = value;
       this.printableAreaImage = value;
     }
+    
     getPrintableAreaImage(){
       return this.printableAreaImage;
     }

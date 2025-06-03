@@ -502,6 +502,10 @@ class CustomizeLanyard {
     this.showCurrentSection(this.currentSectionOpen);
     this.showNext(true);
 
+    textClass.setPrintableAreaText(false);
+    imageClass.setPrintableAreaImage(false);
+
+
     classRegister2.openRegister(false);
   }
 
