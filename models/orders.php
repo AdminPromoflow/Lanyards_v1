@@ -4,7 +4,8 @@ class Order_Model {
     private $connection;
 
     private $idUser;
-    private $email;     // User's email
+    private $email;
+    private $idOrder;
 
     private $order_date;
     private $status;
@@ -23,6 +24,9 @@ class Order_Model {
     // 🛠️ Setters
     public function setIdUser($idUser) {
         $this->idUser = $idUser;
+    }
+    public function setIdOrder($idOrder) {
+        $this->idOrder = $idOrder;
     }
 
     public function setShippingDays($shippingDays) {
@@ -98,6 +102,8 @@ class Order_Model {
         }
     }
 
+
+
     public function updateOrder() {
         try {
             // Obtener idUser por email
@@ -160,6 +166,38 @@ class Order_Model {
     }
 
 
+    public function updateOrderStatus() {
+        try {
+            $sql = $this->connection->getConnection()->prepare("UPDATE Orders
+                SET status = :status
+                WHERE idOrder = :idOrder
+            ");
+
+            $sql->bindParam(':status', $this->status, PDO::PARAM_STR);
+            $sql->bindParam(':idOrder', $this->idOrder, PDO::PARAM_INT);
+
+            $sql->execute();
+
+            $updatedRows = $sql->rowCount();
+            $this->connection->closeConnection();
+
+            if ($updatedRows > 0) {
+                return true;
+            } else {
+                return false;
+            }
+
+        } catch (PDOException $e) {
+            echo "Error PDO en updateOrderStatus: " . $e->getMessage();
+            return false;
+        } catch (Exception $e) {
+            echo "Error en updateOrderStatus: " . $e->getMessage();
+            return false;
+        }
+    }
+
+
+
     public function getOrderDetails() {
         try {
             $conn = $this->connection->getConnection();
@@ -185,6 +223,33 @@ class Order_Model {
             return false;
         }
     }
+
+    public function hasProcessingOrder() {
+        try {
+            $conn = $this->connection->getConnection();
+
+            $sql = $conn->prepare("SELECT 1
+                FROM Orders
+                WHERE idOrder = :idOrder AND status = 'processing'
+                LIMIT 1
+            ");
+
+            $sql->bindParam(':idOrder', $this->idOrder, PDO::PARAM_INT);
+            $sql->execute();
+
+            $exists = $sql->fetch(PDO::FETCH_ASSOC);
+
+            $this->connection->closeConnection();
+
+            return $exists ? true : false;
+
+        } catch (PDOException $e) {
+            echo "Error al verificar orden en procesamiento: " . $e->getMessage();
+            return false;
+        }
+    }
+
+
 
 
 

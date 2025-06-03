@@ -133,11 +133,28 @@ class Order {
 
 
     private function getPaymentSuccess() {
-        if (session_status() === PHP_SESSION_NONE) {
-            session_start();
-        }
+      if (session_status() === PHP_SESSION_NONE) {
+          session_start();
+      }
 
-        echo json_encode($_SESSION['success_payment']);
+      $idOrder = $_SESSION['idOrder'];
+
+      $connection = new Database();
+      $orderModel = new Order_Model($connection);
+      $orderModel->setIdUser($idOrder);
+
+      $order = $orderModel->hasProcessingOrder();
+
+      if ($order) {
+          echo json_encode([
+              "message" => true
+          ]);
+      }
+      else {
+        echo json_encode([
+            "message" => false
+        ]);
+      }
     }
 
 

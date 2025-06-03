@@ -1,5 +1,7 @@
 <?php
 require '../../vendor/autoload.php';
+require_once '../../models/orders.php';
+require_once '../../controller/config/database.php';
 
 
 \Stripe\Stripe::setApiKey('sk_test_51RVWm7Iy7ZwkjsYRhmh4hsLctFV3lGr2HlAK5qn8eb7yAOTc9z2BTYRc2DVzvyRhLrndFR4MYMWBe6Kw2PA9Od3Z00UpRTyB8P'); // clave secreta
@@ -24,21 +26,20 @@ try {
   exit();
 }
 
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
-$_SESSION['success_payment'] = false;
 
 
 if ($event->type === 'checkout.session.completed') {
-
-// Guardar datos en sesión
-  $_SESSION['success_payment'] = true;
 
     $session = $event->data->object;
 
     // 👇 Aquí recuperas el ID de la orden que enviaste antes
     $orderId = $session->metadata->order_id ?? 'no-id';
+
+    $connection = new Database();
+    $upadateShippingDays = new Order_Model($connection);
+    $upadateShippingDays->setIdOrder($orderId);
+    $upadateShippingDays->setStatus("processing");
+    $status = $upadateShippingDays->updateOrderStatus();
 
     // 🔁 Aquí marcas la orden como pagada en tu base de datos
   //  file_put_contents('pagos.txt', "Orden pagada: $orderId\n", FILE_APPEND);
