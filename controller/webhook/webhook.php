@@ -38,8 +38,21 @@ if ($event->type === 'checkout.session.completed') {
     $status = $updateOrderStatus->updateOrderStatus();
 
     // Registro en log
-    $logData = date('Y-m-d H:i:s') . " | Order ID: $orderId | Status actualizado: " . ($status ? 'true' : 'false') . PHP_EOL;
-    file_put_contents('stripe_webhook.log', $logData, FILE_APPEND);
+    $logFile = __DIR__ . '/stripe_webhook.log';
+
+    $logData = date('Y-m-d H:i:s') . " | EVENTO: {$event->type} | Order ID: $orderId | Status actualizado: " . ($status ? 'true' : 'false');
+
+    if (isset($session->amount_total)) {
+        $logData .= " | Monto: " . ($session->amount_total / 100) . " " . strtoupper($session->currency);
+    }
+
+    if (isset($session->customer_email)) {
+        $logData .= " | Email: " . $session->customer_email;
+    }
+
+    $logData .= PHP_EOL;
+
+    file_put_contents($logFile, $logData, FILE_APPEND);
 
 
     if (!$status) {
