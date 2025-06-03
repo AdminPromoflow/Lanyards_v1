@@ -37,6 +37,11 @@ if ($event->type === 'checkout.session.completed') {
 
     $status = $updateOrderStatus->updateOrderStatus();
 
+    // Registro en log
+    $logData = date('Y-m-d H:i:s') . " | Order ID: $orderId | Status actualizado: " . ($status ? 'true' : 'false') . PHP_EOL;
+    file_put_contents('stripe_webhook.log', $logData, FILE_APPEND);
+
+
     if (!$status) {
         http_response_code(500);
         exit('No se pudo actualizar el estado de la orden');
