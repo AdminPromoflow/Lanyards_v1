@@ -17,6 +17,7 @@
   width: 0.096cm;
   overflow: hidden;
   transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
+  overflow: hidden;
 
 }
 
@@ -28,6 +29,7 @@
   width: 0.096cm;
   overflow: hidden;
   transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
+  overflow: hidden;
 
 }
 
@@ -68,6 +70,8 @@
   width: 0.256cm;
   overflow: hidden;
   transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
+  overflow: hidden;
+
 }
 
 .right-super-lanyard-one-end-20mm-artwork2 {
@@ -78,6 +82,8 @@
   width: 0.256cm;
   overflow: hidden;
   transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
+  overflow: hidden;
+
 }
 
 
@@ -324,7 +330,6 @@ left: 50%;
 
 transform: translateX(-50%);
 z-index: 0;
-overflow: hidden;
 overflow: hidden;
 }
 
