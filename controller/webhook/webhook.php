@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 require '../../vendor/autoload.php';
 
 
@@ -25,6 +23,10 @@ try {
   http_response_code(400);
   exit();
 }
+
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 $_SESSION['success_payment'] = false;
 
 
@@ -32,7 +34,7 @@ if ($event->type === 'checkout.session.completed') {
 
 // Guardar datos en sesión
   $_SESSION['success_payment'] = true;
-  
+
     $session = $event->data->object;
 
     // 👇 Aquí recuperas el ID de la orden que enviaste antes
