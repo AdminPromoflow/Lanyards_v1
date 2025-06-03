@@ -10,7 +10,7 @@ function get_file_version($relative_path) {
 <section id="preview-manual-section">
   <!-- Manual lanyard layout -->
   <div class="super-lanyard-manual" id="super-lanyard-manual">
-    
+
     <div class="" id="left-super-lanyard-manual">
 
       <div class="text_lanyard_left" id="text_lanyard_left">

@@ -54,10 +54,10 @@ class PreviewManual {
   }
 
   showPrintableAreaText(){
-    const value = textClass.getPrintableAreaText()
-    text_lanyard_left = document.getElementById("text_lanyard_left");
-    text_lanyard_right = document.getElementById("text_lanyard_right");
-    text_lanyard_center = document.getElementById("text_lanyard_center");
+    const value = textClass.getPrintableAreaText();
+    const text_lanyard_left = document.getElementById("text_lanyard_left");
+    const text_lanyard_right = document.getElementById("text_lanyard_right");
+    const text_lanyard_center = document.getElementById("text_lanyard_center");
 
 
     if (value) {
