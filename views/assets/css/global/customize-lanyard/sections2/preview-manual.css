@@ -19,7 +19,7 @@
         width: 0.096cm;
         overflow: hidden;
         transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
-
+        overflow: hidden;
       }
 
       .right-super-lanyard-one-end-10mm-manual {
@@ -30,6 +30,7 @@
         width: 0.096cm;
         overflow: hidden;
         transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
+        overflow: hidden;
 
       }
 
@@ -70,6 +71,8 @@
         width: 0.256cm;
         overflow: hidden;
         transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
+        overflow: hidden;
+
 }
 
       .right-super-lanyard-one-end-20mm-manual {
@@ -80,6 +83,8 @@
         width: 0.256cm;
         overflow: hidden;
         transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
+        overflow: hidden;
+
 }
 
 
@@ -306,6 +311,8 @@
   width: 0.096cm;
   overflow: hidden;
   transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
+  overflow: hidden;
+
 }
 .right-super-lanyard-one-end-10mm-attachment-manual{
   position: absolute;
@@ -315,6 +322,8 @@
   width: 0.096cm;
   overflow: hidden;
   transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
+  overflow: hidden;
+
 }
 
 .center-super-lanyard-one-end-10mm-attachment-manual{
@@ -402,6 +411,8 @@ overflow: hidden;
   width: 0.256cm;
   overflow: hidden;
   transform:  skewX(7.5deg) perspective(7.5vw) translateY(-50%);
+  overflow: hidden;
+
 }
 .right-super-lanyard-one-end-20mm-attachment-manual{
   position: absolute;
@@ -411,6 +422,8 @@ overflow: hidden;
   width: 0.256cm;
   overflow: hidden;
   transform:  skewX(-7.5deg) perspective(7.5vw) translateY(-50%);
+  overflow: hidden;
+
 }
 
 
