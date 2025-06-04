@@ -163,22 +163,49 @@ class Order {
 
 
     private function setOrder($data) {
-        // Validar datos de entrada
-        if (!isset($data->total) || !isset($data->currency) || !isset($data->idOrder)) {
-            http_response_code(400);
-            echo json_encode(['error' => 'Missing required parameters']);
-            return;
-        }
-
-        $amount = $data->total;
-        $currency = $data->currency;
-        $orderId = $data->idOrder;
-
-        // Cargar configuración de Stripe
-        $stripeConfig = require_once '../../config/stripe.php';
-        \Stripe\Stripe::setApiKey($stripeConfig['stripe']['secret_key']);
-
         try {
+            // Validar sesión
+            if (session_status() === PHP_SESSION_NONE) {
+                session_start();
+            }
+
+            // Validar datos de entrada
+            if (!isset($data->total) || !isset($data->currency) || !isset($data->idOrder)) {
+                throw new Exception('Missing required parameters');
+            }
+
+            // Validar formato de datos
+            if (!is_numeric($data->total) || !is_string($data->currency) || !is_numeric($data->idOrder)) {
+                throw new Exception('Invalid data format');
+            }
+
+            // Validar moneda
+            $validCurrencies = ['usd', 'eur', 'gbp'];
+            if (!in_array(strtolower($data->currency), $validCurrencies)) {
+                throw new Exception('Invalid currency');
+            }
+
+            // Validar orden existente
+            $connection = new Database();
+            $orderModel = new Order_Model($connection);
+            $order = $orderModel->getOrderById($data->idOrder);
+            if (!$order) {
+                throw new Exception('Order not found');
+            }
+
+            // Validar estado de la orden
+            if ($order['status'] !== 'pending') {
+                throw new Exception('Order is not in pending state');
+            }
+
+            $amount = floatval($data->total); // Convertir a centavos
+            $currency = strtolower($data->currency);
+            $orderId = intval($data->idOrder);
+
+            // Cargar configuración de Stripe
+            $stripeConfig = require_once '../../config/stripe.php';
+            \Stripe\Stripe::setApiKey($stripeConfig['stripe']['secret_key']);
+
             // Crear sesión de pago
             $session = \Stripe\Checkout\Session::create([
                 'payment_method_types' => ['card'],
@@ -187,41 +214,67 @@ class Order {
                         'currency' => $currency,
                         'product_data' => [
                             'name' => 'Order #' . $orderId,
-                            'description' => 'Lanyards Order Payment'
+                            'description' => 'Lanyards Order Payment - ' . date('Y-m-d H:i:s')
                         ],
-                        'unit_amount' => $amount * 100, // Stripe requiere centavos
+                        'unit_amount' => $amount,
                     ],
                     'quantity' => 1,
                 ]],
                 'mode' => 'payment',
-                'success_url' => $stripeConfig['stripe']['success_url'],
+                'success_url' => $stripeConfig['stripe']['success_url'] . '?session_id={CHECKOUT_SESSION_ID}',
                 'cancel_url' => $stripeConfig['stripe']['cancel_url'],
                 'metadata' => [
-                    'order_id' => $orderId
+                    'order_id' => $orderId,
+                    'user_id' => $_SESSION['user_id'] ?? null,
+                    'created_at' => time()
                 ],
-                'client_reference_id' => $orderId
+                'client_reference_id' => $orderId,
+                'allow_promotion_codes' => true,
+                'customer_email' => $_SESSION['email'] ?? null
             ]);
 
+            // Actualizar estado de la orden
+            $orderModel->updateOrderStatus($orderId, 'processing');
+
             // Guardar información de la sesión en la base de datos
-            $this->savePaymentSession($orderId, $session->id);
+            $this->savePaymentSession($orderId, $session->id, $session->url);
 
             // Responder con la URL de la sesión
+            http_response_code(200);
             echo json_encode([
-                'url' => $session->url,
-                'sessionId' => $session->id
+                'success' => true,
+                'data' => [
+                    'url' => $session->url,
+                    'sessionId' => $session->id,
+                    'orderId' => $orderId
+                ]
             ]);
 
         } catch (\Stripe\Exception\ApiErrorException $e) {
             http_response_code(400);
             echo json_encode([
-                'error' => $e->getMessage(),
-                'error_code' => $e->getStripeCode()
+                'success' => false,
+                'error' => [
+                    'message' => $e->getMessage(),
+                    'code' => $e->getStripeCode(),
+                    'type' => $e->getError()->type
+                ]
+            ]);
+
+        } catch (Exception $e) {
+            http_response_code(400);
+            echo json_encode([
+                'success' => false,
+                'error' => [
+                    'message' => $e->getMessage(),
+                    'type' => 'validation_error'
+                ]
             ]);
         }
     }
 
     // Método para guardar la sesión de pago
-    private function savePaymentSession($orderId, $sessionId) {
+    private function savePaymentSession($orderId, $sessionId, $sessionUrl) {
         $connection = new Database();
         $orderModel = new Order_Model($connection);
         $orderModel->setIdOrder($orderId);
