@@ -80,7 +80,7 @@ class Checkout {
           const url = data["url"];
           alert(url);
 
-          window.location.href = url;
+        //  window.location.href = url;
 
       })
       .catch(error => {
