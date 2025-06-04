@@ -163,40 +163,70 @@ class Order {
 
 
     private function setOrder($data) {
+        // Validar datos de entrada
+        if (!isset($data->total) || !isset($data->currency) || !isset($data->idOrder)) {
+            http_response_code(400);
+            echo json_encode(['error' => 'Missing required parameters']);
+            return;
+        }
+
         $amount = $data->total;
         $currency = $data->currency;
         $orderId = $data->idOrder;
 
-        \Stripe\Stripe::setApiKey('sk_test_51RVWm7Iy7ZwkjsYRhmh4hsLctFV3lGr2HlAK5qn8eb7yAOTc9z2BTYRc2DVzvyRhLrndFR4MYMWBe6Kw2PA9Od3Z00UpRTyB8P'); // Tu clave secreta
+        // Cargar configuración de Stripe
+        $stripeConfig = require_once '../../config/stripe.php';
+        \Stripe\Stripe::setApiKey($stripeConfig['stripe']['secret_key']);
 
         try {
+            // Crear sesión de pago
             $session = \Stripe\Checkout\Session::create([
                 'payment_method_types' => ['card'],
                 'line_items' => [[
                     'price_data' => [
                         'currency' => $currency,
                         'product_data' => [
-                            'name' => 'Order',
+                            'name' => 'Order #' . $orderId,
+                            'description' => 'Lanyards Order Payment'
                         ],
-                        'unit_amount' => $amount,
+                        'unit_amount' => $amount * 100, // Stripe requiere centavos
                     ],
                     'quantity' => 1,
                 ]],
                 'mode' => 'payment',
-                'success_url' => 'https://www.lanyardsforyou.com/views/success_payment/index.php',
-                'cancel_url' => 'https://www.lanyardsforyou.com/views/success_payment/index.php',
+                'success_url' => $stripeConfig['stripe']['success_url'],
+                'cancel_url' => $stripeConfig['stripe']['cancel_url'],
                 'metadata' => [
                     'order_id' => $orderId
-                ]
+                ],
+                'client_reference_id' => $orderId
             ]);
 
-            echo json_encode(['url' => $session->url]);
-        } catch (\Stripe\Exception\ApiErrorException $e) {
-            // Captura el error y responde con su mensaje
-            http_response_code(400);
-            echo json_encode(['error' => $e->getMessage()]);
-        }
+            // Guardar información de la sesión en la base de datos
+            $this->savePaymentSession($orderId, $session->id);
 
+            // Responder con la URL de la sesión
+            echo json_encode([
+                'url' => $session->url,
+                'sessionId' => $session->id
+            ]);
+
+        } catch (\Stripe\Exception\ApiErrorException $e) {
+            http_response_code(400);
+            echo json_encode([
+                'error' => $e->getMessage(),
+                'error_code' => $e->getStripeCode()
+            ]);
+        }
+    }
+
+    // Método para guardar la sesión de pago
+    private function savePaymentSession($orderId, $sessionId) {
+        $connection = new Database();
+        $orderModel = new Order_Model($connection);
+        $orderModel->setIdOrder($orderId);
+        $orderModel->setStripeSessionId($sessionId);
+        $orderModel->updateStripeSession();
     }
 
 
