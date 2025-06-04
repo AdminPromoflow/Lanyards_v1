@@ -193,7 +193,7 @@ class Order {
 
 
 
-      //  echo json_encode(['url' => $session->url]);
+        echo json_encode(['url' => $session->url]);
 
     }
 
