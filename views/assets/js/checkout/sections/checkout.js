@@ -147,7 +147,7 @@ class Checkout {
   }
 
   getTotal() {
-    return Math.round(this.total * 10);
+    return Math.round(this.total * 100);
   }
 
   getAddresses(){
