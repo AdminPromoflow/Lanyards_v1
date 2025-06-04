@@ -49,6 +49,7 @@ class Checkout {
   }
 
   makeAjaxRequestSaveOrder(){
+    alert(this.getTotal());
     const url = "../../controller/lanyard/order.php";
     const data = {
       action: "setOrder",
