@@ -78,7 +78,7 @@ class Checkout {
 
 
           const url = data["url"];
-        //  alert(url);
+          alert(url);
 
           window.location.href = url;
 
