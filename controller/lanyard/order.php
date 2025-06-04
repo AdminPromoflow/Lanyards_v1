@@ -169,31 +169,33 @@ class Order {
 
         \Stripe\Stripe::setApiKey('sk_test_51RVWm7Iy7ZwkjsYRhmh4hsLctFV3lGr2HlAK5qn8eb7yAOTc9z2BTYRc2DVzvyRhLrndFR4MYMWBe6Kw2PA9Od3Z00UpRTyB8P'); // Tu clave secreta
 
-        $session = \Stripe\Checkout\Session::create([
-            'payment_method_types' => ['card'],
-            'line_items' => [[
-                'price_data' => [
-                    'currency' => $currency,
-                    'product_data' => [
-                        'name' => 'Order',
+        try {
+            $session = \Stripe\Checkout\Session::create([
+                'payment_method_types' => ['card'],
+                'line_items' => [[
+                    'price_data' => [
+                        'currency' => $currency,
+                        'product_data' => [
+                            'name' => 'Order',
+                        ],
+                        'unit_amount' => $amount,
                     ],
-                    'unit_amount' => $amount, // en centavos
-                ],
-                'quantity' => 1,
-            ]],
-            'mode' => 'payment',
-            'success_url' => 'https://www.lanyardsforyou.com/views/success_payment/index.php',
-            'cancel_url' => 'https://www.lanyardsforyou.com/views/success_payment/index.php',
+                    'quantity' => 1,
+                ]],
+                'mode' => 'payment',
+                'success_url' => 'https://www.lanyardsforyou.com/views/success_payment/index.php',
+                'cancel_url' => 'https://www.lanyardsforyou.com/views/success_payment/index.php',
+                'metadata' => [
+                    'order_id' => $orderId
+                ]
+            ]);
 
-            // 👇 Aquí envías el ID de tu orden (o lo que necesites rastrear)
-            'metadata' => [
-                'order_id' => $orderId
-            ]
-        ]);
-
-
-
-        echo json_encode(['url' => $session->url]);
+            echo json_encode(['url' => $session->url]);
+        } catch (\Stripe\Exception\ApiErrorException $e) {
+            // Captura el error y responde con su mensaje
+            http_response_code(400);
+            echo json_encode(['error' => $e->getMessage()]);
+        }
 
     }
 
