@@ -237,7 +237,7 @@ class Order {
             $orderModel->updateOrderStatus($orderId, 'processing');
 
             // Guardar información de la sesión en la base de datos
-            $this->savePaymentSession($orderId, $session->id, $session->url);
+        //    $this->savePaymentSession($orderId, $session->id, $session->url);
 
             // Responder con la URL de la sesión
             http_response_code(200);
