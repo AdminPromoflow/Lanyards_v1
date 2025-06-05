@@ -20,37 +20,11 @@ require '../../vendor/autoload.php';
 $stripe = new \Stripe\StripeClient('sk_test_51RVWm7Iy7ZwkjsYRhmh4hsLctFV3lGr2HlAK5qn8eb7yAOTc9z2BTYRc2DVzvyRhLrndFR4MYMWBe6Kw2PA9Od3Z00UpRTyB8P');
 
 
-try {
-    // Intentamos obtener 1 producto como prueba
-    $products = $stripe->products->all(['limit' => 1]);
-
-    // Si llega aquí, significa que Stripe está funcionando
-    file_put_contents('log.txt', "✅ Conexión con Stripe exitosa\n", FILE_APPEND);
-
-} catch (\Stripe\Exception\ApiErrorException $e) {
-    // Error relacionado con la API de Stripe
-    file_put_contents('log.txt', "❌ Error con Stripe: " . $e->getMessage() . "\n", FILE_APPEND);
-} catch (Exception $e) {
-    // Otro tipo de error
-    file_put_contents('log.txt', "❌ Otro error: " . $e->getMessage() . "\n", FILE_APPEND);
-}
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
 // This is your Stripe CLI webhook secret for testing your endpoint locally.
-$endpoint_secret = 'whsec_5966d1384d72bd6d255e3ee1cce732be54436717c95630ac4bcdc96f968f64f1';
+$endpoint_secret = 'we_1RWVoVIy7ZwkjsYRqaFwkLCR';
 
 $payload = @file_get_contents('php://input');
 $sig_header = $_SERVER['HTTP_STRIPE_SIGNATURE'];
