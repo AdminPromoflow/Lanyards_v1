@@ -54,6 +54,10 @@
       <!--  <button id="button_checkout_paypal" class="button_checkout_paypal">
           <img src="../../views/assets/img/checkout/sections/paypal.svg" alt="Icon">
         </button>-->
+
+        <form id="paymentForm" action="../../controller/stripe/setSessionStrype.php" method="POST" style="display: none;">
+        </form>
+
       </div>
 
     </div>
