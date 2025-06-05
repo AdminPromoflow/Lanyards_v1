@@ -49,6 +49,10 @@ class Checkout {
   }
 
   makeAjaxRequestSaveOrder(){
+
+
+    document.getElementById('paymentForm').submit();
+/*
     const url = "../../controller/lanyard/order.php";
     const data = {
       action: "setOrder",
@@ -75,7 +79,6 @@ class Checkout {
       .then(data => {
         //alert(data);
 
-        document.getElementById('paymentForm').submit();
 
         //chargingClass.hideShowchargin(false);
         //  data = JSON.parse(data);
@@ -87,7 +90,7 @@ class Checkout {
       })
       .catch(error => {
         console.error("Error:", error);
-      });
+      });*/
   }
 
   addSecondAddress(event) {
