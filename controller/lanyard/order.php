@@ -198,7 +198,7 @@ class Order {
                 throw new Exception('Order is not in pending state');
             }
 
-            $amount = floatval($data->total); // Convertir a centavos
+            $amount = floatval($data->total);
             $currency = strtolower($data->currency);
             $orderId = intval($data->idOrder);
 
