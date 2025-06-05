@@ -13,7 +13,7 @@
 
 
 
-echo json_encode("hi");exit;
+file_put_contents('log.txt', "hola", FILE_APPEND);exit;
 require '../../vendor/autoload.php';
 
 // The library needs to be configured with your account's secret key.
