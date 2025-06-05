@@ -163,95 +163,60 @@ class Order {
 
 
     private function setOrder($data) {
-        try {
-            // Validar sesión
-            if (session_status() === PHP_SESSION_NONE) {
-                session_start();
-            }
+        $amount = $data->total;
+        $currency = $data->currency;
+        $orderId = $data->idOrder;
 
+    /*    \Stripe\Stripe::setApiKey('sk_test_51RVWm7Iy7ZwkjsYRhmh4hsLctFV3lGr2HlAK5qn8eb7yAOTc9z2BTYRc2DVzvyRhLrndFR4MYMWBe6Kw2PA9Od3Z00UpRTyB8P'); // Tu clave secreta
 
-
-            $amount = floatval($data->total);
-            $currency = strtolower($data->currency);
-            $orderId = intval($data->idOrder);
-
-            // Cargar configuración de Stripe
-            $stripeConfig = require_once '../../config/stripe.php';
-            \Stripe\Stripe::setApiKey($stripeConfig['stripe']['secret_key']);
-
-            // Crear sesión de pago
-            $session = \Stripe\Checkout\Session::create([
-                'payment_method_types' => ['card'],
-                'line_items' => [[
-                    'price_data' => [
-                        'currency' => $currency,
-                        'product_data' => [
-                            'name' => 'Order #' . $orderId,
-                            'description' => 'Lanyards Order Payment - ' . date('Y-m-d H:i:s')
-                        ],
-                        'unit_amount' => $amount,
+        $session = \Stripe\Checkout\Session::create([
+            'payment_method_types' => ['card'],
+            'line_items' => [[
+                'price_data' => [
+                    'currency' => $currency,
+                    'product_data' => [
+                        'name' => 'Order',
                     ],
-                    'quantity' => 1,
-                ]],
-                'mode' => 'payment',
-                'success_url' => $stripeConfig['stripe']['success_url'] ,
-                'cancel_url' => $stripeConfig['stripe']['cancel_url'],
-                'metadata' => [
-                    'order_id' => $orderId,
-                    'created_at' => time()
+                    'unit_amount' => $amount, // en centavos
                 ],
-                'client_reference_id' => $orderId,
-                'allow_promotion_codes' => true,
-                'customer_email' => $_SESSION['email'] ?? null
-            ]);
+                'quantity' => 1,
+            ]],
+            'mode' => 'payment',
+            'success_url' => 'https://www.lanyardsforyou.com/views/success_payment/index.php',
+            'cancel_url' => 'https://www.lanyardsforyou.com/views/success_payment/index.php',
 
-            // Actualizar estado de la orden
-        //    $orderModel->updateOrderStatus($orderId, 'processing');
+            // 👇 Aquí envías el ID de tu orden (o lo que necesites rastrear)
+            'metadata' => [
+                'order_id' => $orderId
+            ]
+        ]);
+*/
 
-            // Guardar información de la sesión en la base de datos
-        //    $this->savePaymentSession($orderId, $session->id, $session->url);
 
-            // Responder con la URL de la sesión
-            http_response_code(200);
-            echo json_encode([
-                'success' => true,
-                'data' => [
-                    'url' => $session->url,
-                    'sessionId' => $session->id,
-                    'orderId' => $orderId
-                ]
-            ]);
+      //  echo json_encode(['url' => $session->url]);
 
-        } catch (\Stripe\Exception\ApiErrorException $e) {
-            http_response_code(400);
-            echo json_encode([
-                'success' => false,
-                'error' => [
-                    'message' => $e->getMessage(),
-                    'code' => $e->getStripeCode(),
-                    'type' => $e->getError()->type
-                ]
-            ]);
 
-        } catch (Exception $e) {
-            http_response_code(400);
-            echo json_encode([
-                'success' => false,
-                'error' => [
-                    'message' => $e->getMessage(),
-                    'type' => 'validation_error'
-                ]
-            ]);
-        }
-    }
 
-    // Método para guardar la sesión de pago
-    private function savePaymentSession($orderId, $sessionId, $sessionUrl) {
-        $connection = new Database();
-        $orderModel = new Order_Model($connection);
-        $orderModel->setIdOrder($orderId);
-        $orderModel->setStripeSessionId($sessionId);
-        $orderModel->updateStripeSession();
+        \Stripe\Stripe::setApiKey('sk_test_51RVWm7Iy7ZwkjsYRhmh4hsLctFV3lGr2HlAK5qn8eb7yAOTc9z2BTYRc2DVzvyRhLrndFR4MYMWBe6Kw2PA9Od3Z00UpRTyB8P');
+        header('Content-Type: application/json');
+
+        $YOUR_DOMAIN = 'https://lanyardsforyou.com/views/checkout/index.php';
+
+        $checkout_session = \Stripe\Checkout\Session::create([
+          'line_items' => [[
+            # Provide the exact Price ID (e.g. price_1234) of the product you want to sell
+            'price' => $amount,
+            'quantity' => 1,
+          ]],
+          'mode' => 'payment',
+          'success_url' => 'https://www.lanyardsforyou.com/views/success_payment/index.php',
+          'cancel_url' => 'https://www.lanyardsforyou.com/views/success_payment/index.php',
+        ]);
+
+      //  header("HTTP/1.1 303 See Other");
+        //header("Location: " . $checkout_session->url);
+        echo json_encode(['url' => $session->url]);
+
     }
 
 
