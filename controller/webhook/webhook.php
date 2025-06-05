@@ -8,9 +8,6 @@ $stripe = new \Stripe\StripeClient('sk_test_51RVWm7Iy7ZwkjsYRhmh4hsLctFV3lGr2HlA
 // This is your Stripe CLI webhook secret for testing your endpoint locally.
 $endpoint_secret = 'whsec_p4j0DvnkuyYC4M1uqZLMI9LguWLDtTj1';
 
-
-
-
 $payload = @file_get_contents('php://input');
 
 $sig_header = $_SERVER['HTTP_STRIPE_SIGNATURE'];
@@ -25,10 +22,6 @@ try {
     $event = \Stripe\Webhook::constructEvent(
         $payload, $sig_header, $endpoint_secret
     );
-
-    // Si todo sale bien (firma válida)
-  //  file_put_contents('log.txt', "✅ Bien: Firma verificada correctamente\n", FILE_APPEND);
-
 } catch (\UnexpectedValueException $e) {
     // Error: El payload no es válido (no es JSON, está vacío, etc.)
     file_put_contents('log.txt', "❌ Mal: Payload inválido - " . $e->getMessage() . "\n", FILE_APPEND);
