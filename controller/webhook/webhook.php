@@ -24,16 +24,21 @@ $endpoint_secret = 'whsec_5966d1384d72bd6d255e3ee1cce732be54436717c95630ac4bcdc9
 
 
 $payload = @file_get_contents('php://input');
+
+file_put_contents('log.txt', "📦 Payload recibido:\n$payload\n\n", FILE_APPEND);
 $sig_header = $_SERVER['HTTP_STRIPE_SIGNATURE'];
 $event = null;
+
+file_put_contents('log.txt',json_encode($event), FILE_APPEND);
+exit;
+
 
 try {
   $event = \Stripe\Webhook::constructEvent(
     $payload, $sig_header, $endpoint_secret
   );
 
-  file_put_contents('log.txt',json_encode($event), FILE_APPEND);
-  exit;
+
 } catch(\UnexpectedValueException $e) {
   // Invalid payload
   http_response_code(400);
