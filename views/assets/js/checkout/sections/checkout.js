@@ -78,7 +78,7 @@ class Checkout {
           data = JSON.parse(data);
 
 
-          const url = data["data"]["url"];
+          const url = data["url"];
           alert(url);
 
           window.location.href = url;
