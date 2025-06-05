@@ -11,83 +11,62 @@
 // 3) Run the server on http://localhost:4242
 //   php -S localhost:4242
 
-
-
 require '../../vendor/autoload.php';
 
 // The library needs to be configured with your account's secret key.
 // Ensure the key is kept out of any version control system you might be using.
-$stripe = new \Stripe\StripeClient('sk_test_51RVWm7Iy7ZwkjsYRhmh4hsLctFV3lGr2HlAK5qn8eb7yAOTc9z2BTYRc2DVzvyRhLrndFR4MYMWBe6Kw2PA9Od3Z00UpRTyB8P');
-
-
-
-
+$stripe = new \Stripe\StripeClient('sk_test_...');
 
 // This is your Stripe CLI webhook secret for testing your endpoint locally.
-$endpoint_secret = 'we_1RWVoVIy7ZwkjsYRqaFwkLCR';
+$endpoint_secret = 'whsec_5966d1384d72bd6d255e3ee1cce732be54436717c95630ac4bcdc96f968f64f1';
+
+
+file_put_contents('log.txt', "🧪 Usando endpoint_secret: $endpoint_secret\n", FILE_APPEND);
+exit;
 
 $payload = @file_get_contents('php://input');
 $sig_header = $_SERVER['HTTP_STRIPE_SIGNATURE'];
-//$event = null;
-
-
-
-$event = json_decode($payload);
-
-if (!$event) {
-    file_put_contents('log.txt', "❌ JSON inválido\n", FILE_APPEND);
-    http_response_code(400);
-    exit();
-}
-
+$event = null;
 
 try {
-    $event = \Stripe\Webhook::constructEvent($payload, $sig_header, $endpoint_secret);
-    file_put_contents('log.txt', "✅ Evento recibido: " . $event->type . "\n", FILE_APPEND);
-} catch (Exception $e) {
-    file_put_contents('log.txt', "❌ Webhook error: " . $e->getMessage() . "\n", FILE_APPEND);
-    http_response_code(400);
-    exit();
+  $event = \Stripe\Webhook::constructEvent(
+    $payload, $sig_header, $endpoint_secret
+  );
+} catch(\UnexpectedValueException $e) {
+  // Invalid payload
+  http_response_code(400);
+  exit();
+} catch(\Stripe\Exception\SignatureVerificationException $e) {
+  // Invalid signature
+  http_response_code(400);
+  exit();
 }
-
-
-
-
-
-
-
 
 // Handle the event
 switch ($event->type) {
-  case 'checkout.session.async_payment_failed':
-    $session = $event->data->object;
-    // Procesar sesión fallida
-    break;
+    case 'checkout.session.async_payment_failed':
+        $session = $event->data->object;
+        file_put_contents('log.txt', "🎯 Evento procesado: async_payment_failed\n", FILE_APPEND);
+        break;
 
-  case 'checkout.session.async_payment_succeeded':
-    $session = $event->data->object;
-    // Procesar sesión exitosa
-    break;
+    case 'checkout.session.async_payment_succeeded':
+        $session = $event->data->object;
+        file_put_contents('log.txt', "🎯 Evento procesado: async_payment_succeeded\n", FILE_APPEND);
+        break;
 
-  case 'checkout.session.completed':
-    $session = $event->data->object;
+    case 'checkout.session.completed':
+        $session = $event->data->object;
+        file_put_contents('log.txt', "🎯 Evento procesado: checkout.session.completed\n", FILE_APPEND);
+        break;
 
-    // ✅ Aquí puedes acceder a datos como:
-    $order_id = $session->metadata->order_id ?? 'N/A';
-    $email = $session->customer_details->email ?? 'N/A';
-    // Puedes guardar en base de datos, enviar correo, etc.
-    file_put_contents('log.txt', "Pago completado para orden $order_id con correo $email\n", FILE_APPEND);
+    case 'checkout.session.expired':
+        $session = $event->data->object;
+        file_put_contents('log.txt', "🎯 Evento procesado: checkout.session.expired\n", FILE_APPEND);
+        break;
 
-    break;
-
-  case 'checkout.session.expired':
-    $session = $event->data->object;
-    // Procesar sesión expirada
-    break;
-
-  default:
-    echo 'Received unknown event type ' . $event->type;
-    break;
+    default:
+        file_put_contents('log.txt', "⚠️ Evento desconocido: {$event->type}\n", FILE_APPEND);
+        break;
 }
 
 
