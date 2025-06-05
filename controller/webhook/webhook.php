@@ -18,7 +18,7 @@ require '../../vendor/autoload.php';
 $stripe = new \Stripe\StripeClient('sk_test_...');
 
 // This is your Stripe CLI webhook secret for testing your endpoint locally.
-$endpoint_secret = 'whsec_5966d1384d72bd6d255e3ee1cce732be54436717c95630ac4bcdc96f968f64f1';
+$endpoint_secret = 'whsec_p4j0DvnkuyYC4M1uqZLMI9LguWLDtTj1';
 
 
 
