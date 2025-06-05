@@ -217,8 +217,6 @@ class Order {
           'cancel_url' => 'https://www.lanyardsforyou.com/views/success_payment/index.php',
         ]);
 
-        echo json_encode(['url' => "buenas"]);exit;
-
 
       //  header("HTTP/1.1 303 See Other");
         //header("Location: " . $checkout_session->url);
