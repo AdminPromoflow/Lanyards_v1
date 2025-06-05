@@ -91,7 +91,7 @@ class Checkout {
     const checkbox = event.target;
     const form_boxes_checkout_2 = document.getElementById("form_boxes_checkout_2");
 
-    if (checkbox ) {
+    if (checkbox) {
       if (checkbox.checked) {
         form_boxes_checkout_2.style.display = "block";
       } else {
