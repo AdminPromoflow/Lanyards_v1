@@ -163,7 +163,6 @@ class Order {
 
 
     private function setOrder($data) {
-      echo json_encode("buenas");exit;
         $amount = $data->total;
         $currency = $data->currency;
         $orderId = $data->idOrder;
@@ -196,8 +195,9 @@ class Order {
 
       //  echo json_encode(['url' => $session->url]);
 
+    //  echo json_encode("buenas");exit;
 
-/*
+
         \Stripe\Stripe::setApiKey('sk_test_51RVWm7Iy7ZwkjsYRhmh4hsLctFV3lGr2HlAK5qn8eb7yAOTc9z2BTYRc2DVzvyRhLrndFR4MYMWBe6Kw2PA9Od3Z00UpRTyB8P');
         header('Content-Type: application/json');
 
@@ -216,7 +216,7 @@ class Order {
 
       //  header("HTTP/1.1 303 See Other");
         //header("Location: " . $checkout_session->url);
-        echo json_encode(['url' => $session->url]);*/
+        echo json_encode(['url' => $checkout_session->url]);
 
     }
 
