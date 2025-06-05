@@ -188,9 +188,9 @@ class Order {
         ]);
 
 
-        header("HTTP/1.1 303 See Other");
+      //  header("HTTP/1.1 303 See Other");
         header("Location: " . $checkout_session->url);
-      //  echo json_encode(['url' => $checkout_session->url]);
+        echo json_encode(['url' => $checkout_session->url]);
 
     }
 

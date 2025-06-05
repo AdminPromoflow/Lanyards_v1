@@ -49,10 +49,6 @@ class Checkout {
   }
 
   makeAjaxRequestSaveOrder(){
-
-
-    document.getElementById('paymentForm').submit();
-/*
     const url = "../../controller/lanyard/order.php";
     const data = {
       action: "setOrder",
@@ -77,27 +73,26 @@ class Checkout {
         throw new Error("Network error.");
       })
       .then(data => {
-        //alert(data);
-
-
         //chargingClass.hideShowchargin(false);
-        //  data = JSON.parse(data);
+          data = JSON.parse(data);
 
 
+          const url = data["url"];
+      //    alert(url);
 
-        //  window.location.href = url;
+          window.location.href = url;
 
       })
       .catch(error => {
         console.error("Error:", error);
-      });*/
+      });
   }
 
   addSecondAddress(event) {
     const checkbox = event.target;
     const form_boxes_checkout_2 = document.getElementById("form_boxes_checkout_2");
 
-    if (checkbox) {
+    if (checkbox ) {
       if (checkbox.checked) {
         form_boxes_checkout_2.style.display = "block";
       } else {
