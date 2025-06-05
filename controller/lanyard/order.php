@@ -169,7 +169,7 @@ class Order {
                 session_start();
             }
 
-          
+
 
             $amount = floatval($data->total);
             $currency = strtolower($data->currency);
@@ -194,11 +194,10 @@ class Order {
                     'quantity' => 1,
                 ]],
                 'mode' => 'payment',
-                'success_url' => $stripeConfig['stripe']['success_url'] . '?session_id={CHECKOUT_SESSION_ID}',
+                'success_url' => $stripeConfig['stripe']['success_url'] ,
                 'cancel_url' => $stripeConfig['stripe']['cancel_url'],
                 'metadata' => [
                     'order_id' => $orderId,
-                    'user_id' => $_SESSION['user_id'] ?? null,
                     'created_at' => time()
                 ],
                 'client_reference_id' => $orderId,
@@ -207,7 +206,7 @@ class Order {
             ]);
 
             // Actualizar estado de la orden
-            $orderModel->updateOrderStatus($orderId, 'processing');
+        //    $orderModel->updateOrderStatus($orderId, 'processing');
 
             // Guardar información de la sesión en la base de datos
         //    $this->savePaymentSession($orderId, $session->id, $session->url);
