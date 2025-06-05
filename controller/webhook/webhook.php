@@ -25,8 +25,10 @@ $endpoint_secret = 'whsec_5966d1384d72bd6d255e3ee1cce732be54436717c95630ac4bcdc9
 
 $payload = @file_get_contents('php://input');
 
-file_put_contents('log.txt', "📦 Payload recibido:\n$payload\n\n", FILE_APPEND);
 $sig_header = $_SERVER['HTTP_STRIPE_SIGNATURE'];
+
+file_put_contents('log.txt', "📦 sig_header recibido:\n$sig_header\n\n", FILE_APPEND);
+
 $event = null;
 
 file_put_contents('log.txt',json_encode($event), FILE_APPEND);
