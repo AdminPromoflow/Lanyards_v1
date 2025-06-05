@@ -19,7 +19,8 @@ $checkout_session = $stripe->checkout->sessions->create([
   ]],
   'mode' => 'payment',
   'success_url' => 'https://www.lanyardsforyou.com/views/success_payment/index.php',
-  'cancel_url' => 'https://www.lanyardsforyou.com/views/success_payment/index.php'
+  'cancel_url' => 'https://www.lanyardsforyou.com/views/success_payment/index.php',
+  'locale' => 'en'
 ]);
 
 header("HTTP/1.1 303 See Other");
