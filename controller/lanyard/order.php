@@ -203,9 +203,14 @@ class Order {
 
         $checkout_session = \Stripe\Checkout\Session::create([
           'line_items' => [[
-            # Provide the exact Price ID (e.g. price_1234) of the product you want to sell
-            'price' => $amount,
-            'quantity' => 1,
+            'price_data' => [
+              'currency' => 'gbp',
+              'unit_amount' => 2499, // $24.99 en centavos
+              'product_data' => [
+                'name' => 'Lanyard personalizado'
+              ]
+            ],
+            'quantity' => 1
           ]],
           'mode' => 'payment',
           'success_url' => 'https://www.lanyardsforyou.com/views/success_payment/index.php',
