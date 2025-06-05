@@ -42,15 +42,34 @@ try {
 switch ($event->type) {
   case 'checkout.session.async_payment_failed':
     $session = $event->data->object;
+    // Procesar sesión fallida
+    break;
+
   case 'checkout.session.async_payment_succeeded':
     $session = $event->data->object;
+    // Procesar sesión exitosa
+    break;
+
   case 'checkout.session.completed':
     $session = $event->data->object;
+
+    // ✅ Aquí puedes acceder a datos como:
+    $order_id = $session->metadata->order_id ?? 'N/A';
+    $email = $session->customer_details->email ?? 'N/A';
+    // Puedes guardar en base de datos, enviar correo, etc.
+    file_put_contents('log.txt', "Pago completado para orden $order_id con correo $email\n", FILE_APPEND);
+
+    break;
+
   case 'checkout.session.expired':
     $session = $event->data->object;
-  // ... handle other event types
+    // Procesar sesión expirada
+    break;
+
   default:
     echo 'Received unknown event type ' . $event->type;
+    break;
 }
+
 
 http_response_code(200);
