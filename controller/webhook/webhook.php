@@ -34,23 +34,24 @@ $event = null;
 
 
 try {
-  $event = \Stripe\Webhook::constructEvent(
-    $payload, $sig_header, $endpoint_secret
-  );
-  file_put_contents('log.txt', "Bien", FILE_APPEND);
-  exit();
+    $event = \Stripe\Webhook::constructEvent(
+        $payload, $sig_header, $endpoint_secret
+    );
 
-} catch(\UnexpectedValueException $e) {
-  file_put_contents('log.txt', "Mal", FILE_APPEND);
-  exit();
-  //http_response_code(400);
-  exit();
-} catch(\Stripe\Exception\SignatureVerificationException $e) {
-  // Invalid signature
-  //http_response_code(400);
-  file_put_contents('log.txt', "Super Mal", FILE_APPEND);
+    // Si todo sale bien (firma válida)
+    file_put_contents('log.txt', "✅ Bien: Firma verificada correctamente\n", FILE_APPEND);
 
-  exit();
+} catch (\UnexpectedValueException $e) {
+    // Error: El payload no es válido (no es JSON, está vacío, etc.)
+    file_put_contents('log.txt', "❌ Mal: Payload inválido - " . $e->getMessage() . "\n", FILE_APPEND);
+    http_response_code(400);
+    exit();
+
+} catch (\Stripe\Exception\SignatureVerificationException $e) {
+    // Error: La firma del webhook no es válida (clave errónea o manipulada)
+    file_put_contents('log.txt', "🚨 Super Mal: Firma inválida - " . $e->getMessage() . "\n", FILE_APPEND);
+    http_response_code(400);
+    exit();
 }
 
 // Handle the event
