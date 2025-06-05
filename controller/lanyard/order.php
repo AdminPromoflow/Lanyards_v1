@@ -169,34 +169,7 @@ class Order {
                 session_start();
             }
 
-            // Validar datos de entrada
-            if (!isset($data->total) || !isset($data->currency) || !isset($data->idOrder)) {
-                throw new Exception('Missing required parameters');
-            }
-
-            // Validar formato de datos
-            if (!is_numeric($data->total) || !is_string($data->currency) || !is_numeric($data->idOrder)) {
-                throw new Exception('Invalid data format');
-            }
-
-            // Validar moneda
-            $validCurrencies = ['usd', 'eur', 'gbp'];
-            if (!in_array(strtolower($data->currency), $validCurrencies)) {
-                throw new Exception('Invalid currency');
-            }
-
-            // Validar orden existente
-            $connection = new Database();
-            $orderModel = new Order_Model($connection);
-            $order = $orderModel->getOrderById($data->idOrder);
-            if (!$order) {
-                throw new Exception('Order not found');
-            }
-
-            // Validar estado de la orden
-            if ($order['status'] !== 'pending') {
-                throw new Exception('Order is not in pending state');
-            }
+          
 
             $amount = floatval($data->total);
             $currency = strtolower($data->currency);
