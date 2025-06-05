@@ -27,27 +27,29 @@ $payload = @file_get_contents('php://input');
 
 $sig_header = $_SERVER['HTTP_STRIPE_SIGNATURE'];
 
-file_put_contents('log.txt', "📦 sig_header recibido:\n$sig_header\n\n", FILE_APPEND);
 
 $event = null;
 
-file_put_contents('log.txt',json_encode($event), FILE_APPEND);
-exit;
+
 
 
 try {
   $event = \Stripe\Webhook::constructEvent(
     $payload, $sig_header, $endpoint_secret
   );
-
+  file_put_contents('log.txt', "Bien", FILE_APPEND);
+  exit();
 
 } catch(\UnexpectedValueException $e) {
-  // Invalid payload
-  http_response_code(400);
+  file_put_contents('log.txt', "Mal", FILE_APPEND);
+  exit();
+  //http_response_code(400);
   exit();
 } catch(\Stripe\Exception\SignatureVerificationException $e) {
   // Invalid signature
-  http_response_code(400);
+  //http_response_code(400);
+  file_put_contents('log.txt', "Super Mal", FILE_APPEND);
+
   exit();
 }
 
