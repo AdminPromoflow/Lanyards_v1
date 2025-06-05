@@ -163,7 +163,7 @@ class Order {
 
 
     private function setOrder($data) {
-      echo json_encode("buenas")exit;;
+      echo json_encode("buenas");exit;
         $amount = $data->total;
         $currency = $data->currency;
         $orderId = $data->idOrder;
