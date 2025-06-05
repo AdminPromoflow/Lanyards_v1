@@ -21,8 +21,7 @@ $stripe = new \Stripe\StripeClient('sk_test_...');
 $endpoint_secret = 'whsec_5966d1384d72bd6d255e3ee1cce732be54436717c95630ac4bcdc96f968f64f1';
 
 
-file_put_contents('log.txt', "🧪 Usando endpoint_secret: $endpoint_secret\n", FILE_APPEND);
-exit;
+
 
 $payload = @file_get_contents('php://input');
 $sig_header = $_SERVER['HTTP_STRIPE_SIGNATURE'];
@@ -32,6 +31,9 @@ try {
   $event = \Stripe\Webhook::constructEvent(
     $payload, $sig_header, $endpoint_secret
   );
+
+  file_put_contents('log.txt',json_encode($event), FILE_APPEND);
+  exit;
 } catch(\UnexpectedValueException $e) {
   // Invalid payload
   http_response_code(400);
