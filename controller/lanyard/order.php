@@ -201,7 +201,6 @@ class Order {
         header('Content-Type: application/json');
 
         $YOUR_DOMAIN = 'https://lanyardsforyou.com/views/checkout/index.php';
-        echo json_encode(['url' => "buenas"]);exit;
 
         $checkout_session = \Stripe\Checkout\Session::create([
           'line_items' => [[
@@ -213,6 +212,9 @@ class Order {
           'success_url' => 'https://www.lanyardsforyou.com/views/success_payment/index.php',
           'cancel_url' => 'https://www.lanyardsforyou.com/views/success_payment/index.php',
         ]);
+
+        echo json_encode(['url' => "buenas"]);exit;
+
 
       //  header("HTTP/1.1 303 See Other");
         //header("Location: " . $checkout_session->url);
