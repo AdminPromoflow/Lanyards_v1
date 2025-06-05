@@ -11,7 +11,7 @@
 // 3) Run the server on http://localhost:4242
 //   php -S localhost:4242
 
-require '../../vendor/autoload.php';
+require 'vendor/autoload.php';
 
 // The library needs to be configured with your account's secret key.
 // Ensure the key is kept out of any version control system you might be using.
@@ -40,7 +40,13 @@ try {
 
 // Handle the event
 switch ($event->type) {
+  case 'checkout.session.async_payment_failed':
+    $session = $event->data->object;
+  case 'checkout.session.async_payment_succeeded':
+    $session = $event->data->object;
   case 'checkout.session.completed':
+    $session = $event->data->object;
+  case 'checkout.session.expired':
     $session = $event->data->object;
   // ... handle other event types
   default:

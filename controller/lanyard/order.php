@@ -191,8 +191,6 @@ class Order {
             ]
         ]);
 
-
-
         echo json_encode(['url' => $session->url]);
     }
 
