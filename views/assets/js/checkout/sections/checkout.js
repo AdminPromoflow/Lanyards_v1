@@ -49,7 +49,6 @@ class Checkout {
   }
 
   makeAjaxRequestSaveOrder(){
-    alert(this.getTotal());
     const url = "../../controller/lanyard/order.php";
     const data = {
       action: "setOrder",
@@ -74,14 +73,13 @@ class Checkout {
         throw new Error("Network error.");
       })
       .then(data => {
+        alert(data);
         //chargingClass.hideShowchargin(false);
           data = JSON.parse(data);
 
 
-          const url = data["url"];
-          alert(url);
 
-          window.location.href = url;
+        //  window.location.href = url;
 
       })
       .catch(error => {
