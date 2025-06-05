@@ -197,7 +197,7 @@ class Order {
       //  echo json_encode(['url' => $session->url]);
 
 
-
+/*
         \Stripe\Stripe::setApiKey('sk_test_51RVWm7Iy7ZwkjsYRhmh4hsLctFV3lGr2HlAK5qn8eb7yAOTc9z2BTYRc2DVzvyRhLrndFR4MYMWBe6Kw2PA9Od3Z00UpRTyB8P');
         header('Content-Type: application/json');
 
@@ -216,7 +216,7 @@ class Order {
 
       //  header("HTTP/1.1 303 See Other");
         //header("Location: " . $checkout_session->url);
-        echo json_encode(['url' => $session->url]);
+        echo json_encode(['url' => $session->url]);*/
 
     }
 
