@@ -1,21 +1,9 @@
 <?php
-// webhook.php
-//
-// Use this sample code to handle webhook events in your integration.
-//
-// 1) Paste this code into a new file (webhook.php)
-//
-// 2) Install dependencies
-//   composer require stripe/stripe-php
-//
-// 3) Run the server on http://localhost:4242
-//   php -S localhost:4242
-
 require '../../vendor/autoload.php';
 
 // The library needs to be configured with your account's secret key.
 // Ensure the key is kept out of any version control system you might be using.
-$stripe = new \Stripe\StripeClient('sk_test_...');
+$stripe = new \Stripe\StripeClient('sk_test_51RVWm7Iy7ZwkjsYRhmh4hsLctFV3lGr2HlAK5qn8eb7yAOTc9z2BTYRc2DVzvyRhLrndFR4MYMWBe6Kw2PA9Od3Z00UpRTyB8P');
 
 // This is your Stripe CLI webhook secret for testing your endpoint locally.
 $endpoint_secret = 'whsec_p4j0DvnkuyYC4M1uqZLMI9LguWLDtTj1';
@@ -39,7 +27,7 @@ try {
     );
 
     // Si todo sale bien (firma válida)
-    file_put_contents('log.txt', "✅ Bien: Firma verificada correctamente\n", FILE_APPEND);
+  //  file_put_contents('log.txt', "✅ Bien: Firma verificada correctamente\n", FILE_APPEND);
 
 } catch (\UnexpectedValueException $e) {
     // Error: El payload no es válido (no es JSON, está vacío, etc.)
