@@ -30,14 +30,14 @@ $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
     </div>
 
     <div class="footerLogin">
-      <h3>or login with:</h3>
+    <!--  <h3>or login with:</h3>-->
       <div class="footerLoginOptionsContainer">
         <?php
         $googleIcon = '../../views/assets/img/global/login/google-icon.png';
         $googleIconVersion = file_exists($googleIcon) ? filemtime($googleIcon) : time();
         ?>
         <div id="loginWithGoogle1" class="footerLoginOptions">
-          <img src="<?= $googleIcon ?>?v=<?= $googleIconVersion; ?>" alt="">
+        <!--  <img src="<?= $googleIcon ?>?v=<?= $googleIconVersion; ?>" alt="">-->
         </div>
       </div>
       <h4 id="openRegisterFromLogin">No account yet? Register here.</h4>
