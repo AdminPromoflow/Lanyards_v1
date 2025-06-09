@@ -37,9 +37,6 @@ class AccessoriesHome {
     for (let i = 0; i < box_accessories_home_description.length; i++) {
       box_accessories_home_description[i].addEventListener("click", function(){
 
-    //  alert(menuClass.getActiveSession());
-
-          //alert();
            const padre = box_accessories_home_description[i].closest('.subcontainer_accessories_home_description');
            const subcontainer_accessories_home_description = document.querySelectorAll('.subcontainer_accessories_home_description');
 
@@ -48,7 +45,6 @@ class AccessoriesHome {
 
            const title = document.querySelectorAll(".name_accessory_item")[index].innerHTML;
 
-        //   alert(title + box_accessories_home_description[i].innerHTML);
 
         const amount = document.querySelectorAll(".name_accessory_item");
 
@@ -123,11 +119,6 @@ class AccessoriesHome {
       this.setAmount(index, input_amount_accessories[index].value);
       this.setTotal(index, price.match(/[\d.]+/) * this.getAmount(index));
     //  this.setPosicionChildSelected(index, selected);
-
-
-    /*  alert(this.getPosicionChildSelected(index)  + "  " +   this.getProduct(index) + "  " + this.getDescription(index) + "  " +  this.getPricePerUnit(index)
-       + "  " +  this.getAmount(index) + "  " +  this.getTotal(index)
-    );*/
 
 
     }
@@ -233,7 +224,6 @@ class AccessoriesHome {
     buyButtons.forEach((button, index) => {
       button.addEventListener("click", () => {
 
-
         if (menuClass.getActiveSession()) {
           accessoriesHome.makeAjaxRequestCreateBuyJobAccessory(index);
         }
@@ -251,9 +241,6 @@ class AccessoriesHome {
     const cartButtons = document.querySelectorAll(selector);
     cartButtons.forEach((button, index) => {
       button.addEventListener("click", () => {
-        /*  alert(this.getPosicionChildSelected(index)  + "  " +   this.getProduct(index) + "  " + JSON.stringify(this.getDescription(index)) + "  " +  this.getPricePerUnit(index)
-           + "  " +  this.getAmount(index) + "  " +  this.getTotal(index)
-        );*/
 
         if (menuClass.getActiveSession()) {
           accessoriesHome.makeAjaxRequestCreateJobAccessory(index);
@@ -261,9 +248,6 @@ class AccessoriesHome {
         else {
           alert("Please sign in before adding items to your basket.");
         }
-
-
-      //
 
       });
     });

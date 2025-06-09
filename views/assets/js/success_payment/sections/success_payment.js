@@ -1,6 +1,9 @@
 class SuccessPayment {
   constructor() {
-    this.getPaymentSuccess();
+    //this.getPaymentSuccess();
+
+    alert(menuClass.getActiveSession());
+
 
     button_go_home.addEventListener("click", function() {
       window.location.href = "../../views/home/index.php";

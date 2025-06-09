@@ -157,8 +157,6 @@ class Menu {
         window.location.href = "https://lanyardsforyou.com/views/home/index.php";
       }
     }
-
-
   }
 
 
