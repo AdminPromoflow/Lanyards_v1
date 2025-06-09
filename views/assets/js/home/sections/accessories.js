@@ -234,11 +234,12 @@ class AccessoriesHome {
       button.addEventListener("click", () => {
 
 
-        alert(menuClass.getActiveSession());
-
-
-      //  accessoriesHome.makeAjaxRequestCreateBuyJobAccessory(index);
-
+        if (menuClass.getActiveSession()) {
+          accessoriesHome.makeAjaxRequestCreateBuyJobAccessory(index);
+        }
+        else {
+          alert("Please sign in before proceeding with your purchase.");
+        }
 
       });
     });
@@ -254,10 +255,15 @@ class AccessoriesHome {
            + "  " +  this.getAmount(index) + "  " +  this.getTotal(index)
         );*/
 
-        alert(menuClass.getActiveSession());
+        if (menuClass.getActiveSession()) {
+          accessoriesHome.makeAjaxRequestCreateJobAccessory(index);
+        }
+        else {
+          alert("Please sign in before adding items to your basket.");
+        }
 
 
-      //  accessoriesHome.makeAjaxRequestCreateJobAccessory(index);
+      //
 
       });
     });
