@@ -43,10 +43,10 @@ class Login {
     });
 
 
-  /*  loginWithGoogle1.addEventListener("click", function(){
+    loginWithGoogle1.addEventListener("click", function(){
       // Make the AJAX request
-      loginClass.makeAjaxRequestLoginWithGoogle();
-    })*/
+      //loginClass.makeAjaxRequestLoginWithGoogle();
+    })
 
 
 
@@ -406,8 +406,8 @@ class Login {
 }
 
 // Get DOM elements
-//const loginWithGoogle1 = document.getElementById("loginWithGoogle1");
-//const loginWithFacebook1 = document.getElementById("loginWithFacebook1");
+const loginWithGoogle1 = document.getElementById("loginWithGoogle1");
+const loginWithFacebook1 = document.getElementById("loginWithFacebook1");
 
 const openLoginFromRegister = document.getElementById("openLoginFromRegister");
 const login = document.getElementById("login");
