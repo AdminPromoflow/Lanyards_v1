@@ -17,7 +17,6 @@ $event = null;
 
 
 
-
 try {
     $event = \Stripe\Webhook::constructEvent(
         $payload, $sig_header, $endpoint_secret

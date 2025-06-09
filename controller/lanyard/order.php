@@ -23,22 +23,17 @@ class Order {
                     case "updateOrder":
                         $this->updateOrder($data);
                         break;
-
                     case "getOrder":
                         $this->getOrder();
                         break;
                     case "setOrder":
                         $addresses = new Addresses();
                         $addresses->updateAddresses($data);
-
                         $this->setOrder($data);
                         break;
                     case "getPaymentSuccess":
                         $this->getPaymentSuccess();
                         break;
-
-
-
                     default:
                         http_response_code(400);
                         echo json_encode(["message" => "Unknown action"]);
