@@ -40,7 +40,7 @@ $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
         $googleIconVersion = file_exists($googleIcon) ? filemtime($googleIcon) : time();
         ?>
         <div id="registerWithGoogle1" class="footerLoginOptions">
-          <img src="<?= $googleIcon ?>?v=<?= $googleIconVersion; ?>" alt="">
+          <!--<img src="<?= $googleIcon ?>?v=<?= $googleIconVersion; ?>" alt="">-->
         </div>
 
         <?php
@@ -48,7 +48,7 @@ $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
         $facebookIconVersion = file_exists($facebookIcon) ? filemtime($facebookIcon) : time();
         ?>
         <div id="registerWithFacebook1" class="footerLoginOptions">
-          <img src="<?= $facebookIcon ?>?v=<?= $facebookIconVersion; ?>" alt="">
+          <!--<img src="<?= $facebookIcon ?>?v=<?= $facebookIconVersion; ?>" alt="">-->
         </div>
       </div>
       <h4 id="openLoginFromRegister">Already have an account? Log in here.</h4>
