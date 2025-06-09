@@ -30,7 +30,7 @@ $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
     </div>
 
     <div class="footerLogin">
-    <!--  <h3>or login with:</h3>-->
+      <h3>or </h3>
       <div class="footerLoginOptionsContainer">
         <?php
         $googleIcon = '../../views/assets/img/global/login/google-icon.png';
