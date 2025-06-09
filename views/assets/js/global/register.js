@@ -15,12 +15,12 @@ class Register {
       registerClass.hideRegister(700);
     });
 
-  /*  registerWithGoogle1.addEventListener("click", function(){
+    registerWithGoogle1.addEventListener("click", function(){
         loginClass.makeAjaxRequestLoginWithGoogle();
     //  registerClass.makeAjaxRequestRegisterWithGoogle();
-  })*/
-    /*registerWithFacebook1.addEventListener("click", function(){
-    })*/
+    })
+    registerWithFacebook1.addEventListener("click", function(){
+    })
 
 
     // Event listener to open the register form from the login screen
@@ -246,8 +246,8 @@ const nameRegister = document.getElementById("nameRegister");
 const emailRegister = document.getElementById("emailRegister");
 const passwordRegister = document.getElementById("passwordRegister");
 
-//const registerWithGoogle1 = document.getElementById("registerWithGoogle1");
-//const registerWithFacebook1 = document.getElementById("registerWithFacebook1");
+const registerWithGoogle1 = document.getElementById("registerWithGoogle1");
+const registerWithFacebook1 = document.getElementById("registerWithFacebook1");
 const aceptTermsConditions = document.getElementById("acept_terms_conditions");
 
 
