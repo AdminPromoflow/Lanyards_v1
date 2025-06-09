@@ -33,24 +33,24 @@ $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
     </div>
 
     <div class="footerRegister">
-      <h3>or register with:</h3>
+      <!--<h3>or register with:</h3>
       <div class="footerLoginOptionsContainer">
         <?php
-        $googleIcon = '../../views/assets/img/global/login/google-icon.png';
-        $googleIconVersion = file_exists($googleIcon) ? filemtime($googleIcon) : time();
+        //$googleIcon = '../../views/assets/img/global/login/google-icon.png';
+        //$googleIconVersion = file_exists($googleIcon) ? filemtime($googleIcon) : time();
         ?>
         <div id="registerWithGoogle1" class="footerLoginOptions">
-          <img src="<?= $googleIcon ?>?v=<?= $googleIconVersion; ?>" alt="">
+          <img src="<?= //$googleIcon ?>?v=<?= //$googleIconVersion; ?>" alt="">
         </div>
 
         <?php
-        $facebookIcon = '../../views/assets/img/global/login/facebook-icon.png';
-        $facebookIconVersion = file_exists($facebookIcon) ? filemtime($facebookIcon) : time();
+        //$facebookIcon = '../../views/assets/img/global/login/facebook-icon.png';
+        //$facebookIconVersion = file_exists($facebookIcon) ? filemtime($facebookIcon) : time();
         ?>
         <div id="registerWithFacebook1" class="footerLoginOptions">
-          <img src="<?= $facebookIcon ?>?v=<?= $facebookIconVersion; ?>" alt="">
+          <img src="<?= //$facebookIcon ?>?v=<?= //$facebookIconVersion; ?>" alt="">
         </div>
-      </div>
+      </div>-->
       <h4 id="openLoginFromRegister">Already have an account? Log in here.</h4>
     </div>
   </div>
