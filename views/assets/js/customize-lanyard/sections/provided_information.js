@@ -147,6 +147,42 @@ class ProvidedInformation {
 
   }
 
+
+
+
+
+  getAddresses(){
+    const url = "../../controller/lanyard/addresses.php";
+    const data = {
+      action: "getAddresses"
+    };
+
+    fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    })
+      .then(response => {
+        if (response.ok) {
+          return response.text();
+        }
+        throw new Error("Network error.");
+      })
+      .then(data => {
+        alert(data);
+    //  const data2 =   JSON.parse(data);
+    //  checkout.setHTMLAddresses(data2["addresses"]);
+
+      })
+      .catch(error => {
+        console.error("Error:", error);
+      });
+  }
+
+
+
   checkEmptyValues(){
     var fulledValues = false;
 

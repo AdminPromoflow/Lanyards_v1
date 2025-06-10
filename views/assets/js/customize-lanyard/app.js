@@ -533,6 +533,8 @@ class CustomizeLanyard {
     previewProvidedInformation.showProvidedInformationPreview('flex');
     previewLanyardType.showTypeLanyardPreview("none");
     this.showCurrentSection(this.currentSectionOpen);
+
+    providedInformation.getAddresses();
     this.showNext(true);
     this.showPreview(true);
     classRegister2.openRegister(false);
