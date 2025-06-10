@@ -164,7 +164,7 @@
 }
 </style>
 <section class="services">
-  <div class="other_box">
+<!--  <div class="other_box">
     <img src="../Home/2.Services/Image/close.png" alt="">
     <h1>TITLE</h1>
     <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -186,7 +186,7 @@
     <div class="items_other_box">
 
     </div>
-  </div>
+  </div>-->
   <a href="../Cruising/index.php">
     <div class="box-services pictureServicesHome1">
       <div class="wrap-box-services">
