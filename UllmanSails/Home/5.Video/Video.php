@@ -1,19 +1,13 @@
 <?php
-$cssTime = filemtime('../Home/5.Video/video.css');
-$jsTime = filemtime('../Home/5.Video/video.js');
+$basePath = '../Home/5.Video/';
+$cssTime = filemtime($basePath . 'video.css');
+$jsTime = filemtime($basePath . 'video.js');
 ?>
 
-<link rel="stylesheet" href="../Home/5.Video/video.css?v=<?= $cssTime ?>">
-<section class="videoHome">
-  <video id="videoHover" src="../Home/5.Video/video.mp4" controls muted playsinline></video>
+<link rel="stylesheet" href="<?= $basePath ?>video.css?v=<?= $cssTime ?>">
 
-  <!--
-  <video  style="position: relative; left: 50%; transform: translateX(-50%); width: calc(68vw + 20px); height: auto" controls>
-      <source src="5.Video/Image/Video.mp4" type="video/mp4">
-      <source src="movie.ogg" type="video/ogg">
-      Your browser does not support the video tag.
-  </video>
-  -->
+<section class="videoHome">
+  <video id="videoHover" src="<?= $basePath ?>video.mp4" controls muted playsinline></video>
 </section>
 
-<script src="../Home/5.Video/video.js?v=<?= $jsTime ?>" type="text/javascript"></script>
+<script src="<?= $basePath ?>video.js?v=<?= $jsTime ?>" type="text/javascript"></script>
