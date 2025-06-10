@@ -2,7 +2,7 @@
 $basePath = '../Home/5.Video/';
 $cssTime = filemtime($basePath . 'video.css');
 $jsTime = filemtime($basePath . 'video.js');
-$videoTime = filemtime($basePath . 'video.mp4'); // 🔹 Añadido
+$videoTime = filemtime($basePath . 'videoUpdated.mp4'); // 🔹 Añadido
 ?>
 
 <link rel="stylesheet" href="<?= $basePath ?>video.css?v=<?= $cssTime ?>">
