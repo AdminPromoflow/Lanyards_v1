@@ -334,6 +334,7 @@ class ProvidedInformation {
           <input id="email_address_2" type="text" name="" value="${data[1]["email_address"]}" placeholder="Email address">
         </div>
 
+        </div>
 
     `;
 
