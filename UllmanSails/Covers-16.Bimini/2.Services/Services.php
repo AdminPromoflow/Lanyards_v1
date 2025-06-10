@@ -74,34 +74,9 @@
 
   <div class="text">
     <a class="link_a"  href="../Covers/index.php">&lt; Boat Covers</a>
-  <h1>Bimini</h1>
+  <h1>Bimini Sunshade</h1>
   <p>
-    A Bimini is a lightweight, open-front shade cover mounted over the cockpit or helm
-    area of a cruising sailboat. Built with a rigid frame and marine-grade canvas, it
-    offers vital sunshade while still allowing ventilation and visibility. The UV
-    protection helps prevent sunburns and keeps the cockpit cooler during long days
-    under sail. Most Biminis are foldable, letting you retract them when not needed
-    or during strong winds. With a proper mounting system and strong support poles,
-    a Bimini provides reliable, stable cover. It’s a favourite for sailors seeking
-    comfort and protection.<br><br>
-
-    Cruisers love the Bimini because it creates a shaded zone without compromising
-    space or mobility. Whether anchored or under way, it shields crew and guests
-    from harmful UV rays and glare. The canvas used is often waterproof and mildew-resistant,
-    ensuring durability in saltwater conditions. You can also find models with extension
-    panels to increase coverage for larger cockpits. The frame is usually stainless steel
-    or aluminium for long-lasting use. A quality Bimini is a simple but essential upgrade
-    for leisure sailing.<br><br>
-
-    Many Bimini tops are now designed with modular features, allowing sailors to zip on
-    side panels or connect with a dodger or sprayhood for more protection. This enhances
-    both weather resistance and privacy on board. Custom-fit mounting brackets ensure the
-    Bimini stays secure even during rough conditions. With the right support poles, it can
-    withstand gusty winds and offer a safe haven from midday heat. Foldable designs allow
-    for quick removal or stowage when you need clear overhead space for sails. It’s an all-season ally.<br><br>
-
-    Fun fact: Some high-end Bimini systems now come equipped with solar panels integrated
-    into the canvas, combining shade cover and renewable energy in one smart design.<br><br>
+    A bimini provides welcome shade on hot summer days—an acrylic canvas "roof" for your cockpit that offers protection from the sun without blocking the breeze. Add a clear viewing panel above the helm if you want to keep an eye on the sail and choose from a wide range of colours to suit your boat’s look. All our biminis are built with UV-stable materials and thread for lasting performance. Questions? Just ask—we’re here to help.
 
  </p>
  <a class="link_contact_us" href="../ContactUs/index.php">

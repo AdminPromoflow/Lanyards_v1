@@ -204,7 +204,7 @@
   <a href="../Covers-1.Stackpack/index.php">
     <div class="box-services pictureCruising1">
       <div class="wrap-box-services">
-        <h3 class="smallFont2"> Stackpack</h3>
+        <h3 class="smallFont2"> Stack pack</h3>
         <h4>See more</h4>
       </div>
     </div>
