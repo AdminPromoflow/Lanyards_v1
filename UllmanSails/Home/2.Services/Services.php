@@ -56,6 +56,7 @@
   width: 30px;
   height: auto;
   margin: 20px;
+  cursor: pointer;
 }
 .other_box h1{
   position: relative;
@@ -164,7 +165,7 @@
 </style>
 <section class="services">
   <div class="other_box">
-    <img src="../Home/2.Services/Image/close.png" alt="">
+    <img id="close_others"src="../Home/2.Services/Image/close.png" alt="">
     <h1>TITLE</h1>
     <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -212,4 +213,10 @@
   </a>
 </section>
 <script type="text/javascript">
+
+const close_others = document.getElementById("close_others");
+
+close_others.addEventListener("click", function(){
+  alert("cerre");
+});
 </script>
