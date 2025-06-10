@@ -172,8 +172,8 @@ class ProvidedInformation {
       })
       .then(data => {
         alert(data);
-    //  const data2 =   JSON.parse(data);
-    //  checkout.setHTMLAddresses(data2["addresses"]);
+      const data2 =   JSON.parse(data);
+      providedInformation.setHTMLAddresses(data2["addresses"]);
 
       })
       .catch(error => {
@@ -182,6 +182,179 @@ class ProvidedInformation {
   }
 
 
+
+
+  setHTMLAddresses(data){
+    const containers_boxes_provided_information = document.getElementById("containers_boxes_provided_information");
+
+    boxes_checkout.innerHTML = `
+    <div class="boxes_provided_information">
+
+      <div class="box_provided_information">
+        <label for="first_name">First name</label>
+        <input id="first_name" type="text" name="" value="${data[0]["first_name"]}" placeholder="First name">
+      </div>
+
+      <div class="box_provided_information">
+        <label for="last_name">Last name</label>
+        <input id="last_name" type="text" name="" value="${data[0]["last_name"]}" placeholder="Last name">
+      </div>
+
+      <div class="box_provided_information">
+        <label for="company_name">Company name</label>
+        <input id="company_name" type="text" name="" value="${data[0]["company_name"]}" placeholder="Company name">
+      </div>
+
+      <div class="box_provided_information">
+        <label for="phone">Phone</label>
+        <input id="phone" type="text" name="" value="${data[0]["phone"]}" placeholder="Phone">
+      </div>
+
+
+
+      <div class="box_provided_information">
+        <label for="country">Country</label>
+        <input id="country" type="text" name="" value="${data[0]["country"]}" placeholder="Country">
+      </div>
+
+      <div class="box_provided_information">
+        <label for="street_address_1">Street address 1</label>
+        <input id="street_address_1" type="text" name="" value="${data[0]["street_address_1"]}" placeholder="Street address 1">
+        <input id="street_address_2" type="text" name="" value="${data[0]["street_address_2"]}" placeholder="Street address 2">
+        <ul class="result_list" id="result_list">
+        </ul>
+      </div>
+
+      <div class="box_provided_information">
+        <label for="town_city">Town/city</label>
+        <input id="town_city" type="text" name="" value="${data[0]["town_city"]}" placeholder="Town/city">
+      </div>
+
+
+    <!--  <div class="box_provided_information">
+        <label for="state">State</label>
+        <input id="state" type="text" name="" value="" placeholder="State">
+      </div>-->
+
+
+
+
+
+    <!--  <div class="box_provided_information">
+        <label for="street_address_2">Street address 2</label>
+        <input id="street_address_2" type="text" name="" value="" placeholder="Street address 2">
+      </div>-->
+
+      <div class="box_provided_information">
+        <label for="postcode">Postcode</label>
+        <input id="postcode" type="text" name="" value="${data[0]["postcode"]}" placeholder="Postcode">
+      </div>
+
+      <div class="box_provided_information">
+        <label for="email_address">Email address</label>
+        <input id="email_address" type="text" name="" value="${data[0]["email_address"]}" placeholder="Email address">
+      </div>
+
+
+
+
+
+
+    </div>
+    <br>
+      <label class="boxes_provided_information_checkbox">
+          <input type="checkbox"  onchange="providedInformation.addSecondAddress(event)" id="checkbox_provided_information">
+          <p>Deliver to a different address?</p>
+      </label>
+
+
+      <div class="boxes_provided_information" id="boxes_provided_information_2">
+
+        <div class="box_provided_information">
+          <label for="first_name_2">First name</label>
+          <input id="first_name_2" type="text" name="" value="${data[1]["first_name"]}" placeholder="First name">
+        </div>
+
+        <div class="box_provided_information">
+          <label for="last_name_2">Last name</label>
+          <input id="last_name_2" type="text" name="" value="${data[1]["last_name"]}" placeholder="Last name">
+        </div>
+
+        <div class="box_provided_information">
+          <label for="company_name_2">Company name</label>
+          <input id="company_name_2" type="text" name="" value="${data[1]["company_name"]}" placeholder="Company name">
+        </div>
+
+        <div class="box_provided_information">
+          <label for="phone_2">Phone</label>
+          <input id="phone_2" type="text" name="" value="${data[1]["phone"]}" placeholder="Phone">
+        </div>
+
+        <div class="box_provided_information">
+          <label for="country_2">Country</label>
+          <input id="country_2" type="text" name="" value="${data[1]["country"]}" placeholder="Country">
+        </div>
+
+
+        <div class="box_provided_information">
+          <label for="street_address_1_2">Street address 1</label>
+          <input id="street_address_1_2" type="text" name="" value="${data[1]["street_address_1"]}" placeholder="Street address 1">
+          <input id="street_address_2_2" type="text" name="" value="${data[1]["street_address_2"]}" placeholder="Street address 2">
+          <ul class="result_list" id="result_list_2">
+
+          </ul>
+        </div>
+
+
+
+      <!--  <div class="box_provided_information">
+          <label for="state_2">State</label>
+          <input id="state_2" type="text" name="" value="" placeholder="State">
+        </div> -->
+
+        <div class="box_provided_information">
+          <label for="town_city_2">Town/city</label>
+          <input id="town_city_2" type="text" name="" value="${data[1]["town_city"]}" placeholder="Town/city">
+        </div>
+
+
+
+      <!--  <div class="box_provided_information">
+          <label for="street_address_2_2">Street address 2</label>
+          <input id="street_address_2_2" type="text" name="" value="" placeholder="Street address 2">
+        </div> -->
+
+        <div class="box_provided_information">
+          <label for="postcode_2">Postcode</label>
+          <input id="postcode_2" type="text" name="" value="${data[1]["postcode"]}" placeholder="Postcode">
+        </div>
+
+        <div class="box_provided_information">
+          <label for="email_address_2">Email address</label>
+          <input id="email_address_2" type="text" name="" value="${data[1]["email_address"]}" placeholder="Email address">
+        </div>
+
+
+    `;
+
+
+
+
+  }
+
+
+  addSecondAddress(event) {
+    const checkbox = event.target;
+    const form_boxes_checkout_2 = document.getElementById("boxes_provided_information_2");
+
+    if (checkbox ) {
+      if (checkbox.checked) {
+        form_boxes_checkout_2.style.display = "block";
+      } else {
+        form_boxes_checkout_2.style.display = "none";
+      }
+    }
+  }
 
   checkEmptyValues(){
     var fulledValues = false;
