@@ -14,6 +14,6 @@ $jsTime = filemtime('../Home/5.Video/video.js');
       Your browser does not support the video tag.
   </video>
   -->
-</section>
+</section>   
 
 <script src="../Home/5.Video/video.js?v=<?= $jsTime ?>" type="text/javascript"></script>
