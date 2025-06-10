@@ -146,7 +146,7 @@
   background-image: url("../Covers/2.Services/Boom_cover3.jpg");
 }
 .pictureCruising3{
-  background-image: url("../Covers/2.Services/3.BlanketCover.jpg" );
+  background-image: url("../Covers/2.Services/Blanket_Cover.jpg" );
 }
 
 .pictureCruising4{
