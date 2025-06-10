@@ -164,7 +164,7 @@
 }
 </style>
 <section class="services">
-  <div class="other_box">
+  <div id="other_box" class="other_box">
     <img id="close_others"src="../Home/2.Services/Image/close.png" alt="">
     <h1>TITLE</h1>
     <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -215,8 +215,9 @@
 <script type="text/javascript">
 
 const close_others = document.getElementById("close_others");
+const other_box = document.getElementById("other_box");
 
 close_others.addEventListener("click", function(){
-  alert("cerre");
+  other_box.style.display = "none";
 });
 </script>
