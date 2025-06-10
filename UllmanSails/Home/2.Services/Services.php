@@ -164,8 +164,8 @@
 }
 </style>
 <section class="services">
-  <div id="other_box" class="other_box">
-    <img id="close_others"src="../Home/2.Services/Image/close.png" alt="">
+  <div class="other_box">
+    <img src="../Home/2.Services/Image/close.png" alt="">
     <h1>TITLE</h1>
     <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -199,6 +199,8 @@
     <div class="box-services pictureServicesHome2">
       <div class="wrap-box-services">
         <h3>Cruising Sails</h3>
+        <h3>Blue Line Spinnakers</h3>
+
         <h4>See more</h4>
       </div>
     </div>
@@ -213,11 +215,4 @@
   </a>
 </section>
 <script type="text/javascript">
-
-const close_others = document.getElementById("close_others");
-const other_box = document.getElementById("other_box");
-
-close_others.addEventListener("click", function(){
-  other_box.style.display = "none";
-});
 </script>
