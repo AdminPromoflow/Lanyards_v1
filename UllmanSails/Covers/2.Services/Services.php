@@ -186,6 +186,10 @@
 .pictureCruising16{
   background-image: url("../Covers/2.Services/Bimini.jpg");
 }
+.no_image{
+  background-image: url("../Covers/2.Services/no_image.jpg");
+
+}
 
 </style>
 <section class="services">
@@ -323,7 +327,7 @@
     </div>
   </a>
   <a href="../Covers-17.Jib_Sock/index.php">
-    <div class="box-services pictureCruising16">
+    <div class="box-services no_image">
       <div class="wrap-box-services">
         <h3 class="smallFont2">Jib Sock</h3>
         <h4>See more</h4>
@@ -332,7 +336,7 @@
   </a>
 
   <a href="../Covers-18.Wind_Scoop/index.php">
-    <div class="box-services pictureCruising16">
+    <div class="box-services no_image">
       <div class="wrap-box-services">
         <h3 class="smallFont2">Wind Scoop</h3>
         <h4>See more</h4>
@@ -341,7 +345,7 @@
   </a>
 
   <a href="../Covers-19.Dinghy_Cover/index.php">
-    <div class="box-services pictureCruising16">
+    <div class="box-services no_image">
       <div class="wrap-box-services">
         <h3 class="smallFont2">Dinghy Cover</h3>
         <h4>See more</h4>
@@ -350,7 +354,7 @@
   </a>
 
   <a href="../Covers-20.Guardrail_and_Lifeline_Covers/index.php">
-    <div class="box-services pictureCruising16">
+    <div class="box-services no_image">
       <div class="wrap-box-services">
         <h3 class="smallFont2">Guardrail & Lifeline Covers</h3>
         <h4>See more</h4>
@@ -359,7 +363,7 @@
   </a>
 
   <a href="../Covers-21.Dodgers/index.php">
-    <div class="box-services pictureCruising16">
+    <div class="box-services no_image">
       <div class="wrap-box-services">
         <h3 class="smallFont2">Dodgers</h3>
         <h4>See more</h4>
@@ -368,7 +372,7 @@
   </a>
 
   <a href="../Covers-22.Exterior_Cushions/index.php">
-    <div class="box-services pictureCruising16">
+    <div class="box-services no_image">
       <div class="wrap-box-services">
         <h3 class="smallFont2">Exterior Cushions</h3>
         <h4>See more</h4>
