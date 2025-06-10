@@ -143,7 +143,7 @@
 }
 
 .pictureCruising2{
-  background-image: url("../Covers/2.Services/BoomCover3.jpg");
+  background-image: url("../Covers/2.Services/Boom_cover3.jpg");
 }
 .pictureCruising3{
   background-image: url("../Covers/2.Services/3.BlanketCover.jpg" );
