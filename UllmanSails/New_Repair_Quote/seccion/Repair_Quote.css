@@ -1,0 +1,96 @@
+.seccion-form{
+  position: relative;
+  width: 100%;
+  min-width: 300px;
+  padding: 0px;
+  color: black;
+  font-family: 'Poppins', sans-serif;
+}
+.seccion-form h2{
+  text-align: center;
+  margin: 0;
+  margin-bottom: 10px;
+  color: #00B7BD;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.3em;
+  padding: 10px;
+}
+form{
+  position: relative;
+  background-color: #ffff;
+  padding: 20px 40px;
+  max-width: 850px;
+
+  margin: 50px auto;
+  box-shadow: 0 0 55px #fff2;
+  border-radius: 8px;
+}
+form p{
+  position: relative;
+  width: 90%;
+  margin: auto;
+  line-height: 25px;
+}
+.form_input{
+  position: relative;
+  padding: 6px 20px;
+}
+input,  textarea, select, option{
+  position: relative;
+  width: 100%;
+  font-size: .8em;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border:none;
+  border: 1px solid #00B7BD;
+  border-left: 3px solid #00B7BD;
+  box-shadow: 0 0 15px #0001;
+  background-color: transparent;
+  border-radius: 4px;
+  color: #00000;
+}
+
+.seccion-form input:hover{
+  border: 1px solid #78BE21;
+  color: #78BE21;
+}
+.seccion-form textarea{
+  position: relative;
+  min-width: 100%;
+  resize: vertical;
+  min-height: 100px;
+  font-family: sans-serif;
+}
+.seccion-form textarea:hover{
+  border: 1px solid #78BE21;
+  color: #78BE21;
+}
+.seccion-form label{
+  font-size: 1.1em;
+  line-height: 2;
+}
+ .checkbox{
+  position: relative;
+  height: 14px;
+  width: auto;
+  margin: 20px 15px ;
+  accent-color:#78BE21;
+}
+fieldset{
+  border-radius: 5px;
+  border:1px solid #00B7BD;
+  padding: 0 10px 10px 10px;
+  margin: 20px;
+}
+legend{
+  padding: 0 6px;
+}
+.submit{
+  position: relative;
+  color: black;
+  width: 50%;
+  margin: auto;
+  left: 50%;
+  transform: translateX(-50%);
+}

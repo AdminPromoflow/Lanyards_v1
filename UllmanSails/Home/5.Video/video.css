@@ -1,0 +1,12 @@
+.videoHome{
+  position: relative;
+    max-width: 100%;
+    aspect-ratio: 16:9;
+    margin: 50px auto;
+    background-color: black;
+    padding: 2px 0;
+    font-family: 'Poppins', sans-serif;
+  }
+.videoHome video{
+  width: 100vw;
+}

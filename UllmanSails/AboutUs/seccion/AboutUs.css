@@ -1,0 +1,238 @@
+.seccion_aboutUs{
+  position: relative;
+  padding: 0;
+  top: -1px;
+  width: 100%;
+  margin: 0;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+}
+/*******************Texto about us con a*************/
+.img_about{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image:url("../../AboutUs/img/SlideHome.jpg");
+}
+.text_aboutUs{
+  position: relative;
+  width: 86%;
+  min-width: 300px;
+  padding:  50px 0 10px 0;
+  margin: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.text_aboutUs a{
+  position: absolute;
+  color: #202E52;
+  left:-10px;
+  top: 50px;
+  font-weight: 600;
+  font-size: .96em;
+  cursor: pointer;
+  text-decoration: none;
+  font-family:sans-serif;
+}
+.text_aboutUs a:hover{
+  text-decoration: underline;
+}
+
+.text_aboutUs h1 {
+  position: relative;
+  color: #005598;
+  font-size: 2.3em;
+  margin: 20px 0;
+}
+.text_aboutUs p {
+  position: relative;
+  font-size: 1.2em;
+  margin: 20px 0;
+}
+/*********Perfiles********/
+
+.profiles_aboutUs{
+  position: relative;
+  width: 70%;
+  min-width: 300px;
+  padding: 5px 0;
+  margin: 50px 0 20px 0;
+  background-color: #202E52;
+}
+.profiles_aboutUs h3{
+  position: relative;
+  color:#F2F2F2;
+  text-align: center;
+  padding:  13px 0;
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+/*************Cart perfiles****************/
+.box_card_aboutUs{
+  position: relative;
+  width: 70%;
+  min-width: 300px;
+  padding: 5px 0px;
+  margin: auto;
+
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap:30px;
+}
+.cart_perfiles_about{
+  position: relative;
+  width: 31%;
+  min-height: 420px;
+  min-width: 300px;
+  padding: 1px 0;
+  background-color: #F8F8FA;
+  border:1px solid #E3E5E9;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.cart_perfiles_about a {
+  position: relative;
+  all: unset;
+  width: 100%;
+}
+.cart_perfiles_about img{
+  position: relative;
+  width: 90%;
+  height: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  margin: 10px 0px;
+}
+.cart_text_about{
+  position: relative;
+  width: 100%;
+  padding: 0 15px;
+  margin:  0;
+  min-height: 110px;
+}
+
+.cart_text_about h3{
+  position: relative;
+  color:#0E193B;
+  text-align: left;
+  cursor: pointer;
+  width: 100%;
+  padding:   0;
+  font-size: clamp(1em, 2vw + 1em, 2em);
+  font-weight: 400;
+}
+.cart_text_about h4{
+  position: relative;
+  font-size: clamp(1em, 2vw + 1em, 1.3em);
+  color: black;
+  padding:  0 0 15px 0;
+
+  text-align: left;
+  font-weight: 200;
+  cursor: pointer;
+}
+/***********CART-TEXT***************/
+.SOLEPLYM_profiles_aboutUs{
+  position: relative;
+  width: 95%;
+  padding: 1px 0;
+  margin: 15px 0;
+  background-color: #202E52;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.SOLEPLYM_profiles_aboutUs h3{
+  position: relative;
+  color:#F2F2F2;
+  padding:  4px 0;
+  font-size: clamp(1em, 2vw + 1em, 1.3em);
+  font-weight: 400;
+}
+/***********TEXT-DATA***************/
+.text_data_about{
+  position: relative;
+  width: 100%;
+  padding: 1px 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.text_data_about p{
+  margin: 5px;
+  width: 45%;
+  color: #111C42;
+  font-size: clamp(1em, 2vw + 1em, 1.1em)
+}
+.cart_perfiles_about a{
+  position: relative;
+  all: unset;
+  width: 100%;
+}
+/***********Button***************/
+
+.button button{
+  position: relative;
+  width: 45%;
+  background-color: #005598;
+  padding: 5px;
+  margin-top: 5px;
+  color: #F2F2F2;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  border: 1px solid #202E52;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: 200;
+}
+button:hover{
+  background-color: rgb(36, 46, 77);
+}
+/*********** Social Media ***************/
+.boxSocialMedia{
+  position: relative;
+  width: 100%;
+  padding: 1px 0;
+  margin: 30px 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap:15px;
+}
+.socialMedia{
+  position: relative;
+  width: 55px;
+  height: 50px;
+}
+.socialMedia a img{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}

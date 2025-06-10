@@ -1,0 +1,145 @@
+.seccion_quote{
+  position: relative;
+  width: 100%;
+  display: flex;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  background-color: red;
+  margin: 25px 0px;
+  background-color: #FDF6F8;
+}
+/***************Cajas flexibles****************/
+.flex_box_quote{
+  position: relative;
+  width: 95%;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+  gap: 40px;
+}
+.flex_items_quote{
+  position: relative;
+  min-height: 300px;
+  height: 500px;
+  min-width: 300px;
+  text-align: center;
+  padding: 10px 0;
+
+  flex: 1 1 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.flex_items_quote:nth-child(1){
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction: column;
+}
+.flex_items_quote:nth-child(2){
+  background-image: url("../../../Home/Quote/img/img1.jpg");
+}
+.flex_items_quote:nth-child(3){
+  background-image: url("../../../Home/Quote/img/img2.jpg");
+}
+/******************Botton************************/
+.link_quote{
+  position: relative;
+  background-color: red;
+  text-decoration: none;
+  all: unset;
+}
+.button_quote{
+   position: relative;
+   width: 200px;
+   padding: 14px 0px;
+   cursor: pointer;
+   border: 1px solid #202E52;
+   margin: auto;
+}
+.button_quote1{
+  background-color: #005596;
+}
+.button_quote1:hover{
+  background-color: #245580;
+}
+
+.button_quote2{
+  background-color: #D21241;
+}
+.button_quote2:hover{
+  background-color: #b92c28;
+}
+
+ .button_quote h3{
+   text-align: center;
+   font-size: 1.3em;
+   font-weight: 500;
+   color: #F2F2F2;
+ }
+ /*********** Social Media ***************/
+ .boxSocialMedia{
+   position: relative;
+   width: 100%;
+   padding: 1px 0;
+   margin: 30px 0;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: row;
+   flex-wrap: wrap;
+   gap:15px;
+ }
+ .socialMedia{
+   position: relative;
+   width: 55px;
+   height: 50px;
+ }
+ .socialMedia a img{
+   position: relative;
+   width: 100%;
+   height: 100%;
+ }
+/********************titulos************************/
+.title1{
+  font-size: 1rem;
+  font-weight: 200;
+}
+.title2{
+  font-size: 2rem;
+  font-weight: 400;
+}
+/*************Flechas top*************/
+.arrow_top{
+  position:relative;
+  width: 35px;
+  height: 30px;
+  z-index: 2;
+  display: none;
+}
+
+.arrow_top img{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+/******************media querys*******************/
+@media (max-width: 1188px) {
+  .flex_items_quote:nth-child(1){
+    order: 3;
+  }
+  .arrow_top{
+    display: block;
+    bottom: 50px;
+  }
+}
