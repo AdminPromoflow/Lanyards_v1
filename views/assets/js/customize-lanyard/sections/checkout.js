@@ -49,7 +49,7 @@ class Checkout {
 
     // html2canvas a escala alta para buena resolución
     const canvas = await html2canvas(elemento, {
-      scale: 3, // Aumenta la resolución 3x
+      scale: 30, // Aumenta la resolución 3x
       useCORS: true
     });
 
