@@ -40,7 +40,7 @@ class Checkout {
 
   }
 
-  async sendPDF() {
+   sendPDF() {
     const div = document.getElementById('preview-customize-lanyard');
     const ventana = window.open('', '_blank');
 
