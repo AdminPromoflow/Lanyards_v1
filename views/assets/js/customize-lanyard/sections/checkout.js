@@ -40,33 +40,32 @@ class Checkout {
 
   }
 
-  sendPDF() {
+  async sendPDF() {
     const elemento = document.getElementById('preview-customize-lanyard');
 
+    const opciones = {
+      margin: 1,
+      filename: 'documento.pdf',
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { scale: 2 },
+      jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+    };
 
-          const opciones = {
-            margin: 1,
-            filename: 'documento.pdf',
-            image: { type: 'jpeg', quality: 0.98 },
-            html2canvas: { scale: 2 },
-            jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
-          };
+    const worker = html2pdf().set(opciones).from(elemento);
+    const blob = await worker.outputPdf('blob'); // ✅ ahora válido porque el método es async
 
-          const worker = html2pdf().set(opciones).from(elemento);
-          const blob = await worker.outputPdf('blob');
+    const formData = new FormData();
+    formData.append('archivo', blob, 'documento.pdf');
 
-          const formData = new FormData();
-          formData.append('archivo', blob, 'documento.pdf');
-
-          fetch('../../controller/lanyard/uploadPDF.php', {
-            method: 'POST',
-            body: formData
-          })
-          .then(response => response.text())
-          .then(data => alert('Servidor respondió: ' + data))
-          .catch(error => {
-            console.error('Error al enviar el PDF:', error);
-          });
+    fetch('../../controller/lanyard/uploadPDF.php', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => response.text())
+    .then(data => alert('Servidor respondió: ' + data))
+    .catch(error => {
+      console.error('Error al enviar el PDF:', error);
+    });
   }
 
   obtainProduct(){
