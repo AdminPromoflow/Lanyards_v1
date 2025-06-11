@@ -43,32 +43,14 @@ class Checkout {
   async sendPDF() {
     const elemento = document.getElementById('preview-customize-lanyard');
 
-    const opciones = {
-      margin: 1,
-      filename: 'documento.pdf',
-      image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: {
-        scale: 2,
-        useCORS: true
-      },
-      jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
-    };
+    html2canvas(elemento).then(canvas => {
+    const imgData = canvas.toDataURL("image/png");
 
-    const worker = html2pdf().set(opciones).from(elemento);
-    const blob = await worker.outputPdf('blob');
-
-    const formData = new FormData();
-    formData.append('archivo', blob, 'documento.pdf');
-
-    fetch('../../controller/lanyard/uploadPDF.php', {
-      method: 'POST',
-      body: formData
-    })
-    .then(response => response.text())
-    .then(data => alert('Servidor respondió: ' + data))
-    .catch(error => {
-      console.error('Error al enviar el PDF:', error);
-    });
+    const link = document.createElement('a');
+    link.href = imgData;
+    link.download = 'captura.png';
+    link.click();
+  });
   }
 
 
