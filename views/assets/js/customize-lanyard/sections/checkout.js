@@ -41,7 +41,7 @@ class Checkout {
   }
 
   async sendPDF() {
-    const elemento = document.getElementById('left-super-lanyard-manual');
+    const elemento = document.getElementById('text_lanyard_left');
 
     // Capturamos el tamaño real del elemento en px
     const width = elemento.offsetWidth;
