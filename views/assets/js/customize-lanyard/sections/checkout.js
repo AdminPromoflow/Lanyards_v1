@@ -41,7 +41,7 @@ class Checkout {
   }
 
   async sendPDF() {
-    const elemento = document.getElementById('preview-customize-lanyard');
+    const elemento = document.getElementById('text_lanyard_right');
 
     html2canvas(elemento, {
        scale: 30,        // Alta resolución
