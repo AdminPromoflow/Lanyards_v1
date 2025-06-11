@@ -171,7 +171,7 @@ class ProvidedInformation {
         throw new Error("Network error.");
       })
       .then(data => {
-        alert(data);
+      //  alert(data);
       const data2 =   JSON.parse(data);
       providedInformation.setHTMLAddresses(data2["addresses"]);
 
@@ -184,7 +184,7 @@ class ProvidedInformation {
 
 
 
-   setHTMLAddresses(data) {
+  function setHTMLAddresses(data) {
     // Dirección principal
     const firstName = document.getElementById("first_name");
     const lastName = document.getElementById("last_name");
@@ -209,33 +209,32 @@ class ProvidedInformation {
     const postcode2 = document.getElementById("postcode_2");
     const emailAddress2 = document.getElementById("email_address_2");
 
-    // Verifica que existan las direcciones esperadas
-    if (data.addresses && data.addresses.length > 0) {
-      const addr1 = data.addresses[0];
-      firstName.value = addr1.first_name || "";
-      lastName.value = addr1.last_name || "";
-      companyName.value = addr1.company_name || "";
-      phone.value = addr1.phone || "";
-      streetAddress1.value = addr1.street_address_1 || "";
-      country.value = addr1.country || "";
-      state.value = addr1.state || "";
-      townCity.value = addr1.town_city || "";
-      postcode.value = addr1.postcode || "";
-      emailAddress.value = addr1.email_address || "";
+    // Dirección principal
+    if (data[0]) {
+      firstName.value = data[0]["first_name"] || "";
+      lastName.value = data[0]["last_name"] || "";
+      companyName.value = data[0]["company_name"] || "";
+      phone.value = data[0]["phone"] || "";
+      streetAddress1.value = data[0]["street_address_1"] || "";
+      country.value = data[0]["country"] || "";
+      state.value = data[0]["state"] || "";
+      townCity.value = data[0]["town_city"] || "";
+      postcode.value = data[0]["postcode"] || "";
+      emailAddress.value = data[0]["email_address"] || "";
     }
 
-    if (data.addresses && data.addresses.length > 1) {
-      const addr2 = data.addresses[1];
-      firstName2.value = addr2.first_name || "";
-      lastName2.value = addr2.last_name || "";
-      companyName2.value = addr2.company_name || "";
-      phone2.value = addr2.phone || "";
-      streetAddress1_2.value = addr2.street_address_1 || "";
-      country2.value = addr2.country || "";
-      state2.value = addr2.state || "";
-      townCity2.value = addr2.town_city || "";
-      postcode2.value = addr2.postcode || "";
-      emailAddress2.value = addr2.email_address || "";
+    // Dirección secundaria
+    if (data[1]) {
+      firstName2.value = data[1]["first_name"] || "";
+      lastName2.value = data[1]["last_name"] || "";
+      companyName2.value = data[1]["company_name"] || "";
+      phone2.value = data[1]["phone"] || "";
+      streetAddress1_2.value = data[1]["street_address_1"] || "";
+      country2.value = data[1]["country"] || "";
+      state2.value = data[1]["state"] || "";
+      townCity2.value = data[1]["town_city"] || "";
+      postcode2.value = data[1]["postcode"] || "";
+      emailAddress2.value = data[1]["email_address"] || "";
     }
   }
 
