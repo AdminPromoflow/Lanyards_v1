@@ -41,29 +41,38 @@ class Checkout {
   }
 
     sendPDF() {
-    const div = document.getElementById('preview-customize-lanyard');
+  //  const div = document.getElementById('preview-customize-lanyard');
 
-     html2canvas(div, {
-       scale: 2, // Alta resolución
-       useCORS: true
-     }).then(canvas => {
-       const imgData = canvas.toDataURL("image/png");
+    const div = document.getElementById("preview-customize-lanyard");
 
-       // Crear una ventana temporal para imprimir
-       const ventana = window.open('', '_blank');
-       ventana.document.write('<html><head><title>Impresión</title></head><body style="margin:0;">');
-       ventana.document.write(`<img src="${imgData}" style="width:100%; max-width:100%;"/>`);
-       ventana.document.write('</body></html>');
-       ventana.document.close();
+      // Asegura que esté visible y renderizado
+      if (!div) {
+        alert("No se encontró el div.");
+        return;
+      }
 
-       ventana.onload = () => {
-         ventana.focus();
-         ventana.print();
-         ventana.close();
-       };
-     }).catch(err => {
-       console.error("Error al capturar e imprimir:", err);
-     });
+      // Captura con alta resolución
+      const scale = 3; // calidad 3x
+      const canvas = await html2canvas(div, {
+        scale: scale,
+        useCORS: true, // importante si usas imágenes externas
+        backgroundColor: "#ffffff" // fondo blanco
+      });
+
+      const imgData = canvas.toDataURL("image/jpeg", 1.0);
+      const imgWidth = canvas.width;
+      const imgHeight = canvas.height;
+
+      // Usar jsPDF en modo UMD
+      const { jsPDF } = window.jspdf;
+      const pdf = new jsPDF({
+        orientation: imgWidth > imgHeight ? 'landscape' : 'portrait',
+        unit: 'px',
+        format: [imgWidth, imgHeight]
+      });
+
+      pdf.addImage(imgData, 'JPEG', 0, 0, imgWidth, imgHeight);
+      pdf.save("captura.pdf");
   }
 
 
