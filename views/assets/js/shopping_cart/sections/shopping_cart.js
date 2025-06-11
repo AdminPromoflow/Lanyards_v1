@@ -520,7 +520,7 @@ class ShoppingCart {
     this.total = this.subtotal + this.tax + this.shippingPrice;
 
 
-    alert(this.total);
+    alert(this.shippingPrice);
 
     price_shipping.textContent = "£" +this.shippingPrice;
 
@@ -528,7 +528,7 @@ class ShoppingCart {
 
   }
   changeShoppingTime(days){
-    alert("days" + days);
+  //  alert("days" + days);
 
     this.shippingDays = days;
     this.updatePriceShippingHTML();
