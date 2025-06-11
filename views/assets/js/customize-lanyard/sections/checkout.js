@@ -41,18 +41,21 @@ class Checkout {
   }
 
   async sendPDF() {
-    const elemento = document.querySelector(".preview-customize-lanyard");
+    const elemento = document.getElementById('preview-customize-lanyard');
 
     const opciones = {
       margin: 1,
       filename: 'documento.pdf',
       image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: { scale: 2 },
+      html2canvas: {
+        scale: 2,
+        useCORS: true
+      },
       jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
     };
 
     const worker = html2pdf().set(opciones).from(elemento);
-    const blob = await worker.outputPdf('blob'); // ✅ ahora válido porque el método es async
+    const blob = await worker.outputPdf('blob');
 
     const formData = new FormData();
     formData.append('archivo', blob, 'documento.pdf');
@@ -67,6 +70,7 @@ class Checkout {
       console.error('Error al enviar el PDF:', error);
     });
   }
+
 
   obtainProduct(){
     this.setProduct("Custom Lanyard");
