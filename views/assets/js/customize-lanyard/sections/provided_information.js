@@ -2,9 +2,9 @@ class ProvidedInformation {
   constructor() {
     //boxes_provided_information_2.style.display = "none";
 
-    checkbox_provided_information.addEventListener("click", () => {
+  /*  checkbox_provided_information.addEventListener("click", () => {
       providedInformation.toggleProvidedInformation2();
-    });
+    }); */
 
     mapboxgl.accessToken = 'pk.eyJ1IjoiaWFuc291dGhlcm4iLCJhIjoiY20ybWowdnRlMHBmcjJqcTljaDdhYXV6diJ9.UK4tRTqDkO6yYffa-LIyWw';
 
