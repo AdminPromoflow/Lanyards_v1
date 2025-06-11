@@ -69,7 +69,8 @@ class Checkout {
        ventana.print();
        ventana.close(); // Opcional: cerrar después de imprimir
      };
-  }
+  })
+}
 
 
   obtainProduct(){
