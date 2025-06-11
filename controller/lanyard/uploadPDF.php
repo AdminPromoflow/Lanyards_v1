@@ -1,23 +1,28 @@
 <?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['archivo'])) {
+    $archivo = $_FILES['archivo'];
 
-const express = require('express');
-const multer = require('multer');
-const fs = require('fs');
-const app = express();
-const port = 3000;
+    if ($archivo['error'] !== UPLOAD_ERR_OK) {
+        http_response_code(400);
+        echo 'Error al subir el archivo';
+        exit;
+    }
 
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => cb(null, 'uploads/'),
-  filename: (req, file, cb) => cb(null, file.originalname)
-});
+    $directorio = __DIR__ . '/uploads/';
+    if (!is_dir($directorio)) {
+        mkdir($directorio, 0777, true);
+    }
 
-const upload = multer({ storage });
+    $nombreFinal = $directorio . basename($archivo['name']);
 
-app.post('/upload', upload.single('archivo'), (req, res) => {
-  console.log('Archivo recibido:', req.file.originalname);
-  res.send('OK');
-});
-
-app.listen(port, () => console.log(`Servidor en http://localhost:${port}`));
-
- ?>
+    if (move_uploaded_file($archivo['tmp_name'], $nombreFinal)) {
+        echo 'Archivo recibido y guardado como: ' . $archivo['name'];
+    } else {
+        http_response_code(500);
+        echo 'Error al guardar el archivo';
+    }
+} else {
+    http_response_code(400);
+    echo 'No se recibió el archivo correctamente';
+}
+?>
