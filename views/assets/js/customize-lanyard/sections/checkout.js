@@ -212,28 +212,26 @@ class Checkout {
     this.linkPdf = newLink;
   }
 
-  updateItems(){
-
+  updateItems() {
     this.showHideBottons("flex");
 
-    buy_cart_material.innerHTML =  material.getMaterialSelected();
-    buy_cart_lanyard_type.innerHTML =  oneTwoEndsClass.getTypeLanyardSelected();
-    buy_cart_width.innerHTML =  widthClass.getWidthSelected();
-    buy_cart_side_printed.innerHTML =  sidePrintedClass.getSidePrintedSelected();
-    buy_cart_clips.innerHTML =  clipClass.getClipSelected();
-    buy_cart_attachment.innerHTML =  attachmentClass.getAttachmentSelected();
-    buy_cart_accessories.innerHTML =  accessoriesClass.getAccessoriesSelected();
-    buy_cart_colour_quantity.innerHTML =  colourClass.getColourSelected();
+    buy_cart_material.innerHTML = material.getMaterialSelected();
+    buy_cart_lanyard_type.innerHTML = oneTwoEndsClass.getTypeLanyardSelected();
+    buy_cart_width.innerHTML = widthClass.getWidthSelected();
+    buy_cart_side_printed.innerHTML = sidePrintedClass.getSidePrintedSelected();
+    buy_cart_clips.innerHTML = clipClass.getClipSelected();
+    buy_cart_attachment.innerHTML = attachmentClass.getAttachmentSelected();
+    buy_cart_accessories.innerHTML = accessoriesClass.getAccessoriesSelected();
+    buy_cart_colour_quantity.innerHTML = colourClass.getColourSelected();
 
-
-    price_buy_cart_material.innerHTML = "+£" + priceClass.getPricePerMaterialWithAmount() + " per unit";
-    price_buy_cart_lanyard_type.innerHTML = "+£" + priceClass.getPriceLanyardType() + " per unit";
-    price_buy_cart_width.innerHTML = "+£" + priceClass.getPriceWidth() + " per unit";
-    price_buy_cart_side_printed.innerHTML = "+£" + priceClass.getPriceSidePrinted() + " per unit";
-    price_buy_cart_clips.innerHTML = "+£" + priceClass.getPriceClip() + " per unit";
-    price_buy_cart_attachment.innerHTML = "+£" + priceClass.getPriceAttachment() + " per unit";
-    price_buy_cart_accessories.innerHTML = "+£" + priceClass.getPriceAccessory() + " per unit";
-    price_buy_cart_colour_quantity.innerHTML = "+£" + priceClass.getPriceColour() + " per unit";
+    price_buy_cart_material.innerHTML = "+£" + priceClass.getPricePerMaterialWithAmount().toFixed(2) + " per unit";
+    price_buy_cart_lanyard_type.innerHTML = "+£" + priceClass.getPriceLanyardType().toFixed(2) + " per unit";
+    price_buy_cart_width.innerHTML = "+£" + priceClass.getPriceWidth().toFixed(2) + " per unit";
+    price_buy_cart_side_printed.innerHTML = "+£" + priceClass.getPriceSidePrinted().toFixed(2) + " per unit";
+    price_buy_cart_clips.innerHTML = "+£" + priceClass.getPriceClip().toFixed(2) + " per unit";
+    price_buy_cart_attachment.innerHTML = "+£" + priceClass.getPriceAttachment().toFixed(2) + " per unit";
+    price_buy_cart_accessories.innerHTML = "+£" + priceClass.getPriceAccessory().toFixed(2) + " per unit";
+    price_buy_cart_colour_quantity.innerHTML = "+£" + priceClass.getPriceColour().toFixed(2) + " per unit";
 
     var total = priceClass.getPricePerMaterialWithAmount() +
                 priceClass.getPriceLanyardType() +
@@ -244,13 +242,13 @@ class Checkout {
                 priceClass.getPriceAccessory() +
                 priceClass.getPriceColour();
 
-    price_buy_cart_price_per_unit.innerHTML = "+£" + total + " per unit";
+    price_buy_cart_price_per_unit.innerHTML = "+£" + total.toFixed(2) + " per unit";
 
     amount_buy_cart.innerHTML = priceClass.getAmountSelected() + " units";
-    price_buy_cart_price_per_unit_2.innerHTML = "£" + total ;
-    price_buy_cart_subtotal.innerHTML = "£" + (priceClass.getAmountSelected() * total);
-
+    price_buy_cart_price_per_unit_2.innerHTML = "£" + total.toFixed(2);
+    price_buy_cart_subtotal.innerHTML = "£" + (priceClass.getAmountSelected() * total).toFixed(2);
   }
+
 
   showHideBottons(action){
     const container_button_boxes_checkout = document.getElementById('container_button_boxes_checkout');
