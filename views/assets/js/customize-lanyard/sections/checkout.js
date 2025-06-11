@@ -41,7 +41,7 @@ class Checkout {
   }
 
   async sendPDF() {
-    const elemento = document.getElementById('preview-customize-lanyard');
+    const elemento = document.querySelector(".preview-customize-lanyard");
 
     const opciones = {
       margin: 1,
