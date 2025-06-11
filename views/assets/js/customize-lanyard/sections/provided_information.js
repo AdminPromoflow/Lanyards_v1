@@ -245,7 +245,7 @@ class ProvidedInformation {
 
     const fields = [
       first_name, last_name, company_name, phone, country,
-      state, town_city, street_address_1, postcode, email_address
+       town_city, street_address_1, postcode, email_address
     ];
 
     let allFilled = true;
