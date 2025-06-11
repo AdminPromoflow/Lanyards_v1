@@ -40,8 +40,7 @@ class Checkout {
 
   }
 
-    sendPDF() {
-  //  const div = document.getElementById('preview-customize-lanyard');
+    async sendPDF() {
 
     const div = document.getElementById("preview-customize-lanyard");
 
