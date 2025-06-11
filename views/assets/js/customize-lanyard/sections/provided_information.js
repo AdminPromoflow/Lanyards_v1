@@ -187,6 +187,7 @@ class ProvidedInformation {
   setHTMLAddresses(data){
     const containers_boxes_provided_information = document.getElementById("containers_boxes_provided_information");
 
+
   
 
   }
