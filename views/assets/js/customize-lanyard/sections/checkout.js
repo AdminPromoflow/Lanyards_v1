@@ -23,13 +23,15 @@ class Checkout {
     });
 
     add_to_cart_from_buy_cart.addEventListener("click", function(){
-      checkoutClass.obtainProduct();
+
+      alert("bueno");
+    /*  checkoutClass.obtainProduct();
       checkoutClass.obtainDescription();
       checkoutClass.obtainPricePerUnit();
       checkoutClass.obtainAmount();
       checkoutClass.obtainTotal();
       chargingClass.hideShowchargin(true);
-      checkoutClass.makeAjaxRequestCreateJob();
+      checkoutClass.makeAjaxRequestCreateJob();*/
     })
 
   }
