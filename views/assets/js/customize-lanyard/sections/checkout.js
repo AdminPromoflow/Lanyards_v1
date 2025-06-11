@@ -55,7 +55,7 @@ class Checkout {
       const canvas = await html2canvas(div, {
         scale: scale,
         useCORS: true, // importante si usas imágenes externas
-        backgroundColor: "#ffffff" // fondo blanco
+        backgroundColor: "rgba(0,0,0,0)" // fondo blanco
       });
 
       const imgData = canvas.toDataURL("image/jpeg", 1.0);
