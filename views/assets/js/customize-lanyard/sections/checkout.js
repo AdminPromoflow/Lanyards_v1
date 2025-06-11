@@ -43,30 +43,43 @@ class Checkout {
   async sendPDF() {
     const elemento = document.getElementById('preview-customize-lanyard');
 
-    const targetWidth = 2480;  // px (A4 @300dpi)
-    const targetHeight = 3508; // px
+    // Tamaño A4 a 300 DPI: 2480 x 3508 px
+      const dpi = 300;
+      const mmToInches = 25.4;
+      const widthInMm = 210;
+      const heightInMm = 297;
+      const widthInPx = Math.floor((dpi / mmToInches) * widthInMm);   // ≈ 2480 px
+      const heightInPx = Math.floor((dpi / mmToInches) * heightInMm); // ≈ 3508 px
 
-    html2canvas(elemento, {
-      scale: 1, // base scale
-      width: elemento.scrollWidth,
-      height: elemento.scrollHeight,
-      useCORS: true
-    }).then(canvas => {
-      // Creamos un canvas del tamaño deseado
-      const resizedCanvas = document.createElement('canvas');
-      resizedCanvas.width = targetWidth;
-      resizedCanvas.height = targetHeight;
+      // Opcional: redimensionar el div (mejor si tiene layout fluido)
+      const originalStyle = {
+        width: elemento.style.width,
+        height: elemento.style.height,
+      };
+      elemento.style.width = `${widthInPx}px`;
+      elemento.style.height = `${heightInPx}px`;
 
-      const ctx = resizedCanvas.getContext('2d');
-      ctx.drawImage(canvas, 0, 0, targetWidth, targetHeight);
+      // Captura con html2canvas a gran escala
+      const canvas = await html2canvas(elemento, {
+        scale: 1, // No escalar (ya lo forzamos)
+        useCORS: true
+      });
 
-      const imgData = resizedCanvas.toDataURL("image/png");
+      // Restaurar tamaño original
+      elemento.style.width = originalStyle.width;
+      elemento.style.height = originalStyle.height;
 
-      const link = document.createElement('a');
-      link.href = imgData;
-      link.download = 'captura_tamano_personalizado.png';
-      link.click();
-    });
+      const imgData = canvas.toDataURL('image/jpeg', 1.0); // Calidad máxima
+
+      // Crear PDF con jsPDF en formato A4
+      const { jsPDF } = window.jspdf;
+      const pdf = new jsPDF('portrait', 'mm', 'a4');
+
+      // Agregar imagen al PDF: 0,0 posición, 210x297 mm (A4)
+      pdf.addImage(imgData, 'JPEG', 0, 0, 210, 297); // mm
+
+      // Descargar
+      pdf.save('captura_A4_300dpi.pdf');
   }
 
 
