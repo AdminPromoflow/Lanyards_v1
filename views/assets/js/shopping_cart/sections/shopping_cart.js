@@ -217,7 +217,7 @@ class ShoppingCart {
     this.shippingPrice = 0;
   }
 
-  alert(this.shippingPrice);
+  //alert(this.shippingPrice);
   this.total = this.getSubtotal() + this.getTax() + this.getShippingPrice();
 }
 
@@ -520,7 +520,7 @@ class ShoppingCart {
     this.total = this.subtotal + this.tax + this.shippingPrice;
 
 
-//    alert(this.total);
+    alert(this.total);
 
     price_shipping.textContent = "£" +this.shippingPrice;
 
@@ -528,6 +528,7 @@ class ShoppingCart {
 
   }
   changeShoppingTime(days){
+    alert("days" + days);
 
     this.shippingDays = days;
     this.updatePriceShippingHTML();
