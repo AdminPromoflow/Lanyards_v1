@@ -42,50 +42,33 @@ class Checkout {
 
   async sendPDF() {
 
-    const { jsPDF } = window.jspdf;
+    const div = document.getElementById('preview-customize-lanyard');
+    const ventana = window.open('', '_blank');
 
-    const original = document.getElementById('preview-customize-lanyard');
-    if (!original) {
-      console.error('No se encontró el div con ID:', divId);
-      return;
-    }
+     // Empieza a construir el documento
+     ventana.document.write('<html><head><title>Imprimir</title>');
 
-    // Clonamos el div y le agregamos los estilos globales
-    const clon = original.cloneNode(true);
-    const contenedor = document.createElement('div');
-    contenedor.style.position = 'fixed';
-    contenedor.style.top = '-10000px';
-    contenedor.style.left = '-10000px';
-    contenedor.style.width = original.offsetWidth + 'px';
-    contenedor.appendChild(clon);
-    document.body.appendChild(contenedor);
+     // Clona todos los <link rel="stylesheet">
+     document.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
+       ventana.document.write(<link rel="stylesheet" href="${link.href}">);
+     });
 
-    // Aplicamos todos los <link rel="stylesheet">
-    const estilos = Array.from(document.querySelectorAll('link[rel="stylesheet"], style'));
-    estilos.forEach(estilo => {
-      contenedor.appendChild(estilo.cloneNode(true));
-    });
+     // Clona estilos en etiquetas <style>
+     document.querySelectorAll('style').forEach(style => {
+       ventana.document.write(<style>${style.innerHTML}</style>);
+     });
 
-    // Esperamos a que se renderice y capturamos con html2canvas
-    await new Promise(resolve => setTimeout(resolve, 500)); // tiempo para renderizar
-    const canvas = await html2canvas(clon, {
-      scale: 2,
-      useCORS: true,
-      allowTaint: true
-    });
+     ventana.document.write('</head><body>');
+     ventana.document.write(div.outerHTML);
+     ventana.document.write('</body></html>');
+     ventana.document.close();
 
-    const imgData = canvas.toDataURL('image/png');
-    const pdf = new jsPDF({
-      orientation: 'portrait',
-      unit: 'px',
-      format: [canvas.width, canvas.height]
-    });
-
-    pdf.addImage(imgData, 'PNG', 0, 0, canvas.width, canvas.height);
-    pdf.save('contenido.pdf');
-
-    document.body.removeChild(contenedor); // limpiamos el DOM
-
+     // Espera un poco para que cargue todo y luego imprime
+     ventana.onload = () => {
+       ventana.focus();
+       ventana.print();
+       ventana.close(); // Opcional: cerrar después de imprimir
+     };
   }
 
 
