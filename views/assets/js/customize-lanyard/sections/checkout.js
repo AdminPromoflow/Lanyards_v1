@@ -41,35 +41,21 @@ class Checkout {
   }
 
   async sendPDF() {
-    const elemento = document.getElementById('text_lanyard_left');
+    const elemento = document.getElementById('preview-customize-lanyard');
 
-    // Capturamos el tamaño real del elemento en px
-    const width = elemento.offsetWidth;
-    const height = elemento.offsetHeight;
+    html2canvas(elemento, {
+       scale: 30,        // Alta resolución
+       useCORS: true    // Permite cargar imágenes externas si tienen CORS
+     }).then(canvas => {
+       const imagen = canvas.toDataURL('image/png'); // También puedes usar 'image/jpeg'
 
-    // html2canvas a escala alta para buena resolución
-    const canvas = await html2canvas(elemento, {
-      scale: 30, // Aumenta la resolución 3x
-      useCORS: true
-    });
-
-    const imgData = canvas.toDataURL('image/jpeg', 1.0);
-
-    // Crear PDF con tamaño en mm proporcional al tamaño original
-    const pxToMm = 0.264583; // 1px = 0.264583mm
-
-    const pdfWidth = width * pxToMm;
-    const pdfHeight = height * pxToMm;
-
-    const { jsPDF } = window.jspdf;
-    const pdf = new jsPDF({
-      orientation: pdfWidth > pdfHeight ? 'landscape' : 'portrait',
-      unit: 'mm',
-      format: [pdfWidth, pdfHeight]
-    });
-
-    pdf.addImage(imgData, 'JPEG', 0, 0, pdfWidth, pdfHeight);
-    pdf.save('captura_real.pdf');
+       const link = document.createElement('a');
+       link.href = imagen;
+       link.download = 'captura.png';
+       link.click();
+     }).catch(err => {
+       console.error('Error capturando imagen:', err);
+     });
   }
 
 
