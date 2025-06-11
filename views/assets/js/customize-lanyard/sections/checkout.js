@@ -43,14 +43,30 @@ class Checkout {
   async sendPDF() {
     const elemento = document.getElementById('preview-customize-lanyard');
 
-    html2canvas(elemento).then(canvas => {
-    const imgData = canvas.toDataURL("image/png");
+    const targetWidth = 2480;  // px (A4 @300dpi)
+    const targetHeight = 3508; // px
 
-    const link = document.createElement('a');
-    link.href = imgData;
-    link.download = 'captura.png';
-    link.click();
-  });
+    html2canvas(elemento, {
+      scale: 1, // base scale
+      width: elemento.scrollWidth,
+      height: elemento.scrollHeight,
+      useCORS: true
+    }).then(canvas => {
+      // Creamos un canvas del tamaño deseado
+      const resizedCanvas = document.createElement('canvas');
+      resizedCanvas.width = targetWidth;
+      resizedCanvas.height = targetHeight;
+
+      const ctx = resizedCanvas.getContext('2d');
+      ctx.drawImage(canvas, 0, 0, targetWidth, targetHeight);
+
+      const imgData = resizedCanvas.toDataURL("image/png");
+
+      const link = document.createElement('a');
+      link.href = imgData;
+      link.download = 'captura_tamano_personalizado.png';
+      link.click();
+    });
   }
 
 
