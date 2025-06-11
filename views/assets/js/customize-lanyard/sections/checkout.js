@@ -43,19 +43,37 @@ class Checkout {
   async sendPDF() {
     const elemento = document.getElementById('text_lanyard_right');
 
-    html2canvas(elemento, {
-       scale: 30,        // Alta resolución
-       useCORS: true    // Permite cargar imágenes externas si tienen CORS
-     }).then(canvas => {
-       const imagen = canvas.toDataURL('image/png'); // También puedes usar 'image/jpeg'
+    if (!div) {
+        console.error('No se encontró el div con ID:', divId);
+        return;
+      }
 
-       const link = document.createElement('a');
-       link.href = imagen;
-       link.download = 'captura.png';
-       link.click();
-     }).catch(err => {
-       console.error('Error capturando imagen:', err);
-     });
+      const ventana = window.open('', '_blank');
+
+      // Empieza a construir el documento
+      ventana.document.write('<html><head><title>Imprimir</title>');
+
+      // Clona todos los <link rel="stylesheet">
+      document.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
+        ventana.document.write(`<link rel="stylesheet" href="${link.href}">`);
+      });
+
+      // Clona estilos en etiquetas <style>
+      document.querySelectorAll('style').forEach(style => {
+        ventana.document.write(`<style>${style.innerHTML}</style>`);
+      });
+
+      ventana.document.write('</head><body>');
+      ventana.document.write(div.outerHTML);
+      ventana.document.write('</body></html>');
+      ventana.document.close();
+
+      // Espera un poco para que cargue todo y luego imprime
+      ventana.onload = () => {
+        ventana.focus();
+        ventana.print();
+        ventana.close(); // Opcional: cerrar después de imprimir
+      };
   }
 
 
