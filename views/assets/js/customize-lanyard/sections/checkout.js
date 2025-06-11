@@ -43,43 +43,33 @@ class Checkout {
   async sendPDF() {
     const elemento = document.getElementById('preview-customize-lanyard');
 
-    // Tamaño A4 a 300 DPI: 2480 x 3508 px
-      const dpi = 300;
-      const mmToInches = 25.4;
-      const widthInMm = 210;
-      const heightInMm = 297;
-      const widthInPx = Math.floor((dpi / mmToInches) * widthInMm);   // ≈ 2480 px
-      const heightInPx = Math.floor((dpi / mmToInches) * heightInMm); // ≈ 3508 px
+    // Capturamos el tamaño real del elemento en px
+    const width = elemento.offsetWidth;
+    const height = elemento.offsetHeight;
 
-      // Opcional: redimensionar el div (mejor si tiene layout fluido)
-      const originalStyle = {
-        width: elemento.style.width,
-        height: elemento.style.height,
-      };
-      elemento.style.width = `${widthInPx}px`;
-      elemento.style.height = `${heightInPx}px`;
+    // html2canvas a escala alta para buena resolución
+    const canvas = await html2canvas(elemento, {
+      scale: 3, // Aumenta la resolución 3x
+      useCORS: true
+    });
 
-      // Captura con html2canvas a gran escala
-      const canvas = await html2canvas(elemento, {
-        scale: 1, // No escalar (ya lo forzamos)
-        useCORS: true
-      });
+    const imgData = canvas.toDataURL('image/jpeg', 1.0);
 
-      // Restaurar tamaño original
-      elemento.style.width = originalStyle.width;
-      elemento.style.height = originalStyle.height;
+    // Crear PDF con tamaño en mm proporcional al tamaño original
+    const pxToMm = 0.264583; // 1px = 0.264583mm
 
-      const imgData = canvas.toDataURL('image/jpeg', 1.0); // Calidad máxima
+    const pdfWidth = width * pxToMm;
+    const pdfHeight = height * pxToMm;
 
-      // Crear PDF con jsPDF en formato A4
-      const { jsPDF } = window.jspdf;
-      const pdf = new jsPDF('portrait', 'mm', 'a4');
+    const { jsPDF } = window.jspdf;
+    const pdf = new jsPDF({
+      orientation: pdfWidth > pdfHeight ? 'landscape' : 'portrait',
+      unit: 'mm',
+      format: [pdfWidth, pdfHeight]
+    });
 
-      // Agregar imagen al PDF: 0,0 posición, 210x297 mm (A4)
-      pdf.addImage(imgData, 'JPEG', 0, 0, 210, 297); // mm
-
-      // Descargar
-      pdf.save('captura_A4_300dpi.pdf');
+    pdf.addImage(imgData, 'JPEG', 0, 0, pdfWidth, pdfHeight);
+    pdf.save('captura_real.pdf');
   }
 
 
