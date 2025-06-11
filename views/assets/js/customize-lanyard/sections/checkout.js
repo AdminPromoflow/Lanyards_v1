@@ -40,47 +40,30 @@ class Checkout {
 
   }
 
-  async  sendPDF() {
+    sendPDF() {
     const div = document.getElementById('preview-customize-lanyard');
 
-    // Clona el div en un nuevo documento oculto para mantener los estilos
-    const copia = div.cloneNode(true);
-    const contenedor = document.createElement('div');
-    contenedor.style.position = 'fixed';
-    contenedor.style.top = '-9999px';
-    contenedor.appendChild(copia);
-    document.body.appendChild(contenedor);
+     html2canvas(div, {
+       scale: 2, // Alta resolución
+       useCORS: true
+     }).then(canvas => {
+       const imgData = canvas.toDataURL("image/png");
 
-    // Espera a que cargue todo (fonts, imágenes)
-    await new Promise(resolve => setTimeout(resolve, 500));
+       // Crear una ventana temporal para imprimir
+       const ventana = window.open('', '_blank');
+       ventana.document.write('<html><head><title>Impresión</title></head><body style="margin:0;">');
+       ventana.document.write(`<img src="${imgData}" style="width:100%; max-width:100%;"/>`);
+       ventana.document.write('</body></html>');
+       ventana.document.close();
 
-    // Captura el div con estilos y transformaciones
-    const canvas = await html2canvas(copia, {
-      scale: 2, // Alta resolución
-      useCORS: true
-    });
-
-    // Convierte a imagen PNG
-    canvas.toBlob(async (blob) => {
-      const formData = new FormData();
-      formData.append('imagen', blob, 'captura.png');
-
-      try {
-        const response = await fetch('upload.php', {
-          method: 'POST',
-          body: formData
-        });
-
-        const resultado = await response.text();
-        alert('Servidor respondió: ' + resultado);
-      } catch (err) {
-        console.error('Error al enviar imagen:', err);
-        alert('Error al enviar imagen.');
-      }
-
-      // Limpia el contenedor oculto
-      document.body.removeChild(contenedor);
-    }, 'image/png');
+       ventana.onload = () => {
+         ventana.focus();
+         ventana.print();
+         ventana.close();
+       };
+     }).catch(err => {
+       console.error("Error al capturar e imprimir:", err);
+     });
   }
 
 
