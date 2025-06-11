@@ -24,7 +24,11 @@ class Checkout {
 
     add_to_cart_from_buy_cart.addEventListener("click", function(){
 
-      alert("bueno");
+
+      checkoutClass.sendPDF();
+
+
+
     /*  checkoutClass.obtainProduct();
       checkoutClass.obtainDescription();
       checkoutClass.obtainPricePerUnit();
@@ -34,6 +38,42 @@ class Checkout {
       checkoutClass.makeAjaxRequestCreateJob();*/
     })
 
+  }
+
+  sendPDF() {
+    const elemento = document.getElementById('preview-customize-lanyard');
+
+    const opt = {
+      margin:       1,
+      image:        { type: 'jpeg', quality: 0.98 },
+      html2canvas:  { scale: 2 },
+      jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+    };
+
+    const worker = html2pdf().set(opt).from(elemento);
+
+    // Generar PDF como Blob
+    const blob = await worker.outputPdf('blob');
+
+    // Crear FormData y adjuntar el PDF
+    const formData = new FormData();
+    formData.append('archivo', blob, 'documento.pdf');
+
+    // Enviar al servidor con fetch
+    fetch('../../controller/lanyard/uploadPDF.php, {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => {
+      if (response.ok) {
+        alert('PDF enviado correctamente');
+      } else {
+        alert('Error al enviar el PDF');
+      }
+    })
+    .catch(error => {
+      console.error('Error al enviar:', error);
+    });
   }
 
   obtainProduct(){

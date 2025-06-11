@@ -503,17 +503,14 @@ class ShoppingCart {
     const price_shipping = document.getElementById("price_shipping");
     const total_price = document.getElementById("total_price");
 
-
-  //  alert(this.shippingPrice);
-
     if (this.shippingDays == 15) {
       this.shippingPrice = 0;
     }
     else if (this.shippingDays == 10) {
-      this.shippingPrice = this.getSubtotal()* 0.25 ;
+      this.shippingPrice = this.getSubtotal()* 0.25;
     }
     else if (this.shippingDays == 8) {
-      this.shippingPrice = this.getSubtotal()* 0.5 ;
+      this.shippingPrice = this.getSubtotal()* 0.5;
     }
     else {
       this.shippingPrice = 0;
@@ -523,23 +520,20 @@ class ShoppingCart {
     this.total = this.subtotal + this.tax + this.shippingPrice;
 
 
-
-
     price_shipping.textContent = "£" +this.shippingPrice;
 
     total_price.textContent = "£" + (this.shippingPrice + this.tax + this.subtotal);
 
   }
+
+
   changeShoppingTime(days){
-  //  alert("days" + days);
 
     this.shippingDays = days;
     this.updatePriceShippingHTML();
-
     this.updateOrder();
 
   }
-
 
 
   // Inicializa los estilos actuales de todos los elementos
