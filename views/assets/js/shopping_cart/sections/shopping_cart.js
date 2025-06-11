@@ -217,6 +217,7 @@ class ShoppingCart {
     this.shippingPrice = 0;
   }
 
+  alert(this.shippingPrice);
   this.total = this.getSubtotal() + this.getTax() + this.getShippingPrice();
 }
 
