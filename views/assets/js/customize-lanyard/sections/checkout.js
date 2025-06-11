@@ -42,7 +42,7 @@ class Checkout {
 
     async sendPDF() {
 
-    const div = document.getElementById("preview-customize-lanyard");
+    const div = document.getElementById("left-super-lanyard-manual");
 
       // Asegura que esté visible y renderizado
       if (!div) {
