@@ -41,25 +41,35 @@ class Checkout {
   }
 
   async sendPDF() {
+    const elemento = document.getElementById('left-super-lanyard-manual');
+
+    // Capturamos el tamaño real del elemento en px
+    const width = elemento.offsetWidth;
+    const height = elemento.offsetHeight;
+
+    // html2canvas a escala alta para buena resolución
+    const canvas = await html2canvas(elemento, {
+      scale: 30, // Aumenta la resolución 3x
+      useCORS: true
+    });
+
+    const imgData = canvas.toDataURL('image/jpeg', 1.0);
+
+    // Crear PDF con tamaño en mm proporcional al tamaño original
+    const pxToMm = 0.264583; // 1px = 0.264583mm
+
+    const pdfWidth = width * pxToMm;
+    const pdfHeight = height * pxToMm;
+
     const { jsPDF } = window.jspdf;
+    const pdf = new jsPDF({
+      orientation: pdfWidth > pdfHeight ? 'landscape' : 'portrait',
+      unit: 'mm',
+      format: [pdfWidth, pdfHeight]
+    });
 
-      const elemento = document.body;
-
-      const canvas = await html2canvas(elemento, {
-        scale: 3,         // Alta resolución (2 o 3 es suficiente)
-        useCORS: true     // Permite imágenes externas si tienen CORS
-      });
-
-      const imgData = canvas.toDataURL('image/png');
-
-      const pdf = new jsPDF({
-        orientation: 'portrait',
-        unit: 'px',
-        format: [canvas.width, canvas.height]
-      });
-
-      pdf.addImage(imgData, 'PNG', 0, 0, canvas.width, canvas.height);
-      pdf.save('pagina-completa.pdf');
+    pdf.addImage(imgData, 'JPEG', 0, 0, pdfWidth, pdfHeight);
+    pdf.save('captura_real.pdf');
   }
 
 
