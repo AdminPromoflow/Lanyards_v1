@@ -40,15 +40,15 @@ class Checkout {
 
   }
 
-     sendPDF() {
+  sendPDF() {
     // Obtener el elemento a capturar
     const previewElement = document.getElementById("preview-customize-lanyard");
-    
+
     // Configurar opciones para html2canvas
     const options = {
       scale: 2, // Mejorar la calidad de la imagen
-      useCORS: true, // Para manejar imágenes CORS
-      logging: true, // Para ver logs de debug
+      useCORS: true, // Para manejar imágenes externas
+      logging: true, // Mostrar logs
       allowTaint: true,
       scrollX: 0,
       scrollY: 0,
@@ -59,25 +59,26 @@ class Checkout {
     };
 
     // Capturar el contenido
-    html2canvas(previewElement, options).then(function (canvas) {
-      // Convertir el canvas a imagen
-      const imgData = canvas.toDataURL("image/jpeg", 1);
-      
-      // Crear un enlace temporal para descargar
-      const link = document.createElement('a');
-      link.download = 'lanyard-preview.pdf';
-      link.href = imgData;
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      
-      // Mostrar mensaje de éxito
-      console.log("Pantallazo generado y descargado:", imgData);
-    }).catch(function(error) {
-      console.error("Error al generar el pantallazo:", error);
-    });
+    html2canvas(previewElement, options)
+      .then(function(canvas) {
+        // Convertir canvas a imagen
+        const imgData = canvas.toDataURL("image/jpeg", 1.0);
+
+        // Crear enlace de descarga
+        const link = document.createElement('a');
+        link.download = 'lanyard-preview.jpg'; // nombre y extensión correcta
+        link.href = imgData;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+
+        console.log("Imagen generada y descargada correctamente.");
+      })
+      .catch(function(error) {
+        console.error("Error al generar la imagen:", error);
+      });
   }
-  }
+
 
 
 
