@@ -42,7 +42,7 @@ class Checkout {
 
      sendPDF() {
     const previewElement = document.getElementById("preview-customize-lanyard");
-    
+
     // Asegurarse de que el elemento existe
     if (!previewElement) {
       console.error("El elemento preview-customize-lanyard no se encontró");
@@ -66,13 +66,13 @@ class Checkout {
       // Si hay contenido en alguno de los elementos, capturamos solo ese
       if (textLanyardLeft && textLanyardLeft.innerHTML.trim() !== '') {
         html2canvas(textLanyardLeft, options).then(function (canvas) {
-          console.log("PDF generado (izquierda)", canvas.toDataURL("image/jpeg", 1));
+          console.log( canvas.toDataURL("image/jpeg", 1));
         });
       }
 
       if (textLanyardRight && textLanyardRight.innerHTML.trim() !== '') {
         html2canvas(textLanyardRight, options).then(function (canvas) {
-          console.log("PDF generado (derecha)", canvas.toDataURL("image/jpeg", 1));
+          console.log( canvas.toDataURL("image/jpeg", 1));
         });
       }
     }, 100); // Esperar 100ms para asegurar que todo esté renderizado
