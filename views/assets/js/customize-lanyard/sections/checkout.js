@@ -42,7 +42,7 @@ class Checkout {
 
      sendPDF() {
     const previewElement = document.getElementById("preview-customize-lanyard");
-    
+
     // Asegurarse de que el elemento existe
     if (!previewElement) {
       console.error("El elemento preview-customize-lanyard no se encontró");
@@ -59,7 +59,7 @@ class Checkout {
         // Manejar el contenido dinámico de text_lanyard_left y right
         const textLanyardLeft = doc.querySelector('#text_lanyard_left');
         const textLanyardRight = doc.querySelector('#text_lanyard_right');
-        
+
         if (textLanyardLeft) {
           const textLanyard = textClass.getContentText();
           const times = textClass.getTimesText();
@@ -99,20 +99,20 @@ class Checkout {
     setTimeout(function() {
       html2canvas(previewElement, options).then(function (canvas) {
         const imgData = canvas.toDataURL("image/jpeg", 1);
-        console.log("PDF generado:", imgData);
-        
+        console.log( imgData);
+
         // Crear un elemento img para mostrar la previsualización
         const img = document.createElement('img');
         img.src = imgData;
         img.style.maxWidth = '100%';
         img.style.border = '1px solid #ddd';
-        
+
         // Mostrar la imagen en el DOM
         const previewContainer = document.createElement('div');
         previewContainer.style.marginTop = '20px';
         previewContainer.appendChild(img);
         document.body.appendChild(previewContainer);
-        
+
         // Agregar botón para descargar
         const downloadBtn = document.createElement('button');
         downloadBtn.textContent = 'Descargar PDF';
