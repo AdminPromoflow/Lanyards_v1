@@ -41,41 +41,42 @@ class Checkout {
   }
 
      sendPDF() {
+    // Obtener el elemento a capturar
     const previewElement = document.getElementById("preview-customize-lanyard");
-
-    // Asegurarse de que el elemento existe
-    if (!previewElement) {
-      console.error("El elemento preview-customize-lanyard no se encontró");
-      return;
-    }
-
-    // Configurar opciones de html2canvas
+    
+    // Configurar opciones para html2canvas
     const options = {
       scale: 2, // Mejorar la calidad de la imagen
       useCORS: true, // Para manejar imágenes CORS
       logging: true, // Para ver logs de debug
-      allowTaint: true
+      allowTaint: true,
+      scrollX: 0,
+      scrollY: 0,
+      backgroundColor: null,
+      onclone: function(doc) {
+        // Aquí podrías manipular el documento clonado si es necesario
+      }
     };
 
-    // Esperar un momento para asegurar que todo esté renderizado
-    setTimeout(function() {
-      // Capturar el contenido exacto de los elementos text_lanyard_left y right
-      const textLanyardLeft = document.getElementById('text_lanyard_left');
-      const textLanyardRight = document.getElementById('text_lanyard_right');
-
-      // Si hay contenido en alguno de los elementos, capturamos solo ese
-      if (textLanyardLeft && textLanyardLeft.innerHTML.trim() !== '') {
-        html2canvas(textLanyardLeft, options).then(function (canvas) {
-          console.log( canvas.toDataURL("image/jpeg", 1));
-        });
-      }
-
-      if (textLanyardRight && textLanyardRight.innerHTML.trim() !== '') {
-        html2canvas(textLanyardRight, options).then(function (canvas) {
-          console.log( canvas.toDataURL("image/jpeg", 1));
-        });
-      }
-    }, 100); // Esperar 100ms para asegurar que todo esté renderizado
+    // Capturar el contenido
+    html2canvas(previewElement, options).then(function (canvas) {
+      // Convertir el canvas a imagen
+      const imgData = canvas.toDataURL("image/jpeg", 1);
+      
+      // Crear un enlace temporal para descargar
+      const link = document.createElement('a');
+      link.download = 'lanyard-preview.pdf';
+      link.href = imgData;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      
+      // Mostrar mensaje de éxito
+      console.log("Pantallazo generado y descargado:", imgData);
+    }).catch(function(error) {
+      console.error("Error al generar el pantallazo:", error);
+    });
+  }
   }
 
 
