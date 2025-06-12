@@ -42,7 +42,7 @@ class Checkout {
 
      sendPDF() {
     const previewElement = document.getElementById("preview-customize-lanyard");
-
+    
     // Asegurarse de que el elemento existe
     if (!previewElement) {
       console.error("El elemento preview-customize-lanyard no se encontró");
@@ -54,79 +54,28 @@ class Checkout {
       scale: 2, // Mejorar la calidad de la imagen
       useCORS: true, // Para manejar imágenes CORS
       logging: true, // Para ver logs de debug
-      allowTaint: true,
-      onclone: function(doc) {
-        // Manejar el contenido dinámico de text_lanyard_left y right
-        const textLanyardLeft = doc.querySelector('#text_lanyard_left');
-        const textLanyardRight = doc.querySelector('#text_lanyard_right');
-
-        if (textLanyardLeft) {
-          const textLanyard = textClass.getContentText();
-          const times = textClass.getTimesText();
-          const contentHTML = Array(times).fill(`
-            <div class="wrap_text_0">
-              <h1>${textLanyard}</h1>
-            </div>
-          `).join('');
-          textLanyardLeft.innerHTML = `
-            <div class="padding_text_top"></div>
-            ${contentHTML}
-            <div class="padding_text_bottom"></div>
-          `;
-        }
-
-        if (textLanyardRight) {
-          const textLanyard = textClass.getContentText();
-          const times = textClass.getTimesText();
-          const contentHTML = Array(times).fill(`
-            <div class="wrap_text_1">
-              <h1>${textLanyard}</h1>
-            </div>
-          `).join('');
-          textLanyardRight.innerHTML = `
-            <div class="padding_text_top"></div>
-            ${contentHTML}
-            <div class="padding_text_bottom"></div>
-          `;
-        }
-      }
+      allowTaint: true
     };
-
-    // Asegurarse de que el contenido dinámico esté actualizado
-    textClass.updateText(); // Forzar actualización del texto
 
     // Esperar un momento para asegurar que todo esté renderizado
     setTimeout(function() {
-      html2canvas(previewElement, options).then(function (canvas) {
-        const imgData = canvas.toDataURL("image/jpeg", 1);
-        console.log( imgData);
+      // Capturar el contenido exacto de los elementos text_lanyard_left y right
+      const textLanyardLeft = document.getElementById('text_lanyard_left');
+      const textLanyardRight = document.getElementById('text_lanyard_right');
 
-        // Crear un elemento img para mostrar la previsualización
-        const img = document.createElement('img');
-        img.src = imgData;
-        img.style.maxWidth = '100%';
-        img.style.border = '1px solid #ddd';
+      // Si hay contenido en alguno de los elementos, capturamos solo ese
+      if (textLanyardLeft && textLanyardLeft.innerHTML.trim() !== '') {
+        html2canvas(textLanyardLeft, options).then(function (canvas) {
+          console.log("PDF generado (izquierda)", canvas.toDataURL("image/jpeg", 1));
+        });
+      }
 
-        // Mostrar la imagen en el DOM
-        const previewContainer = document.createElement('div');
-        previewContainer.style.marginTop = '20px';
-        previewContainer.appendChild(img);
-        document.body.appendChild(previewContainer);
-
-        // Agregar botón para descargar
-        const downloadBtn = document.createElement('button');
-        downloadBtn.textContent = 'Descargar PDF';
-        downloadBtn.onclick = function() {
-          const link = document.createElement('a');
-          link.download = 'lanyard-preview.pdf';
-          link.href = imgData;
-          link.click();
-        };
-        previewContainer.appendChild(downloadBtn);
-      }).catch(function(error) {
-        console.error("Error al generar el PDF:", error);
-      });
-    }, 500); // Esperar medio segundo para asegurar que todo esté renderizado
+      if (textLanyardRight && textLanyardRight.innerHTML.trim() !== '') {
+        html2canvas(textLanyardRight, options).then(function (canvas) {
+          console.log("PDF generado (derecha)", canvas.toDataURL("image/jpeg", 1));
+        });
+      }
+    }, 100); // Esperar 100ms para asegurar que todo esté renderizado
   }
 
 
