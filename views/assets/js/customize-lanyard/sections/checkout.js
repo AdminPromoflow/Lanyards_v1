@@ -40,38 +40,13 @@ class Checkout {
 
   }
 
-    async sendPDF() {
+     sendPDF() {
 
-    const div = document.getElementById("text_lanyard_left");
+  //  const div = document.getElementById("preview-customize-lanyard");
 
-      // Asegura que esté visible y renderizado
-      if (!div) {
-        alert("No se encontró el div.");
-        return;
-      }
-
-      // Captura con alta resolución
-      const scale = 3; // calidad 3x
-      const canvas = await html2canvas(div, {
-        scale: scale,
-        useCORS: true, // importante si usas imágenes externas
-        backgroundColor: "rgba(0,0,0,0)" // fondo blanco
-      });
-
-      const imgData = canvas.toDataURL("image/jpeg", 1.0);
-      const imgWidth = canvas.width;
-      const imgHeight = canvas.height;
-
-      // Usar jsPDF en modo UMD
-      const { jsPDF } = window.jspdf;
-      const pdf = new jsPDF({
-        orientation: imgWidth > imgHeight ? 'landscape' : 'portrait',
-        unit: 'px',
-        format: [imgWidth, imgHeight]
-      });
-
-      pdf.addImage(imgData, 'JPEG', 0, 0, imgWidth, imgHeight);
-      pdf.save("captura.pdf");
+    html2canvas (document-getElementById ("preview-customize-lanyard")).then(function (canvas) {
+    console. log (canvas. toDataURL("image/jpeg", 0.92);
+    }) ;
   }
 
 
