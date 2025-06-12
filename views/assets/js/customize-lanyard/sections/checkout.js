@@ -42,39 +42,76 @@ class Checkout {
 
      sendPDF() {
     const previewElement = document.getElementById("preview-customize-lanyard");
-
+    
     // Asegurarse de que el elemento existe
     if (!previewElement) {
       console.error("El elemento preview-customize-lanyard no se encontró");
       return;
     }
 
-    // Configurar opciones de html2canvas
-    const options = {
-      scale: 2, // Mejorar la calidad de la imagen
-      useCORS: true, // Para manejar imágenes CORS
-      logging: true, // Para ver logs de debug
-      allowTaint: true
-    };
+    // Esperar un momento para asegurar que todo el contenido esté renderizado
+    setTimeout(function() {
+      // Configurar opciones de html2canvas
+      const options = {
+        scale: 2, // Mejorar la calidad de la imagen
+        useCORS: true, // Para manejar imágenes CORS
+        logging: true, // Para ver logs de debug
+        allowTaint: true,
+        // Agregar soporte para elementos SVG
+        onclone: function(doc) {
+          // Aquí podrías manipular el documento clonado si es necesario
+        }
+      };
 
-    html2canvas(previewElement, options).then(function (canvas) {
-      const imgData = canvas.toDataURL("image/jpeg", 1);
-      console.log( imgData);
+      // Asegurarse de que todas las imágenes estén cargadas
+      const images = previewElement.getElementsByTagName('img');
+      const promises = Array.from(images).map(img => {
+        return new Promise((resolve) => {
+          if (img.complete) {
+            resolve();
+          } else {
+            img.onload = resolve;
+            img.onerror = () => {
+              console.warn(`Error loading image: ${img.src}`);
+              resolve();
+            };
+          }
+        });
+      });
 
-      // Crear un elemento img para mostrar la previsualización
-      const img = document.createElement('img');
-      img.src = imgData;
-      img.style.maxWidth = '100%';
-      img.style.border = '1px solid #ddd';
-
-      // Mostrar la imagen en el DOM (opcional)
-      const previewContainer = document.createElement('div');
-      previewContainer.style.marginTop = '20px';
-      previewContainer.appendChild(img);
-      document.body.appendChild(previewContainer);
-    }).catch(function(error) {
-      console.error("Error al generar la imagen:", error);
-    });
+      // Esperar a que todas las imágenes estén cargadas
+      Promise.all(promises).then(() => {
+        html2canvas(previewElement, options).then(function (canvas) {
+          const imgData = canvas.toDataURL("image/jpeg", 1);
+          console.log("PDF generado:", imgData);
+          
+          // Crear un elemento img para mostrar la previsualización
+          const img = document.createElement('img');
+          img.src = imgData;
+          img.style.maxWidth = '100%';
+          img.style.border = '1px solid #ddd';
+          
+          // Mostrar la imagen en el DOM
+          const previewContainer = document.createElement('div');
+          previewContainer.style.marginTop = '20px';
+          previewContainer.appendChild(img);
+          document.body.appendChild(previewContainer);
+          
+          // Agregar botón para descargar
+          const downloadBtn = document.createElement('button');
+          downloadBtn.textContent = 'Descargar PDF';
+          downloadBtn.onclick = function() {
+            const link = document.createElement('a');
+            link.download = 'lanyard-preview.pdf';
+            link.href = imgData;
+            link.click();
+          };
+          previewContainer.appendChild(downloadBtn);
+        }).catch(function(error) {
+          console.error("Error al generar el PDF:", error);
+        });
+      });
+    }, 1000); // Esperar 1 segundo para asegurar que todo esté renderizado
   }
 
 
