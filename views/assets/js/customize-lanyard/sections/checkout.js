@@ -41,7 +41,7 @@ class Checkout {
   }
 
      sendPDF() {
-    html2canvas(document-getElementById ("preview-customize-lanyard")).then(function (canvas) {
+    html2canvas(document.getElementById("preview-customize-lanyard")).then(function (canvas) {
       console.log(canvas.toDataURL("image/jpeg", 0.92));
     }) ;
   }
