@@ -40,10 +40,50 @@ class Checkout {
 
   }
 
-  sendPDF() {
-    // Obtener el elemento a capturar
-    const previewElement = document.getElementById("preview-customize-lanyard");
+  // Función para convertir una imagen a base64
+  convertImageToBase64(imgElement) {
+    return new Promise((resolve, reject) => {
+      try {
+        // Crear un nuevo canvas
+        const canvas = document.createElement('canvas');
+        const context = canvas.getContext('2d');
+        
+        // Crear una nueva imagen para manejar la conversión
+        const image = new Image();
+        image.crossOrigin = 'Anonymous';
+        
+        // Evento cuando la imagen se carga
+        image.onload = function() {
+          // Establecer el tamaño del canvas
+          canvas.width = image.width;
+          canvas.height = image.height;
+          
+          // Dibujar la imagen en el canvas
+          context.drawImage(image, 0, 0);
+          
+          // Convertir el canvas a base64
+          const base64 = canvas.toDataURL('image/jpeg');
+          resolve(base64);
+        };
+        
+        // Evento de error
+        image.onerror = function() {
+          console.warn('Error loading image:', imgElement.src);
+          reject(new Error('Error loading image'));
+        };
+        
+        // Establecer la fuente de la imagen
+        image.src = imgElement.src;
+      } catch (error) {
+        console.error('Error processing image:', error);
+        reject(error);
+      }
+    });
+  }
 
+  sendPDF() {
+    const previewElement = document.getElementById("preview-customize-lanyard");
+    
     // Configurar opciones para html2canvas
     const options = {
       scale: 60, // Mejorar la calidad de la imagen
@@ -53,8 +93,24 @@ class Checkout {
       scrollX: 0,
       scrollY: 0,
       backgroundColor: null,
-      onclone: function(doc) {
-        // Aquí podrías manipular el documento clonado si es necesario
+      onclone: async function(doc) {
+        try {
+          // Obtener todas las imágenes
+          const images = doc.getElementsByTagName('img');
+          
+          // Procesar cada imagen
+          for (const img of images) {
+            if (img.src.startsWith('http')) {
+              // Convertir la imagen a base64
+              const base64 = await convertImageToBase64(img);
+              
+              // Actualizar la fuente de la imagen
+              img.src = base64;
+            }
+          }
+        } catch (error) {
+          console.error('Error processing images:', error);
+        }
       }
     };
 
@@ -66,7 +122,7 @@ class Checkout {
 
         // Crear enlace de descarga
         const link = document.createElement('a');
-        link.download = 'lanyard-preview.jpg'; // nombre y extensión correcta
+        link.download = 'lanyard-preview.jpg';
         link.href = imgData;
         document.body.appendChild(link);
         link.click();
