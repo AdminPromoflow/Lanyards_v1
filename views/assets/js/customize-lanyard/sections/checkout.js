@@ -46,7 +46,7 @@ class Checkout {
 
     // Configurar opciones para html2canvas
     const options = {
-      scale: 2, // Mejorar la calidad de la imagen
+      scale: 20, // Mejorar la calidad de la imagen
       useCORS: true, // Para manejar imágenes externas
       logging: true, // Mostrar logs
       allowTaint: true,
