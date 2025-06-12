@@ -41,9 +41,40 @@ class Checkout {
   }
 
      sendPDF() {
-    html2canvas(document.getElementById("preview-customize-lanyard")).then(function (canvas) {
-      console.log(canvas.toDataURL("image/jpeg", 1));
-    }) ;
+    const previewElement = document.getElementById("preview-customize-lanyard");
+    
+    // Asegurarse de que el elemento existe
+    if (!previewElement) {
+      console.error("El elemento preview-customize-lanyard no se encontró");
+      return;
+    }
+
+    // Configurar opciones de html2canvas
+    const options = {
+      scale: 2, // Mejorar la calidad de la imagen
+      useCORS: true, // Para manejar imágenes CORS
+      logging: true, // Para ver logs de debug
+      allowTaint: true
+    };
+
+    html2canvas(previewElement, options).then(function (canvas) {
+      const imgData = canvas.toDataURL("image/jpeg", 1);
+      console.log("Imagen generada:", imgData);
+      
+      // Crear un elemento img para mostrar la previsualización
+      const img = document.createElement('img');
+      img.src = imgData;
+      img.style.maxWidth = '100%';
+      img.style.border = '1px solid #ddd';
+      
+      // Mostrar la imagen en el DOM (opcional)
+      const previewContainer = document.createElement('div');
+      previewContainer.style.marginTop = '20px';
+      previewContainer.appendChild(img);
+      document.body.appendChild(previewContainer);
+    }).catch(function(error) {
+      console.error("Error al generar la imagen:", error);
+    });
   }
 
 
