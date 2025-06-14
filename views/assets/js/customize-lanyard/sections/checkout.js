@@ -7,6 +7,10 @@ class Checkout {
     this.amount = "";
     this.total = "";
     this.linkPdf = "";
+
+
+    this.getAddresses();
+
     //
     subcontainer_boxes_preview_checkout.style.display = "flex";
     arrow_preview_checkout.style.transform = "rotate(0deg)";
@@ -41,7 +45,7 @@ class Checkout {
   }
 
   createPDF() {
-    
+
   }
 
 
