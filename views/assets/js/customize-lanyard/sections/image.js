@@ -42,7 +42,7 @@ class ImageClass {
         if (imageClass.getImagePosition() > -100) {
           console.log(imageClass.getImagePosition());
 
-          imageClass.setImagePosition(imageClass.getImagePosition() - 1);
+          imageClass.setImagePosition(imageClass.getImagePosition() - 0.5);
           previewManual.refreshImageLanyard();
         }
 
@@ -52,7 +52,7 @@ class ImageClass {
       move_up_image.addEventListener("click", function(){
         if (imageClass.getImagePosition() <0) {
           console.log(imageClass.getImagePosition());
-          imageClass.setImagePosition(imageClass.getImagePosition() + 1);
+          imageClass.setImagePosition(imageClass.getImagePosition() + 0.5);
           previewManual.refreshImageLanyard();
 
         }
@@ -70,7 +70,7 @@ class ImageClass {
 
       decrease_space_between_image.addEventListener("click", function(){
         if (imageClass.getSpaceBetweenImage() > 0) {
-          imageClass.setSpaceBetweenImage(imageClass.getSpaceBetweenImage() - 1);
+          imageClass.setSpaceBetweenImage(imageClass.getSpaceBetweenImage() - 0.5);
           previewManual.refreshImageLanyard();
         }
 
@@ -79,7 +79,7 @@ class ImageClass {
 
       increase_space_between_image.addEventListener("click", function(){
         if (imageClass.getSpaceBetweenImage() <=220) {
-          imageClass.setSpaceBetweenImage(imageClass.getSpaceBetweenImage() + 1);
+          imageClass.setSpaceBetweenImage(imageClass.getSpaceBetweenImage() + 0.5);
           previewManual.refreshImageLanyard();
 
         }
@@ -157,7 +157,7 @@ class ImageClass {
 
       increaseImageSize.addEventListener("click", function(){
         if (imageClass.getImageSize() <=100) {
-          imageClass.setImageSize(imageClass.getImageSize() + 1);
+          imageClass.setImageSize(imageClass.getImageSize() + 0.5);
           previewManual.refreshImageLanyard();
         }
       })
@@ -165,7 +165,7 @@ class ImageClass {
       const decreaseImageSize = document.getElementById("decrease-image-size");
       decreaseImageSize.addEventListener("click", function(){
         if (imageClass.getImageSize() >=0) {
-          imageClass.setImageSize(imageClass.getImageSize() - 1);
+          imageClass.setImageSize(imageClass.getImageSize() - 0.5);
           previewManual.refreshImageLanyard();
         }
 
