@@ -76,7 +76,7 @@ class TextClass {
 
     move_down_text.addEventListener("click", function(){
       if (textClass.getTextPosition() > -100) {
-        textClass.setTextPosition(textClass.getTextPosition() - 1);
+        textClass.setTextPosition(textClass.getTextPosition() - 0.2);
         previewManual.refreshTextLanyard();
       }
 
@@ -85,7 +85,7 @@ class TextClass {
 
     move_up_text.addEventListener("click", function(){
       if (textClass.getTextPosition() <4) {
-        textClass.setTextPosition(textClass.getTextPosition() + 1);
+        textClass.setTextPosition(textClass.getTextPosition() + 0.2);
         previewManual.refreshTextLanyard();
 
       }
@@ -111,7 +111,7 @@ class TextClass {
 
     decrease_space_between_text.addEventListener("click", function(){
       if (textClass.getSpaceBetweenText() > 0) {
-        textClass.setSpaceBetweenText(textClass.getSpaceBetweenText() - 1);
+        textClass.setSpaceBetweenText(textClass.getSpaceBetweenText() - 0.2);
         previewManual.refreshTextLanyard();
       }
 
@@ -120,7 +120,7 @@ class TextClass {
 
     increase_space_between_text.addEventListener("click", function(){
       if (textClass.getSpaceBetweenText() <=220) {
-        textClass.setSpaceBetweenText(textClass.getSpaceBetweenText() + 1);
+        textClass.setSpaceBetweenText(textClass.getSpaceBetweenText() + 0.2);
         previewManual.refreshTextLanyard();
       }
 
@@ -297,13 +297,13 @@ class TextClass {
 
     decrease_size_text.addEventListener("click", () => {
       if (textClass.getSizeText() > 0) {
-        textClass.setSizeText(textClass.getSizeText() - 1);
+        textClass.setSizeText(textClass.getSizeText() - 0.2);
         previewManual.refreshTextLanyard();
       }
     });
 
     increase_size_text.addEventListener("click", () => {
-      textClass.setSizeText(textClass.getSizeText() + 1);
+      textClass.setSizeText(textClass.getSizeText() + 0.2);
       previewManual.refreshTextLanyard();
     });
 

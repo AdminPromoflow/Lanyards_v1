@@ -659,9 +659,6 @@ overflow: hidden;
   width: 100%;
   transform: rotate(0deg);
   overflow: hidden;
-
-  background-color: pink;
-
 }
 
 .img_lanyard_right {
@@ -678,8 +675,7 @@ overflow: hidden;
 
   transform: rotate(180deg);
   overflow: hidden;
-
-  background-color: pink;
+  
 
 }
 
@@ -689,8 +685,6 @@ overflow: hidden;
   transform-origin: top left;
   width: 10px;
   height: 10px;
-
-  background-color: orange;
 }
 .wrap_img_1{
   position: relative;
@@ -698,8 +692,6 @@ overflow: hidden;
   transform-origin: top left;
   width: 10px;
   height: 10px;
-
-  background-color: orange;
 }
 .wrap_img_0 img {
   position: absolute;
