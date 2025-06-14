@@ -9,7 +9,6 @@ class Checkout {
     this.linkPdf = "";
 
 
-    this.getAddresses();
 
     //
     subcontainer_boxes_preview_checkout.style.display = "flex";

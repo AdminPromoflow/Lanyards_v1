@@ -8,6 +8,7 @@ class ProvidedInformation {
 
     mapboxgl.accessToken = 'pk.eyJ1IjoiaWFuc291dGhlcm4iLCJhIjoiY20ybWowdnRlMHBmcjJqcTljaDdhYXV6diJ9.UK4tRTqDkO6yYffa-LIyWw';
 
+    this.getAddresses();
 
     const map = new mapboxgl.Map({
       container: 'map',
