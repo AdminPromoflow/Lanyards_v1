@@ -7,7 +7,7 @@ class ImageClass {
       this.spaceAlongLanyard = 0;
       this.printableArea = false;
       this.linkImage = "";
-      this.imagePosition = -50;
+      this.imagePosition = 0;
 
 
 
