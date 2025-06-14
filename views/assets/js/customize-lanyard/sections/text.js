@@ -2,7 +2,7 @@ class TextClass {
 
   constructor() {
     this.contentText = "";
-    this.timesText = 1;
+    this.timesText = 5;
     this.spaceBetweenText = 50;
     this.spaceAlongLanyard = 0;
     this.colourText = "black";
@@ -12,7 +12,7 @@ class TextClass {
     this.italicText = false;
     this.underlineText = false;
     this.printableArea = false;
-    this.textPosition = -100;
+    this.textPosition = -50;
 
 
 
