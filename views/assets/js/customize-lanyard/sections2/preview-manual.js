@@ -62,7 +62,7 @@ class PreviewManual {
 
     if (value) {
       [text_lanyard_left, text_lanyard_right, text_lanyard_center].forEach((element, index) => {
-        if (backgroundClass.getBackground()) {
+        if (backgroundClass.getBackground() == "#ffffff" || backgroundClass.getBackground() == "#FFFFFF") {
           element.style.background = "rgba(50, 50, 50, .3)";
         }
         else {
@@ -264,7 +264,7 @@ class PreviewManual {
 
     if (value) {
       [image_lanyard_left, image_lanyard_right, image_lanyard_center].forEach((element, index) => {
-        if (backgroundClass.getBackground()) {
+        if (backgroundClass.getBackground() == "#ffffff" || backgroundClass.getBackground() == "#FFFFFF") {
           element.style.background = "rgba(50, 50, 50, .3)";
         }
         else {
