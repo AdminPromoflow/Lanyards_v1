@@ -1,6 +1,6 @@
 class ImageClass {
     constructor() {
-      this.timesImage = 7;
+      this.timesImage = 1;
       this.imageSize = 10;
       this.spaceBetweenImage = 50;
       this.imageRotation = 0;
@@ -291,7 +291,7 @@ class ImageClass {
       printable_area_image.checked = value;
       this.printableAreaImage = value;
     }
-    
+
     getPrintableAreaImage(){
       return this.printableAreaImage;
     }

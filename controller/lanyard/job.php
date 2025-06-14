@@ -33,7 +33,6 @@ class Job {
                         //$this->verifyExtras($data->description);
                         $this->deleteJob($data);
                         break;
-
                     default:
                         http_response_code(400);
                         echo json_encode(["message" => "Unknown action"]);

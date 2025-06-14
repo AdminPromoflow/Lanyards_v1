@@ -2,7 +2,7 @@ class TextClass {
 
   constructor() {
     this.contentText = "";
-    this.timesText = 10;
+    this.timesText = 1;
     this.spaceBetweenText = 50;
     this.spaceAlongLanyard = 0;
     this.colourText = "black";
@@ -451,7 +451,7 @@ class TextClass {
 
   setPrintableAreaText(value){
     const printable_area = document.getElementById("printable_area");
- 
+
     printable_area.checked = value;
     this.printableAreaText = value;
   }

@@ -25,7 +25,7 @@ class Checkout {
     add_to_cart_from_buy_cart.addEventListener("click", function(){
 
 
-      checkoutClass.sendPDF();
+      checkoutClass.createPDF();
 
 
 
@@ -40,99 +40,8 @@ class Checkout {
 
   }
 
-  sendPDF() {
-    const previewElement = document.getElementById("preview-customize-lanyard");
+  createPDF() {
     
-    // Función local para convertir imágenes a base64
-    const convertImageToBase64 = (imgElement) => {
-      return new Promise((resolve, reject) => {
-        try {
-          // Crear un nuevo canvas
-          const canvas = document.createElement('canvas');
-          const context = canvas.getContext('2d');
-          
-          // Crear una nueva imagen para manejar la conversión
-          const image = new Image();
-          image.crossOrigin = 'Anonymous';
-          
-          // Evento cuando la imagen se carga
-          image.onload = function() {
-            // Establecer el tamaño del canvas
-            canvas.width = image.width;
-            canvas.height = image.height;
-            
-            // Dibujar la imagen en el canvas
-            context.drawImage(image, 0, 0);
-            
-            // Convertir el canvas a base64
-            const base64 = canvas.toDataURL('image/jpeg');
-            resolve(base64);
-          };
-          
-          // Evento de error
-          image.onerror = function() {
-            console.warn('Error loading image:', imgElement.src);
-            reject(new Error('Error loading image'));
-          };
-          
-          // Establecer la fuente de la imagen
-          image.src = imgElement.src;
-        } catch (error) {
-          console.error('Error processing image:', error);
-          reject(error);
-        }
-      });
-    };
-
-    // Configurar opciones para html2canvas
-    const options = {
-      scale: 60, // Mejorar la calidad de la imagen
-      useCORS: true, // Para manejar imágenes externas
-      logging: true, // Mostrar logs
-      allowTaint: true,
-      scrollX: 0,
-      scrollY: 0,
-      backgroundColor: null,
-      onclone: async function(doc) {
-        try {
-          // Obtener todas las imágenes
-          const images = doc.getElementsByTagName('img');
-          
-          // Procesar cada imagen
-          for (const img of images) {
-            if (img.src.startsWith('http')) {
-              // Convertir la imagen a base64
-              const base64 = await convertImageToBase64(img);
-              
-              // Actualizar la fuente de la imagen
-              img.src = base64;
-            }
-          }
-        } catch (error) {
-          console.error('Error processing images:', error);
-        }
-      }
-    };
-
-    // Capturar el contenido
-    html2canvas(previewElement, options)
-      .then(function(canvas) {
-        // Convertir canvas a imagen
-        const imgData = canvas.toDataURL("image/jpeg", 1.0);
-
-        // Crear enlace de descarga
-        const link = document.createElement('a');
-        link.download = 'lanyard-preview.jpg';
-        link.href = imgData;
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-
-        console.log("Imagen generada y descargada correctamente.");
-      })
-      .catch(function(error) {
-        console.error("Error al generar la imagen:", error);
-      });
   }
 
 
