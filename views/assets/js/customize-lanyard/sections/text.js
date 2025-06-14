@@ -12,7 +12,7 @@ class TextClass {
     this.italicText = false;
     this.underlineText = false;
     this.printableArea = false;
-    this.textPosition = -50;
+    this.textPosition = 0;
 
 
 
