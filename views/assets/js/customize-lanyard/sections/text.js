@@ -122,7 +122,6 @@ class TextClass {
       if (textClass.getSpaceBetweenText() <=220) {
         textClass.setSpaceBetweenText(textClass.getSpaceBetweenText() + 1);
         previewManual.refreshTextLanyard();
-
       }
 
     })

@@ -1,6 +1,6 @@
 class ImageClass {
     constructor() {
-      this.timesImage = 7;
+      this.timesImage = 3;
       this.imageSize = 10;
       this.spaceBetweenImage = 50;
       this.imageRotation = 0;
