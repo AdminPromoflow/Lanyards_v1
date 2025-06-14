@@ -554,7 +554,7 @@ overflow: hidden;
   gap: 20px; /* espacio entre textos rotados */
   align-items: flex-start; /* <== centrado horizontal */
   justify-content: flex-end; /* opcional: centrado vertical */
-  transform: rotate(0deg);
+  transform: rotate(180deg);
   overflow: hidden;
 }
 /* Sin rotación (0 grados) */
