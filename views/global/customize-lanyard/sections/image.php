@@ -25,6 +25,18 @@ function asset_version($path) {
         <p>This will not be printed on the lanyard; it is only for visualising the printable area.</p>
       </div>
 
+      <div class="item-image">
+        <p id="label-repeat-image">Repeat image</p>
+        <div class="containr-repeat-image">
+          <div class="repeat-image-box" id="decrease-image-box">
+            <h3>-</h3>
+          </div>
+          <div class="repeat-image-box" id="repeat-image-box">
+            <h3>+</h3>
+          </div>
+        </div>
+      </div>
+
 
       <div class="item-image">
         <p>Adjust the spacing between the image</p>
@@ -64,17 +76,7 @@ function asset_version($path) {
         </div>
       </div>-->
 
-      <div class="item-image">
-        <p id="label-repeat-image">Repeat image</p>
-        <div class="containr-repeat-image">
-          <div class="repeat-image-box" id="decrease-image-box">
-            <h3>-</h3>
-          </div>
-          <div class="repeat-image-box" id="repeat-image-box">
-            <h3>+</h3>
-          </div>
-        </div>
-      </div>
+
 
       <div class="item-image">
         <p>Adjust the image size</p>

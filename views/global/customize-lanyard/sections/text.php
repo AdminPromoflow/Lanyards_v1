@@ -29,6 +29,19 @@ $imgPath_text = "../../views/assets/img/global/customize-lanyard/sections/text/"
         <p>This will not be printed on the lanyard; it is only for visualising the printable area.</p>
       </div>
 
+      <!-- Repetir texto -->
+      <div class="item-text">
+        <p id="label-repeat-text">Repeat text</p>
+        <div class="containr-repeat-text">
+          <div class="repeat-text-box" id="decrease-text-box">
+            <h3>-</h3>
+          </div>
+          <div class="repeat-text-box" id="repeat-text-box">
+            <h3>+</h3>
+          </div>
+        </div>
+      </div>
+
       <div class="item-text">
         <p>Adjust the text position</p>
         <div class="containr-space-between-text">
@@ -53,18 +66,7 @@ $imgPath_text = "../../views/assets/img/global/customize-lanyard/sections/text/"
         </div>
       </div>
 
-      <!-- Repetir texto -->
-      <div class="item-text">
-        <p id="label-repeat-text">Repeat text</p>
-        <div class="containr-repeat-text">
-          <div class="repeat-text-box" id="decrease-text-box">
-            <h3>-</h3>
-          </div>
-          <div class="repeat-text-box" id="repeat-text-box">
-            <h3>+</h3>
-          </div>
-        </div>
-      </div>
+
 
       <div class="item-text">
         <p>Select the Pantone reference below.</p>
