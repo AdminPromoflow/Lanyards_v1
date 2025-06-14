@@ -570,7 +570,6 @@ overflow: hidden;
   margin: 0;
   padding: 0;
   width: 100%;
-
   font-size: 6px;
   font-weight: 300;
   white-space: nowrap;
@@ -588,15 +587,12 @@ overflow: hidden;
 .wrap_text_1 h1 {
   margin: 0;
   padding: 0;
+  width: 100%;
   font-size: 6px;
   font-weight: 300;
   white-space: nowrap;
   transform: rotate(0deg) scale(-1, -1);;
 }
-
-
-
-
 
 
 
@@ -688,6 +684,7 @@ overflow: hidden;
   transform-origin: top left;
   width: 10px;
   height: 10px;
+  background-color: green;
 }
 .wrap_img_1{
   position: relative;
@@ -695,6 +692,8 @@ overflow: hidden;
   transform-origin: top left;
   width: 10px;
   height: 10px;
+  background-color: yellow;
+
 }
 .wrap_img_0 img {
   position: absolute;
@@ -705,6 +704,7 @@ overflow: hidden;
   width: 100%;
   transform: rotate(0deg)  translateY(-50%);
 }
+
 .wrap_img_1 img {
   position: absolute;
   top: 50%;
