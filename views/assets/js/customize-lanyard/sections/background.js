@@ -186,6 +186,7 @@ class BackgroundClass {
 
   // Getter and setter for shared background state
   getBackground() {
+    alert(this.background;);
     return this.background;
   }
 
