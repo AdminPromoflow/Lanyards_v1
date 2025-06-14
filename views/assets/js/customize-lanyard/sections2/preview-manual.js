@@ -75,7 +75,7 @@ class PreviewManual {
   modifyTextPosition(){
   //  alert(textClass.getTextPosition());
     this.text_lanyard_left.style.top = -50 +  textClass.getTextPosition() + "%";
-    this.text_lanyard_right.style.top = -50 + textClass.getTextPosition() + "%";
+    this.text_lanyard_right.style.top = -50 - textClass.getTextPosition() + "%";
   }
 
   modifySpaceBetweenText(){
