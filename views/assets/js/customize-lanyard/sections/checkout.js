@@ -28,25 +28,25 @@ class Checkout {
     add_to_cart_from_buy_cart.addEventListener("click", function(){
 
 
-      checkoutClass.createPDF();
 
 
 
-    /*  checkoutClass.obtainProduct();
-      checkoutClass.obtainDescription();
-      checkoutClass.obtainPricePerUnit();
-      checkoutClass.obtainAmount();
-      checkoutClass.obtainTotal();
-      chargingClass.hideShowchargin(true);
-      checkoutClass.makeAjaxRequestCreateJob();*/
+    //  checkoutClass.obtainProduct();
+    //  checkoutClass.obtainDescription();
+  //    checkoutClass.obtainPricePerUnit();
+    //  checkoutClass.obtainAmount();
+  //    checkoutClass.obtainTotal();
+
+
+        alert(artworkManualClass.getArtworkManual());
+      /*  if (artworkManualClass.getArtworkManual()) {
+
+        }*/
+  //    chargingClass.hideShowchargin(true);
+  //    checkoutClass.makeAjaxRequestCreateJob();
     })
 
   }
-
-  createPDF() {
-
-  }
-
 
 
 
