@@ -136,18 +136,11 @@ class Job {
 
       if (isset($data->productDetails->artworkOrManual)) {
           if ($data->productDetails->artworkOrManual === "artwork") {
-              if (isset($data->productDetails->artworkLeft)) {
                   $leftLink = $this->processArtwork("left", $data->productDetails->artworkLeft);
-              }
-
-              if (isset($data->productDetails->artworkRight)) {
                   $rightLink = $this->processArtwork("right", $data->productDetails->artworkRight);
-              }
 
           } elseif ($data->productDetails->artworkOrManual === "manual") {
-              if (isset($data->productDetails->image->linkImage)) {
                   $rightLink = $this->processImage($data->productDetails->image->linkImage);
-              }
           }
       }
 
