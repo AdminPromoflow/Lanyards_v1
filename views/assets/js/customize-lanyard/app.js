@@ -525,8 +525,6 @@ class CustomizeLanyard {
     previewManual.showPrintableAreaImage();
     previewManual.showPrintableAreaText();
 
-
-
     classRegister2.openRegister(false);
 
   }

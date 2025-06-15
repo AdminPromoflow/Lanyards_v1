@@ -47,12 +47,17 @@ class Job {
             echo json_encode(["message" => "Method not allowed"]);
         }
     }
+    private function processArtwork($side, $link){
+      echo json_encode($side.$link );
+    }
 
     // 🛠️ Crea un nuevo trabajo (job)
     private function createJob($data) {
 
-      if ($data->productDetails->artworkLeft != null) {
-        echo json_encode($data->productDetails->artworkLeft );
+      if (isset($data->productDetails->artworkLeft) && isset($data->productDetails->artworkRight)) {
+        $this->processArtwork("left", $data->productDetails->artworkLeft);
+
+        //  echo json_encode($data->productDetails->artworkLeft);
       }
       elseif ($data->productDetails->text != null) {
         echo json_encode("Si hay manual");
