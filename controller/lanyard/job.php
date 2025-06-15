@@ -330,7 +330,6 @@ class Job {
 
                           $linkImage = $this->processImage($data->productDetails->image->linkImage);
                           if ($data->productDetails->text->contentText != "") {
-                            echo json_encode("3");exit;
 
                             $this->createText($data->productDetails->text);
                           }
@@ -339,6 +338,10 @@ class Job {
                           }
                   }
               }
+
+
+              echo json_encode("4");exit;
+
 
 
 
