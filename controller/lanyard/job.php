@@ -88,9 +88,47 @@ class Job {
         return $relativePath;
 
     }
-    private function processImage($image) {
-      echo json_encode($image);
+    private function processImage($imagePath) {
+        // Obtener el nombre del archivo (por ejemplo: ikiagi.png)
+        $fileName = basename($imagePath);
+
+        // Asegurar sesión activa si necesitas usarla
+        if (session_status() !== PHP_SESSION_ACTIVE) {
+            session_start();
+        }
+
+        // Obtener el idOrder del usuario actual
+        $connection = new Database();
+        $order_model = new Order_Model($connection);
+        $idOrder = $order_model->getOrderIdByUser();
+
+        // Rutas absolutas
+        $sourcePath = realpath(__DIR__ . '/../uploads/images/' . $fileName);
+        $destinationFolder = realpath(__DIR__ . '/../') . "/images/{$idOrder}/";
+        $destinationPath = $destinationFolder . $fileName;
+
+        // Crear carpeta destino si no existe
+        if (!is_dir($destinationFolder)) {
+            mkdir($destinationFolder, 0755, true);
+        }
+
+        // Mover el archivo
+        if (file_exists($sourcePath) && rename($sourcePath, $destinationPath)) {
+            // Ruta relativa que puedes guardar o devolver
+            $relativePath = "controller/images/{$idOrder}/{$fileName}";
+            echo json_encode([
+                'success' => true,
+                'message' => 'Imagen movida correctamente',
+                'imagePath' => $relativePath
+            ]);
+        } else {
+            echo json_encode([
+                'success' => false,
+                'message' => 'Error al mover la imagen.'
+            ]);
+        }
     }
+
 
 
     // 🛠️ Crea un nuevo trabajo (job)
