@@ -322,7 +322,6 @@ class Job {
           $result = $provided->createProvidedInformation();
 
         }
-        echo json_encode("4");exit;
 
 
         $job_model->setNewColour($data->newColour);
@@ -330,6 +329,8 @@ class Job {
 
         // Crear el job en la base de datos
         $success = $job_model->createJob();
+        echo json_encode("5");exit;
+
 
         if ($success) {
             echo json_encode([
