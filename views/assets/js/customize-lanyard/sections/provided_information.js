@@ -11,11 +11,11 @@ class ProvidedInformation {
 
 
 
-    document.addEventListener("DOMContentLoaded", function() {
+  /*  document.addEventListener("DOMContentLoaded", function() {
       if (menuClass.getActiveSession()) {
         this.getAddresses();
       }
-    });
+    });*/
 
     const map = new mapboxgl.Map({
       container: 'map',
@@ -160,6 +160,7 @@ class ProvidedInformation {
 
 
   getAddresses(){
+    alert("hahah");
     const url = "../../controller/lanyard/addresses.php";
     const data = {
       action: "getAddresses"
