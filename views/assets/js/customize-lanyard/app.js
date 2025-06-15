@@ -198,7 +198,6 @@ class CustomizeLanyard {
   }
 
   changePreviewNextSection() {
-    console.log(this.currentSectionOpen);
 
 
    if (this.currentSectionOpen == 0) {//Material
@@ -335,8 +334,10 @@ class CustomizeLanyard {
         this.openBackgroundColour();
       }
       if (this.actionNextOrPrevious == "next") {
+        alert("Por acá");
         this.setCurrentSectionOpen(15);
         this.openCheckout();
+
       }
     }
    }
