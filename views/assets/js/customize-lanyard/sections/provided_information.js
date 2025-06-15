@@ -10,7 +10,7 @@ class ProvidedInformation {
 
 
 
-    alert(menuClass.getActiveSession());
+
   /*  document.addEventListener("DOMContentLoaded", function() {
       if (menuClass.getActiveSession()) {
         this.getAddresses();
@@ -160,7 +160,7 @@ class ProvidedInformation {
 
 
   getAddresses(){
-    alert("hahah");
+    
     const url = "../../controller/lanyard/addresses.php";
     const data = {
       action: "getAddresses"
