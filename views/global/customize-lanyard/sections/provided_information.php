@@ -153,10 +153,6 @@ $jsVersion = file_exists($jsFile) ? filemtime($jsFile) : time();
         </div>
 
 
-
-
-
-
       </div>
       <br><br><br>
 
