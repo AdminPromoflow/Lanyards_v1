@@ -71,22 +71,21 @@ class Job {
         $idOrder = $order_model->getOrderIdByUser();
 
         // Crear carpeta si no existe
-        $folderPath = __DIR__ . "/../../images/" . intval($idOrder);
+        $folderPath = __DIR__ . "/../images/" . intval($idOrder); // subir solo un nivel
         if (!is_dir($folderPath)) {
             mkdir($folderPath, 0755, true);
         }
 
-        // Crear nombre del archivo con timestamp
         $datetime = date('Ymd_His');
         $filename = "{$idUser}_artwork_{$side}_{$datetime}.png";
         $filePath = "$folderPath/$filename";
 
-        // Guardar imagen
         file_put_contents($filePath, $decodedImage);
 
-        // Retornar ruta relativa si es necesario
-        $relativePath = "../../controller/images/{$idOrder}/{$filename}";
+        // Esta ruta es la que usarías desde el navegador si accedes a public/controller/images/...
+        $relativePath = "controller/images/{$idOrder}/{$filename}";
         return $relativePath;
+
     }
 
 
