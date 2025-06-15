@@ -152,7 +152,7 @@ class CustomizeLanyard {
   }
 
   handleNextClick() {
-    alert(this.currentSectionOpen);
+    console.log(this.currentSectionOpen);
 
     this.currentSectionOpen++;
     this.actionNextOrPrevious = "next";
