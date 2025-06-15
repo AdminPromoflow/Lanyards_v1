@@ -237,7 +237,6 @@ class Job {
 
 
         $idOrder = $this->verifyOrden($data);
-        echo json_encode("1");exit;
 
         $connection = new Database();
         $job_model = new Job_Model($connection);
@@ -268,6 +267,7 @@ class Job {
 
         $job_model->setTotal($data_price_total);
 
+        echo json_encode("2");exit;
 
         //$newColour
 
