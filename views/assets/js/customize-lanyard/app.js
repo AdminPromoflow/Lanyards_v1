@@ -536,8 +536,6 @@ class CustomizeLanyard {
 
     checkoutClass.getAddresses();
 
-    alert("Que rayos porque no pasa?");
-
 
     this.showNext(true);
     this.showPreview(true);
