@@ -506,7 +506,8 @@ class CustomizeLanyard {
   }
 
   openArtworkFinal(){
-    if (artworkClass.getArtworkLeft() != "" && artworkClass.getArtworkRight() != "") {
+    if (artworkClass.getArtworkLeft() != "" && artworkClass.getArtworkRight() != "" ||
+    artworkManualClass.getArtworkManual() == "manual") {
 
 
     artworkClassFinal.updateItems();
