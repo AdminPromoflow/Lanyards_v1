@@ -491,6 +491,7 @@ class CustomizeLanyard {
   }
 
   openArtworkFinal(){
+    alert(this.currentSectionOpen == 11));
     if (artworkClass.getArtworkLeft() != "" && artworkClass.getArtworkRight() != "") {
 
 
