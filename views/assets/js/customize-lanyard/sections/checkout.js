@@ -153,6 +153,7 @@ class Checkout {
     const imageData = {
       timesImage: imageClass.getTimesImage(),
       imageSize: imageClass.getImageSize(),
+      artworkOrManual: artworkManualClass.getArtworkManual(),
       spaceBetweenImage: imageClass.getSpaceBetweenImage(),
       imageRotation: imageClass.getImageRotation(),
       spaceAlongLanyard: imageClass.getSpaceAlongLanyard(),
