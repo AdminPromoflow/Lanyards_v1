@@ -1,21 +1,27 @@
 class CustomizeLanyard {
 
   constructor() {
+
+
     this.jsonLanyards = "";
     this.currentSectionOpen = 0;
     this.actionNextOrPrevious = "";
     this.currentSectionOpenArtwork = 0;
 
+    // Suponiendo que closeCustomizeLanyard, preview y next están definidos en el contexto global
     this.initializeEventListeners();
     this.showCurrentSection(this.currentSectionOpen);
     this.changePreviewNextSection();
+  //  this.getLanyardsActive();
 
-    material.makeAjaxRequestGetAllMaterials();
+  // Make an AJAX request to fetch all materials.
+  material.makeAjaxRequestGetAllMaterials();
+
   }
-
-  cleanValues() {
+  cleanValues(){
     this.currentSectionOpen = 0;
     this.currentSectionOpenArtwork = 0;
+
 
     previewTemplate.togglePreviewTemplateClass("none");
     previewAccessoriesClass.showAccessoriesPreview("none");
@@ -28,33 +34,90 @@ class CustomizeLanyard {
     previewProvidedInformation.showProvidedInformationPreview('none');
     previewCheckout.showPreviewCheckout("none");
     checkoutClass.showHideBottons("none");
+
+
+
+
   }
 
-  getLanyardsActive() {
-    const lanyardType = oneTwoEndsClass.getTypeLanyardSelected();
-    const width = widthClass.getWidthSelected();
-    const attachment = attachmentClass.getAttachmentSelected();
 
-    let className = '';
+  getLanyardsActive(){
+    var lanyardActive;
 
-    if (lanyardType === 'one-end') {
-      if (attachment === 'none') {
-        className = `.draw-os-${width}`;
-      } else {
-        className = `.draw-os-wa-${width}`;
-      }
-    } else if (lanyardType === 'two-end') {
-      className = `.draw-ts-${width}`;
+    var lanyardType = oneTwoEndsClass.getTypeLanyardSelected();
+    var width = widthClass.getWidthSelected();
+    var attachment = attachmentClass.getAttachmentSelected();
+
+    if (lanyardType == 'one-end' && width == '10mm' && attachment == 'none') {
+      lanyardActive = document.querySelectorAll('.draw-os-10mm');
     }
 
-    return document.querySelectorAll(className);
+    else if (lanyardType == 'one-end' && width == '15mm' && attachment == 'none') {
+      lanyardActive = document.querySelectorAll('.draw-os-15mm');
+    }
+    else if (lanyardType == 'one-end' && width == '20mm' && attachment == 'none') {
+      lanyardActive = document.querySelectorAll('.draw-os-20mm');
+    }
+    else if (lanyardType == 'one-end' && width == '25mm' && attachment == 'none') {
+      lanyardActive = document.querySelectorAll('.draw-os-25mm');
+    }
+    else if (lanyardType == 'one-end' && width == '30mm' && attachment == 'none') {
+      lanyardActive = document.querySelectorAll('.draw-os-30mm');
+    }
+
+    else if (lanyardType == 'two-end' && width == '10mm') {
+      lanyardActive = document.querySelectorAll('.draw-ts-10mm');
+    }
+
+    else if (lanyardType == 'two-end' && width == '15mm') {
+      lanyardActive = document.querySelectorAll('.draw-ts-15mm');
+    }
+
+    else if (lanyardType == 'two-end' && width == '20mm') {
+      lanyardActive = document.querySelectorAll('.draw-ts-20mm');
+    }
+
+    else if (lanyardType == 'two-end' && width == '25mm') {
+      lanyardActive = document.querySelectorAll('.draw-ts-25mm');
+    }
+
+    else if (lanyardType == 'two-end' && width == '30mm') {
+      lanyardActive = document.querySelectorAll('.draw-ts-30mm');
+
+    }
+    else if (lanyardType == 'one-end' && width == '10mm' && attachment != 'none') {
+     lanyardActive = document.querySelectorAll('.draw-os-wa-10mm');
+
+    }
+
+    else if (lanyardType == 'one-end' && width == '15mm' && attachment != 'none') {
+      lanyardActive = document.querySelectorAll('.draw-os-wa-15mm');
+
+    }
+    else if (lanyardType == 'one-end' && width == '20mm' && attachment != 'none') {
+      lanyardActive = document.querySelectorAll('.draw-os-wa-20mm');
+
+    }
+    else if (lanyardType == 'one-end' && width == '25mm' && attachment != 'none') {
+      lanyardActive = document.querySelectorAll('.draw-os-wa-25mm');
+
+    }
+    else if (lanyardType == 'one-end' && width == '30mm' && attachment != 'none') {
+      lanyardActive = document.querySelectorAll('.draw-os-wa-30mm');
+
+    }
+
+    return lanyardActive;
   }
+
 
   initializeEventListeners() {
     const closeCustomizeLanyard = document.getElementById("close-customize-lanyard");
     const preview = document.getElementById("preview");
     const next = document.getElementById("next");
     const back_preview_checkout = document.getElementById("back_preview_checkout");
+
+
 
     if (closeCustomizeLanyard) {
       closeCustomizeLanyard.addEventListener("click", () => {
@@ -64,9 +127,10 @@ class CustomizeLanyard {
     }
 
     if (preview) {
-      preview.addEventListener("click", () => this.handlePreviewClick());
+      preview.addEventListener("click", () => {
+        this.handlePreviewClick();
+      });
     }
-
     if (back_preview_checkout) {
       back_preview_checkout.addEventListener("click", () => this.handlePreviewClick());
     }
@@ -74,13 +138,16 @@ class CustomizeLanyard {
     if (next) {
       next.addEventListener("click", () => this.handleNextClick());
     }
+
   }
+
 
   handlePreviewClick() {
     if (this.currentSectionOpen > 0) {
       this.currentSectionOpen--;
       this.actionNextOrPrevious = "preview";
       this.changePreviewNextSection();
+
     }
   }
 
@@ -88,6 +155,7 @@ class CustomizeLanyard {
     this.currentSectionOpen++;
     this.actionNextOrPrevious = "next";
     this.changePreviewNextSection();
+
   }
 
   getCurrentSectionOpen() {
@@ -116,20 +184,399 @@ class CustomizeLanyard {
 
   showCurrentSection(currentSection) {
     const sections = document.querySelectorAll(".section");
+
     sections.forEach((section, index) => {
       section.style.display = index === currentSection ? "block" : "none";
     });
   }
 
   openCustomizeLanyard(action) {
-    const panel = document.getElementById("customize-lanyard");
-    if (panel) {
-      panel.style.display = action ? "block" : "none";
+    const customizeLanyardPanel = document.getElementById("customize-lanyard");
+    if (customizeLanyardPanel) {
+      customizeLanyardPanel.style.display = action ? "block" : "none";
     }
   }
 
-  // Métodos openX y changePreviewNextSection deben mantenerse iguales salvo que quieras otra lógica específica corregida
+  changePreviewNextSection() {
 
+
+   if (this.currentSectionOpen == 0) {//Material
+
+     this.openMaterial();
+   }
+   else if (this.currentSectionOpen == 1) { // Lanyard type
+     this.openLanyardType();
+   }
+   else if (this.currentSectionOpen == 2) { // Width
+     this.openWidth();
+   }
+   else if (this.currentSectionOpen == 3) { // SidePrinted
+     this.openSidePrinted();
+   }
+   else if (this.currentSectionOpen == 4) { // Clip
+     this.openClips();
+   }
+   else if (this.currentSectionOpen == 5) {// Attachment
+     this.openAttachment();
+   }
+   else if (this.currentSectionOpen == 6) {// Attachment
+     this.openAccessories();
+   }
+   else if (this.currentSectionOpen == 7) {//Colour Quantity
+     this.openColourQuantity();
+   }
+   else if (this.currentSectionOpen == 8) {//Artwork - Manual
+
+     this.openArtWorkManual();
+     this.setCurrentSectionOpenArtwork(0);
+
+   }
+
+   else if (this.currentSectionOpen == 9) {
+
+     if (artworkManualClass.getArtworkManual() == "manual"){
+       this.openBackgroundColour();
+    }
+    else {
+      if (this.getCurrentSectionOpenArtwork() == 0) {
+        if (this.actionNextOrPrevious == "next") {
+          this.setCurrentSectionOpenArtwork(1);
+          this.openBackgroundColour();
+          this.setCurrentSectionOpen(8);
+        }
+        else if (this.actionNextOrPrevious == "preview") {
+
+        }
+
+      }
+       else if (this.getCurrentSectionOpenArtwork() == 1){
+         if (this.actionNextOrPrevious == "next") {
+           this.setCurrentSectionOpen(16);
+            this.openArtwork();
+         }
+         else if(this.actionNextOrPrevious == "preview"){
+         }
+
+      }
+
+    }
+   }
+
+   else if (this.currentSectionOpen == 10) {
+
+     if (artworkManualClass.getArtworkManual() == "manual"){
+       //this.openArtWorkManual();
+       //artworkManualClass.containerBoxesArtworkManual()
+        this.openText();
+      //  artworkManualClass.containerBoxesArtworkManual();
+
+    }
+    else {
+
+      this.openArtworkFinal();
+    }
+   }
+
+   else if (this.currentSectionOpen == 11) {
+
+     if (artworkManualClass.getArtworkManual() == "manual"){
+       //this.openText();
+    this.openImage();
+  //  artworkManualClass.containerBoxesArtworkManual();
+    }
+    else {
+
+
+        this.setCurrentSectionOpen(16);
+        this.openArtwork();
+
+    }
+   }
+
+   else if (this.currentSectionOpen == 12) {
+
+       //this.openText();
+    this.openArtworkFinal();
+  //  artworkManualClass.containerBoxesArtworkManual();
+   }
+   else if (this.currentSectionOpen == 13) {
+     if (!menuClass.getActiveSession()) {
+       this.openLogin();
+     }
+     else if (menuClass.getActiveSession() && this.actionNextOrPrevious == "preview") {
+      this.setCurrentSectionOpen(12);
+      this.openArtworkFinal();
+     }
+     else if (!menuClass.getActiveSession() && this.actionNextOrPrevious == "preview") {
+       this.setCurrentSectionOpen(9);
+       this.openArtwork();
+     }
+     else {
+       this.setCurrentSectionOpen(14);
+       this.openProvidedInformation();
+     }
+    }
+   else if (this.currentSectionOpen == 14) {
+     this.openProvidedInformation();
+   }
+   else if (this.currentSectionOpen == 15) {
+
+     if (artworkManualClass.getArtworkManual() == "manual"){
+       //this.openText();
+    this.openCheckout();
+  //  artworkManualClass.containerBoxesArtworkManual();
+    }
+    else {
+      if (this.actionNextOrPrevious == "preview") {
+        //this.setCurrentSectionOpenArtwork(1);
+        this.setCurrentSectionOpen(9);
+
+        this.openBackgroundColour();
+      }
+      if (this.actionNextOrPrevious == "next") {
+        this.setCurrentSectionOpen(15);
+        this.openCheckout();
+      }
+    }
+   }
+   else if (this.currentSectionOpen == 16) {
+     if (menuClass.getActiveSession() && this.actionNextOrPrevious == "preview") {
+       this.setCurrentSectionOpen(8);
+       this.openArtWorkManual();
+     }
+   }
+   else if (this.currentSectionOpen == 17) {
+     if (artworkManualClass.getArtworkManual() == "manual"){
+    }
+    else {
+      this.setCurrentSectionOpen(12);
+      this.openArtworkFinal();
+    }
+   }
+  }
+
+  // Métodos adicionales según sea necesario
+   openMaterial(){
+     previewTemplate.togglePreviewTemplateClass("none");
+
+     previewAccessoriesClass.showAccessoriesPreview("none");
+
+     previewMaterial.showMaterialPreview("flex");
+     previewLanyardType.showTypeLanyardPreview("none");
+     previewArtworkManualClass.showArtworkManualPreview("none");
+     this.showCurrentSection(this.currentSectionOpen);
+     this.showPreview(false);
+     this.showNext(true);
+   }
+   openLanyardType(){
+     previewTemplate.togglePreviewTemplateClass("block");
+
+     previewAccessoriesClass.showAccessoriesPreview("flex");
+     previewMaterial.showMaterialPreview("none");
+
+     this.showCurrentSection(this.currentSectionOpen);
+     this.showPreview(true);
+
+     previewLanyardType.showSelectedPreviewTemplate();
+     previewLanyardType.showTypeLanyardPreview("flex");
+   }
+   openWidth(){
+     previewTemplate.togglePreviewTemplateClass("block");
+     previewAccessoriesClass.showAccessoriesPreview("flex");
+
+     this.showCurrentSection(this.currentSectionOpen);
+   }
+   openSidePrinted(){
+     previewTemplate.togglePreviewTemplateClass("block");
+     previewAccessoriesClass.showAccessoriesPreview("flex");
+
+     this.showCurrentSection(this.currentSectionOpen);
+   }
+   openClips(){
+     previewTemplate.togglePreviewTemplateClass("block");
+     previewAccessoriesClass.showAccessoriesPreview("flex");
+
+     this.showCurrentSection(this.currentSectionOpen);
+   }
+   openAttachment(){
+     previewTemplate.togglePreviewTemplateClass("block");
+     previewAccessoriesClass.showAccessoriesPreview("flex");
+
+
+     previewLanyardType.showTypeLanyardPreview("flex");
+     previewLanyardType.showSelectedPreviewTemplate();
+     previewColourClass.showColourPreview("none");
+     previewAccessoriesClass.showAccessoriesPreview("flex");
+
+     this.showCurrentSection(this.currentSectionOpen);
+   }
+   openAccessories(){
+     previewTemplate.togglePreviewTemplateClass("block");
+
+     this.showCurrentSection(this.currentSectionOpen);
+     previewLanyardType.showTypeLanyardPreview("flex");
+     previewColourClass.showColourPreview("none");
+
+     previewAccessoriesClass.showAccessoriesPreview("flex");
+   }
+   openColourQuantity(){
+     previewTemplate.togglePreviewTemplateClass("none");
+
+
+     previewArtworkManualClass.showArtworkManualPreview("none");
+     previewLanyardType.showTypeLanyardPreview("none");
+     previewAccessoriesClass.showAccessoriesPreview("none");
+
+     previewColourClass.showColourPreview("flex");
+     previewColourClass.showSelectedPreviewtColour();
+     this.showCurrentSection(this.currentSectionOpen);
+   }
+   openArtWorkManual(){
+     previewTemplate.togglePreviewTemplateClass("none");
+
+
+     previewAccessoriesClass.showAccessoriesPreview("none");
+
+     previewColourClass.showColourPreview("none");
+
+     previewMaterial.showMaterialPreview("none");
+     previewArtworkManualClass.showArtworkManualPreview("flex");
+     previewLanyardType.showTypeLanyardPreview("none");
+     artworkPreviewClass.showHidePreviewArtwork(false);
+     this.showCurrentSection(this.currentSectionOpen);
+     this.showPreview(true);
+     this.showNext(true);
+
+
+   }
+  openBackgroundColour() {
+    previewTemplate.togglePreviewTemplateClass("block");
+
+
+    previewAccessoriesClass.showAccessoriesPreview("flex");
+    artworkPreviewClass.showHidePreviewArtwork(false);
+
+    previewArtworkManualClass.showArtworkManualPreview("none");
+    previewLanyardType.showTypeLanyardPreview("flex");
+    this.showCurrentSection(this.currentSectionOpen);
+  }
+  openText(){
+    previewTemplate.togglePreviewTemplateClass("block");
+    previewAccessoriesClass.showAccessoriesPreview("flex");
+
+    previewLanyardType.showTypeLanyardPreview("flex");
+    previewArtworkManualClass.showArtworkManualPreview("none");
+    this.showCurrentSection(this.currentSectionOpen);
+  }
+  openImage(){
+    previewTemplate.togglePreviewTemplateClass("block");
+
+    previewAccessoriesClass.showAccessoriesPreview("flex");
+
+    previewLanyardType.showTypeLanyardPreview("flex");
+    previewArtworkManualClass.showArtworkManualPreview("none");
+    this.showCurrentSection(this.currentSectionOpen);
+  }
+
+  openArtwork(){
+    previewTemplate.togglePreviewTemplateClass("none");
+
+    artworkClass.showHideArtwork(true);
+    artworkPreviewClass.showHidePreviewArtwork(true);
+    previewAccessoriesClass.showAccessoriesPreview("none");
+
+    previewLanyardType.showTypeLanyardPreview("none");
+    previewArtworkManualClass.showArtworkManualPreview("none");
+    this.showCurrentSection(this.currentSectionOpen);
+  }
+
+  openArtworkFinal(){
+  //  if (artworkClass.getArtworkLeft() != "" && artworkClass.getArtworkRight() != "") {
+
+
+    artworkClassFinal.updateItems();
+    previewTemplate.togglePreviewTemplateClass("block");
+    previewAccessoriesClass.showAccessoriesPreview("flex");
+    artworkPreviewClass.showHidePreviewArtwork(false);
+    previewLanyardType.showTypeLanyardPreview("flex");
+    classPreviewLogin.showLoginPreview("none");
+    previewProvidedInformation.showProvidedInformationPreview('none');
+    this.showCurrentSection(this.currentSectionOpen);
+    this.showNext(true);
+
+    textClass.setPrintableAreaText(false);
+    imageClass.setPrintableAreaImage(false);
+
+    previewManual.showPrintableAreaImage();
+    previewManual.showPrintableAreaText();
+
+
+
+    classRegister2.openRegister(false);
+
+/*  }
+  else {
+    this.currentSectionOpen = 10;
+    alert("Please download the images and upload the artwork you want for both the left and right sides.");
+
+  }*/
+
+
+  }
+
+  openLogin(){
+    previewTemplate.togglePreviewTemplateClass("none");
+    previewAccessoriesClass.showAccessoriesPreview("none");
+    classPreviewLogin.showLoginPreview("flex");
+    previewLanyardType.showTypeLanyardPreview("none");
+    previewProvidedInformation.showProvidedInformationPreview('none');
+    this.showCurrentSection(this.currentSectionOpen);
+    this.showNext(false);
+  }
+
+  openProvidedInformation(){
+    previewTemplate.togglePreviewTemplateClass("none");
+    classPreviewLogin.showLoginPreview("none");
+    previewCheckout.showPreviewCheckout("none");
+    previewAccessoriesClass.showAccessoriesPreview("none");
+
+
+    previewProvidedInformation.showProvidedInformationPreview('flex');
+    previewLanyardType.showTypeLanyardPreview("none");
+    this.showCurrentSection(this.currentSectionOpen);
+
+    providedInformation.getAddresses();
+
+
+    this.showNext(true);
+    this.showPreview(true);
+    classRegister2.openRegister(false);
+    checkoutClass.showHideBottons("none");
+
+
+  }
+  openCheckout(){
+
+    if (providedInformation.checkEmptyValues()) {
+      previewTemplate.togglePreviewTemplateClass("block");
+
+      this.showNext(false);
+      this.showPreview(false);
+      checkoutClass.updateItems();
+      previewAccessoriesClass.showAccessoriesPreview("none");
+
+      previewLanyardType.showTypeLanyardPreview("none");
+      previewProvidedInformation.showProvidedInformationPreview('none');
+      this.showCurrentSection(this.currentSectionOpen);
+      previewLanyardType.showTypeLanyardPreview("flex");
+    }
+    else {
+      alert("Please enter all the required information.")
+      this.setCurrentSectionOpen(14);
+      this.openProvidedInformation();
+    }
+
+  }
   setStateVisibilityPanelCustomeLanyard(value) {
     stateVisibilityPanelCustomeLanyard = value;
   }
@@ -138,12 +585,22 @@ class CustomizeLanyard {
     return stateVisibilityPanelCustomeLanyard;
   }
 
-  showNext(active) {
-    next.style.display = active ? "block" : "none";
+  showNext(active){
+      if (active) {
+          next.style.display = "block";
+      }
+      else {
+      next.style.display = "none";
+      }
   }
 
-  showPreview(active) {
-    preview.style.display = active ? "block" : "none";
+  showPreview(active){
+    if (active) {
+        preview.style.display = "block";
+    }
+    else {
+        preview.style.display = "none";
+    }
   }
 }
 
@@ -151,5 +608,7 @@ var sections = document.querySelectorAll(".section");
 var preview = document.getElementById("preview");
 var next = document.getElementById("next");
 var stateVisibilityPanelCustomeLanyard = false;
+
+
 
 const customizeLanyard = new CustomizeLanyard();
