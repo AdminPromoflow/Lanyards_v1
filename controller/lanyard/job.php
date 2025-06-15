@@ -133,7 +133,7 @@ class Job {
 
     // 🛠️ Crea un nuevo trabajo (job)
     private function createJob($data) {
-      echo json_encode($data->productDetails->artworkOrManual);
+      echo json_encode($data->artworkOrManual);
       if (isset($data->productDetails->artworkOrManual)) {
           if ($data->productDetails->artworkOrManual === "artwork") {
                   $leftLink = $this->processArtwork("left", $data->productDetails->artworkLeft);
