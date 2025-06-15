@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['image'])) {
-    // Ruta del directorio actual + subcarpeta uploads
-    $uploadDir = __DIR__ . '/../uploads/'; // Solo una carpeta 'uploads'
+    // Ruta del directorio actual + subcarpeta 'uploads/images'
+    $uploadDir = __DIR__ . '/../uploads/images/';
 
     // Asegurarse de que la carpeta exista
     if (!is_dir($uploadDir)) {
@@ -14,8 +14,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['image'])) {
 
     // Mover el archivo
     if (move_uploaded_file($_FILES['image']['tmp_name'], $targetPath)) {
-        // Ruta accesible desde navegador (ajústala si es necesario según la raíz del sitio)
-        $imageUrl = 'controller/uploads/' . $fileName;
+        // Ruta accesible desde el navegador (ajustada según tu estructura)
+        $imageUrl = '../../controller/uploads/images/' . $fileName;
 
         echo json_encode([
             'success' => true,
