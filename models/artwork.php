@@ -27,8 +27,7 @@ class Artwork_Model {
 
     public function createArtwork() {
         try {
-            $sql = $this->connection->getConnection()->prepare("
-                INSERT INTO `Artwork` (`idJobs`, `linkRightImage`, `linkLeftImage`)
+            $sql = $this->connection->getConnection()->prepare("INSERT INTO `Artwork` (`idJobs`, `linkRightImage`, `linkLeftImage`)
                 VALUES (:idJobs, :linkRightImage, :linkLeftImage)
             ");
 
@@ -41,9 +40,17 @@ class Artwork_Model {
             $this->connection->closeConnection();
             return true;
         } catch (PDOException $e) {
+            echo json_encode([
+                'success' => false,
+                'error' => $e->getMessage(),
+                'idJobs' => $this->idJob,
+                'linkRightImage' => $this->linkRightImage,
+                'linkLeftImage' => $this->linkLeftImage
+            ]);
             return false;
         }
     }
+
 
 
 }
