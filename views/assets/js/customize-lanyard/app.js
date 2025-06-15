@@ -199,6 +199,7 @@ class CustomizeLanyard {
   }
 
   changePreviewNextSection() {
+    alert(this.currentSectionOpen);
 
 
    if (this.currentSectionOpen == 0) {//Material
