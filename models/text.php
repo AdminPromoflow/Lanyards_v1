@@ -71,21 +71,42 @@ class Text_Model {
         $this->textPosition = $textPosition;
     }
 
+    public function createText() {
+        try {
+            $sql = $this->connection->getConnection()->prepare("
+                INSERT INTO `Text` (
+                    `idJobs`, `contentText`, `timesText`, `spaceBetweenText`,
+                    `spaceAlongLanyard`, `colourText`, `fontFamilyText`, `sizeText`,
+                    `boldText`, `italicText`, `underlineText`, `textPosition`
+                )
+                VALUES (
+                    :idJobs, :contentText, :timesText, :spaceBetweenText,
+                    :spaceAlongLanyard, :colourText, :fontFamilyText, :sizeText,
+                    :boldText, :italicText, :underlineText, :textPosition
+                )
+            ");
 
+            $sql->bindParam(':idJobs', $this->idJob, PDO::PARAM_INT);
+            $sql->bindParam(':contentText', $this->contentText, PDO::PARAM_STR);
+            $sql->bindParam(':timesText', $this->timesText, PDO::PARAM_INT);
+            $sql->bindParam(':spaceBetweenText', $this->spaceBetweenText, PDO::PARAM_STR);
+            $sql->bindParam(':spaceAlongLanyard', $this->spaceAlongLanyard, PDO::PARAM_STR);
+            $sql->bindParam(':colourText', $this->colourText, PDO::PARAM_STR);
+            $sql->bindParam(':fontFamilyText', $this->fontFamilyText, PDO::PARAM_STR);
+            $sql->bindParam(':sizeText', $this->sizeText, PDO::PARAM_STR);
+            $sql->bindParam(':boldText', $this->boldText, PDO::PARAM_BOOL);
+            $sql->bindParam(':italicText', $this->italicText, PDO::PARAM_BOOL);
+            $sql->bindParam(':underlineText', $this->underlineText, PDO::PARAM_BOOL);
+            $sql->bindParam(':textPosition', $this->textPosition, PDO::PARAM_STR);
 
+            $sql->execute();
 
-
-
-
-
-
-
-
-
-
-
-
-
+            $this->connection->closeConnection();
+            return true;
+        } catch (PDOException $e) {
+            return false;
+        }
+    }
 
 
 

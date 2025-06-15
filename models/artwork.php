@@ -24,5 +24,27 @@ class Artwork_Model {
     public function setLinkImageRight($linkImageRight) {
         $this->linkImageRight = $linkImageRight;
     }
+
+    public function createArtwork() {
+        try {
+            $sql = $this->connection->getConnection()->prepare("
+                INSERT INTO `Artwork` (`idJobs`, `linkRightImage`, `linkLeftImage`)
+                VALUES (:idJobs, :linkRightImage, :linkLeftImage)
+            ");
+
+            $sql->bindParam(':idJobs', $this->idJob, PDO::PARAM_INT);
+            $sql->bindParam(':linkRightImage', $this->linkRightImage, PDO::PARAM_STR);
+            $sql->bindParam(':linkLeftImage', $this->linkLeftImage, PDO::PARAM_STR);
+
+            $sql->execute();
+
+            $this->connection->closeConnection();
+            return true;
+        } catch (PDOException $e) {
+            return false;
+        }
+    }
+
+
 }
 ?>

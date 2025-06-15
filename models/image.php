@@ -51,6 +51,36 @@ class Image_Model {
     }
 
 
+    public function createImage() {
+        try {
+            $sql = $this->connection->getConnection()->prepare("
+                INSERT INTO `Image` (
+                    `idJobs`, `timesImage`, `imageSize`, `spaceBetweenImage`,
+                    `imageRotation`, `spaceAlongLanyard`, `linkImage`, `imagePosition`
+                )
+                VALUES (
+                    :idJobs, :timesImage, :imageSize, :spaceBetweenImage,
+                    :imageRotation, :spaceAlongLanyard, :linkImage, :imagePosition
+                )
+            ");
+
+            $sql->bindParam(':idJobs', $this->idJob, PDO::PARAM_INT);
+            $sql->bindParam(':timesImage', $this->timesImage, PDO::PARAM_INT);
+            $sql->bindParam(':imageSize', $this->imageSize, PDO::PARAM_STR);
+            $sql->bindParam(':spaceBetweenImage', $this->spaceBetweenImage, PDO::PARAM_STR);
+            $sql->bindParam(':imageRotation', $this->imageRotation, PDO::PARAM_INT);
+            $sql->bindParam(':spaceAlongLanyard', $this->spaceAlongLanyard, PDO::PARAM_STR);
+            $sql->bindParam(':linkImage', $this->linkImage, PDO::PARAM_STR);
+            $sql->bindParam(':imagePosition', $this->imagePosition, PDO::PARAM_STR);
+
+            $sql->execute();
+
+            $this->connection->closeConnection();
+            return true;
+        } catch (PDOException $e) {
+            return false;
+        }
+    }
 
 
 

@@ -126,16 +126,85 @@ class Job {
         }
     }
 
-    private function createText($text){
-      echo json_encode($text);
+    private function createText($text) {
+        $connection = new Database();
+        $text_model = new Text_Model($connection);
 
-    }
-    private function createImage($image, $linkImage){
-      echo json_encode($image);
-    }
-    private function createArtwork($artwork, $leftLink, $rightLink){
+        if (session_status() !== PHP_SESSION_ACTIVE) {
+            session_start();
+        }
 
+        if (!isset($_SESSION['idJob'])) {
+            echo json_encode(["success" => false, "message" => "No job ID found in session"]);
+            return;
+        }
+
+        $text_model->setIdJob($_SESSION['idJob']);
+
+        // Validar y asignar campos obligatorios
+        $text_model->setContentText($text->contentText);
+        $text_model->setTimesText($text->timesText);
+        $text_model->setSpaceBetweenText($text->spaceBetweenText);
+        $text_model->setSpaceAlongLanyard($text->spaceAlongLanyard);
+        $text_model->setColourText($text->colourText);
+        $text_model->setFontFamilyText($text->fontFamilyText);
+        $text_model->setSizeText($text->sizeText);
+        $text_model->setBoldText($text->boldText);
+        $text_model->setItalicText($text->italicText);
+        $text_model->setUnderlineText($text->underlineText);
+        $text_model->setTextPosition($text->textPosition);
+        $text_model->createText();
+        // echo json_encode(["success" => true, "message" => "Text model assigned with job ID"]);
     }
+
+
+    private function createImage($image, $linkImage) {
+        $connection = new Database();
+        $image_model = new Image_Model($connection);
+
+        if (session_status() !== PHP_SESSION_ACTIVE) {
+            session_start();
+        }
+
+        if (!isset($_SESSION['idJob'])) {
+            echo json_encode(["success" => false, "message" => "No job ID found in session"]);
+            return;
+        }
+
+        $image_model->setIdJob($_SESSION['idJob']);
+
+        // Validar y asignar campos obligatorios
+        $image_model->setTimesImage($image->timesImage);
+        $image_model->setImageSize($image->imageSize);
+        $image_model->setSpaceBetweenImage($image->spaceBetweenImage);
+        $image_model->setImageRotation($image->imageRotation);
+        $image_model->setSpaceAlongLanyard($image->spaceAlongLanyard);
+        $image_model->setLinkImage($linkImage);
+        $image_model->setImagePosition($image->imagePosition);
+        $image_model->createImage();
+        // echo json_encode(["success" => true, "message" => "Image model assigned with job ID"]);
+    }
+
+
+    private function createArtwork($artwork, $leftLink, $rightLink) {
+        $connection = new Database();
+        $artwork_model = new Artwork_Model($connection);
+
+        // Asignar valores
+        if (isset($_SESSION['idJob'])) {
+            $artwork_model->setIdJob($_SESSION['idJob']); // Asegúrate de tener este valor en sesión
+        }
+
+        $artwork_model->setLinkImageLeft($leftLink);
+        $artwork_model->setLinkImageRight($rightLink);
+        $artwork_model->createArtwork();
+
+        // Si tienes una función para guardar los datos en la base de datos:
+        // $artwork_model->saveArtwork();
+
+      //  echo json_encode(["success" => true, "message" => "Artwork assigned successfully"]);
+    }
+
 
     // 🛠️ Crea un nuevo trabajo (job)
     private function createJob($data) {
