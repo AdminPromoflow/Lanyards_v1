@@ -1,5 +1,9 @@
 class ProvidedInformation {
+
   constructor() {
+
+    alert(menuClass.getActiveSession());
+
     boxes_provided_information_2.style.display = "none";
 
     checkbox_provided_information.addEventListener("click", () => {
@@ -10,7 +14,6 @@ class ProvidedInformation {
 
 
 
-    alert(menuClass.getActiveSession());
     /*  if (menuClass.getActiveSession()) {
         alert("Buenas");
         this.getAddresses();
