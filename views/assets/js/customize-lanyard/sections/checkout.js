@@ -8,6 +8,8 @@ class Checkout {
     this.total = "";
     this.linkPdf = "";
 
+    this.productDetails =  {};
+
 
 
     //
