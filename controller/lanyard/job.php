@@ -52,8 +52,13 @@ class Job {
     private function createJob($data) {
 
       if ($data->productDetails->artworkLeft != null) {
-        echo json_encode("Si hay artwork");
-
+        echo json_encode($data->productDetails->artworkLeft );
+      }
+      elseif ($data->productDetails->text != null) {
+        echo json_encode("Si hay manual");
+      }
+      else {
+        echo json_encode("No hay ninguno de los dos");
       }
       exit;
 
