@@ -280,10 +280,9 @@ class CustomizeLanyard {
 
     }
     else {
-      if (this.actionNextOrPrevious == "next") {
-      alert("le di click a next y estoy en" + this.currentSectionOpen);  
-      }
-      this.openArtworkFinal();
+    //  if (this.actionNextOrPrevious == "next") {
+        this.openArtworkFinal();
+      //}
     }
    }
 
