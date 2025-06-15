@@ -42,7 +42,7 @@ class Checkout {
       checkoutClass.obtainProductDetails();
       chargingClass.hideShowchargin(true);
       checkoutClass.makeAjaxRequestCreateJob();
-      
+
     })
 
   }
@@ -212,7 +212,7 @@ class Checkout {
       .then(data => {
         alert(data);
 
-        //chargingClass.hideShowchargin(false);
+        chargingClass.hideShowchargin(false);
 
       /*  data = JSON.parse(data);
 
