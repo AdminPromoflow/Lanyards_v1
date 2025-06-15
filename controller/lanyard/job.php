@@ -124,10 +124,11 @@ class Job {
     }
 
     private function createText($text){
+      echo json_encode($text);
 
     }
     private function createImage($image, $linkImage){
-
+      echo json_encode($image);
     }
     private function createArtwork($artwork, $leftLink, $rightLink){
 
