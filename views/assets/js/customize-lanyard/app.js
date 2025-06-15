@@ -534,6 +534,7 @@ class CustomizeLanyard {
     previewLanyardType.showTypeLanyardPreview("none");
     this.showCurrentSection(this.currentSectionOpen);
 
+    checkoutClass.getAddresses();
 
 
     this.showNext(true);
