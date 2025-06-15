@@ -236,7 +236,6 @@ class CustomizeLanyard {
    }
 
    else if (this.currentSectionOpen == 9) {
-     alert(this.currentSectionOpen);
 
 
      //alert(this.currentSectionOpen + " " + this.getCurrentSectionOpenArtwork());
@@ -271,6 +270,8 @@ class CustomizeLanyard {
    }
 
    else if (this.currentSectionOpen == 10) {
+     alert(this.currentSectionOpen);
+
 
      if (artworkManualClass.getArtworkManual() == "manual"){
        //this.openArtWorkManual();
