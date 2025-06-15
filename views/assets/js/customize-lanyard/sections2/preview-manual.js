@@ -365,16 +365,30 @@ class PreviewManual {
     const link = imageClass.getLinkImage();
 
     if (!link) {
-      console.error('No se pudo obtener el enlace de la imagen.');
+      console.error('Unable to retrieve the image link.');
       return;
     }
 
-    const timestamp = Date.now(); // genera un número único (como filemtime)
+    const timestamp = Date.now();
     const versionedLink = link + '?v=' + timestamp;
+
+    let allAssigned = true;
 
     wrapElements.forEach(img => {
       img.src = versionedLink;
+
+      // Check whether the assignment was successful
+      if (!img.src.includes(link)) {
+        console.warn('The image was not correctly assigned to:', img);
+        allAssigned = false;
+      }
     });
+
+    if (allAssigned) {
+      console.log('✅ Image successfully assigned to all elements.');
+    } else {
+      console.warn('⚠️ Some images were not correctly assigned.');
+    }
   }
 
 
