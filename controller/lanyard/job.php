@@ -7,6 +7,9 @@ require_once '../../models/amount.php';
 require_once '../../models/clips.php';
 require_once '../../models/addresses.php';
 
+require_once '../../models/image.php';
+require_once '../../models/text.php';
+require_once '../../models/artwork.php';
 
 
 
