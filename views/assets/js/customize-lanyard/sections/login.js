@@ -76,8 +76,6 @@ class Classlogin2 {
         providedInformation.getAddresses();
 
         customizeLanyard.openProvidedInformation();
-
-        //location.reload();
       }
       else{
         alert("The email address or password you entered is incorrect.");

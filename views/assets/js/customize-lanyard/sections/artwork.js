@@ -4,6 +4,9 @@ class Artwork {
     this._heightImage = "";
     this._widthImage = "";
 
+    this.artworkLeft = "";
+    this.artworkRight = "";
+
     for (let i = 0; i < containerBoxesArtwork.length; i++) {
       containerBoxesArtwork[i].addEventListener("click", () => {
         this.borderWhite(i);
@@ -42,6 +45,13 @@ class Artwork {
           };
 
           img.src = e.target.result;
+          if (side == "left") {
+            this.setArtworkLeft(img.src);
+          }
+          else if (side == "right") {
+            this.setArtworkRight(img.src);
+          }
+
         };
 
         reader.readAsDataURL(file);
@@ -58,6 +68,23 @@ class Artwork {
 
   getSRCImage() {
     return this._srcImage;
+  }
+
+  setArtworkLeft(value) {
+    this.artworkLeft = value;
+  }
+
+  getArtworkLeft() {
+    return this.artworkLeft;
+  }
+
+  // Artwork Right
+  setArtworkRight(value) {
+    this.artworkRight = value;
+  }
+
+  getArtworkRight() {
+    return this.artworkRight;
   }
 
   setHeightImage(value) {

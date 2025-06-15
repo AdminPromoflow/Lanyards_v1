@@ -15,8 +15,6 @@ class TextClass {
     this.textPosition = 0;
 
 
-
-
     const textInput = document.getElementById("textInput");
     textInput.addEventListener('input', function() {
       textClass.setContentText(textInput.value);

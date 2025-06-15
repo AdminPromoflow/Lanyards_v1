@@ -31,21 +31,35 @@ class Checkout {
 
 
 
-    //  checkoutClass.obtainProduct();
-    //  checkoutClass.obtainDescription();
-  //    checkoutClass.obtainPricePerUnit();
-    //  checkoutClass.obtainAmount();
-  //    checkoutClass.obtainTotal();
-
-
-        alert(artworkManualClass.getArtworkManual());
-      /*  if (artworkManualClass.getArtworkManual()) {
-
-        }*/
-  //    chargingClass.hideShowchargin(true);
-  //    checkoutClass.makeAjaxRequestCreateJob();
+      checkoutClass.obtainProduct();
+      checkoutClass.obtainDescription();
+      checkoutClass.obtainPricePerUnit();
+      checkoutClass.obtainAmount();
+      checkoutClass.obtainTotal();
+      checkoutClass.obtainProductDetails();
+      chargingClass.hideShowchargin(true);
+      checkoutClass.makeAjaxRequestCreateJob();
     })
 
+  }
+
+  obtainProductDetails(){
+    if (artworkManualClass.getArtworkManual() == "manual") {
+      const checkoutData = {
+        text: checkoutClass.obtainText(),
+        image: checkoutClass.obtainImage()
+      };
+
+      checkoutClass.setProductDetails(checkoutData)
+    }
+    else if (artworkManualClass.getArtworkManual() == "artwork") {
+      const artworkData = {
+          artworkLeft: artworkClass.getArtworkLeft(),
+          artworkRight: artworkClass.getArtworkRight()
+        };
+
+      checkoutClass.setProductDetails(artworkData)
+    }
   }
 
 
@@ -131,6 +145,38 @@ class Checkout {
 
   }
 
+  obtainImage() {
+    const imageData = {
+      timesImage: imageClass.getTimesImage(),
+      imageSize: imageClass.getImageSize(),
+      spaceBetweenImage: imageClass.getSpaceBetweenImage(),
+      imageRotation: imageClass.getImageRotation(),
+      spaceAlongLanyard: imageClass.getSpaceAlongLanyard(),
+      linkImage: imageClass.getLinkImage(),
+      imagePosition: imageClass.getImagePosition()
+    };
+
+    return imageData;
+  }
+
+  obtainText() {
+    const textData = {
+      contentText: textClass.getContentText(),
+      timesText: textClass.getTimesText(),
+      spaceBetweenText: textClass.getSpaceBetweenText(),
+      spaceAlongLanyard: textClass.getSpaceAlongLanyard(),
+      colourText: textClass.getColourText(),
+      fontFamilyText: textClass.getFontFamilyText(),
+      sizeText: textClass.getSizeText(),
+      boldText: textClass.getBoldText(),
+      italicText: textClass.getItalicText(),
+      underlineText: textClass.getUnderlineText(),
+      textPosition: textClass.getTextPosition()
+    };
+
+    return textData;
+  }
+
   makeAjaxRequestCreateJob() {
     const url = "../../controller/lanyard/job.php";
     const data = {
@@ -140,6 +186,7 @@ class Checkout {
       price_per_unit: this.getPricePerUnit(),
       amount: this.getAmount(),
       total: this.getTotal(),
+      productDetails: this.getProduct(),
       address1: providedInformation.getAddress1(),
       address2: providedInformation.getAddress2(),
       newColour: backgroundClass.getNewColour()
@@ -159,11 +206,11 @@ class Checkout {
         throw new Error("Network error.");
       })
       .then(data => {
-        //alert(data);
+        alert(data);
 
         //chargingClass.hideShowchargin(false);
 
-        data = JSON.parse(data);
+      /*  data = JSON.parse(data);
 
         if (data["status"]) {
           alert(data["message"]);
@@ -172,7 +219,7 @@ class Checkout {
 
         else {
 
-        }
+        }*/
 
       })
       .catch(error => {
@@ -187,6 +234,17 @@ class Checkout {
   setProduct(newName) {
     this.productName = newName;
   }
+
+  getProductDetails() {
+    return this.productDetails;
+  }
+
+  setProductDetails(productDetails) {
+    this.productDetails = productDetails;
+  }
+
+
+
 
   getDescription() {
     return this.description;
