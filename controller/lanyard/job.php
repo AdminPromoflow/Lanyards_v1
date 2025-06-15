@@ -123,7 +123,15 @@ class Job {
         }
     }
 
+    private function createText($text){
 
+    }
+    private function createImage($image, $linkImage){
+
+    }
+    private function createArtwork($artwork, $leftLink, $rightLink){
+
+    }
 
     // 🛠️ Crea un nuevo trabajo (job)
     private function createJob($data) {
@@ -132,8 +140,13 @@ class Job {
                   $leftLink = $this->processArtwork("left", $data->productDetails->artworkLeft);
                   $rightLink = $this->processArtwork("right", $data->productDetails->artworkRight);
 
+                  $this->createArtwork($artwork, $leftLink, $rightLink);
+
           } elseif ($data->artworkOrManual === "manual") {
-                  $rightLink = $this->processImage($data->productDetails->image->linkImage);
+                  $linkImage = $this->processImage($data->productDetails->image->linkImage);
+
+                  $this->createText($data->productDetails->text);
+                  $this->createImage($data->productDetails->image, $linkImage);
           }
       }
 
