@@ -25,6 +25,8 @@
 }
 .image p{
   color: rgba(255, 255, 255, .5);
+  width: 90%;
+  font-size: 0.9em;
 }
 .containers-boxes-image{
   position: relative;
