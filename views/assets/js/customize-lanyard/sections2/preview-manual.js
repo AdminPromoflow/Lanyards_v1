@@ -361,7 +361,6 @@ class PreviewManual {
   }
 
   uploadImage() {
-    alert("Sometimes the internal structure of an image may not be compatible. If your image does not load correctly, please try editing it or uploading a different one.");
     const wrapElements = document.querySelectorAll('.wrap_img_0 img, .wrap_img_1 img');
     const link = imageClass.getLinkImage();
 
