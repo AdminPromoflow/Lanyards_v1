@@ -234,6 +234,8 @@ class CustomizeLanyard {
 
    else if (this.currentSectionOpen == 9) {
 
+     alert(this.currentSectionOpen + " " + this.getCurrentSectionOpenArtwork());
+
      if (artworkManualClass.getArtworkManual() == "manual"){
        this.openBackgroundColour();
     }
@@ -255,6 +257,7 @@ class CustomizeLanyard {
             this.openArtwork();
          }
          else if(this.actionNextOrPrevious == "preview"){
+
          }
 
       }
