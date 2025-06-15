@@ -282,7 +282,7 @@ class CustomizeLanyard {
     }
     else {
       if (this.actionNextOrPrevious == "next") {
-        this.currentSectionOpen = 12;
+        this.currentSectionOpen = 10;
         this.openArtwork();
 
       }
