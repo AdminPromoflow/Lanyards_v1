@@ -9,13 +9,14 @@ class ProvidedInformation {
     mapboxgl.accessToken = 'pk.eyJ1IjoiaWFuc291dGhlcm4iLCJhIjoiY20ybWowdnRlMHBmcjJqcTljaDdhYXV6diJ9.UK4tRTqDkO6yYffa-LIyWw';
 
 
-    alert("Buenas");
 
-  /*  document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function() {
+      alert("Buenas");
+
       if (menuClass.getActiveSession()) {
         this.getAddresses();
       }
-    });*/
+    });
 
     const map = new mapboxgl.Map({
       container: 'map',
