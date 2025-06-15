@@ -153,7 +153,6 @@ class Checkout {
     const imageData = {
       timesImage: imageClass.getTimesImage(),
       imageSize: imageClass.getImageSize(),
-      artworkOrManual: artworkManualClass.getArtworkManual(),
       spaceBetweenImage: imageClass.getSpaceBetweenImage(),
       imageRotation: imageClass.getImageRotation(),
       spaceAlongLanyard: imageClass.getSpaceAlongLanyard(),
@@ -187,6 +186,7 @@ class Checkout {
     const data = {
       action: "createJob",
       product: this.getProduct(),
+      artworkOrManual: artworkManualClass.getArtworkManual(),
       description: this.getDescription(),
       price_per_unit: this.getPricePerUnit(),
       amount: this.getAmount(),
