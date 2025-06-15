@@ -148,9 +148,12 @@ class Job {
 
           } elseif ($data->artworkOrManual === "manual") {
                   $linkImage = $this->processImage($data->productDetails->image->linkImage);
-
-                  $this->createText($data->productDetails->text);
-                  $this->createImage($data->productDetails->image, $linkImage);
+                  if ($data->productDetails->text->contentText != "") {
+                    $this->createText($data->productDetails->text);
+                  }
+                  if ($data->productDetails->image->linkImage != "") {
+                    $this->createImage($data->productDetails->image, $linkImage);
+                  }
           }
       }
 
