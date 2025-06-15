@@ -502,6 +502,7 @@ class CustomizeLanyard {
 
     previewLanyardType.showTypeLanyardPreview("none");
     previewArtworkManualClass.showArtworkManualPreview("none");
+    alert(this.currentSectionOpen);
     this.showCurrentSection(this.currentSectionOpen);
   }
 
