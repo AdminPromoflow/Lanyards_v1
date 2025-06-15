@@ -361,6 +361,7 @@ class PreviewManual {
   }
 
   uploadImage() {
+    alert("Sometimes the internal structure of an image may not be compatible. If your image does not load correctly, please try editing it or uploading a different one.");
     const wrapElements = document.querySelectorAll('.wrap_img_0 img, .wrap_img_1 img');
     const link = imageClass.getLinkImage();
 
@@ -379,7 +380,7 @@ class PreviewManual {
 
       // Check whether the assignment was successful
       if (!img.src.includes(link)) {
-        alert('The image could not be displayed properly. Please try with a different image.');
+        console.log('The image could not be displayed properly. Please try with a different image.');
         allAssigned = false;
       }
     });
