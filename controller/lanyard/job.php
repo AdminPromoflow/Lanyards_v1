@@ -237,7 +237,7 @@ class Job {
 
 
         $idOrder = $this->verifyOrden($data);
-
+        echo json_encode("1");exit;
 
         $connection = new Database();
         $job_model = new Job_Model($connection);
