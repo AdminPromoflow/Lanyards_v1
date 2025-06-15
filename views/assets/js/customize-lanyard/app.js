@@ -199,7 +199,6 @@ class CustomizeLanyard {
   }
 
   changePreviewNextSection() {
-    console.log(this.currentSectionOpen);
 
 
    if (this.currentSectionOpen == 0) {//Material
@@ -503,6 +502,7 @@ class CustomizeLanyard {
 
     previewLanyardType.showTypeLanyardPreview("none");
     previewArtworkManualClass.showArtworkManualPreview("none");
+    alert(this.currentSectionOpen);
     this.showCurrentSection(this.currentSectionOpen);
   }
 
