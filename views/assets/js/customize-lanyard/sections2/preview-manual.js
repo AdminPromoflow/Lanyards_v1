@@ -379,7 +379,7 @@ class PreviewManual {
 
       // Check whether the assignment was successful
       if (!img.src.includes(link)) {
-        console.warn('The image was not correctly assigned to:', img);
+        alert('The image could not be displayed properly. Please try with a different image.');
         allAssigned = false;
       }
     });
