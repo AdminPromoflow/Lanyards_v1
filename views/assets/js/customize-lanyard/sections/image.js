@@ -202,39 +202,45 @@ class ImageClass {
 
 
 
-
       const imageInput = document.getElementById('imageUpload');
 
       imageInput.addEventListener('change', function(event) {
         const file = event.target.files[0];
 
-        if (file && file.type.startsWith('image/')) {
-          const formData = new FormData();
-          formData.append('image', file);
-
-          fetch('../../controller/uploads/upload.php', {
-            method: 'POST',
-            body: formData
-          })
-          .then(response => response.json())
-          .then(data => {
-            if (data.success) {
-              const imageUrl = data.imageUrl;
-              imageClass.setLinkImage(imageUrl); // Usa la URL desde el servidor
-              previewManual.uploadImage();       // Muestra la imagen
-            } else {
-              alert('Error al subir la imagen: ' + data.message);
-            }
-          })
-          .catch(err => {
-            console.error('Error en la subida:', err);
-            alert('Error en la conexión al subir imagen.');
-          });
-
-        } else {
-          alert('Por favor, selecciona un archivo de imagen válido.');
+        if (!file || !file.type.startsWith('image/')) {
+          alert('Please select a valid image file.');
+          return;
         }
+
+        // 🚫 Validate size: maximum 1MB
+        if (file.size > 1048576) {
+          alert('The image must not be larger than 1MB.');
+          return;
+        }
+
+        const formData = new FormData();
+        formData.append('image', file);
+
+        fetch('../../controller/uploads/upload.php', {
+          method: 'POST',
+          body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+          if (data.success) {
+            const imageUrl = data.imageUrl;
+            imageClass.setLinkImage(imageUrl); // Set the image URL
+            previewManual.uploadImage();       // Display the image
+          } else {
+            alert('There was an error uploading the image: ' + data.message);
+          }
+        })
+        .catch(err => {
+          console.error('Upload error:', err);
+          alert('There was a problem connecting to the server.');
+        });
       });
+
 
 
 
