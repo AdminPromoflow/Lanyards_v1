@@ -27,6 +27,9 @@
   color: rgba(255, 255, 255, .5);
   width: 90%;
   font-size: 0.9em;
+  text-align: justify;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .containers-boxes-image{
   position: relative;
