@@ -282,8 +282,9 @@ class CustomizeLanyard {
     }
     else {
       if (this.actionNextOrPrevious == "next") {
+        this.currentSectionOpen = 16;
+
         this.openArtwork();
-        this.currentSectionOpen = 11;
 
       }
       else {
@@ -502,7 +503,6 @@ class CustomizeLanyard {
 
     previewLanyardType.showTypeLanyardPreview("none");
     previewArtworkManualClass.showArtworkManualPreview("none");
-    alert(this.currentSectionOpen);
     this.showCurrentSection(this.currentSectionOpen);
   }
 
