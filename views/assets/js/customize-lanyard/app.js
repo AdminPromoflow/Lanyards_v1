@@ -491,6 +491,8 @@ class CustomizeLanyard {
   }
 
   openArtworkFinal(){
+    if (artworkClass.getArtworkLeft() != "" && artworkClass.getArtworkRight() != "") {
+
 
     artworkClassFinal.updateItems();
     previewTemplate.togglePreviewTemplateClass("block");
@@ -511,6 +513,11 @@ class CustomizeLanyard {
 
 
     classRegister2.openRegister(false);
+
+  }
+  alert("Please download the images and upload the artwork you want for both the left and right sides.");
+
+
   }
 
   openLogin(){
