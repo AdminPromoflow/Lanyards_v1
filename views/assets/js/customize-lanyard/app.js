@@ -281,9 +281,13 @@ class CustomizeLanyard {
 
     }
     else {
-    //  if (this.actionNextOrPrevious == "next") {
+      if (this.actionNextOrPrevious == "next") {
+        this.currentSectionOpen = 11;
+      }
+      else {
         this.openArtworkFinal();
-      //}
+
+      }
     }
    }
 
