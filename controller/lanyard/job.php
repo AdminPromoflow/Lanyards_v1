@@ -95,6 +95,7 @@ class Job {
 
       if (isset($data->productDetails->artworkLeft) && isset($data->productDetails->artworkRight)) {
         $this->processArtwork("left", $data->productDetails->artworkLeft);
+        $this->processArtwork("right", $data->productDetails->artworkRight);
 
         //  echo json_encode($data->productDetails->artworkLeft);
       }
