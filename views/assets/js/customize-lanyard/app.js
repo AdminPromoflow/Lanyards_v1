@@ -234,7 +234,7 @@ class CustomizeLanyard {
 
    else if (this.currentSectionOpen == 9) {
 
-     alert(this.currentSectionOpen + " " + this.getCurrentSectionOpenArtwork());
+     //alert(this.currentSectionOpen + " " + this.getCurrentSectionOpenArtwork());
 
      if (artworkManualClass.getArtworkManual() == "manual"){
        this.openBackgroundColour();
@@ -283,7 +283,6 @@ class CustomizeLanyard {
    else if (this.currentSectionOpen == 11) {
 
      if (artworkManualClass.getArtworkManual() == "manual"){
-       //this.openText();
     this.openImage();
   //  artworkManualClass.containerBoxesArtworkManual();
     }
@@ -298,7 +297,6 @@ class CustomizeLanyard {
 
    else if (this.currentSectionOpen == 12) {
 
-       //this.openText();
     this.openArtworkFinal();
   //  artworkManualClass.containerBoxesArtworkManual();
    }
@@ -325,15 +323,12 @@ class CustomizeLanyard {
    else if (this.currentSectionOpen == 15) {
 
      if (artworkManualClass.getArtworkManual() == "manual"){
-       //this.openText();
     this.openCheckout();
   //  artworkManualClass.containerBoxesArtworkManual();
     }
     else {
       if (this.actionNextOrPrevious == "preview") {
-        alert(this.currentSectionOpen + " " + this.getCurrentSectionOpenArtwork() + "  preview");
-
-        //this.setCurrentSectionOpenArtwork(1);
+      //  alert(this.currentSectionOpen + " " + this.getCurrentSectionOpenArtwork() + "  preview");
         this.setCurrentSectionOpen(9);
 
         this.openBackgroundColour();
@@ -455,7 +450,6 @@ class CustomizeLanyard {
 
    }
   openBackgroundColour() {
-    console.log(this.currentSectionOpen);
     previewTemplate.togglePreviewTemplateClass("block");
 
 
@@ -467,6 +461,7 @@ class CustomizeLanyard {
     this.showCurrentSection(this.currentSectionOpen);
   }
   openText(){
+    alert(this.currentSectionOpen);
     previewTemplate.togglePreviewTemplateClass("block");
     previewAccessoriesClass.showAccessoriesPreview("flex");
 
