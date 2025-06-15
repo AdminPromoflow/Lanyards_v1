@@ -182,6 +182,7 @@ class Checkout {
   }
 
   makeAjaxRequestCreateJob() {
+    chargingClass.hideShowchargin(false);
     const url = "../../controller/lanyard/job.php";
     const data = {
       action: "createJob",
@@ -213,7 +214,7 @@ class Checkout {
       .then(data => {
         alert(data);
 
-        chargingClass.hideShowchargin(false);
+
 
       /*  data = JSON.parse(data);
 
