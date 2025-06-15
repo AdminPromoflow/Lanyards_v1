@@ -9,7 +9,7 @@ class ProvidedInformation {
     mapboxgl.accessToken = 'pk.eyJ1IjoiaWFuc291dGhlcm4iLCJhIjoiY20ybWowdnRlMHBmcjJqcTljaDdhYXV6diJ9.UK4tRTqDkO6yYffa-LIyWw';
 
 
-
+    alert("Buenas");
 
   /*  document.addEventListener("DOMContentLoaded", function() {
       if (menuClass.getActiveSession()) {
@@ -160,7 +160,7 @@ class ProvidedInformation {
 
 
   getAddresses(){
-    
+
     const url = "../../controller/lanyard/addresses.php";
     const data = {
       action: "getAddresses"
