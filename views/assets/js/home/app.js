@@ -105,6 +105,10 @@ class Home {
         previewManual.refreshTextLanyard();
         previewManual.refreshImageLanyard();
 
+        if (menuClass.getActiveSession()) {
+          providedInformation.getAddresses();
+        }
+
 
         // Open the customization panel
         customizeLanyard.openCustomizeLanyard(true);
@@ -144,6 +148,10 @@ class Home {
         previewTemplate.activateTemplate();
         previewManual.refreshTextLanyard();
         previewManual.refreshImageLanyard();
+
+        if (menuClass.getActiveSession()) {
+          providedInformation.getAddresses();
+        }
 
 
 

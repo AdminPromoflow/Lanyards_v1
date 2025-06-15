@@ -10,13 +10,7 @@ class ProvidedInformation {
 
 
 
-    document.addEventListener("DOMContentLoaded", function() {
-      alert(menuClass.getActiveSession());
-
-      if (menuClass.getActiveSession()) {
-        this.getAddresses();
-      }
-    });
+  
 
     const map = new mapboxgl.Map({
       container: 'map',
