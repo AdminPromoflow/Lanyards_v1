@@ -208,6 +208,11 @@ class Job {
 
     // 🛠️ Crea un nuevo trabajo (job)
     private function createJob($data) {
+
+    /*  if (session_status() !== PHP_SESSION_ACTIVE) {
+            session_start();
+        }
+        $_SESSION['idJob'] = $idJob;
       if (isset($data->artworkOrManual)) {
           if ($data->artworkOrManual === "artwork") {
                   $leftLink = $this->processArtwork("left", $data->productDetails->artworkLeft);
@@ -226,7 +231,7 @@ class Job {
           }
       }
 
-      exit;
+      exit;*/
 
       $newColour = $data->newColour ? 1 : 0;
 
