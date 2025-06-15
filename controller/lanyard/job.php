@@ -267,7 +267,6 @@ class Job {
 
         $job_model->setTotal($data_price_total);
 
-        echo json_encode("2");exit;
 
         //$newColour
 
@@ -287,6 +286,7 @@ class Job {
         // Extras pueden ser null o string vacío
         $job_model->setIdPriceAmount($idAmount); // Cambiar si hay valor
 
+        echo json_encode("3");exit;
 
 
         if (isset($data->address1) || isset($data->address2)) {
