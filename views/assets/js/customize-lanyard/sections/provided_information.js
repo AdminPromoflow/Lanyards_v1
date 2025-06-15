@@ -11,7 +11,7 @@ class ProvidedInformation {
 
 
     document.addEventListener("DOMContentLoaded", function() {
-      alert("Buenas2");
+      alert(menuClass.getActiveSession());
 
       if (menuClass.getActiveSession()) {
         this.getAddresses();
