@@ -47,9 +47,48 @@ class Job {
             echo json_encode(["message" => "Method not allowed"]);
         }
     }
-    private function processArtwork($side, $link){
-      echo json_encode($side.$link );
+    private function processArtwork($side, $link) {
+        // Validar base64
+        $cleanBase64 = preg_replace('#^data:image/\w+;base64,#i', '', $link);
+        $decodedImage = base64_decode($cleanBase64);
+
+        if (!$decodedImage) {
+            echo json_encode(["success" => false, "message" => "Invalid base64 in artwork: $side"]);
+            exit;
+        }
+
+        // Asegurar sesión activa
+        if (session_status() !== PHP_SESSION_ACTIVE) {
+            session_start();
+        }
+
+        // Obtener idUser de sesión
+        $idUser = $_SESSION['idUser'];
+
+        // Obtener idOrder del usuario actual
+        $connection = new Database();
+        $order_model = new Order_Model($connection);
+        $idOrder = $order_model->getOrderIdByUser();
+
+        // Crear carpeta si no existe
+        $folderPath = __DIR__ . "/../../images/" . intval($idOrder);
+        if (!is_dir($folderPath)) {
+            mkdir($folderPath, 0755, true);
+        }
+
+        // Crear nombre del archivo con timestamp
+        $datetime = date('Ymd_His');
+        $filename = "{$idUser}_artwork_{$side}_{$datetime}.png";
+        $filePath = "$folderPath/$filename";
+
+        // Guardar imagen
+        file_put_contents($filePath, $decodedImage);
+
+        // Retornar ruta relativa si es necesario
+        $relativePath = "../../controller/images/{$idOrder}/{$filename}";
+        return $relativePath;
     }
+
 
     // 🛠️ Crea un nuevo trabajo (job)
     private function createJob($data) {
