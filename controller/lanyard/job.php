@@ -133,13 +133,12 @@ class Job {
 
     // 🛠️ Crea un nuevo trabajo (job)
     private function createJob($data) {
-      echo json_encode($data->artworkOrManual);
-      if (isset($data->productDetails->artworkOrManual)) {
-          if ($data->productDetails->artworkOrManual === "artwork") {
+      if (isset($data->artworkOrManual)) {
+          if ($data->artworkOrManual === "artwork") {
                   $leftLink = $this->processArtwork("left", $data->productDetails->artworkLeft);
                   $rightLink = $this->processArtwork("right", $data->productDetails->artworkRight);
 
-          } elseif ($data->productDetails->artworkOrManual === "manual") {
+          } elseif ($data->artworkOrManual === "manual") {
                   $rightLink = $this->processImage($data->productDetails->image->linkImage);
           }
       }
