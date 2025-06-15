@@ -319,7 +319,7 @@ class Job {
           }
               $_SESSION['idJob'] = $result['idJob'];
 
-
+              echo json_encode("1");exit;
               if (isset($data->artworkOrManual)) {
                   if ($data->artworkOrManual === "artwork") {
                           $leftLink = $this->processArtwork("left", $data->productDetails->artworkLeft);
