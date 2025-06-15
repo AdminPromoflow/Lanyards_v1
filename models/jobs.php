@@ -105,11 +105,30 @@ class Job_Model {
           $result = $sql->execute();
           $this->connection->closeConnection();
 
-          return $result; // will be true if insert succeeded, false otherwise
+          return $result;
       } catch (PDOException $e) {
-          return false; // Or log the error as needed
+          echo json_encode([
+              'error' => 'Job creation failed',
+              'pdo_message' => $e->getMessage(),
+              'params' => [
+                  'name' => $this->name,
+                  'description' => $this->description,
+                  'price_per_unit' => $this->price_per_unit,
+                  'amount' => $this->amount,
+                  'total' => $this->total,
+                  'link_pdf' => $this->link_pdf,
+                  'notes' => $this->notes,
+                  'newColour' => $this->newColour,
+                  'idOrder' => $this->idOrder,
+                  'idExtras' => $this->idExtras,
+                  'idClip' => $this->idClip,
+                  'idPriceAmount' => $this->idPriceAmount
+              ]
+          ]);
+          return false;
       }
   }
+
   public function getJobsByOrder() {
       try {
 
