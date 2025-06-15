@@ -180,6 +180,7 @@ class Checkout {
   }
 
   makeAjaxRequestCreateJob() {
+    alert(JSON.stringify());
     const url = "../../controller/lanyard/job.php";
     const data = {
       action: "createJob",
@@ -188,7 +189,8 @@ class Checkout {
       price_per_unit: this.getPricePerUnit(),
       amount: this.getAmount(),
       total: this.getTotal(),
-      productDetails: this.getProduct(),
+      product: this.getProduct(),
+      productDetails: this.getProductDetails(),
       address1: providedInformation.getAddress1(),
       address2: providedInformation.getAddress2(),
       newColour: backgroundClass.getNewColour()
