@@ -14,6 +14,7 @@ class ProvidedInformation {
     document.addEventListener("DOMContentLoaded", function() {
       if (menuClass.getActiveSession()) {
         this.getAddresses();
+        alert("Quiero actualizar esto");
       }
     });
 

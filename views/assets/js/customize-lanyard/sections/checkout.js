@@ -1,4 +1,5 @@
 class Checkout {
+
   constructor(){
 
     this.productName = "";
@@ -41,6 +42,7 @@ class Checkout {
       checkoutClass.obtainProductDetails();
       chargingClass.hideShowchargin(true);
       checkoutClass.makeAjaxRequestCreateJob();
+      
     })
 
   }
@@ -180,7 +182,6 @@ class Checkout {
   }
 
   makeAjaxRequestCreateJob() {
-    alert(JSON.stringify());
     const url = "../../controller/lanyard/job.php";
     const data = {
       action: "createJob",
@@ -189,7 +190,6 @@ class Checkout {
       price_per_unit: this.getPricePerUnit(),
       amount: this.getAmount(),
       total: this.getTotal(),
-      product: this.getProduct(),
       productDetails: this.getProductDetails(),
       address1: providedInformation.getAddress1(),
       address2: providedInformation.getAddress2(),
