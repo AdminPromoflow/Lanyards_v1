@@ -1,9 +1,5 @@
 class ProvidedInformation {
-
   constructor() {
-
-    alert(menuClass.getActiveSession());
-
     boxes_provided_information_2.style.display = "none";
 
     checkbox_provided_information.addEventListener("click", () => {
@@ -14,10 +10,12 @@ class ProvidedInformation {
 
 
 
-    /*  if (menuClass.getActiveSession()) {
-        alert("Buenas");
+
+    document.addEventListener("DOMContentLoaded", function() {
+      if (menuClass.getActiveSession()) {
         this.getAddresses();
-      }*/
+      }
+    });
 
     const map = new mapboxgl.Map({
       container: 'map',
