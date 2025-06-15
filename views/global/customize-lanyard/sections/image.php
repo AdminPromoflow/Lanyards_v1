@@ -11,6 +11,7 @@ function asset_version($path) {
   <h2>Image</h2>
   <br>
   <p>Sometimes the internal structure of an image may not be compatible. If your image does not load correctly, please try editing it or uploading a different one.</p>
+  <br>
   <div id="containers-boxes-image" class="containers-boxes-image">
     <div class="containers-image1">
       <div class="item-image">
