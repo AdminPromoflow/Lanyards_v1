@@ -450,7 +450,7 @@ class CustomizeLanyard {
 
    }
   openBackgroundColour() {
-    console.log(this.currentSection);
+    console.log(this.currentSectionOpen);
     previewTemplate.togglePreviewTemplateClass("block");
 
 
