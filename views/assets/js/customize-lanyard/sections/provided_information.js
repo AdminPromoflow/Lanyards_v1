@@ -13,6 +13,7 @@ class ProvidedInformation {
 
     document.addEventListener("DOMContentLoaded", function() {
       if (menuClass.getActiveSession()) {
+        alert("Buenas");
         this.getAddresses();
       }
     });
