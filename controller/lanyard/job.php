@@ -209,27 +209,8 @@ class Job {
     // 🛠️ Crea un nuevo trabajo (job)
     private function createJob($data) {
 
-    /*  if (session_status() !== PHP_SESSION_ACTIVE) {
-            session_start();
-        }
-        $_SESSION['idJob'] = $idJob;
-      if (isset($data->artworkOrManual)) {
-          if ($data->artworkOrManual === "artwork") {
-                  $leftLink = $this->processArtwork("left", $data->productDetails->artworkLeft);
-                  $rightLink = $this->processArtwork("right", $data->productDetails->artworkRight);
+    /*
 
-                  $this->createArtwork($artwork, $leftLink, $rightLink);
-
-          } elseif ($data->artworkOrManual === "manual") {
-                  $linkImage = $this->processImage($data->productDetails->image->linkImage);
-                  if ($data->productDetails->text->contentText != "") {
-                    $this->createText($data->productDetails->text);
-                  }
-                  if ($data->productDetails->image->linkImage != "") {
-                    $this->createImage($data->productDetails->image, $linkImage);
-                  }
-          }
-      }
 
       exit;*/
 
@@ -328,11 +309,49 @@ class Job {
 
 
         // Crear el job en la base de datos
-        $success = $job_model->createJob();
+        $result = $job_model->createJobWithId();
 
-        echo json_encode($success);exit;
 
-        if ($success) {
+        if ($result['success']) {
+
+          if (session_status() !== PHP_SESSION_ACTIVE) {
+                  session_start();
+          }
+              $_SESSION['idJob'] = $result['idJob'];
+
+
+              if (isset($data->artworkOrManual)) {
+                  if ($data->artworkOrManual === "artwork") {
+                          $leftLink = $this->processArtwork("left", $data->productDetails->artworkLeft);
+                          $rightLink = $this->processArtwork("right", $data->productDetails->artworkRight);
+
+                          $this->createArtwork($artwork, $leftLink, $rightLink);
+
+                  } elseif ($data->artworkOrManual === "manual") {
+                          $linkImage = $this->processImage($data->productDetails->image->linkImage);
+                          if ($data->productDetails->text->contentText != "") {
+                            $this->createText($data->productDetails->text);
+                          }
+                          if ($data->productDetails->image->linkImage != "") {
+                            $this->createImage($data->productDetails->image, $linkImage);
+                          }
+                  }
+              }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             echo json_encode([
                 "message" => "Job created successfully",
                 "order_id" => $_SESSION['orden_in_process'],

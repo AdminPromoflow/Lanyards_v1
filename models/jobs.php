@@ -121,6 +121,49 @@ class Job_Model {
         }
     }
 
+    public function createJobWithId() {
+        try {
+            $conn = $this->connection->getConnection();
+            $sql = $conn->prepare("
+                INSERT INTO `Jobs` (
+                    `name`, `description`, `price_per_unit`, `amount`, `total`,
+                    `notes`, `idOrder`, `idExtras`, `idClip`, `idPriceAmount`, `newColour`
+                ) VALUES (
+                    :name, :description, :price_per_unit, :amount, :total,
+                    :notes, :idOrder, :idExtras, :idClip, :idPriceAmount, :newColour
+                )
+            ");
+
+            $sql->bindParam(':name', $this->name, PDO::PARAM_STR);
+            $sql->bindParam(':description', $this->description, PDO::PARAM_STR);
+            $sql->bindParam(':price_per_unit', $this->price_per_unit);
+            $sql->bindParam(':amount', $this->amount);
+            $sql->bindParam(':total', $this->total);
+            $sql->bindParam(':notes', $this->notes, PDO::PARAM_STR);
+            $sql->bindParam(':newColour', $this->newColour, PDO::PARAM_STR);
+            $sql->bindParam(':idOrder', $this->idOrder, PDO::PARAM_INT);
+            $sql->bindParam(':idExtras', $this->idExtras, PDO::PARAM_STR);
+            $sql->bindParam(':idClip', $this->idClip, PDO::PARAM_INT);
+            $sql->bindParam(':idPriceAmount', $this->idPriceAmount, PDO::PARAM_INT);
+
+            $sql->execute();
+
+            $lastId = $conn->lastInsertId();
+            $this->connection->closeConnection();
+
+            return [
+                'success' => true,
+                'idJob' => (int)$lastId
+            ];
+        } catch (PDOException $e) {
+            return [
+                'success' => false,
+                'error' => 'Job creation failed',
+                'pdo_message' => $e->getMessage()
+            ];
+        }
+    }
+
     public function getJobsByOrder() {
         try {
             $sql = $this->connection->getConnection()->prepare("SELECT * FROM `Jobs` WHERE `idOrder` = :idOrder");
