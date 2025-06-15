@@ -10,11 +10,11 @@ class ProvidedInformation {
 
 
 
-
-      if (menuClass.getActiveSession()) {
+    alert(menuClass.getActiveSession());
+    /*  if (menuClass.getActiveSession()) {
         alert("Buenas");
         this.getAddresses();
-      }
+      }*/
 
     const map = new mapboxgl.Map({
       container: 'map',
