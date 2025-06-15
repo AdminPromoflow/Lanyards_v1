@@ -9,9 +9,13 @@ class ProvidedInformation {
     mapboxgl.accessToken = 'pk.eyJ1IjoiaWFuc291dGhlcm4iLCJhIjoiY20ybWowdnRlMHBmcjJqcTljaDdhYXV6diJ9.UK4tRTqDkO6yYffa-LIyWw';
 
 
-    if (menuClass.getActiveSession()) {
-      this.getAddresses();
-    }
+
+
+    document.addEventListener("DOMContentLoaded", function() {
+      if (menuClass.getActiveSession()) {
+        this.getAddresses();
+      }
+    });
 
     const map = new mapboxgl.Map({
       container: 'map',
