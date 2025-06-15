@@ -116,16 +116,10 @@ class Job {
         if (file_exists($sourcePath) && rename($sourcePath, $destinationPath)) {
             // Ruta relativa que puedes guardar o devolver
             $relativePath = "controller/images/{$idOrder}/{$fileName}";
-            echo json_encode([
-                'success' => true,
-                'message' => 'Imagen movida correctamente',
-                'imagePath' => $relativePath
-            ]);
+
+        return $relativePath;
         } else {
-            echo json_encode([
-                'success' => false,
-                'message' => 'Error al mover la imagen.'
-            ]);
+            return "";
         }
     }
 
