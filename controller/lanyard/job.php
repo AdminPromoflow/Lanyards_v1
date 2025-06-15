@@ -89,7 +89,7 @@ class Job {
 
     }
     private function processImage($image) {
-
+      echo json_encode($image);
     }
 
 

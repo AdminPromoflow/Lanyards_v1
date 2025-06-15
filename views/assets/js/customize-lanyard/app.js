@@ -475,7 +475,7 @@ class CustomizeLanyard {
     this.showCurrentSection(this.currentSectionOpen);
   }
   openText(){
-    alert(this.currentSectionOpen);
+  //  alert(this.currentSectionOpen);
     previewTemplate.togglePreviewTemplateClass("block");
     previewAccessoriesClass.showAccessoriesPreview("flex");
 
