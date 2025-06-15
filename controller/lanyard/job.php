@@ -51,7 +51,11 @@ class Job {
     // 🛠️ Crea un nuevo trabajo (job)
     private function createJob($data) {
 
-      echo json_encode($data->productDetails->artworkLeft);exit;
+      if ($data->productDetails->artworkLeft == null) {
+        echo json_encode("No hay artwork");
+
+      }
+      exit;
 
       $newColour = $data->newColour ? 1 : 0;
 
