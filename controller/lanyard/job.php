@@ -63,7 +63,8 @@ class Job {
         }
 
         // Obtener idUser de sesión
-        $idUser = $_SESSION['idUser'];
+        $email = $_SESSION['email'];
+
 
         // Obtener idOrder del usuario actual
         $connection = new Database();
@@ -77,7 +78,7 @@ class Job {
         }
 
         $datetime = date('Ymd_His');
-        $filename = "{$idUser}_artwork_{$side}_{$datetime}.png";
+        $filename = "{$email}_artwork_{$side}_{$datetime}.png";
         $filePath = "$folderPath/$filename";
 
         file_put_contents($filePath, $decodedImage);
