@@ -152,7 +152,6 @@ class CustomizeLanyard {
   }
 
   handleNextClick() {
-    console.log(this.currentSectionOpen);
 
     this.currentSectionOpen++;
     this.actionNextOrPrevious = "next";
@@ -228,6 +227,9 @@ class CustomizeLanyard {
      this.openColourQuantity();
    }
    else if (this.currentSectionOpen == 8) {//Artwork - Manual
+
+     alert(this.currentSectionOpen);
+
 
      this.openArtWorkManual();
      this.setCurrentSectionOpenArtwork(0);
