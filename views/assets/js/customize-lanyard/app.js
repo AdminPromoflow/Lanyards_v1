@@ -152,6 +152,8 @@ class CustomizeLanyard {
   }
 
   handleNextClick() {
+    alert(this.currentSectionOpen);
+
     this.currentSectionOpen++;
     this.actionNextOrPrevious = "next";
     this.changePreviewNextSection();
@@ -334,7 +336,6 @@ class CustomizeLanyard {
         this.openBackgroundColour();
       }
       if (this.actionNextOrPrevious == "next") {
-        alert("Por acá");
         this.setCurrentSectionOpen(15);
         this.openCheckout();
 
