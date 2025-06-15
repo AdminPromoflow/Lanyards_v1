@@ -327,10 +327,11 @@ class Job {
                           $this->createArtwork($artwork, $leftLink, $rightLink);
 
                   } elseif ($data->artworkOrManual === "manual") {
-                    echo json_encode("2");exit;
 
                           $linkImage = $this->processImage($data->productDetails->image->linkImage);
                           if ($data->productDetails->text->contentText != "") {
+                            echo json_encode("3");exit;
+
                             $this->createText($data->productDetails->text);
                           }
                           if ($data->productDetails->image->linkImage != "") {
