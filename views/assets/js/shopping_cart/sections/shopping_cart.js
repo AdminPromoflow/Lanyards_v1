@@ -86,13 +86,13 @@ class ShoppingCart {
       throw new Error("Network error.");
     })
     .then(data => {
-      console.log(JSON.stringify(data));
+      alert(JSON.stringify(data));
 
       if (!data) {
         shoppingCart.addJobsToOrder(data);
         shoppingCart.addOrderSummary(data);
       }
-      
+
 
 
     })
