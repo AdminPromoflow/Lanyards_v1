@@ -96,27 +96,11 @@ class HandlerSessionUser {
     public function checkStripeSession(){
       \Stripe\Stripe::setApiKey('sk_test_51RVWm7Iy7ZwkjsYRhmh4hsLctFV3lGr2HlAK5qn8eb7yAOTc9z2BTYRc2DVzvyRhLrndFR4MYMWBe6Kw2PA9Od3Z00UpRTyB8P'); // Tu clave secreta
 
-      if (!isset($_GET['session_id'])) {
-          echo json_encode(["error" => "Missing session_id"]);
-          exit;
-      }
+      $session_id = $_GET['session_id'];
+      $session = \Stripe\Checkout\Session::retrieve($session_id);
+      $orderId = $session->metadata->order_id;
 
-      try {
-          $session = \Stripe\Checkout\Session::retrieve($_GET['session_id']);
-
-          if (!isset($session->metadata->idOrder)) {
-              echo json_encode(["error" => "idOrder not found in metadata"]);
-              exit;
-          }
-
-          $orderId = $session->metadata->idOrder;
-          echo json_encode(["success" => true, "idOrder" => $orderId]);
-      } catch (Exception $e) {
-          echo json_encode([
-              "success" => false,
-              "error" => $e->getMessage()
-          ]);
-      }
+      echo json_encode($orderId);
     }
 }
 require '../../vendor/autoload.php';
