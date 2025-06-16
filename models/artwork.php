@@ -35,8 +35,8 @@ class Artwork_Model {
             ");
 
             $sql->bindParam(':idJobs', $this->idJob, PDO::PARAM_INT);
-            $sql->bindParam(':linkRightImage', $this->linkRightImage, PDO::PARAM_STR);
-            $sql->bindParam(':linkLeftImage', $this->linkLeftImage, PDO::PARAM_STR);
+            $sql->bindParam(':linkRightImage', $this->linkImageRight, PDO::PARAM_STR);
+            $sql->bindParam(':linkLeftImage', $this->linkImageLeft, PDO::PARAM_STR);
 
             $sql->execute();
 
