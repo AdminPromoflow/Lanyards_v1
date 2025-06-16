@@ -33,10 +33,9 @@ class SuccessPayment {
         return response.json(); // Parse the response as JSON
       })
       .then(parsedData => {
-        alert(JSON.stringify(parsedData));
+      //  alert(JSON.stringify(parsedData));
 
-      const data = JSON.parse(parsedData);
-
+        const data = JSON.parse(parsedData);
       alert(parsedData["html"]);
         // Validate if the response contains the expected 'message' key
         if (typeof parsedData.message === "undefined") {
