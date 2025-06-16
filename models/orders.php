@@ -262,11 +262,11 @@ class Order_Model {
             $sql->bindParam(':idOrder', $this->idOrder, PDO::PARAM_INT);
             $sql->execute();
 
-            $exists = $sql->fetch(PDO::FETCH_ASSOC);
+            $result = $sql->fetch(PDO::FETCH_ASSOC);
 
             $this->connection->closeConnection();
 
-            return $exists ? true : false;
+            return $result;
 
         } catch (PDOException $e) {
             echo "Error al verificar orden en procesamiento: " . $e->getMessage();
