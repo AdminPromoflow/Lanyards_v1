@@ -109,16 +109,17 @@ class HandlerSessionUser {
       if ($result["status"] == "processing") {
 
         $html = "
-          <h1>Processing your order...</h1>
-          <p>Your order is being processed. Please refresh the page periodically to check for updates.</p>
+          <h1>Your order has been set.</h1>
+          <p>Thank you for your order! We truly appreciate your trust in us.
+          Our team is now processing your request, and we’ll keep you updated with any changes. If you have any questions, feel free to reach out. We’re here to help!</p>
           <table border=\"1\" cellpadding=\"8\" cellspacing=\"0\">
             <tr><th>Date & Time</th><td>{$result['date_time']}</td></tr>
-            <tr><th>Shipping Days</th><td>{$result['shippingDays']}</td></tr>
+            <tr><th>Shipping Days</th><td>{$result['shippingDays']} working days</td></tr>
             <tr><th>Status</th><td>{$result['status']}</td></tr>
             <tr><th>Subtotal</th><td>\${$result['subtotal']}</td></tr>
             <tr><th>Tax</th><td>\${$result['tax']}</td></tr>
-            <tr><th>Shipping Price</th><td>\${$result['shipping_price']}</td></tr>
-            <tr><th>Total</th><td><strong>\${$result['total']}</strong></td></tr>
+            <tr><th>Shipping Price</th><td>\£{$result['shipping_price']}</td></tr>
+            <tr><th>Total</th><td><strong>\£{$result['total']}</strong></td></tr>
             <tr><th>User ID</th><td>{$result['idUser']}</td></tr>
           </table>
           <br>
