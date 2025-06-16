@@ -20,9 +20,6 @@ class HandlerSessionUser {
                     case "processUserLogout":
                         $this->processUserLogout();
                         break;
-                    case "checkStripeSession":
-                        $this->checkStripeSession();
-                        break;
 
                     default:
                         $this->sendResponse(400, ["message" => "Invalid action specified."]);
@@ -36,8 +33,6 @@ class HandlerSessionUser {
             $this->sendResponse(405, ["message" => "Method not allowed. Use GET or POST."]);
         }
     }
-
-
 
     // Function to get request data from GET or POST
     private function getRequestData() {
@@ -92,9 +87,6 @@ class HandlerSessionUser {
 
         // Send a JSON response
         $this->sendResponse(200, ["message" => "Logout successful."]);
-    }
-    public function checkStripeSession(){
-      echo json_encode("entramos a stripe session");
     }
 }
 
