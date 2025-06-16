@@ -1,6 +1,6 @@
 class SuccessPayment {
   constructor() {
-    this.getActiveUserSession();
+
 
   //  alert(menuClass.getActiveSession());
 
@@ -14,7 +14,7 @@ class SuccessPayment {
   getActiveUserSession() {
     const url = "../../controller/users/session-user.php";
     const data = {
-      action: "checkSessionLogin"
+      action: "checkStripeSession"
     };
 
     // Make the fetch request
