@@ -94,19 +94,12 @@ class HandlerSessionUser {
         $this->sendResponse(200, ["message" => "Logout successful."]);
     }
     public function checkStripeSession(){
-      \Stripe\Stripe::setApiKey('sk_test_51RVWm7Iy7ZwkjsYRhmh4hsLctFV3lGr2HlAK5qn8eb7yAOTc9z2BTYRc2DVzvyRhLrndFR4MYMWBe6Kw2PA9Od3Z00UpRTyB8P'); // Tu clave secreta
+    //  \Stripe\Stripe::setApiKey('sk_test_51RVWm7Iy7ZwkjsYRhmh4hsLctFV3lGr2HlAK5qn8eb7yAOTc9z2BTYRc2DVzvyRhLrndFR4MYMWBe6Kw2PA9Od3Z00UpRTyB8P'); // Tu clave secreta
 
 
-      if (!isset($_GET['session_id'])) {
-          echo json_encode(["error" => "Missing session_id"]);
-          http_response_code(400);
-          exit;
-      }
-      $session_id = $_GET['session_id'];
-      $session = \Stripe\Checkout\Session::retrieve($session_id);
-      $orderId = $session->metadata->order_id;
 
-      echo json_encode($orderId);
+
+      echo json_encode($_GET['session_id']);
     }
 }
 require '../../vendor/autoload.php';
