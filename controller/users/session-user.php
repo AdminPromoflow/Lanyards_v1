@@ -99,8 +99,9 @@ class HandlerSessionUser {
           session_start();
       }
 
-      echo json_encode($_SESSION['orderId']);
-
+      echo json_encode([
+          "orderId" => $_SESSION['orderId']
+      ]);
   }
 
 }
