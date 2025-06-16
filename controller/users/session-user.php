@@ -99,7 +99,7 @@ class HandlerSessionUser {
           session_start();
       }
 
-
+    //  echo json_encode("Bueno");
       $connection = new Database();
       $order_model = new Order_Model($connection);
       $order_model->setIdOrder($_SESSION['orderId']);
@@ -118,6 +118,7 @@ class HandlerSessionUser {
 
 }
 require '../../vendor/autoload.php';
+require_once '../config/database.php';
 require_once '../../models/orders.php';
 
 
