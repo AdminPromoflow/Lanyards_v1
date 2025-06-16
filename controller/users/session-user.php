@@ -99,7 +99,7 @@ class HandlerSessionUser {
 
     echo json_encode($data);
 
-
+  }
 
 }
 require '../../vendor/autoload.php';
