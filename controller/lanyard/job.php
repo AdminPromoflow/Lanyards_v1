@@ -186,7 +186,9 @@ class Job {
     }
 
 
-    private function createArtwork($artwork, $leftLink, $rightLink) {
+    private function createArtwork( $leftLink, $rightLink) {
+
+      echo json_encode($leftLink);exit;
         $connection = new Database();
         $artwork_model = new Artwork_Model($connection);
 
@@ -323,8 +325,7 @@ class Job {
                   if ($data->artworkOrManual === "artwork") {
                           $leftLink = $this->processArtwork("left", $data->productDetails->artworkLeft);
                           $rightLink = $this->processArtwork("right", $data->productDetails->artworkRight);
-                          echo json_encode($artwork);exit;
-                          $this->createArtwork($artwork, $leftLink, $rightLink);
+                          $this->createArtwork( $leftLink, $rightLink);
 
                   } elseif ($data->artworkOrManual === "manual") {
 
