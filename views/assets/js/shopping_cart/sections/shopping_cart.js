@@ -88,7 +88,7 @@ class ShoppingCart {
     .then(data => {
       alert(JSON.stringify(data));
 
-      if (!data) {
+      if (data != false) {
         shoppingCart.addJobsToOrder(data);
         shoppingCart.addOrderSummary(data);
       }
