@@ -1,6 +1,6 @@
 class SuccessPayment {
   constructor() {
-
+    
 
   //  alert(menuClass.getActiveSession());
 
