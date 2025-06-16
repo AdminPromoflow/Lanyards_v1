@@ -191,7 +191,7 @@ class Job {
         $artwork_model = new Artwork_Model($connection);
 
         // Asignar valores
-        if (isset($_SESSION['idJob'])) {
+        if (isset($_SESSION['idJob'])){
             $artwork_model->setIdJob($_SESSION['idJob']); // Asegúrate de tener este valor en sesión
         }
 
@@ -323,7 +323,7 @@ class Job {
                   if ($data->artworkOrManual === "artwork") {
                           $leftLink = $this->processArtwork("left", $data->productDetails->artworkLeft);
                           $rightLink = $this->processArtwork("right", $data->productDetails->artworkRight);
-
+                          echo json_encode($artwork);exit;
                           $this->createArtwork($artwork, $leftLink, $rightLink);
 
                   } elseif ($data->artworkOrManual === "manual") {
