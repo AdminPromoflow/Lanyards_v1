@@ -177,7 +177,7 @@ class Order {
                 'quantity' => 1,
             ]],
             'mode' => 'payment',
-            'success_url' => 'https://www.lanyardsforyou.com/views/success_payment/index.php',
+            'success_url' => 'https://www.lanyardsforyou.com/views/success_payment/index.php?session_id={CHECKOUT_SESSION_ID}',
             'cancel_url' => 'https://www.lanyardsforyou.com/views/success_payment/index.php',
 
             // 👇 Aquí envías el ID de tu orden (o lo que necesites rastrear)
