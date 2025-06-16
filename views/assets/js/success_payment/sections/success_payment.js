@@ -1,14 +1,55 @@
 class SuccessPayment {
   constructor() {
-    //this.getPaymentSuccess();
+    this.getActiveUserSession();
 
-    alert(menuClass.getActiveSession());
+  //  alert(menuClass.getActiveSession());
 
 
     button_go_home.addEventListener("click", function() {
       window.location.href = "../../views/home/index.php";
     });
 
+  }
+
+  getActiveUserSession() {
+    const url = "../../controller/users/session-user.php";
+    const data = {
+      action: "checkSessionLogin"
+    };
+
+    // Make the fetch request
+    fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    })
+      .then(response => {
+        // Check if the response status is OK
+        if (!response.ok) {
+          throw new Error(`Network error: ${response.status} ${response.statusText}`);
+        }
+        return response.json(); // Parse the response as JSON
+      })
+      .then(parsedData => {
+        alert(JSON.stringify(parsedData));
+        // Validate if the response contains the expected 'message' key
+        if (typeof parsedData.message === "undefined") {
+          throw new Error("Invalid response format: 'message' key missing.");
+        }
+
+        // Update the active session and handle login/logout logic
+
+
+
+      })
+      .catch(error => {
+        // Handle any errors during the request or processing
+        console.error("Error:", error.message);
+        // Optionally, reload the page if needed
+        // location.reload();
+      });
   }
 
   getPaymentSuccess(){
