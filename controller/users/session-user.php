@@ -99,14 +99,27 @@ class HandlerSessionUser {
           session_start();
       }
 
+
+      $connection = new Database();
+      $order_model = new Order_Model($connection);
+      $order_model->setIdOrder($_SESSION['orderId']);
+      $result = $order_model->getOrderByIdOrder();
+
+
+
+
+
+
       echo json_encode([
           "message" => "Order ID retrieved successfully",
-          "orderId" => $_SESSION['orderId']
+          "orderId" => $result
       ]);
   }
 
 }
 require '../../vendor/autoload.php';
+require_once '../../models/orders.php';
+
 
 // Create an instance of the HandlerSessionUser class and handle the request
 $handlerSessionUser = new HandlerSessionUser();

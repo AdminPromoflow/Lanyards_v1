@@ -175,7 +175,7 @@ class Order_Model {
 
             $sql->bindParam(':status', $this->status, PDO::PARAM_STR);
             $sql->bindParam(':idOrder', $this->idOrder, PDO::PARAM_INT);
- 
+
             $sql->execute();
 
             $updatedRows = $sql->rowCount();
@@ -231,6 +231,31 @@ class Order_Model {
             $sql = $conn->prepare("SELECT 1
                 FROM Orders
                 WHERE idOrder = :idOrder AND status = 'processing'
+                LIMIT 1
+            ");
+
+            $sql->bindParam(':idOrder', $this->idOrder, PDO::PARAM_INT);
+            $sql->execute();
+
+            $exists = $sql->fetch(PDO::FETCH_ASSOC);
+
+            $this->connection->closeConnection();
+
+            return $exists ? true : false;
+
+        } catch (PDOException $e) {
+            echo "Error al verificar orden en procesamiento: " . $e->getMessage();
+            return false;
+        }
+    }
+
+    public function getOrderByIdOrder() {
+        try {
+            $conn = $this->connection->getConnection();
+
+            $sql = $conn->prepare("SELECT *
+                FROM Orders
+                WHERE idOrder = :idOrder
                 LIMIT 1
             ");
 
