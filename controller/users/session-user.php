@@ -100,6 +100,7 @@ class HandlerSessionUser {
       }
 
       echo json_encode([
+          "message" => "Order ID retrieved successfully",
           "orderId" => $_SESSION['orderId']
       ]);
   }
