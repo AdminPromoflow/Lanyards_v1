@@ -1,4 +1,10 @@
 <?php
+
+echo "<pre>";
+print_r($_GET);
+echo "</pre>";
+
+exit;
 class HandlerSessionUser {
 
     // Function to handle incoming requests
