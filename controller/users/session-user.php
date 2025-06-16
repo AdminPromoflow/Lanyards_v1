@@ -94,9 +94,12 @@ class HandlerSessionUser {
         $this->sendResponse(200, ["message" => "Logout successful."]);
     }
     public function checkStripeSession(){
-      echo json_encode("entramos a stripe session");
+      $session = \Stripe\Checkout\Session::retrieve($_GET['session_id']);
+      $orderId = $session->metadata->idOrder;
+      echo json_encode($orderId);
     }
 }
+require '../../vendor/autoload.php';
 
 // Create an instance of the HandlerSessionUser class and handle the request
 $handlerSessionUser = new HandlerSessionUser();
