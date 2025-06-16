@@ -31,6 +31,7 @@ class Checkout {
     add_to_cart_from_buy_cart.addEventListener("click", function(){
 
 
+        chargingClass.hideShowchargin(true);
 
 
 
@@ -216,11 +217,14 @@ class Checkout {
       //  alert(data);
 
 
+      chargingClass.hideShowchargin(false);
 
         data = JSON.parse(data);
 
         if (data["status"]) {
           alert(data["message"]);
+
+
           window.location.href = "../../views/shopping_cart/index.php";
         }
 
@@ -230,7 +234,9 @@ class Checkout {
 
       })
       .catch(error => {
-        console.error("Error:", error);
+        alert("Error, please try again");
+        chargingClass.hideShowchargin(false);
+
       });
   }
 
