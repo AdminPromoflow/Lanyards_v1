@@ -188,7 +188,7 @@ class Job {
 
     private function createArtwork( $leftLink, $rightLink) {
 
-      echo json_encode($leftLink);exit;
+      echo json_encode($leftLink.$rightLink);exit;
         $connection = new Database();
         $artwork_model = new Artwork_Model($connection);
 
