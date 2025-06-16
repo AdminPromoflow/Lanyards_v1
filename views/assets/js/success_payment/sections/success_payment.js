@@ -14,7 +14,7 @@ class SuccessPayment {
   getActiveUserSession() {
     const url = "../../controller/users/session-user.php";
     const data = {
-      action: "checkStripeSession"
+      action: "checkSessionLogin"
     };
 
     // Make the fetch request
