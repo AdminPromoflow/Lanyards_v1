@@ -87,8 +87,13 @@ class ShoppingCart {
     })
     .then(data => {
       console.log(JSON.stringify(data));
-      shoppingCart.addJobsToOrder(data);
-      shoppingCart.addOrderSummary(data);
+
+      if (!data) {
+        shoppingCart.addJobsToOrder(data);
+        shoppingCart.addOrderSummary(data);
+      }
+      
+
 
     })
     .catch(error => {

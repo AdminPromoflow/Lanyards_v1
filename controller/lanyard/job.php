@@ -422,15 +422,29 @@ class Job {
       $idOrder = $order_model->getOrderIdByUser();
 
 
-
-
-
+      if (session_status() === PHP_SESSION_NONE) {
+          session_start();
+      }
+      $email = $_SESSION['email'];
       $connection = new Database();
-      $job_model = new Job_Model($connection);
-      $job_model->setIdOrder($idOrder);
-      $jobs = $job_model->getJobsByOrder();
+      $order_model = new Order_Model($connection);
+      $order_model->setEmail($email);
 
-      echo json_encode($jobs);
+      $order_details_pending = $order_model->getOrderDetails();
+
+      if ($order_details_pending != "") {
+        $connection = new Database();
+        $job_model = new Job_Model($connection);
+        $job_model->setIdOrder($idOrder);
+        $jobs = $job_model->getJobsByOrder();
+
+        echo json_encode($jobs);
+      }
+      else {
+        echo json_encode(false);
+      }
+
+
 
 
     //  echo json_encode($_SESSION['orden_in_process']."hahah");
