@@ -112,7 +112,7 @@ class HandlerSessionUser {
 
       echo json_encode([
           "message" => "Order ID retrieved successfully",
-          "orderId" => $result
+          "orderId" => $result["status"]
       ]);
   }
 
