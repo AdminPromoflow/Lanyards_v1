@@ -106,13 +106,30 @@ class HandlerSessionUser {
       $result = $order_model->getOrderByIdOrder();
 
 
+      if ($result["status"] == "processing") {
+        // code...
+      }
+      elseif ($result["status"] == "pending") {
+        $html = "
+          <h1>Processing your order...</h1>
+          <p>Your payment is being processed. Please keep refreshing the page to check for updates.</p>
+          <button class=\"button_success_payment\" id=\"button_reload_page\" type=\"button\" name=\"button\" onclick=\"location.reload();\">Reload Page</button>
+        ";
+      }
+      elseif ($result["status"] == "canceled") {
+        $html = "
+          <h1>Thank you</h1>
+          <p>Thank you for your payment. Your order will be processed shortly, and you will be contacted by email if there are any updates.</p>
+          <button class=\"button_success_payment\" id=\"button_go_home\" type=\"button\" name=\"button\" onclick=\"window.location.href='index.php';\">Home</button>
+        ";
 
+      }
 
 
 
       echo json_encode([
           "message" => "Order ID retrieved successfully",
-          "orderId" => $result["status"]
+          "orderId" => $result
       ]);
   }
 

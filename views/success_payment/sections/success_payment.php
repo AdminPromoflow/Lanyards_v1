@@ -4,7 +4,7 @@
 
 
 
-<section class="section_success_payment">
+<section id="section_success_payment" class="section_success_payment">
   <h1>Thank you</h1>
   <p>Thank you for your payment. Your order will be processed shortly, and you will be contacted by email if there are any updates.</p>
   <button class="button_success_payment" id="button_go_home" type="button" name="button">Home</button>
