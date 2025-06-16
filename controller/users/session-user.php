@@ -99,7 +99,22 @@ class HandlerSessionUser {
 
 
 
-      echo json_encode($_GET['session_id']);
+    header('Content-Type: application/json');
+
+    if (!isset($_GET['session_id'])) {
+        echo json_encode([
+            "error" => "Missing session_id",
+            "actual_get" => $_GET,
+            "request_uri" => $_SERVER['REQUEST_URI']
+        ]);
+        exit;
+    }
+
+    echo json_encode([
+        "success" => true,
+        "session_id" => $_GET['session_id']
+    ]);
+
     }
 }
 require '../../vendor/autoload.php';
