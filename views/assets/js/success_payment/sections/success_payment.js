@@ -34,9 +34,12 @@ class SuccessPayment {
       })
       .then(parsedData => {
       //  alert(JSON.stringify(parsedData));
-      alert(parsedData["html"]);
+    //  alert(parsedData["html"]);
 
-        const data = JSON.parse(parsedData);
+      const section_success_payment = document.getElementById("section_success_payment")
+
+      section_success_payment.innerHTML = parsedData["html"];
+    //    const data = JSON.parse(parsedData);
         // Validate if the response contains the expected 'message' key
         if (typeof parsedData.message === "undefined") {
           throw new Error("Invalid response format: 'message' key missing.");
