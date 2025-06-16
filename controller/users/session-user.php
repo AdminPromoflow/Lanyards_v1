@@ -1,10 +1,5 @@
 <?php
 
-echo "<pre>";
-print_r($_GET);
-echo "</pre>";
-
-exit;
 class HandlerSessionUser {
 
     // Function to handle incoming requests
@@ -27,7 +22,7 @@ class HandlerSessionUser {
                         $this->processUserLogout();
                         break;
                     case "checkStripeSession":
-                        $this->checkStripeSession();
+                        $this->checkStripeSession($data);
                         break;
 
                     default:
@@ -99,29 +94,13 @@ class HandlerSessionUser {
         // Send a JSON response
         $this->sendResponse(200, ["message" => "Logout successful."]);
     }
-    public function checkStripeSession(){
+    public function checkStripeSession($data){
     //  \Stripe\Stripe::setApiKey('sk_test_51RVWm7Iy7ZwkjsYRhmh4hsLctFV3lGr2HlAK5qn8eb7yAOTc9z2BTYRc2DVzvyRhLrndFR4MYMWBe6Kw2PA9Od3Z00UpRTyB8P'); // Tu clave secreta
 
+    echo json_encode($data);
 
 
 
-    header('Content-Type: application/json');
-
-    if (!isset($_GET['session_id'])) {
-        echo json_encode([
-            "error" => "Missing session_id",
-            "actual_get" => $_GET,
-            "request_uri" => $_SERVER['REQUEST_URI']
-        ]);
-        exit;
-    }
-
-    echo json_encode([
-        "success" => true,
-        "session_id" => $_GET['session_id']
-    ]);
-
-    }
 }
 require '../../vendor/autoload.php';
 
