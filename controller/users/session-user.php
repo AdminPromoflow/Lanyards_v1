@@ -111,7 +111,8 @@ class HandlerSessionUser {
         $html = "
           <h1>Your order has been set.</h1>
           <p>Thank you for your order! We truly appreciate your trust in us.
-          Our team is now processing your request, and we’ll keep you updated with any changes. If you have any questions, feel free to reach out. We’re here to help!</p>
+          Our team is now processing your request, and we’ll keep you updated with any changes.
+          If you have any questions, feel free to reach out. We’re here to help!</p>
           <table border=\"1\" cellpadding=\"8\" cellspacing=\"0\">
             <tr><th>Date & Time</th><td>{$result['date_time']}</td></tr>
             <tr><th>Shipping Days</th><td>{$result['shippingDays']} working days</td></tr>
@@ -123,7 +124,7 @@ class HandlerSessionUser {
             <tr><th>User ID</th><td>{$result['idUser']}</td></tr>
           </table>
           <br>
-          <button class=\"button_success_payment\" id=\"button_go_home\" type=\"button\" name=\"button\" onclick=\"window.location.href='index.php';\">Home</button>
+          <button class=\"button_success_payment\" id=\"button_go_home\" type=\"button\" name=\"button\" onclick=\"window.location.href='../../views/home/index.php';\">Home</button>
         ";
 
       }
