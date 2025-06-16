@@ -137,10 +137,11 @@ class HandlerSessionUser {
       }
       elseif ($result["status"] == "canceled") {
         $html = "
-          <h1>Thank you</h1>
-          <p>Thank you for your payment. Your order will be processed shortly, and you will be contacted by email if there are any updates.</p>
-          <button class=\"button_success_payment\" id=\"button_go_home\" type=\"button\" name=\"button\" onclick=\"window.location.href='index.php';\">Home</button>
+          <h1>We're sorry</h1>
+          <p>Unfortunately, your order could not be completed. Please try to make the purchase again.</p>
+          <button class=\"button_success_payment\" id=\"button_go_home\" type=\"button\" name=\"button\" onclick=\"window.location.href='../../views/home/index.php';\">Home</button>
         ";
+
 
       }
 
