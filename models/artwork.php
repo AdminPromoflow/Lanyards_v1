@@ -26,6 +26,9 @@ class Artwork_Model {
     }
 
     public function createArtwork() {
+
+      echo json_encode($this->linkImageLeft.$this->linkImageRight);exit;
+
         try {
             $sql = $this->connection->getConnection()->prepare("INSERT INTO `Artwork` (`idJobs`, `linkRightImage`, `linkLeftImage`)
                 VALUES (:idJobs, :linkRightImage, :linkLeftImage)
