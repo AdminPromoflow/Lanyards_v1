@@ -33,7 +33,7 @@ class SuccessPayment {
         return response.json(); // Parse the response as JSON
       })
       .then(parsedData => {
-      //  alert(JSONparsedData);
+        alert(JSON.stringify(parsedData));
 
       const data = JSON.parse(parsedData);
 
