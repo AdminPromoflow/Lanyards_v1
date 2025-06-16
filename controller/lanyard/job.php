@@ -340,21 +340,6 @@ class Job {
               }
 
 
-              echo json_encode("4");exit;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
             echo json_encode([
