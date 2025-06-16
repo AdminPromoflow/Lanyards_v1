@@ -47,8 +47,19 @@ switch ($event->type) {
         break;
 
     case 'checkout.session.completed':
-        $session = $event->data->object;
+    $session = $event->data->object;
+
+        if (isset($session->metadata) && isset($session->metadata->order_id)) {
+            $orderId = $session->metadata->order_id;
+            file_put_contents('log.txt', "✅ Order ID received: {$orderId}\n", FILE_APPEND);
+
+            // Aquí puedes hacer algo con el orderId, como actualizar su estado
+        } else {
+            file_put_contents('log.txt', "❌ Metadata 'order_id' not found.\n", FILE_APPEND);
+        }
+
         file_put_contents('log.txt', "🎯 Evento procesado: checkout.session.completed\n", FILE_APPEND);
+
         break;
 
     case 'checkout.session.expired':

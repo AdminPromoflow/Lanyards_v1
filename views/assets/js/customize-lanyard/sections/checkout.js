@@ -13,7 +13,6 @@ class Checkout {
 
 
 
-    //
     subcontainer_boxes_preview_checkout.style.display = "flex";
     arrow_preview_checkout.style.transform = "rotate(0deg)";
 
