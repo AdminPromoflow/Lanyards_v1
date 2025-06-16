@@ -175,7 +175,7 @@ class Order_Model {
 
             $sql->bindParam(':status', $this->status, PDO::PARAM_STR);
             $sql->bindParam(':idOrder', $this->idOrder, PDO::PARAM_INT);
-
+ 
             $sql->execute();
 
             $updatedRows = $sql->rowCount();

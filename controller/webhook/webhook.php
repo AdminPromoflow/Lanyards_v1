@@ -1,5 +1,7 @@
 <?php
 require '../../vendor/autoload.php';
+require_once '../config/database.php';
+require_once '../../models/orders.php';
 
 // The library needs to be configured with your account's secret key.
 // Ensure the key is kept out of any version control system you might be using.
@@ -51,7 +53,16 @@ switch ($event->type) {
 
         if (isset($session->metadata) && isset($session->metadata->order_id)) {
             $orderId = $session->metadata->order_id;
-            file_put_contents('log.txt', "✅ Order ID received: {$orderId}\n", FILE_APPEND);
+
+
+            $connection = new Database();
+            $orderModel = new Order_Model($connection);
+            $orderModel->setIdOrder($orderId);
+            $orderModel->setStatus("processing");
+            $stateStatus = $orderModel->updateOrderStatus();
+
+
+            file_put_contents('log.txt', $stateStatus, FILE_APPEND);
 
             // Aquí puedes hacer algo con el orderId, como actualizar su estado
         } else {
