@@ -47,6 +47,11 @@ class HandlerSessionUser {
 
     // Function to handle check session login
     public function handleCheckSessionLogin() {
+
+
+      if (session_status() !== PHP_SESSION_ACTIVE) {
+          session_start();
+      }
         $this->ensureSessionStarted();
 
         // Determine if the user is logged in
