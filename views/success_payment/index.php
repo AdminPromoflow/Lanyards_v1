@@ -1,3 +1,7 @@
+<?php
+// success_payment/index.php
+include '../../controller/stripe/getSessionIdStrype.php';
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -31,7 +35,7 @@
         <!-- Content section -->
         <div class="content" >
 
-      
+
           <div class="bgLanyards">
 
           <!-- Include the slider component for the index page -->

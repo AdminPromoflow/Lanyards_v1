@@ -22,7 +22,7 @@ class HandlerSessionUser {
                         $this->processUserLogout();
                         break;
                     case "checkStripeSession":
-                        $this->checkStripeSession($data);
+                        $this->checkStripeSession();
                         break;
 
                     default:
@@ -94,10 +94,12 @@ class HandlerSessionUser {
         // Send a JSON response
         $this->sendResponse(200, ["message" => "Logout successful."]);
     }
-    public function checkStripeSession($data){
-    //  \Stripe\Stripe::setApiKey('sk_test_51RVWm7Iy7ZwkjsYRhmh4hsLctFV3lGr2HlAK5qn8eb7yAOTc9z2BTYRc2DVzvyRhLrndFR4MYMWBe6Kw2PA9Od3Z00UpRTyB8P'); // Tu clave secreta
+    public function checkStripeSession(){
+      if (session_status() !== PHP_SESSION_ACTIVE) {
+          session_start();
+      }
 
-    echo json_encode($data);
+      echo json_encode($_SESSION['orderId']);
 
   }
 
