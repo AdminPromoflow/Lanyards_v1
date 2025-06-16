@@ -86,7 +86,7 @@ class ShoppingCart {
       throw new Error("Network error.");
     })
     .then(data => {
-      alert(JSON.stringify(data));
+  //    alert(JSON.stringify(data));
 
       if (data != false) {
         shoppingCart.addJobsToOrder(data);
