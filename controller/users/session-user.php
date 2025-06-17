@@ -117,8 +117,8 @@ class HandlerSessionUser {
             <tr><th>Date & Time</th><td>{$result['date_time']}</td></tr>
             <tr><th>Shipping Days</th><td>{$result['shippingDays']} working days</td></tr>
             <tr><th>Status</th><td>{$result['status']}</td></tr>
-            <tr><th>Subtotal</th><td>\${$result['subtotal']}</td></tr>
-            <tr><th>Tax</th><td>\${$result['tax']}</td></tr>
+            <tr><th>Subtotal</th><td>\£{$result['subtotal']}</td></tr>
+            <tr><th>Tax</th><td>\£{$result['tax']}</td></tr>
             <tr><th>Shipping Price</th><td>\£{$result['shipping_price']}</td></tr>
             <tr><th>Total</th><td><strong>\£{$result['total']}</strong></td></tr>
             <tr><th>User ID</th><td>{$result['idUser']}</td></tr>
