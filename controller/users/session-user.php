@@ -121,7 +121,6 @@ class HandlerSessionUser {
             <tr><th>Tax</th><td>\£{$result['tax']}</td></tr>
             <tr><th>Shipping Price</th><td>\£{$result['shipping_price']}</td></tr>
             <tr><th>Total</th><td><strong>\£{$result['total']}</strong></td></tr>
-            <tr><th>User ID</th><td>{$result['idUser']}</td></tr>
           </table>
           <br>
           <button class=\"button_success_payment\" id=\"button_go_home\" type=\"button\" name=\"button\" onclick=\"window.location.href='../../views/home/index.php';\">Home</button>
