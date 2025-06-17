@@ -4,7 +4,7 @@
   height: 80vh;
   width: 100vw;
   background-color: red;
-  background-image: url("../Covers-16.Bimini/1.Slider/Bimini.jpg");
+  background-image: url("../Covers/2.Services/Bimini.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

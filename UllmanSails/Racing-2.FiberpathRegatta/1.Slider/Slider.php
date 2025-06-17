@@ -4,7 +4,7 @@
   height: 80vh;
   width: 100vw;
   background-color: red;
-  background-image: url("../Racing/2.Services/Image/Fiberpath_Regatta.jpg");
+  background-image: url("../Racing/2.Services/Image/Regatta.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

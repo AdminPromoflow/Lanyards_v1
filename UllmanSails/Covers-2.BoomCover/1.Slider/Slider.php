@@ -4,7 +4,7 @@
   height: 80vh;
   width: 100vw;
   background-color: red;
-  background-image: url("../Covers-2.BoomCover/1.Slider/Boomcover.jpg");
+  background-image: url("../Covers/2.Services/Boom_cover3.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

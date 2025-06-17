@@ -76,8 +76,7 @@
     <a class="link_a"  href="../Covers/index.php">&lt; Boat Covers</a>
   <h1>Jib Sock</h1>
   <p>
-  A jib sock offers simple, effective protection for your furled headsail—ideal if you prefer not to add the weight of a UV strip along the leech and foot. It shields your genoa from sun and weather, helping extend its life. Available in a range of colours and made to suit your rig—just get in touch to find the right fit.
-
+    A jib sock offers simple, effective protection for your furled headsail—ideal if you prefer not to add the weight of a UV strip along the leech and foot. It shields your genoa from sun and weather, helping extend its life. Available in a range of colours and made to suit your rig—just get in touch to find the right fit.
  </p>
  <a class="link_contact_us" href="../ContactUs/index.php">
    <div class="buttonTitle">

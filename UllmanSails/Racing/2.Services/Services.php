@@ -54,7 +54,7 @@
 .box-container-raicing{
   position: relative;
   padding:0;
-  width: 80%;
+  width: 100%;
   min-width: 300px;
 
   display: flex;
@@ -72,7 +72,7 @@
   padding: 5px;
 
   display: flex;
-  flex: 1 1 350px;
+  min-width: 350px;
   justify-content: center;
   align-items: center;
   flex-direction: row;
@@ -83,8 +83,9 @@
   height: 100%;
 
   display: flex;
+  justify-content: center;
   text-align: center;
-  background-position: center; /* Center the image */
+  background-position: top; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
 }
@@ -95,6 +96,8 @@
   height: 70%;
   width: 85%;
   margin: auto;
+  display: flex;
+  flex-direction: column;
 }
 .wrap-box-services:hover{
   background-color: rgba(197, 35, 74, .3);
@@ -102,7 +105,7 @@
 .wrap-box-services h3{
   position: relative;
   text-align: center;
-  top: 30%;
+  margin: auto;
   color: white;
   font-weight: 500;
   font-size: 1.9em;
@@ -117,25 +120,26 @@
   color: white;
   text-shadow: 1px 1px 1px black;
   opacity: 0;
-  top: 30%;
+  margin: auto;
   transition: .4s;
   cursor: pointer;
 }
 .wrap-box-services:hover h4{
   text-decoration: underline;
   opacity: 1;
+  cursor: pointer;
 }
   .pictureCruising1{
     background-image: url("../Racing/2.Services/Image/Pannelled_race_series.jpg");
   }
   .pictureCruising2{
-    background-image: url("../Racing/2.Services/Image/Fiberpath_Regatta.jpg");
+    background-image: url("../Racing/2.Services/Image/Regatta.jpeg");
   }
   .pictureCruising3{
-    background-image: url("../Racing/2.Services/Image/Fiberpath_GP.jpg");
+    background-image: url("../Racing/2.Services/Image/FiberpathGP.jpg");
   }
   .pictureCruising4{
-    background-image: url("2.Services/Image/SlideHome.jpg");
+    background-image: url("../Racing/2.Services/Image/Redlinespinaker.jpg");
   }
 </style>
 

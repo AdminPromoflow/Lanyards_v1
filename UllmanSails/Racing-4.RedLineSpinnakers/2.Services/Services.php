@@ -126,6 +126,61 @@
    font-weight: 500;
    color: #F2F2F2;
  }
+ .bottom {
+   padding: 12px 24px;
+   margin: 1rem auto;
+   width: 48%;
+   min-width: 300px;
+   font-size: 16px;
+
+   border: none;
+   border-radius: 8px;
+   color: black;
+   cursor: pointer;
+   display: flex;
+   flex-direction: column;
+   transition: transform 0.2s, box-shadow 0.2s;
+
+   background-color: rgba(0, 0, 0, .1);
+   -webkit-backdrop-filter: blur(10px); /* Para Safari */
+
+   display: flex;
+   align-items: center;
+
+ }
+ .bottom img{
+   height: auto;
+   width: 70%;
+ }
+ .bottom a{
+   position: relative;
+   text-decoration: none;
+   margin: auto;
+ }
+ .bottom:hover {
+   transform: scale(1.05);
+   background-color: rgba(0, 0, 0, .01);
+
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+ }
+
+.boton{
+  padding: 12px 24px;
+  margin: 1rem auto;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  background-color: #202E52;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+}
+
+.boton:hover {
+  background-color: #005598;
+  color: white;
+}
 </style>
 
 <section class="text">
@@ -158,7 +213,11 @@
     <li>Standard V trim stripes</li>
     <li>Glow-in-the-dark V trim stripes</li>
   </ul>
-  <p>Use our <a href="../Racing-4.RedLineSpinnakers-Customize/index.php">Spinnaker Customizer</a> to create your perfect personalised sail.</p>
+  <div class="bottom">
+    <p>Use our to create your perfect personalised sail.</p>
+    <img src="../Racing-4.RedLineSpinnakers/2.Services/Image/Exam_redline.jpg" alt="">
+     <a href="../Racing-4.RedLineSpinnakers-Customize/index.php"><button onclick="" class="boton">Spinnaker Customizer</button></a>
+  </div>
 <div class="Container_bottom">
  <a class="link_quote" href="../New_Sail_Quote/index.php">
    <div class="button_quote button_quote1">

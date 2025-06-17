@@ -1,0 +1,52 @@
+.buttom{
+   position: relative;
+   width: 100vw;
+   margin: 10px 0px;
+   padding: 1rem 4rem;
+   font-family: 'Poppins', sans-serif;
+   overflow: hidden;
+
+   display: flex;
+   align-items: center;
+   justify-content:flex-end;
+}
+.flex_items_buttom{
+  position: relative;
+  width: 270px;
+  padding: 5px;
+  gap:20px;
+
+}
+/******************Botton************************/
+.link_buttom{
+  position: relative;
+  text-decoration: none;
+  all: unset;
+}
+.button_buttom{
+   position: relative;
+   width: 200px;
+   padding: 14px 0px;
+   cursor: pointer;
+   border: 1px solid #202E52;
+}
+.button_buttom1{
+  background-color: #005596;
+}
+.button_buttom1:hover{
+  background-color: #245580;
+}
+
+.button_buttom2{
+  background-color: #D21241;
+}
+.button_buttom2:hover{
+  background-color: #b92c28;
+}
+
+ .button_buttom h3{
+   text-align: center;
+   font-size: 1.3em;
+   font-weight: 500;
+   color: #F2F2F2;
+ }

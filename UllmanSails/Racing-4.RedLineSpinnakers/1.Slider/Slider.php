@@ -4,7 +4,7 @@
   height: 80vh;
   width: 100vw;
   background-color: red;
-  background-image: url("1.Slider/SlideHome.jpg");
+  background-image: url("../Racing/2.Services/Image/Redlinespinaker.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

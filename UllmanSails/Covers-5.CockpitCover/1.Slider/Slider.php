@@ -4,7 +4,7 @@
   height: 80vh;
   width: 100vw;
   background-color: red;
-  background-image: url("../Covers-5.CockpitCover/1.Slider/Cockpit_cover.jpg");
+  background-image: url("../Covers/2.Services/Cockpit_cover.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

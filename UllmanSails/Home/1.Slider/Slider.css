@@ -126,6 +126,7 @@
   cursor: pointer;
   border: 1px solid #202E52;
   box-shadow: 3px 3px 0px black;
+  margin: 40vh 0 0 0;
 
   text-align: center;
   font-size: clamp(1.2rem, 1.6vw, 1.8rem);

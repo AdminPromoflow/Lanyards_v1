@@ -65,7 +65,6 @@
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
-  flex-flow: row wrap;
   gap: 30px;
   background-color: #FDF6F8;
 
@@ -76,9 +75,10 @@
   height: 200px;
   min-height: 200px;
   padding: 5px;
+  margin: auto;
 
   display: flex;
-  flex: 1 1 320px;
+  min-width: 320px;
   justify-content: center;
   align-items: center;
   flex-direction: row;
@@ -90,7 +90,7 @@
 
   display: flex;
   text-align: center;
-  background-position: center; /* Center the image */
+  background-position: top; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
 }
@@ -100,6 +100,10 @@
   background-color: rgba(197, 35, 74, .1);
   height: 70%;
   width: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction:column;
   margin: auto;
 }
 .wrap-box-services:hover{
@@ -108,7 +112,7 @@
 .wrap-box-services h3{
   position: relative;
   text-align: center;
-  top: 30%;
+  margin: auto;
   color: white;
   font-weight: 500;
   font-size: 1.9em;
@@ -123,7 +127,7 @@
   color: white;
   text-shadow: 1px 1px 1px black;
   opacity: 0;
-  top: 30%;
+  margin: auto;
   transition: .4s;
   cursor: pointer;
 }

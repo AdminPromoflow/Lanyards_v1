@@ -4,7 +4,7 @@
   height: 80vh;
   width: 100vw;
   background-color: red;
-  background-image: url("../Covers-9.WheelLeathering/1.Slider/Wheel_leathering.jpg");
+  background-image: url("../Covers/2.Services/Wheel_leathering.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

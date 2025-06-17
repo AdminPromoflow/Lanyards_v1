@@ -128,11 +128,11 @@ background-color: rgba(197, 35, 74, .3);
    font-weight: 500;
    color: #F2F2F2;
 }
-
 </style>
 
 <section class="text">
   <a class="comeBack"href="../Racing-4.RedLineSpinnakers/index.php">&lt; Red Line Spinnakers</a>
+  <div class="services">
 <h1>Custom Spinnaker Graphics</h1>
 <h2>Want to customise your sails?</h2>
 <p>If you want to liven up your spinnaker, or if you have sponsors to appease, we can help you to apply any graphics you require to mainsail, headsails or spinnakers.</p>
@@ -141,13 +141,11 @@ background-color: rgba(197, 35, 74, .3);
 <p>Choose a colour and click the panels you want in that colour. If you make a mistake, just choose a new colour and keep clicking, or hit the clear button to start over again.</p>
 <p>When you are happy with your design, click the Download Spinnaker Image button at the bottom of the page. Send us the image and we can get to work on making your perfect spinnaker!</p>
 <p>Have fun!</p>
-<div class="buttonTitle">
-   <h3 class="openContactUs">Contact us</h3>
+    <div class="buttonTitle">
+       <h3 class="openContactUs">Contact us</h3>
+    </div>
   </div>
 </section>
-
-
-
 <script type="text/javascript">
 
 </script>

@@ -4,7 +4,7 @@
   height: 80vh;
   width: 100vw;
   background-color: red;
-  background-image: url("../Covers-11.WinchCovers/1.Slider/Winch_covers.jpg");
+  background-image: url("../Covers/2.Services/Winch_covers.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

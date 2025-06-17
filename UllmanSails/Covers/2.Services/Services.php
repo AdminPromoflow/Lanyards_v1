@@ -36,6 +36,8 @@
   font-size: 1.2em;
   left: 0px;
   margin: 1vw 0 1vw 0;
+
+
 }
 .text  ul{
   width: 100%;
@@ -63,7 +65,7 @@
 .container-box{
   position: relative;
   padding: 1px 0;
-  width: 95%;
+  width: 100%;
   min-width: 300px;
 
   display: flex;
@@ -78,7 +80,7 @@
   position: relative;
   height: 200px;
   min-height: 200px;
-  width: 350px;
+  width: 340px;
   min-width: 300px;
   padding: 5px;
 
@@ -121,6 +123,7 @@
   font-size: 1.9em;
   text-shadow: 1px 1px 1px black;
   cursor: pointer;
+  line-height: 1;
 }
 .wrap-box-services h4{
   position: relative;
@@ -139,14 +142,14 @@
   opacity: 1;
 }
 .pictureCruising1{
-  background-image: url("../Covers/2.Services/stackpack-3.jpg");
+  background-image: url("../Covers/2.Services/Stackpack.jpg");
 }
 
 .pictureCruising2{
   background-image: url("../Covers/2.Services/Boom_cover3.jpg");
 }
 .pictureCruising3{
-  background-image: url("../Covers/2.Services/Blanket_Cover2.jpg" );
+  background-image: url("../Covers/2.Services/3.BlanketCover.jpg" );
 }
 
 .pictureCruising4{
@@ -177,12 +180,7 @@
 .pictureCruising13{
   background-image: url("../Covers/2.Services/Rib_cover.jpg");
 }
-.pictureCruising14{
-  background-image: url("../Covers/2.Services/Winter_cover.jpg");
-}
-.pictureCruising15{
-  background-image: url("../Covers/2.Services/Boat_cover.jpg");
-}
+
 .pictureCruising16{
   background-image: url("../Covers/2.Services/Bimini.jpg");
 }
@@ -302,22 +300,7 @@
       </div>
     </div>
   </a>
-  <a href="../Covers-14.WinterCover/index.php">
-    <div class="box-services pictureCruising14">
-      <div class="wrap-box-services">
-        <h3 class="smallFont2">Winter cover </h3>
-        <h4>See more</h4>
-      </div>
-    </div>
-  </a>
-  <a href="../Covers-15.BoatCover/index.php">
-    <div class="box-services pictureCruising15">
-      <div class="wrap-box-services">
-        <h3 class="smallFont2">Boat cover </h3>
-        <h4>See more</h4>
-      </div>
-    </div>
-  </a>
+
   <a href="../Covers-16.Bimini/index.php">
     <div class="box-services pictureCruising16">
       <div class="wrap-box-services">

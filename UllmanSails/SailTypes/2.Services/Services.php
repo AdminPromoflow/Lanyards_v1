@@ -72,10 +72,8 @@
       background-color: rgba(197, 35, 74, .1);
       height: 70%;
       width: 70%;
-      top: 50%;
-      transform: translateY(-50%);
+      margin: auto;
     }
-
     .wrap-box-services:hover{
       background-color: rgba(197, 35, 74, .3);
     }
@@ -83,8 +81,6 @@
 
     .wrap-box-services h3{
       position: relative;
-      top: calc(3.5em);
-      transform: translateY(-200%);
       text-align: center;
       color: white;
       font-weight: 500;

@@ -50,16 +50,21 @@
 .services a{
    all: unset;
    color:#202E52;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 .smallFont{
-  position: absolute!important;
-  transform: translateY(-147%)!important;
+  position: relative;
+  margin: auto;
+  height: 100%;
+  width: 100%;
 
 }
 .smallFont2{
-  position: absolute!important;
+  position: absolute;
   font-size: 2;
-  left: 1px!important;
+  left: 1px;
 }
 .box-services{
   position: relative;
@@ -84,8 +89,7 @@
   background-color: rgba(197, 35, 74, .1);
   height: 70%;
   width: 70%;
-  top: 50%;
-  transform: translateY(-50%);
+  margin: auto;
 }
 
 .wrap-box-services:hover{
@@ -95,8 +99,7 @@
 
 .wrap-box-services h3{
   position: relative;
-  top: calc(6em);
-  transform: translateY(-200%);
+  margin: auto;
   text-align: center;
   color: white;
   font-weight: 500;
@@ -106,8 +109,7 @@
 }
 .wrap-box-services h4{
   position: relative;
-  top: calc(4.8em);
-  transform: translateY(-200%);
+  margin: auto;
   text-align: center;
   font-weight: 200;
   font-size: 1.1em;

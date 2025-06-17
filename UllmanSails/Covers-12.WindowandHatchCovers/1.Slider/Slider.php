@@ -4,7 +4,7 @@
   height: 80vh;
   width: 100vw;
   background-color: red;
-  background-image: url("../Covers-12.WindowandHatchCovers/1.Slider/Windo_and_hatch_covers.jpg");
+  background-image: url("../Covers/2.Services/Windo_and_hatch_covers.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

@@ -20,13 +20,12 @@
  all: unset;
  text-decoration: none;
  height: 650px;
+ width: 350px;
  min-width: 300px;
  min-height: 500px;
  padding: 5px;
 
  display: flex;
- flex: 1 1 350px;
- margin: auto;
 }
 .other_box{
   position: absolute;
@@ -35,9 +34,6 @@
   padding: 60px;
 
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-
   z-index: 3;
   border: 1px solid black;
   border-radius: 16px;
@@ -47,7 +43,7 @@
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 10px;
 }
 .other_box img{
   position: absolute;
@@ -116,7 +112,7 @@
   border: 1px solid black;
 }
 .pictureServicesHome1  {
-  background-image: url("../Home/2.Services/Image/imgcrusing2.jpg"); /* The image used */
+  background-image: url("../Cruising/1.Slider/Topcrusingsails.jpg"); /* The image used */
 }
 .pictureServicesHome2 {
   background-image: url("../Home/2.Services/Image/imgcrusing1.jpg"); /* The image used */

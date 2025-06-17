@@ -4,7 +4,7 @@
   height: 80vh;
   width: 100vw;
   background-color: red;
-  background-image: url("../Covers-13.RIBCover/1.Slider/Rib_cover.jpg");
+  background-image: url("../Covers/2.Services/Rib_cover.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
