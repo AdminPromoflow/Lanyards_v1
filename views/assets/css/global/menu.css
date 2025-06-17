@@ -30,7 +30,7 @@
 
 }
 .menu a{
-  text-decoration: none;
+  text-decoration-line: none !important;
 }
 .containerItems{
   position: absolute;
