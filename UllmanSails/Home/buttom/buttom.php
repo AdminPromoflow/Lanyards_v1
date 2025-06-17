@@ -14,7 +14,7 @@ $jsTime = filemtime('');   // ejemplo: '../Home/5.Video/video.js'
   <div class="flex_items_buttom">
     <a class="link_buttom" href="../New_Repair_Quote/index.php">
       <div class=" button_buttom button_buttom2">
-        <h3>Repair Quote</h3>
+        <h3>Sail Repair Quote</h3>
       </div>
     </a>
   </div>
