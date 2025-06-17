@@ -34,13 +34,15 @@
   z-index: 2;
 }
 .img_slider:nth-child(1){
-  background-image: url("../../Home/1.Slider/img/img1.jpg");
+  background-image: url("../../Home/1.Slider/img/img3.jpg");
+
 }
 .img_slider:nth-child(2){
   background-image: url("../../Home/1.Slider/img/img2.jpg");
 }
 .img_slider:nth-child(3){
-  background-image: url("../../Home/1.Slider/img/img3.jpg");
+  background-image: url("../../Home/1.Slider/img/img1.jpg");
+
 }
 .img_slider:nth-child(4){
   background-image: url("../../Home/1.Slider/img/img4.jpg");
