@@ -39,42 +39,47 @@ try {
 // Handle the event
 switch ($event->type) {
     case 'checkout.session.async_payment_failed':
-        $session = $event->data->object;
-        file_put_contents('log.txt', "🎯 Evento procesado: async_payment_failed\n", FILE_APPEND);
-        break;
-
     case 'checkout.session.async_payment_succeeded':
-        $session = $event->data->object;
-        file_put_contents('log.txt', "🎯 Evento procesado: async_payment_succeeded\n", FILE_APPEND);
-        break;
-
     case 'checkout.session.completed':
-    $session = $event->data->object;
+        $session = $event->data->object;
 
         if (isset($session->metadata) && isset($session->metadata->order_id)) {
             $orderId = $session->metadata->order_id;
 
-
             $connection = new Database();
             $orderModel = new Order_Model($connection);
             $orderModel->setIdOrder($orderId);
-            $orderModel->setStatus("processing");
+
+            // Determinar estado según tipo de evento
+            $newStatus = ($event->type === 'checkout.session.async_payment_failed') ? "canceled" : "processing";
+            $orderModel->setStatus($newStatus);
+
             $stateStatus = $orderModel->updateOrderStatus();
-
-
-            file_put_contents('log.txt', $stateStatus, FILE_APPEND);
-
-            // Aquí puedes hacer algo con el orderId, como actualizar su estado
+            file_put_contents('log.txt', $stateStatus . "\n", FILE_APPEND);
         } else {
-            file_put_contents('log.txt', "❌ Metadata 'order_id' not found.\n", FILE_APPEND);
+            file_put_contents('log.txt', "❌ Metadata 'order_id' not found for event: {$event->type}\n", FILE_APPEND);
         }
 
-        file_put_contents('log.txt', "🎯 Evento procesado: checkout.session.completed\n", FILE_APPEND);
-
+        file_put_contents('log.txt', "🎯 Evento procesado: {$event->type}\n", FILE_APPEND);
         break;
 
     case 'checkout.session.expired':
         $session = $event->data->object;
+
+        if (isset($session->metadata) && isset($session->metadata->order_id)) {
+            $orderId = $session->metadata->order_id;
+
+            $connection = new Database();
+            $orderModel = new Order_Model($connection);
+            $orderModel->setIdOrder($orderId);
+            $orderModel->setStatus("canceled");
+
+            $stateStatus = $orderModel->updateOrderStatus();
+            file_put_contents('log.txt', $stateStatus . "\n", FILE_APPEND);
+        } else {
+            file_put_contents('log.txt', "❌ Metadata 'order_id' not found for event: checkout.session.expired\n", FILE_APPEND);
+        }
+
         file_put_contents('log.txt', "🎯 Evento procesado: checkout.session.expired\n", FILE_APPEND);
         break;
 
@@ -83,5 +88,5 @@ switch ($event->type) {
         break;
 }
 
-
 http_response_code(200);
+?>
