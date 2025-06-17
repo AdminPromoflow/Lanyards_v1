@@ -29,6 +29,9 @@
   filter: drop-shadow(2px 2px 1px rgba(255, 255, 255, .2));
 
 }
+.menu a{
+  text-decoration: none;
+}
 .containerItems{
   position: absolute;
   height: 100%;
