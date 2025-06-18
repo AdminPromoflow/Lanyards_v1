@@ -11,7 +11,9 @@ $jsVersion = $jsFile && file_exists($jsFile) ? filemtime($jsFile) : time();
 <link rel="stylesheet" href="/views/assets/css/my_lanyards/sections/artwork_details.css?v=<?= $cssVersion; ?>">
 
 <section id="section_artwork_details" class="section_artwork_details">
-  <!-- Title section for ABOUT US -->
+  <div id="back_to_my_lanyards" class="back_to_my_lanyards">
+    <img src="../../views/assets/img/my_lanyards/artwork_details/arrow.png" alt="">
+  </div>
   <div class="title_artwork_details">
     <h3>My products</h3>
   </div>
