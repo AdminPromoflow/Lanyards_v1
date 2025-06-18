@@ -99,7 +99,7 @@ class Users {
    * Create a new user with the provided name, email, and password.
    */
    public function createUser() {
-     echo json_encode($this->email  );exit;
+     echo json_encode($this->signup_category.$this->password  );exit;
 
        try {
            $sql = $this->connection->getConnection()->prepare("INSERT INTO `Users` (`name`, `email`, `password`, `signup_category`) VALUES (:name, :email, :password, :signup_category)");
