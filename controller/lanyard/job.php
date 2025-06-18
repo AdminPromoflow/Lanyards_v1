@@ -438,7 +438,7 @@ class Job {
         $job_model->setIdOrder($idOrder);
         $jobs = $job_model->getJobsByOrder();
 
-        echo json_encode($jobs);
+        echo json_encode($idOrder);
       }
       else {
         echo json_encode(false);
