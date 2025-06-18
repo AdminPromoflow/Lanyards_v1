@@ -22,6 +22,7 @@ $jsVersion = $jsFile && file_exists($jsFile) ? filemtime($jsFile) : time();
     <!-- Box for first individual (Crafting Unique Lanyards) -->
     <div class="box_my_lanyards">
       <h3>My lanyards</h3>
+      <br>
       <div class="box_my_jobs">
         <h4>Hola 1</h4>
       </div>
