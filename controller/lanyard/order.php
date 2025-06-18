@@ -223,8 +223,7 @@ class Order {
           $grouped[$orderId]['jobs'][] = [ 'idJobs' => $jobId ];
       }
 
-          echo json_encode($grouped);
-
+      echo json_encode(['orders' => array_values($grouped)]);
     }
 
 
