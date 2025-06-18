@@ -140,10 +140,10 @@
 }
 .items_description_products_jobs{
   position: relative;
-  padding: 7px;
+  padding: 7px 0;
   max-height: 30px;
   background-color: rgba(222, 222, 222, 0.2);
-  width: 90%;
+  width: 100%;
   margin: 5px 0;
   cursor: pointer;
   left: 50%;
