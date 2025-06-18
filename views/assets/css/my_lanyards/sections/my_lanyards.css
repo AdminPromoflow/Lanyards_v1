@@ -131,8 +131,12 @@
   color: white;
   margin: 0;
   padding: 10px;
+  font-size: 1.3em;
   text-align: center;
   font-weight: 300;
+}
+.description_product_job{
+
 }
 
 .section_my_lanyards button{
