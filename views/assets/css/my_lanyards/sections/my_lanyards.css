@@ -47,6 +47,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 .box_my_lanyards h3{
   position: relative;
