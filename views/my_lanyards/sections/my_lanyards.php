@@ -30,6 +30,54 @@ $jsVersion = $jsFile && file_exists($jsFile) ? filemtime($jsFile) : time();
         <div class="box_my_jobs">
           <h4>Hola 2</h4>
         </div>
+        <div class="box_my_jobs">
+          <h4>Hola 1</h4>
+        </div>
+        <div class="box_my_jobs">
+          <h4>Hola 2</h4>
+        </div>
+        <div class="box_my_jobs">
+          <h4>Hola 1</h4>
+        </div>
+        <div class="box_my_jobs">
+          <h4>Hola 2</h4>
+        </div>
+        <div class="box_my_jobs">
+          <h4>Hola 1</h4>
+        </div>
+        <div class="box_my_jobs">
+          <h4>Hola 2</h4>
+        </div>
+        <div class="box_my_jobs">
+          <h4>Hola 1</h4>
+        </div>
+        <div class="box_my_jobs">
+          <h4>Hola 2</h4>
+        </div>
+        <div class="box_my_jobs">
+          <h4>Hola 1</h4>
+        </div>
+        <div class="box_my_jobs">
+          <h4>Hola 2</h4>
+        </div>
+        <div class="box_my_jobs">
+          <h4>Hola 1</h4>
+        </div>
+        <div class="box_my_jobs">
+          <h4>Hola 2</h4>
+        </div>
+        <div class="box_my_jobs">
+          <h4>Hola 1</h4>
+        </div>
+        <div class="box_my_jobs">
+          <h4>Hola 2</h4>
+        </div>
+        <div class="box_my_jobs">
+          <h4>Hola 1</h4>
+        </div>
+        <div class="box_my_jobs">
+          <h4>Hola 2</h4>
+        </div>
       </div>
 
     </div>
