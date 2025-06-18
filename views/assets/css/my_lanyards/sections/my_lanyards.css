@@ -143,6 +143,16 @@
   height: 20px;
   width: 25px;
   filter: drop-shadow(0.2px 0.2px 0px white);
+  transition: .1;
+  cursor: pointer;
+}
+.header_product_job img:hover{
+  height: 25px;
+  width: 30px;
+}
+.header_product_job img:active{
+  height: 20px;
+  width: 25px;
 }
 .description_product_job{
 
