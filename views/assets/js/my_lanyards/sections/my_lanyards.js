@@ -2,9 +2,18 @@ class MyLanyardsClass {
   constructor() {
     for (let i = 0; i < box_my_jobs.length; i++) {
       box_my_jobs[i].addEventListener("click", function(){
-        alert(i);
+        myLanyardsClass.selectMyJob(i);
+        }
       })
     }
+  }
+  selectMyJob(index){
+    for (var i = 0; i < box_my_jobs.length; i++) {
+      box_my_jobs[i].style.border = "1px solid transparent";
+    }
+    box_my_jobs[index].style.border = "1px solid white";
+
+
   }
 }
 
