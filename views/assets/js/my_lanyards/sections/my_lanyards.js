@@ -7,10 +7,13 @@ class MyLanyardsClass {
       )
     }
     open_artwork_details.addEventListener("click", function(){
-      section_my_lanyards.style.display = "none";
+      myLanyardsClass.showSection("none");
       artworkDetailsClass.showSection("flex");
 
     })
+  }
+  showSection(action){
+    section_my_lanyards.style.display = action;
   }
   selectMyJob(index){
     for (var i = 0; i < box_my_jobs.length; i++) {

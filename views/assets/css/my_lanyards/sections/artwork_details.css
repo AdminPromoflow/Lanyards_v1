@@ -1,3 +1,22 @@
 .section_artwork_details{
   display: none;
+  position: relative;
+  padding: 3vw 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title_artwork_details h3{
+  position: relative;
+  text-align: center;
+  color: white;
+  text-shadow: 3px 3px 2px black;
+  font-size: calc(1.8em + 1.8vw);
+  font-weight: 200;
+  margin: 0 0 3vw 0;
+  padding: 0px;
+
 }
