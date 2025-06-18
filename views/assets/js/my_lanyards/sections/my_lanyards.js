@@ -21,6 +21,6 @@ class MyLanyardsClass {
 }
 
 
-const open_artwork_details = document.querySelectorAll(".open_artwork_details");
+const open_artwork_details = document.getElementById(".open_artwork_details");
 const box_my_jobs = document.querySelectorAll(".box_my_jobs");
 const myLanyardsClass = new MyLanyardsClass();
