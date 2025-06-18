@@ -206,7 +206,24 @@ class Order {
 
       $order = $orderModel->getOrdersWithJobsByEmail();
 
-          echo json_encode($order);
+
+      $grouped = [];
+
+      foreach ($order as $row) {
+          $orderId = $row['idOrder'];
+          $jobId = $row['idJobs'];
+
+          if (!isset($grouped[$orderId])) {
+              $grouped[$orderId] = [
+                  'idOrder' => $orderId,
+                  'jobs' => []
+              ];
+          }
+
+          $grouped[$orderId]['jobs'][] = [ 'idJobs' => $jobId ];
+      }
+
+          echo json_encode($grouped);
 
     }
 

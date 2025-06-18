@@ -384,24 +384,7 @@ class Order_Model {
 
           $this->connection->closeConnection();
 
-          // Agrupar por idOrder
-          $grouped = [];
-
-          foreach ($rows as $row) {
-              $orderId = $row['idOrder'];
-              $jobId = $row['idJobs'];
-
-              if (!isset($grouped[$orderId])) {
-                  $grouped[$orderId] = [
-                      'idOrder' => $orderId,
-                      'jobs' => []
-                  ];
-              }
-
-              $grouped[$orderId]['jobs'][] = [ 'idJobs' => $jobId ];
-          }
-          return array_values($grouped);
-
+          return $result ?: [];
 
       } catch (PDOException $e) {
           error_log("DB Error in getProcessingOrdersWithJobs: " . $e->getMessage());
