@@ -368,48 +368,46 @@ class Order_Model {
 
 
 
-    public function getProcessingOrdersWithJobs() {
-        try {
-            $conn = $this->connection->getConnection();
+    public function getOrdersWithJobsByEmail() {
+      try {
+          $conn = $this->connection->getConnection();
 
-            $sql = $conn->prepare("
-                SELECT o.idOrder, j.idJobs
-                FROM Orders o
-                INNER JOIN Jobs j ON o.idOrder = j.idOrder
-                WHERE o.status = 'processing'
-            ");
+          $sql = $conn->prepare("
+              SELECT o.idOrder, j.idJobs
+              FROM Orders o
+              INNER JOIN Jobs j ON o.idOrder = j.idOrder
+              WHERE o.status = 'processing'
+          ");
 
-            $sql->execute();
-            $rows = $sql->fetchAll(PDO::FETCH_ASSOC);
+          $sql->execute();
+          $result = $sql->fetchAll(PDO::FETCH_ASSOC);
 
-            $this->connection->closeConnection();
+          $this->connection->closeConnection();
 
-            // Agrupar por idOrder
-            $grouped = [];
+          // Agrupar por idOrder
+          $grouped = [];
 
-            foreach ($rows as $row) {
-                $orderId = $row['idOrder'];
-                $jobId = $row['idJobs'];
+          foreach ($rows as $row) {
+              $orderId = $row['idOrder'];
+              $jobId = $row['idJobs'];
 
-                if (!isset($grouped[$orderId])) {
-                    $grouped[$orderId] = [
-                        'idOrder' => $orderId,
-                        'jobs' => []
-                    ];
-                }
+              if (!isset($grouped[$orderId])) {
+                  $grouped[$orderId] = [
+                      'idOrder' => $orderId,
+                      'jobs' => []
+                  ];
+              }
 
-                $grouped[$orderId]['jobs'][] = [ 'idJobs' => $jobId ];
-            }
+              $grouped[$orderId]['jobs'][] = [ 'idJobs' => $jobId ];
+          }
+          return array_values($grouped);
 
-            // Reindexar como array numerado para JSON
-            return array_values($grouped);
 
-        } catch (PDOException $e) {
-            error_log("DB Error in getProcessingOrdersWithJobs: " . $e->getMessage());
-            throw new Exception("Error retrieving processing orders with jobs.");
-        }
+      } catch (PDOException $e) {
+          error_log("DB Error in getProcessingOrdersWithJobs: " . $e->getMessage());
+          throw new Exception("Error retrieving processing orders with jobs.");
+      }
     }
-
 
 
 

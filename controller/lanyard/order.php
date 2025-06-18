@@ -206,10 +206,7 @@ class Order {
 
       $order = $orderModel->getOrdersWithJobsByEmail();
 
-          echo json_encode([
-              "message" => "done",
-              "order" => $order
-          ]);
+          echo json_encode($order);
 
     }
 
