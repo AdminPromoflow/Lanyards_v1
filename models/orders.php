@@ -367,5 +367,51 @@ class Order_Model {
 
 
 
+
+    public function getOrdersWithJobsByEmail() {
+        try {
+            if (session_status() !== PHP_SESSION_ACTIVE) {
+                session_start();
+            }
+
+            if (!isset($_SESSION['email'])) {
+                throw new Exception("Email not found in session.");
+            }
+
+            $email = $_SESSION['email'];
+            $conn = $this->connection->getConnection();
+
+
+
+            // Consulta combinada para obtener idOrder desde el email directamente
+            $sql = $conn->prepare("SELECT o.idOrder
+                 FROM Orders o
+                 INNER JOIN Users u ON o.idUser = u.idUser
+                 WHERE u.email = :email
+                 AND o.status = 'pending'
+                 LIMIT 1"
+            );
+
+            $sql->bindParam(':email', $email, PDO::PARAM_STR);
+            $sql->execute();
+
+            $idOrder = $sql->fetchColumn();
+
+
+            $this->connection->closeConnection();
+
+
+
+            return $idOrder ?: false;
+
+        } catch (PDOException $e) {
+            error_log("DB Error in getOrderIdByUser: " . $e->getMessage());
+            throw new Exception("Error retrieving order by user.");
+        }
+    }
+
+
+
+
 }
 ?>

@@ -34,6 +34,9 @@ class Order {
                     case "getPaymentSuccess":
                         $this->getPaymentSuccess();
                         break;
+                    case "getOrdersWithJobsByEmail":
+                        $this->getOrdersWithJobsByEmail();
+                        break;
                     default:
                         http_response_code(400);
                         echo json_encode(["message" => "Unknown action"]);
@@ -136,7 +139,7 @@ class Order {
 
       $connection = new Database();
       $orderModel = new Order_Model($connection);
-      $orderModel->setIdUser($idOrder);
+      $orderModel->setIdOrder($idOrder);
 
       $order = $orderModel->hasProcessingOrder();
 
@@ -187,6 +190,27 @@ class Order {
         ]);
 
         echo json_encode(['url' => $session->url]);
+    }
+
+    private function getOrdersWithJobsByEmail() {
+      if (session_status() === PHP_SESSION_NONE) {
+          session_start();
+      }
+
+      $email = $_SESSION['email'];
+
+      $connection = new Database();
+      $orderModel = new Order_Model($connection);
+      $orderModel->setEmail($email);
+
+      $order = $orderModel->getOrdersWithJobsByEmail();
+
+          echo json_encode([
+              "message" => "Done",
+              "order" => $order,
+              "email" => $email
+          ]);
+
     }
 
 
