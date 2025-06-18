@@ -21,7 +21,7 @@ $jsVersion = $jsFile && file_exists($jsFile) ? filemtime($jsFile) : time();
 
     <!-- Box for first individual (Crafting Unique Lanyards) -->
     <div class="box_my_lanyards">
-      <h3>My lanyards</h3>
+      <h3>My order 1</h3>
       <br>
       <div class="container_my_jobs">
         <div class="box_my_jobs">
@@ -36,7 +36,16 @@ $jsVersion = $jsFile && file_exists($jsFile) ? filemtime($jsFile) : time();
 
     <!-- Box for second individual (Elevating Your Brand) -->
     <div class="box_my_lanyards">
-      <h3>My lanyards</h3>
+      <h3>My order 2</h3>
+      <br>
+      <div class="container_my_jobs">
+        <div class="box_my_jobs">
+          <h4>Hola 1</h4>
+        </div>
+        <div class="box_my_jobs">
+          <h4>Hola 2</h4>
+        </div>
+      </div>
 
     </div>
 
