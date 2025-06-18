@@ -467,13 +467,15 @@ class Job {
 
 
         if ($_SESSION['orden_in_process'] != false) {
+
+          echo json_encode(["message" => "hi" ]);exit;
+
           $connection = new Database();
           $order_model = new Order_Model($connection);
           $order_model->setIdOrder($idOrder);
           $result = $order_model->getOrderByIdOrder()->status;
         }
 
-        echo json_encode(["message" => $result ]);exit;
 
       //  echo json_encode();
 
