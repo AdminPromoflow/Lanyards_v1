@@ -4,7 +4,7 @@ class MyLanyardsClass {
       box_my_jobs[i].addEventListener("click", function(){
         myLanyardsClass.selectMyJob(i);
         }
-      })
+      )
     }
   }
   selectMyJob(index){
