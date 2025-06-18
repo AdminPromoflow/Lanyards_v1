@@ -59,10 +59,17 @@
   padding: 0px;
 }
 
+.container_my_jobs{
+  position: relative;
+  height: 70%;
+  width: 90%;
+  background-color: rgba(0, 0, 0, 0.2);
+
+}
 .box_my_jobs{
   padding: 7px;
   background-color: rgba(0, 0, 0, 0.3);
-  width: 90%;
+  width: 100%;
   cursor: pointer;
 }
 .box_my_jobs:hover{

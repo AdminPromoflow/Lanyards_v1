@@ -23,12 +23,15 @@ $jsVersion = $jsFile && file_exists($jsFile) ? filemtime($jsFile) : time();
     <div class="box_my_lanyards">
       <h3>My lanyards</h3>
       <br>
-      <div class="box_my_jobs">
-        <h4>Hola 1</h4>
+      <div class="container_my_jobs">
+        <div class="box_my_jobs">
+          <h4>Hola 1</h4>
+        </div>
+        <div class="box_my_jobs">
+          <h4>Hola 2</h4>
+        </div>
       </div>
-      <div class="box_my_jobs">
-        <h4>Hola 2</h4>
-      </div>
+
     </div>
 
     <!-- Box for second individual (Elevating Your Brand) -->
