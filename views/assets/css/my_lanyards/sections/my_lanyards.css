@@ -1,0 +1,107 @@
+.section_my_lanyards{
+  position: relative;
+  padding: 3vw 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+._my_lanyards a{
+   all: unset;
+}
+.title_my_lanyards{
+  position: relative;
+  width: calc(68vw + 20px);
+  min-width: 620px;
+}
+.title_my_lanyards h3{
+  position: relative;
+  text-align: center;
+  color: white;
+  text-shadow: 3px 3px 2px black;
+  font-size: calc(1.8em + 1.8vw);
+  font-weight: 200;
+  margin: 0 0 3vw 0;
+  padding: 0px;
+
+}
+.groupBox_my_lanyards{
+   position: relative;
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   width: calc(68vw + 20px);
+   margin: 0 auto;
+}
+.box_my_lanyards{
+  position: relative;
+  width: 300px;
+  height: 410px;
+  min-width: 300px;
+  min-height: 320px;
+  background-color: rgba( 25, 61, 116, 0.7);
+  margin: 20px 15px;
+  padding: 0px 10px;
+}
+.box_my_lanyards h3{
+  position: relative;
+  text-align: center;
+  color: white;
+  text-shadow: 3px 3px 2px black;
+  font-size: 2em;
+  font-weight: 400;
+  padding: 0px;
+}
+.box_my_lanyards p{
+  position: relative;
+  text-align: justify;
+  color: white;
+  text-shadow: 3px 3px 2px black;
+  font-size: 1.2em;
+  font-weight: 200;
+  margin: 3px 5px;
+}
+@media screen and (max-width: 1385px) {
+/*  ._my_lanyards{
+    background-color: gold;
+  }*/
+  .display1200px{
+    display: none!important;
+  }
+  .display1024px{
+    display: block!important;
+  }
+}
+@media screen and (max-width: 1200px) {
+  /*._my_lanyards{
+    background-color: green;
+  }*/
+}
+@media screen and (max-width: 912px) {
+  /*._my_lanyards{
+    background-color: blue;
+  }*/
+}
+@media screen and (max-width: 667px) {
+/*  ._my_lanyards{
+    background-color: brown;
+  }*/
+  .title_my_lanyards{
+    min-width: 310px;
+  }
+}
+
+.section_my_lanyards button{
+  padding: calc(0.1vw + 0.1em) calc(0.5vw + 0.5em);
+  z-index: 10;
+  max-height: 50px;
+  font-size: calc(1vw + 1em);
+  font-weight: 300;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgba(141, 67, 68, .9);
+  color: white;
+  font-size: calc(0.8em + 0.8vw);
+  margin: 15px;
+}
