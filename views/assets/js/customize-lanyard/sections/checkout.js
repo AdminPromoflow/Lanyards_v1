@@ -212,12 +212,12 @@ class Checkout {
         throw new Error("Network error.");
       })
       .then(data => {
-        alert(data);
+      //  alert(data);
 
 
       chargingClass.hideShowchargin(false);
 
-      /*  data = JSON.parse(data);
+      data = JSON.parse(data);
 
         if (data["status"]) {
           alert(data["message"]);
@@ -228,7 +228,7 @@ class Checkout {
 
         else {
 
-        }*/
+        }
 
       })
       .catch(error => {
