@@ -41,14 +41,14 @@
 
         <!-- Content section -->
         <div class="content">
-            <?php  include "../../views/global/customize-lanyard/customize-lanyard.php" ?>
+            <?php  //include "../../views/global/customize-lanyard/customize-lanyard.php" ?>
 
           <!-- Include the menu component -->
           <?php include "../../views/global/menu.php"; ?>
           <div class="bgLanyards">
 
             <!-- Include the slider component for the index page -->
-            <?php include "../../views/home/sections/my_lanyards.php"; ?>
+            <?php include "../../views/assets/js/my_lanyards/sections/my_lanyards.js"; ?>
             <?php include "../../views/global/footer.php"; ?>
 
           </div>
