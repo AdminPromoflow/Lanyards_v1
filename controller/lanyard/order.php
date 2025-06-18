@@ -193,7 +193,7 @@ class Order {
     }
 
     private function getOrdersWithJobsByEmail() {
-    
+
       if (session_status() === PHP_SESSION_NONE) {
           session_start();
       }
@@ -207,9 +207,8 @@ class Order {
       $order = $orderModel->getOrdersWithJobsByEmail();
 
           echo json_encode([
-              "message" => "Done",
-              "order" => $order,
-              "email" => $email
+              "message" => "done",
+              "order" => $order
           ]);
 
     }
