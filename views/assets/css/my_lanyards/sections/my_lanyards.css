@@ -98,27 +98,8 @@
   font-weight: 300;
 }
 
-@media screen and (max-width: 1385px) {
-/*  ._my_lanyards{
-    background-color: gold;
-  }*/
-  .display1200px{
-    display: none!important;
-  }
-  .display1024px{
-    display: block!important;
-  }
-}
-@media screen and (max-width: 1200px) {
-  /*._my_lanyards{
-    background-color: green;
-  }*/
-}
-@media screen and (max-width: 912px) {
-  /*._my_lanyards{
-    background-color: blue;
-  }*/
-}
+
+
 @media screen and (max-width: 667px) {
 /*  ._my_lanyards{
     background-color: brown;
@@ -126,6 +107,19 @@
   .title_my_lanyards{
     min-width: 310px;
   }
+}
+
+
+
+
+
+.product_job{
+  position: relative;
+  padding: 20px;
+  width: 90%;
+  min-width: 280px;
+  min-height: 120px;
+  background-color: rgba(0, 0, 0, .4);
 }
 
 .section_my_lanyards button{

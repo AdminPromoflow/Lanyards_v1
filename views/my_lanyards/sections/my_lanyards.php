@@ -13,7 +13,7 @@ $jsVersion = $jsFile && file_exists($jsFile) ? filemtime($jsFile) : time();
 <section class="section_my_lanyards">
   <!-- Title section for ABOUT US -->
   <div class="title_my_lanyards">
-    <h3>About us</h3>
+    <h3>My products</h3>
   </div>
 
   <!-- Group container for about us boxes -->
@@ -48,6 +48,11 @@ $jsVersion = $jsFile && file_exists($jsFile) ? filemtime($jsFile) : time();
       </div>
 
     </div>
+
+  </div>
+
+
+  <div class="product_job">
 
   </div>
 
