@@ -1,14 +1,14 @@
 <?php
 // Corregir rutas absolutas para evitar problemas con __DIR__
-$cssFile = realpath(__DIR__ . '/../../views/assets/css/artwork_details/sections/artwork_details.css');
-$jsFile = realpath(__DIR__ . '/../../views/assets/js/artwork_details/sections/artwork_details.js');
+$cssFile = realpath(__DIR__ . '/../../views/assets/css/my_lanyards/sections/artwork_details.css');
+$jsFile = realpath(__DIR__ . '/../../views/assets/css/my_lanyards/sections/my_lanyards.css');
 
 $cssVersion = $cssFile && file_exists($cssFile) ? filemtime($cssFile) : time();
 $jsVersion = $jsFile && file_exists($jsFile) ? filemtime($jsFile) : time();
 ?>
 
 <!-- Link to external stylesheet for styling the section -->
-<link rel="stylesheet" href="/views/assets/css/artwork_details/sections/artwork_details.css?v=<?= $cssVersion; ?>">
+<link rel="stylesheet" href="/views/assets/css/my_lanyards/sections/artwork_details.css?v=<?= $cssVersion; ?>">
 
 <section id="section_artwork_details" class="section_artwork_details">
   <!-- Title section for ABOUT US -->
@@ -25,4 +25,4 @@ $jsVersion = $jsFile && file_exists($jsFile) ? filemtime($jsFile) : time();
 </section>
 
 <!-- Link to external JavaScript for additional functionality -->
-<script src="/views/assets/js/artwork_details/sections/artwork_details.js?v=<?= $jsVersion; ?>" type="text/javascript"></script>
+<script src="/views/assets/css/my_lanyards/sections/my_lanyards.css?v=<?= $jsVersion; ?>" type="text/javascript"></script>
