@@ -472,9 +472,9 @@ class Job {
           $connection = new Database();
           $order_model = new Order_Model($connection);
           $order_model->setIdOrder($idOrder);
-          $result = $order_model->getOrderByIdOrder()->status;
+        //  $result = $order_model->getOrderByIdOrder()->status;
 
-          echo json_encode(["message" => $order_model->getOrderByIdOrder()->$status]);exit;
+          echo json_encode(["message" => $order_model->getOrderByIdOrder()]);exit;
 
         }
 
