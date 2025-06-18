@@ -43,8 +43,8 @@ class MyLanyardsClass {
     .then(data => {
       alert(JSON.stringify(data));
 
-      for (var i = 0; i < data["order"].length; i++) {
-      //  data["order"][i]
+      for (var i = 0; i < data["orders"].length; i++) {
+        alert(JSON.stringify(data["orders"][i]));
       }
 
     //  const dataObject = JSON.parse(data);
