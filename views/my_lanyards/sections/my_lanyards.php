@@ -1,14 +1,14 @@
 <?php
 // Corregir rutas absolutas para evitar problemas con __DIR__
-$cssFile = realpath(__DIR__ . '/../../views/assets/css/home/sections/my_lanyards.css');
-$jsFile = realpath(__DIR__ . '/../../views/assets/js/home/sections/my_lanyards.js');
+$cssFile = realpath(__DIR__ . '/../../views/assets/css/my_lanyards/sections/my_lanyards.css');
+$jsFile = realpath(__DIR__ . '/../../views/assets/js/my_lanyards/sections/my_lanyards.js');
 
 $cssVersion = $cssFile && file_exists($cssFile) ? filemtime($cssFile) : time();
 $jsVersion = $jsFile && file_exists($jsFile) ? filemtime($jsFile) : time();
 ?>
 
 <!-- Link to external stylesheet for styling the section -->
-<link rel="stylesheet" href="/views/assets/css/home/sections/my_lanyards.css?v=<?= $cssVersion; ?>">
+<link rel="stylesheet" href="/views/assets/css/my_lanyards/sections/my_lanyards.css?v=<?= $cssVersion; ?>">
 
 <section class="section_my_lanyards">
   <!-- Title section for ABOUT US -->
@@ -44,4 +44,4 @@ $jsVersion = $jsFile && file_exists($jsFile) ? filemtime($jsFile) : time();
 </section>
 
 <!-- Link to external JavaScript for additional functionality -->
-<script src="/views/assets/js/home/sections/my_lanyards.js?v=<?= $jsVersion; ?>" type="text/javascript"></script>
+<script src="/views/assets/js/my_lanyards/sections/my_lanyards.js?v=<?= $jsVersion; ?>" type="text/javascript"></script>
