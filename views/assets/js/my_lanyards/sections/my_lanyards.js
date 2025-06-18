@@ -14,7 +14,7 @@ class MyLanyardsClass {
 
     this.makeAjaxRequestOrdersWithJobs();
 
-    
+
   }
   makeAjaxRequestOrdersWithJobs() {
     // Define the URL and the JSON data you want to send
@@ -40,8 +40,8 @@ class MyLanyardsClass {
     })
     .then(data => {
 
-      const data = JSON.parse(data);
-      alert(data);
+      const dataObject = JSON.parse(data);
+      alert(dataObject);
       // Process the response data
       chargingClass.hideShowchargin(false);
 
