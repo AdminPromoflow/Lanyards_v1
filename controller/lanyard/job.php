@@ -476,7 +476,7 @@ class Job {
           $order_model->setIdOrder($idOrder);
           $result = $order_model->getOrderByIdOrder();
 
-          echo json_encode($result);exit;
+          echo json_encode("buenas");exit;
 
 
 
