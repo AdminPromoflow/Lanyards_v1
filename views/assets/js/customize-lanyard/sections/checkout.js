@@ -212,10 +212,10 @@ class Checkout {
         throw new Error("Network error.");
       })
       .then(data => {
-      //  alert(data);
+        alert(data);
 
 
-      chargingClass.hideShowchargin(false);
+    /*  chargingClass.hideShowchargin(false);
 
         data = JSON.parse(data);
 
@@ -224,7 +224,7 @@ class Checkout {
 
 
           window.location.href = "../../views/shopping_cart/index.php";
-        }
+        }*/
 
         else {
 
