@@ -39,9 +39,10 @@ class MyLanyardsClass {
       throw new Error("Network error.");
     })
     .then(data => {
+      alert(data);
 
-      const dataObject = JSON.parse(data);
-      alert(dataObject);
+    //  const dataObject = JSON.parse(data);
+    //  alert(dataObject);
       // Process the response data
       chargingClass.hideShowchargin(false);
 
