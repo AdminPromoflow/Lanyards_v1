@@ -12,7 +12,7 @@ class MyLanyardsClass {
 
     })
 
-    this.makeAjaxRequestOrdersWithJobs(){
+    this.makeAjaxRequestOrdersWithJobs();
 
     }
   }
