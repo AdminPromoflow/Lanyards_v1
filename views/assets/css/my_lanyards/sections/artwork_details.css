@@ -32,6 +32,7 @@
   width: 100%;
   filter: drop-shadow(1px 1px 3px black);
   transition: all .4s;
+  cursor: pointer;
 }
 .back_to_my_lanyards img:hover{
   filter: drop-shadow(2px 2px 4px black);
