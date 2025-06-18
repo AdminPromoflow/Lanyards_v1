@@ -65,7 +65,13 @@
   width: 90%;
   cursor: pointer;
 }
-.box_my_jobs h3{
+.box_my_jobs:hover{
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.box_my_jobs:active{
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.box_my_jobs h4{
   color: white;
   padding: 0;
   margin: 0;
