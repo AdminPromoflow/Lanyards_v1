@@ -10,7 +10,7 @@ $jsVersion = $jsFile && file_exists($jsFile) ? filemtime($jsFile) : time();
 <!-- Link to external stylesheet for styling the section -->
 <link rel="stylesheet" href="/views/assets/css/my_lanyards/sections/my_lanyards.css?v=<?= $cssVersion; ?>">
 
-<section class="section_my_lanyards">
+<section id="section_my_lanyards" class="section_my_lanyards">
   <!-- Title section for ABOUT US -->
   <div class="title_my_lanyards">
     <h3>My products</h3>
