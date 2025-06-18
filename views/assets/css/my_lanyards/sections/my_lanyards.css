@@ -81,6 +81,7 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  transition: .4s;
 }
 .box_my_jobs:hover{
   background-color: rgba(0, 0, 0, 0.4);
