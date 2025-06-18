@@ -460,12 +460,26 @@ class Job {
 
         $connection = new Database();
         $order_model = new Order_Model($connection);
-        $_SESSION['orden_in_process'] = $order_model->getOrderIdByUser();
+
+
+        $idOrder = $order_model->getOrderIdByUser();
+        $_SESSION['orden_in_process'] = $idOrder ?: false;
+
 
       //  echo json_encode();
 
         if ($_SESSION['orden_in_process'] == false) {
-        //
+
+
+          $connection = new Database();
+          $order_model = new Order_Model($connection);
+          $order_model->setIdOrder($idOrder);
+          $result = $order_model->getOrderByIdOrder();
+
+          echo json_encode($result);exit;
+
+
+
 
             $connection = new Database();
             $order_model = new Order_Model($connection);
