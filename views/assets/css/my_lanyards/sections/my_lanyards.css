@@ -74,6 +74,8 @@
   width: 90%;
   margin: 5px 0;
   cursor: pointer;
+  left: 50%;
+  transform: translateX(-50%);
 
   display: flex;
   justify-content: center;
