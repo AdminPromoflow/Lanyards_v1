@@ -140,10 +140,21 @@
 }
 .items_description_products_jobs{
   position: relative;
-  width: 80%;
-  min-width: 200px;
-  min-height: 120px;
-  background-color: rgba( 0, 0, 0, 0.3);
+  padding: 7px;
+  max-height: 30px;
+  background-color: rgba(222, 222, 222, 0.2);
+  width: 90%;
+  margin: 5px 0;
+  cursor: pointer;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid transparent;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  transition: .4s;
 }
 .items_description_products_jobs h4{
   position: relative;
