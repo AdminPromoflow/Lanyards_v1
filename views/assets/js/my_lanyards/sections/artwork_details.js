@@ -1,7 +1,11 @@
 class ArtworkDetailsClass {
   constructor() {
 
-    
+
+  }
+
+  showSection(action){
+    section_artwork_detailss.style.display = action;
   }
 
 }

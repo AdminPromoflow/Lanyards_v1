@@ -8,6 +8,8 @@ class MyLanyardsClass {
     }
     open_artwork_details.addEventListener("click", function(){
       section_my_lanyards.style.display = "none";
+      artworkDetailsClass.showSection("flex");
+
     })
   }
   selectMyJob(index){
