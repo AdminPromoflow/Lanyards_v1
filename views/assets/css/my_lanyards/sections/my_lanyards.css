@@ -77,6 +77,11 @@
   width: 90%;
   margin: 5px 0;
   cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .box_my_jobs:hover{
   background-color: rgba(0, 0, 0, 0.4);
