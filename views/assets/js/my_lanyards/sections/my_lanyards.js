@@ -14,7 +14,7 @@ class MyLanyardsClass {
 
     this.makeAjaxRequestOrdersWithJobs();
 
-    }
+    
   }
   makeAjaxRequestOrdersWithJobs() {
     // Define the URL and the JSON data you want to send
