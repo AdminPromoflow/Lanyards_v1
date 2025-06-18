@@ -139,6 +139,8 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  transform-origin: center;
+
   right: 15px;
   height: 20px;
   width: 25px;
