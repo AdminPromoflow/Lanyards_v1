@@ -142,7 +142,7 @@
   right: 15px;
   height: 20px;
   width: 25px;
-  filter: drop-shadow(1px 1px 0px white);
+  filter: drop-shadow(0.2px 0.2px 0px white);
 }
 .description_product_job{
 
