@@ -48,7 +48,7 @@
           <div class="bgLanyards">
 
             <!-- Include the slider component for the index page -->
-            <?php include "../../views/assets/js/my_lanyards/sections/my_lanyards.js"; ?>
+            <?php include "../../views/my_lanyards/sections/my_lanyards.php"; ?>
             <?php include "../../views/global/footer.php"; ?>
 
           </div>
