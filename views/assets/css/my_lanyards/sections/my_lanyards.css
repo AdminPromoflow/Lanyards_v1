@@ -65,9 +65,6 @@
   width: 90%;
   background-color: rgba(0, 0, 0, 0.2);
 
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
 }
 .box_my_jobs{
   position: relative;
