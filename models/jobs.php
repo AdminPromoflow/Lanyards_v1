@@ -166,7 +166,6 @@ class Job_Model {
 
     public function getJobsByOrder() {
         try {
-            $sql = $this->connection->getConnection()->prepare("SELECT * FROM `Jobs` WHERE `idOrder` = :idOrder");
             $sql = $this->connection->getConnection()->prepare("SELECT Jobs.*
             FROM Jobs
             INNER JOIN Orders ON Jobs.idOrder = Orders.idOrder

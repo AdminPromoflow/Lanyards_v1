@@ -299,6 +299,7 @@ class Order_Model {
                  FROM Orders o
                  INNER JOIN Users u ON o.idUser = u.idUser
                  WHERE u.email = :email
+                 AND u.status = 'pending'
                  LIMIT 1"
             );
 
