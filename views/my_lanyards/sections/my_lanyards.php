@@ -40,7 +40,7 @@ $jsVersion = $jsFile && file_exists($jsFile) ? filemtime($jsFile) : time();
   </div>
 
   <!-- Explore More Button -->
-  <button type="button" onclick="window.location.href='/views/my_lanyards/index.php'">Explore More</button>
+  <button type="button" onclick="window.location.href='../../views/my_lanyards/index.php'">Explore More</button>
 </section>
 
 <!-- Link to external JavaScript for additional functionality -->
