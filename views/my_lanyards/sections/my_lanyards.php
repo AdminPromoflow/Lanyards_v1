@@ -58,7 +58,10 @@ $jsVersion = $jsFile && file_exists($jsFile) ? filemtime($jsFile) : time();
     </div>
     <div class="description_product_job">
       <div class="items_description_products_jobs">
-
+        <h4>Hola 1 </h4>
+      </div>
+      <div class="items_description_products_jobs">
+        <h4>Hola 2 </h4>
       </div>
     </div>
 
