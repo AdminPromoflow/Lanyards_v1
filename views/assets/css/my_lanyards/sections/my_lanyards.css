@@ -138,7 +138,13 @@
 .description_product_job{
 
 }
-
+.items_description_products_jobs{
+  position: relative;
+  width: 80%;
+  min-width: 200px;
+  min-height: 120px;
+  background-color: rgba( 0, 0, 0, 0.3);
+}
 .section_my_lanyards button{
   padding: calc(0.1vw + 0.1em) calc(0.5vw + 0.5em);
   z-index: 10;
