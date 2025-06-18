@@ -121,6 +121,16 @@
   min-height: 120px;
   background-color: rgba( 25, 61, 116, 0.7);
 }
+.header_product_job{
+  position: relative;
+  width: 100%;
+  background-color: rgba(0, 28, 111, .6);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 
 .section_my_lanyards button{
   padding: calc(0.1vw + 0.1em) calc(0.5vw + 0.5em);
