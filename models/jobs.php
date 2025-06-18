@@ -167,6 +167,14 @@ class Job_Model {
     public function getJobsByOrder() {
         try {
             $sql = $this->connection->getConnection()->prepare("SELECT * FROM `Jobs` WHERE `idOrder` = :idOrder");
+            $sql = $this->connection->getConnection()->prepare("SELECT Jobs.*
+            FROM Jobs
+            INNER JOIN Orders ON Jobs.idOrder = Orders.idOrder
+            WHERE Jobs.idOrder = :idOrder
+            AND Orders.status = 'pending'
+            ");
+
+
             $sql->bindParam(':idOrder', $this->idOrder, PDO::PARAM_INT);
             $sql->execute();
             $jobs = $sql->fetchAll(PDO::FETCH_ASSOC);
