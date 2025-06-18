@@ -369,28 +369,32 @@ class Order_Model {
 
 
     public function getOrdersWithJobsByEmail() {
-      try {
-          $conn = $this->connection->getConnection();
+        try {
+            $conn = $this->connection->getConnection();
 
-          $sql = $conn->prepare("
-              SELECT o.idOrder, j.idJobs
-              FROM Orders o
-              INNER JOIN Jobs j ON o.idOrder = j.idOrder
-              WHERE o.status = 'processing'
-          ");
+            $sql = $conn->prepare("
+                SELECT o.idOrder, j.idJobs
+                FROM Orders o
+                INNER JOIN Users u ON o.idUser = u.idUser
+                INNER JOIN Jobs j ON o.idOrder = j.idOrder
+                WHERE o.status = 'processing' AND u.email = :email
+            ");
 
-          $sql->execute();
-          $result = $sql->fetchAll(PDO::FETCH_ASSOC);
+            $sql->bindParam(':email', $this->email, PDO::PARAM_STR);
+            $sql->execute();
 
-          $this->connection->closeConnection();
+            $result = $sql->fetchAll(PDO::FETCH_ASSOC);
 
-          return $result ?: [];
+            $this->connection->closeConnection();
 
-      } catch (PDOException $e) {
-          error_log("DB Error in getProcessingOrdersWithJobs: " . $e->getMessage());
-          throw new Exception("Error retrieving processing orders with jobs.");
-      }
+            return $result ?: [];
+
+        } catch (PDOException $e) {
+            error_log("DB Error in getOrdersWithJobsByEmail: " . $e->getMessage());
+            throw new Exception("Error retrieving processing orders with jobs by email.");
+        }
     }
+
 
 
 
