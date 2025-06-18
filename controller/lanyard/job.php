@@ -465,6 +465,7 @@ class Job {
         $idOrder = $order_model->getOrderIdByUser();
         $_SESSION['orden_in_process'] = $idOrder ?: false;
 
+        echo json_encode(["message" => $_SESSION['orden_in_process'] ]);exit;
 
       //  echo json_encode();
 
