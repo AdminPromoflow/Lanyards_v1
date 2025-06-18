@@ -224,11 +224,11 @@ class Checkout {
 
 
           window.location.href = "../../views/shopping_cart/index.php";
-        }*/
+        }
 
         else {
 
-        }
+        }*/
 
       })
       .catch(error => {
