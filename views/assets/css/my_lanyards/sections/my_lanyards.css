@@ -156,6 +156,15 @@
   flex-wrap: wrap;
   transition: .4s;
 }
+
+.items_description_products_jobs:hover{
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.items_description_products_jobs:active{
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
 .items_description_products_jobs h4{
   position: relative;
   color: white;
@@ -164,6 +173,7 @@
   color: white;
   font-weight: 300;
 }
+
 
 .section_my_lanyards button{
   padding: calc(0.1vw + 0.1em) calc(0.5vw + 0.5em);
