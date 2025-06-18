@@ -215,9 +215,9 @@ class Checkout {
         alert(data);
 
 
-    /*  chargingClass.hideShowchargin(false);
+      chargingClass.hideShowchargin(false);
 
-        data = JSON.parse(data);
+      /*  data = JSON.parse(data);
 
         if (data["status"]) {
           alert(data["message"]);
