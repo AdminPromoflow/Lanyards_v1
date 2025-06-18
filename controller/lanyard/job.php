@@ -474,19 +474,9 @@ class Job {
           $order_model->setIdOrder($idOrder);
           $result = $order_model->getOrderByIdOrder()["status"];
 
-        //  echo json_encode(["message" => $result]);exit;
-
         }
 
-
-      //  echo json_encode();
-
         if ($_SESSION['orden_in_process'] == false || $result != "pending") {
-
-
-
-
-
 
             $connection = new Database();
             $order_model = new Order_Model($connection);
