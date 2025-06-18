@@ -17,6 +17,8 @@ class MyLanyardsClass {
 
   }
   makeAjaxRequestOrdersWithJobs() {
+    chargingClass.hideShowchargin(true);
+
     // Define the URL and the JSON data you want to send
     const url = "../../controller/lanyard/order.php"; // Replace with your API endpoint URL
     const data = {
@@ -40,6 +42,10 @@ class MyLanyardsClass {
     })
     .then(data => {
       alert(JSON.stringify(data));
+
+      for (var i = 0; i < data["order"].length; i++) {
+      //  data["order"][i]
+      }
 
     //  const dataObject = JSON.parse(data);
     //  alert(dataObject);
