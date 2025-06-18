@@ -76,7 +76,6 @@ class ApiHandlerRegister {
             $userCreated = $user->createUser(); // Insert user into the database
 
 
-            echo json_encode($userCreated  );exit;
 
             if ($userCreated) {
               $emailSender = new EmailSender();

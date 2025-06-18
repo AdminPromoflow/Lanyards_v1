@@ -99,10 +99,14 @@ class Users {
    * Create a new user with the provided name, email, and password.
    */
    public function createUser() {
-     echo json_encode($this->signup_category.$this->password  );exit;
-
        try {
-           $sql = $this->connection->getConnection()->prepare("INSERT INTO `Users` (`name`, `email`, `password`, `signup_category`) VALUES (:name, :email, :password, :signup_category)");
+           // Elimina esta línea en producción, solo para depuración
+           // echo json_encode($this->signup_category . $this->password); exit;
+
+           $sql = $this->connection->getConnection()->prepare("
+               INSERT INTO `Users` (`name`, `email`, `password`, `signup_category`)
+               VALUES (:name, :email, :password, :signup_category)
+           ");
 
            $sql->bindParam(':name', $this->name, PDO::PARAM_STR);
            $sql->bindParam(':email', $this->email, PDO::PARAM_STR);
@@ -114,9 +118,12 @@ class Users {
            $this->connection->closeConnection();
            return true;
        } catch (PDOException $e) {
+           // Puedes registrar el error si quieres debuggear:
+           // error_log("Error al crear usuario: " . $e->getMessage());
            return false;
        }
    }
+
 
 
     public function insertRecoveryToken() {
