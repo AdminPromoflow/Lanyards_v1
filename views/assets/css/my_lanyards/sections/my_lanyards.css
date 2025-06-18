@@ -150,10 +150,7 @@
   transform: translateX(-50%);
   border: 1px solid transparent;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+
   transition: .4s;
 }
 
