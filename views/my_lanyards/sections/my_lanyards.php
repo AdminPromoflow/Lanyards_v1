@@ -55,7 +55,7 @@ $jsVersion = $jsFile && file_exists($jsFile) ? filemtime($jsFile) : time();
   <div class="product_job">
     <div class="header_product_job">
       <h3>hola</h3>
-      <img src="../../views/assets/img/my_lanyards/my_lanyards/icon_artwork.png" alt="">
+      <img id="open_artwork_details" src="../../views/assets/img/my_lanyards/my_lanyards/icon_artwork.png" alt="">
     </div>
     <div class="description_product_job">
       <div class="items_description_products_jobs">

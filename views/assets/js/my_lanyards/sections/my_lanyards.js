@@ -6,6 +6,9 @@ class MyLanyardsClass {
         }
       )
     }
+    open_artwork_details.addEventListener("click", function(){
+      alert("hola");
+    })
   }
   selectMyJob(index){
     for (var i = 0; i < box_my_jobs.length; i++) {
@@ -18,5 +21,6 @@ class MyLanyardsClass {
 }
 
 
+const open_artwork_details = document.querySelectorAll(".open_artwork_details");
 const box_my_jobs = document.querySelectorAll(".box_my_jobs");
 const myLanyardsClass = new MyLanyardsClass();
