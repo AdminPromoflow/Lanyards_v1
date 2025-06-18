@@ -193,6 +193,7 @@ class Order {
     }
 
     private function getOrdersWithJobsByEmail() {
+      echo json_encode("buenas");exit;
       if (session_status() === PHP_SESSION_NONE) {
           session_start();
       }
