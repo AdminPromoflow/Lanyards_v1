@@ -70,7 +70,8 @@
   position: relative;
   padding: 7px;
   background-color: rgba(0, 0, 0, 0.3);
-  width: 100%;
+  width: 90%;
+  margin: 5px 0;
   cursor: pointer;
 }
 .box_my_jobs:hover{
