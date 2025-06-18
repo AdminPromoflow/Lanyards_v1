@@ -21,20 +21,19 @@ $jsVersion = $jsFile && file_exists($jsFile) ? filemtime($jsFile) : time();
 
     <!-- Box for first individual (Crafting Unique Lanyards) -->
     <div class="box_my_lanyards">
-      <h3>Crafting Unique Lanyards</h3>
-      <p>We are a company dedicated to creating bespoke lanyards from scratch,
-        combining quality materials with unique designs. Our goal is to provide
-        personalised solutions that meet your needs while ensuring fast service
-        and exceptional attention to detail for every project.</p>
+      <h3>My lanyards</h3>
+      <div class="box_my_jobs">
+        <h4>Hola 1</h4>
+      </div>
+      <div class="box_my_jobs">
+        <h4>Hola 2</h4>
+      </div>
     </div>
 
     <!-- Box for second individual (Elevating Your Brand) -->
     <div class="box_my_lanyards">
-      <h3>Elevating <br> Your Brand</h3>
-      <p>With a focus on delivering the most popular lanyard styles, we help elevate
-      your brand or event. Our experienced team is committed to innovation and
-      functionality, offering customised products that reflect professionalism,
-      enhance visibility, and leave a lasting impression.</p>
+      <h3>My lanyards</h3>
+
     </div>
 
   </div>

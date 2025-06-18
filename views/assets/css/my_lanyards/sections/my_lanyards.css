@@ -43,6 +43,10 @@
   background-color: rgba( 25, 61, 116, 0.7);
   margin: 20px 15px;
   padding: 0px 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .box_my_lanyards h3{
   position: relative;
@@ -53,14 +57,11 @@
   font-weight: 400;
   padding: 0px;
 }
-.box_my_lanyards p{
-  position: relative;
-  text-align: justify;
-  color: white;
-  text-shadow: 3px 3px 2px black;
-  font-size: 1.2em;
-  font-weight: 200;
-  margin: 3px 5px;
+
+.box_my_jobs{
+  padding: 7px;
+  background-color: green;
+  width: 90%;
 }
 @media screen and (max-width: 1385px) {
 /*  ._my_lanyards{
