@@ -39,7 +39,7 @@ class ArtworkDetailsClass {
     }
   }
   manageLanyardArtwork(artwork){
-
+    alert(JSON.stringify(artwork));
   }
   manageLanyardText(text){
 
