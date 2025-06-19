@@ -47,8 +47,7 @@
 }
 .groupBox_artwork_details{
   position: relative;
-  min-width: 240px;
-  width: 80%;
+  
   overflow-x: scroll;
   left: 50%;
   transform: translateX(-50%);
