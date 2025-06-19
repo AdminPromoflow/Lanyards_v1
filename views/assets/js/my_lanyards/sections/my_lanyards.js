@@ -225,7 +225,7 @@ class MyLanyardsClass {
     var linkRight = "https://lanyardsforyou.com/" +right;
 
 
-    alert(linkLeft + "          " +  linkRight);
+  //  alert(linkLeft + "          " +  linkRight);
 
     myLanyardsClass.downloadImage(linkLeft, 'image-left.png');
     myLanyardsClass.downloadImage(linkRight, 'image-right.png');
