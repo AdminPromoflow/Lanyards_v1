@@ -187,8 +187,8 @@ class MyLanyardsClass {
         <h4>${data["amount"]}</h4>
       </div>
 
-      onclick="myLanyardsClass.openArtwork('${lefttLink}', '${rightLink}')"
-        <h4>Artwork</h4>
+      <div id="open_artwork_details" class="items_description_products_jobs"  onclick="myLanyardsClass.openArtwork('${lefttLink}', '${rightLink}')">
+      <h4>Artwork</h4>
         <h4>Click here</h4>
       </div>
       `;
