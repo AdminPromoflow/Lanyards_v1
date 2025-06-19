@@ -136,17 +136,20 @@ class MyLanyardsClass {
     });
   }
   drawJob(data){
-    alert(data["description"]["material"]["type"]);
 
     const product_job = document.getElementById("product_job")
 
-    var description = [];
+    var jobDescription = [];
+
+    jobDescription = JSON.parse(data["description"]);
+    alert(jobDescription["material"]["type"]);
+
 
     if (data["name"] == "Custom Lanyard") {
       description = `
       <div class="items_description_products_jobs">
         <h4>Material:</h4>
-        <h4>${data["description"]["material"]["type"]}</h4>
+        <h4>${jobDescription["material"]["type"]}</h4>
       </div>
       <div class="items_description_products_jobs">
         <h4>Lanyard_type:</h4>
@@ -176,8 +179,6 @@ class MyLanyardsClass {
         <h4>Accessories:</h4>
         <h4>Hola 1 </h4>
       </div>
-
-
       `;
     }
     else {
