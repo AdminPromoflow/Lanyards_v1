@@ -18,6 +18,11 @@
   margin: 0 0 3vw 0;
   padding: 0px;
 }
+.section_my_lanyards p{
+  position: relative;
+  text-align: left;
+  color: white;
+}
 
 .back_to_my_lanyards{
   position: absolute;

@@ -16,6 +16,8 @@ $jsVersion = $jsFile && file_exists($jsFile) ? filemtime($jsFile) : time();
     <h3>My products</h3>
   </div>
 
+  <p>Please choose a job from the order(s) to see the product details.</p>
+
   <!-- Group container for about us boxes -->
   <div id="groupBox_my_lanyards" class="groupBox_my_lanyards">
 
