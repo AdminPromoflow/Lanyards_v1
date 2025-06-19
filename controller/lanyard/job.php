@@ -523,7 +523,7 @@ class Job {
 
         echo json_encode([
             "mensaje" => "done",
-            "job" => $job["job"]
+            "job" => $job->job
         ]);
         exit;
     }
