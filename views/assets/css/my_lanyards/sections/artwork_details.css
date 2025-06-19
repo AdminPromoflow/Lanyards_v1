@@ -78,13 +78,15 @@
   width: 200px;
 
 
-
+  background-color: green;
   transform: rotate(-90deg);
   transform-origin: top left;
   top: 0px;
   left: 0px;
 }
+.my_lanyards_artwork img{
 
+}
 
 
 
