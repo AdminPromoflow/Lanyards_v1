@@ -59,6 +59,7 @@
   width: 21.6cm;
   background: white;
   margin: 20px 0;
+  overflow: hidden;
 }
 .my_lanyards_right_side{
   position: relative;
@@ -66,6 +67,7 @@
   width: 21.6cm;
   background: white;
   margin: 20px 0;
+  overflow: hidden;
 }
 
 .my_lanyards_left_side img{
