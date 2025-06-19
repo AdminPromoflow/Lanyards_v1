@@ -221,8 +221,11 @@ class MyLanyardsClass {
   }
   openArtwork(left, right){
     alert(left + "          " +  right);
-    myLanyardsClass.downloadImage(left, 'image-left.png');
-    myLanyardsClass.downloadImage(right, 'image-right.png');
+
+    var linkLeft = "https://lanyardsforyou.com" +left;
+    var linkRight = "https://lanyardsforyou.com" +right;
+    myLanyardsClass.downloadImage(linkLeft, 'image-left.png');
+    myLanyardsClass.downloadImage(linkRight, 'image-right.png');
 
 
   //  myLanyardsClass.showSection("none");
