@@ -7,7 +7,6 @@ class ArtworkPreviewClass {
             left: document.getElementById("left-artwork-lanyard"),
             right: document.getElementById("right-artwork-lanyard"),
           };
-
         });
 
     for (let i = 0; i < boxPreviewArtwork.length; i++) {
@@ -16,8 +15,6 @@ class ArtworkPreviewClass {
         artworkPreviewClass.borderWhite(i);
       })
     }
-
-
   }
   refreshPreviewArtwork(){
   if (artworkManualClass.getArtworkManual() == "artwork") {
@@ -25,7 +22,6 @@ class ArtworkPreviewClass {
     this.applyTwoEndStylesArtwork();
     this.uploadDownloadableFiles();
   }
-
   }
   cleanStyleArtwork() {
     const el = this.elements;

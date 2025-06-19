@@ -39,6 +39,9 @@ class ArtworkDetailsClass {
     }
   }
   manageLanyardArtwork(artwork){
+    const  my_lanyards_left_side = document.getElementById('my_lanyards_left_side');
+    const  my_lanyards_right_side = document.getElementById('my_lanyards_right_side');
+
     alert(artwork[0]["linkRightImage"]);
   }
   manageLanyardText(text){

@@ -68,6 +68,10 @@
   margin: 20px 0;
 }
 
+.my_lanyards_left_side img{
+  transform: rotateX(90deg);
+}
+
 
 
 
