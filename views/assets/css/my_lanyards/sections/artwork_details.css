@@ -71,8 +71,7 @@
 
 .my_lanyards_left_side img{
   position: relative;
-  transform: rotateZ(90deg);
-  width: 100%;
+  height: 100%;
 
 }
 
