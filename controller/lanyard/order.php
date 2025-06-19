@@ -212,6 +212,7 @@ class Order {
       foreach ($order as $row) {
           $orderId = $row['idOrder'];
           $jobId = $row['idJobs'];
+          $name = $row['name'];
 
           if (!isset($grouped[$orderId])) {
               $grouped[$orderId] = [
@@ -220,7 +221,11 @@ class Order {
               ];
           }
 
-          $grouped[$orderId]['jobs'][] = [ 'idJobs' => $jobId ];
+          $grouped[$orderId]['jobs'][] = [
+             'idJobs' => $jobId,
+             'name' => $name
+
+           ];
       }
 
       echo json_encode(['orders' => array_values($grouped)]);
