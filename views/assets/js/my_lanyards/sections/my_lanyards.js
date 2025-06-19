@@ -122,7 +122,7 @@ class MyLanyardsClass {
     .then(data => {
     // alert(JSON.stringify(data));
 
-     myLanyardsClass.drawJob(data["job"]);
+     //myLanyardsClass.drawJob(data["job"]);
 
       chargingClass.hideShowchargin(false);
 
