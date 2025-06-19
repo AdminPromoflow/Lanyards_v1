@@ -83,6 +83,26 @@ class Image_Model {
     }
 
 
+      public function getImagesByJobId() {
+      try {
+          $sql = $this->connection->getConnection()->prepare("
+              SELECT * FROM `Image` WHERE `idJobs` = :idJobs
+          ");
+          $sql->bindParam(':idJobs', $this->idJob, PDO::PARAM_INT);
+          $sql->execute();
+
+          $result = $sql->fetchAll(PDO::FETCH_ASSOC);
+          $this->connection->closeConnection();
+
+          // Si el array tiene datos, lo retorna; si no, retorna false
+          return !empty($result) ? $result : false;
+      } catch (PDOException $e) {
+          return false;
+      }
+  }
+
+
+
 
 
 

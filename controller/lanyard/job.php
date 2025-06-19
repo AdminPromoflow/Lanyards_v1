@@ -535,10 +535,31 @@ class Job {
 
         }*/
 
+        $connection = new Database();
+
+        // Imagen
+        $image_model = new Image_Model($connection);
+        $image_model->setIdJob($idJob);
+        $images = $image_model->getImagesByJobId(); // ← resultado guardado en $images
+
+        // Texto
+        $text_model = new Text_Model($connection);
+        $text_model->setIdJob($idJob);
+        $texts = $text_model->getTextsByJobId(); // ← resultado guardado en $texts
+
+        // Artwork
+        $artwork_model = new Artwork_Model($connection);
+        $artwork_model->setIdJob($idJob);
+        $artworks = $artwork_model->getArtworkByJobId(); // ← resultado guardado en $artworks
+
+
 
         echo json_encode([
             "mensaje" => "done",
-            "job" => $job
+            "job" => $job,
+            "images" => $images
+            "texts" => $texts
+            "artworks" => $artworks
         ]);
         exit;
     }

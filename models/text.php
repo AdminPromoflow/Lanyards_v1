@@ -108,6 +108,24 @@ class Text_Model {
         }
     }
 
+    public function getTextsByJobId() {
+        try {
+            $sql = $this->connection->getConnection()->prepare("
+                SELECT * FROM `Text` WHERE `idJobs` = :idJobs
+            ");
+            $sql->bindParam(':idJobs', $this->idJob, PDO::PARAM_INT);
+            $sql->execute();
+
+            $result = $sql->fetchAll(PDO::FETCH_ASSOC);
+            $this->connection->closeConnection();
+
+            return !empty($result) ? $result : false;
+        } catch (PDOException $e) {
+            return false;
+        }
+    }
+
+
 
 
 

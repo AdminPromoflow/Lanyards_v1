@@ -55,6 +55,25 @@ class Artwork_Model {
     }
 
 
+    public function getArtworkByJobId() {
+        try {
+            $sql = $this->connection->getConnection()->prepare("
+                SELECT * FROM `Artwork` WHERE `idJobs` = :idJobs
+            ");
+            $sql->bindParam(':idJobs', $this->idJob, PDO::PARAM_INT);
+            $sql->execute();
+
+            $result = $sql->fetchAll(PDO::FETCH_ASSOC);
+            $this->connection->closeConnection();
+
+            return !empty($result) ? $result : false;
+        } catch (PDOException $e) {
+            return false;
+        }
+    }
+
+
+
 
 }
 ?>
