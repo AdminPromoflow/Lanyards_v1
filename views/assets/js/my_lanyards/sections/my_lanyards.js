@@ -150,7 +150,7 @@ class MyLanyardsClass {
 
     const product_job = document.getElementById("product_job");
 
-    var jobdescription = [];
+    var description = '';
 
     if (data["name"] == "Custom Lanyard") {
       description = `
