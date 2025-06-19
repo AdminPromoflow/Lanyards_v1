@@ -195,7 +195,7 @@ class MyLanyardsClass {
 
       <div id="open_artwork_details" class="items_description_products_jobs"  onclick="myLanyardsClass.openArtwork()">
         <h4>Artwork</h4>
-        <h4>Link</h4>
+        <h4>Click here</h4>
       </div>
       `;
     }
