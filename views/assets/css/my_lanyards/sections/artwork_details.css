@@ -62,7 +62,7 @@
 }
 .my_lanyards_right_side{
   position: relative;
-  height: 1.44cm;
+  height: 0.48cm;
   width: 21.6cm;
   background: white;
   margin: 20px 0;
@@ -74,8 +74,10 @@
 
 .my_lanyards_artwork{
   position: relative;
-  height: 0.48cm;
-  width: 21.6cm;
+  height: 21.6cm;
+  width: 0.48cm;
+
+
 
   transform: rotate(-90deg);
   transform-origin: top left;
