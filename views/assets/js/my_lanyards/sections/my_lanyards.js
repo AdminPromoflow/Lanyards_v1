@@ -157,7 +157,9 @@ class MyLanyardsClass {
       <div class="items_description_products_jobs">
         <h4>Material:</h4>
         <h4>${descriptionObj.material.type}</h4>
-      </div>
+        <h4>${descriptionObj.material.type}</h4>
+
+      </div>"amount"
       <div class="items_description_products_jobs">
         <h4>Lanyard_type:</h4>
         <h4>${descriptionObj.lanyard_type.type}</h4>
@@ -186,6 +188,10 @@ class MyLanyardsClass {
         <h4>Accessories:</h4>
         <h4>${descriptionObj.accessories.type}</h4>
       </div>
+      <div class="items_description_products_jobs">
+        <h4>Amount:</h4>
+        <h4>${data["amount"]}</h4>
+      </div>
 
       <div id="open_artwork_details" class="items_description_products_jobs"  onclick="myLanyardsClass.openArtwork()">
         <h4>Artwork</h4>
@@ -198,7 +204,12 @@ class MyLanyardsClass {
       <div class="items_description_products_jobs">
         <h4>Material:</h4>
         <h4>${descriptionObj.item.type}</h4>
-      </div>`;
+      </div>
+      <div class="items_description_products_jobs">
+        <h4>Amount:</h4>
+        <h4>${data["amount"]}</h4>
+      </div>
+      `;
     }
 
 
@@ -208,9 +219,7 @@ class MyLanyardsClass {
     product_job.innerHTML = `
     <div class="header_product_job">
       <h3>${data["name"]}</h3>
-    <!--  <div id="open_artwork_details">
-        <img  src="../../views/assets/img/my_lanyards/my_lanyards/icon_artwork.png" alt="">
-      </div> -->
+
     </div>
     <div class="description_product_job">
       ${description}
