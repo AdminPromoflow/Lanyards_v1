@@ -136,23 +136,17 @@ class MyLanyardsClass {
     });
   }
   drawJob(data){
-    alert(JSON.stringify(data));
-    const product_job = document.getElementById("product_job");
+    alert(data["description"]["material"]["type"]);
 
-  //  var data = data["description"];
+    const product_job = document.getElementById("product_job")
 
-  //  alert(JSON.stringify(data));
-
-  //  var jobDescription = JSON.parse(data["description"]);
-
-  //  alert(jobDescription["material"]["type"]);
-
+    var jobdescription = [];
 
     if (data["name"] == "Custom Lanyard") {
-      description = ``;/* `
+      description = `
       <div class="items_description_products_jobs">
         <h4>Material:</h4>
-        <h4></h4>
+        <h4>${data["description"]["material"]["type"]}</h4>
       </div>
       <div class="items_description_products_jobs">
         <h4>Lanyard_type:</h4>
@@ -182,7 +176,9 @@ class MyLanyardsClass {
         <h4>Accessories:</h4>
         <h4>Hola 1 </h4>
       </div>
-      `;*/
+
+
+      `;
     }
     else {
       description = ``;
