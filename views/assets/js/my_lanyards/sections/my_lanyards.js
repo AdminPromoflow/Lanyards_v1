@@ -61,7 +61,8 @@ class MyLanyardsClass {
     });
 
   }
-  drawOrders(idOrder){
+  drawOrders(order){
+    alert(JSON.stringify(order))
     const groupBox_my_lanyards = document.getElementById("groupBox_my_lanyards");
 
     groupBox_my_lanyards.innerHTML =+ `
