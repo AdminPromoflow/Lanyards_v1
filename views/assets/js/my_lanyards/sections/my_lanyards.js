@@ -136,7 +136,78 @@ class MyLanyardsClass {
     });
   }
   drawJob(data){
-    alert(data["description"]);
+    alert(data["description"]["material"]["type"]);
+
+    const product_job = document.getElementById("product_job")
+
+    var description = [];
+
+    if (data["name"] == "Custom Lanyard") {
+      description = `
+      <div class="items_description_products_jobs">
+        <h4>Material:</h4>
+        <h4>${data["description"]["material"]["type"])}</h4>
+      </div>
+      <div class="items_description_products_jobs">
+        <h4>Lanyard_type:</h4>
+        <h4>Hola 1 </h4>
+      </div>
+      <div class="items_description_products_jobs">
+        <h4>Width:</h4>
+        <h4>Hola 1 </h4>
+      </div>
+      <div class="items_description_products_jobs">
+        <h4>Side printed:</h4>
+        <h4>Hola 1 </h4>
+      </div>
+      <div class="items_description_products_jobs">
+        <h4>Colour quantity:</h4>
+        <h4>Hola 1 </h4>
+      </div>
+      <div class="items_description_products_jobs">
+        <h4>Clip:</h4>
+        <h4>Hola 1 </h4>
+      </div>
+      <div class="items_description_products_jobs">
+        <h4>Attachment:</h4>
+        <h4>Hola 1 </h4>
+      </div>
+      <div class="items_description_products_jobs">
+        <h4>Accessories:</h4>
+        <h4>Hola 1 </h4>
+      </div>
+
+
+      `;
+    }
+    else {
+      description = ``;
+    }
+
+
+
+
+    product_job.innerHTML = ``;
+    product_job.innerHTML = `
+    <div class="header_product_job">
+      <h3>${data["name"])}</h3>
+      <div id="open_artwork_details">
+        <img  src="../../views/assets/img/my_lanyards/my_lanyards/icon_artwork.png" alt="">
+      </div>
+    </div>
+    <div class="description_product_job">
+      <div class="items_description_products_jobs">
+        <h4>Hola 1 </h4>
+        <h4>Hola 1 </h4>
+      </div>
+      <div class="items_description_products_jobs">
+        <h4>Hola 2 </h4>
+        <h4>Hola 2 </h4>
+      </div>
+    </div>
+    `;
+
+
   }
   showSection(action){
     section_my_lanyards.style.display = action;
