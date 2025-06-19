@@ -550,14 +550,14 @@ class Job {
                 $text_model->setIdJob($idJob);
                 $texts = $text_model->getTextsByJobId(); // ← resultado guardado en $texts
 
-          /*      // Artwork
+            // Artwork
                 $connection = new Database();
 
                 $artwork_model = new Artwork_Model($connection);
                 $artwork_model->setIdJob($idJob);
                 $artworks = $artwork_model->getArtworkByJobId(); // ← resultado guardado en $artworks
 
-*/
+  /*  */
 
                 echo json_encode([
                     "mensaje" => "done",
