@@ -146,7 +146,7 @@ class MyLanyardsClass {
       description = `
       <div class="items_description_products_jobs">
         <h4>Material:</h4>
-        <h4>${data["description"]["material"]["type"])}</h4>
+        <h4>${data["description"]["material"]["type"]}</h4>
       </div>
       <div class="items_description_products_jobs">
         <h4>Lanyard_type:</h4>
