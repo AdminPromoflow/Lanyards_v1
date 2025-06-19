@@ -60,6 +60,8 @@
   background: white;
   margin: 20px 0;
   overflow: hidden;
+  transform: rotateX(90deg);
+
 }
 .my_lanyards_right_side{
   position: relative;
@@ -68,6 +70,9 @@
   background: white;
   margin: 20px 0;
   overflow: hidden;
+  transform: rotateX(90deg);
+
+
 }
 
 .my_lanyards_left_side img{
