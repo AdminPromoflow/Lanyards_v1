@@ -68,21 +68,12 @@
   margin: 20px 0;
 
 }
+
+
 .my_lanyards_artwork{
   position: relative;
-  height: 700px;
-  width: 50px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) rotate(50deg);
-  transform-origin: center;
-
-}
-
-.my_lanyards_left_side img{
-  position: relative;
-  height: 700px;
-  width: 50px;
+  height: 21.6cm;
+  width: 1.44cm;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%) rotate(90deg);
