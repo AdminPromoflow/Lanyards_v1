@@ -69,7 +69,7 @@ class MyLanyardsClass {
     var jobs = [];
     for (var i = 0; i < order["jobs"].length; i++) {
       jobs +=  `
-      <div class="box_my_jobs" onclick="myLanyardsClass.handleJobClick(${order["jobs"][i]["idJobs"]}, ${i})">
+      <div class="box_my_jobs" onclick="myLanyardsClass.handleJobClick(${order["jobs"][i]["idJobs"]}, ${i} )">
         <h4>${order["jobs"][i]["name"]}</h4>
       </div>
       `;
@@ -90,7 +90,7 @@ class MyLanyardsClass {
 
   handleJobClick(idJob, i){
     this.makeAjaxRequestGetJobById(idJob);
-    this.selectMyJob(i);
+//    this.selectMyJob(i);
   }
 
 
@@ -136,18 +136,7 @@ class MyLanyardsClass {
     });
   }
   drawJob(data){
-  //alert(JSON.stringify(data));
-
-
     const descriptionObj = JSON.parse(data.description);
-
-
-  //  alert(descriptionObj.material.type); // Muestra "RPET Polyester"
-
-
-
-    //alert(JSON.stringify(jobdescription[0]["material"]));
-
     const product_job = document.getElementById("product_job");
 
     var description = '';
@@ -210,21 +199,15 @@ class MyLanyardsClass {
       `;
     }
 
-
-
-
     product_job.innerHTML = ``;
     product_job.innerHTML = `
     <div class="header_product_job">
       <h3>${data["name"]}</h3>
-
     </div>
     <div class="description_product_job">
       ${description}
     </div>
     `;
-
-
   }
   showSection(action){
     section_my_lanyards.style.display = action;
@@ -240,8 +223,6 @@ class MyLanyardsClass {
       box_my_jobs[i].style.border = "1px solid transparent";
     }
     box_my_jobs[index].style.border = "1px solid white";
-
-
   }
 }
 
