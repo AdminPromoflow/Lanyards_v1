@@ -208,7 +208,7 @@ class MyLanyardsClass {
       </div>
     </div>
     <div class="description_product_job">
-      ${description}
+      
     </div>
     `;
 
