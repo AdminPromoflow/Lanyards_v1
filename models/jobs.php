@@ -203,12 +203,14 @@ class Job_Model {
             $sql = $this->connection->getConnection()->prepare("SELECT * FROM `Jobs` WHERE `idJobs` = :idJob");
             $sql->bindParam(':idJob', $this->idJob, PDO::PARAM_INT);
             $sql->execute();
+            $result = $sql->fetch(PDO::FETCH_ASSOC); // Obtener un solo registro como arreglo asociativo
             $this->connection->closeConnection();
-            return true;
+            return $result; // Devuelve el job encontrado
         } catch (PDOException $e) {
             echo "Error in the query: " . $e->getMessage();
-            throw new Exception("Error deleting the job.");
+            throw new Exception("Error retrieving the job.");
         }
     }
+
 }
 ?>
