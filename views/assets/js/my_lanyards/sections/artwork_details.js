@@ -37,10 +37,6 @@ class ArtworkDetailsClass {
       my_lanyards_left_side.style.height = "1.44cm";
       my_lanyards_right_side.style.height = "1.44cm";
     }
-
-
-
-
   }
   manageLanyardArtwork(artwork){
 

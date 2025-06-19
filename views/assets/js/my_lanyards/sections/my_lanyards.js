@@ -121,10 +121,10 @@ class MyLanyardsClass {
     }
     if (data["texts"] != false) {
       artworkDetailsClass.manageLanyardText(data["texts"]);
-    }
+    }*/
     if (data["artworks"] != false) {
       artworkDetailsClass.manageLanyardArtwork(data["artworks"]);
-    }*/
+    }
 
 
     chargingClass.hideShowchargin(false);

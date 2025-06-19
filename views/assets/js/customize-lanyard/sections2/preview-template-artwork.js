@@ -43,7 +43,9 @@ class PreviewTemplateArtworkClass {
 
     const expected = requiredSizes[widthSelected];
 
-    if (expected) {
+
+    return true;
+    /*if (expected) {
       if (height === expected.height && width === expected.width) {
         return true;
       } else {
@@ -56,7 +58,7 @@ class PreviewTemplateArtworkClass {
     leftSuperLanyardTemplateArtwork.innerHTML = "";
     rightSuperLanyardTemplateArtwork.innerHTML = "";
 
-    return false;
+    return false;*/
   }
 }
 

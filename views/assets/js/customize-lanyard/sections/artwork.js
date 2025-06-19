@@ -32,7 +32,7 @@ class Artwork {
         reader.onload = (e) => {
           console.log(`Archivo leído (${side}):`, e.target.result);
           const img = new Image();
-
+ 
           img.onload = () => {
             console.log(`Imagen cargada (${side}):`, img.width, img.height);
 
