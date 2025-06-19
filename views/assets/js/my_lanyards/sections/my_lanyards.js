@@ -140,7 +140,9 @@ class MyLanyardsClass {
   }
   drawJob(data, artwork){
 
-    alert(artwork[0].linkRightImage);
+    const lefttLink = (artwork[0].linkLeftImage);
+    const rightLink = (artwork[0].linkRightImage);
+
     const descriptionObj = JSON.parse(data.description);
     const product_job = document.getElementById("product_job");
 
@@ -185,7 +187,7 @@ class MyLanyardsClass {
         <h4>${data["amount"]}</h4>
       </div>
 
-      <div id="open_artwork_details" class="items_description_products_jobs"  onclick="myLanyardsClass.openArtwork()">
+      <div id="open_artwork_details" class="items_description_products_jobs"  onclick="myLanyardsClass.openArtwork(${lefttLink}, ${rightLink})">
         <h4>Artwork</h4>
         <h4>Click here</h4>
       </div>
@@ -217,7 +219,9 @@ class MyLanyardsClass {
   showSection(action){
     section_my_lanyards.style.display = action;
   }
-  openArtwork(){
+  openArtwork(left, right){
+    myLanyardsClass.downloadImage(left, 'image-left.png');
+    myLanyardsClass.downloadImage(right, 'image-right.png');
 
 
   //  myLanyardsClass.showSection("none");
