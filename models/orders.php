@@ -373,7 +373,7 @@ class Order_Model {
             $conn = $this->connection->getConnection();
 
             $sql = $conn->prepare("
-                SELECT o.idOrder, j.idJobs
+                SELECT o.idOrder, j.idJobs, j.name
                 FROM Orders o
                 INNER JOIN Users u ON o.idUser = u.idUser
                 INNER JOIN Jobs j ON o.idOrder = j.idOrder
