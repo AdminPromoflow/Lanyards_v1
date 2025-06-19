@@ -43,9 +43,11 @@ class MyLanyardsClass {
     .then(data => {
     //  alert(JSON.stringify(data));
 
+    const groupBox_my_lanyards = document.getElementById("groupBox_my_lanyards");
+    groupBox_my_lanyards.innerHTML = ``;
 
       for (var i = 0; i < data["orders"].length; i++) {
-        myLanyardsClass.drawOrders(data["orders"][i]);
+        myLanyardsClass.drawOrders(data["orders"][i], i);
       }
 
     //  const dataObject = JSON.parse(data);
@@ -61,13 +63,13 @@ class MyLanyardsClass {
     });
 
   }
-  drawOrders(order){
+  drawOrders(order, index){
     alert(JSON.stringify(order))
     const groupBox_my_lanyards = document.getElementById("groupBox_my_lanyards");
 
     groupBox_my_lanyards.innerHTML += `
     <div class="box_my_lanyards">
-      <h3>My order 1</h3>
+      <h3>My order ${index}</h3>
       <br>
       <div class="container_my_jobs">
         <div class="box_my_jobs">
