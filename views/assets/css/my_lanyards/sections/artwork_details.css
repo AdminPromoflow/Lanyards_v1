@@ -42,7 +42,7 @@
 }
 .groupBox_artwork_details{
   position: relative;
-  max-width: 240px;
+  min-width: 240px;
   overflow-x: scroll;
 }
 .my_lanyards_left_side{
@@ -55,7 +55,7 @@
 .my_lanyards_right_side{
   position: relative;
   height: 0.48cm;
-  width: 7.2cm;
+  width: 21.6cm;
   background: white;
   margin: 10px;
 }
