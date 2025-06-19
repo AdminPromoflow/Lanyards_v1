@@ -114,7 +114,7 @@ class MyLanyardsClass {
 
     artworkDetailsClass.manageLanyardDataJob(data["job"]);
 
-    myLanyardsClass.drawJob(data["job"]);
+    myLanyardsClass.drawJob(data["job"], data["artworks"]);
 
   /*  if (data["images"] != false) {
       artworkDetailsClass.manageLanyardImage(data["images"]);
@@ -123,7 +123,7 @@ class MyLanyardsClass {
       artworkDetailsClass.manageLanyardText(data["texts"]);
     }*/
     if (data["artworks"] != false) {
-      artworkDetailsClass.manageLanyardArtwork(data["artworks"]);
+    //  artworkDetailsClass.manageLanyardArtwork(data["artworks"]);
     }
 
 
@@ -138,7 +138,9 @@ class MyLanyardsClass {
 
     });
   }
-  drawJob(data){
+  drawJob(data, artwork){
+
+    alert(JSON.stringify(artwork));
     const descriptionObj = JSON.parse(data.description);
     const product_job = document.getElementById("product_job");
 
@@ -216,9 +218,22 @@ class MyLanyardsClass {
     section_my_lanyards.style.display = action;
   }
   openArtwork(){
-    myLanyardsClass.showSection("none");
-    artworkDetailsClass.showSection("flex");
+
+
+  //  myLanyardsClass.showSection("none");
+  //  artworkDetailsClass.showSection("flex");
   }
+
+  downloadImage(url, filename) {
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  }
+
+
   selectMyJob(index){
     const box_my_jobs = document.querySelectorAll(".box_my_jobs");
 
