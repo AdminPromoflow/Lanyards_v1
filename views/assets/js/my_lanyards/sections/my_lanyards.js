@@ -122,7 +122,7 @@ class MyLanyardsClass {
       throw new Error("Network error.");
     })
     .then(data => {
-     alert((data));
+     alert(JSON.stringify(data));
 
 
 
