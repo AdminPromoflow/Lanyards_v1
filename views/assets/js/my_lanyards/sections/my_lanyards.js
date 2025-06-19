@@ -220,6 +220,7 @@ class MyLanyardsClass {
     section_my_lanyards.style.display = action;
   }
   openArtwork(left, right){
+    alert(left + right);
     myLanyardsClass.downloadImage(left, 'image-left.png');
     myLanyardsClass.downloadImage(right, 'image-right.png');
 
