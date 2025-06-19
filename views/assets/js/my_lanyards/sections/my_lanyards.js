@@ -136,14 +136,14 @@ class MyLanyardsClass {
     });
   }
   drawJob(data){
-  //  alert(JSON.stringify(data["description"]));
+    alert(JSON.stringify(data));
 
 
     var jobdescription = JSON.parse(data["description"]);
 
 
 
-    alert(JSON.stringify(jobdescription[0]["material"]));
+    //alert(JSON.stringify(jobdescription[0]["material"]));
 
     const product_job = document.getElementById("product_job");
 
