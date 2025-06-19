@@ -25,7 +25,7 @@ $jsVersion = $jsFile && file_exists($jsFile) ? filemtime($jsFile) : time();
       <img src="../../views/assets/img/my_lanyards/artwork_details/left_10mm-2.png" alt="">
     </div>
     <div id="my_lanyards_right_side" class="my_lanyards_right_side">
-      <img src="../../" alt="">
+      <img src="../../views/assets/img/my_lanyards/artwork_details/left_10mm-2.png" alt="">
     </div>
 
   </div>
