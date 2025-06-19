@@ -518,6 +518,8 @@ class Job {
         $job_model->setIdJob($data->idJob);
         $job = $job_model->getJobByidJob();
 
+        $idJob = $data->idJob;
+
         /*if (isset($job["description"]) && !empty($job["description"])) {
             $descriptionData = json_decode($job["description"], true);
 
