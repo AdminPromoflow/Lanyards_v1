@@ -40,28 +40,24 @@
 .back_to_my_lanyards img:active{
   filter: drop-shadow(1px 1px 3px black);
 }
-
 .groupBox_artwork_details{
   position: relative;
   max-width: 240px;
   overflow-x: scroll;
-
 }
-
 .my_lanyards_left_side{
   position: relative;
-  height: 4.5vw;
-  width: 67.5vw;
+  height: 0.48cm;
+  width: 7.2cm;
   background: white;
   margin: 10px;
 }
 .my_lanyards_right_side{
   position: relative;
-  height: 4.5vw;
-  width: 67.5vw;
+  height: 0.48cm;
+  width: 7.2cm;
   background: white;
   margin: 10px;
-
 }
 
 
