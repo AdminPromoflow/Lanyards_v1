@@ -157,9 +157,7 @@ class MyLanyardsClass {
       <div class="items_description_products_jobs">
         <h4>Material:</h4>
         <h4>${descriptionObj.material.type}</h4>
-        <h4>${descriptionObj.material.type}</h4>
-
-      </div>"amount"
+      </div>
       <div class="items_description_products_jobs">
         <h4>Lanyard_type:</h4>
         <h4>${descriptionObj.lanyard_type.type}</h4>
