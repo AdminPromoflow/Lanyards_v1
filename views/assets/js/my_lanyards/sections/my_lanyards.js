@@ -139,7 +139,7 @@ class MyLanyardsClass {
 
     const product_job = document.getElementById("product_job");
 
-    var data = data["description"]["material"];
+    var data = data["description"];
 
     alert(JSON.stringify(data));
 
