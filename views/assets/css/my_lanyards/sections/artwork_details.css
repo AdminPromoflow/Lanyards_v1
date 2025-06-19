@@ -47,31 +47,34 @@
 }
 .groupBox_artwork_details{
   position: relative;
-
+  min-width: 240px;
+  width: 80%;
   overflow-x: scroll;
-
+  left: 50%;
+  transform: translateX(-50%);
 }
 .my_lanyards_left_side{
   position: relative;
-  height: 21.6cm ;
-  width: 1.44cm;
+  height: 1.44cm;
+  width: 21.6cm;
   background: white;
   margin: 20px 0;
   overflow: hidden;
 }
 .my_lanyards_right_side{
   position: relative;
-  height: 21.6cm ;
-  width: 1.44cm;
+  height: 1.44cm;
+  width: 21.6cm;
   background: white;
   margin: 20px 0;
   overflow: hidden;
-
+  
 }
 
 .my_lanyards_left_side img{
   position: relative;
-  height: 100%;
+  transform: rotateZ(90deg);
+  width: 100%;
 
 }
 
