@@ -1,11 +1,11 @@
 class MyLanyardsClass {
   constructor() {
-    for (let i = 0; i < box_my_jobs.length; i++) {
+  /*  for (let i = 0; i < box_my_jobs.length; i++) {
       box_my_jobs[i].addEventListener("click", function(){
         myLanyardsClass.selectMyJob(i);
         }
       )
-    }
+    }*/
     open_artwork_details.addEventListener("click", function(){
       myLanyardsClass.showSection("none");
       artworkDetailsClass.showSection("flex");
