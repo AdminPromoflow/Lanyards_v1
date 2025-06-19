@@ -120,7 +120,7 @@ class MyLanyardsClass {
       throw new Error("Network error.");
     })
     .then(data => {
-    // alert(JSON.stringify(data));
+     alert(JSON.stringify(data));
 
      //myLanyardsClass.drawJob(data["job"]);
 
