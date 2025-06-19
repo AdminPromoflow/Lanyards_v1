@@ -139,11 +139,11 @@ class MyLanyardsClass {
   //  alert(JSON.stringify(data["description"]));
 
 
-    var test = JSON.parse(data["description"]);
+    var jobdescription = JSON.parse(data["description"]);
 
 
 
-    alert(JSON.stringify(test));
+    alert(JSON.stringify(jobdescription));
 
     const product_job = document.getElementById("product_job");
 
