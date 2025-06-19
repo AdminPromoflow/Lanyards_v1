@@ -136,7 +136,7 @@ class MyLanyardsClass {
     });
   }
   drawJob(data){
-    alert(data["idJobs"]);
+    alert(data["description"]);
   }
   showSection(action){
     section_my_lanyards.style.display = action;
