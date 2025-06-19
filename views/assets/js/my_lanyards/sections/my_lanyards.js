@@ -65,7 +65,7 @@ class MyLanyardsClass {
     alert(JSON.stringify(order))
     const groupBox_my_lanyards = document.getElementById("groupBox_my_lanyards");
 
-    groupBox_my_lanyards.innerHTML =+ `
+    groupBox_my_lanyards.innerHTML = `
     <div class="box_my_lanyards">
       <h3>My order 1</h3>
       <br>
