@@ -70,7 +70,7 @@ class MyLanyardsClass {
     for (var i = 0; i < order["jobs"].length; i++) {
       jobs +=  `
       <div class="box_my_jobs" onclick="myLanyardsClass.handleJobClick(${order["jobs"][i]["idJobs"]})">
-        <h4>Hola 1</h4>
+        <h4>${order["jobs"][i]["name"]}</h4>
       </div>
       `;
 
