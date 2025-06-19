@@ -11,7 +11,13 @@ class ArtworkDetailsClass {
     section_artwork_details.style.display = action;
   }
   manageLanyardDataJob(data){
-    alert(JSON.stringify(data));
+    //alert(JSON.stringify(data));
+
+
+    const descriptionObj = JSON.parse(data.description);
+
+    alert(descriptionObj.width.value);
+
 
     const  my_lanyards_left_side = document.getElementById('my_lanyards_left_side');
     const  my_lanyards_right_side = document.getElementById('my_lanyards_right_side');
