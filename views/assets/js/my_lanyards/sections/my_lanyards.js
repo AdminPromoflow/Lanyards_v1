@@ -149,7 +149,7 @@ class MyLanyardsClass {
 
 
     if (data["name"] == "Custom Lanyard") {
-      description = `
+      description = ``;/* `
       <div class="items_description_products_jobs">
         <h4>Material:</h4>
         <h4></h4>
@@ -182,7 +182,7 @@ class MyLanyardsClass {
         <h4>Accessories:</h4>
         <h4>Hola 1 </h4>
       </div>
-      `;
+      `;*/
     }
     else {
       description = ``;
