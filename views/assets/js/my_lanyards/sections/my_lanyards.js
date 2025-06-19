@@ -6,11 +6,11 @@ class MyLanyardsClass {
         }
       )
     }*/
-    open_artwork_details.addEventListener("click", function(){
+  /*  open_artwork_details.addEventListener("click", function(){
       myLanyardsClass.showSection("none");
       artworkDetailsClass.showSection("flex");
 
-    })
+    })*/
 
     this.makeAjaxRequestOrdersWithJobs();
 
