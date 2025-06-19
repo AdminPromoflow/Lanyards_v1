@@ -186,6 +186,10 @@ class MyLanyardsClass {
         <h4>Accessories:</h4>
         <h4>${descriptionObj.accessories.type}</h4>
       </div>
+
+      <div id="open_artwork_details" class="items_description_products_jobs"  onclick="myLanyardsClass.openArtwork()">
+        <h4>Artwork</h4>
+      </div>
       `;
     }
     else {
@@ -203,9 +207,9 @@ class MyLanyardsClass {
     product_job.innerHTML = `
     <div class="header_product_job">
       <h3>${data["name"]}</h3>
-      <div id="open_artwork_details">
+    <!--  <div id="open_artwork_details">
         <img  src="../../views/assets/img/my_lanyards/my_lanyards/icon_artwork.png" alt="">
-      </div>
+      </div> -->
     </div>
     <div class="description_product_job">
       ${description}
@@ -216,6 +220,10 @@ class MyLanyardsClass {
   }
   showSection(action){
     section_my_lanyards.style.display = action;
+  }
+  openArtwork(){
+    myLanyardsClass.showSection("none");
+    artworkDetailsClass.showSection("flex");
   }
   selectMyJob(index){
     const box_my_jobs = document.querySelectorAll(".box_my_jobs");
@@ -231,5 +239,5 @@ class MyLanyardsClass {
 
 
 const section_my_lanyards = document.getElementById("section_my_lanyards");
-const open_artwork_details = document.getElementById("open_artwork_details");
+//const open_artwork_details = document.getElementById("open_artwork_details");
 const myLanyardsClass = new MyLanyardsClass();
