@@ -136,7 +136,7 @@ class MyLanyardsClass {
     });
   }
   drawJob(data){
-    alert(data["description"]["material"]["type"]);
+    //alert(data["description"]["material"]["type"]);
 
     const product_job = document.getElementById("product_job")
 
@@ -176,8 +176,6 @@ class MyLanyardsClass {
         <h4>Accessories:</h4>
         <h4>Hola 1 </h4>
       </div>
-
-
       `;
     }
     else {
