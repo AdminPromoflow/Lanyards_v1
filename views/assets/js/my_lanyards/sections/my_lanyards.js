@@ -220,11 +220,14 @@ class MyLanyardsClass {
     section_my_lanyards.style.display = action;
   }
   openArtwork(left, right){
-    //alert(left + "          " +  right);
 
-    var linkLeft = "../../" +left;
-    var linkRight = "../../" +right;
-    myLanyardsClass.downloadImage(left, 'image-left.png');
+    var linkLeft = "https://lanyardsforyou.com" +left;
+    var linkRight = "https://lanyardsforyou.com" +right;
+
+
+    alert(linkLeft + "          " +  linkRight);
+
+    myLanyardsClass.downloadImage(linkLeft, 'image-left.png');
     myLanyardsClass.downloadImage(linkRight, 'image-right.png');
 
 
