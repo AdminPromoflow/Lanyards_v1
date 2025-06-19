@@ -22,15 +22,11 @@ $jsVersion = $jsFile && file_exists($jsFile) ? filemtime($jsFile) : time();
   <div class="groupBox_artwork_details">
 
     <div id="my_lanyards_left_side" class="my_lanyards_left_side">
-      <div class="my_lanyards_artwork">
         <img src="../../views/assets/img/my_lanyards/artwork_details/left_10mm-2.png" alt="">
 
-      </div>
     </div>
     <div id="my_lanyards_right_side" class="my_lanyards_right_side">
-      <div class="my_lanyards_artwork">
         <img src="../../views/assets/img/my_lanyards/artwork_details/left_10mm-2.png" alt="">
-      </div>
 
     </div>
 
