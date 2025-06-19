@@ -68,7 +68,13 @@ class MyLanyardsClass {
     const groupBox_my_lanyards = document.getElementById("groupBox_my_lanyards");
     var jobs = [];
     for (var i = 0; i < order["jobs"].length; i++) {
-      alert(order["jobs"][i]["idJobs"]);
+      jobs +=  `
+      <div class="box_my_jobs" onclick="myLanyardsClass.handleJobClick(${order["jobs"][i]["idJobs"]})">
+        <h4>Hola 1</h4>
+      </div>
+      `;
+
+    //  alert(order["jobs"][i]["idJobs"]);
     }
 
     groupBox_my_lanyards.innerHTML += `
@@ -76,15 +82,13 @@ class MyLanyardsClass {
       <h3>My order ${index + 1}</h3>
       <br>
       <div class="container_my_jobs">
-      <div class="box_my_jobs" onclick="handleJobClick(1)">
-        <h4>Hola 1</h4>
-      </div>
-        <div class="box_my_jobs">
-          <h4>Hola 2</h4>
-        </div>
+      ${jobs}
       </div>
     </div>
     `;
+  }
+  handleJobClick(idJob){
+    alert(idJob);
   }
   showSection(action){
     section_my_lanyards.style.display = action;
