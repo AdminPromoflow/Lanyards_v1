@@ -141,10 +141,8 @@ class MyLanyardsClass {
 
     const descriptionObj = JSON.parse(data.description);
 
-    // Paso 2: Acceder a "material"
-    const material = descriptionObj.material;
 
-    alert(material.type); // Muestra "RPET Polyester"
+    alert(descriptionObj.material.type); // Muestra "RPET Polyester"
 
 
 
