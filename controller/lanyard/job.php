@@ -562,7 +562,9 @@ class Job {
                 echo json_encode([
                     "mensaje" => "done",
                     "job" => $job,
-                    "images" => $images
+                    "images" => $images,
+                    "texts" => $texts,
+                    "artworks" => $artworks
                 ]);
                 exit;
     }
