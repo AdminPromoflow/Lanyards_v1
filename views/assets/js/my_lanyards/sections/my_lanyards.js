@@ -89,7 +89,7 @@ class MyLanyardsClass {
 
 
   handleJobClick(idJob, i){
-    this.makeAjaxRequestGetJobById(idJob);
+  //  this.makeAjaxRequestGetJobById(idJob);
     this.selectMyJob(i);
   }
 
