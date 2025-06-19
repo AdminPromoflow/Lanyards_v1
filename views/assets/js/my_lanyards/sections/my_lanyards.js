@@ -137,7 +137,11 @@ class MyLanyardsClass {
   }
   drawJob(data){
 
-    const product_job = document.getElementById("product_job")
+    const product_job = document.getElementById("product_job");
+
+    var data = data["description"]["material"];
+
+    alert(JSON.stringify(data));
 
   //  var jobDescription = JSON.parse(data["description"]);
 
