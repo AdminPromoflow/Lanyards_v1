@@ -9,12 +9,14 @@ class Job_Model {
     private $amount;
     private $total;
     private $notes;
+    private $artworkOrManual;
     private $idOrder;
     private $idJob;
     private $idExtras;
     private $idClip;
     private $idPriceAmount;
     private $newColour;
+
 
     // 🧱 Constructor
     function __construct($connection) {
@@ -44,6 +46,10 @@ class Job_Model {
 
     public function setNotes($notes) {
         $this->notes = $notes;
+    }
+
+    public function setArtworkOrManual($artworkOrManual) {
+        $this->artworkOrManual = $artworkOrManual;
     }
 
     public function setIdOrder($idOrder) {

@@ -235,6 +235,9 @@ class Job {
         $job_model->setDescription($descriptionJson);
 
 
+        $artworkOrManual = $data->artworkOrManual;
+
+
         if (is_array($data->price_per_unit)) {
             $data_price = $data->price_per_unit[0];
         }
@@ -518,12 +521,24 @@ class Job {
         $job_model->setIdJob($data->idJob);
         $job = $job_model->getJobByidJob();
 
+        /*if (isset($job["description"]) && !empty($job["description"])) {
+            $descriptionData = json_decode($job["description"], true);
 
+            $colour_quantity = $descriptionData["colour_quantity"]["type"];
+
+            if ($colour_quantity == "") {
+              // code...
+            }
+            elseif ($colour_quantity == "one-colour" || $colour_quantity == "two-colour" ) {
+              // code...
+            }
+
+        }*/
 
 
         echo json_encode([
             "mensaje" => "done",
-            "job" => $job["description"]
+            "job" => $job
         ]);
         exit;
     }
