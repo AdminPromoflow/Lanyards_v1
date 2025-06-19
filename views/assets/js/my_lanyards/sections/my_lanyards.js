@@ -135,7 +135,7 @@ class MyLanyardsClass {
 
     });
   }
-  drawJob(data){
+/*  drawJob(data){
     //alert(data["description"]["material"]["type"]);
 
     const product_job = document.getElementById("product_job");
@@ -206,7 +206,7 @@ class MyLanyardsClass {
     `;
 
 
-  }
+  }*/
   showSection(action){
     section_my_lanyards.style.display = action;
   }
