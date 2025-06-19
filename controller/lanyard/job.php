@@ -518,9 +518,12 @@ class Job {
         $job_model->setIdJob($data->idJob);
         $job = $job_model->getJobByidJob();
 
+
+
+
         echo json_encode([
             "mensaje" => "done",
-            "job" => $job
+            "job" => $job["job"]
         ]);
         exit;
     }

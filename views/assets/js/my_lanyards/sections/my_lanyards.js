@@ -1,16 +1,5 @@
 class MyLanyardsClass {
   constructor() {
-  /*  for (let i = 0; i < box_my_jobs.length; i++) {
-      box_my_jobs[i].addEventListener("click", function(){
-        myLanyardsClass.selectMyJob(i);
-        }
-      )
-    }*/
-  /*  open_artwork_details.addEventListener("click", function(){
-      myLanyardsClass.showSection("none");
-      artworkDetailsClass.showSection("flex");
-
-    })*/
 
     this.makeAjaxRequestOrdersWithJobs();
 
@@ -64,7 +53,6 @@ class MyLanyardsClass {
 
   }
   drawOrders(order, index){
-  //  alert(JSON.stringify(order))
     const groupBox_my_lanyards = document.getElementById("groupBox_my_lanyards");
     var jobs = [];
     for (var i = 0; i < order["jobs"].length; i++) {
@@ -120,7 +108,7 @@ class MyLanyardsClass {
       throw new Error("Network error.");
     })
     .then(data => {
-  //   alert(JSON.stringify(data["job"]));
+     alert(JSON.stringify(data["job"]));
 
      myLanyardsClass.drawJob(data["job"]);
 
