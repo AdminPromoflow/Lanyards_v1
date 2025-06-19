@@ -542,7 +542,7 @@ class Job {
                 $image_model = new Image_Model($connection);
                 $image_model->setIdJob($idJob);
                 $images = $image_model->getImagesByJobId(); // ← resultado guardado en $images
-/*
+
                 // Texto
                 $connection = new Database();
 
@@ -550,7 +550,7 @@ class Job {
                 $text_model->setIdJob($idJob);
                 $texts = $text_model->getTextsByJobId(); // ← resultado guardado en $texts
 
-                // Artwork
+          /*      // Artwork
                 $connection = new Database();
 
                 $artwork_model = new Artwork_Model($connection);
