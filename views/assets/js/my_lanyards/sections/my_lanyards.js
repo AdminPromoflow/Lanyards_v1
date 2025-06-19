@@ -95,9 +95,7 @@ class MyLanyardsClass {
 
 
   makeAjaxRequestGetJobById(idJob){
-    chargingClass.hideShowchargin(false);
-
-    alert(idJob);
+    chargingClass.hideShowchargin(true);
 
     // Define the URL and the JSON data you want to send
     const url = "../../controller/lanyard/job.php"; // Replace with your API endpoint URL
@@ -122,13 +120,10 @@ class MyLanyardsClass {
       throw new Error("Network error.");
     })
     .then(data => {
-     alert(JSON.stringify(data));
+    // alert(JSON.stringify(data));
 
+     myLanyardsClass.drawJob(data["job"]);
 
-
-    //  const dataObject = JSON.parse(data);
-    //  alert(dataObject);
-      // Process the response data
       chargingClass.hideShowchargin(false);
 
     })
@@ -139,6 +134,9 @@ class MyLanyardsClass {
       chargingClass.hideShowchargin(false);
 
     });
+  }
+  drawJob(data){
+    alert(data["idJobs"]);
   }
   showSection(action){
     section_my_lanyards.style.display = action;
