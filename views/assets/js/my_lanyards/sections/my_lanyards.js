@@ -187,9 +187,13 @@ class MyLanyardsClass {
         <h4>${data["amount"]}</h4>
       </div>
 
-      <div id="open_artwork_details" class="items_description_products_jobs"  onclick="myLanyardsClass.openArtwork('${lefttLink}', '${rightLink}')">
-      <h4>Artwork</h4>
-        <h4>Click here</h4>
+      <div id="open_artwork_details" class="items_description_products_jobs"  onclick="myLanyardsClass.openArtworkLeft('${lefttLink}', '${rightLink}')">
+      <h4>Artwork Left</h4>
+        <h4>Download</h4>
+      </div>
+      <div id="open_artwork_details" class="items_description_products_jobs"  onclick="myLanyardsClass.openArtworkRight('${lefttLink}', '${rightLink}')">
+      <h4>Artwork Left</h4>
+        <h4>Download</h4>
       </div>
       `;
     }
@@ -219,7 +223,26 @@ class MyLanyardsClass {
   showSection(action){
     section_my_lanyards.style.display = action;
   }
-  openArtwork(left, right){
+  openArtworkLeft(left, right){
+
+    var linkLeft = "https://lanyardsforyou.com/" +left;
+    var linkRight = "https://lanyardsforyou.com/" +right;
+
+
+  //  alert(linkLeft + "          " +  linkRight);
+
+  //window.open(linkLeft, '_blank');
+//  window.open(linkRight, '_blank');
+
+
+    myLanyardsClass.downloadImage(linkLeft, 'image-left.png');
+  //  myLanyardsClass.downloadImage(linkRight, 'image-right.png');
+
+
+  //  myLanyardsClass.showSection("none");
+  //  artworkDetailsClass.showSection("flex");
+  }
+  openArtworkRight(left, right){
 
     var linkLeft = "https://lanyardsforyou.com/" +left;
     var linkRight = "https://lanyardsforyou.com/" +right;
@@ -232,7 +255,7 @@ class MyLanyardsClass {
 
 
   //  myLanyardsClass.downloadImage(linkLeft, 'image-left.png');
-  //  myLanyardsClass.downloadImage(linkRight, 'image-right.png');
+    myLanyardsClass.downloadImage(linkRight, 'image-right.png');
 
 
   //  myLanyardsClass.showSection("none");
