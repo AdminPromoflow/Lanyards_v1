@@ -136,7 +136,7 @@ class MyLanyardsClass {
     });
   }
   drawJob(data){
-    alert(JSON.stringify(data));
+  //alert(JSON.stringify(data));
 
 
     const descriptionObj = JSON.parse(data.description);
@@ -156,40 +156,44 @@ class MyLanyardsClass {
       description = `
       <div class="items_description_products_jobs">
         <h4>Material:</h4>
-        <h4></h4>
+        <h4>${descriptionObj.material.type}</h4>
       </div>
       <div class="items_description_products_jobs">
         <h4>Lanyard_type:</h4>
-        <h4>Hola 1 </h4>
+        <h4>${descriptionObj.lanyard_type.type}</h4>
       </div>
       <div class="items_description_products_jobs">
         <h4>Width:</h4>
-        <h4>Hola 1 </h4>
+        <h4>${descriptionObj.width.value}</h4>
       </div>
       <div class="items_description_products_jobs">
         <h4>Side printed:</h4>
-        <h4>Hola 1 </h4>
+        <h4>${descriptionObj.side_printed.side}</h4>
       </div>
       <div class="items_description_products_jobs">
         <h4>Colour quantity:</h4>
-        <h4>Hola 1 </h4>
+        <h4>${descriptionObj.colour_quantity.type}</h4>
       </div>
       <div class="items_description_products_jobs">
         <h4>Clip:</h4>
-        <h4>Hola 1 </h4>
+        <h4>${descriptionObj.clip.type}</h4>
       </div>
       <div class="items_description_products_jobs">
         <h4>Attachment:</h4>
-        <h4>Hola 1 </h4>
+        <h4>${descriptionObj.attachment.type}</h4>
       </div>
       <div class="items_description_products_jobs">
         <h4>Accessories:</h4>
-        <h4>Hola 1 </h4>
+        <h4>${descriptionObj.accessories.type}</h4>
       </div>
       `;
     }
     else {
-      description = ``;
+      description = `
+      <div class="items_description_products_jobs">
+        <h4>Material:</h4>
+        <h4>${descriptionObj.item.type}</h4>
+      </div>`;
     }
 
 
@@ -204,14 +208,7 @@ class MyLanyardsClass {
       </div>
     </div>
     <div class="description_product_job">
-      <div class="items_description_products_jobs">
-        <h4>Hola 1 </h4>
-        <h4>Hola 1 </h4>
-      </div>
-      <div class="items_description_products_jobs">
-        <h4>Hola 2 </h4>
-        <h4>Hola 2 </h4>
-      </div>
+      ${description}
     </div>
     `;
 
