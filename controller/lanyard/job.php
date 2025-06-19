@@ -535,7 +535,7 @@ class Job {
         }*/
 
 
-
+/*
                 $connection = new Database();
 
                 // Imagen
@@ -557,14 +557,11 @@ class Job {
                 $artwork_model->setIdJob($idJob);
                 $artworks = $artwork_model->getArtworkByJobId(); // ← resultado guardado en $artworks
 
-
+*/
 
                 echo json_encode([
                     "mensaje" => "done",
-                    "job" => $job,
-                    "images" => $images
-                    "texts" => $texts
-                    "artworks" => $artworks
+                    "job" => $job
                 ]);
                 exit;
     }
