@@ -67,6 +67,10 @@
   background: white;
   margin: 20px 0;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
 
@@ -76,7 +80,7 @@
   width: 0.48cm;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%) rotate(90deg);
+  transform: rotate(90deg);
   transform-origin: center;
 }
 
