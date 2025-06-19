@@ -142,7 +142,7 @@ class MyLanyardsClass {
     const descriptionObj = JSON.parse(data.description);
 
 
-    alert(descriptionObj.material.type); // Muestra "RPET Polyester"
+  //  alert(descriptionObj.material.type); // Muestra "RPET Polyester"
 
 
 
@@ -208,7 +208,7 @@ class MyLanyardsClass {
       </div>
     </div>
     <div class="description_product_job">
-      
+      ${description}
     </div>
     `;
 
