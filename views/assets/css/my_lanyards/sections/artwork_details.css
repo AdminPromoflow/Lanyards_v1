@@ -48,6 +48,7 @@
 .groupBox_artwork_details{
   position: relative;
   min-width: 240px;
+  width: 80%;
   overflow-x: scroll;
 }
 .my_lanyards_left_side{
