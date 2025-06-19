@@ -112,7 +112,7 @@ class MyLanyardsClass {
     //  alert(JSON.stringify(data["texts"]));
     //  alert(JSON.stringify(data["artworks"]));
 
-    artworkDetailsClass.manageLanyardArtwork(data["job"]);
+    artworkDetailsClass.manageLanyardDataJob(data["job"]);
 
     myLanyardsClass.drawJob(data["job"]);
 
