@@ -41,10 +41,11 @@ class MyLanyardsClass {
       throw new Error("Network error.");
     })
     .then(data => {
-      alert(JSON.stringify(data));
+    //  alert(JSON.stringify(data));
+
 
       for (var i = 0; i < data["orders"].length; i++) {
-        alert(JSON.stringify(data["orders"][i]));
+        myLanyardsClass.drawOrders(data["orders"][i]);
       }
 
     //  const dataObject = JSON.parse(data);
@@ -59,6 +60,26 @@ class MyLanyardsClass {
       alert(error.message); // Show the error message in an alert
     });
 
+  }
+  drawOrders(idOrder){
+    const groupBox_my_lanyards = document.getElementById("groupBox_my_lanyards");
+
+    groupBox_my_lanyards.innerHTML =+ `
+    <div class="box_my_lanyards">
+      <h3>My order 1</h3>
+      <br>
+      <div class="container_my_jobs">
+        <div class="box_my_jobs">
+          <h4>Hola 1</h4>
+        </div>
+        <div class="box_my_jobs">
+          <h4>Hola 2</h4>
+        </div>
+      </div>
+
+    </div>
+
+    `;
   }
   showSection(action){
     section_my_lanyards.style.display = action;

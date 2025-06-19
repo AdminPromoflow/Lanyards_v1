@@ -17,10 +17,10 @@ $jsVersion = $jsFile && file_exists($jsFile) ? filemtime($jsFile) : time();
   </div>
 
   <!-- Group container for about us boxes -->
-  <div class="groupBox_my_lanyards">
+  <div id="groupBox_my_lanyards" class="groupBox_my_lanyards">
 
     <!-- Box for first individual (Crafting Unique Lanyards) -->
-    <div class="box_my_lanyards">
+  <!--  <div class="box_my_lanyards">
       <h3>My order 1</h3>
       <br>
       <div class="container_my_jobs">
@@ -34,7 +34,6 @@ $jsVersion = $jsFile && file_exists($jsFile) ? filemtime($jsFile) : time();
 
     </div>
 
-    <!-- Box for second individual (Elevating Your Brand) -->
     <div class="box_my_lanyards">
       <h3>My order 2</h3>
       <br>
@@ -47,7 +46,7 @@ $jsVersion = $jsFile && file_exists($jsFile) ? filemtime($jsFile) : time();
         </div>
       </div>
 
-    </div>
+    </div> -->
 
   </div>
 
@@ -71,7 +70,7 @@ $jsVersion = $jsFile && file_exists($jsFile) ? filemtime($jsFile) : time();
     </div>
 
   </div>
-
+  <br><br><br>
   <!-- Explore More Button -->
   <button type="button" onclick="window.location.href='../../views/home/index.php'">Explore More</button>
 </section>
