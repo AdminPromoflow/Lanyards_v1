@@ -95,7 +95,9 @@ class MyLanyardsClass {
 
 
   makeAjaxRequestGetJobById(idJob){
-    chargingClass.hideShowchargin(true);
+    chargingClass.hideShowchargin(false);
+
+    alert(idJob);
 
     // Define the URL and the JSON data you want to send
     const url = "../../controller/lanyard/job.php"; // Replace with your API endpoint URL
