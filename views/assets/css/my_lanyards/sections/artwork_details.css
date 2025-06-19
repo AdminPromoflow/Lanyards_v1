@@ -68,13 +68,13 @@
   background: white;
   margin: 20px 0;
   overflow: hidden;
-  
+
 }
 
 .my_lanyards_left_side img{
-  position: relative;
-  transform: rotateZ(90deg);
-  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
 
 }
 
