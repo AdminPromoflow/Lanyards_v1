@@ -68,7 +68,7 @@ class MyLanyardsClass {
     const groupBox_my_lanyards = document.getElementById("groupBox_my_lanyards");
 
     for (var i = 0; i < order["jobs"].length; i++) {
-      alert(order["jobs"]["idJobs"]);
+      alert(order["jobs"][i]["idJobs"]);
     }
 
     groupBox_my_lanyards.innerHTML += `
