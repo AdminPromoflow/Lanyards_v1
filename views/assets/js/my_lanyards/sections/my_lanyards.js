@@ -140,7 +140,7 @@ class MyLanyardsClass {
   }
   drawJob(data, artwork){
 
-    alert(JSON.stringify(artwork));
+    alert(artwork[0].linkRightImage);
     const descriptionObj = JSON.parse(data.description);
     const product_job = document.getElementById("product_job");
 
