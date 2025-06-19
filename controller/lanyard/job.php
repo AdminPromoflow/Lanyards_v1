@@ -543,11 +543,15 @@ class Job {
         $images = $image_model->getImagesByJobId(); // ← resultado guardado en $images
 
         // Texto
+        $connection = new Database();
+
         $text_model = new Text_Model($connection);
         $text_model->setIdJob($idJob);
         $texts = $text_model->getTextsByJobId(); // ← resultado guardado en $texts
 
         // Artwork
+        $connection = new Database();
+
         $artwork_model = new Artwork_Model($connection);
         $artwork_model->setIdJob($idJob);
         $artworks = $artwork_model->getArtworkByJobId(); // ← resultado guardado en $artworks
