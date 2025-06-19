@@ -139,8 +139,9 @@ class MyLanyardsClass {
 
     const product_job = document.getElementById("product_job")
 
-    var jobDescription = JSON.parse(data["description"]);
-    alert(jobDescription["material"]["type"]);
+  //  var jobDescription = JSON.parse(data["description"]);
+
+  //  alert(jobDescription["material"]["type"]);
 
 
     if (data["name"] == "Custom Lanyard") {
