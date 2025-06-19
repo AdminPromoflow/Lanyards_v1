@@ -50,6 +50,8 @@
   min-width: 240px;
   width: 80%;
   overflow-x: scroll;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .my_lanyards_left_side{
   position: relative;
