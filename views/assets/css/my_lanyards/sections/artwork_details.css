@@ -73,10 +73,14 @@
 
 
 .my_lanyards_artwork{
-  height: auto;
-  width: 0.48cm ;
-
   position: absolute;
+  height: 50px;
+  width: 20px;
+
+
+
+  transform: rotate(-90deg);
+  transform-origin: top left;
   top: 0px;
   left: 0px;
 }
