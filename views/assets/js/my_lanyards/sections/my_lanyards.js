@@ -227,8 +227,12 @@ class MyLanyardsClass {
 
   //  alert(linkLeft + "          " +  linkRight);
 
-    myLanyardsClass.downloadImage(linkLeft, 'image-left.png');
-    myLanyardsClass.downloadImage(linkRight, 'image-right.png');
+  window.open(linkLeft, '_blank');
+  window.open(linkRight, '_blank');
+
+
+  //  myLanyardsClass.downloadImage(linkLeft, 'image-left.png');
+  //  myLanyardsClass.downloadImage(linkRight, 'image-right.png');
 
 
   //  myLanyardsClass.showSection("none");
