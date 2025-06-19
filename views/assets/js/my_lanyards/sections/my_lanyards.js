@@ -64,12 +64,16 @@ class MyLanyardsClass {
 
   }
   drawOrders(order, index){
-    alert(JSON.stringify(order))
+    //alert(JSON.stringify(order))
     const groupBox_my_lanyards = document.getElementById("groupBox_my_lanyards");
+
+    for (var i = 0; i < order["jobs"].length; i++) {
+      alert();
+    }
 
     groupBox_my_lanyards.innerHTML += `
     <div class="box_my_lanyards">
-      <h3>My order ${index}</h3>
+      <h3>My order ${index + 1}</h3>
       <br>
       <div class="container_my_jobs">
         <div class="box_my_jobs">
@@ -79,9 +83,7 @@ class MyLanyardsClass {
           <h4>Hola 2</h4>
         </div>
       </div>
-
     </div>
-
     `;
   }
   showSection(action){
