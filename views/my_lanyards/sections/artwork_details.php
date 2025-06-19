@@ -21,10 +21,10 @@ $jsVersion = $jsFile && file_exists($jsFile) ? filemtime($jsFile) : time();
   <!-- Group container for about us boxes -->
   <div class="groupBox_artwork_details">
 
-    <div class="my_lanyards_left_side">
+    <div id="my_lanyards_left_side" class="my_lanyards_left_side">
 
     </div>
-    <div class="my_lanyards_right_side">
+    <div id="my_lanyards_right_side" class="my_lanyards_right_side">
 
     </div>
 

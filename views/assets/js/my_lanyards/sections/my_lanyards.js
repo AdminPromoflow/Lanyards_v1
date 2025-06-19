@@ -112,9 +112,22 @@ class MyLanyardsClass {
     //  alert(JSON.stringify(data["texts"]));
     //  alert(JSON.stringify(data["artworks"]));
 
-     myLanyardsClass.drawJob(data["job"]);
+    artworkDetailsClass.manageLanyardArtwork(data["job"]);
 
-      chargingClass.hideShowchargin(false);
+    myLanyardsClass.drawJob(data["job"]);
+
+  /*  if (data["images"] != false) {
+      artworkDetailsClass.manageLanyardImage(data["images"]);
+    }
+    if (data["texts"] != false) {
+      artworkDetailsClass.manageLanyardText(data["texts"]);
+    }
+    if (data["artworks"] != false) {
+      artworkDetailsClass.manageLanyardArtwork(data["artworks"]);
+    }*/
+
+
+    chargingClass.hideShowchargin(false);
 
     })
     .catch(error => {
