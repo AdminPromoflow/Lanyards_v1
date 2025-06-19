@@ -512,24 +512,19 @@ class Job {
 
     }
 
-    public function getJobByidJob($data){
+    public function getJobByidJob($data) {
+        $connection = new Database();
+        $job_model = new Job_Model($connection);
+        $job_model->setIdJob($data->idJob);
+        $job = $job_model->getJobByidJob();
 
-
-      echo json_encode([
-        "mesaje": "done"
-      ]);
-      exit;
-
-      $connection = new Database();
-      $job_model = new Job_Model($connection);
-      $job_model->setIdJob($data->idJob);
-      $job = $job_model->getJobByidJob();
-
-      echo json_encode([
-        "mesaje": "done",
-        "job": $job
-      ]);
+        echo json_encode([
+            "mensaje" => "done",
+            "job" => $job
+        ]);
+        exit;
     }
+
 
 }
 
