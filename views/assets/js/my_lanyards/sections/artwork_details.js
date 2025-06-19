@@ -39,7 +39,7 @@ class ArtworkDetailsClass {
     }
   }
   manageLanyardArtwork(artwork){
-    alert((artwork[0]["linkRightImage"]);
+    alert(artwork[0]["linkRightImage"]);
   }
   manageLanyardText(text){
 
