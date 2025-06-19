@@ -221,8 +221,8 @@ class MyLanyardsClass {
   }
   openArtwork(left, right){
 
-    var linkLeft = "https://lanyardsforyou.com" +left;
-    var linkRight = "https://lanyardsforyou.com" +right;
+    var linkLeft = "https://lanyardsforyou.com/" +left;
+    var linkRight = "https://lanyardsforyou.com/" +right;
 
 
     alert(linkLeft + "          " +  linkRight);
