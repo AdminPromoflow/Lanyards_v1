@@ -190,7 +190,7 @@ class MyLanyardsClass {
     product_job.innerHTML = ``;
     product_job.innerHTML = `
     <div class="header_product_job">
-      <h3>${data["name"])}</h3>
+      <h3>${data["name"]}</h3>
       <div id="open_artwork_details">
         <img  src="../../views/assets/img/my_lanyards/my_lanyards/icon_artwork.png" alt="">
       </div>
