@@ -40,3 +40,34 @@
 .back_to_my_lanyards img:active{
   filter: drop-shadow(1px 1px 3px black);
 }
+
+.my_lanyards_left_side{
+  position: relative;
+  height: 6vw;
+  width: 90vw;
+  background: white;
+}
+.my_lanyards_right_side{
+  position: relative;
+  height: 6vw;
+  width: 90vw;
+  background: white;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**/
