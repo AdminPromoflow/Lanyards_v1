@@ -67,9 +67,7 @@
   background: white;
   margin: 20px 0;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
 
 }
 
@@ -79,7 +77,11 @@
   height: 0.48cm;
   width: 21.6cm;
 
-  transform: rotate(90deg);
+  transform: rotate(-90deg);
+  transform-origin: top left;
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
 
 
