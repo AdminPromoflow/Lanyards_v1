@@ -64,7 +64,7 @@ class MyLanyardsClass {
 
   }
   drawOrders(order, index){
-    //alert(JSON.stringify(order))
+    alert(JSON.stringify(order))
     const groupBox_my_lanyards = document.getElementById("groupBox_my_lanyards");
     var jobs = [];
     for (var i = 0; i < order["jobs"].length; i++) {
