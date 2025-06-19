@@ -36,6 +36,10 @@ class Job {
                         //$this->verifyExtras($data->description);
                         $this->deleteJob($data);
                         break;
+                    case "getJobByidJob":
+                        //$this->verifyExtras($data->description);
+                        $this->getJobByidJob($data);
+                        break;
                     default:
                         http_response_code(400);
                         echo json_encode(["message" => "Unknown action"]);
@@ -506,6 +510,18 @@ class Job {
 
       echo json_encode($deleted);
 
+    }
+
+    public function getJobByidJob($data){
+      $connection = new Database();
+      $job_model = new Job_Model($connection);
+      $job_model->setIdJob($data->idJob);
+      $job = $job_model->getJobByidJob();
+
+      echo json_encode([
+        "mesaje": "done",
+        "job": $job
+      ]);
     }
 
 }

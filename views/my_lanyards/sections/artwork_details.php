@@ -23,7 +23,6 @@ $jsVersion = $jsFile && file_exists($jsFile) ? filemtime($jsFile) : time();
 
   </div>
 
-
 </section>
 
 <!-- Link to external JavaScript for additional functionality -->

@@ -197,5 +197,18 @@ class Job_Model {
             throw new Exception("Error deleting the job.");
         }
     }
+
+    public function getJobByidJob() {
+        try {
+            $sql = $this->connection->getConnection()->prepare("SELECT * FROM `Jobs` WHERE `idJobs` = :idJob");
+            $sql->bindParam(':idJob', $this->idJob, PDO::PARAM_INT);
+            $sql->execute();
+            $this->connection->closeConnection();
+            return true;
+        } catch (PDOException $e) {
+            echo "Error in the query: " . $e->getMessage();
+            throw new Exception("Error deleting the job.");
+        }
+    }
 }
 ?>

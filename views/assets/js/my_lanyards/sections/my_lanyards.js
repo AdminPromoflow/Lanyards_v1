@@ -89,7 +89,7 @@ class MyLanyardsClass {
 
 
   handleJobClick(idJob, i){
-  //  this.makeAjaxRequestGetJobById(idJob);
+    this.makeAjaxRequestGetJobById(idJob);
     this.selectMyJob(i);
   }
 
@@ -98,7 +98,7 @@ class MyLanyardsClass {
     chargingClass.hideShowchargin(true);
 
     // Define the URL and the JSON data you want to send
-    const url = "../../controller/lanyard/order.php"; // Replace with your API endpoint URL
+    const url = "../../controller/lanyard/job.php"; // Replace with your API endpoint URL
     const data = {
       action: "getJobByidJob",
       idJob: idJob
