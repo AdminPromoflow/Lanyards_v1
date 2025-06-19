@@ -41,6 +41,11 @@
   filter: drop-shadow(1px 1px 3px black);
 }
 
+.groupBox_artwork_details{
+  position: relative;
+  overflow-x: scroll;
+}
+
 .my_lanyards_left_side{
   position: relative;
   height: 6vw;
