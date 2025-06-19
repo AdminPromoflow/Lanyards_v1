@@ -513,6 +513,13 @@ class Job {
     }
 
     public function getJobByidJob($data){
+
+
+      echo json_encode([
+        "mesaje": "done"
+      ]);
+      exit;
+
       $connection = new Database();
       $job_model = new Job_Model($connection);
       $job_model->setIdJob($data->idJob);
