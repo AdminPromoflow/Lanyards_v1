@@ -30,7 +30,7 @@ class MyLanyardsClass {
       throw new Error("Network error.");
     })
     .then(data => {
-    //  alert(JSON.stringify(data));
+      alert(JSON.stringify(data));
 
     const groupBox_my_lanyards = document.getElementById("groupBox_my_lanyards");
     groupBox_my_lanyards.innerHTML = ``;
