@@ -16,7 +16,7 @@ class ArtworkDetailsClass {
 
     const descriptionObj = JSON.parse(data.description);
 
-    alert(JSON.stringify(descriptionObj));
+    alert(JSON.stringify(descriptionObj.width.value));
 
 
     if (descriptionObj.width.value == "10mm") {
