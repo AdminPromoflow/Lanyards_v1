@@ -55,7 +55,7 @@
 
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: nowrap;
 }
 .my_lanyards_left_side{
@@ -75,14 +75,7 @@
 }
 
 
-.my_lanyards_artwork{
-  position: absolute;
-  height: 200%;
-  background-color: purple;
-  transform-origin: top left;
-  top: 0px;
-  left: 0px;
-}
+
 
 
 
