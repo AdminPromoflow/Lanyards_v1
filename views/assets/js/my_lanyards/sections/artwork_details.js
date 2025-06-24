@@ -10,26 +10,31 @@ class ArtworkDetailsClass {
   showSection(action){
     section_artwork_details.style.display = action;
   }
+
+
   resizeWithLanyard(descriptionObj){
+    my_lanyards_left_side.style.height = "21.6cm";
+    my_lanyards_right_side.style.height = "21.6cm";
+
     if (descriptionObj.width.value == "10mm") {
-      my_lanyards_left_side.style.height = "0.48cm";
-      my_lanyards_right_side.style.height = "0.48cm";
+      my_lanyards_left_side.style.width = "0.48cm";
+      my_lanyards_right_side.style.width = "0.48cm";
     }
     else if (descriptionObj.width.value == "15mm") {
-      my_lanyards_left_side.style.height = "0.72cm";
-      my_lanyards_right_side.style.height = "0.72cm";
+      my_lanyards_left_side.style.width = "0.72cm";
+      my_lanyards_right_side.style.width = "0.72cm";
     }
     else if (descriptionObj.width.value == "20mm") {
-      my_lanyards_left_side.style.height = "0.96cm";
-      my_lanyards_right_side.style.height = "0.96cm";
+      my_lanyards_left_side.style.width = "0.96cm";
+      my_lanyards_right_side.style.width = "0.96cm";
     }
     else if (descriptionObj.width.value == "25mm") {
-      my_lanyards_left_side.style.height = "1.2cm";
-      my_lanyards_right_side.style.height = "1.2cm";
+      my_lanyards_left_side.style.width = "1.2cm";
+      my_lanyards_right_side.style.width = "1.2cm";
     }
     else if (descriptionObj.width.value == "30mm") {
-      my_lanyards_left_side.style.height = "1.44cm";
-      my_lanyards_right_side.style.height = "1.44cm";
+      my_lanyards_left_side.style.width = "1.44cm";
+      my_lanyards_right_side.style.width = "1.44cm";
     }
   }
   manageLanyardDataJobArtwork(data, artwork){
@@ -73,7 +78,7 @@ class ArtworkDetailsClass {
     <div class="img_lanyard_right" id="img_lanyard_right">
     </div>
     `;
-    this.resizeWithLanyardImage(descriptionObj);
+    //this.resizeWithLanyardImage(descriptionObj);
 
     const imageClass = new ImageClass();
 
@@ -159,6 +164,7 @@ class ArtworkDetailsClass {
     }
   }
   manageText(texts, descriptionObj){
+    alert("bien");
 
     my_lanyards_left_side.innerHTML = `
     <div class="text_lanyard_left" id="text_lanyard_left">
@@ -169,7 +175,7 @@ class ArtworkDetailsClass {
     </div>
     `;
 
-    this.resizeWithLanyardText(descriptionObj);
+  //  this.resizeWithLanyardText(descriptionObj);
 
 
 
