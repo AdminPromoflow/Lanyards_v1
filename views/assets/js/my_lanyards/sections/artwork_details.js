@@ -54,12 +54,11 @@ class ArtworkDetailsClass {
     this.cleanArtworkManual();
 
     if (images != false) {
-      alert(JSON.stringify(images));
+    //  alert(JSON.stringify(images));
       this.manageImage(images);
     }
     if (texts != false) {
-      alert(JSON.stringify(texts));
-
+    //  alert(JSON.stringify(texts));
       this.manageText(texts);
     }
 
