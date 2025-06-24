@@ -7,6 +7,7 @@ class Users {
   private $password;  // User's password
   private $recovery_token;  // User's password
   private $signup_category;  // User's password
+  private $idOrder;  // User's password
 
   // Constructor that initializes the connection.
   function __construct($connection) {
@@ -15,6 +16,9 @@ class Users {
 
   public function setRecoveryToken($recovery_token) {
       $this->recovery_token = $recovery_token;
+  }
+  public function setIdOrder($idOrder) {
+    $this->idOrder = $idOrder;
   }
 
   public function setSignupCategory($signup_category) {
@@ -94,6 +98,38 @@ class Users {
            throw new Exception("Error in the user verification query.");
        }
    }
+
+
+   public function getEmailAndNameByIdOrder() {
+       try {
+           // Prepara la consulta SQL con JOIN entre Orders y Users
+           $sql = $this->connection->getConnection()->prepare("SELECT U.email, U.name
+               FROM Orders O
+               INNER JOIN Users U ON O.idUser = U.idUser
+               WHERE O.idOrder = :idOrder
+           ");
+
+           // Enlaza el parámetro
+           $sql->bindParam(':idOrder', $this->idOrder, PDO::PARAM_INT);
+
+           // Ejecuta la consulta
+           $sql->execute();
+
+           // Obtiene el resultado como array asociativo
+           $result = $sql->fetch(PDO::FETCH_ASSOC);
+
+           // Cierra la conexión
+           $this->connection->closeConnection();
+
+           // Retorna el resultado (puede ser false si no se encontró)
+           return $result;
+
+       } catch (PDOException $e) {
+           echo "Error in the query: " . $e->getMessage();
+           throw new Exception("Error retrieving email and name by order ID.");
+       }
+   }
+
 
   /*
    * Create a new user with the provided name, email, and password.

@@ -14,11 +14,16 @@ class EmailSender {
     private $recipientEmail;
     private $recipientName;
     private $recipientPassword;
+    private $recipientTableOrder;
 
     // Setter for recipient email
     public function setRecipientEmail($recipientEmail) {
         $this->recipientEmail = $recipientEmail;
     }
+
+    public function setRecipientTableOrder($recipientTableOrder) {
+    $this->recipientTableOrder = $recipientTableOrder;
+}
 
     // Setter for recipient name
     public function setRecipientName($recipientName) {
@@ -147,6 +152,88 @@ class EmailSender {
             return '1';
         }
     }
+
+
+
+
+
+
+    public function sendEmailSuccesssfullOrder() {
+
+        $mail = new PHPMailer;
+        $mail->isSMTP();
+        $mail->SMTPDebug = 0;
+        $mail->Host = 'smtp.hostinger.com';
+        $mail->Port = 587;
+        $mail->SMTPAuth = true;
+        $mail->Username = 'admin@lanyardsforyou.com';
+        $mail->Password = '32skiff32!CI';
+
+        $mail->setFrom('admin@lanyardsforyou.com', 'Ian Southworth');
+        $mail->addReplyTo('admin@lanyardsforyou.com', 'Ian Southworth');
+        $mail->addAddress($this->recipientEmail, $this->recipientName);
+
+        // ✅ Nuevo asunto
+        $mail->Subject = 'Thank you for your purchase at Lanyards For You';
+        $mail->isHTML(true);
+
+        $recipientMessage = "
+         <div class='background' style='position: relative; width: 100%; background: rgb(52,74,98); padding: 2vw 0;'>
+            <div class='background2' style='width: 70%; min-width: 300px; margin: 0 auto; background: linear-gradient(360deg, rgba(7,12,21,1) 1%, rgba(19,54,84,1) 100%); margin-top: 4vw; margin-bottom: 4vw;'>
+              <div class='header' style='height: calc(3em + 3vw); background: rgba(255,255,255, .4);'>
+                <img alt='Image' style='height: 100%; width: auto; margin-left: 2vw;' src='https://lanyardsforyou.com/controller/assets/img/send-emails/password-recovery/logo.png'>
+              </div>
+              <div class='titleContainer' style='width: 85%; margin: 0 auto; margin-top: calc(2vw + 1em);'>
+                <h1 style='font-family: Oswald, sans-serif; font-size: calc(1.2vw + 0.8em); color: rgb(240,240,240); text-align: center;'>
+                  Thank you for your purchase!
+                </h1>
+                <h2 style='font-family: Oswald, sans-serif; font-weight: 300; font-size: calc(1.1vw + 0.7em); color: rgb(232,232,232); text-align: center; margin-top: calc(0.2vw + 0.2em);'>
+                  $this->recipientName, your order is being processed.
+                </h2>
+              </div>
+              <div class='imgEmail' style='width: 85%; margin: 0 auto; margin-top: calc(0.8vw + 0.8em);'>
+                <img style='width: 100%;' alt='' src='https://lanyardsforyou.com/controller/assets/img/send-emails/register/register_image.jpg'>
+              </div>
+              <div class='titleContainer' style='width: 85%; margin: 0 auto; margin-top: calc(1.4vw + 0.4em);'>
+                <h3 style='font-family: Oswald, sans-serif; color: rgb(232,232,232); font-weight: 500; font-size: calc(1vw + 0.6em); text-align: center;'>
+                  We'll notify you when your items ship
+                </h3>
+                <h4 style='font-family: Oswald, sans-serif; color: rgb(200,200,200); font-weight: 300; font-size: calc(0.9vw + 0.5em); text-align: center; margin-top: calc(0.5vw + 0.5em); width: 70%; margin-left: auto; margin-right: auto;'>
+                  To see the details of your purchase, please go to our website and click on <strong>“My Lanyard”</strong> in the menu — there you will find the products from your order.
+                </h4>
+                <h4 style='font-family: Oswald, sans-serif; color: rgb(185,185,185); font-weight: 200; font-size: calc(0.9vw + 0.5em); text-align: center; width: 60%; margin: auto;'>
+                  If you have any questions, you can reach us at support@lanyardsforyou.com
+                </h4>
+                <h4 style='font-family: Oswald, sans-serif; color: rgb(232,232,232); font-weight: 400; font-size: calc(0.9vw + 0.5em); text-align: center; margin-top: calc(0.3vw + 0.3em);'>
+                  Email: $this->recipientEmail
+                </h4>
+              </div>
+              <div class='footer' style='background: rgba(106, 123, 141, 1); width: 100%; margin-top: calc(1.8vw + 0.8em); padding: calc(1vw + 1em) 0;'>
+                <h2 style='font-family: Oswald, sans-serif; color: rgb(250,250,250); font-weight: 600; font-size: calc(0.8vw + 0.8em); text-align: center;'>
+                  We appreciate your trust in us!
+                </h2>
+              </div>
+            </div>
+        </div>
+        ";
+
+        $mail->Body = $recipientMessage;
+        $mail->AltBody = 'Thank you for your purchase at Lanyards For You.';
+        $emailSent = $mail->send();
+
+        if (!$emailSent) {
+            return 'Sender Error: ' . $mail->ErrorInfo;
+        } else {
+            return '1';
+        }
+    }
+
+
+
+
+
+
+
 
     // Method to send a recovery password
     public function sendEmailRecoveryPassword($recoveryToken) {

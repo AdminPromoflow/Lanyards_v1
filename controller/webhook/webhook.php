@@ -2,6 +2,11 @@
 require '../../vendor/autoload.php';
 require_once '../config/database.php';
 require_once '../../models/orders.php';
+require_once '../../models/users.php';
+
+
+require_once '../../controller/users/send-emails.php';
+
 
 // The library needs to be configured with your account's secret key.
 // Ensure the key is kept out of any version control system you might be using.
@@ -55,6 +60,37 @@ switch ($event->type) {
             $orderModel->setStatus($newStatus);
 
             $stateStatus = $orderModel->updateOrderStatus();
+
+
+
+
+
+                $connection = new Database();
+                $userModel = new Users($connection);
+                $userModel->setIdOrder($orderId); // Asegúrate de tener $orderId definido
+                $userInfo = $userModel->getEmailAndNameByIdOrder();
+
+                if ($userInfo) {
+
+                    $emailSender = new EmailSender();
+                    $emailSender->setRecipientEmail($userInfo['email']);
+                    $emailSender->setRecipientName($userInfo['name']);
+
+                    $emailSent = $emailSender->sendEmailSuccesssfullOrder();
+                } else {
+                    echo "Error, we did not find: " . $orderId;
+                }
+
+
+
+
+
+
+
+
+
+
+
             file_put_contents('log.txt', $stateStatus . "\n", FILE_APPEND);
         } else {
             file_put_contents('log.txt', "❌ Metadata 'order_id' not found for event: {$event->type}\n", FILE_APPEND);
