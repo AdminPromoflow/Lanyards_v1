@@ -269,5 +269,3 @@ class TextClass {
   }
 
 }
-
-const textClass = new TextClass();

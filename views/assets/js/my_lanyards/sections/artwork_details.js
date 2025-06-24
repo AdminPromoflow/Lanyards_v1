@@ -74,6 +74,9 @@ class ArtworkDetailsClass {
     </div>
     `;
 
+    const imageClass = new ImageClass();
+
+
     if (Array.isArray(images) && images.length > 0) {
       const imageData = images[0]; // si sólo necesitas el primer objeto
       imageClass.setTimesImage(parseInt(imageData.timesImage));
@@ -83,7 +86,7 @@ class ArtworkDetailsClass {
       imageClass.setSpaceAlongLanyard(parseFloat(imageData.spaceAlongLanyard));
       imageClass.setLinkImage(imageData.linkImage);
       imageClass.setImagePosition(parseFloat(imageData.imagePosition));
-      //imageClass.refreshImageLanyard();
+      imageClass.refreshImageLanyard();
       // Aquí puedes hacer algo con imageClass, como almacenarlo o usar sus getters
       /*alert(
       `Datos de ImageClass:\n` +
@@ -113,6 +116,7 @@ class ArtworkDetailsClass {
     `;
 
 
+    const textClass = new TextClass();
 
     if (Array.isArray(texts) && texts.length > 0) {
       const textData = texts[0]; // solo toma el primer objeto
@@ -129,8 +133,6 @@ class ArtworkDetailsClass {
       textClass.setUnderlineText(textData.underlineText === "1");
       textClass.setTextPosition(parseFloat(textData.textPosition));
 
-      alert("Clase de textClass:", textClass.constructor.name);
-      alert("¿Tiene refreshTextLanyard?", typeof textClass.refreshTextLanyard);
       textClass.refreshTextLanyard();
       // Mostrar en alert
       /*alert(

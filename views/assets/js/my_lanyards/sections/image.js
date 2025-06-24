@@ -252,5 +252,3 @@ class ImageClass {
       }
     }
 }
-
-const imageClass = new ImageClass();
