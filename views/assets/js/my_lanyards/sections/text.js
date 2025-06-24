@@ -158,6 +158,7 @@ class TextClass {
   }
 
   modifySpaceBetweenText(){
+    alert("hah");
     this.text_lanyard_left.style.gap = this.getSpaceBetweenText() + "%";
     this.text_lanyard_right.style.gap = this.getSpaceBetweenText() + "%";
   }
