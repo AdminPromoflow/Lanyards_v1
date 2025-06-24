@@ -47,10 +47,9 @@
 }
 .groupBox_artwork_details{
   position: relative;
-  min-width: 240px;
   width: 80%;
-  overflow-x: scroll;
   left: 50%;
+  overflow-x: hidden;
   transform: translateX(-50%);
   background-color: black;
 }
