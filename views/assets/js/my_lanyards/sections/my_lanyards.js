@@ -113,10 +113,12 @@ class MyLanyardsClass {
     //  alert(JSON.stringify(data["texts"]));
     //  alert(JSON.stringify(data["artworks"]));
 
+    if (data["artworks"] != false || data["images"] != false || data["texts"] != false) {
+      myLanyardsClass.drawJobAccessory(data["job"]);
+    }
 
     if (data["artworks"] != false) {
       artworkDetailsClass.manageLanyardDataJob(data["job"]);
-
       myLanyardsClass.drawJobArtwork(data["job"], data["artworks"]);
     }
     else if  (data["images"] != false) {
@@ -126,17 +128,6 @@ class MyLanyardsClass {
       alert("texts")
     }
 
-
-
-  /*  if (data["images"] != false) {
-      artworkDetailsClass.manageLanyardImage(data["images"]);
-    }
-    if (data["texts"] != false) {
-      artworkDetailsClass.manageLanyardText(data["texts"]);
-    }*/
-    if (data["artworks"] != false) {
-    //  artworkDetailsClass.manageLanyardArtwork(data["artworks"]);
-    }
 
 
     chargingClass.hideShowchargin(false);
@@ -149,6 +140,34 @@ class MyLanyardsClass {
       chargingClass.hideShowchargin(false);
 
     });
+  }
+  drawJobAccessory(data){
+        const descriptionObj = JSON.parse(data.description);
+        const product_job = document.getElementById("product_job");
+
+        var description = '';
+
+
+          description = `
+          <div class="items_description_products_jobs">
+            <h4>Material:</h4>
+            <h4>${descriptionObj.item.type}</h4>
+          </div>
+          <div class="items_description_products_jobs">
+            <h4>Amount:</h4>
+            <h4>${data["amount"]}</h4>
+          </div>
+          `;
+
+        product_job.innerHTML = ``;
+        product_job.innerHTML = `
+        <div class="header_product_job">
+          <h3>${data["name"]}</h3>
+        </div>
+        <div class="description_product_job">
+          ${description}
+        </div>
+        `;
   }
   drawJobArtwork(data, artwork){
 
