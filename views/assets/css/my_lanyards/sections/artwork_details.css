@@ -48,8 +48,8 @@
 .groupBox_artwork_details{
   position: relative;
   width: 80%;
-  padding: 5px;
-  height: 21.6cm ;
+  padding: 5px 0;
+
   overflow: hidden;
   background-color: gold;
 
