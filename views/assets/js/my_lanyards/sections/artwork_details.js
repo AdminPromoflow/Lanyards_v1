@@ -84,7 +84,7 @@ class ArtworkDetailsClass {
       imageClass.setSpaceAlongLanyard(parseFloat(imageData.spaceAlongLanyard));
       imageClass.setLinkImage(imageData.linkImage);
       imageClass.setImagePosition(parseFloat(imageData.imagePosition));
-
+      imageClass.refreshImageLanyard();
       // Aquí puedes hacer algo con imageClass, como almacenarlo o usar sus getters
       /*alert(
       `Datos de ImageClass:\n` +
@@ -96,6 +96,8 @@ class ArtworkDetailsClass {
       `Link Image: ${imageClass.getLinkImage()}\n` +
       `Image Position: ${imageClass.getImagePosition()}`
     );*/
+
+
     } else {
       console.warn("No se encontraron datos de imagen.");
     }
@@ -127,9 +129,9 @@ class ArtworkDetailsClass {
       textClass.setItalicText(textData.italicText === "1");
       textClass.setUnderlineText(textData.underlineText === "1");
       textClass.setTextPosition(parseFloat(textData.textPosition));
-
+      textClass.refreshTextLanyard();
       // Mostrar en alert
-      alert(
+      /*alert(
         `Datos de TextClass:\n` +
         `Content Text: ${textClass.getContentText()}\n` +
         `Times Text: ${textClass.getTimesText()}\n` +
@@ -142,7 +144,7 @@ class ArtworkDetailsClass {
         `Italic: ${textClass.getItalicText()}\n` +
         `Underline: ${textClass.getUnderlineText()}\n` +
         `Text Position: ${textClass.getTextPosition()}`
-      );
+      );*/
     } else {
       alert("No se encontraron datos de texto.");
     }

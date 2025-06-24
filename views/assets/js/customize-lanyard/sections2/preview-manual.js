@@ -14,8 +14,6 @@ class PreviewManual {
     this.changeBoldText();
     this.changeItalicText();
     this.changeUnderlineText();
-
-
   }
 
   addTextLanyard() {
