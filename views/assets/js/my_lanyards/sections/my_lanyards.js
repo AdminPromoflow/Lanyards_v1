@@ -108,7 +108,7 @@ class MyLanyardsClass {
       throw new Error("Network error.");
     })
     .then(data => {
-      alert(JSON.stringify(data));
+    //  alert(JSON.stringify(data));
     //  alert(JSON.stringify(data["images"]));
     //  alert(JSON.stringify(data["texts"]));
     //  alert(JSON.stringify(data["artworks"]));
@@ -140,6 +140,72 @@ class MyLanyardsClass {
       chargingClass.hideShowchargin(false);
 
     });
+  }
+  drawJobManual(data){
+
+
+
+    const descriptionObj = JSON.parse(data.description);
+    const product_job = document.getElementById("product_job");
+
+    var description = '';
+
+      description = `
+      <div class="items_description_products_jobs">
+        <h4>Material:</h4>
+        <h4>${descriptionObj.material.type}</h4>
+      </div>
+      <div class="items_description_products_jobs">
+        <h4>Lanyard_type:</h4>
+        <h4>${descriptionObj.lanyard_type.type}</h4>
+      </div>
+      <div class="items_description_products_jobs">
+        <h4>Width:</h4>
+        <h4>${descriptionObj.width.value}</h4>
+      </div>
+      <div class="items_description_products_jobs">
+        <h4>Side printed:</h4>
+        <h4>${descriptionObj.side_printed.side}</h4>
+      </div>
+      <div class="items_description_products_jobs">
+        <h4>Colour quantity:</h4>
+        <h4>${descriptionObj.colour_quantity.type}</h4>
+      </div>
+      <div class="items_description_products_jobs">
+        <h4>Clip:</h4>
+        <h4>${descriptionObj.clip.type}</h4>
+      </div>
+      <div class="items_description_products_jobs">
+        <h4>Attachment:</h4>
+        <h4>${descriptionObj.attachment.type}</h4>
+      </div>
+      <div class="items_description_products_jobs">
+        <h4>Accessories:</h4>
+        <h4>${descriptionObj.accessories.type}</h4>
+      </div>
+      <div class="items_description_products_jobs">
+        <h4>Amount:</h4>
+        <h4>${data["amount"]}</h4>
+      </div>
+
+      <div id="open_artwork_details" class="items_description_products_jobs"  onclick="myLanyardsClass.openArtwork()">
+        <h4>Artwork</h4>
+          <h4>Preview</h4>
+      </div>
+
+
+      `;
+
+
+    product_job.innerHTML = ``;
+    product_job.innerHTML = `
+    <div class="header_product_job">
+      <h3>${data["name"]}</h3>
+    </div>
+    <div class="description_product_job">
+      ${description}
+    </div>
+    `;
   }
   drawJobAccessory(data){
         const descriptionObj = JSON.parse(data.description);
