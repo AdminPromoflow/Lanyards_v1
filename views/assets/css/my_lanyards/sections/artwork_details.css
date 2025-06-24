@@ -62,8 +62,8 @@
   position: absolute;
   left: 30%;
   top: 0px;
-  height: 21.6cm ;
-  width: 0.48cm;
+  min-height: 21.6cm ;
+  min-width: 0.48cm;
   background: orange;
   margin: 20px 0;
 }
@@ -72,8 +72,8 @@
   position: absolute;
   right: 30%;
   top: 0px;
-  height: 21.6cm ;
-  width: 0.48cm;
+  min-height: 21.6cm ;
+  min-width: 0.48cm;
   background: green;
   margin: 20px 0;
 }
