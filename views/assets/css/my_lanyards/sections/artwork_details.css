@@ -51,6 +51,8 @@
   height: 21.6cm ;
   overflow: hidden;
   background-color: gold;
+  transform: rotate(90deg);
+  transform-origin: center;
 
   display: flex;
   justify-content: space-around;
