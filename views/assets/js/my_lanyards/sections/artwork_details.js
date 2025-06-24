@@ -74,6 +74,34 @@ class ArtworkDetailsClass {
     <div class="img_lanyard_right" id="img_lanyard_right">
     </div>
     `;
+
+    if (Array.isArray(images) && images.length > 0) {
+      const imageData = images[0]; // si sólo necesitas el primer objeto
+
+      imageClass.setTimesImage(parseInt(imageData.timesImage));
+      imageClass.setImageSize(parseFloat(imageData.imageSize));
+      imageClass.setSpaceBetweenImage(parseFloat(imageData.spaceBetweenImage));
+      imageClass.setImageRotation(parseFloat(imageData.imageRotation));
+      imageClass.setSpaceAlongLanyard(parseFloat(imageData.spaceAlongLanyard));
+      imageClass.setLinkImage(imageData.linkImage);
+      imageClass.setImagePosition(parseFloat(imageData.imagePosition));
+
+      // Aquí puedes hacer algo con imageClass, como almacenarlo o usar sus getters
+      alert(
+      `Datos de ImageClass:\n` +
+      `Times Image: ${imageClass.getTimesImage()}\n` +
+      `Image Size: ${imageClass.getImageSize()}\n` +
+      `Space Between Image: ${imageClass.getSpaceBetweenImage()}\n` +
+      `Image Rotation: ${imageClass.getImageRotation()}\n` +
+      `Space Along Lanyard: ${imageClass.getSpaceAlongLanyard()}\n` +
+      `Link Image: ${imageClass.getLinkImage()}\n` +
+      `Image Position: ${imageClass.getImagePosition()}`
+    );
+    } else {
+      console.warn("No se encontraron datos de imagen.");
+    }
+
+
   }
   manageText(texts){
     my_lanyards_left_side.innerHTML = `
