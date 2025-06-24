@@ -115,32 +115,7 @@ class ImageClass {
       });
     }
 
-    showPrintableAreaImage(){
-      const value = this.getPrintableAreaImage();
 
-      const image_lanyard_left = document.getElementById("img_lanyard_left");
-      const image_lanyard_right = document.getElementById("img_lanyard_right");
-      const image_lanyard_center = document.getElementById("img_lanyard_center");
-
-
-      if (value) {
-        [image_lanyard_left, image_lanyard_right, image_lanyard_center].forEach((element, index) => {
-          if (backgroundClass.getBackground() == "#ffffff" || backgroundClass.getBackground() == "#FFFFFF") {
-            element.style.background = "rgba(50, 50, 50, .3)";
-          }
-          else {
-            element.style.background = "rgba(215,215,215, .3)";
-          }
-        });
-      }
-
-      else {
-        [image_lanyard_left, image_lanyard_right, image_lanyard_center].forEach((element, index) => {
-          element.style.background = "rgba(215,215,215, 0)";
-        });
-      }
-
-    }
 
     modifyImagePosition(){
       const image_lanyard_left = document.getElementById("img_lanyard_left");
@@ -162,8 +137,8 @@ class ImageClass {
         padding_image_bottom[i].style.height = this.getSpaceAlongLanyard() + "px";
 
 
-        padding_image_top[i].style.background = backgroundClass.getBackground() ;
-        padding_image_bottom[i].style.background = backgroundClass.getBackground();
+      //  padding_image_top[i].style.background = backgroundClass.getBackground() ;
+      //  padding_image_bottom[i].style.background = backgroundClass.getBackground();
 
       }
     }

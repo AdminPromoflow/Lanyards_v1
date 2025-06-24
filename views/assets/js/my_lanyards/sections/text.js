@@ -169,8 +169,8 @@ class TextClass {
     for (let i = 0; i < padding_text_top.length; i++) {
       padding_text_top[i].style.height = this.getSpaceAlongLanyard() + "px";
       padding_text_bottom[i].style.height = this.getSpaceAlongLanyard() + "px";
-      padding_text_top[i].style.background = backgroundClass.getBackground() ;
-      padding_text_bottom[i].style.background = backgroundClass.getBackground();
+    //  padding_text_top[i].style.background = backgroundClass.getBackground() ;
+      //padding_text_bottom[i].style.background = backgroundClass.getBackground();
 
 
     //  padding_text_top[i].style.top = "calc(25% + " + this.getSpaceAlongLanyard() + "px)" ;
