@@ -141,8 +141,6 @@ class MyLanyardsClass {
   }
   drawJobManual(data){
 
-
-
     const descriptionObj = JSON.parse(data.description);
     const product_job = document.getElementById("product_job");
 
@@ -318,7 +316,7 @@ class MyLanyardsClass {
    myLanyardsClass.showSection("none");
    artworkDetailsClass.showSection("flex");
   }
-  openArtworkLeft(left, right){
+/*  openArtworkLeft(left, right){
 
     var linkLeft = "https://lanyardsforyou.com/" +left;
     var linkRight = "https://lanyardsforyou.com/" +right;
@@ -353,7 +351,7 @@ class MyLanyardsClass {
 
   //  myLanyardsClass.showSection("none");
   //  artworkDetailsClass.showSection("flex");
-  }
+}*/
 
   downloadImage(url, filename) {
     const a = document.createElement('a');
