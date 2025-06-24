@@ -1,4 +1,4 @@
-class Text {
+class TextClass {
 
   constructor() {
     this.contentText = "";
@@ -270,4 +270,4 @@ class Text {
 
 }
 
-const textClass = new Text();
+const textClass = new TextClass();
