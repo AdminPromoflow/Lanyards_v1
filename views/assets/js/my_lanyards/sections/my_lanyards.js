@@ -123,6 +123,7 @@ class MyLanyardsClass {
     }
     else if  (data["images"] != false || data["texts"] != false) {
       myLanyardsClass.drawJobManual(data["job"]);
+      artworkDetailsClass.manageLanyardDataJobArtwork(data["job"], data["images"], data["texts"]);
     }
 
 

@@ -1,11 +1,22 @@
 <?php
+
+function get_file_version($relative_path) {
+    $absolute_path = __DIR__ . '/' . $relative_path;
+    return file_exists($absolute_path) ? filemtime($absolute_path) : time();
+}
+
+
 // Corregir rutas absolutas para evitar problemas con __DIR__
 $cssFile = realpath(__DIR__ . '/../../views/assets/css/my_lanyards/sections/artwork_details.css');
 $jsFile = realpath(__DIR__ . '/../../views/assets/js/my_lanyards/sections/artwork_details.js');
 
+
+
+
 $cssVersion = $cssFile && file_exists($cssFile) ? filemtime($cssFile) : time();
 $jsVersion = $jsFile && file_exists($jsFile) ? filemtime($jsFile) : time();
 ?>
+<link rel="stylesheet" href="../../views/assets/css/global/customize-lanyard/sections2/preview-manual.css?v=<?php echo get_file_version('../../views/assets/css/global/customize-lanyard/sections2/preview-manual.css'); ?>">
 
 <!-- Link to external stylesheet for styling the section -->
 <link rel="stylesheet" href="/views/assets/css/my_lanyards/sections/artwork_details.css?v=<?= $cssVersion; ?>">

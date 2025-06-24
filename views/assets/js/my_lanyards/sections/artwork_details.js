@@ -37,32 +37,45 @@ class ArtworkDetailsClass {
     const lefttLink = (artwork[0].linkLeftImage);
     const rightLink = (artwork[0].linkRightImage);
 
-    const  my_lanyards_left_side = document.getElementById('my_lanyards_left_side');
-    const  my_lanyards_right_side = document.getElementById('my_lanyards_right_side');
-
     this.resizeWithLanyard(JSON.parse(data.description));
-
-    my_lanyards_left_side.innerHTML = ``;
-    my_lanyards_right_side.innerHTML = ``;
+    this.cleanArtworkManual();
 
     my_lanyards_left_side.innerHTML = `<img class="" src="../../${lefttLink}" alt="">`;
     my_lanyards_right_side.innerHTML = `<img class="" src="../../${rightLink}" alt="">`;
-  }
-  manageLanyardArtwork(artwork){
-    const  my_lanyards_left_side = document.getElementById('my_lanyards_left_side');
-    const  my_lanyards_right_side = document.getElementById('my_lanyards_right_side');
-
-    //alert(artwork[0]["linkRightImage"]);
-  }
-  manageLanyardText(text){
 
   }
-  manageLanyardImage(image){
+
+  cleanArtworkManual(){
+    my_lanyards_left_side.innerHTML = ``;
+    my_lanyards_right_side.innerHTML = ``;
+  }
+  manageLanyardDataJobManual(data, images, texts){
+    this.resizeWithLanyard(JSON.parse(data.description));
+    this.cleanArtworkManual();
+
+    if (images != false) {
+      this.manageImage(images);
+    }
+    if (texts != false) {
+      this.manageText(texts);
+    }
 
   }
+
+  manageImage(images){
+    my_lanyards_left_side
+    my_lanyards_right_side
+  }
+  manageText(texts){
+
+  }
+
+
 
 }
 
+const  my_lanyards_left_side = document.getElementById('my_lanyards_left_side');
+const  my_lanyards_right_side = document.getElementById('my_lanyards_right_side');
 
 const section_artwork_details = document.getElementById("section_artwork_details");
 const back_to_my_lanyards = document.getElementById("back_to_my_lanyards");
