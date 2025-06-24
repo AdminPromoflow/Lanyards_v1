@@ -119,7 +119,7 @@ class MyLanyardsClass {
 
     if (data["artworks"] != false) {
       artworkDetailsClass.manageLanyardDataJobArtwork(data["job"], data["artworks"]);
-      myLanyardsClass.drawJobArtwork(data["job"], data["artworks"]);
+      myLanyardsClass.drawJobArtwork(data["job"]);
     }
     else if  (data["images"] != false || data["texts"] != false) {
       myLanyardsClass.drawJobManual(data["job"]);
@@ -187,7 +187,7 @@ class MyLanyardsClass {
 
       <div id="open_artwork_details" class="items_description_products_jobs"  onclick="myLanyardsClass.openArtwork()">
         <h4>Artwork</h4>
-          <h4>Preview</h4>
+          <h4>Click to preview.</h4>
       </div>
 
 
@@ -232,10 +232,7 @@ class MyLanyardsClass {
         </div>
         `;
   }
-  drawJobArtwork(data, artwork){
-
-    const lefttLink = (artwork[0].linkLeftImage);
-    const rightLink = (artwork[0].linkRightImage);
+  drawJobArtwork(data){
 
     const descriptionObj = JSON.parse(data.description);
     const product_job = document.getElementById("product_job");
@@ -283,17 +280,10 @@ class MyLanyardsClass {
 
       <div id="open_artwork_details" class="items_description_products_jobs"  onclick="myLanyardsClass.openArtwork()">
         <h4>Artwork</h4>
-          <h4>Preview</h4>
+          <h4>Click to preview.</h4>
       </div>
 
-    <!--  <div id="open_artwork_details" class="items_description_products_jobs"  onclick="myLanyardsClass.openArtworkLeft('${lefttLink}', '${rightLink}')">
-      <h4>Artwork Left</h4>
-        <h4>Download</h4>
-      </div>
-      <div id="open_artwork_details" class="items_description_products_jobs"  onclick="myLanyardsClass.openArtworkRight('${lefttLink}', '${rightLink}')">
-      <h4>Artwork Left</h4>
-        <h4>Download</h4>
-      </div>-->
+
       `;
     }
     else {
