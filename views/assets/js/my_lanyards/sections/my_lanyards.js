@@ -117,12 +117,12 @@ class MyLanyardsClass {
     if (data["artworks"] != false) {
       artworkDetailsClass.manageLanyardDataJob(data["job"]);
 
-      myLanyardsClass.drawJob(data["job"], data["artworks"]);
+      myLanyardsClass.drawJobArtw(data["job"], data["artworks"]);
     }
     else if  (data["images"] != false) {
       alert("images")
     }
-    else if  (data["texts"] != false) {
+     if  (data["texts"] != false) {
       alert("texts")
     }
 
@@ -199,14 +199,19 @@ class MyLanyardsClass {
         <h4>${data["amount"]}</h4>
       </div>
 
-      <div id="open_artwork_details" class="items_description_products_jobs"  onclick="myLanyardsClass.openArtworkLeft('${lefttLink}', '${rightLink}')">
+      <div id="open_artwork_details" class="items_description_products_jobs"  onclick="myLanyardsClass.openArtwork()">
+        <h4>Artwork</h4>
+          <h4>Preview</h4>
+      </div>
+
+    <!--  <div id="open_artwork_details" class="items_description_products_jobs"  onclick="myLanyardsClass.openArtworkLeft('${lefttLink}', '${rightLink}')">
       <h4>Artwork Left</h4>
         <h4>Download</h4>
       </div>
       <div id="open_artwork_details" class="items_description_products_jobs"  onclick="myLanyardsClass.openArtworkRight('${lefttLink}', '${rightLink}')">
       <h4>Artwork Left</h4>
         <h4>Download</h4>
-      </div>
+      </div>-->
       `;
     }
     else {
@@ -234,6 +239,11 @@ class MyLanyardsClass {
   }
   showSection(action){
     section_my_lanyards.style.display = action;
+  }
+
+  openArtwork(){
+   myLanyardsClass.showSection("none");
+   artworkDetailsClass.showSection("flex");
   }
   openArtworkLeft(left, right){
 
