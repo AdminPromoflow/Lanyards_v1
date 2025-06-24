@@ -48,9 +48,7 @@
 .groupBox_artwork_details{
   position: relative;
   width: 80%;
-  left: 50%;
   overflow-x: hidden;
-  transform: translateX(-50%);
   background-color: gold;
 }
 .my_lanyards_left_side{
