@@ -65,6 +65,7 @@ class ArtworkDetailsClass {
   }
 
   manageImage(images){
+    alert("Entramos images");
     my_lanyards_left_side.innerHTML = `
     <div class="img_lanyard_left" id="img_lanyard_left">
     </div>
@@ -106,6 +107,8 @@ class ArtworkDetailsClass {
 
   }
   manageText(texts){
+    alert("Entramos texts");
+
     my_lanyards_left_side.innerHTML = `
     <div class="text_lanyard_left" id="text_lanyard_left">
     </div>
