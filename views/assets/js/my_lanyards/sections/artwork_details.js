@@ -11,11 +11,13 @@ class ArtworkDetailsClass {
     section_artwork_details.style.display = action;
   }
   manageLanyardDataJob(data){
-    alert(JSON.stringify(data));
     const  my_lanyards_left_side = document.getElementById('my_lanyards_left_side');
     const  my_lanyards_right_side = document.getElementById('my_lanyards_right_side');
 
     const descriptionObj = JSON.parse(data.description);
+
+    alert(JSON.stringify(descriptionObj));
+
 
     if (descriptionObj.width.value == "10mm") {
       my_lanyards_left_side.style.height = "0.48cm";
