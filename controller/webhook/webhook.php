@@ -70,6 +70,10 @@ switch ($event->type) {
                 $userModel->setIdOrder($orderId); // Asegúrate de tener $orderId definido
                 $userInfo = $userModel->getEmailAndNameByIdOrder();
 
+
+                file_put_contents('log.txt', $userInfo . "\n", FILE_APPEND);
+
+
                 if ($userInfo) {
 
                     $emailSender = new EmailSender();
@@ -91,7 +95,6 @@ switch ($event->type) {
 
 
 
-            file_put_contents('log.txt', $stateStatus . "\n", FILE_APPEND);
         } else {
             file_put_contents('log.txt', "❌ Metadata 'order_id' not found for event: {$event->type}\n", FILE_APPEND);
         }
