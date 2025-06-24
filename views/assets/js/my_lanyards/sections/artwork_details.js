@@ -55,11 +55,11 @@ class ArtworkDetailsClass {
 
     if (images != false) {
     //  alert(JSON.stringify(images));
-      this.manageImage(images, descriptionObj);
+      this.manageImage(images, JSON.parse(data.description));
     }
     if (texts != false) {
     //  alert(JSON.stringify(texts));
-      this.manageText(texts, descriptionObj);
+      this.manageText(texts, JSON.parse(data.description));
     }
 
   }
