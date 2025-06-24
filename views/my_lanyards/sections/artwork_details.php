@@ -9,6 +9,8 @@ function get_file_version($relative_path) {
 // Corregir rutas absolutas para evitar problemas con __DIR__
 $cssFile = realpath(__DIR__ . '/../../views/assets/css/my_lanyards/sections/artwork_details.css');
 $jsFile = realpath(__DIR__ . '/../../views/assets/js/my_lanyards/sections/artwork_details.js');
+$jsFileImage = realpath(__DIR__ . '/../../views/assets/js/my_lanyards/sections/image.js');
+$jsFileText = realpath(__DIR__ . '/../../views/assets/js/my_lanyards/sections/text.js');
 
 
 
@@ -44,4 +46,6 @@ $jsVersion = $jsFile && file_exists($jsFile) ? filemtime($jsFile) : time();
 </section>
 
 <!-- Link to external JavaScript for additional functionality -->
+<script src="/views/assets/js/my_lanyards/sections/text.js?v=<?= $jsFileText; ?>" type="text/javascript"></script>
+<script src="/views/assets/js/my_lanyards/sections/image.js?v=<?= $jsFileImage; ?>" type="text/javascript"></script>
 <script src="/views/assets/js/my_lanyards/sections/artwork_details.js?v=<?= $jsVersion; ?>" type="text/javascript"></script>
