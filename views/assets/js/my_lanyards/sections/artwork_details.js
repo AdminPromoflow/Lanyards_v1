@@ -197,7 +197,7 @@ class ArtworkDetailsClass {
 
       textClass.refreshTextLanyard();
       // Mostrar en alert
-      alert(
+    /*  alert(
         `Datos de TextClass:\n` +
         `Content Text: ${textClass.getContentText()}\n` +
         `Times Text: ${textClass.getTimesText()}\n` +
@@ -210,7 +210,7 @@ class ArtworkDetailsClass {
         `Italic: ${textClass.getItalicText()}\n` +
         `Underline: ${textClass.getUnderlineText()}\n` +
         `Text Position: ${textClass.getTextPosition()}`
-      );
+      );*/
     } else {
       alert("No se encontraron datos de texto.");
     }

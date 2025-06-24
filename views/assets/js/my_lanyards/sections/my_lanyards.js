@@ -108,7 +108,7 @@ class MyLanyardsClass {
       throw new Error("Network error.");
     })
     .then(data => {
-    //  alert(JSON.stringify(data));
+      alert(JSON.stringify(data));
 
     if (data["artworks"] == false && data["images"] == false && data["texts"] == false) {
       myLanyardsClass.drawJobAccessory(data["job"]);
