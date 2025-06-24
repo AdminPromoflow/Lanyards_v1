@@ -128,6 +128,9 @@ class ArtworkDetailsClass {
       textClass.setItalicText(textData.italicText === "1");
       textClass.setUnderlineText(textData.underlineText === "1");
       textClass.setTextPosition(parseFloat(textData.textPosition));
+
+      alert("Clase de textClass:", textClass.constructor.name);
+      alert("¿Tiene refreshTextLanyard?", typeof textClass.refreshTextLanyard);
       textClass.refreshTextLanyard();
       // Mostrar en alert
       /*alert(
