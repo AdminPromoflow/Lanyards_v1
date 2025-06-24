@@ -77,7 +77,6 @@ class ArtworkDetailsClass {
 
     if (Array.isArray(images) && images.length > 0) {
       const imageData = images[0]; // si sólo necesitas el primer objeto
-      alert("entramos");
       imageClass.setTimesImage(parseInt(imageData.timesImage));
       imageClass.setImageSize(parseFloat(imageData.imageSize));
       imageClass.setSpaceBetweenImage(parseFloat(imageData.spaceBetweenImage));
@@ -87,7 +86,7 @@ class ArtworkDetailsClass {
       imageClass.setImagePosition(parseFloat(imageData.imagePosition));
 
       // Aquí puedes hacer algo con imageClass, como almacenarlo o usar sus getters
-      alert(
+      /*alert(
       `Datos de ImageClass:\n` +
       `Times Image: ${imageClass.getTimesImage()}\n` +
       `Image Size: ${imageClass.getImageSize()}\n` +
@@ -96,11 +95,10 @@ class ArtworkDetailsClass {
       `Space Along Lanyard: ${imageClass.getSpaceAlongLanyard()}\n` +
       `Link Image: ${imageClass.getLinkImage()}\n` +
       `Image Position: ${imageClass.getImagePosition()}`
-    );
+    );*/
     } else {
       console.warn("No se encontraron datos de imagen.");
     }
-
 
   }
   manageText(texts){
@@ -112,6 +110,42 @@ class ArtworkDetailsClass {
     <div class="text_lanyard_right" id="text_lanyard_right">
     </div>
     `;
+
+
+
+    if (Array.isArray(texts) && texts.length > 0) {
+      const textData = texts[0]; // solo toma el primer objeto
+
+      textClass.setContentText(textData.contentText);
+      textClass.setTimesText(parseInt(textData.timesText));
+      textClass.setSpaceBetweenText(parseFloat(textData.spaceBetweenText));
+      textClass.setSpaceAlongLanyard(parseFloat(textData.spaceAlongLanyard));
+      textClass.setColourText(textData.colourText);
+      textClass.setFontFamilyText(textData.fontFamilyText);
+      textClass.setSizeText(parseFloat(textData.sizeText));
+      textClass.setBoldText(textData.boldText === "1");
+      textClass.setItalicText(textData.italicText === "1");
+      textClass.setUnderlineText(textData.underlineText === "1");
+      textClass.setTextPosition(parseFloat(textData.textPosition));
+
+      // Mostrar en alert
+      alert(
+        `Datos de TextClass:\n` +
+        `Content Text: ${textClass.getContentText()}\n` +
+        `Times Text: ${textClass.getTimesText()}\n` +
+        `Space Between Text: ${textClass.getSpaceBetweenText()}\n` +
+        `Space Along Lanyard: ${textClass.getSpaceAlongLanyard()}\n` +
+        `Colour Text: ${textClass.getColourText()}\n` +
+        `Font Family: ${textClass.getFontFamilyText()}\n` +
+        `Size Text: ${textClass.getSizeText()}\n` +
+        `Bold: ${textClass.getBoldText()}\n` +
+        `Italic: ${textClass.getItalicText()}\n` +
+        `Underline: ${textClass.getUnderlineText()}\n` +
+        `Text Position: ${textClass.getTextPosition()}`
+      );
+    } else {
+      alert("No se encontraron datos de texto.");
+    }
   }
 
 
