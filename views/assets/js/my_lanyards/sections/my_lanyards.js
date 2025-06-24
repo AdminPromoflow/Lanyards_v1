@@ -113,9 +113,14 @@ class MyLanyardsClass {
     //  alert(JSON.stringify(data["texts"]));
     //  alert(JSON.stringify(data["artworks"]));
 
-  //  artworkDetailsClass.manageLanyardDataJob(data["job"]);
 
-    myLanyardsClass.drawJob(data["job"], data["artworks"]);
+    if (data["artworks"] != false) {
+      artworkDetailsClass.manageLanyardDataJob(data["job"]);
+
+      myLanyardsClass.drawJob(data["job"], data["artworks"]);
+    }
+
+
 
   /*  if (data["images"] != false) {
       artworkDetailsClass.manageLanyardImage(data["images"]);
