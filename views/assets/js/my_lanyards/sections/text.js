@@ -102,6 +102,7 @@ class TextClass {
 
 
   refreshTextLanyard() {
+    alert("refreshhhhh");
     this.addTextLanyard();
     this.modifyTextPosition();
     this.centerTextLanyard();
