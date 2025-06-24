@@ -50,9 +50,13 @@
   width: 80%;
   padding: 5px;
   height: 21.6cm ;
-
   overflow: hidden;
   background-color: gold;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
 }
 .my_lanyards_left_side{
   position: relative;
@@ -68,7 +72,6 @@
   width: 0.48cm;
   background: green;
   margin: 20px 0;
-  display: none;
 }
 
 
