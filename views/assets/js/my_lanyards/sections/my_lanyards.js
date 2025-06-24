@@ -114,6 +114,7 @@ class MyLanyardsClass {
     //  alert(JSON.stringify(data["artworks"]));
 
     if (data["artworks"] != false || data["images"] != false || data["texts"] != false) {
+      alert("entramos");
       myLanyardsClass.drawJobAccessory(data["job"]);
     }
 
