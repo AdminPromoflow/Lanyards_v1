@@ -52,41 +52,35 @@
   overflow-x: scroll;
   left: 50%;
   transform: translateX(-50%);
+  background-color: black;
 }
 .my_lanyards_left_side{
   position: relative;
-  height: 1.44cm;
-  width: 21.6cm;
+  height: 21.6cm ;
+  width: 0.48cm;
   background: orange;
   margin: 20px 0;
 }
+
 .my_lanyards_right_side{
   position: relative;
-  height: 0.48cm;
-  width: 21.6cm;
-  background: orange;
+  height: 21.6cm ;
+  width: 0.48cm;
+  background: green;
   margin: 20px 0;
-
   display: none;
-
 }
 
 
 .my_lanyards_artwork{
   position: absolute;
-
   height: 200%;
-
-
-  background-color: green;
-  transform: rotate(-90deg);
+  background-color: purple;
   transform-origin: top left;
   top: 0px;
   left: 0px;
 }
-.my_lanyards_artwork img{
 
-}
 
 
 

@@ -6,7 +6,7 @@ $jsFile = realpath(__DIR__ . '/../../views/assets/js/my_lanyards/sections/artwor
 $cssVersion = $cssFile && file_exists($cssFile) ? filemtime($cssFile) : time();
 $jsVersion = $jsFile && file_exists($jsFile) ? filemtime($jsFile) : time();
 ?>
-
+ 
 <!-- Link to external stylesheet for styling the section -->
 <link rel="stylesheet" href="/views/assets/css/my_lanyards/sections/artwork_details.css?v=<?= $cssVersion; ?>">
 
