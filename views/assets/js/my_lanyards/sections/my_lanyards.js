@@ -109,9 +109,6 @@ class MyLanyardsClass {
     })
     .then(data => {
     //  alert(JSON.stringify(data));
-    //  alert(JSON.stringify(data["images"]));
-    //  alert(JSON.stringify(data["texts"]));
-    //  alert(JSON.stringify(data["artworks"]));
 
     if (data["artworks"] == false && data["images"] == false && data["texts"] == false) {
       myLanyardsClass.drawJobAccessory(data["job"]);
@@ -127,14 +124,13 @@ class MyLanyardsClass {
     }
 
 
-
     chargingClass.hideShowchargin(false);
 
     })
     .catch(error => {
       // Handle specific errors (from throw in the .then block)
       console.error("Error:", error.message);
-      alert(error.message); // Show the error message in an alert
+    //  alert(error.message); // Show the error message in an alert
       chargingClass.hideShowchargin(false);
 
     });
