@@ -71,7 +71,7 @@ switch ($event->type) {
                 $userInfo = $userModel->getEmailAndNameByIdOrder();
 
 
-                file_put_contents('log.txt', $userInfo . "\n", FILE_APPEND);
+                file_put_contents('log.txt', $userInfo['email'] . "\n", FILE_APPEND);
 
 
                 if ($userInfo) {
