@@ -6,7 +6,7 @@ $jsFile = realpath(__DIR__ . '/../../views/assets/js/my_lanyards/sections/artwor
 $cssVersion = $cssFile && file_exists($cssFile) ? filemtime($cssFile) : time();
 $jsVersion = $jsFile && file_exists($jsFile) ? filemtime($jsFile) : time();
 ?>
- 
+
 <!-- Link to external stylesheet for styling the section -->
 <link rel="stylesheet" href="/views/assets/css/my_lanyards/sections/artwork_details.css?v=<?= $cssVersion; ?>">
 
@@ -22,18 +22,14 @@ $jsVersion = $jsFile && file_exists($jsFile) ? filemtime($jsFile) : time();
   <div class="groupBox_artwork_details">
 
     <div id="my_lanyards_left_side" class="my_lanyards_left_side">
-      <div class="my_lanyards_artwork">
-        <img class="" src="../../views/assets/img/my_lanyards/artwork_details/left_10mm-2.png" alt="">
+      <img class="" src="../../views/assets/img/my_lanyards/artwork_details/left_10mm-2.png" alt="">
 
-      </div>
 
 
     </div>
     <div id="my_lanyards_right_side" class="my_lanyards_right_side">
-      <div class="my_lanyards_artwork">
         <img class="" src="../../views/assets/img/my_lanyards/artwork_details/left_10mm-2.png" alt="">
 
-      </div>
     </div>
 
   </div>
