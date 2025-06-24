@@ -121,11 +121,8 @@ class MyLanyardsClass {
       artworkDetailsClass.manageLanyardDataJobArtwork(data["job"], data["artworks"]);
       myLanyardsClass.drawJobArtwork(data["job"], data["artworks"]);
     }
-    else if  (data["images"] != false) {
-      alert("images")
-    }
-     if  (data["texts"] != false) {
-      alert("texts")
+    else if  (data["images"] != false || data["texts"] != false) {
+      myLanyardsClass.drawJobManual(data["job"]);
     }
 
 
