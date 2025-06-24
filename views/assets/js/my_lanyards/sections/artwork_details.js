@@ -50,17 +50,15 @@ class ArtworkDetailsClass {
     my_lanyards_right_side.innerHTML = ``;
   }
   manageLanyardDataJobManual(data, images, texts){
-    alert("Pues bueno 2");
-
     this.resizeWithLanyard(JSON.parse(data.description));
     this.cleanArtworkManual();
 
     if (images != false) {
-      alert(images);
+      alert(JSON.stringify(images));
       this.manageImage(images);
     }
     if (texts != false) {
-      alert(texts);
+      alert(JSON.stringify(texts));
 
       this.manageText(texts);
     }
