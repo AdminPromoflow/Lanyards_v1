@@ -83,7 +83,7 @@ class ArtworkDetailsClass {
       imageClass.setSpaceAlongLanyard(parseFloat(imageData.spaceAlongLanyard));
       imageClass.setLinkImage(imageData.linkImage);
       imageClass.setImagePosition(parseFloat(imageData.imagePosition));
-      imageClass.refreshImageLanyard();
+      //imageClass.refreshImageLanyard();
       // Aquí puedes hacer algo con imageClass, como almacenarlo o usar sus getters
       /*alert(
       `Datos de ImageClass:\n` +
