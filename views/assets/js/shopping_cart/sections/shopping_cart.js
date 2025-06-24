@@ -15,6 +15,8 @@ class ShoppingCart {
       if (shopping_cart_input_terms_conditions.checked) {
         chargingClass.hideShowchargin(true);
         window.open("../../views/checkout/index.php", "_self");
+        chargingClass.hideShowchargin(false);
+
       }
       else {
         alert("Please confirm your acceptance of the terms and conditions in order to continue. ");
@@ -86,7 +88,7 @@ class ShoppingCart {
       throw new Error("Network error.");
     })
     .then(data => {
-      alert(JSON.stringify(data));
+    //  alert(JSON.stringify(data));
 
       if (data != false) {
         shoppingCart.addJobsToOrder(data);
