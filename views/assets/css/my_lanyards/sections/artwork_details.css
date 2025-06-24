@@ -58,7 +58,8 @@
   flex-wrap: nowrap;
 }
 .my_lanyards_left_side{
-  position: relative;
+  position: absolute;
+  left: 30vw;
   height: 21.6cm ;
   width: 0.48cm;
   background: orange;
@@ -66,7 +67,8 @@
 }
 
 .my_lanyards_right_side{
-  position: relative;
+  position: absolute;
+  right: 30vw;
   height: 21.6cm ;
   width: 0.48cm;
   background: green;
