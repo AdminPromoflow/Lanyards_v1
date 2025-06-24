@@ -10,19 +10,7 @@ class ArtworkDetailsClass {
   showSection(action){
     section_artwork_details.style.display = action;
   }
-  manageLanyardDataJob(data, artwork){
-
-    const lefttLink = (artwork[0].linkLeftImage);
-    const rightLink = (artwork[0].linkRightImage);
-
-    const  my_lanyards_left_side = document.getElementById('my_lanyards_left_side');
-    const  my_lanyards_right_side = document.getElementById('my_lanyards_right_side');
-
-    const descriptionObj = JSON.parse(data.description);
-
-  //  alert(JSON.stringify(descriptionObj.width.value));
-
-
+  resizeWithLanyard(descriptionObj){
     if (descriptionObj.width.value == "10mm") {
       my_lanyards_left_side.style.height = "0.48cm";
       my_lanyards_right_side.style.height = "0.48cm";
@@ -43,8 +31,19 @@ class ArtworkDetailsClass {
       my_lanyards_left_side.style.height = "1.44cm";
       my_lanyards_right_side.style.height = "1.44cm";
     }
+  }
+  manageLanyardDataJobArtwork(data, artwork){
 
+    const lefttLink = (artwork[0].linkLeftImage);
+    const rightLink = (artwork[0].linkRightImage);
 
+    const  my_lanyards_left_side = document.getElementById('my_lanyards_left_side');
+    const  my_lanyards_right_side = document.getElementById('my_lanyards_right_side');
+
+    this.resizeWithLanyard(JSON.parse(data.description));
+
+    my_lanyards_left_side.innerHTML = ``;
+    my_lanyards_right_side.innerHTML = ``;
 
     my_lanyards_left_side.innerHTML = `<img class="" src="../../${lefttLink}" alt="">`;
     my_lanyards_right_side.innerHTML = `<img class="" src="../../${rightLink}" alt="">`;

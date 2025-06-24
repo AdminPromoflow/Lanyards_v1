@@ -118,7 +118,7 @@ class MyLanyardsClass {
     }
 
     if (data["artworks"] != false) {
-      artworkDetailsClass.manageLanyardDataJob(data["job"], data["artworks"]);
+      artworkDetailsClass.manageLanyardDataJobArtwork(data["job"], data["artworks"]);
       myLanyardsClass.drawJobArtwork(data["job"], data["artworks"]);
     }
     else if  (data["images"] != false) {
