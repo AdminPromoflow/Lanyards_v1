@@ -55,17 +55,16 @@ class ArtworkDetailsClass {
 
     if (images != false) {
     //  alert(JSON.stringify(images));
-      this.manageImage(images);
+      this.manageImage(images, descriptionObj);
     }
     if (texts != false) {
     //  alert(JSON.stringify(texts));
-      this.manageText(texts);
+      this.manageText(texts, descriptionObj);
     }
 
   }
 
-  manageImage(images){
-    alert("Entramos images");
+  manageImage(images, descriptionObj){
     my_lanyards_left_side.innerHTML = `
     <div class="img_lanyard_left" id="img_lanyard_left">
     </div>
@@ -74,6 +73,7 @@ class ArtworkDetailsClass {
     <div class="img_lanyard_right" id="img_lanyard_right">
     </div>
     `;
+    this.resizeWithLanyardImage(descriptionObj);
 
     const imageClass = new ImageClass();
 
@@ -106,8 +106,59 @@ class ArtworkDetailsClass {
     }
 
   }
-  manageText(texts){
-    alert("Entramos texts");
+  resizeWithLanyardImage(descriptionObj){
+
+    const  img_lanyard_left = document.getElementById('img_lanyard_left');
+    const  img_lanyard_right = document.getElementById('img_lanyard_right');
+
+    if (descriptionObj.width.value == "10mm") {
+      img_lanyard_left.style.height = "0.48cm";
+      img_lanyard_right.style.height = "0.48cm";
+    }
+    else if (descriptionObj.width.value == "15mm") {
+      img_lanyard_left.style.height = "0.72cm";
+      img_lanyard_right.style.height = "0.72cm";
+    }
+    else if (descriptionObj.width.value == "20mm") {
+      img_lanyard_left.style.height = "0.96cm";
+      img_lanyard_right.style.height = "0.96cm";
+    }
+    else if (descriptionObj.width.value == "25mm") {
+      img_lanyard_left.style.height = "1.2cm";
+      img_lanyard_right.style.height = "1.2cm";
+    }
+    else if (descriptionObj.width.value == "30mm") {
+      img_lanyard_left.style.height = "1.44cm";
+      img_lanyard_right.style.height = "1.44cm";
+    }
+  }
+  resizeWithLanyardText(descriptionObj){
+
+    const  text_lanyard_left = document.getElementById('text_lanyard_left');
+    const  text_lanyard_right = document.getElementById('text_lanyard_right');
+
+    if (descriptionObj.width.value == "10mm") {
+      text_lanyard_left.style.height = "0.48cm";
+      text_lanyard_right.style.height = "0.48cm";
+    }
+    else if (descriptionObj.width.value == "15mm") {
+      text_lanyard_left.style.height = "0.72cm";
+      text_lanyard_right.style.height = "0.72cm";
+    }
+    else if (descriptionObj.width.value == "20mm") {
+      text_lanyard_left.style.height = "0.96cm";
+      text_lanyard_right.style.height = "0.96cm";
+    }
+    else if (descriptionObj.width.value == "25mm") {
+      text_lanyard_left.style.height = "1.2cm";
+      text_lanyard_right.style.height = "1.2cm";
+    }
+    else if (descriptionObj.width.value == "30mm") {
+      text_lanyard_left.style.height = "1.44cm";
+      text_lanyard_right.style.height = "1.44cm";
+    }
+  }
+  manageText(texts, descriptionObj){
 
     my_lanyards_left_side.innerHTML = `
     <div class="text_lanyard_left" id="text_lanyard_left">
@@ -117,6 +168,9 @@ class ArtworkDetailsClass {
     <div class="text_lanyard_right" id="text_lanyard_right">
     </div>
     `;
+
+    this.resizeWithLanyardText(descriptionObj);
+
 
 
     const textClass = new TextClass();
