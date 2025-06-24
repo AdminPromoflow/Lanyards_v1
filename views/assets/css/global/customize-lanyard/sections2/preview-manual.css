@@ -643,9 +643,6 @@ overflow: hidden;
 
 
 
-
-
-
 .img_lanyard_left {
   position: absolute;
   top: -50%;
@@ -675,7 +672,7 @@ overflow: hidden;
 
   transform: rotate(180deg);
   overflow: hidden;
-  
+
 
 }
 

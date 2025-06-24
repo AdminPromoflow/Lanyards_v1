@@ -54,20 +54,36 @@ class ArtworkDetailsClass {
     this.cleanArtworkManual();
 
     if (images != false) {
+      alert(images);
       this.manageImage(images);
     }
     if (texts != false) {
+      alert(texts);
+
       this.manageText(texts);
     }
 
   }
 
   manageImage(images){
-    my_lanyards_left_side
-    my_lanyards_right_side
+    my_lanyards_left_side.innerHTML = `
+    <div class="img_lanyard_left" id="img_lanyard_left">
+    </div>
+    `;
+    my_lanyards_right_side.innerHTML = `
+    <div class="img_lanyard_right" id="img_lanyard_right">
+    </div>
+    `;
   }
   manageText(texts){
-
+    my_lanyards_left_side.innerHTML = `
+    <div class="text_lanyard_left" id="text_lanyard_left">
+    </div>
+    `;
+    my_lanyards_right_side.innerHTML = `
+    <div class="text_lanyard_right" id="text_lanyard_right">
+    </div>
+    `;
   }
 
 

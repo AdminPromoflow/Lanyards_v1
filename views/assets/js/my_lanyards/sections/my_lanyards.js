@@ -343,8 +343,6 @@ class MyLanyardsClass {
     var linkRight = "https://lanyardsforyou.com/" +right;
 
 
-  //  alert(linkLeft + "          " +  linkRight);
-
   window.open(linkLeft, '_blank');
   window.open(linkRight, '_blank');
 

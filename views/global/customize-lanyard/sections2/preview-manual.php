@@ -37,6 +37,8 @@ function get_file_version($relative_path) {
     </div>
 
   </div>
+
+  </div>
 </section>
 
 <script src="../../views/assets/js/customize-lanyard/sections2/preview-manual.js?v=<?php echo get_file_version('../../views/assets/js/customize-lanyard/sections2/preview-manual.js'); ?>" type="text/javascript"></script>
