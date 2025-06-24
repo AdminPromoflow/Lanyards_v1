@@ -71,19 +71,12 @@ switch ($event->type) {
                 $userInfo = $userModel->getEmailAndNameByIdOrder();
 
 
-                file_put_contents('log.txt', $userInfo['email'] . "\n", FILE_APPEND);
-
-
-                if ($userInfo) {
-
                     $emailSender = new EmailSender();
                     $emailSender->setRecipientEmail($userInfo['email']);
                     $emailSender->setRecipientName($userInfo['name']);
 
                     $emailSent = $emailSender->sendEmailSuccesssfullOrder();
-                } else {
-                    echo "Error, we did not find: " . $orderId;
-                }
+
 
 
 
