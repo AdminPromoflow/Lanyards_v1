@@ -1,4 +1,4 @@
-class this {
+class Image {
     constructor() {
       this.timesImage = 3;
       this.imageSize = 10;
@@ -253,4 +253,4 @@ class this {
     }
 }
 
-const this = new this();
+const image = new Image();

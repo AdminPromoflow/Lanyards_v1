@@ -1,4 +1,4 @@
-class this {
+class Text {
 
   constructor() {
     this.contentText = "";
@@ -102,7 +102,6 @@ class this {
 
 
   refreshTextLanyard() {
-    alert("entramos");
     this.addTextLanyard();
     this.modifyTextPosition();
     this.centerTextLanyard();
@@ -271,4 +270,4 @@ class this {
 
 }
 
-const this = new this();
+const text = new Text();
