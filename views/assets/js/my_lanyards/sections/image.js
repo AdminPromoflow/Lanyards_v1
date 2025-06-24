@@ -253,4 +253,4 @@ class Image {
     }
 }
 
-const image = new Image();
+const imageClass = new Image();

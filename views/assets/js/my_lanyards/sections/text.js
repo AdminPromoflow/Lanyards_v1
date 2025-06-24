@@ -270,4 +270,4 @@ class Text {
 
 }
 
-const text = new Text();
+const textClass = new Text();
