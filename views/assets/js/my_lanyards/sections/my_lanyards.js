@@ -119,6 +119,12 @@ class MyLanyardsClass {
 
       myLanyardsClass.drawJob(data["job"], data["artworks"]);
     }
+    else if  (data["images"] != false) {
+      alert("images")
+    }
+    else if  (data["texts"] != false) {
+      alert("texts")
+    }
 
 
 
