@@ -18,7 +18,6 @@ $jsFileText = realpath(__DIR__ . '/../../views/assets/js/my_lanyards/sections/te
 $cssVersion = $cssFile && file_exists($cssFile) ? filemtime($cssFile) : time();
 $jsVersion = $jsFile && file_exists($jsFile) ? filemtime($jsFile) : time();
 ?>
-<link rel="stylesheet" href="../../views/assets/css/global/customize-lanyard/sections2/preview-manual.css?v=<?php echo get_file_version('../../views/assets/css/global/customize-lanyard/sections2/preview-manual.css'); ?>">
 
 <!-- Link to external stylesheet for styling the section -->
 <link rel="stylesheet" href="/views/assets/css/my_lanyards/sections/artwork_details.css?v=<?= $cssVersion; ?>">

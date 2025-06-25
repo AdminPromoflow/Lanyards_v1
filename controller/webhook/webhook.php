@@ -71,11 +71,10 @@ switch ($event->type) {
                 $userInfo = $userModel->getEmailAndNameByIdOrder();
 
 
-                    $emailSender = new EmailSender();
-                    $emailSender->setRecipientEmail($userInfo['email']);
-                    $emailSender->setRecipientName($userInfo['name']);
-
-                    $emailSent = $emailSender->sendEmailSuccesssfullOrder();
+                $emailSender = new EmailSender();
+                $emailSender->setRecipientEmail($userInfo['email']);
+                $emailSender->setRecipientName($userInfo['name']);
+                $emailSent = $emailSender->sendEmailSuccesssfullOrder();
 
 
 
