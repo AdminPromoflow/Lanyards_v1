@@ -9,16 +9,16 @@
     <a href="../Home/index.php">&lt; Home</a>
     <h1>About Us</h1>
     <p>
-    Ullman Sails is a global sailmaking super power, but we would hate to think that this is all we are.<br><br>
-    A trip to the sailmaker used to mean a trip to the sail loft, a few pleasant hours
-    looking at fabrics and machinery. A small amount of good natured haggling and then
-    a handshake to seal the deal. A few weeks later the new sail would be ready and a
-    short trip out to check the sail would ensue.<br><br>
-    Many people have maligned the passing of these days as now modern technology has
-    lead to orders being placed online. Modern fabrics, computer design and vast data
-    banks of empirical information have decreased the need for the sailmaker to visit
-    the yacht. It appears that the days of customer service have been replaced with
-    the email and standardisation.<br><br></p>
+      Ullman Sails is a global sailmaking superpower, but we would hate to think that's all we are.<br><br>
+    A trip to the sailmaker used to mean a visit to the sail loft — a few pleasant
+    hours spent looking at fabrics and machinery, a bit of good-natured haggling,
+    and then a handshake to seal the deal. A few weeks later, the new sail would be
+    ready, followed by a short trip out to test it.<br><br>
+    Many people lament the passing of those days, as modern technology has now led
+    to orders being placed online. Modern fabrics, computer-aided design, and vast
+    databases of empirical information have reduced the need for the sailmaker to
+    visit the yacht. It seems the days of personal customer service have been replaced
+    by email and standardisation.<br><br>
   </div>
 
   <!--  **********************Cart perfiles************************ -->
@@ -128,17 +128,18 @@
 
     <div class="text_aboutUs">
       <p>
-        We at Ullman Sails feel that the days of customer service and a good relationship
-        between sailmaker and client should not be put out to pasture just yet. We pride
-        ourselves on the technology that we incorporate into our sails but it is no substitute
-        for knowing the boat and the client. It is this that sets us apart from other sail lofts.<br><br>
+        We at Ullman Sails feel that the days of customer service and a good
+        relationship between sailmaker and client should not be put out to pasture
+        just yet. We pride ourselves on the technology that we incorporate into
+        our sails, but it is no substitute for knowing the boat and the client.
+        It is this that sets us apart from other sail lofts.<br><br>
 
-        This is why we strive to provide you with not only the fastest sails on the planet
-        but a great service and a feeling that all you have to do is ring and ask, no matter what the question.<br><br>
+        This is why we strive to provide you with not only the fastest sails on the planet,
+        but also great service and a feeling that all you have to do is ring and ask, no matter what the question.<br><br>
 
-        Any boat should be viewed as a journey, from initial purchase through preparation,
-         maintenance and through to the achieving of the goal and eventual sale of the vessel.
-          At Ullman Sails we have a range of products aimed at helping you achieve those dreams.<br><br></p>
+        Any boat should be viewed as a journey — from initial purchase through preparation,
+        maintenance, and through to the achievement of the goal and eventual sale of the vessel.
+        At Ullman Sails, we have a range of products aimed at helping you achieve those dreams.<br> </p>
     </div>
 
 </section>

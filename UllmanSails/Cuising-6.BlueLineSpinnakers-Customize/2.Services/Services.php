@@ -98,7 +98,7 @@ background-color: rgba(197, 35, 74, .3);
   text-decoration: underline;
   opacity: 1;
 }
-.comeBack {
+.comeBackBlue {
   all: unset;
   color: #202E52;
   font-weight: 600;
@@ -107,7 +107,7 @@ background-color: rgba(197, 35, 74, .3);
   text-align: left;
   width: 100vw;
 }
-.comeBack:hover{
+.comeBackBlue:hover{
   text-decoration: underline;
 }
 .buttonTitleBlue{
@@ -128,14 +128,9 @@ background-color: rgba(197, 35, 74, .3);
    font-weight: 300;
    color: #F2F2F2;
 }
-
 </style>
-
 <section class="textblue">
-
-
-
-  <a class="comeBack"href="../Racing-4.RedLineSpinnakers/index.php">&lt; Blue Line Spinnakers</a>
+  <a class="comeBackBlue"href="../Racing-4.RedLineSpinnakers/index.php">&lt; Blue Line Spinnakers</a>
   <div class="servicesblue">
 <h1>Custom Spinnaker Graphics</h1>
 <h2>Want to customise your sails?</h2>
@@ -151,5 +146,4 @@ background-color: rgba(197, 35, 74, .3);
   </div>
 </section>
 <script type="textblue/javascript">
-
 </script>

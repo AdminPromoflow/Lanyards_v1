@@ -10,7 +10,7 @@
 .container_img{
   position: relative;
   height: 100%;
-  width: 500vw;
+  width: 400vw;
   left: 0;
   display: flex;
   align-items: center;
@@ -27,6 +27,7 @@
 
   display: flex;
   align-items: center;
+
   justify-content: center;
   background-position: center;
   background-repeat: no-repeat;
@@ -34,21 +35,18 @@
   z-index: 2;
 }
 .img_slider:nth-child(1){
-  background-image: url("../../Home/1.Slider/img/img3.jpg");
+  background-image: url("../../Home/1.Slider/img/thumbnail.jpg");
 }
 .img_slider:nth-child(2){
-  background-image: url("../../Home/1.Slider/img/img2.jpg");
+  background-image: url("../../Home/1.Slider/img/SlideHome.jpg");
 }
 .img_slider:nth-child(3){
-  background-image: url("../../Home/1.Slider/img/img1.jpg");
-
-}
-.img_slider:nth-child(4){
   background-image: url("../../Home/1.Slider/img/img4.jpg");
 }
-.img_slider:nth-child(5){
-  background-image: url("../../Home/1.Slider/img/img5.jpg");
+.img_slider:nth-child(4){
+  background-image: url("../../Covers/1.Slider/SlideHome.jpg");
 }
+
 /*************Flechas left*************/
 .slider_arrow{
   position: absolute;
@@ -73,39 +71,36 @@
 .data_slider {
   position: absolute;
   width: 80%;
-  height: 70%;
-
-  margin: auto;
+  height: 100%;
+  padding: 3rem;
   min-width: 250px;
   min-height: 500px;
   z-index: 10;
   text-align: pretty;
 }
 .data_slider h3{
-  font-size: clamp(.8rem, 1.3vw, 1.4rem);
+  font-size: clamp(1rem, 1.3vw, 2rem);
   letter-spacing: 3px;
   color: #C5234A;
   text-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
   margin: 0;
 }
 .data_slider h1{
-  font-size: clamp(2rem, 5vw, 7rem);
+  font-size: clamp(2rem, 4vw, 5rem);
   font-weight: bold;
   line-height: 1.3em;
   word-spacing: 3px;
   color: #005598;
   text-shadow: 3px 2px 4px rgba(0, 0, 0, .5);
-
 }
 .data_slider h2 {
-  font-size: clamp(1.5rem, 4vw, 5rem);
+  font-size: clamp(1rem, 3vw, 3rem);
   font-weight: bold;
   line-height: 1.3em;
   color: #B0B3AF;
   text-shadow: 1px 1px 0px black;
   margin: 0;
 }
-
 .line_slider{
   position: relative;
   width: 70%;
@@ -127,7 +122,7 @@
   cursor: pointer;
   border: 1px solid #202E52;
   box-shadow: 3px 3px 0px black;
-  margin: 40vh 0 0 0;
+  margin: 45vh 0 0 0;
 
   text-align: center;
   font-size: clamp(1.2rem, 1.6vw, 1.8rem);
@@ -137,7 +132,6 @@
   background-color: #5E6771;
   color: white;
 }
-
 .data_slider:nth-child(1)  h1,
 .data_slider:nth-child(1)  h2,
 .data_slider:nth-child(1)  h3,

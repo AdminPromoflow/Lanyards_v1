@@ -33,7 +33,7 @@
     <div class="flex_items_quote">
       <a class="link_quote" href="../New_Repair_Quote/index.php">
         <div class=" button_quote button_quote2">
-          <h3>Repair Sail Quote</h3>
+          <h3>Repair Quote</h3>
         </div>
       </a>
     </div>

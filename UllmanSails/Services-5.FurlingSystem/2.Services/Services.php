@@ -1,114 +1,119 @@
 <style media="screen">
-.text{
+.text {
   position: relative;
   background-color: #FDF6F8;
-  padding: 4vw 6vw  4vw 6vw;
+  padding: 4vw 6vw;
   overflow: hidden;
-
   display: flex;
   justify-content: center;
   flex-direction: column;
-
 }
-.text h1{
+
+.text h1 {
   color: #005598;
-  padding: 0vw 0 2vw 0;
+  padding: 0 0 2vw 0;
   font-size: 2.3em;
   text-align: center;
-
 }
-.text p{
+
+.text p {
   position: relative;
-  text-align:justify;
+  text-align: justify;
   font-size: 1.2em;
-  margin: 1vw 0 1vw 0;
-
+  margin: 1vw 0;
 }
-.text  ul{
+
+.text ul {
   width: 100%;
   font-size: 1.2em;
-  margin: 0 0 0 25px;
+  margin-left: 25px;
   text-align: left;
 }
-.link_a{
-  position: relative;
-  all: unset ;
-  margin-left: -20px;
-  color: #202E52 ;
-  font-weight: 600 ;
-  font-size: 1.1em ;
-  cursor: pointer ;
-  text-align: left ;
-  width: 100vw ;
-}
-.link_a:hover{
-  text-decoration: underline;
-}
-.link_a:hover{
-  text-decoration: underline;
-}
-.link_contact_us{
-  position: relative;
-  background-color: red;
-  text-decoration: none;
+
+.link_a {
   all: unset;
+  margin-left: -20px;
+  color: #202E52;
+  font-weight: 600;
+  font-size: 1.1em;
+  cursor: pointer;
+  text-align: left;
+  width: 100vw;
 }
 
-.box-services{
+.link_a:hover {
+  text-decoration: underline;
+}
+
+.link_contact_us {
+  all: unset;
+  cursor: pointer;
+}
+
+.box-services {
   position: relative;
   width: 300px;
   height: 200px;
   min-width: 300px;
   min-height: 200px;
   margin: 10px 0;
-
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover;  /* Resize the background image to cover the entire container */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.buttonTitle{
-   position: relative;
-   width: 200px;
-   background-color: #005598;
-   padding: 14px 0px;
-   cursor: pointer;
-   margin: 50px  auto 0px auto;
 
-   border: 1px solid #202E52;
+.buttonTitle {
+  position: relative;
+  width: 200px;
+  background-color: #005598;
+  padding: 14px 0;
+  cursor: pointer;
+  margin: 50px auto 0 auto;
+  border: 1px solid #202E52;
 }
-.buttonTitle:hover{
+
+.buttonTitle:hover {
   background-color: #202E52;
 }
-.buttonTitle h3{
-   text-align: center;
-   font-size: 1.3em;
-   font-weight: 500;
-   color: #F2F2F2;
+
+.buttonTitle h3 {
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: 500;
+  color: #F2F2F2;
 }
 </style>
 
 <section class="text">
-  <a class="link_a"href="../Services/index.php">&lt; Services</a>
-    <h1>Seamless Sailing with Expert Furling System Installation</h1>
-    <p>Discover the pinnacle of convenience and performance with furling system installation services at [Your Company Name]. Our skilled technicians specialize in seamlessly integrating these advanced systems into your sailboat, enhancing your sailing experience with effortless sail handling. Whether you're a seasoned sailor or a novice, our team ensures that your furling system is meticulously installed for optimal functionality and reliability. Say goodbye to the complexities of manual sail management and embrace the ease of furling systems that make every voyage a breeze. Choose [Your Company Name] for expert furling system installation, where precision and innovation set the course for smoother, more enjoyable seafaring journeys.</p>
-    <a class="link_contact_us" href="../ContactUs/index.php">
-      <div class="buttonTitle">
-        <h3 >Contact us</h3>
-      </div>
-    </a>
-
+  <a class="link_a" href="../Services/index.php">&lt; Services</a>
+  <h1>Seamless Sailing with Expert Furling System Installation</h1>
+  <p>
+    Experience the ultimate in convenience and performance with expert furling system installation from Ullman Sails.
+    Our skilled technicians specialise in the seamless integration of advanced furling systems into your sailboat,
+    making sail handling significantly easier and more efficient.
+  </p>
+  <p>
+    Whether you're a seasoned sailor or just beginning your nautical journey, our team ensures your system is installed
+    with precision, delivering reliable and smooth operation in all conditions. Say goodbye to the hassle of manual
+    sail management and embrace the simplicity of automated furling systems.
+  </p>
+  <p>
+    Choose Ullman Sails for expert furling system installation—where precision, innovation, and superior service come
+    together to elevate your sailing adventures.
+  </p>
+  <a class="link_contact_us" href="../ContactUs/index.php">
+    <div class="buttonTitle">
+      <h3>Contact us</h3>
+    </div>
+  </a>
 </section>
 
 <script type="text/javascript">
 const buttonTitle = document.querySelectorAll(".OpenContactUs");
 
-for (let i = 0; i < buttonTitle.length; i++) {
- buttonTitle[i].addEventListener("click", function(){
+buttonTitle.forEach(button => {
+  button.addEventListener("click", () => {
     window.open("../ContactUs/index.php", "_self");
- })
-}
-
-
-
-
+  });
+});
 </script>

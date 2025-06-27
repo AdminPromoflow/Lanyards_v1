@@ -97,7 +97,6 @@
   font-weight: 200;
   color: white;
 }
-
 </style>
 <section  class="customize" id="customize">
   <div class="radioButtons">
@@ -440,7 +439,7 @@ const coloursValues = ["rgb(233, 64, 143)", "#E94290", "#EA582A", "#F6A32E", "#F
 
 
     var svgElement = divElement.querySelector('svg');
- 
+
         var svgData = new XMLSerializer().serializeToString(svgElement);
 
         var canvas = document.createElement('canvas');
@@ -479,15 +478,5 @@ const coloursValues = ["rgb(233, 64, 143)", "#E94290", "#EA582A", "#F6A32E", "#F
 
 
 })
-
-
-
-
-
-
-
-
-
-
 
 </script>

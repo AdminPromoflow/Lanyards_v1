@@ -24,7 +24,5 @@
 
 <section id="slideHome" class="slideHome">
   <div class="gradientSlideHome">
-
-
   </div>
 </section>

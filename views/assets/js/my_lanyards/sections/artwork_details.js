@@ -138,38 +138,43 @@ class ArtworkDetailsClass {
   }
   resizeWithLanyardText(descriptionObj){
 
-    const  text_lanyard_left = document.getElementById('text_lanyard_left');
-    const  text_lanyard_right = document.getElementById('text_lanyard_right');
+    const  printable_area_text_lanyard_left = document.getElementById('printable_area_text_lanyard_left');
+    const  printable_area_text_lanyard_right = document.getElementById('printable_area_text_lanyard_right');
 
     if (descriptionObj.width.value == "10mm") {
-      text_lanyard_left.style.height = "0.48cm";
-      text_lanyard_right.style.height = "0.48cm";
+      printable_area_text_lanyard_left.style.height = "0.48cm";
+      printable_area_text_lanyard_right.style.height = "0.48cm";
     }
     else if (descriptionObj.width.value == "15mm") {
-      text_lanyard_left.style.height = "0.72cm";
-      text_lanyard_right.style.height = "0.72cm";
+      printable_area_text_lanyard_left.style.height = "0.72cm";
+      printable_area_text_lanyard_right.style.height = "0.72cm";
     }
     else if (descriptionObj.width.value == "20mm") {
-      text_lanyard_left.style.height = "0.96cm";
-      text_lanyard_right.style.height = "0.96cm";
+      printable_area_text_lanyard_left.style.height = "0.96cm";
+      printable_area_text_lanyard_right.style.height = "0.96cm";
     }
     else if (descriptionObj.width.value == "25mm") {
-      text_lanyard_left.style.height = "1.2cm";
-      text_lanyard_right.style.height = "1.2cm";
+      printable_area_text_lanyard_left.style.height = "1.2cm";
+      printable_area_text_lanyard_right.style.height = "1.2cm";
     }
     else if (descriptionObj.width.value == "30mm") {
-      text_lanyard_left.style.height = "1.44cm";
-      text_lanyard_right.style.height = "1.44cm";
+      printable_area_text_lanyard_left.style.height = "1.44cm";
+      printable_area_text_lanyard_right.style.height = "1.44cm";
     }
   }
   manageText(texts, descriptionObj){
 
     my_lanyards_left_side.innerHTML = `
-    <div class="text_lanyard_left" id="text_lanyard_left">
+    <div class="printable_area_text_lanyard_left" id="printable_area_text_lanyard_left">
+      <div class="text_lanyard_left" id="text_lanyard_left">
+      </div>
     </div>
     `;
+
     my_lanyards_right_side.innerHTML = `
-    <div class="text_lanyard_right" id="text_lanyard_right">
+    <div class="printable_area_text_lanyard_right" id="printable_area_text_lanyard_right">
+      <div class="text_lanyard_right" id="text_lanyard_right">
+      </div>
     </div>
     `;
 

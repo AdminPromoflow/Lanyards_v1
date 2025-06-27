@@ -1,102 +1,90 @@
 <style media="screen">
-.services{
-  position: relative;
+.services {
   padding: 0;
   margin: 0;
   border: 0;
   overflow: hidden;
 }
-.text{
-  position: relative;
-  background-color: #FDF6F8;
-  padding: 4vw 6vw  4vw 6vw;
 
+.text {
+  background-color: #FDF6F8;
+  padding: 4vw 6vw;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
-.text h1{
+
+.text h1 {
   color: #005598;
-  padding: 0vw 0 2vw 0;
+  padding-bottom: 2vw;
   font-size: 2.3em;
   text-align: center;
 }
-.text p{
-  position: relative;
-  text-align:justify;
+
+.text p {
+  text-align: justify;
   padding-left: 1vw;
   font-size: 1.2em;
-  left: 0px;
   width: 100%;
-  margin: 1vw 0 1vw 0;
+  margin: 1vw 0;
 }
-.link_a{
-  position: relative;
-  all: unset ;
+
+.link_a {
+  all: unset;
   margin-left: 100px;
-  color: #202E52 ;
-  font-weight: 600 ;
-  font-size: 1.1em ;
-  cursor: pointer ;
-  text-align: left ;
-  width: 100vw ;
+  color: #202E52;
+  font-weight: 600;
+  font-size: 1.1em;
+  cursor: pointer;
+  text-align: left;
+  width: 100vw;
 }
-.link_a:hover{
+
+.link_a:hover {
   text-decoration: underline;
 }
-.link_contact_us{
-  position: relative;
-  background-color: red;
-  text-decoration: none;
+
+.link_contact_us {
   all: unset;
+  cursor: pointer;
 }
-.buttonTitle{
-   position: relative;
-   width: 200px;
-   background-color: #005598;
-   padding: 14px 0px;
-   cursor: pointer;
-   border: 1px solid #202E52;
- }
- .buttonTitle:hover{
-   background-color: #202E52;
- }
- .buttonTitle h3{
-   text-align: center;
-   font-size: 1.3em;
-   font-weight: 500;
-   color: #F2F2F2;
- }
 
+.buttonTitle {
+  width: 200px;
+  background-color: #005598;
+  padding: 14px 0;
+  cursor: pointer;
+  border: 1px solid #202E52;
+  text-align: center;
+}
+
+.buttonTitle:hover {
+  background-color: #202E52;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.buttonTitle h3 {
+  font-size: 1.3em;
+  font-weight: 500;
+  color: #F2F2F2;
+}
 </style>
+
 <section class="services">
-
   <div class="text">
-    <a class="link_a"  href="../Covers/index.php">&lt; Boat Covers</a>
-  <h1>Jib Sock</h1>
-  <p>
-    A jib sock offers simple, effective protection for your furled headsail—ideal if you prefer not to add the weight of a UV strip along the leech and foot. It shields your genoa from sun and weather, helping extend its life. Available in a range of colours and made to suit your rig—just get in touch to find the right fit.
- </p>
- <a class="link_contact_us" href="../ContactUs/index.php">
-   <div class="buttonTitle">
-     <h3 >Contact us</h3>
-   </div>
- </a>
-</div>
-
+    <a class="link_a" href="../Covers/index.php">&lt; Boat Covers</a>
+    <h1>Jib Sock</h1>
+    <p>
+      A jib sock offers simple, effective protection for your furled headsail—ideal
+      if you prefer not to add the weight of a UV strip along the leech and foot.
+      It shields your genoa from sun and weather, helping extend its life. Available
+      in a range of colours and made to suit your rig—just get in touch to find the right fit.<br><br>
+    </p>
+    <a class="link_contact_us" href="../ContactUs/index.php">
+      <div class="buttonTitle">
+        <h3>Contact Us</h3>
+      </div>
+    </a>
+  </div>
 </section>
-
-<script type="text/javascript">
-const buttonTitle = document.querySelectorAll(".OpenContactUs");
-
-for (let i = 0; i < buttonTitle.length; i++) {
- buttonTitle[i].addEventListener("click", function(){
-    window.open("../ContactUs/index.php", "_self");
- })
-}
-
-
-
-
-</script>
