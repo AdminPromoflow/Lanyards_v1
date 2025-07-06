@@ -27,7 +27,7 @@ class Checkout {
       if (valid) {
         checkout.makeAjaxRequestSaveOrder();
       } else {
-        alert("Por favor, completa todos los campos obligatorios.");
+        alert("PPlease complete all the required fields.");
       }
     });
 
