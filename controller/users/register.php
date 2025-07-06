@@ -78,6 +78,31 @@ class ApiHandlerRegister {
 
 
             if ($userCreated) {
+
+
+              $connection = new Database();
+              $provided = new Addresses_Model($connection);
+
+              if (session_status() === PHP_SESSION_NONE) {
+                  session_start();
+              }
+               $email = $_SESSION['email'];
+               $provided->setUserEmail($email);
+
+            //   $address1Array = (array) $data->address1;
+            //   $address2Array = (array) $data->address2;
+
+              // $provided->setAddress1($address1Array);
+
+              // $provided->setAddress2($address2Array);
+
+              $result = $provided->createProvidedInformation();
+
+
+
+
+
+
               $emailSender = new EmailSender();
               $emailSender->setRecipientEmail($validatedData['email']);
               $emailSender->setRecipientName($validatedData['username']);
