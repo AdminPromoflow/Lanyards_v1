@@ -80,7 +80,7 @@ class ApiHandlerRegister {
             if ($userCreated) {
 
 
-              $connection = new Database();
+          /*    $connection = new Database();
               $provided = new Addresses_Model($connection);
 
               if (session_status() === PHP_SESSION_NONE) {
@@ -96,7 +96,7 @@ class ApiHandlerRegister {
 
               // $provided->setAddress2($address2Array);
 
-              $result = $provided->createProvidedInformation();
+              $result = $provided->createProvidedInformation();*/
 
 
 
