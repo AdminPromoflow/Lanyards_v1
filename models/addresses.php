@@ -21,7 +21,7 @@ class Addresses_Model {
             'town_city' => $data['town_city'] ?? null,
             'street_address_1' => $data['street_address_1'] ?? null,
             'postcode' => $data['postcode'] ?? null,
-            'email_address' => $data['email_address'] ?? null,
+            'email_address' => $data['email_address'] ?? null
         ];
     }
 

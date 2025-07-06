@@ -82,21 +82,34 @@ class ApiHandlerRegister {
 
               $connection = new Database();
               $provided = new Addresses_Model($connection);
-
-
               $provided->setUserEmail($validatedData['email']);
-
-            //   $address1Array = (array) $data->address1;
-            //   $address2Array = (array) $data->address2;
-
-              // $provided->setAddress1($address1Array);
-
-              // $provided->setAddress2($address2Array);
-
+              $address1 = [
+                  'first_name' => "",
+                  'last_name' => "",
+                  'company_name' => "",
+                  'phone' => "",
+                  'country' => "",
+                  'state' => "",
+                  'town_city' => "",
+                  'street_address_1' => "",
+                  'postcode' => "",
+                  'email_address' => "",
+              ];
+              $address2 = [
+                  'first_name' => "",
+                  'last_name' => "",
+                  'company_name' => "",
+                  'phone' => "",
+                  'country' => "",
+                  'state' => "",
+                  'town_city' => "",
+                  'street_address_1' => "",
+                  'postcode' => "",
+                  'email_address' => "",
+              ];
+              $provided->setAddress1($address1);
+              $provided->setAddress2($address2);
               $result = $provided->createProvidedInformation();
-
-
-
 
 
 
