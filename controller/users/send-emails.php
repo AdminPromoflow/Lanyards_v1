@@ -192,17 +192,16 @@ class EmailSender {
                 </h2>
               </div>
               <div class='imgEmail' style='width: 85%; margin: 0 auto; margin-top: calc(0.8vw + 0.8em);'>
-                <img style='width: 100%;' alt='' src='https://lanyardsforyou.com/controller/assets/img/send-emails/register/register_image.jpg'>
+                <img style='width: 100%;' alt='' src='https://lanyardsforyou.com/controller/assets/img/send-emails/dispatched/image.png'>
               </div>
               <div class='titleContainer' style='width: 85%; margin: 0 auto; margin-top: calc(1.4vw + 0.4em);'>
                 <h3 style='font-family: Oswald, sans-serif; color: rgb(232,232,232); font-weight: 500; font-size: calc(1vw + 0.6em); text-align: center;'>
                   We'll notify you when your items ship
                 </h3>
                 <h4 style='font-family: Oswald, sans-serif; color: rgb(200,200,200); font-weight: 300; font-size: calc(0.9vw + 0.5em); text-align: center; margin-top: calc(0.5vw + 0.5em); width: 70%; margin-left: auto; margin-right: auto;'>
-                  To see the details of your purchase, please go to our website and click on <strong>“My Lanyard”</strong> in the menu — there you will find the products from your order.
-                </h4>
+                  To view the details of your purchase, please visit our website, log in, and click on <strong>“My Lanyard”</strong> in the menu. There, you'll find the products from your order.                </h4>
                 <h4 style='font-family: Oswald, sans-serif; color: rgb(185,185,185); font-weight: 200; font-size: calc(0.9vw + 0.5em); text-align: center; width: 60%; margin: auto;'>
-                  If you have any questions, you can reach us at support@lanyardsforyou.com
+                  If you have any questions, you can reach us at admin@promoflow.com
                 </h4>
                 <h4 style='font-family: Oswald, sans-serif; color: rgb(232,232,232); font-weight: 400; font-size: calc(0.9vw + 0.5em); text-align: center; margin-top: calc(0.3vw + 0.3em);'>
                   Email: $this->recipientEmail
