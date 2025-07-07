@@ -105,6 +105,10 @@ class Checkout {
       accessories: {
         type: accessoriesClass.getAccessoriesSelected(),
         additional_price: priceClass.getPriceAccessory()
+      },
+      background: {
+        type: backgroundClass.getBackground(),
+        additional_price: "0"
       }
     };
     this.setDescription(description);

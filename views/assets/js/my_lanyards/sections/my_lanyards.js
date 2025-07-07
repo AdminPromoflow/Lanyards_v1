@@ -137,6 +137,9 @@ class MyLanyardsClass {
   }
   drawJobManual(data){
 
+    alert(JSON.stringify(data));
+
+
     const descriptionObj = JSON.parse(data.description);
     const product_job = document.getElementById("product_job");
 
@@ -228,6 +231,8 @@ class MyLanyardsClass {
         `;
   }
   drawJobArtwork(data){
+
+    alert(JSON.stringify(data));
 
     const descriptionObj = JSON.parse(data.description);
     const product_job = document.getElementById("product_job");

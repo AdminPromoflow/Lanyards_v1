@@ -297,7 +297,6 @@ class Job {
            $email = $_SESSION['email'];
            $provided->setUserEmail($email);
 
-
            $address1Array = (array) $data->address1;
            $address2Array = (array) $data->address2;
 
