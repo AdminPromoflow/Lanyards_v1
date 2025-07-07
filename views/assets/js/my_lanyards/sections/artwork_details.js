@@ -1,5 +1,7 @@
 class ArtworkDetailsClass {
   constructor() {
+    this.background = "#FFFFFF";
+
     back_to_my_lanyards.addEventListener("click", function(){
       myLanyardsClass.showSection("flex");
       artworkDetailsClass.showSection("none");
@@ -39,11 +41,16 @@ class ArtworkDetailsClass {
   }
   manageLanyardDataJobArtwork(data, artwork){
 
+
     const lefttLink = (artwork[0].linkLeftImage);
     const rightLink = (artwork[0].linkRightImage);
 
     this.resizeWithLanyard(JSON.parse(data.description));
     this.cleanArtworkManual();
+
+    my_lanyards_left_side.style.background = this.getBackground();
+    my_lanyards_right_side.style.background = this.getBackground();
+
 
     my_lanyards_left_side.innerHTML = `<img class="" src="../../${lefttLink}" alt="">`;
     my_lanyards_right_side.innerHTML = `<img class="" src="../../${rightLink}" alt="">`;
@@ -57,6 +64,10 @@ class ArtworkDetailsClass {
   manageLanyardDataJobManual(data, images, texts){
     this.resizeWithLanyard(JSON.parse(data.description));
     this.cleanArtworkManual();
+
+    my_lanyards_left_side.style.background = this.getBackground();
+    my_lanyards_right_side.style.background = this.getBackground();
+
 
     if (images != false) {
     //  alert(JSON.stringify(images));
@@ -218,6 +229,13 @@ class ArtworkDetailsClass {
     } else {
       alert("No se encontraron datos de texto.");
     }
+  }
+  getBackground() {
+    return this.background;
+  }
+
+  setBackground(value) {
+    this.background = value;
   }
 
 

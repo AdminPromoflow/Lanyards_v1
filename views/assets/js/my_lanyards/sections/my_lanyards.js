@@ -115,8 +115,9 @@ class MyLanyardsClass {
     }
 
     if (data["artworks"] != false) {
-      artworkDetailsClass.manageLanyardDataJobArtwork(data["job"], data["artworks"]);
       myLanyardsClass.drawJobArtwork(data["job"]);
+      artworkDetailsClass.manageLanyardDataJobArtwork(data["job"], data["artworks"]);
+
     }
     else if  (data["images"] != false || data["texts"] != false) {
       myLanyardsClass.drawJobManual(data["job"]);
@@ -137,11 +138,14 @@ class MyLanyardsClass {
   }
   drawJobManual(data){
 
-    alert(JSON.stringify(data));
+  //  alert(JSON.stringify(data));
 
 
     const descriptionObj = JSON.parse(data.description);
     const product_job = document.getElementById("product_job");
+
+
+    artworkDetailsClass.setBackground(descriptionObj.background.type);
 
     var description = '';
 
@@ -177,6 +181,10 @@ class MyLanyardsClass {
       <div class="items_description_products_jobs">
         <h4>Accessories:</h4>
         <h4>${descriptionObj.accessories.type}</h4>
+      </div>
+      <div class="items_description_products_jobs">
+        <h4>Background:</h4>
+        <h4>${descriptionObj.background.type}</h4>
       </div>
       <div class="items_description_products_jobs">
         <h4>Amount:</h4>
@@ -232,10 +240,11 @@ class MyLanyardsClass {
   }
   drawJobArtwork(data){
 
-    alert(JSON.stringify(data));
+  //  alert(JSON.stringify(data));
 
     const descriptionObj = JSON.parse(data.description);
     const product_job = document.getElementById("product_job");
+    artworkDetailsClass.setBackground(descriptionObj.background.type);
 
     var description = '';
 
@@ -272,6 +281,10 @@ class MyLanyardsClass {
       <div class="items_description_products_jobs">
         <h4>Accessories:</h4>
         <h4>${descriptionObj.accessories.type}</h4>
+      </div>
+      <div class="items_description_products_jobs">
+        <h4>Background:</h4>
+        <h4>${descriptionObj.background.type}</h4>
       </div>
       <div class="items_description_products_jobs">
         <h4>Amount:</h4>
