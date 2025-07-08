@@ -21,8 +21,6 @@ class ImageClass {
         return this.linkImage;
     }
     setLinkImage(value) {
-      alert("ay vamos 4" + value);
-
       this.linkImage = value;
     }
 
@@ -67,7 +65,6 @@ class ImageClass {
 
 
     refreshImageLanyard() {
-      alert("Buenas");
       this.uploadImage();
       this.addImageLanyard();
       this.modifyImagePosition();
@@ -203,7 +200,6 @@ class ImageClass {
       const wrapElements = document.querySelectorAll('.wrap_img_0 img, .wrap_img_1 img');
       const link = this.getLinkImage();
 
-      alert(link);
 
 
       if (!link) {
@@ -214,6 +210,7 @@ class ImageClass {
       const timestamp = Date.now();
       const versionedLink =  link + '?v=' + timestamp;
 
+      alert(versionedLink);
 
       let allAssigned = true;
 
