@@ -13,7 +13,6 @@ class TextClass {
     this.underlineText = false;
     this.printableArea = false;
     this.textPosition = 0;
-
   }
 
   getContentText() {

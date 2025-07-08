@@ -166,7 +166,7 @@ class ArtworkDetailsClass {
       textClass.setBoldText(textData.boldText === "1");
       textClass.setItalicText(textData.italicText === "1");
       textClass.setUnderlineText(textData.underlineText === "1");
-      textClass.setTextPosition(parseFloat(textData.textPosition));
+      textClass.setTextPosition(parseFloat(textData.textPosition * 10));
 
       textClass.refreshTextLanyard();
       // Mostrar en alert
