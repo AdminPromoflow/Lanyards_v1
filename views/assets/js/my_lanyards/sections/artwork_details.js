@@ -1,6 +1,7 @@
 class ArtworkDetailsClass {
   constructor() {
-    this.background = "#FFFFFF";
+    this.backgrou'nd = "#FFFFFF";
+    this.width = "10mm";
 
     back_to_my_lanyards.addEventListener("click", function(){
       myLanyardsClass.showSection("flex");
@@ -14,8 +15,14 @@ class ArtworkDetailsClass {
   }
 
   resizeWithLanyard(descriptionObj){
+
+    this.setWidth(descriptionObj.width.value);
+
     my_lanyards_left_side.style.height = "21.6cm";
     my_lanyards_right_side.style.height = "21.6cm";
+
+
+
 
     if (descriptionObj.width.value == "10mm") {
       my_lanyards_left_side.style.width = "0.48cm";
@@ -175,8 +182,9 @@ class ArtworkDetailsClass {
       printable_area_text_lanyard_right.style.height = "1.44cm";
     }
   }*/
-
   manageText(texts, descriptionObj){
+
+    this.resizePrintableText();
 
     my_lanyards_left_side.innerHTML = `
     <div class="printable_area_text_lanyard_left" id="printable_area_text_lanyard_left">
@@ -234,6 +242,35 @@ class ArtworkDetailsClass {
     }
   }
 
+  resizePrintableText(){
+
+    const printable_area_text_lanyard_left = document.getElementById("printable_area_text_lanyard_left");
+    const printable_area_text_lanyard_right = document.getElementById("printable_area_text_lanyard_right");
+
+    var width = this.getWidth();
+    if (width == "10mm") {
+      printable_area_text_lanyard_left.style.width = "0.288cm";
+      printable_area_text_lanyard_right.style.width = "0.288cm";
+    }
+    else if (width == "15mm") {
+      printable_area_text_lanyard_left.style.width = "0.528cm";
+      printable_area_text_lanyard_right.style.width = "0.528cm";
+    }
+    else if (width == "20mm") {
+      printable_area_text_lanyard_left.style.width = "0.768cm";
+      printable_area_text_lanyard_right.style.width = "0.768cm";
+    }
+    else if (width == "25mm") {
+      printable_area_text_lanyard_left.style.width = "1.008cm";
+      printable_area_text_lanyard_right.style.width = "1.008cm";
+    }
+    else if (width == "30mm") {
+      printable_area_text_lanyard_left.style.width = "1.248cm";
+      printable_area_text_lanyard_right.style.width = "1.248cm";
+    }
+
+  }
+
   getBackground() {
     return this.background;
   }
@@ -242,7 +279,13 @@ class ArtworkDetailsClass {
     this.background = value;
   }
 
+  getWidth() {
+    return this.width;
+  }
 
+  setWidth(value) {
+    this.width = value;
+  }
 
 }
 
