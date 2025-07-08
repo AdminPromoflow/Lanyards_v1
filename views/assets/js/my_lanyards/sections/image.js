@@ -84,7 +84,6 @@ class ImageClass {
 
       // Obtener el contenido y el número de repeticiones
       const times = this.getTimesImage();
-      alert(times);
 
       const link = "../../" + this.getLinkImage();
     //  alert(link);

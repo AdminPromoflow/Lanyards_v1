@@ -113,11 +113,11 @@ class ArtworkDetailsClass {
 
       imageClass.setLinkImage(imageData.linkImage);
       imageClass.setTimesImage(parseInt(imageData.timesImage));
-      imageClass.setImageSize(parseFloat(imageData.imageSize));
-      imageClass.setSpaceBetweenImage(parseFloat(imageData.spaceBetweenImage));
-      imageClass.setImageRotation(parseFloat(imageData.imageRotation));
-      imageClass.setSpaceAlongLanyard(parseFloat(imageData.spaceAlongLanyard));
-      imageClass.setImagePosition(parseFloat(imageData.imagePosition));
+      imageClass.setImageSize(parseFloat(imageData.imageSize * 2.9));
+      imageClass.setSpaceBetweenImage(parseFloat(imageData.spaceBetweenImage * 2.9));
+      imageClass.setImageRotation(parseFloat(imageData.imageRotation * 2.9));
+      imageClass.setSpaceAlongLanyard(parseFloat(imageData.spaceAlongLanyard * 2.9));
+      imageClass.setImagePosition(parseFloat(imageData.imagePosition * 2.9));
       imageClass.refreshImageLanyard();
 
       // Aquí puedes hacer algo con imageClass, como almacenarlo o usar sus getters
