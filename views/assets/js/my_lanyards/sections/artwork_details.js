@@ -158,15 +158,15 @@ class ArtworkDetailsClass {
 
       textClass.setContentText(textData.contentText);
       textClass.setTimesText(parseInt(textData.timesText));
-      textClass.setSpaceBetweenText(parseFloat(textData.spaceBetweenText));
-      textClass.setSpaceAlongLanyard(parseFloat(textData.spaceAlongLanyard));
+      textClass.setSpaceBetweenText(parseFloat(textData.spaceBetweenText * 15));
+      textClass.setSpaceAlongLanyard(parseFloat(textData.spaceAlongLanyard * 15));
       textClass.setColourText(textData.colourText);
       textClass.setFontFamilyText(textData.fontFamilyText);
-      textClass.setSizeText(parseFloat(textData.sizeText));
+      textClass.setSizeText(parseFloat(textData.sizeText * 15));
       textClass.setBoldText(textData.boldText === "1");
       textClass.setItalicText(textData.italicText === "1");
       textClass.setUnderlineText(textData.underlineText === "1");
-      textClass.setTextPosition(parseFloat(textData.textPosition * 16));
+      textClass.setTextPosition(parseFloat(textData.textPosition * 15));
 
       textClass.refreshTextLanyard();
       // Mostrar en alert
