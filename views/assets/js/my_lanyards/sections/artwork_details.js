@@ -166,11 +166,11 @@ class ArtworkDetailsClass {
       textClass.setBoldText(textData.boldText === "1");
       textClass.setItalicText(textData.italicText === "1");
       textClass.setUnderlineText(textData.underlineText === "1");
-      textClass.setTextPosition(parseFloat(textData.textPosition * 10));
+      textClass.setTextPosition(parseFloat(textData.textPosition * 16));
 
       textClass.refreshTextLanyard();
       // Mostrar en alert
-      alert(
+      /*alert(
         `Datos de TextClass:\n` +
         `Content Text: ${textClass.getContentText()}\n` +
         `Times Text: ${textClass.getTimesText()}\n` +
@@ -183,7 +183,7 @@ class ArtworkDetailsClass {
         `Italic: ${textClass.getItalicText()}\n` +
         `Underline: ${textClass.getUnderlineText()}\n` +
         `Text Position: ${textClass.getTextPosition()}`
-      );
+      );*/
     } else {
       alert("No se encontraron datos de texto.");
     }
