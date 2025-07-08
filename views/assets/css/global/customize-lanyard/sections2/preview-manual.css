@@ -166,8 +166,6 @@
   left: 10.2%;
   height: 6.08cm;
   width: 0.096cm;
-
-
   transform:   translateY(-50%);
   overflow: hidden;
 }
@@ -178,8 +176,6 @@
   right: 10.2%;
   height: 6.08cm;
   width: 0.096cm;
-
-
   transform:   translateY(-50%);
   overflow: hidden;
 }
@@ -334,7 +330,7 @@
   transform: translateX(-50%);
   z-index: 0;
   overflow: hidden;
-overflow: hidden;
+  overflow: hidden;
 }
 
 
@@ -672,8 +668,6 @@ overflow: hidden;
 
   transform: rotate(180deg);
   overflow: hidden;
-
-
 }
 
 .wrap_img_0{

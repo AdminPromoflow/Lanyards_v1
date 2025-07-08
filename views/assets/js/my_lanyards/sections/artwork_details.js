@@ -13,7 +13,6 @@ class ArtworkDetailsClass {
     section_artwork_details.style.display = action;
   }
 
-
   resizeWithLanyard(descriptionObj){
     my_lanyards_left_side.style.height = "21.6cm";
     my_lanyards_right_side.style.height = "21.6cm";
@@ -39,8 +38,8 @@ class ArtworkDetailsClass {
       my_lanyards_right_side.style.width = "1.44cm";
     }
   }
-  manageLanyardDataJobArtwork(data, artwork){
 
+  manageLanyardDataJobArtwork(data, artwork){
 
     const lefttLink = (artwork[0].linkLeftImage);
     const rightLink = (artwork[0].linkRightImage);
@@ -55,12 +54,13 @@ class ArtworkDetailsClass {
     my_lanyards_left_side.innerHTML = `<img class="" src="../../${lefttLink}" alt="">`;
     my_lanyards_right_side.innerHTML = `<img class="" src="../../${rightLink}" alt="">`;
 
-  }
+  }  /* Este */
 
   cleanArtworkManual(){
     my_lanyards_left_side.innerHTML = ``;
     my_lanyards_right_side.innerHTML = ``;
   }
+
   manageLanyardDataJobManual(data, images, texts){
     this.resizeWithLanyard(JSON.parse(data.description));
     this.cleanArtworkManual();
@@ -78,7 +78,7 @@ class ArtworkDetailsClass {
       this.manageText(texts, JSON.parse(data.description));
     }
 
-  }
+  } /* Este */
 
   manageImage(images, descriptionObj){
     my_lanyards_left_side.innerHTML = `
@@ -121,7 +121,8 @@ class ArtworkDetailsClass {
     }
 
   }
-  resizeWithLanyardImage(descriptionObj){
+
+/*  resizeWithLanyardImage(descriptionObj){
 
     const  img_lanyard_left = document.getElementById('img_lanyard_left');
     const  img_lanyard_right = document.getElementById('img_lanyard_right');
@@ -146,8 +147,9 @@ class ArtworkDetailsClass {
       img_lanyard_left.style.height = "1.44cm";
       img_lanyard_right.style.height = "1.44cm";
     }
-  }
-  resizeWithLanyardText(descriptionObj){
+  }*/
+
+/*  resizeWithLanyardText(descriptionObj){
 
     const  printable_area_text_lanyard_left = document.getElementById('printable_area_text_lanyard_left');
     const  printable_area_text_lanyard_right = document.getElementById('printable_area_text_lanyard_right');
@@ -172,7 +174,8 @@ class ArtworkDetailsClass {
       printable_area_text_lanyard_left.style.height = "1.44cm";
       printable_area_text_lanyard_right.style.height = "1.44cm";
     }
-  }
+  }*/
+
   manageText(texts, descriptionObj){
 
     my_lanyards_left_side.innerHTML = `
@@ -230,6 +233,7 @@ class ArtworkDetailsClass {
       alert("No se encontraron datos de texto.");
     }
   }
+
   getBackground() {
     return this.background;
   }
