@@ -128,60 +128,6 @@ class ArtworkDetailsClass {
     }
 
   }
-
-/*  resizeWithLanyardImage(descriptionObj){
-
-    const  img_lanyard_left = document.getElementById('img_lanyard_left');
-    const  img_lanyard_right = document.getElementById('img_lanyard_right');
-
-    if (descriptionObj.width.value == "10mm") {
-      img_lanyard_left.style.height = "0.48cm";
-      img_lanyard_right.style.height = "0.48cm";
-    }
-    else if (descriptionObj.width.value == "15mm") {
-      img_lanyard_left.style.height = "0.72cm";
-      img_lanyard_right.style.height = "0.72cm";
-    }
-    else if (descriptionObj.width.value == "20mm") {
-      img_lanyard_left.style.height = "0.96cm";
-      img_lanyard_right.style.height = "0.96cm";
-    }
-    else if (descriptionObj.width.value == "25mm") {
-      img_lanyard_left.style.height = "1.2cm";
-      img_lanyard_right.style.height = "1.2cm";
-    }
-    else if (descriptionObj.width.value == "30mm") {
-      img_lanyard_left.style.height = "1.44cm";
-      img_lanyard_right.style.height = "1.44cm";
-    }
-  }*/
-
-/*  resizeWithLanyardText(descriptionObj){
-
-    const  printable_area_text_lanyard_left = document.getElementById('printable_area_text_lanyard_left');
-    const  printable_area_text_lanyard_right = document.getElementById('printable_area_text_lanyard_right');
-
-    if (descriptionObj.width.value == "10mm") {
-      printable_area_text_lanyard_left.style.height = "0.48cm";
-      printable_area_text_lanyard_right.style.height = "0.48cm";
-    }
-    else if (descriptionObj.width.value == "15mm") {
-      printable_area_text_lanyard_left.style.height = "0.72cm";
-      printable_area_text_lanyard_right.style.height = "0.72cm";
-    }
-    else if (descriptionObj.width.value == "20mm") {
-      printable_area_text_lanyard_left.style.height = "0.96cm";
-      printable_area_text_lanyard_right.style.height = "0.96cm";
-    }
-    else if (descriptionObj.width.value == "25mm") {
-      printable_area_text_lanyard_left.style.height = "1.2cm";
-      printable_area_text_lanyard_right.style.height = "1.2cm";
-    }
-    else if (descriptionObj.width.value == "30mm") {
-      printable_area_text_lanyard_left.style.height = "1.44cm";
-      printable_area_text_lanyard_right.style.height = "1.44cm";
-    }
-  }*/
   manageText(texts, descriptionObj){
 
 
@@ -260,8 +206,6 @@ class ArtworkDetailsClass {
       printable_area_text_lanyard_right.style.width = "0.528cm";
     }
     else if (width == "20mm") {
-      alert(width + "ufff") ;
-
       printable_area_text_lanyard_left.style.width = "0.768cm";
       printable_area_text_lanyard_right.style.width = "0.768cm";
     }
