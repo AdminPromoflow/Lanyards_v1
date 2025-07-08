@@ -85,8 +85,8 @@ class ImageClass {
       // Obtener el contenido y el número de repeticiones
       const times = this.getTimesImage();
 
-      const link = this.getLinkImage();
-      alert(link);
+      const link = "../../" this.getLinkImage();
+    //  alert(link);
     //  const timestamp = Date.now(); // genera un número único (como filemtime)
     //link  const versionedLink = link + '?v=' + timestamp;
 
