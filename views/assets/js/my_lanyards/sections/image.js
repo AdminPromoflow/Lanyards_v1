@@ -21,7 +21,7 @@ class ImageClass {
         return this.linkImage;
     }
     setLinkImage(value) {
-      alert(value);
+      alert("ay vamos 2" + imageData.linkImage);
 
       this.linkImage = value;
     }
