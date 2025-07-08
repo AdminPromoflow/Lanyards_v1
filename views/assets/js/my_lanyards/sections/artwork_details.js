@@ -184,7 +184,6 @@ class ArtworkDetailsClass {
   }*/
   manageText(texts, descriptionObj){
 
-    this.resizePrintableText();
 
     my_lanyards_left_side.innerHTML = `
     <div class="printable_area_text_lanyard_left" id="printable_area_text_lanyard_left">
@@ -199,6 +198,8 @@ class ArtworkDetailsClass {
       </div>
     </div>
     `;
+    this.resizePrintableText();
+
 
   //  this.resizeWithLanyardText(descriptionObj);
 
