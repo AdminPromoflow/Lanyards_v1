@@ -110,15 +110,15 @@ class ArtworkDetailsClass {
     if (Array.isArray(images) && images.length > 0) {
       const imageData = images[0]; // si sólo necesitas el primer objeto
 
-      imageClass.setLinkImage(imageData.linkImage);
 
-    /*  imageClass.setTimesImage(parseInt(imageData.timesImage));
+      imageClass.setLinkImage(imageData.linkImage);
+      imageClass.setTimesImage(parseInt(imageData.timesImage));
       imageClass.setImageSize(parseFloat(imageData.imageSize));
       imageClass.setSpaceBetweenImage(parseFloat(imageData.spaceBetweenImage));
       imageClass.setImageRotation(parseFloat(imageData.imageRotation));
       imageClass.setSpaceAlongLanyard(parseFloat(imageData.spaceAlongLanyard));
       imageClass.setImagePosition(parseFloat(imageData.imagePosition));
-      imageClass.refreshImageLanyard();*/
+      imageClass.refreshImageLanyard();
 
       // Aquí puedes hacer algo con imageClass, como almacenarlo o usar sus getters
       /*alert(
