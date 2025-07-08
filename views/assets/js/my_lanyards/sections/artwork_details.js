@@ -104,6 +104,9 @@ class ArtworkDetailsClass {
 
     const imageClass = new ImageClass();
 
+    alert("carajo");
+
+
 
     if (Array.isArray(images) && images.length > 0) {
       const imageData = images[0]; // si sólo necesitas el primer objeto
