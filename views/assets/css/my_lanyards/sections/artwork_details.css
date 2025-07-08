@@ -80,10 +80,18 @@
 
 
 .printable_area_text_lanyard_left{
-
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 15px;
+  background: white;
 }
 .printable_area_text_lanyard_right{
-
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 15px;
+  background: white;
 }
 
 
