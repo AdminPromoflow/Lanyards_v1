@@ -260,7 +260,7 @@ class ArtworkDetailsClass {
       printable_area_text_lanyard_right.style.width = "0.528cm";
     }
     else if (width == "20mm") {
-      alert(width) + "ufff";
+      alert(width + "ufff") ;
 
       printable_area_text_lanyard_left.style.width = "0.768cm";
       printable_area_text_lanyard_right.style.width = "0.768cm";
