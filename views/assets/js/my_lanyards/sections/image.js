@@ -200,6 +200,9 @@ class ImageClass {
       const wrapElements = document.querySelectorAll('.wrap_img_0 img, .wrap_img_1 img');
       const link = this.getLinkImage();
 
+      alert(link);
+
+
       if (!link) {
         console.error('Unable to retrieve the image link.');
         return;
@@ -208,7 +211,6 @@ class ImageClass {
       const timestamp = Date.now();
       const versionedLink =  link + '?v=' + timestamp;
 
-      alert(versionedLink);
 
       let allAssigned = true;
 
