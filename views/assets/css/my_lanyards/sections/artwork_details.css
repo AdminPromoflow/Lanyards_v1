@@ -105,6 +105,32 @@
 
 
 
+.printable_area_img_lanyard_left{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 18.24cm;
+  width: 0.288cm;
+  overflow: scroll;
+  background: rgba(0, 0, 0, .2);
+}
+.printable_area_img_lanyard_right{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 18.24cm;
+  width: 0.288cm;
+  overflow: scroll;
+
+  background: rgba(0, 0, 0, .2);
+}
+
+
+
+
+
 
 
 

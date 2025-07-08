@@ -89,14 +89,18 @@ class ArtworkDetailsClass {
 
   manageImage(images, descriptionObj){
     my_lanyards_left_side.innerHTML = `
-    <div class="img_lanyard_left" id="img_lanyard_left">
+    <div class="printable_area_img_lanyard_left" id="printable_area_img_lanyard_left">
+      <div class="img_lanyard_left" id="img_lanyard_left">
+      </div>
     </div>
     `;
     my_lanyards_right_side.innerHTML = `
-    <div class="img_lanyard_right" id="img_lanyard_right">
+    <div class="printable_area_img_lanyard_right" id="printable_area_img_lanyard_right">
+      <div class="img_lanyard_right" id="img_lanyard_right">
+      </div>
     </div>
     `;
-    //this.resizeWithLanyardImage(descriptionObj);
+    this.resizeWithLanyardImage(descriptionObj);
 
     const imageClass = new ImageClass();
 
@@ -125,6 +129,36 @@ class ArtworkDetailsClass {
     );*/
     } else {
       console.warn("No se encontraron datos de imagen.");
+    }
+
+  }
+  resizePrintableImg(){
+
+    const printable_area_img_lanyard_left = document.getElementById("printable_area_img_lanyard_left");
+    const printable_area_img_lanyard_right = document.getElementById("printable_area_img_lanyard_right");
+
+    var width = this.getWidth();
+
+
+    if (width == "10mm") {
+      printable_area_img_lanyard_left.style.width = "0.288cm";
+      printable_area_img_lanyard_right.style.width = "0.288cm";
+    }
+    else if (width == "15mm") {
+      printable_area_img_lanyard_left.style.width = "0.528cm";
+      printable_area_img_lanyard_right.style.width = "0.528cm";
+    }
+    else if (width == "20mm") {
+      printable_area_img_lanyard_left.style.width = "0.768cm";
+      printable_area_img_lanyard_right.style.width = "0.768cm";
+    }
+    else if (width == "25mm") {
+      printable_area_img_lanyard_left.style.width = "1.008cm";
+      printable_area_img_lanyard_right.style.width = "1.008cm";
+    }
+    else if (width == "30mm") {
+      printable_area_img_lanyard_left.style.width = "1.248cm";
+      printable_area_img_lanyard_right.style.width = "1.248cm";
     }
 
   }
