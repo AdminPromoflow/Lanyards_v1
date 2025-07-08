@@ -87,7 +87,7 @@
   height: 18.24cm;
   width: 0.288cm;
   overflow: scroll;
-  background: rgba(0, 0, 0, .2);
+/*  background: rgba(0, 0, 0, .2);*/
 }
 .printable_area_text_lanyard_right{
   position: absolute;
@@ -98,7 +98,7 @@
   width: 0.288cm;
   overflow: scroll;
 
-  background: rgba(0, 0, 0, .2);
+/*  background: rgba(0, 0, 0, .2);*/
 }
 
 
