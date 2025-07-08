@@ -110,7 +110,6 @@ class ArtworkDetailsClass {
     if (Array.isArray(images) && images.length > 0) {
       const imageData = images[0]; // si sólo necesitas el primer objeto
 
-      alert("carajo 2");
 
       imageClass.setLinkImage(imageData.linkImage);
       imageClass.setTimesImage(parseInt(imageData.timesImage));
