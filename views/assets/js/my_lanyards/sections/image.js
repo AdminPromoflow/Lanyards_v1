@@ -86,6 +86,7 @@ class ImageClass {
       const times = this.getTimesImage();
 
       const link = this.getLinkImage();
+      alert(link);
     //  const timestamp = Date.now(); // genera un número único (como filemtime)
     //link  const versionedLink = link + '?v=' + timestamp;
 
@@ -229,7 +230,6 @@ class ImageClass {
         console.warn('⚠️ Some images were not correctly assigned.');
       }
 
-      alert("ay vamos");
 
     }
 }
