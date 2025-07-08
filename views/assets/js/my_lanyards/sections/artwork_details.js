@@ -243,12 +243,14 @@ class ArtworkDetailsClass {
   }
 
   resizePrintableText(){
-    alert("entramos");
 
     const printable_area_text_lanyard_left = document.getElementById("printable_area_text_lanyard_left");
     const printable_area_text_lanyard_right = document.getElementById("printable_area_text_lanyard_right");
 
     var width = this.getWidth();
+
+    alert(width);
+
     if (width == "10mm") {
       printable_area_text_lanyard_left.style.width = "0.288cm";
       printable_area_text_lanyard_right.style.width = "0.288cm";
