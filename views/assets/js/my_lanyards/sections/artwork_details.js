@@ -1,6 +1,6 @@
 class ArtworkDetailsClass {
   constructor() {
-    this.backgrou'nd = "#FFFFFF";
+    this.background = "#FFFFFF";
     this.width = "10mm";
 
     back_to_my_lanyards.addEventListener("click", function(){
