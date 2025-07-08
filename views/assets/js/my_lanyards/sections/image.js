@@ -211,7 +211,7 @@ class ImageClass {
       let allAssigned = true;
 
       wrapElements.forEach(img => {
-        img.src = versionedLink;
+        img.src = "../../" + versionedLink;
 
         // Check whether the assignment was successful
         if (!img.src.includes(link)) {
