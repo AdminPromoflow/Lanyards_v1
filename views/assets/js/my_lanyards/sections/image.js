@@ -206,7 +206,9 @@ class ImageClass {
       }
 
       const timestamp = Date.now();
-      const versionedLink = + "../../" link + '?v=' + timestamp;
+      const versionedLink =  link + '?v=' + timestamp;
+
+      alert(versionedLink);
 
       let allAssigned = true;
 
