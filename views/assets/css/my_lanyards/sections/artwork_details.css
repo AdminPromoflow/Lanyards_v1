@@ -86,6 +86,7 @@
   transform: translate(-50%, -50%);
   height: 18.24cm;
   width: 0.288cm;
+  overflow: scroll;
   background: rgba(0, 0, 0, .2);
 }
 .printable_area_text_lanyard_right{
@@ -95,6 +96,8 @@
   transform: translate(-50%, -50%);
   height: 18.24cm;
   width: 0.288cm;
+  overflow: scroll;
+
   background: rgba(0, 0, 0, .2);
 }
 
