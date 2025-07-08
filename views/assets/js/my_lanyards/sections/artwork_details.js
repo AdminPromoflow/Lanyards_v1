@@ -111,7 +111,6 @@ class ArtworkDetailsClass {
       const imageData = images[0]; // si sólo necesitas el primer objeto
 
       imageClass.setLinkImage(imageData.linkImage);
-      alert("ay vamos" + imageData.linkImage);
 
     /*  imageClass.setTimesImage(parseInt(imageData.timesImage));
       imageClass.setImageSize(parseFloat(imageData.imageSize));
