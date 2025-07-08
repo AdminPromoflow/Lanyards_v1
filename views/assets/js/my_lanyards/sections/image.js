@@ -210,7 +210,6 @@ class ImageClass {
       const timestamp = Date.now();
       const versionedLink = "../../" +  link + '?v=' + timestamp;
 
-      alert(versionedLink);
 
       let allAssigned = true;
 
@@ -229,5 +228,8 @@ class ImageClass {
       } else {
         console.warn('⚠️ Some images were not correctly assigned.');
       }
+
+      alert("ay vamos");
+
     }
 }
