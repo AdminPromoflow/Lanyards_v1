@@ -1,22 +1,15 @@
 <?php
 
 function get_file_version($relative_path) {
-    $absolute_path = __DIR__ . '/' . $relative_path;
-    return file_exists($absolute_path) ? filemtime($absolute_path) : time();
+    $absolute_path = realpath(__DIR__ . '/' . $relative_path);
+    return $absolute_path && file_exists($absolute_path) ? filemtime($absolute_path) : time();
 }
 
-
-// Corregir rutas absolutas para evitar problemas con __DIR__
-$cssFile = realpath(__DIR__ . '/../../views/assets/css/my_lanyards/sections/artwork_details.css');
-$jsFile = realpath(__DIR__ . '/../../views/assets/js/my_lanyards/sections/artwork_details.js');
-$jsFileImage = realpath(__DIR__ . '/../../views/assets/js/my_lanyards/sections/image.js');
-$jsFileText = realpath(__DIR__ . '/../../views/assets/js/my_lanyards/sections/text.js');
-
-
-
-
-$cssVersion = $cssFile && file_exists($cssFile) ? filemtime($cssFile) : time();
-$jsVersion = $jsFile && file_exists($jsFile) ? filemtime($jsFile) : time();
+// Obtener versiones
+$cssVersion        = get_file_version('../../views/assets/css/my_lanyards/sections/artwork_details.css');
+$jsVersionMain     = get_file_version('../../views/assets/js/my_lanyards/sections/artwork_details.js');
+$jsVersionImage    = get_file_version('../../views/assets/js/my_lanyards/sections/image.js');
+$jsVersionText     = get_file_version('../../views/assets/js/my_lanyards/sections/text.js');
 ?>
 
 <!-- Link to external stylesheet for styling the section -->
@@ -44,7 +37,7 @@ $jsVersion = $jsFile && file_exists($jsFile) ? filemtime($jsFile) : time();
 
 </section>
 
-<!-- Link to external JavaScript for additional functionality -->
-<script src="/views/assets/js/my_lanyards/sections/text.js?v=<?= $jsFileText; ?>" type="text/javascript"></script>
-<script src="/views/assets/js/my_lanyards/sections/image.js?v=<?= $jsFileImage; ?>" type="text/javascript"></script>
-<script src="/views/assets/js/my_lanyards/sections/artwork_details.js?v=<?= $jsVersion; ?>" type="text/javascript"></script>
+<!-- JavaScript -->
+<script src="/views/assets/js/my_lanyards/sections/text.js?v=<?= $jsVersionText; ?>" type="text/javascript"></script>
+<script src="/views/assets/js/my_lanyards/sections/image.js?v=<?= $jsVersionImage; ?>" type="text/javascript"></script>
+<script src="/views/assets/js/my_lanyards/sections/artwork_details.js?v=<?= $jsVersionMain; ?>" type="text/javascript"></script>
