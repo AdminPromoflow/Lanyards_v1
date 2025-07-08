@@ -65,6 +65,7 @@ class ImageClass {
 
 
     refreshImageLanyard() {
+      alert("Buenas");
       this.uploadImage();
       this.addImageLanyard();
       this.modifyImagePosition();
