@@ -128,13 +128,15 @@
   position: absolute;
   top: -50%;
   left: 0px;
+  height: 200%;
   width: 100%;
+
   display: flex;
   flex-direction: column-reverse;
   gap: 20px; /* espacio entre textos rotados */
   align-items: flex-start; /* <== centrado horizontal */
   justify-content: flex-end; /* opcional: centrado vertical */
-  height: 200%;
+
   transform: rotate(0deg);
   overflow: hidden;
 
@@ -145,12 +147,14 @@
   left: 0px;
   height: 200%;
   width: 100%;
+
   display: flex;
   flex-direction: column-reverse;
   gap: 20px; /* espacio entre textos rotados */
   align-items: flex-start; /* <== centrado horizontal */
   justify-content: flex-end; /* opcional: centrado vertical */
-  transform: rotate(180deg);
+
+  transform: rotate(0deg);
   overflow: hidden;
 
 
