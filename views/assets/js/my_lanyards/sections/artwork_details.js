@@ -249,7 +249,6 @@ class ArtworkDetailsClass {
 
     var width = this.getWidth();
 
-    alert(width);
 
     if (width == "10mm") {
       printable_area_text_lanyard_left.style.width = "0.288cm";
@@ -260,6 +259,8 @@ class ArtworkDetailsClass {
       printable_area_text_lanyard_right.style.width = "0.528cm";
     }
     else if (width == "20mm") {
+      alert(width) + "ufff";
+
       printable_area_text_lanyard_left.style.width = "0.768cm";
       printable_area_text_lanyard_right.style.width = "0.768cm";
     }
