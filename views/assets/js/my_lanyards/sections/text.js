@@ -153,7 +153,7 @@ class TextClass {
   modifyTextPosition(){
   //  alert(this.getTextPosition());
     this.text_lanyard_left.style.top = -50 +  this.getTextPosition() + "%";
-    this.text_lanyard_right.style.top = -50 - this.getTextPosition() + "%";
+    this.text_lanyard_right.style.top = -50 + this.getTextPosition() + "%";
   }
 
   modifySpaceBetweenText(){
