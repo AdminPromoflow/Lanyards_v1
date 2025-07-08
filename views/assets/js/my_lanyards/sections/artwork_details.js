@@ -100,7 +100,7 @@ class ArtworkDetailsClass {
       </div>
     </div>
     `;
-    this.resizeWithLanyardImage(descriptionObj);
+    this.resizePrintableImg();
 
     const imageClass = new ImageClass();
 
