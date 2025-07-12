@@ -1,5 +1,6 @@
 class Charging {
   constructor() {
+    alert("rentramos");
     this.hideShowcharging(true);
   }
   hideShowcharging(action){
