@@ -4,9 +4,9 @@ class Charging {
     // Ocultar después de 3 segundos
     setTimeout(() => {
       this.hideShowcharging(false);
-    }, 3000);
+    }, 2500);
   }
-  
+
   hideShowcharging(action) {
     const charging_background = document.querySelector('.charging_background');
     if (charging_background) {
