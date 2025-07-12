@@ -1,6 +1,6 @@
 <?php
 // Validar el archivo CSS antes de usarlo
-$cssPath = '/General/Charging/charging.css';
+$cssPath = '../General/Charging/charging.css';
 $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
 ?>
 
@@ -9,7 +9,7 @@ $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
 
 <div class="charging_background" id="charging_background">
   <?php
-    $chargingGif = '/General/Charging/Img/charge.gif';
+    $chargingGif = '../General/Charging/Img/charge.gif';
     $chargingGifVersion = file_exists($chargingGif) ? filemtime($chargingGif) : time();
   ?>
   <img src="<?= $chargingGif ?>?v=<?= $chargingGifVersion; ?>" alt="Loading...">
@@ -18,7 +18,7 @@ $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
 
 <?php
 // Validar el archivo JS antes de usarlo
-  $jsPath = '/General/Charging/charging.js';
+$jsPath = '../General/Charging/charging.js';
 $jsVersion = file_exists($jsPath) ? filemtime($jsPath) : time();
 ?>
 
