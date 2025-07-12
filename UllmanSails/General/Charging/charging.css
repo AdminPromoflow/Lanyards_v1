@@ -1,0 +1,26 @@
+.charging_background{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 100vw;
+  z-index: 130;
+  background-color: rgba(0, 0, 0, 0.7);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.charging_background p {
+  position: relative;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 300;
+  margin: 15px 0;
+}
+.charging_background img {
+  position: relative;
+  height: 105px;
+  width: 105px;
+}
