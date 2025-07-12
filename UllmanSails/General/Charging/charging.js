@@ -4,7 +4,7 @@ class Charging {
     // Ocultar después de 3 segundos
     setTimeout(() => {
       this.hideShowcharging(false);
-    }, 2500);
+    }, 1500);
   }
 
   hideShowcharging(action) {
