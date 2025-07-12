@@ -1,6 +1,6 @@
 class ClassVideo {
   constructor() {
-    video.addEventListener('mouseover', () => {
+    /*video.addEventListener('mouseover', () => {
       video.play();
     });
 
@@ -8,7 +8,7 @@ class ClassVideo {
       video.pause();
       video.currentTime = 0; // Opcional: reinicia el video cada vez
 
-  })
+  })*/
 }
 }
 
