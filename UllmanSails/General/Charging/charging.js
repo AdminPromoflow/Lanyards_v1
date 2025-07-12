@@ -1,6 +1,6 @@
 class Charging {
   constructor() {
-    // Eliminamos el alert para que no bloquee la ejecución
+    alert('Constructor de Charging.js ejecutado');
     this.hideShowcharging(true);
   }
   hideShowcharging(action){
