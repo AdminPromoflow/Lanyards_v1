@@ -8,7 +8,7 @@ class ClassVideo {
       video.pause();
       video.currentTime = 0; // Opcional: reinicia el video cada vez
 
-  }
+  })
 }
 }
 
