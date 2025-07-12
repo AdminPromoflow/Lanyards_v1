@@ -10,6 +10,7 @@ class ClassVideo {
 
   }
 }
+}
 
 
     const video = document.getElementById('videoHover');
