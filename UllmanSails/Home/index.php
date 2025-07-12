@@ -109,13 +109,7 @@
     </div>
 
     <?php include "../../General/Charging/charging.php"; ?>
-    <script type="text/javascript">
-    const charging_background = document.getElementById("charging_background");
-    const chargingClass = new Charging();
-    window.addEventListener('load', function() {
-      chargingClass.hideShowchargin(false);
-    });
-    </script>
+  
     <?php include "../General/Menu/Menu.php" ?>
     <div id="searchHide" class="searchHide">
     <?php include "../Home/1.Slider/Slider.php" ?>
