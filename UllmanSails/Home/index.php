@@ -107,6 +107,13 @@
     <div class="img_arrow_bottom arrows">
       <img src="../Home/arrow_bottom.png" alt="">
     </div>
+    <script type="text/javascript">
+    const charging_background = document.getElementById("charging_background");
+    const chargingClass = new Charging();
+    window.addEventListener('load', function() {
+      chargingClass.hideShowchargin(false);
+    });
+    </script>
     <?php include "../../General/Charging/charging.php"; ?>
 
     <?php include "../General/Menu/Menu.php" ?>
