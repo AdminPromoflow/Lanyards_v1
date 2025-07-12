@@ -17,6 +17,6 @@ window.addEventListener('DOMContentLoaded', function() {
   const chargingClass = new Charging();
   // Corregimos el nombre del método
   window.addEventListener('load', function() {
-    chargingClass.hideShowcharging(false);
+    chargingClass.hideShowcharging(true);
   });
 });
