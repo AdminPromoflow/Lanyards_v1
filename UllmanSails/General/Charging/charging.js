@@ -1,20 +1,21 @@
 class Charging {
   constructor() {
-    alert("rentramos");
+    // Eliminamos el alert para que no bloquee la ejecución
     this.hideShowcharging(true);
   }
   hideShowcharging(action){
-    if (action) {
-      charging_background.style.display = "flex";
-    }
-    else {
-      charging_background.style.display = "none";
+    const charging_background = document.querySelector('.charging_background');
+    if (charging_background) {
+      charging_background.style.display = action ? "flex" : "none";
     }
   }
 }
 
-const charging_background = document.getElementById("charging_background");
-const chargingClass = new Charging();
-window.addEventListener('load', function() {
-  chargingClass.hideShowchargin(false);
+// Esperamos a que el DOM esté completamente cargado antes de crear la instancia
+window.addEventListener('DOMContentLoaded', function() {
+  const chargingClass = new Charging();
+  // Corregimos el nombre del método
+  window.addEventListener('load', function() {
+    chargingClass.hideShowcharging(false);
+  });
 });
