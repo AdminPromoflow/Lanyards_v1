@@ -22,8 +22,8 @@ class Charging {
 // Esperamos a que la página esté completamente cargada
 window.addEventListener('load', function() {
   const chargingClass = new Charging();
-  // Agregamos un pequeño delay para asegurar que todo esté cargado
+  // Mostrar el loader por 3 segundos
   setTimeout(() => {
     chargingClass.hideShowcharging(false);
-  }, 500);
+  }, 3000); // 3000ms = 3 segundos
 });
