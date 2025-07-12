@@ -4,7 +4,7 @@
   height: 80vh;
   width: 100vw;
   background-color: red;
-  background-image: url("../Racing/2.Services/Image/Pannelled_race_series.jpg");
+  background-image: url("../Racing-1.PannelledRaceSeries/1.Slider/Pannelled_Race.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

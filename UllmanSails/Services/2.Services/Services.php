@@ -185,6 +185,13 @@
     </div>
   </div>
 </a>
+<a href="../Services-3.CanvasRepair/index.php">
+  <div class="box-services pictureCruising3">
+    <div class="wrap-box-services">
+      <h3>Canvas Repairs</h3>
+    </div>
+  </div>
+</a>
 <!--<a href="../Services-4.HarwareUpgrades/index.php">
   <div class="box-services pictureCruising4">
     <div class="wrap-box-services">

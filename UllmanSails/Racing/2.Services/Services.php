@@ -120,7 +120,7 @@
   opacity: 1;
 }
 .pictureCruising1 {
-  background-image: url("../Racing/2.Services/Image/Pannelled_race_series.jpg");
+  background-image: url("../Racing/2.Services/Image/PannelledRace.jpg");
 }
 .pictureCruising2 {
   background-image: url("../Racing/2.Services/Image/Regatta.jpeg");

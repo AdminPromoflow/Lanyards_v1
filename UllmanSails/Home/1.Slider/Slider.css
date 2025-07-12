@@ -10,7 +10,7 @@
 .container_img{
   position: relative;
   height: 100%;
-  width: 400vw;
+  width: 500vw;
   left: 0;
   display: flex;
   align-items: center;
@@ -44,7 +44,10 @@
   background-image: url("../../Home/1.Slider/img/img4.jpg");
 }
 .img_slider:nth-child(4){
-  background-image: url("../../Covers/1.Slider/SlideHome.jpg");
+  background-image: url("../../Home/1.Slider/img/Headercovers.jpg");
+}
+.img_slider:nth-child(5){
+  background-image: url("../../Home/1.Slider/img/ServicesHeader.jpg");
 }
 
 /*************Flechas left*************/
@@ -66,6 +69,11 @@
   width: 25px;
   height: 100%;
   cursor: pointer;
+}
+.data_slider a {
+  all: unset;
+  cursor: pointer;
+  text-decoration: none;
 }
 /*******Data slider****/
 .data_slider {
