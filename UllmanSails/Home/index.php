@@ -108,21 +108,16 @@
       <img src="../Home/arrow_bottom.png" alt="">
     </div>
 
-    <?php include "../General/Charging/charging.php"; ?>
-  
-    <?php include "../General/Menu/Menu.php" ?>
     <div id="searchHide" class="searchHide">
+    <?php include "../General/Menu/Menu.php" ?>
     <?php include "../Home/1.Slider/Slider.php" ?>
     <?php include "../Home/buttom/buttom.php" ?>
     <?php include "2.Services/Services.php" ?>
-
-    <?php //include "../Home/Quote/seccion/quote.php" ?>
-    <?php //include "3.1.Covers/Covers.php" ?>
     <?php include "../Home/Picture/Picture.php" ?>
     <?php include "5.Video/Video.php" ?>
-    <?php //include "../Home/6.AboutUs/index.php" ?>
     <?php include "4.News/News.php" ?>
     </div>
+    <?php include "../General/Charging/charging.php"; ?>
 
     <div id="searchContent" class="searchContent">
     </div>

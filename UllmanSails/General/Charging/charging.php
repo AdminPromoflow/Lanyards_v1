@@ -23,4 +23,4 @@ $jsVersion = file_exists($jsPath) ? filemtime($jsPath) : time();
 ?>
 
 <!-- JavaScript -->
-<script src="<?= $jsPath ?>?v=<?= $jsVersion; ?>" type="text/javascript"></script>
+<script src="<?= $jsPath ?>?v=<?= $jsVersion; ?>" type="text/javascript" defer></script>

@@ -2,19 +2,28 @@ class Charging {
   constructor() {
     this.hideShowcharging(true);
   }
-  hideShowcharging(action){
+  
+  hideShowcharging(action) {
     const charging_background = document.querySelector('.charging_background');
     if (charging_background) {
-      charging_background.style.display = action ? "flex" : "none";
+      if (action) {
+        charging_background.style.display = "flex";
+        charging_background.style.opacity = "1";
+      } else {
+        charging_background.style.opacity = "0";
+        setTimeout(() => {
+          charging_background.style.display = "none";
+        }, 300); // Esperamos a que termine la animación
+      }
     }
   }
 }
 
-// Esperamos a que el DOM esté completamente cargado antes de crear la instancia
-window.addEventListener('DOMContentLoaded', function() {
+// Esperamos a que la página esté completamente cargada
+window.addEventListener('load', function() {
   const chargingClass = new Charging();
-  // Corregimos el nombre del método
-  window.addEventListener('load', function() {
+  // Agregamos un pequeño delay para asegurar que todo esté cargado
+  setTimeout(() => {
     chargingClass.hideShowcharging(false);
-  });
+  }, 500);
 });
