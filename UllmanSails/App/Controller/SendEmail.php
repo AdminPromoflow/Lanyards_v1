@@ -22,8 +22,8 @@
       $mail->SMTPSecure = 'ssl'; // Puedes usar 'ssl' o 'tls' según la configuración de tu servidor.
       $mail->Port = 25; // Puerto SMTP
 
-      $mail->setFrom('laurazoro@gmial.com', 'Laura Rozo');
-      $mail->addAddress('lonsus30@gmail.com', 'Aleja');
+      $mail->setFrom('admin@promoflow.net', 'Laura Rozo');
+      $mail->addAddress('aleinarossui@gmail.com', 'Aleja');
 
       $mail->Subject = 'Test';
       $mail->Body = 'Cuerpo del Correo HTML o texto plano';

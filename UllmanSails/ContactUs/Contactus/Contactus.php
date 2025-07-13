@@ -256,11 +256,9 @@
 
       formData.append('file', file);
       formData.append('module', 'sendEmail');
-
     }
     else  {
       formData.append('module', 'sendEmail');
-
     }
 
     $.ajax( "../App/Controller/Controller2.php", {
@@ -272,27 +270,8 @@
 
     success: function(data){
       alert(data);
-
     }
-
   }
 )
-
-
-/*$.ajax({
-      type: 'post',
-      url: '../../controller/consultarDatos.php',
-      processData: false,
-      data: data,
-      contentType: false,
-      async: false,
-      success: function(data) {
-
-      }
-    })*/
-
-
-
-
   });
 </script>
