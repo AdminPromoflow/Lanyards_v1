@@ -82,6 +82,7 @@
     <?php include "2.Services/Services.php" ?>
     <?php include "Customize/Customize.php" ?>
     </div>
+    <?php include "../General/Charging/charging.php"; ?>
 
     <div id="searchContent" class="searchContent">
     </div>

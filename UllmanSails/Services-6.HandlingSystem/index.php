@@ -80,6 +80,8 @@
     <?php include "1.Slider/Slider.php" ?>
     <?php include "2.Services/Services.php" ?>
     </div>
+    <?php include "../General/Charging/charging.php"; ?>
+
 
     <div id="searchContent" class="searchContent">
     </div>

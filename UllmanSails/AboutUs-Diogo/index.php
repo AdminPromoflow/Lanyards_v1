@@ -77,6 +77,7 @@
     <div id="searchHide" class="searchHide">
     <?php include "2.Services/Services.php" ?>
     </div>
+    <?php include "../General/Charging/charging.php"; ?>
 
     <div id="searchContent" class="searchContent">
     </div>

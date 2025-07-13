@@ -158,6 +158,8 @@
     <section class="rightPanel">
       <?php  include "RightPanel/RightPanel.php" ?>
     </section>
+    <?php include "../General/Charging/charging.php"; ?>
+
 </section>
 
 <script type="text/javascript">

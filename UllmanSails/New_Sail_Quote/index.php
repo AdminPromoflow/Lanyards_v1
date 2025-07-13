@@ -12,6 +12,7 @@
   <body class="aboutUs">
     <?php include "../General/Menu/Menu.php" ?>
     <?php include "../New_Sail_Quote/seccion/New_Sail_Quote.php" ?>
+    <?php include "../General/Charging/charging.php"; ?>
     <?php include "../General/Footer/Footer.php" ?>
   </body>
 

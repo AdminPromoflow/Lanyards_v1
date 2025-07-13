@@ -88,6 +88,7 @@
     <div id="searchHide" class="searchHide">
     <?php include "Contactus/Contactus.php" ?>
     </div>
+    <?php include "../General/Charging/charging.php"; ?>
 
     <div id="searchContent" class="searchContent">
     </div>

@@ -13,6 +13,7 @@
   <body class="aboutUs">
     <?php include "../General/Menu/Menu.php" ?>
     <?php include "../AboutUs/seccion/AboutUs.php" ?>
+    <?php include "../General/Charging/charging.php"; ?>
     <?php include "../General/Footer/Footer.php" ?>
   </body>
 
