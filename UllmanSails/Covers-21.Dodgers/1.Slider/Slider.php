@@ -4,7 +4,7 @@
   height: 80vh;
   width: 100vw;
   background-color: red;
-  background-image: url("../Covers/2.Services/no_image.jpg");
+  background-image: url("../Covers/2.Services/Dodgers.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

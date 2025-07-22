@@ -7,11 +7,11 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #FDF6F8;
+  background-color: #F8F8FA;
 }
 
 .text {
-  background-color: #FDF6F8;
+  background-color: #F8F8FA;
   padding: 4vw 6vw;
 }
 
@@ -146,6 +146,12 @@
 .pictureCruising12 { background-image: url("../Covers/2.Services/Windo_and_hatch_covers.jpg"); }
 .pictureCruising13 { background-image: url("../Covers/2.Services/Rib_cover.jpg"); }
 .pictureCruising16 { background-image: url("../Covers/2.Services/Bimini.jpg"); }
+.pictureCruising17 { background-image: url("../Covers/2.Services/jib_sock.png"); }
+.pictureCruising18 { background-image: url("../Covers/2.Services/Wind_Scoop.png"); }
+.pictureCruising19 { background-image: url("../Covers/2.Services/Dinghy_Cover.png"); }
+.pictureCruising20 { background-image: url("../Covers/2.Services/Guardrail_Lifeline_Covers.png"); }
+.pictureCruising21 { background-image: url("../Covers/2.Services/Dodgers.png"); }
+.pictureCruising22 { background-image: url("../Covers/2.Services/Exterior_Cushions.png"); }
 .no_image { background-image: url("../Covers/2.Services/no_image.jpg"); }
 </style>
 </style>
@@ -269,7 +275,7 @@
     </div>
   </a>
   <a href="../Covers-17.Jib_Sock/index.php">
-    <div class="box-services no_image">
+    <div class="box-services pictureCruising17">
       <div class="wrap-box-services">
         <h3 class="smallFont2">Jib Sock</h3>
         <h4>See more</h4>
@@ -278,7 +284,7 @@
   </a>
 
   <a href="../Covers-18.Wind_Scoop/index.php">
-    <div class="box-services no_image">
+    <div class="box-services pictureCruising18">
       <div class="wrap-box-services">
         <h3 class="smallFont2">Wind Scoop</h3>
         <h4>See more</h4>
@@ -287,7 +293,7 @@
   </a>
 
   <a href="../Covers-19.Dinghy_Cover/index.php">
-    <div class="box-services no_image">
+    <div class="box-services pictureCruising19">
       <div class="wrap-box-services">
         <h3 class="smallFont2">Dinghy Cover</h3>
         <h4>See more</h4>
@@ -296,7 +302,7 @@
   </a>
 
   <a href="../Covers-20.Guardrail_and_Lifeline_Covers/index.php">
-    <div class="box-services no_image">
+    <div class="box-services pictureCruising20">
       <div class="wrap-box-services">
         <h3 class="smallFont2">Guardrail & Lifeline Covers</h3>
         <h4>See more</h4>
@@ -305,7 +311,7 @@
   </a>
 
   <a href="../Covers-21.Dodgers/index.php">
-    <div class="box-services no_image">
+    <div class="box-services pictureCruising21">
       <div class="wrap-box-services">
         <h3 class="smallFont2">Dodgers</h3>
         <h4>See more</h4>
@@ -314,7 +320,7 @@
   </a>
 
   <a href="../Covers-22.Exterior_Cushions/index.php">
-    <div class="box-services no_image">
+    <div class="box-services pictureCruising22">
       <div class="wrap-box-services">
         <h3 class="smallFont2">Exterior Cushions</h3>
         <h4>See more</h4>

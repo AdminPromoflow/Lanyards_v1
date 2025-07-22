@@ -2,7 +2,7 @@
 /* Sección de texto general */
 .text {
   position: relative;
-  background-color: #FDF6F8;
+  background-color: #F8F8FA;
   padding: 4vw 6vw 1vw 6vw;
   display: flex;
   flex-wrap: wrap;
@@ -62,7 +62,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: #FDF6F8;
 }
 
 .services a {

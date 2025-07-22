@@ -2,7 +2,7 @@
   /* === Sección principal del contenido === */
   .text {
     position: relative;
-    background-color: #FDF6F8;
+    background-color:#F8F8FA;
     padding: 4vw 6vw;
     overflow: hidden;
     margin: 0;

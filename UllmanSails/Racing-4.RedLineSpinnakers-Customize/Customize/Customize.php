@@ -1,7 +1,7 @@
 <style media="screen">
   .customize{
     position: relative;
-    background-color: #FDF6F8;
+    background-color: #F8F8FA;
     padding: 2vw 0;
   }
   .spinnakerAsimetric{

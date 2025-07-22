@@ -18,6 +18,7 @@
         padding: 0px;
         font-family: 'Poppins', sans-serif;
         font-size: 15px;
+        background-color: #F8F8FA;
       }
       * {
         padding: 0;

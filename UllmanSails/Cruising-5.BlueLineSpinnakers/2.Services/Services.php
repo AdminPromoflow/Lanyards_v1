@@ -1,7 +1,7 @@
 <style media="screen">
 .text {
   position: relative;
-  background-color: #FDF6F8;
+  background-color: #F8F8FA;
   padding: 4vw 6vw;
   overflow: hidden;
 
@@ -150,6 +150,7 @@
   font-weight: 500;
   color: #F2F2F2;
 }
+/* ======== CUSTOMISER BUTTON SECTION ======== */
 .bottom {
   padding: 12px 24px;
   margin: 1rem auto;
@@ -160,12 +161,18 @@
   border-radius: 8px;
   color: black;
   cursor: pointer;
-  flex-direction: column;
-  transition: transform 0.2s, box-shadow 0.2s;
-  background-color: rgba(0, 0, 0, .1);
-  -webkit-backdrop-filter: blur(10px);
+
   display: flex;
+  flex-direction: column;
   align-items: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.bottom:hover {
+  transform: scale(1.05);
+  background-color: rgba(0, 0, 0, 0.01);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 .bottom img {
   height: auto;
@@ -174,9 +181,6 @@
 .bottom a {
   text-decoration: none;
   margin: auto;
-}
-.bottom:hover {
-  background-color: rgba(0, 0, 0, .01);
 }
 .boton {
   padding: 12px 24px;
@@ -191,6 +195,7 @@
 }
 .boton:hover {
   background-color: #005598;
+  color: white;
 }
 /* === RESPONSIVE: COLUMNA EN PANTALLAS PEQUEÑAS === */
 @media (max-width: 800px) {

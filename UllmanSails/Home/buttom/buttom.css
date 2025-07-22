@@ -5,6 +5,7 @@
    padding: 1rem ;
    font-family: 'Poppins', sans-serif;
    overflow: hidden;
+   background-color: #F8F8FA;
 
    display: flex;
    justify-content: flex-end;

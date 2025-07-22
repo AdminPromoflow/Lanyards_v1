@@ -1,7 +1,7 @@
 <style media="screen">
 .textRed {
   position: relative;
-  background-color: #FDF6F8;
+  background-color: #F8F8FA;
   padding: 4vw 6vw;
   width: 100vw;
   display: flex;

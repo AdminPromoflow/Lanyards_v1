@@ -2,7 +2,7 @@
 /* Contenedor principal de texto */
 .text {
   position: relative;
-  background-color: #FDF6F8;
+  background-color: #F8F8FA;
   padding: 4vw 6vw;
   overflow: hidden;
   display: flex;

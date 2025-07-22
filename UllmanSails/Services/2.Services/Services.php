@@ -2,7 +2,7 @@
 
 .text{
   position: relative;
-  background-color: #FDF6F8;
+  background-color: #F8F8FA;
   padding: 4vw 6vw  4vw 6vw;
 
 }
@@ -45,7 +45,6 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: #FDF6F8;
 }
 .services a{
    all: unset;

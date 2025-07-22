@@ -7,7 +7,7 @@
 }
 
 .text {
-  background-color: #FDF6F8;
+  background-color:#F8F8FA;
   padding: 4vw 6vw;
   display: flex;
   align-items: center;
@@ -74,7 +74,7 @@
 <section class="services">
   <div class="text">
     <a class="link_a" href="../Covers/index.php">&lt; Boat Covers</a>
-    <h1>Jib Sock</h1>
+    <h1>Wind Scoop</h1>
     <p>
       A wind scoop channels breeze down through your foredeck hatch, bringing
       fresh air into the cabin—even on still, stuffy days. Made from lightweight

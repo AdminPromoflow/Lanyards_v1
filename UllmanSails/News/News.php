@@ -16,13 +16,13 @@
       margin: 0px;
       padding: 0px;
       font-family: 'Poppins', sans-serif;
-      background-color: #111C42;
+      background-color:#F8F8FA;
       font-size: 1em;
     }
       .news{
       position: relative;
       width: 100vw;
-      background-color: #202E52;
+      background-color: #F8F8FA;
 
       display: flex;
       justify-content: center;

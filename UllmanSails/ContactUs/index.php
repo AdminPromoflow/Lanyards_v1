@@ -24,7 +24,7 @@
         margin: 0px;
         padding: 0px;
         font-family: 'Poppins', sans-serif;
-        background-color: #111C42;
+        background-color: #F8F8FA;
         font-family: sans-serif;
         font-size: 15px;
       }

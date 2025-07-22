@@ -3,7 +3,7 @@
   position: relative;
   padding: 4vw 6vw  4vw 6vw;
   width: 100vw;
-  background-color: #FDF6F8;
+  background-color: #F8F8FA;
 
   display: flex;
   flex-direction: column;
@@ -39,12 +39,10 @@
   position: relative;
   padding: 2vw 6vw;
   width: 100%;
-  background-color: green;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #FDF6F8;
 }
 .servicesblue a{
  all: unset;

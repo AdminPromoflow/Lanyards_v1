@@ -2,7 +2,7 @@
 /* ======== SECTION TEXT STYLES ======== */
 .text {
   position: relative;
-  background-color: #FDF6F8;
+  background-color: #F8F8FA;
   padding: 4vw 6vw;
   overflow: hidden;
   display: flex;
@@ -64,6 +64,7 @@
   border-radius: 8px;
   color: black;
   cursor: pointer;
+  
   display: flex;
   flex-direction: column;
   align-items: center;

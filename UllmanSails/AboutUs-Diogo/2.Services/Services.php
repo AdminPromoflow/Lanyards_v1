@@ -6,7 +6,7 @@
     flex-wrap: wrap;
     width: 100vw;
     padding: 1vw;
-    background-color: #FDF6F8;
+    background-color: #F8F8FA;
   }
 
   .text {

@@ -4,7 +4,7 @@
    width: 100vw;
    height: 80vh;
    margin: 50px 0px;
-   background-color: blue;
+   background-color: #F8F8FA;
    padding: 0;
    font-family: 'Poppins', sans-serif;
    overflow: hidden;

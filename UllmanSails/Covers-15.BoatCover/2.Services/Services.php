@@ -1,4 +1,4 @@
-<style media="screen">
+    <style media="screen">
 .services {
   padding: 0;
   margin: 0;
@@ -7,7 +7,7 @@
 }
 
 .text {
-  background-color: #FDF6F8;
+  background-color: #F8F8FA;
   padding: 4vw 6vw;
   display: flex;
   align-items: center;

@@ -136,7 +136,7 @@
       <input id="contactName" type="text" name="" placeholder="Name" value="">
       <input id="contactNumber" type="text" name="" placeholder="Contact number" value="">
       <input id="contactLocation" type="text" name="" placeholder="Location of Vessel (?)" value="">
-      <input id="contactEmail" type="text" name="" placeholder="Email address" value="">
+      <input id="contactEmail" type="email" name="" placeholder="Email address" value="">
       <label for="pdf_file">Select a PDF file:</label>
       <input type="file" id="pdf_file" name="pdf_file" accept=".pdf">
       <textarea name="name" placeholder="Please share your experiences" rows="3" cols="80"></textarea>
