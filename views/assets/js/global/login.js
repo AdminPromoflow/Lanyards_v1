@@ -1,12 +1,9 @@
 // Define a class called "Login"
 class Login {
   constructor() {
-    //this.makeAjaxRequestValidateGoogleLogin();
 
     this.appId = '615665997605768';
     this.initFacebookSDK();
-
-  //  login.style.display = "none";
 
   password_forgotten.addEventListener("click", function(){
     // Call the closeLogin method of the Login class
@@ -22,10 +19,6 @@ class Login {
 
   });
 
-/*  loginWithFacebook1.addEventListener("click", function(){
-    loginClass.customLogin();
-
-  });*/
 
 
 
@@ -43,10 +36,10 @@ class Login {
     });
 
 
-    loginWithGoogle1.addEventListener("click", function(){
+  /*  loginWithGoogle1.addEventListener("click", function(){
       // Make the AJAX request
       //loginClass.makeAjaxRequestLoginWithGoogle();
-    })
+    })*/
 
 
 
@@ -83,7 +76,7 @@ class Login {
   }
 
   // Function to make the AJAX request
-  makeAjaxRequestLoginWithGoogle() {
+/*  makeAjaxRequestLoginWithGoogle() {
       // Define the URL and the data to be sent
       const url = "../../controller/users/login-google.php";
       const data = {
@@ -158,7 +151,7 @@ class Login {
       .catch(error => {
           alert("Error: " + error.message); // Maneja errores de red o análisis
       });
-  }
+  }*/
 
   // Function to make the AJAX request
   makeAjaxRequestLogin() {
@@ -282,7 +275,7 @@ class Login {
 
 
 
-
+/*
 
 
 
@@ -397,7 +390,7 @@ class Login {
      this.updateStatus('You have logged out.');
    });
  }
-
+*/
 
 
 
