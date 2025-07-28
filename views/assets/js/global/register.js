@@ -181,12 +181,10 @@ class Register {
           registerClass.hideRegister(700);
 
           document.addEventListener("DOMContentLoaded", function () {
-            // Asegúrate de crear la instancia aquí si aún no existe
             if (typeof loginClass === "undefined") {
               window.loginClass = new Login();
             }
 
-            // Ahora puedes llamar a showLogin
             loginClass.showLogin(700);
           });
 
