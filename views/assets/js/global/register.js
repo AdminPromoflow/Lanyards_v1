@@ -179,8 +179,9 @@ class Register {
           alert("Successful registration. Welcome to our community!");
 
           loginClass.showLogin(700);
-          registerClass.hideRegister(700);
           alert(JSON.stringify(data + " que raro * 2"));
+
+          registerClass.hideRegister(700);
 
           break;
         case "-1":
