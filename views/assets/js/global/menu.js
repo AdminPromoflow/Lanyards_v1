@@ -200,7 +200,7 @@ class Menu {
         .then(data => {
           // If logout is successful, reload the page
           chargingClass.hideShowchargin(false);
-          loginClass.logoutFacebook();
+        //  loginClass.logoutFacebook();
           alert("Successfully logged out.");
           window.location.href = "https://lanyardsforyou.com/views/home/index.php";
         })
