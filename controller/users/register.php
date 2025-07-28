@@ -58,13 +58,15 @@ class ApiHandlerRegister {
             );
 
 
-            echo json_encode($validatedData);exit;
             if (!$validatedData) {
               header('Content-Type: application/json');
               echo json_encode(array( "messageRegister" => "0"));
 
               return false;
             }
+
+            echo json_encode($validatedData);exit;
+
 
             // Create a database connection and user instance
             $connection = new Database();
