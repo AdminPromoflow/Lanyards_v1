@@ -74,9 +74,10 @@ class ApiHandlerRegister {
             $user->setEmail($validatedData['email']);
             $user->setPassword($validatedData['password']);
             $user->setSignupCategory($data->signupCategory);
+            echo json_encode($data->signupCategory);exit;
+
             $userCreated = $user->createUser(); // Insert user into the database
 
-            echo json_encode($userCreated);exit;
 
 
             if ($userCreated) {
