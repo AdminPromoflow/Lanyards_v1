@@ -79,7 +79,6 @@ class ApiHandlerRegister {
 
             if ($userCreated) {
 
-
               $connection = new Database();
               $provided = new Addresses_Model($connection);
               $provided->setUserEmail($validatedData['email']);
@@ -126,7 +125,6 @@ class ApiHandlerRegister {
               else {
                 return true;
               }
-
             }
             else {
             if ($data->signupCategory == "normal") {
