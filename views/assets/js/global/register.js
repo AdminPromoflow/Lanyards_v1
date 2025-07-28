@@ -244,24 +244,40 @@ class Register {
 
 }
 
-// Get DOM elements for the register
-const openRegisterFromLogin = document.getElementById("openRegisterFromLogin");
-const closeRegister = document.getElementById("closeRegister");
-const containerRegister = document.getElementById("containerRegister");
-const register = document.getElementById("register");
+document.addEventListener("DOMContentLoaded", function () {
+  // Obtener elementos DOM después de que estén disponibles
+  const openRegisterFromLogin = document.getElementById("openRegisterFromLogin");
+  const closeRegister = document.getElementById("closeRegister");
+  const containerRegister = document.getElementById("containerRegister");
+  const register = document.getElementById("register");
 
-const nameRegister = document.getElementById("nameRegister");
-const emailRegister = document.getElementById("emailRegister");
-const passwordRegister = document.getElementById("passwordRegister");
+  const nameRegister = document.getElementById("nameRegister");
+  const emailRegister = document.getElementById("emailRegister");
+  const passwordRegister = document.getElementById("passwordRegister");
 
-const registerWithGoogle1 = document.getElementById("registerWithGoogle1");
-const registerWithFacebook1 = document.getElementById("registerWithFacebook1");
-const aceptTermsConditions = document.getElementById("acept_terms_conditions");
+  const registerWithGoogle1 = document.getElementById("registerWithGoogle1");
+  const registerWithFacebook1 = document.getElementById("registerWithFacebook1");
+  const aceptTermsConditions = document.getElementById("acept_terms_conditions");
 
+  const submitBtnRegister = document.getElementById("submitBtnRegister");
 
+  // Hacerlos accesibles globalmente (si es necesario)
+  window.openRegisterFromLogin = openRegisterFromLogin;
+  window.closeRegister = closeRegister;
+  window.containerRegister = containerRegister;
+  window.register = register;
 
-// Set the initial position of the "register" element
-let closeRegisterSide = "left";
+  window.nameRegister = nameRegister;
+  window.emailRegister = emailRegister;
+  window.passwordRegister = passwordRegister;
 
-// Create an instance of the Register class
-const registerClass = new Register();
+  window.registerWithGoogle1 = registerWithGoogle1;
+  window.registerWithFacebook1 = registerWithFacebook1;
+  window.aceptTermsConditions = aceptTermsConditions;
+  window.submitBtnRegister = submitBtnRegister;
+
+  window.closeRegisterSide = "left";
+
+  // Crear instancia global
+  window.registerClass = new Register();
+});

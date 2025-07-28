@@ -398,30 +398,32 @@ class Login {
 
 }
 
-// Get DOM elements
-const loginWithGoogle1 = document.getElementById("loginWithGoogle1");
-const loginWithFacebook1 = document.getElementById("loginWithFacebook1");
+document.addEventListener("DOMContentLoaded", function () {
+  // DOM ya cargado, ahora sí podemos obtener los elementos
+  const loginWithGoogle1 = document.getElementById("loginWithGoogle1");
+  const loginWithFacebook1 = document.getElementById("loginWithFacebook1");
+  const openLoginFromRegister = document.getElementById("openLoginFromRegister");
+  const login = document.getElementById("login");
+  const closeLogin = document.getElementById("closeLogin");
+  const password_forgotten = document.getElementById("password_forgotten");
+  const containerLogin = document.getElementById("containerLogin");
+  const emailLogin = document.getElementById("emailLogin");
+  const passwordLogin = document.getElementById("passwordLogin");
+  const loginButton = document.getElementById("loginButton");
 
-const openLoginFromRegister = document.getElementById("openLoginFromRegister");
-const login = document.getElementById("login");
-const closeLogin = document.getElementById("closeLogin"); // Button to close the login form
-const password_forgotten = document.getElementById("password_forgotten");
+  // Hacer variables accesibles globalmente
+  window.loginWithGoogle1 = loginWithGoogle1;
+  window.loginWithFacebook1 = loginWithFacebook1;
+  window.openLoginFromRegister = openLoginFromRegister;
+  window.login = login;
+  window.closeLogin = closeLogin;
+  window.password_forgotten = password_forgotten;
+  window.containerLogin = containerLogin;
+  window.emailLogin = emailLogin;
+  window.passwordLogin = passwordLogin;
+  window.loginButton = loginButton;
+  window.closeLoginSide = "left";
 
-
-var containerLogin = document.getElementById("containerLogin");
-
-
-
-var emailLogin = document.getElementById("emailLogin");
-var passwordLogin = document.getElementById("passwordLogin");
-var loginButton = document.getElementById("loginButton");
-
-
-
-
-
-var closeLoginSide = "left";
-
-// Create an instance of the Login class
-const loginClass = new Login();
-// Botón de logout
+  // Crear instancia global
+  window.loginClass = new Login();
+});
