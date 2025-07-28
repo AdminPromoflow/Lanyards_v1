@@ -65,7 +65,6 @@ class ApiHandlerRegister {
               return false;
             }
 
-            echo json_encode($validatedData);exit;
 
 
             // Create a database connection and user instance
@@ -77,6 +76,7 @@ class ApiHandlerRegister {
             $user->setSignupCategory($data->signupCategory);
             $userCreated = $user->createUser(); // Insert user into the database
 
+            echo json_encode($validatedData);exit;
 
 
             if ($userCreated) {
