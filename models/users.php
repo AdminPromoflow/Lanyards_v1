@@ -156,7 +156,7 @@ class Users {
        } catch (PDOException $e) {
            // Puedes registrar el error si quieres debuggear:
            // error_log("Error al crear usuario: " . $e->getMessage());
-           return false;
+           return $e->getMessage();
        }
    }
 
