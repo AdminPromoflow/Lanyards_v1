@@ -58,7 +58,7 @@ class ApiHandlerRegister {
             );
 
 
-
+            echo json_encode($validatedData);exit;
             if (!$validatedData) {
               header('Content-Type: application/json');
               echo json_encode(array( "messageRegister" => "0"));
