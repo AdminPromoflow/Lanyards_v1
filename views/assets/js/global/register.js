@@ -172,12 +172,13 @@ class Register {
       return response.json(); // Expecting JSON response
     })
     .then(data => {
-      alert(JSON.stringify(data));
       chargingClass.hideShowchargin(false); // Hide loading indicator
 
       switch (data.messageRegister) {
         case "1":
           alert("Successful registration. Welcome to our community!");
+          alert(JSON.stringify(data + " que raro"));
+
           loginClass.showLogin(700);
           registerClass.hideRegister(700);
           break;
