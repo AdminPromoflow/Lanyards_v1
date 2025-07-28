@@ -2,8 +2,8 @@
 class Login {
   constructor() {
 
-    this.appId = '615665997605768';
-    this.initFacebookSDK();
+  /*  this.appId = '615665997605768';
+    this.initFacebookSDK();*/
 
   password_forgotten.addEventListener("click", function(){
     // Call the closeLogin method of the Login class
