@@ -179,13 +179,14 @@ class Register {
           alert("Successful registration. Welcome to our community!");
 
           registerClass.hideRegister(700);
+          alert(loginClass);
+
 
           document.addEventListener("DOMContentLoaded", function () {
 
             if (typeof loginClass === "undefined") {
               window.loginClass = new Login();
             }
-            alert(loginClass);
 
             loginClass.showLogin(700);
           });
