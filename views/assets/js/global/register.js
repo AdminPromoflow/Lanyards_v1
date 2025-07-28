@@ -177,11 +177,11 @@ class Register {
       switch (data.messageRegister) {
         case "1":
           alert("Successful registration. Welcome to our community!");
-          alert(JSON.stringify(data + " que raro * 2"));
-
-          loginClass.showLogin(700);
 
           registerClass.hideRegister(700);
+          alert("Esto funciona");
+          loginClass.showLogin(700);
+
 
           break;
         case "-1":

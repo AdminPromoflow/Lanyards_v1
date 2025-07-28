@@ -12,7 +12,7 @@ $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
   <div id="containerLogin" class="containerLogin">
     <div class="headLogin">
       <div class="headLoginContaner">
-          <h1>Login</h1>
+        <h1>Login</h1>
       </div>
       <?php
       $closeImg = '../../views/assets/img/global/login/close.png';
