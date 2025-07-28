@@ -181,9 +181,11 @@ class Register {
           registerClass.hideRegister(700);
 
           document.addEventListener("DOMContentLoaded", function () {
+
             if (typeof loginClass === "undefined") {
               window.loginClass = new Login();
             }
+            alert(loginClass);
 
             loginClass.showLogin(700);
           });
