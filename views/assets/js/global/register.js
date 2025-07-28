@@ -182,7 +182,7 @@ class Register {
 
 
             if (typeof loginClass === "undefined") {
-              const loginClass = new Login();
+              window.loginClass = new Login();
             }
 
             loginClass.showLogin(700);
