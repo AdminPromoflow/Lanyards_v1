@@ -78,10 +78,11 @@ switch ($event->type) {
 
 
 
+                $connection = new Database();
+                $orderModel = new Order_Model($connection);
+                $orderModel->setIdOrder($orderId);
 
-
-
-
+                file_put_contents('log.txt', $orderModel->getOrderDetailsAndUserInformation(), FILE_APPEND);
 
 
 

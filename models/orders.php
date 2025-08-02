@@ -394,10 +394,14 @@ class Order_Model {
             throw new Exception("Error retrieving processing orders with jobs by email.");
         }
     }
+    public function getOrderDetailsAndUserInformation(){
+      return "hola";
+    }
 
 
 
 
 
 }
+
 ?>
