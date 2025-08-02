@@ -394,9 +394,43 @@ class Order_Model {
             throw new Exception("Error retrieving processing orders with jobs by email.");
         }
     }
-    public function getOrderDetailsAndUserInformation(){
-      return "hola";
-    }
+    public function getOrderDetailsAndUserInformation() {
+      try {
+          $conn = $this->connection->getConnection();
+
+          $sql = $conn->prepare("
+              SELECT
+                  o.idOrder, o.date_time, o.status, o.total,
+                  j.idJobs, j.name AS job_name, j.description, j.amount, j.total AS job_total,
+                  i.linkImage, i.timesImage, i.imageRotation,
+                  t.contentText, t.timesText, t.colourText,
+                  a.first_name, a.last_name, a.email_address, a.street_address_1, a.town_city, a.postcode,
+                  aw.linkLeftImage, aw.linkRightImage
+              FROM Orders o
+              LEFT JOIN Jobs j ON o.idOrder = j.idOrder
+              LEFT JOIN Image i ON j.idJobs = i.idJobs
+              LEFT JOIN Text t ON j.idJobs = t.idJobs
+              LEFT JOIN Artwork aw ON j.idJobs = aw.idJobs
+              LEFT JOIN Users u ON o.idUser = u.idUser
+              LEFT JOIN Addresses a ON a.idUser = u.idUser
+              WHERE o.idOrder = :idOrder
+          ");
+
+          $sql->bindParam(':idOrder', $this->idOrder, PDO::PARAM_INT);
+          $sql->execute();
+
+          $result = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+          $this->connection->closeConnection();
+
+          return $result ?: [];
+
+      } catch (PDOException $e) {
+          error_log("DB Error in getOrderDetailsAndUserInformation: " . $e->getMessage());
+          throw new Exception("Error retrieving detailed order information.");
+      }
+  }
+
 
 
 
