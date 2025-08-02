@@ -81,8 +81,9 @@ switch ($event->type) {
                 $connection = new Database();
                 $orderModel = new Order_Model($connection);
                 $orderModel->setIdOrder($orderId);
+                $result = $orderModel->getOrderDetailsAndUserInformation();
 
-                file_put_contents('log.txt', $orderModel->getOrderDetailsAndUserInformation(), FILE_APPEND);
+                file_put_contents('log.txt', json_encode($result) , FILE_APPEND);
 
 
 
