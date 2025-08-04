@@ -395,78 +395,89 @@ class Order_Model {
         }
     }
     public function getOrderDetailsAndUserInformation() {
-    try {
-        $conn = $this->connection->getConnection();
+        try {
+            $conn = $this->connection->getConnection();
 
-        // 1. Obtener la orden
-        $stmtOrder = $conn->prepare("SELECT * FROM Orders WHERE idOrder = :idOrder");
-        $stmtOrder->bindParam(':idOrder', $this->idOrder, PDO::PARAM_INT);
-        $stmtOrder->execute();
-        $order = $stmtOrder->fetch(PDO::FETCH_ASSOC);
+            // 1. Obtener la orden
+            $stmtOrder = $conn->prepare("SELECT * FROM Orders WHERE idOrder = :idOrder");
+            $stmtOrder->bindParam(':idOrder', $this->idOrder, PDO::PARAM_INT);
+            $stmtOrder->execute();
+            $order = $stmtOrder->fetch(PDO::FETCH_ASSOC);
 
-        // 2. Obtener el trabajo (job)
-        $stmtJob = $conn->prepare("SELECT * FROM Jobs WHERE idOrder = :idOrder");
-        $stmtJob->bindParam(':idOrder', $this->idOrder, PDO::PARAM_INT);
-        $stmtJob->execute();
-        $job = $stmtJob->fetch(PDO::FETCH_ASSOC);
+            // 2. Obtener el trabajo (job)
+            $stmtJob = $conn->prepare("SELECT * FROM Jobs WHERE idOrder = :idOrder");
+            $stmtJob->bindParam(':idOrder', $this->idOrder, PDO::PARAM_INT);
+            $stmtJob->execute();
+            $job = $stmtJob->fetch(PDO::FETCH_ASSOC);
 
-        // Validar si hay job antes de consultar con su id
-        $jobId = $job['idJobs'] ?? null;
+            $jobId = $job['idJobs'] ?? null;
 
-        // 3. Obtener la imagen del trabajo
-        $image = [];
-        if ($jobId) {
-            $stmtImage = $conn->prepare("SELECT * FROM Image WHERE idJobs = :idJobs");
-            $stmtImage->bindParam(':idJobs', $jobId, PDO::PARAM_INT);
-            $stmtImage->execute();
-            $image = $stmtImage->fetch(PDO::FETCH_ASSOC) ?: [];
+            // 3. Obtener la imagen
+            $image = [];
+            if ($jobId) {
+                $stmtImage = $conn->prepare("SELECT * FROM Image WHERE idJobs = :idJobs");
+                $stmtImage->bindParam(':idJobs', $jobId, PDO::PARAM_INT);
+                $stmtImage->execute();
+                $image = $stmtImage->fetch(PDO::FETCH_ASSOC) ?: [];
+            }
+
+            // 4. Obtener el texto
+            $text = [];
+            if ($jobId) {
+                $stmtText = $conn->prepare("SELECT * FROM Text WHERE idJobs = :idJobs");
+                $stmtText->bindParam(':idJobs', $jobId, PDO::PARAM_INT);
+                $stmtText->execute();
+                $text = $stmtText->fetch(PDO::FETCH_ASSOC) ?: [];
+            }
+
+            // 5. Obtener el artwork
+            $artwork = [];
+            if ($jobId) {
+                $stmtArtwork = $conn->prepare("SELECT * FROM Artwork WHERE idJobs = :idJobs");
+                $stmtArtwork->bindParam(':idJobs', $jobId, PDO::PARAM_INT);
+                $stmtArtwork->execute();
+                $artwork = $stmtArtwork->fetch(PDO::FETCH_ASSOC) ?: [];
+            }
+
+            // 6. Obtener direcciones
+            $addresses = [];
+            $user = [];
+            if ($order && $order['idUser']) {
+                $idUser = $order['idUser'];
+
+                // Direcciones del usuario
+                $stmtAddress = $conn->prepare("SELECT * FROM Addresses WHERE idUser = :idUser");
+                $stmtAddress->bindParam(':idUser', $idUser, PDO::PARAM_INT);
+                $stmtAddress->execute();
+                $addresses = $stmtAddress->fetchAll(PDO::FETCH_ASSOC);
+
+                // Información del usuario
+                $stmtUser = $conn->prepare("SELECT * FROM Users WHERE idUser = :idUser");
+                $stmtUser->bindParam(':idUser', $idUser, PDO::PARAM_INT);
+                $stmtUser->execute();
+                $user = $stmtUser->fetch(PDO::FETCH_ASSOC) ?: [];
+            }
+
+            // Resultado final
+            $result = [
+                "order" => $order ?: [],
+                "job" => $job ?: [],
+                "image" => $image,
+                "text" => $text,
+                "artwork" => $artwork,
+                "addresses" => $addresses,
+                "user" => $user
+            ];
+
+            $this->connection->closeConnection();
+            return $result;
+
+        } catch (PDOException $e) {
+            error_log("DB Error in getOrderDetailsAndUserInformation: " . $e->getMessage());
+            throw new Exception("Error retrieving detailed order information.");
         }
-
-        // 4. Obtener el texto del trabajo
-        $text = [];
-        if ($jobId) {
-            $stmtText = $conn->prepare("SELECT * FROM Text WHERE idJobs = :idJobs");
-            $stmtText->bindParam(':idJobs', $jobId, PDO::PARAM_INT);
-            $stmtText->execute();
-            $text = $stmtText->fetch(PDO::FETCH_ASSOC) ?: [];
-        }
-
-        // 5. Obtener artwork del trabajo
-        $artwork = [];
-        if ($jobId) {
-            $stmtArtwork = $conn->prepare("SELECT * FROM Artwork WHERE idJobs = :idJobs");
-            $stmtArtwork->bindParam(':idJobs', $jobId, PDO::PARAM_INT);
-            $stmtArtwork->execute();
-            $artwork = $stmtArtwork->fetch(PDO::FETCH_ASSOC) ?: [];
-        }
-
-        // 6. Obtener dirección del usuario
-        $addresses = [];
-        if ($order && $order['idUser']) {
-            $stmtAddress = $conn->prepare("SELECT * FROM Addresses WHERE idUser = :idUser");
-            $stmtAddress->bindParam(':idUser', $order['idUser'], PDO::PARAM_INT);
-            $stmtAddress->execute();
-            $addresses = $stmtAddress->fetchAll(PDO::FETCH_ASSOC);
-        }
-
-        // Resultado final organizado
-        $result = [
-            "order" => $order ?: [],
-            "job" => $job ?: [],
-            "image" => $image,
-            "text" => $text,
-            "artwork" => $artwork,
-            "addresses" => $addresses
-        ];
-
-        $this->connection->closeConnection();
-        return $result;
-
-    } catch (PDOException $e) {
-        error_log("DB Error in getOrderDetailsAndUserInformation: " . $e->getMessage());
-        throw new Exception("Error retrieving detailed order information.");
     }
-}
+
 
 
 
