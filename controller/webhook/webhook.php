@@ -61,32 +61,64 @@ switch ($event->type) {
 
             $stateStatus = $orderModel->updateOrderStatus();
 
-
-
-
-
                 $connection = new Database();
                 $userModel = new Users($connection);
                 $userModel->setIdOrder($orderId); // Asegúrate de tener $orderId definido
                 $userInfo = $userModel->getEmailAndNameByIdOrder();
-
 
                 $emailSender = new EmailSender();
                 $emailSender->setRecipientEmail($userInfo['email']);
                 $emailSender->setRecipientName($userInfo['name']);
                 $emailSent = $emailSender->sendEmailSuccesssfullOrder();
 
-
-
                 $connection = new Database();
                 $orderModel = new Order_Model($connection);
                 $orderModel->setIdOrder($orderId);
                 $result = $orderModel->getOrderDetailsAndUserInformation();
 
-                file_put_contents('log.txt', json_encode($result) , FILE_APPEND);
+
+                // API endpoint al que deseas enviar los datos
+                $apiUrl = "https://promoflow.net/controller/lanyards4you/webhook.php"; // Cambia esto por tu URL real
+
+                // Tu API key
+                $apiKey = "pk_live_9hD73gTzWxA7yUjLqmKfPz1oCcXvLbQs"; // Reemplaza con tu clave
+
+                // Inicializar cURL
+                $ch = curl_init($apiUrl);
+
+                // Configurar la petición
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                curl_setopt($ch, CURLOPT_POST, true);
+
+                // Cuerpo de la petición (JSON)
+                curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($result));
+
+                // Encabezados (headers)
+                curl_setopt($ch, CURLOPT_HTTPHEADER, [
+                    'Content-Type: application/json',
+                    'Authorization: Bearer ' . $apiKey
+                ]);
+
+                // Ejecutar y capturar la respuesta
+                $response = curl_exec($ch);
+                $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+
+                // Verificar errores
+                if (curl_errno($ch)) {
+                    //echo 'cURL error: ' . curl_error($ch);
+                    file_put_contents('log.txt', json_encode('cURL error: ' . curl_error($ch)) , FILE_APPEND);
+
+                } else {
+                    file_put_contents('log.txt', json_encode('Response Code: ' . $httpCode) , FILE_APPEND);
+                }
+
+                // Cerrar cURL
+                curl_close($ch);
 
 
 
+
+              //  file_put_contents('log.txt', json_encode($result) , FILE_APPEND);
 
 
         } else {
