@@ -404,42 +404,36 @@ class Order_Model {
             $stmtOrder->execute();
             $order = $stmtOrder->fetch(PDO::FETCH_ASSOC);
 
-            // 2. Obtener el trabajo (job)
-            $stmtJob = $conn->prepare("SELECT * FROM Jobs WHERE idOrder = :idOrder");
-            $stmtJob->bindParam(':idOrder', $this->idOrder, PDO::PARAM_INT);
-            $stmtJob->execute();
-            $job = $stmtJob->fetch(PDO::FETCH_ASSOC);
+            // 2. Obtener TODOS los jobs
+            $stmtJobs = $conn->prepare("SELECT * FROM Jobs WHERE idOrder = :idOrder");
+            $stmtJobs->bindParam(':idOrder', $this->idOrder, PDO::PARAM_INT);
+            $stmtJobs->execute();
+            $jobs = $stmtJobs->fetchAll(PDO::FETCH_ASSOC);
 
-            $jobId = $job['idJobs'] ?? null;
+            // 3. Para cada job, obtener su text, image y artwork
+            foreach ($jobs as &$job) {
+                $idJobs = $job['idJobs'];
 
-            // 3. Obtener la imagen
-            $image = [];
-            if ($jobId) {
+                // Imagen
                 $stmtImage = $conn->prepare("SELECT * FROM Image WHERE idJobs = :idJobs");
-                $stmtImage->bindParam(':idJobs', $jobId, PDO::PARAM_INT);
+                $stmtImage->bindParam(':idJobs', $idJobs, PDO::PARAM_INT);
                 $stmtImage->execute();
-                $image = $stmtImage->fetch(PDO::FETCH_ASSOC) ?: [];
-            }
+                $job['image'] = $stmtImage->fetch(PDO::FETCH_ASSOC) ?: [];
 
-            // 4. Obtener el texto
-            $text = [];
-            if ($jobId) {
+                // Texto
                 $stmtText = $conn->prepare("SELECT * FROM Text WHERE idJobs = :idJobs");
-                $stmtText->bindParam(':idJobs', $jobId, PDO::PARAM_INT);
+                $stmtText->bindParam(':idJobs', $idJobs, PDO::PARAM_INT);
                 $stmtText->execute();
-                $text = $stmtText->fetch(PDO::FETCH_ASSOC) ?: [];
-            }
+                $job['text'] = $stmtText->fetch(PDO::FETCH_ASSOC) ?: [];
 
-            // 5. Obtener el artwork
-            $artwork = [];
-            if ($jobId) {
+                // Artwork
                 $stmtArtwork = $conn->prepare("SELECT * FROM Artwork WHERE idJobs = :idJobs");
-                $stmtArtwork->bindParam(':idJobs', $jobId, PDO::PARAM_INT);
+                $stmtArtwork->bindParam(':idJobs', $idJobs, PDO::PARAM_INT);
                 $stmtArtwork->execute();
-                $artwork = $stmtArtwork->fetch(PDO::FETCH_ASSOC) ?: [];
+                $job['artwork'] = $stmtArtwork->fetch(PDO::FETCH_ASSOC) ?: [];
             }
 
-            // 6. Obtener direcciones
+            // 4. Obtener direcciones y usuario
             $addresses = [];
             $user = [];
             if ($order && $order['idUser']) {
@@ -458,13 +452,10 @@ class Order_Model {
                 $user = $stmtUser->fetch(PDO::FETCH_ASSOC) ?: [];
             }
 
-            // Resultado final
+            // 5. Resultado final
             $result = [
                 "order" => $order ?: [],
-                "job" => $job ?: [],
-                "image" => $image,
-                "text" => $text,
-                "artwork" => $artwork,
+                "jobs" => $jobs,
                 "addresses" => $addresses,
                 "user" => $user
             ];
@@ -477,6 +468,7 @@ class Order_Model {
             throw new Exception("Error retrieving detailed order information.");
         }
     }
+
 
 
 
