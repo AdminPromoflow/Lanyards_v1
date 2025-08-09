@@ -404,13 +404,13 @@ class Order_Model {
             $stmtOrder->execute();
             $order = $stmtOrder->fetch(PDO::FETCH_ASSOC) ?: [];
 
-            // 2) Jobs (todos los de la orden)
+            // 2) Jobs (todos)
             $stmtJobs = $conn->prepare("SELECT * FROM Jobs WHERE idOrder = :idOrder");
             $stmtJobs->bindParam(':idOrder', $this->idOrder, PDO::PARAM_INT);
             $stmtJobs->execute();
             $jobs = $stmtJobs->fetchAll(PDO::FETCH_ASSOC);
 
-            // 3) Para cada job, adjuntar image, text, artwork como OBJETOS (no arrays)
+            // 3) Adjuntar image, text, artwork (como objetos) a cada job
             foreach ($jobs as &$job) {
                 $idJobs = (int)($job['idJobs'] ?? 0);
 
@@ -435,7 +435,7 @@ class Order_Model {
                 $artwork = $stmtArtwork->fetch(PDO::FETCH_ASSOC);
                 $job['artwork'] = $artwork ? $artwork : (object)[];
             }
-            unset($job); // romper referencia
+            unset($job);
 
             // 4) Addresses y User (según Orders.idUser)
             $addresses = [];
@@ -443,7 +443,7 @@ class Order_Model {
             if (!empty($order) && !empty($order['idUser'])) {
                 $idUser = (int)$order['idUser'];
 
-                // Addresses del usuario
+                // Addresses
                 $stmtAddress = $conn->prepare("SELECT * FROM Addresses WHERE idUser = :idUser");
                 $stmtAddress->bindParam(':idUser', $idUser, PDO::PARAM_INT);
                 $stmtAddress->execute();
@@ -456,10 +456,15 @@ class Order_Model {
                 $user = $stmtUser->fetch(PDO::FETCH_ASSOC) ?: [];
             }
 
-            // 5) Resultado final con la forma que quieres
+            // 5) Envolver cada job dentro de "job"
+            $jobsWrapped = array_map(function($job) {
+                return ["job" => $job];
+            }, $jobs);
+
+            // 6) Resultado final
             $result = [
                 "order"     => $order,
-                "jobs"      => $jobs,       // cada job ya trae image/text/artwork como objetos
+                "jobs"      => $jobsWrapped,   // [{ "job": { ... , "image":{}, "text":{}, "artwork":{} } }, ...]
                 "addresses" => $addresses,
                 "user"      => $user
             ];
