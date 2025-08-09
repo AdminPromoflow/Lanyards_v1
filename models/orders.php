@@ -398,66 +398,70 @@ class Order_Model {
         try {
             $conn = $this->connection->getConnection();
 
-            // 1. Obtener la orden
+            // 1) Order
             $stmtOrder = $conn->prepare("SELECT * FROM Orders WHERE idOrder = :idOrder");
             $stmtOrder->bindParam(':idOrder', $this->idOrder, PDO::PARAM_INT);
             $stmtOrder->execute();
-            $order = $stmtOrder->fetch(PDO::FETCH_ASSOC);
+            $order = $stmtOrder->fetch(PDO::FETCH_ASSOC) ?: [];
 
-            // 2. Obtener TODOS los jobs
+            // 2) Jobs (todos los de la orden)
             $stmtJobs = $conn->prepare("SELECT * FROM Jobs WHERE idOrder = :idOrder");
             $stmtJobs->bindParam(':idOrder', $this->idOrder, PDO::PARAM_INT);
             $stmtJobs->execute();
             $jobs = $stmtJobs->fetchAll(PDO::FETCH_ASSOC);
 
-            // 3. Para cada job, obtener su text, image y artwork
+            // 3) Para cada job, adjuntar image, text, artwork como OBJETOS (no arrays)
             foreach ($jobs as &$job) {
-                $idJobs = $job['idJobs'];
+                $idJobs = (int)($job['idJobs'] ?? 0);
 
-                // Imagen
+                // Image
                 $stmtImage = $conn->prepare("SELECT * FROM Image WHERE idJobs = :idJobs");
                 $stmtImage->bindParam(':idJobs', $idJobs, PDO::PARAM_INT);
                 $stmtImage->execute();
-                $job['image'] = $stmtImage->fetch(PDO::FETCH_ASSOC) ?: [];
+                $image = $stmtImage->fetch(PDO::FETCH_ASSOC);
+                $job['image'] = $image ? $image : (object)[];
 
-                // Texto
+                // Text
                 $stmtText = $conn->prepare("SELECT * FROM Text WHERE idJobs = :idJobs");
                 $stmtText->bindParam(':idJobs', $idJobs, PDO::PARAM_INT);
                 $stmtText->execute();
-                $job['text'] = $stmtText->fetch(PDO::FETCH_ASSOC) ?: [];
+                $text = $stmtText->fetch(PDO::FETCH_ASSOC);
+                $job['text'] = $text ? $text : (object)[];
 
                 // Artwork
                 $stmtArtwork = $conn->prepare("SELECT * FROM Artwork WHERE idJobs = :idJobs");
                 $stmtArtwork->bindParam(':idJobs', $idJobs, PDO::PARAM_INT);
                 $stmtArtwork->execute();
-                $job['artwork'] = $stmtArtwork->fetch(PDO::FETCH_ASSOC) ?: [];
+                $artwork = $stmtArtwork->fetch(PDO::FETCH_ASSOC);
+                $job['artwork'] = $artwork ? $artwork : (object)[];
             }
+            unset($job); // romper referencia
 
-            // 4. Obtener direcciones y usuario
+            // 4) Addresses y User (según Orders.idUser)
             $addresses = [];
             $user = [];
-            if ($order && $order['idUser']) {
-                $idUser = $order['idUser'];
+            if (!empty($order) && !empty($order['idUser'])) {
+                $idUser = (int)$order['idUser'];
 
-                // Direcciones del usuario
+                // Addresses del usuario
                 $stmtAddress = $conn->prepare("SELECT * FROM Addresses WHERE idUser = :idUser");
                 $stmtAddress->bindParam(':idUser', $idUser, PDO::PARAM_INT);
                 $stmtAddress->execute();
                 $addresses = $stmtAddress->fetchAll(PDO::FETCH_ASSOC);
 
-                // Información del usuario
+                // User
                 $stmtUser = $conn->prepare("SELECT * FROM Users WHERE idUser = :idUser");
                 $stmtUser->bindParam(':idUser', $idUser, PDO::PARAM_INT);
                 $stmtUser->execute();
                 $user = $stmtUser->fetch(PDO::FETCH_ASSOC) ?: [];
             }
 
-            // 5. Resultado final
+            // 5) Resultado final con la forma que quieres
             $result = [
-                "order" => $order ?: [],
-                "jobs" => $jobs,
+                "order"     => $order,
+                "jobs"      => $jobs,       // cada job ya trae image/text/artwork como objetos
                 "addresses" => $addresses,
-                "user" => $user
+                "user"      => $user
             ];
 
             $this->connection->closeConnection();
@@ -468,6 +472,7 @@ class Order_Model {
             throw new Exception("Error retrieving detailed order information.");
         }
     }
+
 
 
 
