@@ -404,40 +404,44 @@ class Order_Model {
             $stmtOrder->execute();
             $order = $stmtOrder->fetch(PDO::FETCH_ASSOC) ?: [];
 
-            // 2) Jobs (todos)
+            // 2) Jobs
             $stmtJobs = $conn->prepare("SELECT * FROM Jobs WHERE idOrder = :idOrder");
             $stmtJobs->bindParam(':idOrder', $this->idOrder, PDO::PARAM_INT);
             $stmtJobs->execute();
             $jobs = $stmtJobs->fetchAll(PDO::FETCH_ASSOC);
 
-            // 3) Adjuntar image, text, artwork (como objetos) a cada job
-            foreach ($jobs as &$job) {
-                $idJobs = (int)($job['idJobs'] ?? 0);
+            $jobsWrapped = [];
+            foreach ($jobs as $jobData) {
+                $idJobs = (int)($jobData['idJobs'] ?? 0);
 
                 // Image
                 $stmtImage = $conn->prepare("SELECT * FROM Image WHERE idJobs = :idJobs");
                 $stmtImage->bindParam(':idJobs', $idJobs, PDO::PARAM_INT);
                 $stmtImage->execute();
-                $image = $stmtImage->fetch(PDO::FETCH_ASSOC);
-                $job['image'] = $image ? $image : (object)[];
+                $image = $stmtImage->fetch(PDO::FETCH_ASSOC) ?: (object)[];
 
                 // Text
                 $stmtText = $conn->prepare("SELECT * FROM Text WHERE idJobs = :idJobs");
                 $stmtText->bindParam(':idJobs', $idJobs, PDO::PARAM_INT);
                 $stmtText->execute();
-                $text = $stmtText->fetch(PDO::FETCH_ASSOC);
-                $job['text'] = $text ? $text : (object)[];
+                $text = $stmtText->fetch(PDO::FETCH_ASSOC) ?: (object)[];
 
                 // Artwork
                 $stmtArtwork = $conn->prepare("SELECT * FROM Artwork WHERE idJobs = :idJobs");
                 $stmtArtwork->bindParam(':idJobs', $idJobs, PDO::PARAM_INT);
                 $stmtArtwork->execute();
-                $artwork = $stmtArtwork->fetch(PDO::FETCH_ASSOC);
-                $job['artwork'] = $artwork ? $artwork : (object)[];
-            }
-            unset($job);
+                $artwork = $stmtArtwork->fetch(PDO::FETCH_ASSOC) ?: (object)[];
 
-            // 4) Addresses y User (según Orders.idUser)
+                // Estructura final por cada job
+                $jobsWrapped[] = [
+                    "job"     => $jobData, // Solo los datos del job
+                    "image"   => $image,
+                    "text"    => $text,
+                    "artwork" => $artwork
+                ];
+            }
+
+            // 3) Addresses y User
             $addresses = [];
             $user = [];
             if (!empty($order) && !empty($order['idUser'])) {
@@ -456,15 +460,10 @@ class Order_Model {
                 $user = $stmtUser->fetch(PDO::FETCH_ASSOC) ?: [];
             }
 
-            // 5) Envolver cada job dentro de "job"
-            $jobsWrapped = array_map(function($job) {
-                return ["job" => $job];
-            }, $jobs);
-
-            // 6) Resultado final
+            // 4) Resultado final
             $result = [
                 "order"     => $order,
-                "jobs"      => $jobsWrapped,   // [{ "job": { ... , "image":{}, "text":{}, "artwork":{} } }, ...]
+                "jobs"      => $jobsWrapped, // Ahora cada elemento tiene job, image, text y artwork separados
                 "addresses" => $addresses,
                 "user"      => $user
             ];
@@ -477,6 +476,7 @@ class Order_Model {
             throw new Exception("Error retrieving detailed order information.");
         }
     }
+
 
 
 
