@@ -523,9 +523,15 @@ html {
   align-items: center;
   width: 100%;
   margin: 0;
-  padding: clamp(4.5rem, 8vw, 7.5rem) 0;
-  color: var(--ink);
-  background: linear-gradient(180deg, var(--blue-50) 0%, #d9e7f3 100%);
+  padding: clamp(4rem, 6vw, 6rem) 0;
+  color: var(--white);
+  background:
+    radial-gradient(circle at 10% 18%, rgba(67, 143, 195, 0.18), transparent 28rem),
+    linear-gradient(180deg, var(--navy-800) 0%, var(--navy-900) 100%);
+}
+
+.home-page .accessories_home > .section-intro {
+  color: rgba(255, 255, 255, 0.72);
 }
 
 .home-page .accessories_home > h2,
@@ -758,9 +764,9 @@ html {
 
 /* Bestseller */
 .home-page .most_popular_lanyard {
-  padding: clamp(4.5rem, 8vw, 8rem) clamp(1rem, 4vw, 4rem);
+  padding: clamp(4rem, 6vw, 6rem) clamp(1rem, 4vw, 4rem);
   color: var(--white);
-  background: linear-gradient(180deg, #d9e7f3 0, var(--navy-800) 64px, var(--navy-900) 100%);
+  background: linear-gradient(180deg, var(--navy-900) 0%, var(--navy-800) 100%);
 }
 
 .home-page .most_popular_lanyard > .section-intro {
@@ -878,7 +884,7 @@ html {
 /* Materials */
 .home-page .materials {
   width: 100%;
-  padding: clamp(4.5rem, 8vw, 8rem) clamp(1rem, 4vw, 4rem);
+  padding: clamp(4rem, 6vw, 6rem) clamp(1rem, 4vw, 4rem);
   color: var(--white);
   background:
     radial-gradient(circle at 15% 35%, rgba(64, 137, 188, 0.2), transparent 30rem),
@@ -981,7 +987,7 @@ html {
 /* About */
 .home-page .section_about_us {
   width: 100%;
-  padding: clamp(4.5rem, 8vw, 8rem) clamp(1rem, 4vw, 4rem);
+  padding: clamp(4rem, 6vw, 6rem) clamp(1rem, 4vw, 4rem);
   color: var(--white);
   background: linear-gradient(180deg, var(--navy-800) 0%, var(--navy-950) 100%);
 }
@@ -1055,7 +1061,7 @@ html {
 .home-page .section_contact_us {
   width: 100%;
   margin: 0;
-  padding: clamp(4.5rem, 8vw, 8rem) clamp(1rem, 4vw, 4rem);
+  padding: clamp(4rem, 6vw, 6rem) clamp(1rem, 4vw, 4rem);
   color: var(--white);
   background:
     radial-gradient(circle at 86% 20%, rgba(45, 109, 157, 0.16), transparent 28rem),

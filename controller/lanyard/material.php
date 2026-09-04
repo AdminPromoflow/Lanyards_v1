@@ -3,7 +3,6 @@
 require_once '../config/database.php'; // Path to database configuration
 require_once '../../models/lanyards.php'; // Path to lanyards model
 require_once 'width.php';
-require_once 'width.php'; // Double inclusion of the 'width.php' file. This might be an error.
 require_once 'sidePrinted.php';
 require_once 'noColours.php';
 require_once 'typeLanyards.php';
@@ -15,6 +14,7 @@ require_once 'extras.php';
 class Material {
     // Public function to handle incoming HTTP requests
     public function handleRequest() {
+        header('Content-Type: application/json; charset=utf-8');
         // Check if the request method is POST
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Retrieve the raw JSON data from the request body

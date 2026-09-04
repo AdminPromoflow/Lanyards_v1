@@ -7,7 +7,7 @@ $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
 <!-- CSS -->
 <link rel="stylesheet" href="<?= $cssPath ?>?v=<?= $cssVersion; ?>">
 
-<section class="materials">
+<section id="materials" class="materials">
   <span class="section-kicker">Pick your foundation</span>
   <h2>Choose the right material</h2>
   <p class="section-intro">From everyday polyester to recycled and full-colour options, choose the finish that suits your design and budget.</p>
