@@ -1708,3 +1708,148 @@ html {
     animation-iteration-count: 1 !important;
   }
 }
+
+/* Original visual language, professionally refined ----------------------- */
+.home-page .bgLanyards {
+  background:
+    linear-gradient(rgba(3, 17, 31, 0.28), rgba(3, 17, 31, 0.52)),
+    url("../../img/home/2-choose-create-lanyard/bg.png") center top / cover fixed;
+}
+
+.home-page .sliderContainer {
+  height: clamp(520px, 66vh, 650px);
+  background:
+    radial-gradient(circle at 72% 42%, rgba(71, 161, 221, 0.18), transparent 25rem),
+    rgba(3, 17, 31, 0.28);
+}
+
+.home-page .accessories_home,
+.home-page .most_popular_lanyard,
+.home-page .materials,
+.home-page .section_about_us,
+.home-page .section_contact_us {
+  padding-top: clamp(3.75rem, 5vw, 5rem);
+  padding-bottom: clamp(3.75rem, 5vw, 5rem);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  scroll-margin-top: 82px;
+}
+
+.home-page .accessories_home {
+  background: rgba(7, 26, 46, 0.5);
+}
+
+.home-page .most_popular_lanyard {
+  background: rgba(3, 17, 31, 0.62);
+}
+
+.home-page .materials {
+  background:
+    radial-gradient(circle at 15% 35%, rgba(76, 159, 213, 0.12), transparent 28rem),
+    rgba(12, 41, 69, 0.52);
+}
+
+.home-page .section_about_us {
+  background: rgba(3, 17, 31, 0.66);
+}
+
+.home-page .section_contact_us {
+  background:
+    radial-gradient(circle at 86% 20%, rgba(75, 151, 202, 0.1), transparent 26rem),
+    rgba(7, 26, 46, 0.68);
+}
+
+.home-page .accessories_home > h2,
+.home-page .most_popular_lanyard > h2,
+.home-page .materials > h2,
+.home-page .titleAboutUs > h2,
+.home-page .section_contact_us h2 {
+  font-size: clamp(2.15rem, 4vw, 3.45rem);
+}
+
+.home-page .box_accessories_home,
+.home-page .subcontainer_most_popular_lanyard,
+.home-page .containerTextMaterials,
+.home-page .boxAboutUs,
+.home-page .box_contact_us {
+  border-radius: 12px;
+}
+
+.home-page .box_accessories_home {
+  background: linear-gradient(145deg, rgba(30, 74, 116, 0.96), rgba(8, 31, 54, 0.98));
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.2);
+}
+
+.home-page .containerTextMaterials {
+  background: linear-gradient(115deg, rgba(29, 61, 97, 0.95), rgba(16, 36, 57, 0.9));
+  backdrop-filter: none;
+}
+
+.home-page .itemMaterial {
+  background: rgba(11, 37, 62, 0.74);
+}
+
+@media (min-width: 900px) {
+  .home-page {
+    overflow: hidden !important;
+    background: var(--navy-950);
+  }
+
+  .home-page .background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    padding: clamp(18px, 3vw, 44px);
+    background:
+      linear-gradient(rgba(3, 17, 31, 0.16), rgba(3, 17, 31, 0.34)),
+      url("../../img/home/background.png") center / cover no-repeat;
+  }
+
+  .home-page .container {
+    width: min(94vw, 1500px);
+    height: min(92vh, 980px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: rgba(3, 12, 23, 0.94);
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    border-radius: 16px;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+    scrollbar-color: rgba(131, 188, 227, 0.65) rgba(255, 255, 255, 0.06);
+    scrollbar-width: thin;
+  }
+
+  .home-page .container::-webkit-scrollbar {
+    width: 9px;
+  }
+
+  .home-page .container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  .home-page .container::-webkit-scrollbar-thumb {
+    background: rgba(131, 188, 227, 0.65);
+    border: 2px solid transparent;
+    border-radius: 999px;
+    background-clip: padding-box;
+  }
+}
+
+@media (max-width: 899px) {
+  .home-page .bgLanyards {
+    background-attachment: scroll;
+  }
+
+  .home-page .sliderContainer {
+    height: 620px;
+  }
+
+  .home-page .accessories_home,
+  .home-page .most_popular_lanyard,
+  .home-page .materials,
+  .home-page .section_about_us,
+  .home-page .section_contact_us {
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+  }
+}
