@@ -1,263 +1,158 @@
 class Menu {
   constructor() {
+    this.activeSession = false;
 
-    this.getActiveUserSession();
-    // Prepare the URL and data to check session login status
-  //  this.activeSession = true;
-    //this.loginOrLogout();
-
-
-    logo_img.addEventListener("click", function(){
+    logo_img.addEventListener("click", () => {
       window.location.href = "../../views/home/index.php";
     });
-    dadCustomizeLanyard.addEventListener('scroll', function() {
-      var seventyVH = window.innerHeight * 0.7;
 
-      container_logout.style.display = 'none';
-      var scrollTop = dadCustomizeLanyard.scrollTop;
-      if (scrollTop > seventyVH) {
-        menu.style.display = "none";
-      }
-      else {
-        menu.style.display = "flex";
-      }
+    openLogin.forEach((element) => {
+      element.addEventListener("click", () => {
+        this.closeMenuMobile();
+        loginClass.openLogin();
+        loginClass.showLogin(0);
+        registerClass.hideRegister(0);
+      });
     });
 
-    // Agrega un evento de clic al documento
-        document.addEventListener('click', function(event) {
-            // Si el clic no fue dentro del div, escóndelo
-            if (!container_logout.contains(event.target) && !showLogout.contains(event.target)) {
-                container_logout.style.display = 'none';
-            }
-        });
-
-
-
-    // Loop through all 'openLogin' buttons and add a click event listener to each
-    for (let i = 0; i < openLogin.length; i++) {
-      openLogin[i].addEventListener("click", function() {
-        // Open the login modal
-        loginClass.openLogin();
-        // Open the registration modal
-        registerClass.openRegister();
-      });
-    }
-
-    for (let i = 0; i < openSignup.length; i++) {
-      openSignup[i].addEventListener("click", function() {
-
+    openSignup.forEach((element) => {
+      element.addEventListener("click", () => {
+        this.closeMenuMobile();
         registerClass.openRegister();
         registerClass.showRegister(0);
-
+        loginClass.hideLogin(0);
       });
-    }
-
-
-
-
-    document.addEventListener("DOMContentLoaded", () => {
-      // Lógica para el primer evento
-      const showLogout = document.getElementById("showLogout");
-      const container_logout = document.getElementById("container_logout");
-
-      if (showLogout && container_logout) {
-        showLogout.addEventListener("click", function () {
-          container_logout.style.display =
-            container_logout.style.display === "none" || container_logout.style.display === ""
-              ? "flex"
-              : "none";
-        });
-      }
-
-      // Lógica para el segundo evento
-      const openLogout = document.getElementById("openLogout");
-      if (openLogout) {
-        openLogout.addEventListener("click", function () {
-          chargingClass.hideShowchargin(true);
-
-          menuClass.processUserLogout();
-        });
-      }
-
-      // Agregar más lógica según sea necesario
     });
 
+    openMenuMobileButton.addEventListener("click", () => this.openMenuMobile());
+    closeMenuMobileButton.addEventListener("click", () => this.closeMenuMobile());
 
+    showLogout.addEventListener("click", (event) => {
+      event.stopPropagation();
+      const isOpen = containerLogout.style.display === "flex";
+      containerLogout.style.display = isOpen ? "none" : "flex";
+      showLogout.setAttribute("aria-expanded", String(!isOpen));
+    });
 
+    openLogoutButton.addEventListener("click", () => this.processUserLogout());
+    mobileLogoutButton?.addEventListener("click", () => this.processUserLogout());
 
+    document.addEventListener("click", (event) => {
+      if (!containerLogout.contains(event.target) && !showLogout.contains(event.target)) {
+        containerLogout.style.display = "none";
+        showLogout.setAttribute("aria-expanded", "false");
+      }
 
-    // Add event listeners to handle the mobile menu open/close buttons
-    openMenuMobileButton.addEventListener("click", this.openMenuMobile.bind(this));
-    closeMenuMobileButton.addEventListener("click", this.closeMenuMobile.bind(this));
-    document.addEventListener("click", this.handleClickOutside.bind(this)); // Handle clicks outside the mobile menu
+      if (!menuMobile.contains(event.target) && !openMenuMobileButton.contains(event.target)) {
+        this.closeMenuMobile();
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        this.closeMenuMobile();
+        containerLogout.style.display = "none";
+      }
+    });
+
+    this.getActiveUserSession();
   }
+
   getActiveUserSession() {
-    const url = "../../controller/users/session-user.php";
-    const data = {
-      action: "checkSessionLogin"
-    };
-
-    // Make the fetch request
-    fetch(url, {
+    fetch("../../controller/users/session-user.php", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(data)
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ action: "checkSessionLogin" })
     })
-      .then(response => {
-        // Check if the response status is OK
-        if (!response.ok) {
-          throw new Error(`Network error: ${response.status} ${response.statusText}`);
-        }
-        return response.json(); // Parse the response as JSON
+      .then((response) => {
+        if (!response.ok) throw new Error("Unable to check the current session.");
+        return response.json();
       })
-      .then(parsedData => {
-        //alert(JSON.stringify(parsedData));
-        // Validate if the response contains the expected 'message' key
-        if (typeof parsedData.message === "undefined") {
-          throw new Error("Invalid response format: 'message' key missing.");
-        }
-
-        // Update the active session and handle login/logout logic
-        this.setActiveSession(parsedData.message);
+      .then((data) => {
+        this.setActiveSession(Boolean(data.message));
         this.loginOrLogout();
-
-
       })
-      .catch(error => {
-        // Handle any errors during the request or processing
-        console.error("Error:", error.message);
-        // Optionally, reload the page if needed
-        // location.reload();
+      .catch(() => {
+        this.setActiveSession(false);
+        this.loginOrLogout();
       });
   }
 
   loginOrLogout() {
-    // Assume that this.getActiveSession() returns true (active session) or false (no session)
-    const activeSession = this.getActiveSession();
-
-    // Ensure openLogin and openLogoutClass are defined
-    if (!openLogin || !openLogoutClass) {
-      console.error("Error: 'openLogin' or 'openLogoutClass' elements are not defined.");
-      return;
-    }
-
-    // Toggle display based on the session state
-    openLogin.forEach(element => {
-      element.style.display = activeSession ? 'none' : 'block'; // Show or hide login buttons
+    openLogin.forEach((element) => {
+      element.style.display = this.activeSession ? "none" : "inline-flex";
     });
 
-    openLogoutClass.forEach(element => {
-      element.style.display = activeSession ? 'flex' : 'none'; // Show or hide logout buttons
+    openSignup.forEach((element) => {
+      element.style.display = this.activeSession ? "none" : "inline-flex";
     });
 
-    if (window.location.href == "https://lanyardsforyou.com/views/shopping_cart/index.php") {
-      if (this.getActiveSession() == false) {
-        window.location.href = "https://lanyardsforyou.com/views/home/index.php";
-      }
+    openLogoutClass.forEach((element) => {
+      element.style.display = this.activeSession ? "inline-flex" : "none";
+    });
+
+    const isCartPage = window.location.pathname.endsWith("/views/shopping_cart/index.php");
+    if (isCartPage && !this.activeSession) {
+      window.location.href = "../../views/home/index.php";
     }
   }
-
 
   getActiveSession() {
-        return this.activeSession;
-    }
+    return this.activeSession;
+  }
 
   setActiveSession(activeSession) {
-        this.activeSession = activeSession;
-    }
+    this.activeSession = Boolean(activeSession);
+  }
 
-    processUserLogout() {
-      // Prepare the URL and data to process the logout action
-      const url = "../../controller/users/session-user.php";
-      const data = {
-        action: "processUserLogout" // Action to process logout
-      };
+  processUserLogout() {
+    chargingClass.hideShowchargin(true);
 
-      // Make a fetch request to the given URL with the specified data
-      fetch(url, {
-        method: "POST", // Set the request method to POST
-        headers: {
-          "Content-Type": "application/json" // Set the request content type to JSON
-        },
-        body: JSON.stringify(data) // Send the data as a JSON string
+    fetch("../../controller/users/session-user.php", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ action: "processUserLogout" })
+    })
+      .then((response) => {
+        if (!response.ok) throw new Error("Unable to log out.");
+        return response.json();
       })
-        .then(response => {
-          // Check if the response is okay (HTTP status 200-299)
-          if (response.ok) {
-            return response.json(); // Parse the response as JSON
-          }
+      .then(() => {
+        window.location.href = "../../views/home/index.php";
+      })
+      .catch(() => {
+        chargingClass.hideShowchargin(false);
+        alert("We could not log you out. Please try again.");
+      });
+  }
 
-          // If the response status is 401 (Unauthorized), the user is not logged in
-          if (response.status === 401) {
-            throw new Error("User not authenticated.");
-          }
-
-          // For other responses, throw a general network error
-          throw new Error("Network error.");
-        })
-        .then(data => {
-          // If logout is successful, reload the page
-          chargingClass.hideShowchargin(false);
-        //  loginClass.logoutFacebook();
-          alert("Successfully logged out.");
-          window.location.href = "https://lanyardsforyou.com/views/home/index.php";
-        })
-        .catch(error => {
-          // Handle errors: If the user is not authenticated or any other errors
-          if (error.message === "User not authenticated.") {
-            alert("Please log in to access this data."); // Inform the user to log in
-          } else {
-            console.error("Error:", error.message); // Log any other errors
-          }
-        });
-    }
-
-
-
-
-  // Function to open the mobile menu
   openMenuMobile() {
-    closeMenuMobile.style.display = "flex"; // Show the close button
-    menuMobile.style.left = "calc(100% - 300px)"; // Slide the mobile menu in from the right
-    openMenuMobile.style.display = "none"; // Hide the open button
+    menuMobile.classList.add("is-open");
+    menuMobile.setAttribute("aria-hidden", "false");
+    openMenuMobileButton.setAttribute("aria-expanded", "true");
+    openMenuMobileButton.style.display = "none";
+    closeMenuMobileButton.style.display = "inline-flex";
   }
 
-  // Function to close the mobile menu
   closeMenuMobile() {
-    closeMenuMobile.style.display = "none"; // Hide the close button
-    menuMobile.style.left = "calc(100%)"; // Slide the mobile menu out of view
-    openMenuMobile.style.display = "flex"; // Show the open button
+    menuMobile.classList.remove("is-open");
+    menuMobile.setAttribute("aria-hidden", "true");
+    openMenuMobileButton.setAttribute("aria-expanded", "false");
+    openMenuMobileButton.style.display = "inline-flex";
+    closeMenuMobileButton.style.display = "none";
   }
-
-  // Function to close the mobile menu if the user clicks outside of it
-  handleClickOutside(event) {
-    // Check if the clicked element is outside the mobile menu and open button
-    if (!openMenuMobile.contains(event.target)) {
-      if (!menuMobile.contains(event.target)) {
-        this.closeMenuMobile(); // Close the mobile menu
-      }
-    }
-  }
-
-
 }
 
-// DOM elements related to login, logout, and menu functionality
 const logo_img = document.getElementById("logo_img");
-const openLogin = document.querySelectorAll('.openLogin'); // All login buttons
-const openSignup = document.querySelectorAll('.openSignup'); // All login buttons
-
-
-const openLogoutClass = document.querySelectorAll(".openLogout"); // Mobile menu close button
-const logoutButtons = document.querySelectorAll('.logoutButtons'); // All logout buttons
-const openMenuMobileButton = document.getElementById("openMenuMobile"); // Mobile menu open button
-const closeMenuMobileButton = document.getElementById("closeMenuMobile"); // Mobile menu close button
-const menuMobile = document.getElementById("menuMobile"); // Mobile menu element
+const openLogin = document.querySelectorAll(".openLogin");
+const openSignup = document.querySelectorAll(".openSignup");
+const openLogoutClass = document.querySelectorAll(".openLogout");
+const openMenuMobileButton = document.getElementById("openMenuMobile");
+const closeMenuMobileButton = document.getElementById("closeMenuMobile");
+const menuMobile = document.getElementById("menuMobile");
 const showLogout = document.getElementById("showLogout");
-const dadCustomizeLanyard = document.getElementById("dad-customize-lanyard");
-const menu = document.getElementById("menu");
+const containerLogout = document.getElementById("container_logout");
+const openLogoutButton = document.getElementById("openLogout");
+const mobileLogoutButton = document.querySelector(".mobileLogout");
 
-// Create an instance of the 'Menu' class to initialize the menu
 const menuClass = new Menu();

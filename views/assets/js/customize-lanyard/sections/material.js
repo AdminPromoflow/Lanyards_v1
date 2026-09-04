@@ -100,8 +100,7 @@ class Material {
         this.selecteMaterial();
       })
       .catch(error => {
-        // Log any errors to the console.
-        console.error("Error:", error);
+        customizeLanyard.setJsonLanyards([]);
       });
   }
 

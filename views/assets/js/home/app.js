@@ -1,25 +1,3 @@
-// Function to handle smooth scrolling with acceleration and deceleration
-let velocity = 0; // Stores the scrolling speed
-let previousY = window.scrollY; // Keeps track of the last scroll position
-
-function handleScroll() {
-    requestAnimationFrame(() => {
-        const currentY = window.scrollY; // Get current scroll position
-        const deltaY = currentY - previousY; // Calculate scroll difference
-
-        // Apply acceleration to the scroll movement
-        velocity += deltaY * 0.05;
-        // Apply gradual deceleration
-        velocity *= 0.9;
-
-        window.scrollBy(0, velocity); // Move the page according to velocity
-        previousY = currentY; // Update previous position
-    });
-}
-
-// Add event listener to detect scrolling and trigger the smooth effect
-window.addEventListener("scroll", handleScroll);
-
 class Home {
     constructor() {
 
@@ -37,7 +15,7 @@ class Home {
                 element.addEventListener("click", () => {
                   //  chargingClass.hideShowchargin(true);
                     material.setMaterialSelected(material_for_select[index].innerText);
-                    homeClass.openLanyard();
+                    if (!homeClass.openLanyard()) return;
                     customizeLanyard.openMaterial();
                     //chargingClass.hideShowchargin(false);
                 });
@@ -48,7 +26,7 @@ class Home {
             open_from_scratch.forEach(element => {
                 element.addEventListener("click", () => {
                   //  chargingClass.hideShowchargin(true);
-                    homeClass.openLanyard();
+                    if (!homeClass.openLanyard()) return;
                     customizeLanyard.openMaterial();
                   //  chargingClass.hideShowchargin(false);
                 });
@@ -60,7 +38,7 @@ class Home {
                 element.addEventListener("click", () => {
                     material.setMaterialSelected("Dye Sub polyester");
                   //  customizeLanyard.setCurrentSectionOpen(8);
-                    homeClass.openLanyardFromBestSeller();
+                    if (!homeClass.openLanyardFromBestSeller()) return;
                     // Show an alert with predefined lanyard options
                     alert(
                         "We have set up the most popular lanyard options:\n\n" +
@@ -85,6 +63,8 @@ class Home {
      * Opens the lanyard customization process with default settings.
      */
     openLanyard() {
+        if (!this.customizerDataIsReady()) return false;
+
         // Set default amount and update material prices
 
         priceClass.setAmountSelected(1000);
@@ -115,6 +95,8 @@ class Home {
         customizeLanyard.setCurrentSectionOpen(0);
         customizeLanyard.setStateVisibilityPanelCustomeLanyard(true);
 
+        return true;
+
 
 
 
@@ -131,6 +113,8 @@ class Home {
      */
 
     openLanyardFromBestSeller(){
+        if (!this.customizerDataIsReady()) return false;
+
         // Set default amount and update material prices
         this.setOriginValuesBestSeller();
         priceClass.setAmountSelected(1000);
@@ -160,6 +144,17 @@ class Home {
         customizeLanyard.setCurrentSectionOpen(8);
         customizeLanyard.setStateVisibilityPanelCustomeLanyard(true);
 
+        return true;
+
+    }
+
+    customizerDataIsReady() {
+        const lanyards = customizeLanyard.getJsonLanyards();
+        if (!Array.isArray(lanyards) || lanyards.length === 0) {
+            alert("The customiser is temporarily unavailable. Please try again shortly or send us an enquiry below.");
+            return false;
+        }
+        return true;
     }
 
 

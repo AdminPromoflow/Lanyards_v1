@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <script type="text/javascript">
-      window.open("views/home/index.php", "_self");
-    </script>
-  </body>
-</html>
+<?php
+declare(strict_types=1);
+
+header('Location: /views/home/index.php', true, 302);
+exit;

@@ -1,54 +1,54 @@
 <!-- Link to the CSS file for styling the menu -->
 <link rel="stylesheet" href="../assets/css/global/menu.css?v=<?php echo filemtime('../assets/css/global/menu.css'); ?>">
 
-<!-- Define a section for the menu -->
-<section id="menu" class="menu">
+<header id="menu" class="menu">
+  <a id="logo_img" class="logo" href="../../views/home/index.php" aria-label="Lanyards For You home">
+    <img src="../assets/img/global/menu/Logo.png" alt="Lanyards For You">
+    <span class="brand-name">Lanyards For You</span>
+  </a>
 
-  <!-- Logo container with an image -->
-  <div id="logo_img" class="logo">
-    <img src="../assets/img/global/menu/Logo.png" alt=""> <!-- Displays the logo image -->
-  </div>
+  <nav class="containerItems" aria-label="Primary navigation">
+    <a class="nav-link is-current" href="../../views/home/index.php" aria-current="page">Home</a>
+    <a class="nav-link" href="../../views/about_us/index.php">About us</a>
+    <a class="nav-link openLogout" href="../../views/my_lanyards/index.php">My lanyards</a>
+    <a class="nav-link" href="../../views/contact_us/index.php">Contact</a>
+  </nav>
 
-  <!-- Container for the main menu items -->
-  <div class="containerItems">
-    <a href="../../views/home/index.php"><h3 class="transparentLeftLine">Home</h3></a>
-    <a href="../../views/about_us/index.php"><h3>About us</h3></a>
-    <a class="openLogout" href="../../views/my_lanyards/index.php"><h3 >My Lanyards</h3></a>
-    <a href="../../views/contact_us/index.php"><h3>Contact us</h3></a>
-  </div>
-
-  <!-- Container for secondary menu items -->
   <div class="containerItems2">
-    <h3 class="openSignup openLogin showItemsMenuLoginFalse">Sign up</h3> <!-- Register, visible when logged out -->
-    <h3 class="openLogin showItemsMenuLoginFalse">Login</h3> <!-- Login button, visible when logged out -->
-     <!-- Checkout icon, visible when logged in -->
-    <a href="../../views/shopping_cart/index.php"><img class="showItemsMenuLoginTrue openLogout border_right_menu" src="../assets/img/global/menu/checkout.png" alt=""></a>
-    <img id="showLogout" class="showItemsMenuLoginTrue openLogout logoutButtons" src="../../views/assets/img/global/menu/user_icon.png" alt=""> <!-- User icon, visible when logged in -->
+    <button class="nav-action nav-action-secondary openLogin showItemsMenuLoginFalse" type="button">Log in</button>
+    <button class="nav-action nav-action-primary openSignup showItemsMenuLoginFalse" type="button">Create account</button>
+    <a class="icon-action showItemsMenuLoginTrue openLogout" href="../../views/shopping_cart/index.php" aria-label="Open shopping basket">
+      <img src="../assets/img/global/menu/checkout.png" alt="">
+    </a>
+    <button id="showLogout" class="icon-action showItemsMenuLoginTrue openLogout logoutButtons" type="button" aria-label="Open account menu" aria-haspopup="true">
+      <img src="../../views/assets/img/global/menu/user_icon.png" alt="">
+    </button>
   </div>
 
-  <div id="container_logout" class="container_logout">
-    <h3 id="openLogout">Logout</h3>
+  <div id="container_logout" class="container_logout" role="menu">
+    <button id="openLogout" type="button" role="menuitem">Log out</button>
   </div>
 
-  <!-- Container for mobile menu icons -->
   <div class="containerItems3">
-    <img id="openMenuMobile" src="../assets/img/global/menu/menu.png" alt=""> <!-- Menu icon for opening the mobile menu -->
-    <img id="closeMenuMobile" src="../assets/img/global/menu/close.png" alt=""> <!-- Close icon for closing the mobile menu -->
+    <button id="openMenuMobile" type="button" aria-label="Open navigation" aria-controls="menuMobile" aria-expanded="false">
+      <img src="../assets/img/global/menu/menu.png" alt="">
+    </button>
+    <button id="closeMenuMobile" type="button" aria-label="Close navigation" aria-controls="menuMobile" aria-expanded="true">
+      <img src="../assets/img/global/menu/close.png" alt="">
+    </button>
   </div>
 
-  <!-- Mobile menu section with duplicated menu items for small screen navigation -->
-  <section id="menuMobile" class="menuMobile">
-    <h3>Home</h3>
-    <h3>About us</h3>
-    <h3>Contact us</h3>
-    <a class="openLogout" href="../../views/my_lanyards/index.php"><h3 >My Lanyards</h3></a>
-    <h3 class="openLogin showItemsMenuLoginFalse">Login</h3>
-    <h3 class="openSignup showItemsMenuLoginFalse">Sign up</h3>
-    <a href="../../views/shopping_cart/index.php"><h3 class="openLogout transparentBottonLine showItemsMenuLoginTrue">Shopping cart</h3></a>
-    <h3 class="openLogout showItemsMenuLoginTrue">Logout</h3>
-  </section>
-
-</section>
+  <nav id="menuMobile" class="menuMobile" aria-label="Mobile navigation" aria-hidden="true">
+    <a href="../../views/home/index.php" aria-current="page">Home</a>
+    <a href="../../views/about_us/index.php">About us</a>
+    <a href="../../views/contact_us/index.php">Contact</a>
+    <a class="openLogout" href="../../views/my_lanyards/index.php">My lanyards</a>
+    <button class="openLogin showItemsMenuLoginFalse" type="button">Log in</button>
+    <button class="openSignup showItemsMenuLoginFalse" type="button">Create account</button>
+    <a class="openLogout showItemsMenuLoginTrue" href="../../views/shopping_cart/index.php">Shopping basket</a>
+    <button class="openLogout showItemsMenuLoginTrue mobileLogout" type="button">Log out</button>
+  </nav>
+</header>
 
 <!-- Link to the JavaScript file for handling menu behavior and interactions -->
 <script src="../assets/js/global/menu.js?v=<?php echo filemtime('../assets/js/global/menu.js'); ?>"></script>

@@ -8,8 +8,9 @@ $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
 <link rel="stylesheet" href="<?= $cssPath ?>?v=<?= $cssVersion; ?>">
 
 <section class="materials">
-  <h1>Create your own lanyard from scratch.</h1>
-  <p>Create your own custom lanyard from scratch! Tailor it to your style, needs, and preferences for a unique accessory. Perfect for events, work, or personal use, design a lanyard that stands out. Start creating yours today and enjoy a one-of-a-kind design that's all your own!</p>
+  <span class="section-kicker">Pick your foundation</span>
+  <h2>Choose the right material</h2>
+  <p class="section-intro">From everyday polyester to recycled and full-colour options, choose the finish that suits your design and budget.</p>
 
   <div class="containerMaterials">
     <?php
@@ -17,7 +18,7 @@ $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
     $materials = [
         ["path" => "Material-1-Flat-Polyester.jpg", "name" => "Ribbed Polyester"],
         ["path" => "Material-2-Tabular.jpg", "name" => "Tubular"],
-        ["path" => "Material-3-Natural-Bamboo.jpg", "name" => "RPET Polyester"],
+        ["path" => "Material-3-Natural-Bamboo.jpg", "name" => "Natural Bamboo"],
         ["path" => "Material-4-Dye-sublimation.jpg", "name" => "Dye Sub polyester"],
         ["path" => "Material-5-Dye-sub-Recycled-PET.jpg", "name" => "Dye Sub RPET"]
     ];
@@ -61,7 +62,7 @@ $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
         $imgVersion = file_exists($imgPath) ? filemtime($imgPath) : time();
     ?>
         <div class="itemMaterial">
-          <img src="<?= $imgPath ?>?v=<?= $imgVersion; ?>" alt="">
+          <img src="<?= $imgPath ?>?v=<?= $imgVersion; ?>" alt="" aria-hidden="true">
         </div>
     <?php
     }

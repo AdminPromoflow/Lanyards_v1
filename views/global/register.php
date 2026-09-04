@@ -7,24 +7,26 @@ $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
 <!-- CSS -->
 <link rel="stylesheet" href="<?= $cssPath ?>?v=<?= $cssVersion; ?>">
 
-<section id="register" class="register">
+<section id="register" class="register" role="dialog" aria-modal="true" aria-labelledby="registerTitle" aria-hidden="true">
   <div id="containerRegister" class="containerRegister">
     <div class="headRegister">
       <div class="headRegisterContainer">
-        <h1>Register</h1>
+        <h1 id="registerTitle">Create account</h1>
       </div>
       <?php
       $closeImg = '../assets/img/global/register/close.png';
       $closeImgVersion = file_exists($closeImg) ? filemtime($closeImg) : time();
       ?>
-      <img id="closeRegister" src="<?= $closeImg ?>?v=<?= $closeImgVersion; ?>" alt="">
+      <button id="closeRegister" class="dialog-close" type="button" aria-label="Close registration">
+        <img src="<?= $closeImg ?>?v=<?= $closeImgVersion; ?>" alt="">
+      </button>
     </div>
 
     <div class="bodyRegister">
       <label for="nameRegister">Please provide your registration information:</label>
-      <input type="text" id="nameRegister" placeholder="Name">
-      <input type="text" id="emailRegister" placeholder="Email">
-      <input type="password" id="passwordRegister" placeholder="Password">
+      <input type="text" id="nameRegister" autocomplete="name" placeholder="Name">
+      <input type="email" id="emailRegister" autocomplete="email" placeholder="Email">
+      <input type="password" id="passwordRegister" autocomplete="new-password" placeholder="Password">
       <label>
         <input id="acept_terms_conditions" type="checkbox" name="terms" required>
           I agree to the <a href="../../views/terms_conditions/index.php" target="_blank">Terms and Conditions</a>.
@@ -51,7 +53,7 @@ $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
           <!--<img src="<?= $facebookIcon ?>?v=<?= $facebookIconVersion; ?>" alt="">-->
         </div>
       </div>
-      <h4 id="openLoginFromRegister">Already have an account? Log in here.</h4>
+      <button class="dialog-text-action" id="openLoginFromRegister" type="button">Already have an account? Log in</button>
     </div>
   </div>
 </section>

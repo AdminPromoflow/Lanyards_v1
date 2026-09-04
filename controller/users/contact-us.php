@@ -1,48 +1,55 @@
 <?php
-class ApiHandlerContactUs {
-    public function handleRequest() {
-        header('Content-Type: application/json');
+declare(strict_types=1);
 
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $rawData = file_get_contents("php://input");
-            $data = json_decode($rawData);
+require_once __DIR__ . '/../config/database.php';
+require_once __DIR__ . '/send-emails.php';
 
-            if ($data === null || !isset($data->action)) {
-                http_response_code(400);
-                echo json_encode(array("message" => "Invalid or missing JSON data"));
-                return;
-            }
+header('Content-Type: application/json; charset=utf-8');
 
-            $action = $data->action;
-
-            switch ($action) {
-                case "contactUs":
-                    $this->handleContactUs($data);
-                    break;
-                default:
-                    http_response_code(400);
-                    echo json_encode(array("message" => "Unknown action"));
-                    break;
-            }
-        } else {
-            http_response_code(405);
-            echo json_encode(array("message" => "Method not allowed"));
-        }
-    }
-
-    private function handleContactUs($data) {
-      $emailSender = new EmailSender();
-      $emailSent = $emailSender->sendEmailContactUs($data);
-      echo json_encode(array("message" => true));
-    }
-
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    http_response_code(405);
+    echo json_encode(['success' => false, 'message' => 'Method not allowed.']);
+    exit;
 }
 
-require_once '../config/database.php';
-require_once '../../controller/users/send-emails.php';
+$data = json_decode((string) file_get_contents('php://input'));
+if (!$data || ($data->action ?? '') !== 'contactUs') {
+    http_response_code(400);
+    echo json_encode(['success' => false, 'message' => 'Invalid request.']);
+    exit;
+}
 
+$name = trim((string) ($data->name ?? ''));
+$email = trim((string) ($data->email ?? ''));
+$phone = trim((string) ($data->phone ?? ''));
+$message = trim((string) ($data->message ?? ''));
 
-$apiHandlerContactUs = new ApiHandlerContactUs();
-$apiHandlerContactUs->handleRequest();
+$isValid = strlen($name) >= 2
+    && filter_var($email, FILTER_VALIDATE_EMAIL)
+    && preg_match('/^[+()\-\s\d]{7,20}$/', $phone)
+    && strlen($message) >= 10;
 
-?>
+if (!$isValid) {
+    http_response_code(422);
+    echo json_encode(['success' => false, 'message' => 'Please check the form fields.']);
+    exit;
+}
+
+$data->name = htmlspecialchars($name, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+$data->email = htmlspecialchars($email, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+$data->phone = htmlspecialchars($phone, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+$data->message = nl2br(htmlspecialchars($message, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'));
+
+try {
+    $emailSender = new EmailSender();
+    $emailSent = $emailSender->sendEmailContactUs($data);
+
+    if ($emailSent !== true) {
+        throw new RuntimeException('Email delivery failed.');
+    }
+
+    echo json_encode(['success' => true, 'message' => 'Enquiry sent.']);
+} catch (Throwable $error) {
+    http_response_code(500);
+    echo json_encode(['success' => false, 'message' => 'Unable to send the enquiry.']);
+}

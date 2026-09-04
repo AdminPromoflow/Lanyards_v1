@@ -241,7 +241,8 @@ class Login {
     login.style.left = "50%";
     login.style.transform = "translate(-50%, -50%)";
     login.style.display = "flex";
-
+    login.setAttribute("aria-hidden", "false");
+    window.setTimeout(() => emailLogin.focus(), 0);
   }
 
   closeLogin() {
@@ -253,6 +254,7 @@ class Login {
       closeLoginSide = "left";
     }
     login.style.transform = "translateY(-50%)";
+    login.setAttribute("aria-hidden", "true");
 
   }
 

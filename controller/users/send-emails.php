@@ -1,8 +1,8 @@
 <?php
 // Include PHPMailer and its dependencies
-require '../assets/lib/send-email/PHPMailer/src/Exception.php';
-require '../assets/lib/send-email/PHPMailer/src/PHPMailer.php';
-require '../assets/lib/send-email/PHPMailer/src/SMTP.php';
+require_once __DIR__ . '/../assets/lib/send-email/PHPMailer/src/Exception.php';
+require_once __DIR__ . '/../assets/lib/send-email/PHPMailer/src/PHPMailer.php';
+require_once __DIR__ . '/../assets/lib/send-email/PHPMailer/src/SMTP.php';
 
 // Import PHPMailer classes
 use PHPMailer\PHPMailer\PHPMailer;
@@ -351,7 +351,7 @@ class EmailSender {
         $mail->isSMTP();
 
         // Enable SMTP debugging (set to 0 in production)
-        $mail->SMTPDebug = 2;
+        $mail->SMTPDebug = 0;
 
         // Set the Hostinger SMTP server
         $mail->Host = 'smtp.hostinger.com';
@@ -489,16 +489,13 @@ class EmailSender {
         $mail->setFrom('admin@lanyardsforyou.com', 'Ian Southworth');
 
         // Add a reply-to address
-        $mail->addReplyTo('admin@promoflow.net', 'Ian Southworth');
+        $mail->addReplyTo((string) $data->email, (string) $data->name);
 
         // Add recipient's email address and name
       //  $mail->addAddress('lonsus30@gmail.com', 'Admin Ale');
       //  $mail->addAddress('ian@kan-do-it.com', 'Ian');
       //  $mail->addAddress('catrina@kan-do-it.com', 'Cat');
         $mail->addAddress('alerozochiquiza@gmail.com', 'Aleja');
-
-        // Add recipient's email address and name
-        $mail->addAddress($this->recipientEmail, $this->recipientName);
 
         // Set the email subject
         $mail->Subject = 'New customer on Lanyards For You';
@@ -575,10 +572,7 @@ class EmailSender {
         // Set a plain text backup if HTML content cannot be displayed
         $mail->AltBody = 'If you cannot view the HTML, here is the plain text message.';
 
-        $mail->send();
-
-
-
+        return $mail->send();
     }
 
 }

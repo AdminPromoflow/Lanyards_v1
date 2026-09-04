@@ -9,9 +9,18 @@ class MostPopularLanyard {
   init() {
     // Add click event listeners to each information box
     this.infoBoxes.forEach((box, index) => {
+      box.setAttribute('role', 'button');
+      box.setAttribute('tabindex', '0');
       box.addEventListener('click', () => {
         this.showDisplayBox(index);
         this.highlightBox(box);
+      });
+      box.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          this.showDisplayBox(index);
+          this.highlightBox(box);
+        }
       });
     });
 
@@ -30,21 +39,13 @@ class MostPopularLanyard {
   }
 
   highlightBox(selectedBox) {
-    // Reset styles for all boxes
     this.infoBoxes.forEach((box) => {
-      box.style.backgroundColor = 'rgba(0, 0, 0, 0.5)'; // Original background
-      const h3Elements = box.querySelectorAll('h3'); // Select all h3 elements
-      h3Elements.forEach(h3 => {
-        h3.style.color = 'white'; // Reset h3 color
-      });
+      box.classList.remove('is-active');
+      box.setAttribute('aria-pressed', 'false');
     });
 
-    // Apply new styles to the selected box
-    selectedBox.style.backgroundColor = 'rgba(240, 240, 240, 0.7)';
-    const selectedH3Elements = selectedBox.querySelectorAll('h3'); // Select all h3 elements
-    selectedH3Elements.forEach(h3 => {
-      h3.style.color = 'black'; // Change color of all h3 elements in selectedBox
-    });
+    selectedBox.classList.add('is-active');
+    selectedBox.setAttribute('aria-pressed', 'true');
   }
 }
 

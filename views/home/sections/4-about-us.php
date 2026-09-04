@@ -11,36 +11,39 @@ $jsVersion = $jsFile && file_exists($jsFile) ? filemtime($jsFile) : time();
 <link rel="stylesheet" href="/views/assets/css/home/sections/4-about-us.css?v=<?= $cssVersion; ?>">
 
 <section class="section_about_us">
-  <!-- Title section for ABOUT US -->
   <div class="titleAboutUs">
-    <h3>About us</h3>
+    <span class="section-kicker">Why choose us</span>
+    <h2>Made with care, from idea to delivery</h2>
+    <p class="section-intro">Practical guidance, flexible customisation and careful production for every order.</p>
   </div>
 
   <!-- Group container for about us boxes -->
   <div class="groupBoxAboutUs">
 
     <!-- Box for first individual (Crafting Unique Lanyards) -->
-    <div class="boxAboutUs">
+    <article class="boxAboutUs">
+      <span class="about-number">01</span>
       <h3>Crafting Unique Lanyards</h3>
       <p>We are a company dedicated to creating bespoke lanyards from scratch,
         combining quality materials with unique designs. Our goal is to provide
         personalised solutions that meet your needs while ensuring fast service
         and exceptional attention to detail for every project.</p>
-    </div>
+    </article>
 
     <!-- Box for second individual (Elevating Your Brand) -->
-    <div class="boxAboutUs">
-      <h3>Elevating <br> Your Brand</h3>
+    <article class="boxAboutUs">
+      <span class="about-number">02</span>
+      <h3>Elevating Your Brand</h3>
       <p>With a focus on delivering the most popular lanyard styles, we help elevate
       your brand or event. Our experienced team is committed to innovation and
       functionality, offering customised products that reflect professionalism,
       enhance visibility, and leave a lasting impression.</p>
-    </div>
+    </article>
 
   </div>
 
   <!-- Explore More Button -->
-  <button type="button" onclick="window.location.href='/views/about_us/index.php'">Explore More</button>
+  <a class="about-link" href="/views/about_us/index.php">Learn more about us</a>
 </section>
 
 <!-- Link to external JavaScript for additional functionality -->

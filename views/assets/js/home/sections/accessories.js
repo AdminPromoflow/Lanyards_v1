@@ -35,6 +35,14 @@ class AccessoriesHome {
 
 
     for (let i = 0; i < box_accessories_home_description.length; i++) {
+      box_accessories_home_description[i].setAttribute("role", "button");
+      box_accessories_home_description[i].setAttribute("tabindex", "0");
+      box_accessories_home_description[i].addEventListener("keydown", function(event) {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          this.click();
+        }
+      });
       box_accessories_home_description[i].addEventListener("click", function(){
 
            const padre = box_accessories_home_description[i].closest('.subcontainer_accessories_home_description');
@@ -131,11 +139,13 @@ class AccessoriesHome {
   selectItems(){
     var selected;
     for (var i = 0; i < box_accessories_home_description.length; i++) {
-      box_accessories_home_description[i].style.border = "1px solid transparent";
+      box_accessories_home_description[i].classList.remove("is-selected");
+      box_accessories_home_description[i].setAttribute("aria-pressed", "false");
     }
     for (var i = 0; i < box_accessories.length; i++) {
       selected = this.getPosicionChildSelected(i);
-      box_accessories_home_description[selected].style.border = "1px solid white";
+      box_accessories_home_description[selected].classList.add("is-selected");
+      box_accessories_home_description[selected].setAttribute("aria-pressed", "true");
     }
   }
 

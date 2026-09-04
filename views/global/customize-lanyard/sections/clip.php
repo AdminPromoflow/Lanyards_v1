@@ -27,15 +27,6 @@ $clip_js = "../../views/assets/js/customize-lanyard/sections/clip.js";
   <br>
   <div id="containers_boxes_clip" class="containers_boxes_clip">
 
-    <!--<?php //foreach ($clip_images as $img) :
-      //  $img_path = $img_path_base . $img;
-    ?>
-      <div class="container_boxes_clip">
-        <h3 class="priceDataClip">+£0 per unit</h3>
-        <img class="imgClip" src="<?php echo $img_path . '?v=' . clip_filemtime($img_path); ?>" alt="">
-      </div>
-    <?php //endforeach; ?>-->
-
   </div>
 </section>
 

@@ -48,6 +48,8 @@ class Register {
     // Set the position and transformation of the "register" element
     register.style.left = "50%";
     register.style.transform = "translate(-50%, -50%)";
+    register.setAttribute("aria-hidden", "false");
+    window.setTimeout(() => nameRegister.focus(), 0);
   }
 
   // Method to close the register form
@@ -60,6 +62,7 @@ class Register {
       closeRegisterSide = "left";
     }
     register.style.transform = "translateY(-50%)";
+    register.setAttribute("aria-hidden", "true");
   }
 
   // Method to show the register form with a delay

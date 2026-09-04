@@ -10,11 +10,13 @@ $accessories_home_js = "../../views/assets/js/home/sections/accessories.js";
 <link rel="stylesheet" href="<?php echo $accessories_home_css . '?v=' . accessories_home_file_version($accessories_home_css); ?>">
 
 <section id="accessories_home" class="accessories_home">
-  <h1>Accessories</h1>
+  <span class="section-kicker">The finishing touches</span>
+  <h2>Accessories for every use</h2>
+  <p class="section-intro">Add card holders, wallets and practical fittings to complete your order.</p>
 
-  <div class="container_accessories_home_arrow_left container_accessories_home_arrow">
+  <button class="container_accessories_home_arrow_left container_accessories_home_arrow" type="button" aria-label="Previous accessories">
     <img src="<?php echo '../../views/assets/img/home/accessories/arrow_top.png?v=' . accessories_home_file_version('../../views/assets/img/home/accessories/arrow_top.png'); ?>" alt="">
-  </div>
+  </button>
 
   <div id="container_accessories_home" class="container_accessories_home">
 
@@ -52,15 +54,15 @@ $accessories_home_js = "../../views/assets/js/home/sections/accessories.js";
         $image_path = "../../views/assets/img/home/accessories/$image";
         ?>
 
-        <div class="box_accessories_home">
-          <h2 class="name_accessory_item" ><?php echo $title; ?></h2>
+        <article class="box_accessories_home">
+          <h3 class="name_accessory_item" ><?php echo $title; ?></h3>
           <img src="<?php echo $image_path . '?v=' . accessories_home_file_version($image_path); ?>" alt="<?php echo $title; ?>">
 
           <div class="subcontainer_accessories_home_quantity">
             <div class="dropbox_accessories_home">
-              <h3>Quantity</h3>
+              <label>Quantity</label>
             </div>
-            <input class="input_amount_accessories" type="text" name="" value="">
+            <input class="input_amount_accessories" type="number" inputmode="numeric" min="1" step="1" value="1" aria-label="Quantity for <?php echo $title; ?>">
           </div>
 
           <div class="subcontainer_accessories_home_description">
@@ -76,7 +78,7 @@ $accessories_home_js = "../../views/assets/js/home/sections/accessories.js";
             <button class="buy_accessory" type="button">Buy</button>
             <button class="add_to_cart_accessory" type="button">Add to cart</button>
           </div>
-        </div>
+        </article>
 
         <?php
     }
@@ -84,9 +86,9 @@ $accessories_home_js = "../../views/assets/js/home/sections/accessories.js";
 
   </div>
 
-  <div class="container_accessories_home_arrow_right container_accessories_home_arrow">
+  <button class="container_accessories_home_arrow_right container_accessories_home_arrow" type="button" aria-label="Next accessories">
     <img src="<?php echo '../../views/assets/img/home/accessories/arrow_top.png?v=' . accessories_home_file_version('../../views/assets/img/home/accessories/arrow_top.png'); ?>" alt="">
-  </div>
+  </button>
 
 
 

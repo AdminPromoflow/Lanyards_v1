@@ -1,142 +1,86 @@
 class ContactUsHome {
   constructor() {
-    button_contact_us_from_home.addEventListener('click', () => {
-      chargingClass.hideShowchargin(true);
-      this.validateFields();
+    this.form = document.getElementById("homeContactForm");
+    this.status = document.getElementById("contactFormStatus");
+
+    this.form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      this.submit();
     });
+  }
+
+  getFields() {
+    return [nameContactUsHome, emailContactUsHome, phoneContactUsHome, messageContactUsHome];
+  }
+
+  resetErrors() {
+    this.getFields().forEach((field) => field.removeAttribute("aria-invalid"));
+    this.status.textContent = "";
+    this.status.className = "contact-form-status";
   }
 
   validateFields() {
-    const name = nameContactUsHome.value.trim();
-    const email = emailContactUsHome.value.trim();
-    const phone = phoneContactUsHome.value.trim();
-    const message = messageContactUsHome.value.trim();
+    this.resetErrors();
+    const invalid = [];
 
-    let errors = [];
+    if (nameContactUsHome.value.trim().length < 2) invalid.push(nameContactUsHome);
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailContactUsHome.value.trim())) invalid.push(emailContactUsHome);
+    if (!/^[+()\-\s\d]{7,20}$/.test(phoneContactUsHome.value.trim())) invalid.push(phoneContactUsHome);
+    if (messageContactUsHome.value.trim().length < 10) invalid.push(messageContactUsHome);
 
-    // Reset input borders before validation
-    this.resetBorders();
+    invalid.forEach((field) => field.setAttribute("aria-invalid", "true"));
 
-    // Validate name field
-    if (name === '') {
-      errors.push('The "Name" field cannot be empty.');
-      this.setErrorBorder(nameContactUsHome);
+    if (invalid.length) {
+      this.status.textContent = "Please check the highlighted fields and add a little more detail.";
+      this.status.classList.add("is-error");
+      invalid[0].focus();
+      return false;
     }
 
-    // Validate email field
-    if (email === '') {
-      errors.push('The "Email" field cannot be empty.');
-      this.setErrorBorder(emailContactUsHome);
-    } else if (!this.validateEmail(email)) {
-      errors.push('The email format is not valid.');
-      this.setErrorBorder(emailContactUsHome);
-    }
-
-    // Validate phone field
-    if (phone === '') {
-      errors.push('The "Phone" field cannot be empty.');
-      this.setErrorBorder(phoneContactUsHome);
-    } else if (!this.validatePhone(phone)) {
-      errors.push('The phone format is not valid.');
-      this.setErrorBorder(phoneContactUsHome);
-    }
-
-    // Validate message field
-    if (message === '') {
-      errors.push('The "Message" field cannot be empty.');
-      this.setErrorBorder(messageContactUsHome);
-    }
-
-    // Show errors or success message
-    if (errors.length > 0) {
-      alert(errors.join('\n'));
-      chargingClass.hideShowchargin(false);
-
-    } else {
-      this.makeAjaxRequestContactUs();
-    }
+    return true;
   }
 
-  // Function to validate email format
-  validateEmail(email) {
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailPattern.test(email);
-  }
+  async submit() {
+    if (!this.validateFields()) return;
 
-  // Function to validate phone number format
-  validatePhone(phone) {
-    const phonePattern = /^[0-9]{7,15}$/; // Only numbers, length between 7 and 15
-    return phonePattern.test(phone);
-  }
+    buttonContactUs.disabled = true;
+    buttonContactUs.textContent = "Sending…";
+    this.status.textContent = "Sending your enquiry…";
 
-  // Function to set error border on invalid input fields
-  setErrorBorder(element) {
-    element.style.border = '2px solid rgb(139, 0, 0)';
-  }
+    try {
+      const response = await fetch("../../controller/users/contact-us.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          action: "contactUs",
+          name: nameContactUsHome.value.trim(),
+          email: emailContactUsHome.value.trim(),
+          phone: phoneContactUsHome.value.trim(),
+          message: messageContactUsHome.value.trim()
+        })
+      });
 
-  // Function to reset all input borders
-  resetBorders() {
-    const inputs = [nameContactUsHome, emailContactUsHome, phoneContactUsHome, messageContactUsHome];
-    inputs.forEach(input => {
-      input.style.border = '1px solid #ccc'; // Reset to default border
-    });
-  }
-
-  // Function to make the AJAX request
-  makeAjaxRequestContactUs() {
-    // Define the URL and the JSON data you want to send
-    const url = "../../controller/users/contact-us.php"; // Replace with your API endpoint URL
-    const data = {
-        action: "contactUs",
-        name: nameContactUsHome.value,
-        email: emailContactUsHome.value,
-        phone: phoneContactUsHome.value,
-        message: messageContactUsHome.value
-    };
-
-
-    fetch(url, {
-    method: "POST", // HTTP POST method to send data
-    headers: {
-      "Content-Type": "application/json" // Indicate that you're sending JSON
-    },
-    body: JSON.stringify(data) // Convert the JSON object to a JSON string and send it
-  })
-    .then(response => {
-      // Check if the response status is OK (2xx range)
-      if (response.ok) {
-        return response.json(); // Parse the response as JSON
+      const data = await response.json();
+      if (!response.ok || data.success !== true) {
+        throw new Error(data.message || "Unable to send your enquiry.");
       }
-      // For other errors, throw a general network error
-      throw new Error("Network error.");
-    })
-    .then(data => {
-      // Process the response data
-      chargingClass.hideShowchargin(false);
 
-      if (data.message) {
-        alert('Message sent successfully. We will contact you as soon as possible.');
-      }
-      else{
-        alert("Message sent successfully. We will contact you as soon as possible.");
-      }
-    })
-    .catch(error => {
-      // Handle specific errors (from throw in the .then block)
-      console.error("Error:", error.message);
-      chargingClass.hideShowchargin(false);
-
-      alert('Message sent successfully. We will contact you as soon as possible.'); // Show the error message in an alert
-    });
-
+      this.form.reset();
+      this.status.textContent = "Thank you. Your enquiry has been sent and we will be in touch soon.";
+      this.status.classList.add("is-success");
+    } catch (error) {
+      this.status.textContent = "We could not send your enquiry. Please try again in a moment.";
+      this.status.classList.add("is-error");
+    } finally {
+      buttonContactUs.disabled = false;
+      buttonContactUs.textContent = "Send enquiry";
+    }
   }
-
 }
 
-const nameContactUsHome = document.getElementById('nameContactUsHome');
-const emailContactUsHome = document.getElementById('emailContactUsHome');
-const phoneContactUsHome = document.getElementById('phoneContactUsHome');
-const messageContactUsHome = document.getElementById('messageContactUsHome');
-
-const button_contact_us_from_home = document.getElementById('button_contact_us_from_home');
+const nameContactUsHome = document.getElementById("nameContactUsHome");
+const emailContactUsHome = document.getElementById("emailContactUsHome");
+const phoneContactUsHome = document.getElementById("phoneContactUsHome");
+const messageContactUsHome = document.getElementById("messageContactUsHome");
+const buttonContactUs = document.getElementById("button_contact_us_from_home");
 const contactUsHome = new ContactUsHome();

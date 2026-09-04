@@ -18,8 +18,10 @@ class Database {
             // Set PDO error mode to exception for better error handling
             $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $e) {
-            // Handle connection errors
-            echo "Connection failed: " . $e->getMessage();
+            // Keep connection details out of the response while allowing callers
+            // to handle an unavailable database gracefully.
+            error_log('Database connection failed.');
+            $this->connection = null;
         }
     }
 

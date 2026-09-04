@@ -7,26 +7,28 @@ $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
 <!-- CSS -->
 <link rel="stylesheet" href="<?= $cssPath ?>?v=<?= $cssVersion; ?>">
 
-<section id="login" class="login">
+<section id="login" class="login" role="dialog" aria-modal="true" aria-labelledby="loginTitle" aria-hidden="true">
 
   <div id="containerLogin" class="containerLogin">
     <div class="headLogin">
       <div class="headLoginContaner">
-        <h1>Login</h1>
+        <h1 id="loginTitle">Log in</h1>
       </div>
       <?php
       $closeImg = '../../views/assets/img/global/login/close.png';
       $closeImgVersion = file_exists($closeImg) ? filemtime($closeImg) : time();
       ?>
-      <img id="closeLogin" src="<?= $closeImg ?>?v=<?= $closeImgVersion; ?>" alt="">
+      <button id="closeLogin" class="dialog-close" type="button" aria-label="Close login">
+        <img src="<?= $closeImg ?>?v=<?= $closeImgVersion; ?>" alt="">
+      </button>
     </div>
 
     <div class="bodyLogin">
       <label for="emailLogin">Please enter your login details:</label>
-      <input id="emailLogin" type="text" placeholder="Email">
-      <input id="passwordLogin" type="password" placeholder="Password">
-      <h3 id="password_forgotten">Have you forgotten your password?</h3>
-      <button id="loginButton" type="button"><strong class="fontWeightButtonLogin">Login</strong></button>
+      <input id="emailLogin" type="email" autocomplete="email" placeholder="Email">
+      <input id="passwordLogin" type="password" autocomplete="current-password" placeholder="Password">
+      <button class="dialog-text-action" id="password_forgotten" type="button">Forgot your password?</button>
+      <button id="loginButton" type="button"><strong class="fontWeightButtonLogin">Log in</strong></button>
     </div>
 
     <div class="footerLogin">
@@ -40,7 +42,7 @@ $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
         <!--  <img src="<?= $googleIcon ?>?v=<?= $googleIconVersion; ?>" alt="">-->
         </div>
       </div>
-      <h4 id="openRegisterFromLogin">No account yet? Register here.</h4>
+      <button class="dialog-text-action" id="openRegisterFromLogin" type="button">No account yet? Create one</button>
     </div>
   </div>
 

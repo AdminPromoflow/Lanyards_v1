@@ -651,5 +651,20 @@ class Material {
 
 // Instantiate the Material class and handle the request
 $material = new Material();
-$material->handleRequest();
+
+try {
+    $material->handleRequest();
+} catch (Throwable $error) {
+    error_log('Unable to load lanyard materials: ' . $error->getMessage());
+    if (!headers_sent()) {
+        header('Content-Type: application/json; charset=utf-8');
+    }
+    http_response_code(503);
+    echo json_encode([
+        'materials' => [],
+        'lanyards' => [],
+        'json' => [],
+        'message' => 'The customiser data is temporarily unavailable.'
+    ]);
+}
 ?>

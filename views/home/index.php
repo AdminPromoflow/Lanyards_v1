@@ -3,10 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lanyards for you</title>
+  <meta name="description" content="Design custom lanyards for teams, events and organisations, with flexible materials, fittings and accessories.">
+  <meta name="theme-color" content="#071a2e">
+  <title>Custom Lanyards | Lanyards For You</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 
 
 
@@ -38,8 +39,15 @@
   ?>
   <link rel="stylesheet" type="text/css" href="<?= $cssPath ?>?v=<?= $cssVersion; ?>">
 
+  <?php
+  $refreshCssPath = '../../views/assets/css/home/refresh.css';
+  $refreshCssVersion = file_exists($refreshCssPath) ? filemtime($refreshCssPath) : time();
+  ?>
+  <link rel="stylesheet" type="text/css" href="<?= $refreshCssPath ?>?v=<?= $refreshCssVersion; ?>">
+
 </head>
-<body>
+<body class="home-page">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   <section>
     <?php // include "../../views/global/test_alert.php"; ?>
     <?php include "../../views/global/charging.php"; ?>
@@ -51,7 +59,7 @@
       <div class="container" id="dad-customize-lanyard">
 
         <!-- Content section -->
-        <div class="content">
+        <main class="content" id="main-content">
             <?php  include "../../views/global/customize-lanyard/customize-lanyard.php" ?>
 
           <!-- Include the menu component -->
@@ -71,7 +79,7 @@
             <?php include "../../views/global/footer.php"; ?>
 
           </div>
-        </div>
+        </main>
 
         <!-- Include the login component -->
         <?php include "../../views/global/login.php"; ?>

@@ -8,8 +8,9 @@ $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
 <link rel="stylesheet" href="../../views/assets/css/home/sections/2-most_popular_lanyard.css?v=<?= $cssVersion; ?>">
 
 <section class="most_popular_lanyard">
-  <h1>Most popular lanyard</h1>
-  <p>Discover the best-selling lanyard everyone loves! Designed for durability, comfort, and style, this lanyard is perfect for work, events, or everyday use. Get yours today and enjoy the perfect blend of quality and functionality!</p>
+  <span class="section-kicker">A reliable starting point</span>
+  <h2>Our most popular lanyard</h2>
+  <p class="section-intro">A versatile full-colour setup for teams, events and everyday identification. Select an option to see what is included.</p>
 
   <div class="container_most_popular_lanyard">
     <div class="subcontainer_most_popular_lanyard">
@@ -65,7 +66,7 @@ $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
       <div class="box_display_most_popular_lanyard">
         <h2>Material</h2>
         <?php $img1 = '../../views/assets/img/home/2-most_popular_lanyard/Material-5-Dye-sub-Recycled-PET.jpg'; ?>
-        <img src="<?= $img1 ?>?v=<?= getImageVersion($img1); ?>" alt="">
+        <img src="<?= $img1 ?>?v=<?= getImageVersion($img1); ?>" alt="Dye-sublimation material sample">
         <h3>Dye-sublimation</h3>
         <p>High-resolution, color-rich designs achieved through dye sublimation on smooth polyester, blending quality and durability.</p>
       </div>
@@ -73,7 +74,7 @@ $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
       <div class="box_display_most_popular_lanyard">
         <h2>Type of lanyard</h2>
         <?php $img2 = '../../views/assets/img/home/2-most_popular_lanyard/one-end.png'; ?>
-        <img src="<?= $img2 ?>?v=<?= getImageVersion($img2); ?>" alt="">
+        <img src="<?= $img2 ?>?v=<?= getImageVersion($img2); ?>" alt="Single-ended lanyard">
         <h3>Single ended</h3>
         <p>A lanyard type one end is a strap with a single functional end for holding accessories or ID cards.</p>
       </div>
@@ -81,7 +82,7 @@ $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
       <div class="box_display_most_popular_lanyard">
         <h2>Width</h2>
         <?php $img3 = '../../views/assets/img/home/2-most_popular_lanyard/one-end-25mm.png'; ?>
-        <img src="<?= $img3 ?>?v=<?= getImageVersion($img3); ?>" alt="">
+        <img src="<?= $img3 ?>?v=<?= getImageVersion($img3); ?>" alt="20 millimetre lanyard width">
         <h3>20mm</h3>
         <p>A lanyard one end 20mm is a strap, 20mm wide, with a single functional end for attachments.</p>
       </div>
@@ -89,7 +90,7 @@ $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
       <div class="box_display_most_popular_lanyard">
         <h2>Side Printed</h2>
         <?php $img4 = '../../views/assets/img/home/2-most_popular_lanyard/two-side.png'; ?>
-        <img src="<?= $img4 ?>?v=<?= getImageVersion($img4); ?>" alt="">
+        <img src="<?= $img4 ?>?v=<?= getImageVersion($img4); ?>" alt="Lanyard printed on both sides">
         <h3>Both sides</h3>
         <p>A lanyard two sides printed is a strap with printing on both sides for enhanced visibility and personalisation.</p>
       </div>
@@ -97,7 +98,7 @@ $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
       <div class="box_display_most_popular_lanyard">
         <h2>Colour</h2>
         <?php $img5 = '../../views/assets/img/home/2-most_popular_lanyard/colour-coverage.png'; ?>
-        <img src="<?= $img5 ?>?v=<?= getImageVersion($img5); ?>" alt="">
+        <img src="<?= $img5 ?>?v=<?= getImageVersion($img5); ?>" alt="Full-colour print coverage">
         <h3>Full colour</h3>
         <p>Colorful, vibrant lanyard ideal for promotional events, showcasing logos, and ensuring high visibility with a creative, attention-grabbing design.</p>
       </div>
@@ -105,7 +106,7 @@ $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
       <div class="box_display_most_popular_lanyard">
         <h2>Clip</h2>
         <?php $img6 = '../../views/assets/img/home/2-most_popular_lanyard/dog_clip.png'; ?>
-        <img src="<?= $img6 ?>?v=<?= getImageVersion($img6); ?>" alt="">
+        <img src="<?= $img6 ?>?v=<?= getImageVersion($img6); ?>" alt="Metal dog clip">
         <h3>Dog</h3>
         <p>A dog clip is a metal hook with a spring, designed to securely attach ID cards, badges, or accessories.</p>
       </div>
@@ -113,7 +114,7 @@ $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
       <div class="box_display_most_popular_lanyard">
         <h2>Attachment</h2>
         <?php $img7 = '../../views/assets/img/home/2-most_popular_lanyard/none.png'; ?>
-        <img src="<?= $img7 ?>?v=<?= getImageVersion($img7); ?>" alt="">
+        <img src="<?= $img7 ?>?v=<?= getImageVersion($img7); ?>" alt="No additional attachment">
         <h3>None</h3>
         <p>There is no attachment included, but you can add it in our customization options by simply clicking 'Select'.</p>
       </div>
@@ -121,7 +122,7 @@ $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
       <div class="box_display_most_popular_lanyard">
         <h2>Accessory</h2>
         <?php $img8 = '../../views/assets/img/home/2-most_popular_lanyard/none.png'; ?>
-        <img src="<?= $img8 ?>?v=<?= getImageVersion($img8); ?>" alt="">
+        <img src="<?= $img8 ?>?v=<?= getImageVersion($img8); ?>" alt="No additional accessory">
         <h3>None</h3>
         <p>No accessories are included, but you can easily add them through our customization options by clicking 'Select'.</p>
       </div>
@@ -129,7 +130,7 @@ $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
       <div class="box_display_most_popular_lanyard">
         <h2>Design options</h2>
         <?php $img9 = '../../views/assets/img/home/2-most_popular_lanyard/design-options.png'; ?>
-        <img src="<?= $img9 ?>?v=<?= getImageVersion($img9); ?>" alt="">
+        <img src="<?= $img9 ?>?v=<?= getImageVersion($img9); ?>" alt="Custom artwork and logo options">
         <h3>Artwork or background, text, and logo.</h3>
         <p>You can choose between these two options to add your design to the lanyard: artwork or background, text, and logo.</p>
       </div>

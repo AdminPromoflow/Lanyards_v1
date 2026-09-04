@@ -153,9 +153,13 @@ class HandlerSessionUser {
   }
 
 }
-require '../../vendor/autoload.php';
-require_once '../config/database.php';
-require_once '../../models/orders.php';
+$autoloadPath = __DIR__ . '/../../vendor/autoload.php';
+if (is_file($autoloadPath)) {
+    require_once $autoloadPath;
+}
+
+require_once __DIR__ . '/../config/database.php';
+require_once __DIR__ . '/../../models/orders.php';
 
 
 // Create an instance of the HandlerSessionUser class and handle the request

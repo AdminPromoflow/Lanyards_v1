@@ -1,112 +1,53 @@
-// Define a class called "Slider"
 class Slider {
   constructor() {
+    this.currentSlide = 0;
     this.isHovering = false;
-    // Detectar cuando el mouse está dentro del contenedor
-        sliderLong.addEventListener('mouseenter', () => {
-            sliderClass.setIsHovering(true);
-        });
+    this.prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-        // Detectar cuando el mouse sale del contenedor
-        sliderLong.addEventListener('mouseleave', () => {
-          sliderClass.setIsHovering(false);
-        });
+    sliderLong.addEventListener("mouseenter", () => { this.isHovering = true; });
+    sliderLong.addEventListener("mouseleave", () => { this.isHovering = false; });
+    sliderLong.addEventListener("focusin", () => { this.isHovering = true; });
+    sliderLong.addEventListener("focusout", () => { this.isHovering = false; });
 
-
-        buttonSliderContainer.addEventListener('mouseenter', () => {
-            sliderClass.setIsHovering(true);
-        });
-
-        // Detectar cuando el mouse sale del contenedor
-        buttonSliderContainer.addEventListener('mouseleave', () => {
-          sliderClass.setIsHovering(false);
-        });
-
-    // Initialize the slider position and button colors
-    sliderLong.style.left = "0%";
-    buttonSlider[0].style.background = "#7B3378";
-
-    // Add click event listeners to the slider buttons
-    for (let i = 0; i < buttonSlider.length; i++) {
-      buttonSlider[i].addEventListener("click", function () {
-        sliderClass.nextSlide(i);
-      });
-    }
-
-    arrow_slider.addEventListener("click", function () {
-      const arrow_slider = document.getElementById('arrow_slider');
-      const dad_customizelanyard = document.getElementById('dad-customize-lanyard');
-
-
-
-
-    const targetPosition = arrow_slider.offsetTop - dad_customizelanyard.offsetTop;
-
-   dad_customizelanyard.scrollTo({
-       top: targetPosition,
-       behavior: 'smooth',
-   });
+    buttonSlider.forEach((button, index) => {
+      button.addEventListener("click", () => this.show(index));
     });
 
+    arrow_slider.addEventListener("click", () => {
+      document.getElementById("accessories_home")?.scrollIntoView({
+        behavior: this.prefersReducedMotion ? "auto" : "smooth",
+        block: "start"
+      });
+    });
 
-  }
+    this.show(0);
 
-  getIsHovering() {
-    return this.isHovering;
-  }
-  setIsHovering(isHovering) {
-    this.isHovering = isHovering;
-  }
-  // Method to move to the next slide based on the current slide
-  nextSlide(currentSlide) {
-    if (currentSlide == 1) {
-      // Transition to the second slide
-      sliderClass.toSlide("-100%", "white", "#E66503", "white", "white");
-    } else if (currentSlide == 2) {
-      // Transition to the third slide
-      sliderClass.toSlide("-200%", "white", "white", "#BC9B5A", "white");
-    } else if (currentSlide == 3) {
-      // Transition to the fourth slide
-      sliderClass.toSlide("-300%", "white", "white", "white", "#4B6E33");
-    } else if (currentSlide == 0) {
-      // Transition back to the first slide
-      sliderClass.toSlide("0%", "#7B3378", "white", "white", "white");
+    if (!this.prefersReducedMotion) {
+      this.interval = window.setInterval(() => {
+        if (!this.isHovering && !document.hidden) {
+          this.show((this.currentSlide + 1) % buttonSlider.length);
+        }
+      }, 6500);
     }
   }
 
-  // Method to update the slide position and button colors
-  toSlide(left, zero, one, two, three) {
-    sliderLong.style.left = left;
-    buttonSlider[0].style.background = zero;
-    buttonSlider[1].style.background = one;
-    buttonSlider[2].style.background = two;
-    buttonSlider[3].style.background = three;
+  show(index) {
+    this.currentSlide = index;
+    sliderLong.style.transform = `translateX(-${index * 25}%)`;
+
+    buttonSlider.forEach((button, buttonIndex) => {
+      const isActive = buttonIndex === index;
+      button.classList.toggle("is-active", isActive);
+      button.setAttribute("aria-pressed", String(isActive));
+    });
   }
 
-  // Method to get the current slide
-  getSlide() {
-    let isHovering = sliderClass.getIsHovering();
-    const text = sliderLong.style.left;
-    const numbers = text.match(/\d+/);
-    const number = parseInt(numbers[0], 10) / 100;
-
-    // Determine the current slide index and move to the next slide
-    const currentSlide = (number < 3) ? number + 1 : 0;
-    if (!isHovering) {
-      sliderClass.nextSlide(currentSlide);
-    }
+  nextSlide(index) {
+    this.show(index);
   }
 }
 
-// Initialize variables and DOM elements
-var currentSlide = 0;
-var sliderLong = document.getElementById("sliderLong");
-var buttonSliderContainer = document.getElementById("buttonSliderContainer");
-var arrow_slider = document.getElementById("arrow_slider");
-const buttonSlider = document.querySelectorAll('.buttonSlider');
-
-// Create an instance of the Slider class
+const sliderLong = document.getElementById("sliderLong");
+const arrow_slider = document.getElementById("arrow_slider");
+const buttonSlider = document.querySelectorAll(".buttonSlider");
 const sliderClass = new Slider();
-
-// Set an interval to automatically switch slides every 4 seconds
-setInterval(sliderClass.getSlide, 4000);
