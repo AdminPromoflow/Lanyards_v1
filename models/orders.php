@@ -394,10 +394,99 @@ class Order_Model {
             throw new Exception("Error retrieving processing orders with jobs by email.");
         }
     }
+    public function getOrderDetailsAndUserInformation() {
+        try {
+            $conn = $this->connection->getConnection();
+
+            // 1) Order
+            $stmtOrder = $conn->prepare("SELECT * FROM Orders WHERE idOrder = :idOrder");
+            $stmtOrder->bindParam(':idOrder', $this->idOrder, PDO::PARAM_INT);
+            $stmtOrder->execute();
+            $order = $stmtOrder->fetch(PDO::FETCH_ASSOC) ?: [];
+
+            // 2) Jobs
+            $stmtJobs = $conn->prepare("SELECT * FROM Jobs WHERE idOrder = :idOrder");
+            $stmtJobs->bindParam(':idOrder', $this->idOrder, PDO::PARAM_INT);
+            $stmtJobs->execute();
+            $jobs = $stmtJobs->fetchAll(PDO::FETCH_ASSOC);
+
+            $jobsWrapped = [];
+            foreach ($jobs as $jobData) {
+                $idJobs = (int)($jobData['idJobs'] ?? 0);
+
+                // Image
+                $stmtImage = $conn->prepare("SELECT * FROM Image WHERE idJobs = :idJobs");
+                $stmtImage->bindParam(':idJobs', $idJobs, PDO::PARAM_INT);
+                $stmtImage->execute();
+                $image = $stmtImage->fetch(PDO::FETCH_ASSOC) ?: (object)[];
+
+                // Text
+                $stmtText = $conn->prepare("SELECT * FROM Text WHERE idJobs = :idJobs");
+                $stmtText->bindParam(':idJobs', $idJobs, PDO::PARAM_INT);
+                $stmtText->execute();
+                $text = $stmtText->fetch(PDO::FETCH_ASSOC) ?: (object)[];
+
+                // Artwork
+                $stmtArtwork = $conn->prepare("SELECT * FROM Artwork WHERE idJobs = :idJobs");
+                $stmtArtwork->bindParam(':idJobs', $idJobs, PDO::PARAM_INT);
+                $stmtArtwork->execute();
+                $artwork = $stmtArtwork->fetch(PDO::FETCH_ASSOC) ?: (object)[];
+
+                // Estructura final por cada job
+                $jobsWrapped[] = [
+                    "job"     => $jobData, // Solo los datos del job
+                    "image"   => $image,
+                    "text"    => $text,
+                    "artwork" => $artwork
+                ];
+            }
+
+            // 3) Addresses y User
+            $addresses = [];
+            $user = [];
+            if (!empty($order) && !empty($order['idUser'])) {
+                $idUser = (int)$order['idUser'];
+
+                // Addresses
+                $stmtAddress = $conn->prepare("SELECT * FROM Addresses WHERE idUser = :idUser");
+                $stmtAddress->bindParam(':idUser', $idUser, PDO::PARAM_INT);
+                $stmtAddress->execute();
+                $addresses = $stmtAddress->fetchAll(PDO::FETCH_ASSOC);
+
+                // User
+                $stmtUser = $conn->prepare("SELECT * FROM Users WHERE idUser = :idUser");
+                $stmtUser->bindParam(':idUser', $idUser, PDO::PARAM_INT);
+                $stmtUser->execute();
+                $user = $stmtUser->fetch(PDO::FETCH_ASSOC) ?: [];
+            }
+
+            // 4) Resultado final
+            $result = [
+                "order"     => $order,
+                "jobs"      => $jobsWrapped, // Ahora cada elemento tiene job, image, text y artwork separados
+                "addresses" => $addresses,
+                "user"      => $user
+            ];
+
+            $this->connection->closeConnection();
+            return $result;
+
+        } catch (PDOException $e) {
+            error_log("DB Error in getOrderDetailsAndUserInformation: " . $e->getMessage());
+            throw new Exception("Error retrieving detailed order information.");
+        }
+    }
+
+
+
+
+
+
 
 
 
 
 
 }
+
 ?>
