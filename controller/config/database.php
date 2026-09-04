@@ -2,18 +2,26 @@
 class Database {
 
   // Database connection parameters
-  private $servername = 'localhost';
-  private $dbname = "u273173398_Lanyards"; //u273173398_Lanyards Lanyards
-  private $username = "u273173398_Cat"; //u273173398_Cat root
-  private $password = "32skiff32!CI"; //32skiff32!CI ""
+  private $servername;
+  private $dbname;
+  private $username;
+  private $password;
   private $connection;
 
   // Constructor to establish a database connection
    public function __construct() {
 
+        // XAMPP defaults keep local development working. Production can
+        // provide its own credentials without storing secrets in the code.
+        $this->servername = getenv('LANYARDS_DB_HOST') ?: 'localhost';
+        $this->dbname = getenv('LANYARDS_DB_NAME') ?: 'u273173398_Lanyards';
+        $this->username = getenv('LANYARDS_DB_USER') ?: 'root';
+        $this->password = getenv('LANYARDS_DB_PASSWORD') ?: '';
+
         try {
             // Create a PDO connection
-            $this->connection = new PDO("mysql:host=$this->servername;dbname=$this->dbname", $this->username, $this->password);
+            $dsn = "mysql:host={$this->servername};dbname={$this->dbname};charset=utf8mb4";
+            $this->connection = new PDO($dsn, $this->username, $this->password);
 
             // Set PDO error mode to exception for better error handling
             $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

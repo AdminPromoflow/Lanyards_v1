@@ -18,7 +18,7 @@ $cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
     $materials = [
         ["path" => "Material-1-Flat-Polyester.jpg", "name" => "Ribbed Polyester"],
         ["path" => "Material-2-Tabular.jpg", "name" => "Tubular"],
-        ["path" => "Material-3-Natural-Bamboo.jpg", "name" => "Natural Bamboo"],
+        ["path" => "Material-5-Dye-sub-Recycled-PET.jpg", "name" => "RPET Polyester"],
         ["path" => "Material-4-Dye-sublimation.jpg", "name" => "Dye Sub polyester"],
         ["path" => "Material-5-Dye-sub-Recycled-PET.jpg", "name" => "Dye Sub RPET"]
     ];
