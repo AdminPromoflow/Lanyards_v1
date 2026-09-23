@@ -88,3 +88,11 @@ $customize_lanyard_js = "../../views/assets/js/customize-lanyard/app.js";
 
 <!-- Include JS with versioning -->
 <script src="<?php echo $customize_lanyard_js . '?v=' . get_customize_lanyard_file_version($customize_lanyard_js); ?>"></script>
+<?php
+$designerCss = '../../views/assets/css/global/customize-lanyard/designer.css';
+?>
+<link rel="stylesheet" href="<?= $designerCss ?>?v=<?= filemtime($designerCss) ?>">
+<?php foreach (['design-model', 'design-preview', 'designer'] as $designerScript):
+    $designerPath = '../../views/assets/js/customize-lanyard/' . $designerScript . '.js'; ?>
+<script src="<?= $designerPath ?>?v=<?= filemtime($designerPath) ?>"></script>
+<?php endforeach; ?>

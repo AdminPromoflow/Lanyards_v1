@@ -61,6 +61,7 @@ class Home {
                     material.setMaterialSelected("Dye Sub polyester");
                   //  customizeLanyard.setCurrentSectionOpen(8);
                     homeClass.openLanyardFromBestSeller();
+                    if (typeof lanyardDesigner !== 'undefined' && lanyardDesigner) return;
                     // Show an alert with predefined lanyard options
                     alert(
                         "We have set up the most popular lanyard options:\n\n" +
@@ -85,6 +86,9 @@ class Home {
      * Opens the lanyard customization process with default settings.
      */
     openLanyard() {
+        if (typeof lanyardDesigner !== 'undefined' && lanyardDesigner) {
+            return lanyardDesigner.open({material: material.getMaterialSelected()});
+        }
         // Set default amount and update material prices
 
         priceClass.setAmountSelected(1000);
@@ -131,6 +135,9 @@ class Home {
      */
 
     openLanyardFromBestSeller(){
+        if (typeof lanyardDesigner !== 'undefined' && lanyardDesigner) {
+            return lanyardDesigner.open({bestSeller: true});
+        }
         // Set default amount and update material prices
         this.setOriginValuesBestSeller();
         priceClass.setAmountSelected(1000);
