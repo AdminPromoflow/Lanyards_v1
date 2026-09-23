@@ -147,7 +147,12 @@ class Price {
 
   // Setter method for amount property.
   setAmountSelected(value) {
-    this.amountSelected = value;
+    const amount = Number(value);
+    this.amountSelected = Number.isFinite(amount)
+      ? Math.max(1, Math.min(Number(amountLanyardsRange.max), Math.floor(amount)))
+      : 1;
+    amountLanyards.value = this.amountSelected;
+    amountLanyardsRange.value = this.amountSelected;
   }
 
   // Setter method for price per accessory.

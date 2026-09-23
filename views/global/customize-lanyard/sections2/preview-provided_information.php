@@ -1,6 +1,7 @@
 <?php
 function previewProvidedInformation($filePath) {
-    return $filePath . '?v=' . filemtime($_SERVER['DOCUMENT_ROOT'] . $filePath);
+    $localPath = dirname(__DIR__, 4) . $filePath;
+    return '../..' . $filePath . (is_file($localPath) ? '?v=' . filemtime($localPath) : '');
 }
 ?>
 

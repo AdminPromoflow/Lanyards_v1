@@ -71,12 +71,15 @@ class Material {
 
   // Method to make an AJAX request to fetch all materials.
   makeAjaxRequestGetAllMaterials() {
+    // Share the initial request with clicks made before the catalogue has loaded.
+    if (this.materialsRequest) return this.materialsRequest;
+
     const url = "../../controller/lanyard/material.php";
     const data = {
       action: "getMaterials"
     };
     // Make a fetch request to the given URL with the specified data.
-    fetch(url, {
+    this.materialsRequest = fetch(url, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -94,14 +97,23 @@ class Material {
       .then(data => {
         // Parse the JSON response and update the lanyard data.
         data = JSON.parse(data);
+        if (!Array.isArray(data.lanyards) || data.lanyards.length === 0) {
+          throw new Error("The material catalogue is empty.");
+        }
         customizeLanyard.setJsonLanyards(data["lanyards"]);
 
         // Call the method to select the material.
         this.selecteMaterial();
+        return true;
       })
       .catch(error => {
         customizeLanyard.setJsonLanyards([]);
+        return false;
+      })
+      .finally(() => {
+        this.materialsRequest = null;
       });
+    return this.materialsRequest;
   }
 
   // Method to select the material and update the container with material data.

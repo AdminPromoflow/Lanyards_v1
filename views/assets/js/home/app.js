@@ -12,10 +12,10 @@ class Home {
         // Check if elements exist before adding event listeners
         if (open_from_scratch_in_home.length > 0) {
             open_from_scratch_in_home.forEach((element, index) => {
-                element.addEventListener("click", () => {
+                element.addEventListener("click", async () => {
                   //  chargingClass.hideShowchargin(true);
                     material.setMaterialSelected(material_for_select[index].innerText);
-                    if (!homeClass.openLanyard()) return;
+                    if (!await homeClass.openLanyard()) return;
                     customizeLanyard.openMaterial();
                     //chargingClass.hideShowchargin(false);
                 });
@@ -24,9 +24,9 @@ class Home {
 
         if (open_from_scratch.length > 0) {
             open_from_scratch.forEach(element => {
-                element.addEventListener("click", () => {
+                element.addEventListener("click", async () => {
                   //  chargingClass.hideShowchargin(true);
-                    if (!homeClass.openLanyard()) return;
+                    if (!await homeClass.openLanyard()) return;
                     customizeLanyard.openMaterial();
                   //  chargingClass.hideShowchargin(false);
                 });
@@ -35,10 +35,10 @@ class Home {
 
         if (open_from_best_seller.length > 0) {
             open_from_best_seller.forEach(element => {
-                element.addEventListener("click", () => {
+                element.addEventListener("click", async () => {
                     material.setMaterialSelected("Dye Sub polyester");
                   //  customizeLanyard.setCurrentSectionOpen(8);
-                    if (!homeClass.openLanyardFromBestSeller()) return;
+                    if (!await homeClass.openLanyardFromBestSeller()) return;
                     // Show an alert with predefined lanyard options
                     alert(
                         "We have set up the most popular lanyard options:\n\n" +
@@ -62,8 +62,8 @@ class Home {
     /**
      * Opens the lanyard customization process with default settings.
      */
-    openLanyard() {
-        if (!this.customizerDataIsReady()) return false;
+    async openLanyard() {
+        if (!await this.customizerDataIsReady()) return false;
 
         // Set default amount and update material prices
 
@@ -112,8 +112,8 @@ class Home {
      * Opens the customization process with pre-configured "Best Seller" settings.
      */
 
-    openLanyardFromBestSeller(){
-        if (!this.customizerDataIsReady()) return false;
+    async openLanyardFromBestSeller(){
+        if (!await this.customizerDataIsReady()) return false;
 
         // Set default amount and update material prices
         this.setOriginValuesBestSeller();
@@ -148,8 +148,17 @@ class Home {
 
     }
 
-    customizerDataIsReady() {
-        const lanyards = customizeLanyard.getJsonLanyards();
+    async customizerDataIsReady() {
+        let lanyards = customizeLanyard.getJsonLanyards();
+        if (!Array.isArray(lanyards) || lanyards.length === 0) {
+            chargingClass.hideShowchargin(true);
+            try {
+                await material.makeAjaxRequestGetAllMaterials();
+            } finally {
+                chargingClass.hideShowchargin(false);
+            }
+            lanyards = customizeLanyard.getJsonLanyards();
+        }
         if (!Array.isArray(lanyards) || lanyards.length === 0) {
             alert("The customiser is temporarily unavailable. Please try again shortly or send us an enquiry below.");
             return false;

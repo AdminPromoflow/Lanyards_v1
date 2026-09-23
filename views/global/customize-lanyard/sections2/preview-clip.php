@@ -1,10 +1,11 @@
 <?php
 function preview_clip_asset_version($relativePath) {
-  $filePath = $_SERVER['DOCUMENT_ROOT'] . $relativePath;
+  $filePath = dirname(__DIR__, 4) . $relativePath;
+  $url = '../..' . $relativePath;
   if (file_exists($filePath)) {
-    return $relativePath . '?v=' . filemtime($filePath);
+    return $url . '?v=' . filemtime($filePath);
   }
-  return $relativePath;
+  return $url;
 }
 ?>
 
@@ -20,7 +21,7 @@ function preview_clip_asset_version($relativePath) {
       <img src="<?php echo preview_clip_asset_version('/views/assets/img/global/customize-lanyard/sections2/clips/one-end/dog_clip.png'); ?>" alt="">
     </div>
     <div class="clip_two_ends_30mm_right clips" id="right_clip">
-      <img src="<?php echo preview_clip_asset_version('/views/assets/img/global/customize-lanyard/sections2/clips/one-end/dog_clip0.png'); ?>" alt="">
+      <img src="<?php echo preview_clip_asset_version('/views/assets/img/global/customize-lanyard/sections2/clips/one-end/dog_clip.png'); ?>" alt="">
     </div>
   </div>
 </section>
