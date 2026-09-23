@@ -27,7 +27,14 @@ class Database {
         } catch (PDOException $e) {
             // Keep connection details out of the response while allowing callers
             // to handle an unavailable database gracefully.
-            error_log('Database connection failed.');
+            // PDO's full message can contain connection details. Log only
+            // diagnostic codes so hosting failures can be identified safely.
+            error_log('Database connection failed. ' . json_encode([
+                'sqlstate' => $e->errorInfo[0] ?? (string) $e->getCode(),
+                'driver_code' => $e->errorInfo[1] ?? null,
+                'mysql_driver_available' => in_array('mysql', PDO::getAvailableDrivers(), true),
+                'local_config_present' => is_file(__DIR__ . '/database.local.php'),
+            ]));
             $this->connection = null;
         }
     }

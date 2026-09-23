@@ -21,5 +21,23 @@ Environment variables named `LANYARDS_DB_HOST`, `LANYARDS_DB_NAME`,
 
 After uploading, open the website and click **Start designing**. The request to
 `controller/lanyard/material.php` with `{"action":"getMaterials"}` should return
-HTTP 200 and a populated `lanyards` array. If it still returns 503, check that
-the database user's current password matches the hosting configuration file.
+HTTP 200 and a populated `lanyards` array.
+
+If it still returns 503, upload the updated `database.php` without replacing
+`database.local.php`, then click **Start designing** once. Open the hosting
+File Manager using **Access all files of Business Web Hosting** and read the
+last entries in `.logs/error_log_lanyardsforyou_com`. Connection failures include
+`sqlstate`, `driver_code`, `mysql_driver_available` and `local_config_present`.
+Connection details and passwords are not included in these diagnostics.
+
+Common MySQL driver codes:
+
+- `1045`: MySQL rejected authentication; verify the current database user's password.
+- `1044`: the user cannot access this database; check its database assignment/permissions.
+- `1049`: the configured database name does not exist.
+- `2002` or `2003`: MySQL could not be reached using the configured host/socket.
+- `1040`, `1203` or `1226`: a connection or account resource limit was reached.
+
+If `local_config_present` is false, the private file is missing from
+`public_html/controller/config/`. If `mysql_driver_available` is false,
+enable the PDO MySQL extension in the hosting PHP configuration.
