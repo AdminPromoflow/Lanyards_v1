@@ -11,12 +11,11 @@ class Database {
   // Constructor to establish a database connection
    public function __construct() {
 
-        // XAMPP defaults keep local development working. Production can
-        // provide its own credentials without storing secrets in the code.
-        $this->servername = getenv('LANYARDS_DB_HOST') ?: 'localhost';
-        $this->dbname = getenv('LANYARDS_DB_NAME') ?: 'u273173398_Lanyards';
-        $this->username = getenv('LANYARDS_DB_USER') ?: 'root';
-        $this->password = getenv('LANYARDS_DB_PASSWORD') ?: '';
+        $settings = self::loadSettings(__DIR__ . '/database.local.php');
+        $this->servername = $settings['host'];
+        $this->dbname = $settings['name'];
+        $this->username = $settings['user'];
+        $this->password = $settings['password'];
 
         try {
             // Create a PDO connection
@@ -31,6 +30,30 @@ class Database {
             error_log('Database connection failed.');
             $this->connection = null;
         }
+    }
+
+    private static function loadSettings($localFile) {
+        // Hosting-specific credentials stay outside Git and survive deployments.
+        $settings = [
+            'host' => 'localhost',
+            'name' => 'u273173398_Lanyards',
+            'user' => 'root',
+            'password' => '',
+        ];
+        if (is_file($localFile)) {
+            $local = require $localFile;
+            if (!is_array($local)) {
+                throw new RuntimeException('Invalid local database configuration.');
+            }
+            $settings = array_replace($settings, $local);
+        }
+        foreach (['host', 'name', 'user', 'password'] as $key) {
+            $value = getenv('LANYARDS_DB_' . strtoupper($key));
+            if ($value !== false && ($value !== '' || $key === 'password')) {
+                $settings[$key] = $value;
+            }
+        }
+        return $settings;
     }
 
     // Method to get the database connection
