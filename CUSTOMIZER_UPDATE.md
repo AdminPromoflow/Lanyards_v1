@@ -5,6 +5,10 @@ diseño y revisión. El catálogo determina las opciones compatibles y los
 precios por cantidad. El dibujo SVG adapta el ancho, los extremos, clips,
 enganches, accesorios, texto y logo a la selección.
 
+La interfaz recupera los degradados azules originales: azul marino en el
+panel de opciones y azules medios y claros en la vista previa, con controles
+y estados de selección coordinados.
+
 La vista plana y las imágenes PNG que se entregan al controlador de pedidos
 comparten el mismo renderizador. Una impresión a dos caras repite el mismo
 diseño; una impresión a una cara deja el reverso vacío. Se puede utilizar

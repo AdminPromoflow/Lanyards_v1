@@ -93,7 +93,7 @@
         <rect x="0" y="${-width/2}" width="${length}" height="${width}" rx="1" fill="${e(s.background)}" stroke="#071b2b" stroke-opacity=".14"/>
         <rect x="0" y="${-width/2}" width="${length}" height="${width}" fill="url(#${id}-weave)"/>
         <g clip-path="url(#${id}-${leg.name})"><g transform="scale(${length/350} 1)">${print(s,350,width,leg.name,back)}</g></g>
-        ${options.guides ? `<rect x="12" y="${-width/2+2}" width="${length-24}" height="${width-4}" fill="none" stroke="#52dcc3" stroke-width="1" stroke-dasharray="3 3"/>` : ''}</g>`;
+        ${options.guides ? `<rect x="12" y="${-width/2+2}" width="${length-24}" height="${width-4}" fill="none" stroke="#8ccaff" stroke-width="1" stroke-dasharray="3 3"/>` : ''}</g>`;
     });
     for (const x of two ? [210,350] : [280]) {
       content += `<rect x="${x-width/2}" y="451" width="${width}" height="16" rx="2" fill="${e(s.background)}"/><path d="M${x-width/2+2} 456h${width-4}M${x-width/2+2} 463h${width-4}" stroke="#071b2b" stroke-opacity=".3" stroke-dasharray="2 2"/>
